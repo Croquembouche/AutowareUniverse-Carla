@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/SignalRequestPackage.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/SignalRequest.idl"
+
+module v2x_msg {
+  module msg {
+    struct SignalRequestPackage {
+      v2x_msg::msg::SignalRequest signalrequest;
+
+      int64 minute;
+
+      int64 second;
+
+      int64 duration;
+    };
+  };
+};

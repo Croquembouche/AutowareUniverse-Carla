@@ -1,0 +1,12 @@
+int64 maneuverstraightallowed
+int64 maneuverleftallowed
+int64 maneuverrightallowed
+int64 maneuveruturnallowed
+int64 maneuverleftturnonredallowed
+int64 maneverrightturnonredallowed
+int64 maneuverlanechangeallowed
+int64 maneuvernostoppingallowed
+int64 yieldallwaysrequired
+int64 gowithhalt
+int64 caution
+int64 reserved1

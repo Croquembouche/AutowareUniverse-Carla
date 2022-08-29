@@ -1,0 +1,6 @@
+int64 timstamp
+int64 segnum
+VehicleIdent probeid
+FullPositionVector startvector
+VehicleClassification vehicletype
+Snapshot[] snapshots

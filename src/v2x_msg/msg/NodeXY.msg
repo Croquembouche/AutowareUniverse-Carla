@@ -1,0 +1,2 @@
+NodeOffsetPointXY delta
+NodeAttributeSetXY attributes

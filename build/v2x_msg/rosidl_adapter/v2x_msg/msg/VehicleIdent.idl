@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/VehicleIdent.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/VehicleClass.idl"
+#include "v2x_msg/msg/VehicleID.idl"
+
+module v2x_msg {
+  module msg {
+    struct VehicleIdent {
+      string name;
+
+      string vin;
+
+      string ownercode;
+
+      v2x_msg::msg::VehicleID id;
+
+      int64 vehicletype;
+
+      v2x_msg::msg::VehicleClass vehicleclass;
+    };
+  };
+};

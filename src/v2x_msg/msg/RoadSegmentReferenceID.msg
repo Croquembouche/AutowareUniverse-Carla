@@ -1,0 +1,2 @@
+int64 roadregulatorid
+int64 roadsegmentid

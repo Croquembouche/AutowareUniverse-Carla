@@ -1,0 +1,34 @@
+[0.591s] Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/opencv_tests': AMENT_PREFIX_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge LD_LIBRARY_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests --editable --build-directory /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/opencv_tests/build --no-deps install_data --install-dir /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests
+[0.798s] running develop
+[0.798s] /home/carla/.local/lib/python3.8/site-packages/setuptools/command/easy_install.py:144: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[0.798s]   warnings.warn(
+[0.826s] /home/carla/.local/lib/python3.8/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.826s]   warnings.warn(
+[0.899s] /home/carla/.local/lib/python3.8/site-packages/pkg_resources/__init__.py:123: PkgResourcesDeprecationWarning: 0.1.36ubuntu1 is an invalid version and will not be supported in a future release
+[0.900s]   warnings.warn(
+[0.900s] /home/carla/.local/lib/python3.8/site-packages/pkg_resources/__init__.py:123: PkgResourcesDeprecationWarning: 0.23ubuntu1 is an invalid version and will not be supported in a future release
+[0.900s]   warnings.warn(
+[0.958s] running egg_info
+[0.958s] creating opencv_tests.egg-info
+[0.964s] writing opencv_tests.egg-info/PKG-INFO
+[0.964s] writing dependency_links to opencv_tests.egg-info/dependency_links.txt
+[0.964s] writing entry points to opencv_tests.egg-info/entry_points.txt
+[0.964s] writing requirements to opencv_tests.egg-info/requires.txt
+[0.964s] writing top-level names to opencv_tests.egg-info/top_level.txt
+[0.965s] writing manifest file 'opencv_tests.egg-info/SOURCES.txt'
+[0.979s] reading manifest file 'opencv_tests.egg-info/SOURCES.txt'
+[0.980s] writing manifest file 'opencv_tests.egg-info/SOURCES.txt'
+[1.007s] running build_ext
+[1.007s] Creating /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/python3.8/site-packages/opencv-tests.egg-link (link to .)
+[1.007s] Installing broadcast script to /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/opencv_tests
+[1.007s] Installing rosfacedetect script to /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/opencv_tests
+[1.008s] Installing source script to /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/opencv_tests
+[1.008s] 
+[1.008s] Installed /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/opencv_tests
+[1.008s] running install_data
+[1.008s] creating /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/share/ament_index
+[1.008s] creating /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/share/ament_index/resource_index
+[1.008s] creating /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/share/ament_index/resource_index/packages
+[1.008s] copying resource/opencv_tests -> /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/share/ament_index/resource_index/packages
+[1.008s] copying package.xml -> /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/share/opencv_tests
+[1.044s] Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/opencv_tests' returned '0': AMENT_PREFIX_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge LD_LIBRARY_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests --editable --build-directory /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/opencv_tests/build --no-deps install_data --install-dir /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests

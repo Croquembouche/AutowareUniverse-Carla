@@ -1,0 +1,5 @@
+ConnectingLane connectinglane 
+IntersectionReferenceID remoteintersection
+int64 signalgroup
+int64 userclass
+int64 laneconnectonid

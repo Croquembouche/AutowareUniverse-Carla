@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/Circle.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/Position3D.idl"
+
+module v2x_msg {
+  module msg {
+    struct Circle {
+      v2x_msg::msg::Position3D center;
+
+      int64 radius;
+
+      int64 units;
+    };
+  };
+};

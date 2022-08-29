@@ -1,0 +1,3 @@
+int64 movementphasestate
+TimeChangeDetails timing
+AdvisorySpeed[] speeds

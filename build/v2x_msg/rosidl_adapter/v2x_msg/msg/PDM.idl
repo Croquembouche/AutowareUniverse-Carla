@@ -1,0 +1,32 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/PDM.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/Sample.idl"
+#include "v2x_msg/msg/SnapshotDistance.idl"
+#include "v2x_msg/msg/SnapshotTime.idl"
+#include "v2x_msg/msg/VehicleStatusRequest.idl"
+
+module v2x_msg {
+  module msg {
+    struct PDM {
+      int64 timestamp;
+
+      v2x_msg::msg::Sample sample;
+
+      string directions;
+
+      int64 termtime;
+
+      int64 termdistance;
+
+      v2x_msg::msg::SnapshotTime snapshottime;
+
+      v2x_msg::msg::SnapshotDistance snapshotdistance;
+
+      int64 txinterval;
+
+      sequence<v2x_msg::msg::VehicleStatusRequest> dataelements;
+    };
+  };
+};

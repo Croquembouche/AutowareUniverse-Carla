@@ -1,0 +1,1 @@
+/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge/ament_cmake_environment_hooks/local_setup.bash

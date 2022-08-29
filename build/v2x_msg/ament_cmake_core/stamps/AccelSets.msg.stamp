@@ -1,0 +1,6 @@
+AccelerationSet4Way angle
+int64 certaccelthres
+int64 yawratecon
+int64 hozaccelcon
+ConfidenceSet confidenceset
+

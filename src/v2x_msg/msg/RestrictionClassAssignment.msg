@@ -1,0 +1,2 @@
+int64 restrictionclassid
+RestrictionUserType[] users

@@ -1,0 +1,16 @@
+int64 manualcontrolisenabled
+int64 stoptimeisactivated
+int64 failureflash
+int64 preemptisactive
+int64 signalpriorityisactive
+int64 fixedtimeoperation
+int64 trafficdependentoperation
+int64 standbyoperation
+int64 failuremode
+int64 off
+int64 recentmapmessageupdate
+int64 recentchangeinmapassignedlanesidsused
+int64 novalidmapisabilableatthistime
+int64 nobalidspatisabilableatthistime
+int64 reserve14
+int64 reserve15

@@ -1,0 +1,66 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/PSM.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/AccelerationSet4Way.idl"
+#include "v2x_msg/msg/PathHistory.idl"
+#include "v2x_msg/msg/PathPrediction.idl"
+#include "v2x_msg/msg/Position3D.idl"
+#include "v2x_msg/msg/PositionalAccuracy.idl"
+#include "v2x_msg/msg/PropelledInformation.idl"
+
+module v2x_msg {
+  module msg {
+    struct PSM {
+      int64 basictype;
+
+      int64 secmark;
+
+      int64 msgcnt;
+
+      string id;
+
+      v2x_msg::msg::Position3D position;
+
+      v2x_msg::msg::PositionalAccuracy accuracy;
+
+      int64 speed;
+
+      int64 heading;
+
+      v2x_msg::msg::AccelerationSet4Way accelset;
+
+      v2x_msg::msg::PathHistory pathhistory;
+
+      v2x_msg::msg::PathPrediction pathprediction;
+
+      v2x_msg::msg::PropelledInformation propulsion;
+
+      string usestate;
+
+      boolean crossrequest;
+
+      boolean crossstate;
+
+      int64 clustersize;
+
+      int64 clusterradius;
+
+      int64 eventrespondertype;
+
+      string activitytype;
+
+      string activitysubtype;
+
+      string assisttype;
+
+      string sizing;
+
+      int64 attachment;
+
+      int64 attachmentradius;
+
+      int64 animaltype;
+    };
+  };
+};

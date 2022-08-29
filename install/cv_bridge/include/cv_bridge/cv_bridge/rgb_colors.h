@@ -1,0 +1,1 @@
+/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/cv_bridge/include/cv_bridge/rgb_colors.h

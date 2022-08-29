@@ -1,0 +1,33 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/ICA.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/ApproachOrLane.idl"
+#include "v2x_msg/msg/BSMCoreData.idl"
+#include "v2x_msg/msg/IntersectionReferenceID.idl"
+#include "v2x_msg/msg/PathHistory.idl"
+#include "v2x_msg/msg/PathPrediction.idl"
+
+module v2x_msg {
+  module msg {
+    struct ICA {
+      int64 msgcnt;
+
+      string id;
+
+      int64 timestamp;
+
+      v2x_msg::msg::BSMCoreData partone;
+
+      v2x_msg::msg::PathHistory path;
+
+      v2x_msg::msg::PathPrediction pathprediction;
+
+      v2x_msg::msg::IntersectionReferenceID intersectionid;
+
+      v2x_msg::msg::ApproachOrLane lanenumber;
+
+      string eventflag;
+    };
+  };
+};

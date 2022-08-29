@@ -1,0 +1,5 @@
+int64 datatype
+int64 subtype
+int64 sendonlessthenvalue
+int64 sendonmorethenvalue
+bool sendall

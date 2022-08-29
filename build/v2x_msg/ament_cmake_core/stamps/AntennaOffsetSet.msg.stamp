@@ -1,0 +1,3 @@
+int64 antoffsetx
+int64 antoffsety
+int64 antoffsetz

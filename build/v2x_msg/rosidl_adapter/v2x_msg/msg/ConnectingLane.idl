@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/ConnectingLane.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/AllowedManeuvers.idl"
+
+module v2x_msg {
+  module msg {
+    struct ConnectingLane {
+      int64 laneid;
+
+      v2x_msg::msg::AllowedManeuvers maneuver;
+    };
+  };
+};

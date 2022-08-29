@@ -1,0 +1,3 @@
+[console_scripts]
+MAP = infrastructure.MAP:main
+SSM = infrastructure.SSM:main

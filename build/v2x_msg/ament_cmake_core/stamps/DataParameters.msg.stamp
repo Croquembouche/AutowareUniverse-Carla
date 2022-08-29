@@ -1,0 +1,4 @@
+string processmethod
+string processagency
+string lastcheckeddate
+string geoidused

@@ -1,0 +1,35 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/FullPositionVector.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/DDateTime.idl"
+#include "v2x_msg/msg/PositionConfidenceSet.idl"
+#include "v2x_msg/msg/PositionalAccuracy.idl"
+#include "v2x_msg/msg/SpeedandHeadingandThrottleConfidence.idl"
+#include "v2x_msg/msg/TransmissionAndSpeed.idl"
+
+module v2x_msg {
+  module msg {
+    struct FullPositionVector {
+      v2x_msg::msg::DDateTime utctime;
+
+      int64 longitude;
+
+      int64 lat;
+
+      int64 elevation;
+
+      int64 heading;
+
+      v2x_msg::msg::TransmissionAndSpeed speed;
+
+      v2x_msg::msg::PositionalAccuracy posaccuracy;
+
+      int64 timeconfidence;
+
+      v2x_msg::msg::PositionConfidenceSet posconfidence;
+
+      v2x_msg::msg::SpeedandHeadingandThrottleConfidence speedconfidence;
+    };
+  };
+};

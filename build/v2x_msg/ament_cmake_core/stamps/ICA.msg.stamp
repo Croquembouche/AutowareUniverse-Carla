@@ -1,0 +1,9 @@
+int64 msgcnt
+string id
+int64 timestamp
+BSMCoreData partone
+PathHistory path
+PathPrediction pathprediction 
+IntersectionReferenceID intersectionid
+ApproachOrLane lanenumber
+string eventflag

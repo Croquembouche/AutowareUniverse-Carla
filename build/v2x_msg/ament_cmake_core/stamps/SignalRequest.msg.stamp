@@ -1,0 +1,5 @@
+IntersectionReferenceID id 
+int64 requestid
+int64 requesttype
+IntersectionAccessPoint inboundlane
+IntersectionAccessPoint outboundlane

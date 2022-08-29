@@ -1,0 +1,2 @@
+[console_scripts]
+default_vehicle = vehicle.default_vehicle:main

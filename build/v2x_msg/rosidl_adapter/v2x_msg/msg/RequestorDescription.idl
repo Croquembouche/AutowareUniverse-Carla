@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/RequestorDescription.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/RequestorPositionVector.idl"
+#include "v2x_msg/msg/RequestorType.idl"
+#include "v2x_msg/msg/TransitVehicleStatus.idl"
+#include "v2x_msg/msg/VehicleID.idl"
+
+module v2x_msg {
+  module msg {
+    struct RequestorDescription {
+      v2x_msg::msg::VehicleID id;
+
+      v2x_msg::msg::RequestorType type;
+
+      v2x_msg::msg::RequestorPositionVector position;
+
+      string name;
+
+      string routename;
+
+      v2x_msg::msg::TransitVehicleStatus transitstatus;
+
+      int64 transitoccupancy;
+
+      int64 transitschedule;
+    };
+  };
+};

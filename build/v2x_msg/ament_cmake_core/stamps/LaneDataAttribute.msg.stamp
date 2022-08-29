@@ -1,0 +1,6 @@
+int64 pathendpointangle
+int64 lanecrownpointcenter
+int64 lancrownpointleft
+int64 lanecrownpointright
+int64 laneangle
+SpeedLimit[] speedlimits

@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/VehicleSize.msg
+// generated code does not contain a copyright notice
+
+
+module v2x_msg {
+  module msg {
+    struct VehicleSize {
+      int64 width;
+
+      int64 length;
+    };
+  };
+};

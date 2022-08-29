@@ -1,0 +1,2 @@
+string entityid
+string stationid

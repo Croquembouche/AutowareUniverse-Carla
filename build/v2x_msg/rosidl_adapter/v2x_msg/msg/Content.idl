@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/Content.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/ExitService.idl"
+#include "v2x_msg/msg/GenericSignage.idl"
+#include "v2x_msg/msg/ITISSpeedLimit.idl"
+#include "v2x_msg/msg/ITIScodesandtext.idl"
+#include "v2x_msg/msg/WorkZone.idl"
+
+module v2x_msg {
+  module msg {
+    struct Content {
+      sequence<v2x_msg::msg::ITIScodesandtext> advisory;
+
+      sequence<v2x_msg::msg::WorkZone> workzone;
+
+      sequence<v2x_msg::msg::GenericSignage> genericsign;
+
+      sequence<v2x_msg::msg::ITISSpeedLimit> speedlimit;
+
+      sequence<v2x_msg::msg::ExitService> exitservice;
+    };
+  };
+};

@@ -1,0 +1,4 @@
+string movementname
+int64 signalgroupid
+MovementEvent[] statetimespeed
+ConnectionManeuverAssist maneuverassistlist

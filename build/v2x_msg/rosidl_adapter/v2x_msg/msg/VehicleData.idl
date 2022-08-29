@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/VehicleData.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/BumperHeights.idl"
+
+module v2x_msg {
+  module msg {
+    struct VehicleData {
+      int64 height;
+
+      v2x_msg::msg::BumperHeights bumpers;
+
+      int64 mass;
+
+      int64 trailerweight;
+
+      int64 type;
+    };
+  };
+};

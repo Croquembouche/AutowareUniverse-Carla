@@ -1,0 +1,5 @@
+int64 connectionid
+int64 queuelength
+int64 availablestoragelength
+bool waitonstop
+bool pedbicycledetect

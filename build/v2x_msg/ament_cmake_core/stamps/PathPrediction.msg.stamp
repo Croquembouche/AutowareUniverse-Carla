@@ -1,0 +1,2 @@
+int64 radiusofcurve
+int64 confidence

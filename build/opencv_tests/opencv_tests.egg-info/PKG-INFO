@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: opencv-tests
+Version: 3.0.3
+Summary: opencv tests using cv_bridge and ros2 node implementation
+Author: Ethan Gao
+Author-email: ethan.gao@linux.intel.com
+Maintainer: Ethan Gao
+Maintainer-email: ethan.gao@linux.intel.com
+License: Apache License, Version 2.0
+Keywords: ROS
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development

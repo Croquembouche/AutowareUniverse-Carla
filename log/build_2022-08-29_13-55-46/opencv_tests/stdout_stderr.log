@@ -1,0 +1,25 @@
+running develop
+/home/carla/.local/lib/python3.8/site-packages/setuptools/command/easy_install.py:144: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+/home/carla/.local/lib/python3.8/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+/home/carla/.local/lib/python3.8/site-packages/pkg_resources/__init__.py:123: PkgResourcesDeprecationWarning: 0.1.36ubuntu1 is an invalid version and will not be supported in a future release
+  warnings.warn(
+/home/carla/.local/lib/python3.8/site-packages/pkg_resources/__init__.py:123: PkgResourcesDeprecationWarning: 0.23ubuntu1 is an invalid version and will not be supported in a future release
+  warnings.warn(
+running egg_info
+writing opencv_tests.egg-info/PKG-INFO
+writing dependency_links to opencv_tests.egg-info/dependency_links.txt
+writing entry points to opencv_tests.egg-info/entry_points.txt
+writing requirements to opencv_tests.egg-info/requires.txt
+writing top-level names to opencv_tests.egg-info/top_level.txt
+reading manifest file 'opencv_tests.egg-info/SOURCES.txt'
+writing manifest file 'opencv_tests.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/python3.8/site-packages/opencv-tests.egg-link (link to .)
+Installing broadcast script to /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/opencv_tests
+Installing rosfacedetect script to /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/opencv_tests
+Installing source script to /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/opencv_tests
+
+Installed /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/opencv_tests
+running install_data

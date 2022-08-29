@@ -1,0 +1,3 @@
+int64 semimajor
+int64 semiminor
+int64 orientation

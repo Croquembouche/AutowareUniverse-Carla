@@ -1,0 +1,10 @@
+TireData[] tires
+AxleWeight[] axles
+int64 trailerweight
+int64 cargoweight
+int64 steeringaxletemperture
+int64 driveaxlelocation
+int64 driveaxleliftairpressure
+int64 driveaxletemperature
+int64 driveaxlelubpressure
+int64 steeringaxlelubepressure

@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/NodeOffsetPointXY.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/NodeXY22b.idl"
+#include "v2x_msg/msg/NodeXY24b.idl"
+#include "v2x_msg/msg/NodeXY26b.idl"
+#include "v2x_msg/msg/NodeXY28b.idl"
+#include "v2x_msg/msg/NodeXY32b.idl"
+#include "v2x_msg/msg/Nodellmd64b.idl"
+
+module v2x_msg {
+  module msg {
+    struct NodeOffsetPointXY {
+      v2x_msg::msg::NodeXY22b nodexy1;
+
+      v2x_msg::msg::NodeXY24b nodexy2;
+
+      v2x_msg::msg::NodeXY26b nodexy3;
+
+      v2x_msg::msg::NodeXY28b nodexy4;
+
+      v2x_msg::msg::NodeXY32b nodexy5;
+
+      v2x_msg::msg::Nodellmd64b nodelatlon;
+    };
+  };
+};

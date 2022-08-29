@@ -1,0 +1,9 @@
+int64 timestamp
+Sample sample
+string directions
+int64 termtime
+int64 termdistance
+SnapshotTime snapshottime
+SnapshotDistance snapshotdistance 
+int64 txinterval
+VehicleStatusRequest[] dataelements

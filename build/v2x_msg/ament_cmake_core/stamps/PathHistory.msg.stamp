@@ -1,0 +1,3 @@
+FullPositionVector initialposition
+string currgnssstatus
+PathHistoryPoint[] crumbdata

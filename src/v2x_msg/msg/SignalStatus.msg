@@ -1,0 +1,3 @@
+int64 sequencenumber
+IntersectionReferenceID id 
+SignalStatusPackage[] sigstatus

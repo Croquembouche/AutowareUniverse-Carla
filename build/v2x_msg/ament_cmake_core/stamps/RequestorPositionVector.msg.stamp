@@ -1,0 +1,3 @@
+Position3D position 
+int64 heading
+TransmissionAndSpeed speed

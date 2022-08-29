@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/NodeXY24b.msg
+// generated code does not contain a copyright notice
+
+
+module v2x_msg {
+  module msg {
+    struct NodeXY24b {
+      int64 x;
+
+      int64 y;
+    };
+  };
+};

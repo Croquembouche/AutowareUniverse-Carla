@@ -1,0 +1,1 @@
+/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/vision_opencv/ament_cmake_core/vision_opencvConfig-version.cmake

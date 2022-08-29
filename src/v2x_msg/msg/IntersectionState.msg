@@ -1,0 +1,9 @@
+string name
+IntersectionReferenceID id 
+int64 revision
+IntersectionStatusObject status 
+int64 moy
+int64 timestamp
+LaneID[] enabledlanes
+MovementState[] states
+ConnectionManeuverAssist[] maneuverassistlist

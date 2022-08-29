@@ -1,0 +1,64 @@
+[0.050s] Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/opt/ros/galactic /usr/bin/cmake /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/image_geometry -DCMAKE_INSTALL_PREFIX=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry
+[0.499s] -- Found ament_cmake_python: 1.1.5 (/opt/ros/galactic/share/ament_cmake_python/cmake)
+[0.499s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/galactic/share/ament_cmake_ros/cmake)
+[0.500s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.500s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.500s] -- Found sensor_msgs: 2.2.4 (/opt/ros/galactic/share/sensor_msgs/cmake)
+[0.500s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.500s] -- Found rosidl_adapter: 2.2.2 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.500s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.500s] -- Found gtest sources under '/opt/ros/galactic/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[0.500s] -- Configuring done
+[0.500s] -- Generating done
+[0.501s] -- Build files have been written to: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry
+[0.505s] Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/opt/ros/galactic /usr/bin/cmake /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/image_geometry -DCMAKE_INSTALL_PREFIX=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry
+[0.505s] Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/opt/ros/galactic /usr/bin/cmake --build /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry -- -j20 -l20
+[0.534s] [ 22%] Built target gtest
+[0.534s] [ 44%] Built target gtest_main
+[0.538s] [ 44%] Built target ament_cmake_python_symlink_image_geometry
+[0.541s] [ 77%] Built target image_geometry
+[0.557s] [100%] Built target image_geometry-utest
+[0.734s] running egg_info
+[0.743s] writing image_geometry.egg-info/PKG-INFO
+[0.743s] writing dependency_links to image_geometry.egg-info/dependency_links.txt
+[0.743s] writing top-level names to image_geometry.egg-info/top_level.txt
+[0.763s] reading manifest file 'image_geometry.egg-info/SOURCES.txt'
+[0.763s] writing manifest file 'image_geometry.egg-info/SOURCES.txt'
+[0.790s] [100%] Built target ament_cmake_python_build_image_geometry_egg
+[0.796s] Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/opt/ros/galactic /usr/bin/cmake --build /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry -- -j20 -l20
+[0.821s] Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/opt/ros/galactic /usr/bin/cmake --install /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry
+[0.826s] -- Install configuration: ""
+[0.826s] -- Execute custom install script
+[0.826s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/environment/pythonpath.sh
+[0.826s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/environment/pythonpath.dsv
+[0.826s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages//image_geometry.egg-info/PKG-INFO
+[0.826s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages//image_geometry.egg-info/SOURCES.txt
+[0.826s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages//image_geometry.egg-info/dependency_links.txt
+[0.827s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages//image_geometry.egg-info/top_level.txt
+[0.827s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages/image_geometry/__init__.py
+[0.827s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages/image_geometry/cameramodels.py
+[0.827s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/include/image_geometry/image_geometry/pinhole_camera_model.h
+[0.827s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/include/image_geometry/image_geometry/stereo_camera_model.h
+[0.827s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/include/image_geometry/image_geometry/visibility_control.hpp
+[0.828s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/ament_index/resource_index/package_run_dependencies/image_geometry
+[0.828s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/ament_index/resource_index/parent_prefix_path/image_geometry
+[0.828s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/environment/ament_prefix_path.sh
+[0.828s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/environment/ament_prefix_path.dsv
+[0.828s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/environment/path.sh
+[0.828s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/environment/path.dsv
+[0.828s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/local_setup.bash
+[0.829s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/local_setup.sh
+[0.829s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/local_setup.zsh
+[0.829s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/local_setup.dsv
+[0.829s] -- Symlinking: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/package.dsv
+[0.836s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/ament_index/resource_index/packages/image_geometry
+[0.836s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/cmake/ament_cmake_export_targets-extras.cmake
+[0.836s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.836s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/cmake/image_geometryConfig.cmake
+[0.836s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/cmake/image_geometryConfig-version.cmake
+[0.837s] -- Up-to-date symlink: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/package.xml
+[0.858s] Listing '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages/image_geometry'...
+[0.861s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/libimage_geometry.so
+[0.861s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/cmake/export_image_geometryExport.cmake
+[0.861s] -- Installing: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/cmake/export_image_geometryExport-noconfig.cmake
+[0.864s] Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/opt/ros/galactic /usr/bin/cmake --install /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry

@@ -1,0 +1,7 @@
+SignalRequesterInfo requester 
+IntersectionAccessPoint inboundon
+IntersectionAccessPoint outboundon
+int64 minute
+int64 second
+int64 duration
+int64 status

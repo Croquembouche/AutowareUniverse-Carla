@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/MAP.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/DataParameters.idl"
+#include "v2x_msg/msg/IntersectionGeometry.idl"
+#include "v2x_msg/msg/RestrictionClassAssignment.idl"
+#include "v2x_msg/msg/RoadSegment.idl"
+
+module v2x_msg {
+  module msg {
+    struct MAP {
+      int64 timestamp;
+
+      int64 msgissuerevision;
+
+      int64 layertype;
+
+      int64 layerid;
+
+      sequence<v2x_msg::msg::IntersectionGeometry> intersections;
+
+      sequence<v2x_msg::msg::RoadSegment> roadsegments;
+
+      v2x_msg::msg::DataParameters dataparameters;
+
+      sequence<v2x_msg::msg::RestrictionClassAssignment> restrictionlist;
+    };
+  };
+};
