@@ -24,6 +24,9 @@ except IndexError:
 
 # ----------MSGs--------
 from v2x_msg.msg import MAP
+from v2x_msg.msg import IntersectionGeometry
+from v2x_msg.msg import GenericLane
+from v2x_msg.msg import NodeXY
 
 class DefaultMAP(Node):
     def __init__(self):
@@ -49,21 +52,20 @@ class DefaultMAP(Node):
             total_minutes += month_days[i]*24*60
         milliseconds = now.second * 1000
         return total_minutes, milliseconds
-    # def timer_callback(self):
-    #     data = MAP()
-    #     data.timestamp = "12345"
-    #     data.msgissuerevision = 45
-    #     data.layertype = "1212"
-    #     data.layerid=6
-    #     data.intersections = "1212"
-    #     data.roadsegments= "1212"
-    #     data.dataparameters= "1212"
-    #     data.restrictionlist= "1212"
-    #     data.regional=4
+    def makeLanes(self):
+        lane = GenericLane()
+        lane.id = 1
+        lane.name = "Here is a lane."
+        lane.ingressapproach = 0
+        lane.egressapproach = 0
+        lane.laneattributes.directionaluse = "10"
+        lane.laneattributes.sharewith = ""
+        lane.laneattributes.lanetype = 1
+        lane.maneuvers = ""
+        lane.connectsTo = []
+        lane.overlays = []
 
-    #     self.publisher_.publish(data)
-    #     self.get_logger().info('Publishing: MAP Data')
-    #     self.i += 1
+
 
 def main():
     rclpy.init(args=None)

@@ -1,1 +1,9 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/IntersectionState.msg
+string name
+IntersectionReferenceID id 
+int64 revision
+IntersectionStatusObject status 
+int64 moy
+int64 timestamp
+LaneID[] enabledlanes
+MovementState[] states
+ConnectionManeuverAssist[] maneuverassistlist

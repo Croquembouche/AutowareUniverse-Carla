@@ -1,1 +1,11 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_generator_cpp/v2x_msg/msg/traveler_data_frame.hpp
+// generated from rosidl_generator_cpp/resource/idl.hpp.em
+// generated code does not contain a copyright notice
+
+#ifndef V2X_MSG__MSG__TRAVELER_DATA_FRAME_HPP_
+#define V2X_MSG__MSG__TRAVELER_DATA_FRAME_HPP_
+
+#include "v2x_msg/msg/detail/traveler_data_frame__struct.hpp"
+#include "v2x_msg/msg/detail/traveler_data_frame__builder.hpp"
+#include "v2x_msg/msg/detail/traveler_data_frame__traits.hpp"
+
+#endif  // V2X_MSG__MSG__TRAVELER_DATA_FRAME_HPP_

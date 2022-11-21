@@ -281,6 +281,10 @@ CMakeFiles/v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/j1939data.hpp
 CMakeFiles/v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/detail/j1939data__builder.hpp
 CMakeFiles/v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/detail/j1939data__struct.hpp
 CMakeFiles/v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/detail/j1939data__traits.hpp
+CMakeFiles/v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/lane_attributes.hpp
+CMakeFiles/v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/detail/lane_attributes__builder.hpp
+CMakeFiles/v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/detail/lane_attributes__struct.hpp
+CMakeFiles/v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/detail/lane_attributes__traits.hpp
 CMakeFiles/v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/lane_data_attribute.hpp
 CMakeFiles/v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/detail/lane_data_attribute__builder.hpp
 CMakeFiles/v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/detail/lane_data_attribute__struct.hpp
@@ -683,6 +687,7 @@ rosidl_generator_cpp/v2x_msg/msg/map.hpp: rosidl_adapter/v2x_msg/msg/ITIScodesan
 rosidl_generator_cpp/v2x_msg/msg/map.hpp: rosidl_adapter/v2x_msg/msg/ITISSpeedLimit.idl
 rosidl_generator_cpp/v2x_msg/msg/map.hpp: rosidl_adapter/v2x_msg/msg/ITISSpeedLimitcontent.idl
 rosidl_generator_cpp/v2x_msg/msg/map.hpp: rosidl_adapter/v2x_msg/msg/J1939data.idl
+rosidl_generator_cpp/v2x_msg/msg/map.hpp: rosidl_adapter/v2x_msg/msg/LaneAttributes.idl
 rosidl_generator_cpp/v2x_msg/msg/map.hpp: rosidl_adapter/v2x_msg/msg/LaneDataAttribute.idl
 rosidl_generator_cpp/v2x_msg/msg/map.hpp: rosidl_adapter/v2x_msg/msg/LaneID.idl
 rosidl_generator_cpp/v2x_msg/msg/map.hpp: rosidl_adapter/v2x_msg/msg/MovementEvent.idl
@@ -1448,6 +1453,18 @@ rosidl_generator_cpp/v2x_msg/msg/detail/j1939data__struct.hpp: rosidl_generator_
 
 rosidl_generator_cpp/v2x_msg/msg/detail/j1939data__traits.hpp: rosidl_generator_cpp/v2x_msg/msg/map.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/v2x_msg/msg/detail/j1939data__traits.hpp
+
+rosidl_generator_cpp/v2x_msg/msg/lane_attributes.hpp: rosidl_generator_cpp/v2x_msg/msg/map.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/v2x_msg/msg/lane_attributes.hpp
+
+rosidl_generator_cpp/v2x_msg/msg/detail/lane_attributes__builder.hpp: rosidl_generator_cpp/v2x_msg/msg/map.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/v2x_msg/msg/detail/lane_attributes__builder.hpp
+
+rosidl_generator_cpp/v2x_msg/msg/detail/lane_attributes__struct.hpp: rosidl_generator_cpp/v2x_msg/msg/map.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/v2x_msg/msg/detail/lane_attributes__struct.hpp
+
+rosidl_generator_cpp/v2x_msg/msg/detail/lane_attributes__traits.hpp: rosidl_generator_cpp/v2x_msg/msg/map.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/v2x_msg/msg/detail/lane_attributes__traits.hpp
 
 rosidl_generator_cpp/v2x_msg/msg/lane_data_attribute.hpp: rosidl_generator_cpp/v2x_msg/msg/map.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/v2x_msg/msg/lane_data_attribute.hpp
@@ -2662,6 +2679,10 @@ v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/j1939data.hpp
 v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/detail/j1939data__builder.hpp
 v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/detail/j1939data__struct.hpp
 v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/detail/j1939data__traits.hpp
+v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/lane_attributes.hpp
+v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/detail/lane_attributes__builder.hpp
+v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/detail/lane_attributes__struct.hpp
+v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/detail/lane_attributes__traits.hpp
 v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/lane_data_attribute.hpp
 v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/detail/lane_data_attribute__builder.hpp
 v2x_msg__cpp: rosidl_generator_cpp/v2x_msg/msg/detail/lane_data_attribute__struct.hpp

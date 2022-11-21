@@ -84,16 +84,32 @@ private:
   ::v2x_msg::msg::GenericLane msg_;
 };
 
+class Init_GenericLane_laneattributes
+{
+public:
+  explicit Init_GenericLane_laneattributes(::v2x_msg::msg::GenericLane & msg)
+  : msg_(msg)
+  {}
+  Init_GenericLane_maneuvers laneattributes(::v2x_msg::msg::GenericLane::_laneattributes_type arg)
+  {
+    msg_.laneattributes = std::move(arg);
+    return Init_GenericLane_maneuvers(msg_);
+  }
+
+private:
+  ::v2x_msg::msg::GenericLane msg_;
+};
+
 class Init_GenericLane_egressapproach
 {
 public:
   explicit Init_GenericLane_egressapproach(::v2x_msg::msg::GenericLane & msg)
   : msg_(msg)
   {}
-  Init_GenericLane_maneuvers egressapproach(::v2x_msg::msg::GenericLane::_egressapproach_type arg)
+  Init_GenericLane_laneattributes egressapproach(::v2x_msg::msg::GenericLane::_egressapproach_type arg)
   {
     msg_.egressapproach = std::move(arg);
-    return Init_GenericLane_maneuvers(msg_);
+    return Init_GenericLane_laneattributes(msg_);
   }
 
 private:

@@ -23,16 +23,16 @@ namespace msg
 namespace typesupport_fastrtps_cpp
 {
 bool cdr_serialize(
-  const v2x_msg::msg::AllowedManeuvers &,
+  const v2x_msg::msg::LaneAttributes &,
   eprosima::fastcdr::Cdr &);
 bool cdr_deserialize(
   eprosima::fastcdr::Cdr &,
-  v2x_msg::msg::AllowedManeuvers &);
+  v2x_msg::msg::LaneAttributes &);
 size_t get_serialized_size(
-  const v2x_msg::msg::AllowedManeuvers &,
+  const v2x_msg::msg::LaneAttributes &,
   size_t current_alignment);
 size_t
-max_serialized_size_AllowedManeuvers(
+max_serialized_size_LaneAttributes(
   bool & full_bounded,
   size_t current_alignment);
 }  // namespace typesupport_fastrtps_cpp
@@ -109,10 +109,12 @@ cdr_serialize(
   cdr << ros_message.ingressapproach;
   // Member: egressapproach
   cdr << ros_message.egressapproach;
-  // Member: maneuvers
+  // Member: laneattributes
   v2x_msg::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.maneuvers,
+    ros_message.laneattributes,
     cdr);
+  // Member: maneuvers
+  cdr << ros_message.maneuvers;
   // Member: nodelist
   {
     size_t size = ros_message.nodelist.size();
@@ -158,9 +160,12 @@ cdr_deserialize(
   // Member: egressapproach
   cdr >> ros_message.egressapproach;
 
-  // Member: maneuvers
+  // Member: laneattributes
   v2x_msg::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.maneuvers);
+    cdr, ros_message.laneattributes);
+
+  // Member: maneuvers
+  cdr >> ros_message.maneuvers;
 
   // Member: nodelist
   {
@@ -229,11 +234,15 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: maneuvers
+  // Member: laneattributes
 
   current_alignment +=
     v2x_msg::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.maneuvers, current_alignment);
+    ros_message.laneattributes, current_alignment);
+  // Member: maneuvers
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.maneuvers.size() + 1);
   // Member: nodelist
   {
     size_t array_size = ros_message.nodelist.size();
@@ -325,15 +334,27 @@ max_serialized_size_GenericLane(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: maneuvers
+  // Member: laneattributes
   {
     size_t array_size = 1;
 
 
     for (size_t index = 0; index < array_size; ++index) {
       current_alignment +=
-        v2x_msg::msg::typesupport_fastrtps_cpp::max_serialized_size_AllowedManeuvers(
+        v2x_msg::msg::typesupport_fastrtps_cpp::max_serialized_size_LaneAttributes(
         full_bounded, current_alignment);
+    }
+  }
+
+  // Member: maneuvers
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
     }
   }
 

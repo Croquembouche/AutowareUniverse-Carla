@@ -1,1 +1,8 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/VehicleClassification.msg
+int64 keytype
+int64 role
+int64 iso3883
+int64 hpmstype
+int64 vehicletype
+int64 responseequip
+int64 respondertype
+int64 fueltype

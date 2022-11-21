@@ -1,1 +1,7 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/RoadSegment.msg
+string name
+RoadSegmentReferenceID id
+int64 revision
+Position3D refpoint 
+int64 lanewidth 
+SpeedLimit[] speedlimits
+GenericLane[] roadlaneset

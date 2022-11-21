@@ -1,1 +1,1 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry/ament_cmake_environment_hooks/pythonpath.dsv
+prepend-non-duplicate;PYTHONPATH;lib/python3.8/site-packages

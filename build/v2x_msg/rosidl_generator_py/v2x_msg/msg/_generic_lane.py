@@ -43,13 +43,13 @@ class Metaclass_GenericLane(type):
             cls._TYPE_SUPPORT = module.type_support_msg__msg__generic_lane
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__msg__generic_lane
 
-            from v2x_msg.msg import AllowedManeuvers
-            if AllowedManeuvers.__class__._TYPE_SUPPORT is None:
-                AllowedManeuvers.__class__.__import_type_support__()
-
             from v2x_msg.msg import Connection
             if Connection.__class__._TYPE_SUPPORT is None:
                 Connection.__class__.__import_type_support__()
+
+            from v2x_msg.msg import LaneAttributes
+            if LaneAttributes.__class__._TYPE_SUPPORT is None:
+                LaneAttributes.__class__.__import_type_support__()
 
             from v2x_msg.msg import NodeListXY
             if NodeListXY.__class__._TYPE_SUPPORT is None:
@@ -72,6 +72,7 @@ class GenericLane(metaclass=Metaclass_GenericLane):
         '_name',
         '_ingressapproach',
         '_egressapproach',
+        '_laneattributes',
         '_maneuvers',
         '_nodelist',
         '_connectsto',
@@ -83,7 +84,8 @@ class GenericLane(metaclass=Metaclass_GenericLane):
         'name': 'string',
         'ingressapproach': 'int64',
         'egressapproach': 'int64',
-        'maneuvers': 'v2x_msg/AllowedManeuvers',
+        'laneattributes': 'v2x_msg/LaneAttributes',
+        'maneuvers': 'string',
         'nodelist': 'sequence<v2x_msg/NodeListXY>',
         'connectsto': 'sequence<v2x_msg/Connection>',
         'overlays': 'sequence<int64>',
@@ -94,7 +96,8 @@ class GenericLane(metaclass=Metaclass_GenericLane):
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
-        rosidl_parser.definition.NamespacedType(['v2x_msg', 'msg'], 'AllowedManeuvers'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['v2x_msg', 'msg'], 'LaneAttributes'),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['v2x_msg', 'msg'], 'NodeListXY')),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['v2x_msg', 'msg'], 'Connection')),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('int64')),  # noqa: E501
@@ -108,8 +111,9 @@ class GenericLane(metaclass=Metaclass_GenericLane):
         self.name = kwargs.get('name', str())
         self.ingressapproach = kwargs.get('ingressapproach', int())
         self.egressapproach = kwargs.get('egressapproach', int())
-        from v2x_msg.msg import AllowedManeuvers
-        self.maneuvers = kwargs.get('maneuvers', AllowedManeuvers())
+        from v2x_msg.msg import LaneAttributes
+        self.laneattributes = kwargs.get('laneattributes', LaneAttributes())
+        self.maneuvers = kwargs.get('maneuvers', str())
         self.nodelist = kwargs.get('nodelist', [])
         self.connectsto = kwargs.get('connectsto', [])
         self.overlays = array.array('q', kwargs.get('overlays', []))
@@ -150,6 +154,8 @@ class GenericLane(metaclass=Metaclass_GenericLane):
         if self.ingressapproach != other.ingressapproach:
             return False
         if self.egressapproach != other.egressapproach:
+            return False
+        if self.laneattributes != other.laneattributes:
             return False
         if self.maneuvers != other.maneuvers:
             return False
@@ -225,6 +231,20 @@ class GenericLane(metaclass=Metaclass_GenericLane):
         self._egressapproach = value
 
     @property
+    def laneattributes(self):
+        """Message field 'laneattributes'."""
+        return self._laneattributes
+
+    @laneattributes.setter
+    def laneattributes(self, value):
+        if __debug__:
+            from v2x_msg.msg import LaneAttributes
+            assert \
+                isinstance(value, LaneAttributes), \
+                "The 'laneattributes' field must be a sub message of type 'LaneAttributes'"
+        self._laneattributes = value
+
+    @property
     def maneuvers(self):
         """Message field 'maneuvers'."""
         return self._maneuvers
@@ -232,10 +252,9 @@ class GenericLane(metaclass=Metaclass_GenericLane):
     @maneuvers.setter
     def maneuvers(self, value):
         if __debug__:
-            from v2x_msg.msg import AllowedManeuvers
             assert \
-                isinstance(value, AllowedManeuvers), \
-                "The 'maneuvers' field must be a sub message of type 'AllowedManeuvers'"
+                isinstance(value, str), \
+                "The 'maneuvers' field must be of type 'str'"
         self._maneuvers = value
 
     @property

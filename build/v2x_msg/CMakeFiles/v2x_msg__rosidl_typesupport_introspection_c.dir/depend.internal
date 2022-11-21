@@ -732,11 +732,8 @@ CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_in
  /opt/ros/galactic/include/rosidl_typesupport_introspection_c/identifier.h
  /opt/ros/galactic/include/rosidl_typesupport_introspection_c/message_introspection.h
  /opt/ros/galactic/include/rosidl_typesupport_introspection_c/visibility_control.h
- rosidl_generator_c/v2x_msg/msg/allowed_maneuvers.h
  rosidl_generator_c/v2x_msg/msg/connection.h
- rosidl_generator_c/v2x_msg/msg/detail/allowed_maneuvers__functions.h
  rosidl_generator_c/v2x_msg/msg/detail/allowed_maneuvers__struct.h
- rosidl_generator_c/v2x_msg/msg/detail/allowed_maneuvers__type_support.h
  rosidl_generator_c/v2x_msg/msg/detail/computed_lane__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/connecting_lane__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/connection__functions.h
@@ -745,6 +742,9 @@ CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_in
  rosidl_generator_c/v2x_msg/msg/detail/generic_lane__functions.h
  rosidl_generator_c/v2x_msg/msg/detail/generic_lane__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/intersection_reference_id__struct.h
+ rosidl_generator_c/v2x_msg/msg/detail/lane_attributes__functions.h
+ rosidl_generator_c/v2x_msg/msg/detail/lane_attributes__struct.h
+ rosidl_generator_c/v2x_msg/msg/detail/lane_attributes__type_support.h
  rosidl_generator_c/v2x_msg/msg/detail/lane_data_attribute__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/node_attribute_set_xy__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/node_list_xy__functions.h
@@ -761,11 +761,12 @@ CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_in
  rosidl_generator_c/v2x_msg/msg/detail/offset_xaxis__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/offset_yaxis__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/speed_limit__struct.h
+ rosidl_generator_c/v2x_msg/msg/lane_attributes.h
  rosidl_generator_c/v2x_msg/msg/node_list_xy.h
  rosidl_generator_c/v2x_msg/msg/rosidl_generator_c__visibility_control.h
- rosidl_typesupport_introspection_c/v2x_msg/msg/detail/allowed_maneuvers__rosidl_typesupport_introspection_c.h
  rosidl_typesupport_introspection_c/v2x_msg/msg/detail/connection__rosidl_typesupport_introspection_c.h
  rosidl_typesupport_introspection_c/v2x_msg/msg/detail/generic_lane__rosidl_typesupport_introspection_c.h
+ rosidl_typesupport_introspection_c/v2x_msg/msg/detail/lane_attributes__rosidl_typesupport_introspection_c.h
  rosidl_typesupport_introspection_c/v2x_msg/msg/detail/node_list_xy__rosidl_typesupport_introspection_c.h
  rosidl_typesupport_introspection_c/v2x_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h
 CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2x_msg/msg/detail/generic_signage__type_support.c.o
@@ -991,6 +992,7 @@ CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_in
  rosidl_generator_c/v2x_msg/msg/detail/intersection_reference_id__functions.h
  rosidl_generator_c/v2x_msg/msg/detail/intersection_reference_id__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/intersection_reference_id__type_support.h
+ rosidl_generator_c/v2x_msg/msg/detail/lane_attributes__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/lane_data_attribute__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/node_attribute_set_xy__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/node_list_xy__struct.h
@@ -1202,6 +1204,24 @@ CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_in
  rosidl_typesupport_introspection_c/v2x_msg/msg/detail/j1939data__rosidl_typesupport_introspection_c.h
  rosidl_typesupport_introspection_c/v2x_msg/msg/detail/tire_data__rosidl_typesupport_introspection_c.h
  rosidl_typesupport_introspection_c/v2x_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h
+CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2x_msg/msg/detail/lane_attributes__type_support.c.o
+ /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_introspection_c/v2x_msg/msg/detail/lane_attributes__type_support.c
+ /opt/ros/galactic/include/rosidl_runtime_c/message_initialization.h
+ /opt/ros/galactic/include/rosidl_runtime_c/message_type_support_struct.h
+ /opt/ros/galactic/include/rosidl_runtime_c/primitives_sequence.h
+ /opt/ros/galactic/include/rosidl_runtime_c/string.h
+ /opt/ros/galactic/include/rosidl_runtime_c/string_functions.h
+ /opt/ros/galactic/include/rosidl_runtime_c/visibility_control.h
+ /opt/ros/galactic/include/rosidl_typesupport_interface/macros.h
+ /opt/ros/galactic/include/rosidl_typesupport_introspection_c/field_types.h
+ /opt/ros/galactic/include/rosidl_typesupport_introspection_c/identifier.h
+ /opt/ros/galactic/include/rosidl_typesupport_introspection_c/message_introspection.h
+ /opt/ros/galactic/include/rosidl_typesupport_introspection_c/visibility_control.h
+ rosidl_generator_c/v2x_msg/msg/detail/lane_attributes__functions.h
+ rosidl_generator_c/v2x_msg/msg/detail/lane_attributes__struct.h
+ rosidl_generator_c/v2x_msg/msg/rosidl_generator_c__visibility_control.h
+ rosidl_typesupport_introspection_c/v2x_msg/msg/detail/lane_attributes__rosidl_typesupport_introspection_c.h
+ rosidl_typesupport_introspection_c/v2x_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h
 CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2x_msg/msg/detail/lane_data_attribute__type_support.c.o
  /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_introspection_c/v2x_msg/msg/detail/lane_data_attribute__type_support.c
  /opt/ros/galactic/include/rosidl_runtime_c/message_initialization.h
@@ -1280,6 +1300,7 @@ CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_in
  rosidl_generator_c/v2x_msg/msg/detail/intersection_geometry__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/intersection_geometry__type_support.h
  rosidl_generator_c/v2x_msg/msg/detail/intersection_reference_id__struct.h
+ rosidl_generator_c/v2x_msg/msg/detail/lane_attributes__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/lane_data_attribute__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/map__functions.h
  rosidl_generator_c/v2x_msg/msg/detail/map__struct.h
@@ -2490,6 +2511,7 @@ CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_in
  rosidl_generator_c/v2x_msg/msg/detail/generic_lane__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/generic_lane__type_support.h
  rosidl_generator_c/v2x_msg/msg/detail/intersection_reference_id__struct.h
+ rosidl_generator_c/v2x_msg/msg/detail/lane_attributes__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/lane_data_attribute__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/node_attribute_set_xy__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/node_list_xy__struct.h

@@ -93,6 +93,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/v2x_msg/msg/_itis_speed_limitcontent_s.c"
   "../rosidl_generator_py/v2x_msg/msg/_j1939data.py"
   "../rosidl_generator_py/v2x_msg/msg/_j1939data_s.c"
+  "../rosidl_generator_py/v2x_msg/msg/_lane_attributes.py"
+  "../rosidl_generator_py/v2x_msg/msg/_lane_attributes_s.c"
   "../rosidl_generator_py/v2x_msg/msg/_lane_data_attribute.py"
   "../rosidl_generator_py/v2x_msg/msg/_lane_data_attribute_s.c"
   "../rosidl_generator_py/v2x_msg/msg/_lane_id.py"

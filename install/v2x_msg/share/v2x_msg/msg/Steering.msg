@@ -1,1 +1,4 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/Steering.msg
+int64 angle
+int64 confidence
+int64 rate
+int64 wheel

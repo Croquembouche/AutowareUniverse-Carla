@@ -1,1 +1,7 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/SignalStatusPackage.msg
+SignalRequesterInfo requester 
+IntersectionAccessPoint inboundon
+IntersectionAccessPoint outboundon
+int64 minute
+int64 second
+int64 duration
+int64 status

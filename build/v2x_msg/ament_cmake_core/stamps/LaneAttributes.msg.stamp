@@ -1,0 +1,3 @@
+string directionaluse
+string sharedwith
+int64 lanetype

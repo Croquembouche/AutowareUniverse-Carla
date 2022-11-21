@@ -1,1 +1,5 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/SignalRequesterInfo.msg
+VehicleID id 
+int64 request
+int64 sequencenumber
+int64 basicvehiclerole
+RequestorType typedata

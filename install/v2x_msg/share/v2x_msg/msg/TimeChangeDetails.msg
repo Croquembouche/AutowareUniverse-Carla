@@ -1,1 +1,6 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/TimeChangeDetails.msg
+int64 startime
+int64 minendtime
+int64 maxendtime
+int64 likelytime
+int64 confidence
+int64 nexttime

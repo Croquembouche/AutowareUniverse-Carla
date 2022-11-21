@@ -11,9 +11,10 @@
 
 // Include directives for member types
 // Member `name`
-#include "rosidl_runtime_c/string_functions.h"
 // Member `maneuvers`
-#include "v2x_msg/msg/detail/allowed_maneuvers__functions.h"
+#include "rosidl_runtime_c/string_functions.h"
+// Member `laneattributes`
+#include "v2x_msg/msg/detail/lane_attributes__functions.h"
 // Member `nodelist`
 #include "v2x_msg/msg/detail/node_list_xy__functions.h"
 // Member `connectsto`
@@ -35,8 +36,13 @@ v2x_msg__msg__GenericLane__init(v2x_msg__msg__GenericLane * msg)
   }
   // ingressapproach
   // egressapproach
+  // laneattributes
+  if (!v2x_msg__msg__LaneAttributes__init(&msg->laneattributes)) {
+    v2x_msg__msg__GenericLane__fini(msg);
+    return false;
+  }
   // maneuvers
-  if (!v2x_msg__msg__AllowedManeuvers__init(&msg->maneuvers)) {
+  if (!rosidl_runtime_c__String__init(&msg->maneuvers)) {
     v2x_msg__msg__GenericLane__fini(msg);
     return false;
   }
@@ -69,8 +75,10 @@ v2x_msg__msg__GenericLane__fini(v2x_msg__msg__GenericLane * msg)
   rosidl_runtime_c__String__fini(&msg->name);
   // ingressapproach
   // egressapproach
+  // laneattributes
+  v2x_msg__msg__LaneAttributes__fini(&msg->laneattributes);
   // maneuvers
-  v2x_msg__msg__AllowedManeuvers__fini(&msg->maneuvers);
+  rosidl_runtime_c__String__fini(&msg->maneuvers);
   // nodelist
   v2x_msg__msg__NodeListXY__Sequence__fini(&msg->nodelist);
   // connectsto
@@ -103,8 +111,14 @@ v2x_msg__msg__GenericLane__are_equal(const v2x_msg__msg__GenericLane * lhs, cons
   if (lhs->egressapproach != rhs->egressapproach) {
     return false;
   }
+  // laneattributes
+  if (!v2x_msg__msg__LaneAttributes__are_equal(
+      &(lhs->laneattributes), &(rhs->laneattributes)))
+  {
+    return false;
+  }
   // maneuvers
-  if (!v2x_msg__msg__AllowedManeuvers__are_equal(
+  if (!rosidl_runtime_c__String__are_equal(
       &(lhs->maneuvers), &(rhs->maneuvers)))
   {
     return false;
@@ -150,8 +164,14 @@ v2x_msg__msg__GenericLane__copy(
   output->ingressapproach = input->ingressapproach;
   // egressapproach
   output->egressapproach = input->egressapproach;
+  // laneattributes
+  if (!v2x_msg__msg__LaneAttributes__copy(
+      &(input->laneattributes), &(output->laneattributes)))
+  {
+    return false;
+  }
   // maneuvers
-  if (!v2x_msg__msg__AllowedManeuvers__copy(
+  if (!rosidl_runtime_c__String__copy(
       &(input->maneuvers), &(output->maneuvers)))
   {
     return false;

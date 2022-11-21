@@ -1,1 +1,2 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/RoadSegmentReferenceID.msg
+int64 roadregulatorid
+int64 roadsegmentid

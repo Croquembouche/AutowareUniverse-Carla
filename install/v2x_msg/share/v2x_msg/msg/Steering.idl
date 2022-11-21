@@ -1,1 +1,18 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/Steering.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/Steering.msg
+// generated code does not contain a copyright notice
+
+
+module v2x_msg {
+  module msg {
+    struct Steering {
+      int64 angle;
+
+      int64 confidence;
+
+      int64 rate;
+
+      int64 wheel;
+    };
+  };
+};

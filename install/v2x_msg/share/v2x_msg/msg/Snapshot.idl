@@ -1,1 +1,19 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/Snapshot.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/Snapshot.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/FullPositionVector.idl"
+#include "v2x_msg/msg/VehicleSafetyExtensions.idl"
+#include "v2x_msg/msg/VehicleStatus.idl"
+
+module v2x_msg {
+  module msg {
+    struct Snapshot {
+      v2x_msg::msg::FullPositionVector theposition;
+
+      v2x_msg::msg::VehicleSafetyExtensions safetyext;
+
+      v2x_msg::msg::VehicleStatus dataset;
+    };
+  };
+};

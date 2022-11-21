@@ -1,1 +1,5 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/RequestorType.msg
+int64 role
+int64 subrole
+int64 request
+int64 iso3833vehicletype
+int64 hpmstype

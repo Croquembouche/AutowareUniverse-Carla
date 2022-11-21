@@ -68,6 +68,18 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -89,18 +101,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
@@ -181,17 +181,17 @@ ament_cmake_python_build_cv_bridge_egg/fast:
 .PHONY : ament_cmake_python_build_cv_bridge_egg/fast
 
 #=============================================================================
-# Target rules for targets named ament_cmake_python_symlink_cv_bridge
+# Target rules for targets named ament_cmake_python_copy_cv_bridge
 
 # Build rule for target.
-ament_cmake_python_symlink_cv_bridge: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_cv_bridge
-.PHONY : ament_cmake_python_symlink_cv_bridge
+ament_cmake_python_copy_cv_bridge: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ament_cmake_python_copy_cv_bridge
+.PHONY : ament_cmake_python_copy_cv_bridge
 
 # fast build rule for target.
-ament_cmake_python_symlink_cv_bridge/fast:
-	$(MAKE) -f CMakeFiles/ament_cmake_python_symlink_cv_bridge.dir/build.make CMakeFiles/ament_cmake_python_symlink_cv_bridge.dir/build
-.PHONY : ament_cmake_python_symlink_cv_bridge/fast
+ament_cmake_python_copy_cv_bridge/fast:
+	$(MAKE) -f CMakeFiles/ament_cmake_python_copy_cv_bridge.dir/build.make CMakeFiles/ament_cmake_python_copy_cv_bridge.dir/build
+.PHONY : ament_cmake_python_copy_cv_bridge/fast
 
 #=============================================================================
 # Target rules for targets named cv_bridge_uninstall
@@ -291,11 +291,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... ament_cmake_python_build_cv_bridge_egg"
-	@echo "... install/local"
-	@echo "... ament_cmake_python_symlink_cv_bridge"
+	@echo "... ament_cmake_python_copy_cv_bridge"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"

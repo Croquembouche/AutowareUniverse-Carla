@@ -28,7 +28,7 @@ AMENT_CMAKE_PYTEST_WITH_COVERAGE:BOOL=OFF
 
 //Replace the CMake install command with a custom implementation
 // using symlinks instead of copying resources
-AMENT_CMAKE_SYMLINK_INSTALL:BOOL=1
+AMENT_CMAKE_SYMLINK_INSTALL:BOOL=OFF
 
 //Generate an uninstall target to revert the effects of the install
 // step
@@ -761,8 +761,6 @@ _Python3_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 _Python3_NUMPY_SIGNATURE:INTERNAL=d4c2085e6160485e886b3c0985f5bfe4
 //ADVANCED property for variable: _Python3_NumPy_INCLUDE_DIR
 _Python3_NumPy_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//Index for unique symlink install targets
-__AMENT_CMAKE_SYMLINK_INSTALL_TARGETS_INDEX:INTERNAL=2
 __pkg_config_arguments__OPENSSL:INTERNAL=QUIET;openssl
 __pkg_config_checked__OPENSSL:INTERNAL=1
 //ADVANCED property for variable: boost_headers_DIR

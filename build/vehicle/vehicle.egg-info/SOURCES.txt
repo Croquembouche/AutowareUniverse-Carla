@@ -13,4 +13,6 @@ test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
 vehicle/__init__.py
-vehicle/default_vehicle.py
+vehicle/host_vehicle.py
+vehicle/remote_vehicle.py
+vehicle/start_multiple.py

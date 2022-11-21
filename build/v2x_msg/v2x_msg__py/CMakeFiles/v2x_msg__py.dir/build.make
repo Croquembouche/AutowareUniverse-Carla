@@ -113,6 +113,7 @@ v2x_msg__py/CMakeFiles/v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_iti_scodesa
 v2x_msg__py/CMakeFiles/v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_itis_speed_limit.py
 v2x_msg__py/CMakeFiles/v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_itis_speed_limitcontent.py
 v2x_msg__py/CMakeFiles/v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_j1939data.py
+v2x_msg__py/CMakeFiles/v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_lane_attributes.py
 v2x_msg__py/CMakeFiles/v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_lane_data_attribute.py
 v2x_msg__py/CMakeFiles/v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_lane_id.py
 v2x_msg__py/CMakeFiles/v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_movement_event.py
@@ -253,6 +254,7 @@ v2x_msg__py/CMakeFiles/v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_iti_scodesa
 v2x_msg__py/CMakeFiles/v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_itis_speed_limit_s.c
 v2x_msg__py/CMakeFiles/v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_itis_speed_limitcontent_s.c
 v2x_msg__py/CMakeFiles/v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_j1939data_s.c
+v2x_msg__py/CMakeFiles/v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_lane_attributes_s.c
 v2x_msg__py/CMakeFiles/v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_lane_data_attribute_s.c
 v2x_msg__py/CMakeFiles/v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_lane_id_s.c
 v2x_msg__py/CMakeFiles/v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_movement_event_s.c
@@ -407,6 +409,7 @@ rosidl_generator_py/v2x_msg/_v2x_msg_s.ep.rosidl_typesupport_fastrtps_c.c: rosid
 rosidl_generator_py/v2x_msg/_v2x_msg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/v2x_msg/msg/ITISSpeedLimit.idl
 rosidl_generator_py/v2x_msg/_v2x_msg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/v2x_msg/msg/ITISSpeedLimitcontent.idl
 rosidl_generator_py/v2x_msg/_v2x_msg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/v2x_msg/msg/J1939data.idl
+rosidl_generator_py/v2x_msg/_v2x_msg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/v2x_msg/msg/LaneAttributes.idl
 rosidl_generator_py/v2x_msg/_v2x_msg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/v2x_msg/msg/LaneDataAttribute.idl
 rosidl_generator_py/v2x_msg/_v2x_msg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/v2x_msg/msg/LaneID.idl
 rosidl_generator_py/v2x_msg/_v2x_msg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/v2x_msg/msg/MovementEvent.idl
@@ -668,6 +671,9 @@ rosidl_generator_py/v2x_msg/msg/_itis_speed_limitcontent.py: rosidl_generator_py
 
 rosidl_generator_py/v2x_msg/msg/_j1939data.py: rosidl_generator_py/v2x_msg/_v2x_msg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/v2x_msg/msg/_j1939data.py
+
+rosidl_generator_py/v2x_msg/msg/_lane_attributes.py: rosidl_generator_py/v2x_msg/_v2x_msg_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/v2x_msg/msg/_lane_attributes.py
 
 rosidl_generator_py/v2x_msg/msg/_lane_data_attribute.py: rosidl_generator_py/v2x_msg/_v2x_msg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/v2x_msg/msg/_lane_data_attribute.py
@@ -1089,6 +1095,9 @@ rosidl_generator_py/v2x_msg/msg/_itis_speed_limitcontent_s.c: rosidl_generator_p
 rosidl_generator_py/v2x_msg/msg/_j1939data_s.c: rosidl_generator_py/v2x_msg/_v2x_msg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/v2x_msg/msg/_j1939data_s.c
 
+rosidl_generator_py/v2x_msg/msg/_lane_attributes_s.c: rosidl_generator_py/v2x_msg/_v2x_msg_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/v2x_msg/msg/_lane_attributes_s.c
+
 rosidl_generator_py/v2x_msg/msg/_lane_data_attribute_s.c: rosidl_generator_py/v2x_msg/_v2x_msg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/v2x_msg/msg/_lane_data_attribute_s.c
 
@@ -1396,6 +1405,7 @@ v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_iti_scodesandtextcontent.py
 v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_itis_speed_limit.py
 v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_itis_speed_limitcontent.py
 v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_j1939data.py
+v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_lane_attributes.py
 v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_lane_data_attribute.py
 v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_lane_id.py
 v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_movement_event.py
@@ -1536,6 +1546,7 @@ v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_iti_scodesandtextcontent_s.c
 v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_itis_speed_limit_s.c
 v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_itis_speed_limitcontent_s.c
 v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_j1939data_s.c
+v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_lane_attributes_s.c
 v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_lane_data_attribute_s.c
 v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_lane_id_s.c
 v2x_msg__py: rosidl_generator_py/v2x_msg/msg/_movement_event_s.c

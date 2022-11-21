@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/include/**",
+        "/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/include/**",
+        "/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/include/**",
+        "/opt/ros/galactic/include/**",
+        "/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/include/**",
+        "/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/cv_bridge/include/**",
+        "/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/image_geometry/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

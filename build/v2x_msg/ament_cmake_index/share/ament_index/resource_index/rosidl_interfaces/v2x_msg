@@ -88,6 +88,8 @@ msg/IntersectionStatusObject.idl
 msg/IntersectionStatusObject.msg
 msg/J1939data.idl
 msg/J1939data.msg
+msg/LaneAttributes.idl
+msg/LaneAttributes.msg
 msg/LaneDataAttribute.idl
 msg/LaneDataAttribute.msg
 msg/LaneID.idl

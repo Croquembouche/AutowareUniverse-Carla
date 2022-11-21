@@ -1,1 +1,3 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry/ament_cmake_environment_hooks/pythonpath.sh
+# generated from ament_package/template/environment_hook/pythonpath.sh.in
+
+ament_prepend_unique_value PYTHONPATH "$AMENT_CURRENT_PREFIX/lib/python3.8/site-packages"

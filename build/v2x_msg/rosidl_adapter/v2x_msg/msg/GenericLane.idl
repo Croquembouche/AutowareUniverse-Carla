@@ -2,8 +2,8 @@
 // with input from v2x_msg/msg/GenericLane.msg
 // generated code does not contain a copyright notice
 
-#include "v2x_msg/msg/AllowedManeuvers.idl"
 #include "v2x_msg/msg/Connection.idl"
+#include "v2x_msg/msg/LaneAttributes.idl"
 #include "v2x_msg/msg/NodeListXY.idl"
 
 module v2x_msg {
@@ -17,7 +17,9 @@ module v2x_msg {
 
       int64 egressapproach;
 
-      v2x_msg::msg::AllowedManeuvers maneuvers;
+      v2x_msg::msg::LaneAttributes laneattributes;
+
+      string maneuvers;
 
       sequence<v2x_msg::msg::NodeListXY> nodelist;
 

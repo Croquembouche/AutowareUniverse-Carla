@@ -1,1 +1,16 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/Offset.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/Offset.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/NodeLL.idl"
+#include "v2x_msg/msg/NodeListXY.idl"
+
+module v2x_msg {
+  module msg {
+    struct Offset {
+      v2x_msg::msg::NodeListXY xy;
+
+      sequence<v2x_msg::msg::NodeLL> nodes;
+    };
+  };
+};

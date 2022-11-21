@@ -1,1 +1,22 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/AccelSets.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/AccelSets.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/AccelerationSet4Way.idl"
+#include "v2x_msg/msg/ConfidenceSet.idl"
+
+module v2x_msg {
+  module msg {
+    struct AccelSets {
+      v2x_msg::msg::AccelerationSet4Way angle;
+
+      int64 certaccelthres;
+
+      int64 yawratecon;
+
+      int64 hozaccelcon;
+
+      v2x_msg::msg::ConfidenceSet confidenceset;
+    };
+  };
+};

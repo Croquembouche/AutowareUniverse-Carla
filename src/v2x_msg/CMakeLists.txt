@@ -71,6 +71,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ITISSpeedLimit.msg"
   "msg/ITISSpeedLimitcontent.msg"
   "msg/J1939data.msg"
+  "msg/LaneAttributes.msg"
   "msg/LaneDataAttribute.msg"
   "msg/LaneID.msg"
   "msg/MovementEvent.msg"

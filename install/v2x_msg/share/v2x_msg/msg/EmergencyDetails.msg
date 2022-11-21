@@ -1,1 +1,6 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/EmergencyDetails.msg
+int64 notused
+int64 sirenuse
+int64 lightsuse
+int64 multi
+PrivilegedEvents events 
+int64 responsetype

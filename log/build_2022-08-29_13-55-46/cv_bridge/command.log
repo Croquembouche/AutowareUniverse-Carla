@@ -1,4 +1,0 @@
-Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge -- -j20 -l20
-Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge -- -j20 -l20
-Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge
-Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge

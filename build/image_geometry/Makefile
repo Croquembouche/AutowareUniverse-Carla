@@ -194,19 +194,6 @@ ament_cmake_python_build_image_geometry_egg/fast:
 .PHONY : ament_cmake_python_build_image_geometry_egg/fast
 
 #=============================================================================
-# Target rules for targets named ament_cmake_python_symlink_image_geometry
-
-# Build rule for target.
-ament_cmake_python_symlink_image_geometry: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_image_geometry
-.PHONY : ament_cmake_python_symlink_image_geometry
-
-# fast build rule for target.
-ament_cmake_python_symlink_image_geometry/fast:
-	$(MAKE) -f CMakeFiles/ament_cmake_python_symlink_image_geometry.dir/build.make CMakeFiles/ament_cmake_python_symlink_image_geometry.dir/build
-.PHONY : ament_cmake_python_symlink_image_geometry/fast
-
-#=============================================================================
 # Target rules for targets named image_geometry_uninstall
 
 # Build rule for target.
@@ -231,6 +218,19 @@ image_geometry-utest: cmake_check_build_system
 image_geometry-utest/fast:
 	$(MAKE) -f CMakeFiles/image_geometry-utest.dir/build.make CMakeFiles/image_geometry-utest.dir/build
 .PHONY : image_geometry-utest/fast
+
+#=============================================================================
+# Target rules for targets named ament_cmake_python_copy_image_geometry
+
+# Build rule for target.
+ament_cmake_python_copy_image_geometry: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ament_cmake_python_copy_image_geometry
+.PHONY : ament_cmake_python_copy_image_geometry
+
+# fast build rule for target.
+ament_cmake_python_copy_image_geometry/fast:
+	$(MAKE) -f CMakeFiles/ament_cmake_python_copy_image_geometry.dir/build.make CMakeFiles/ament_cmake_python_copy_image_geometry.dir/build
+.PHONY : ament_cmake_python_copy_image_geometry/fast
 
 #=============================================================================
 # Target rules for targets named uninstall
@@ -366,10 +366,10 @@ help:
 	@echo "... test"
 	@echo "... image_geometry"
 	@echo "... ament_cmake_python_build_image_geometry_egg"
-	@echo "... ament_cmake_python_symlink_image_geometry"
 	@echo "... install/strip"
 	@echo "... image_geometry_uninstall"
 	@echo "... image_geometry-utest"
+	@echo "... ament_cmake_python_copy_image_geometry"
 	@echo "... uninstall"
 	@echo "... gtest_main"
 	@echo "... gtest"

@@ -1,1 +1,4 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/MovementState.msg
+string movementname
+int64 signalgroupid
+MovementEvent[] statetimespeed
+ConnectionManeuverAssist maneuverassistlist

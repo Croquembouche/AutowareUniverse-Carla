@@ -1,0 +1,13 @@
+[ 12%] Built target gtest
+[ 25%] Built target gtest_main
+[ 43%] Built target cv_bridge
+[ 43%] Built target ament_cmake_python_copy_cv_bridge
+[ 81%] Built target cv_bridge-utest
+[100%] Built target cv_bridge_boost
+running egg_info
+writing cv_bridge.egg-info/PKG-INFO
+writing dependency_links to cv_bridge.egg-info/dependency_links.txt
+writing top-level names to cv_bridge.egg-info/top_level.txt
+reading manifest file 'cv_bridge.egg-info/SOURCES.txt'
+writing manifest file 'cv_bridge.egg-info/SOURCES.txt'
+[100%] Built target ament_cmake_python_build_cv_bridge_egg

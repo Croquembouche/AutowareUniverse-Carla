@@ -1,1 +1,2 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/NodeXY32b.msg
+int64 x
+int64 y

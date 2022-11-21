@@ -19,9 +19,10 @@ extern "C"
 
 // Include directives for member types
 // Member 'name'
-#include "rosidl_runtime_c/string.h"
 // Member 'maneuvers'
-#include "v2x_msg/msg/detail/allowed_maneuvers__struct.h"
+#include "rosidl_runtime_c/string.h"
+// Member 'laneattributes'
+#include "v2x_msg/msg/detail/lane_attributes__struct.h"
 // Member 'nodelist'
 #include "v2x_msg/msg/detail/node_list_xy__struct.h"
 // Member 'connectsto'
@@ -36,7 +37,8 @@ typedef struct v2x_msg__msg__GenericLane
   rosidl_runtime_c__String name;
   int64_t ingressapproach;
   int64_t egressapproach;
-  v2x_msg__msg__AllowedManeuvers maneuvers;
+  v2x_msg__msg__LaneAttributes laneattributes;
+  rosidl_runtime_c__String maneuvers;
   v2x_msg__msg__NodeListXY__Sequence nodelist;
   v2x_msg__msg__Connection__Sequence connectsto;
   rosidl_runtime_c__int64__Sequence overlays;

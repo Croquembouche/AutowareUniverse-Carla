@@ -1,0 +1,14 @@
+[  0%] Built target v2x_msg__cpp
+[ 12%] Built target v2x_msg__rosidl_generator_c
+[ 24%] Built target v2x_msg__rosidl_typesupport_cpp
+[ 37%] Built target v2x_msg__rosidl_typesupport_introspection_cpp
+[ 50%] Built target v2x_msg__rosidl_typesupport_c
+[ 62%] Built target v2x_msg__rosidl_typesupport_fastrtps_cpp
+[ 75%] Built target v2x_msg__rosidl_typesupport_introspection_c
+[ 88%] Built target v2x_msg__rosidl_typesupport_fastrtps_c
+[ 88%] Built target v2x_msg
+[ 88%] Built target v2x_msg__py
+[100%] Built target v2x_msg__python
+[100%] Built target v2x_msg__rosidl_typesupport_fastrtps_c__pyext
+[100%] Built target v2x_msg__rosidl_typesupport_introspection_c__pyext
+[100%] Built target v2x_msg__rosidl_typesupport_c__pyext

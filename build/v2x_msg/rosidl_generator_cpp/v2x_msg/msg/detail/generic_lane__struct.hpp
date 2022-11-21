@@ -15,8 +15,8 @@
 
 
 // Include directives for member types
-// Member 'maneuvers'
-#include "v2x_msg/msg/detail/allowed_maneuvers__struct.hpp"
+// Member 'laneattributes'
+#include "v2x_msg/msg/detail/lane_attributes__struct.hpp"
 // Member 'nodelist'
 #include "v2x_msg/msg/detail/node_list_xy__struct.hpp"
 // Member 'connectsto'
@@ -41,7 +41,7 @@ struct GenericLane_
   using Type = GenericLane_<ContainerAllocator>;
 
   explicit GenericLane_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : maneuvers(_init)
+  : laneattributes(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
@@ -50,12 +50,14 @@ struct GenericLane_
       this->name = "";
       this->ingressapproach = 0ll;
       this->egressapproach = 0ll;
+      this->maneuvers = "";
     }
   }
 
   explicit GenericLane_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : name(_alloc),
-    maneuvers(_alloc, _init)
+    laneattributes(_alloc, _init),
+    maneuvers(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
@@ -64,6 +66,7 @@ struct GenericLane_
       this->name = "";
       this->ingressapproach = 0ll;
       this->egressapproach = 0ll;
+      this->maneuvers = "";
     }
   }
 
@@ -80,8 +83,11 @@ struct GenericLane_
   using _egressapproach_type =
     int64_t;
   _egressapproach_type egressapproach;
+  using _laneattributes_type =
+    v2x_msg::msg::LaneAttributes_<ContainerAllocator>;
+  _laneattributes_type laneattributes;
   using _maneuvers_type =
-    v2x_msg::msg::AllowedManeuvers_<ContainerAllocator>;
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _maneuvers_type maneuvers;
   using _nodelist_type =
     std::vector<v2x_msg::msg::NodeListXY_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<v2x_msg::msg::NodeListXY_<ContainerAllocator>>>;
@@ -118,8 +124,14 @@ struct GenericLane_
     this->egressapproach = _arg;
     return *this;
   }
+  Type & set__laneattributes(
+    const v2x_msg::msg::LaneAttributes_<ContainerAllocator> & _arg)
+  {
+    this->laneattributes = _arg;
+    return *this;
+  }
   Type & set__maneuvers(
-    const v2x_msg::msg::AllowedManeuvers_<ContainerAllocator> & _arg)
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
     this->maneuvers = _arg;
     return *this;
@@ -195,6 +207,9 @@ struct GenericLane_
       return false;
     }
     if (this->egressapproach != other.egressapproach) {
+      return false;
+    }
+    if (this->laneattributes != other.laneattributes) {
       return false;
     }
     if (this->maneuvers != other.maneuvers) {

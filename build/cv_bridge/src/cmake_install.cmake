@@ -60,3 +60,27 @@ endif()
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cv_bridge/cv_bridge" TYPE FILE FILES "/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge/src/cv_bridge/cv_bridge_export.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/cv_bridge/boost/cv_bridge_boost.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/cv_bridge/boost/cv_bridge_boost.so")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/cv_bridge/boost/cv_bridge_boost.so"
+         RPATH "")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/cv_bridge/boost" TYPE MODULE FILES "/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge/src/boost/cv_bridge_boost.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/cv_bridge/boost/cv_bridge_boost.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/cv_bridge/boost/cv_bridge_boost.so")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/cv_bridge/boost/cv_bridge_boost.so"
+         OLD_RPATH "/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge/src:/opt/ros/galactic/lib:"
+         NEW_RPATH "")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/cv_bridge/boost/cv_bridge_boost.so")
+    endif()
+  endif()
+endif()
+

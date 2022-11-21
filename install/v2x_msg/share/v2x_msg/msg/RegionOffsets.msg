@@ -1,1 +1,3 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/RegionOffsets.msg
+int64 xoffset
+int64 yoffset
+int64 zoffset

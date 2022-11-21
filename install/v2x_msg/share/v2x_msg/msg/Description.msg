@@ -1,1 +1,3 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/Description.msg
+OffsetSystem path
+GeometricProjection geometry
+ValidRegion oldregion

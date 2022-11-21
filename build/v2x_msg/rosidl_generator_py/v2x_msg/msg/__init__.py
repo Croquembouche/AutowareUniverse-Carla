@@ -43,6 +43,7 @@ from v2x_msg.msg._iti_scodesandtextcontent import ITIScodesandtextcontent  # noq
 from v2x_msg.msg._itis_speed_limit import ITISSpeedLimit  # noqa: F401
 from v2x_msg.msg._itis_speed_limitcontent import ITISSpeedLimitcontent  # noqa: F401
 from v2x_msg.msg._j1939data import J1939data  # noqa: F401
+from v2x_msg.msg._lane_attributes import LaneAttributes  # noqa: F401
 from v2x_msg.msg._lane_data_attribute import LaneDataAttribute  # noqa: F401
 from v2x_msg.msg._lane_id import LaneID  # noqa: F401
 from v2x_msg.msg._latency import Latency  # noqa: F401

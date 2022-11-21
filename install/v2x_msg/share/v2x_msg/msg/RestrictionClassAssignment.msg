@@ -1,1 +1,2 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/RestrictionClassAssignment.msg
+int64 restrictionclassid
+RestrictionUserType[] users

@@ -1,1 +1,20 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/VehicleStatusRequest.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/VehicleStatusRequest.msg
+// generated code does not contain a copyright notice
+
+
+module v2x_msg {
+  module msg {
+    struct VehicleStatusRequest {
+      int64 datatype;
+
+      int64 subtype;
+
+      int64 sendonlessthenvalue;
+
+      int64 sendonmorethenvalue;
+
+      boolean sendall;
+    };
+  };
+};

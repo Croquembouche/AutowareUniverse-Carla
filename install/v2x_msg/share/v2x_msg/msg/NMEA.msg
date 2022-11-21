@@ -1,1 +1,5 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/NMEA.msg
+int64 timestamp
+int64 rev
+int64 msg
+int64 wdcount
+string payload

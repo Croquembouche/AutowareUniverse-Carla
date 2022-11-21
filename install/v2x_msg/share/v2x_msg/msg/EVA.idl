@@ -1,1 +1,32 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/EVA.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/EVA.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/EmergencyDetails.idl"
+#include "v2x_msg/msg/RSA.idl"
+
+module v2x_msg {
+  module msg {
+    struct EVA {
+      int64 timestamp;
+
+      string id;
+
+      v2x_msg::msg::RSA rsamsg;
+
+      int64 responsetype;
+
+      v2x_msg::msg::EmergencyDetails details;
+
+      int64 mass;
+
+      int64 basictype;
+
+      int64 vehicletype;
+
+      int64 responseequip;
+
+      int64 respondertype;
+    };
+  };
+};

@@ -906,6 +906,26 @@ rosidl_typesupport_c/visibility_control.h
 rosidl_typesupport_interface/macros.h
 /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_c/v2x_msg/msg/rosidl_typesupport_interface/macros.h
 
+/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_c/v2x_msg/msg/lane_attributes__type_support.cpp
+cstddef
+/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_c/v2x_msg/msg/cstddef
+rosidl_runtime_c/message_type_support_struct.h
+/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_c/v2x_msg/msg/rosidl_runtime_c/message_type_support_struct.h
+v2x_msg/msg/rosidl_typesupport_c__visibility_control.h
+/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_c/v2x_msg/msg/v2x_msg/msg/rosidl_typesupport_c__visibility_control.h
+v2x_msg/msg/detail/lane_attributes__struct.h
+/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_c/v2x_msg/msg/v2x_msg/msg/detail/lane_attributes__struct.h
+rosidl_typesupport_c/identifier.h
+/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_c/v2x_msg/msg/rosidl_typesupport_c/identifier.h
+rosidl_typesupport_c/message_type_support_dispatch.h
+/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_c/v2x_msg/msg/rosidl_typesupport_c/message_type_support_dispatch.h
+rosidl_typesupport_c/type_support_map.h
+/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_c/v2x_msg/msg/rosidl_typesupport_c/type_support_map.h
+rosidl_typesupport_c/visibility_control.h
+/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_c/v2x_msg/msg/rosidl_typesupport_c/visibility_control.h
+rosidl_typesupport_interface/macros.h
+/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_c/v2x_msg/msg/rosidl_typesupport_interface/macros.h
+
 /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_c/v2x_msg/msg/lane_data_attribute__type_support.cpp
 cstddef
 /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_c/v2x_msg/msg/cstddef
@@ -3153,8 +3173,8 @@ stdint.h
 -
 rosidl_runtime_c/string.h
 rosidl_generator_c/v2x_msg/msg/detail/rosidl_runtime_c/string.h
-v2x_msg/msg/detail/allowed_maneuvers__struct.h
-rosidl_generator_c/v2x_msg/msg/detail/v2x_msg/msg/detail/allowed_maneuvers__struct.h
+v2x_msg/msg/detail/lane_attributes__struct.h
+rosidl_generator_c/v2x_msg/msg/detail/v2x_msg/msg/detail/lane_attributes__struct.h
 v2x_msg/msg/detail/node_list_xy__struct.h
 rosidl_generator_c/v2x_msg/msg/detail/v2x_msg/msg/detail/node_list_xy__struct.h
 v2x_msg/msg/detail/connection__struct.h
@@ -3343,6 +3363,16 @@ v2x_msg/msg/detail/tire_data__struct.h
 rosidl_generator_c/v2x_msg/msg/detail/v2x_msg/msg/detail/tire_data__struct.h
 v2x_msg/msg/detail/axle_weight__struct.h
 rosidl_generator_c/v2x_msg/msg/detail/v2x_msg/msg/detail/axle_weight__struct.h
+
+rosidl_generator_c/v2x_msg/msg/detail/lane_attributes__struct.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+rosidl_runtime_c/string.h
+rosidl_generator_c/v2x_msg/msg/detail/rosidl_runtime_c/string.h
 
 rosidl_generator_c/v2x_msg/msg/detail/lane_data_attribute__struct.h
 stdbool.h

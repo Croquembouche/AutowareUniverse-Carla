@@ -1,1 +1,7 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/ConfidenceSet.msg
+AccelSteerYawRateConfidence accelconfidence 
+SpeedandHeadingandThrottleConfidence speedconfidence 
+int64 timeconfidence
+PositionConfidenceSet posconfidence 
+int64 steerconfidence 
+int64 headingconfidence
+int64 throttleconfidence

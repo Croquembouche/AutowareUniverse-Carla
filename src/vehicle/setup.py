@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'default_vehicle = vehicle.default_vehicle:main'
+            'host_vehicle = vehicle.host_vehicle:main',
+            'remote_vehicle = vehicle.remote_vehicle:main'
         ],
     },
 )

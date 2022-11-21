@@ -1,1 +1,3 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/ValidRegion.msg
+string direction 
+int64 extent
+Area area

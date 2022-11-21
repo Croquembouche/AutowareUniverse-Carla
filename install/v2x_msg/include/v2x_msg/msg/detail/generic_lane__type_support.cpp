@@ -118,7 +118,7 @@ void resize_function__GenericLane__overlays(void * untyped_member, size_t size)
   member->resize(size);
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember GenericLane_message_member_array[8] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember GenericLane_message_member_array[9] = {
   {
     "laneid",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
@@ -180,10 +180,25 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember GenericLane_m
     nullptr  // resize(index) function pointer
   },
   {
-    "maneuvers",  // name
+    "laneattributes",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<v2x_msg::msg::AllowedManeuvers>(),  // members of sub message
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<v2x_msg::msg::LaneAttributes>(),  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(v2x_msg::msg::GenericLane, laneattributes),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "maneuvers",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -244,7 +259,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember GenericLane_m
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers GenericLane_message_members = {
   "v2x_msg::msg",  // message namespace
   "GenericLane",  // message name
-  8,  // number of fields
+  9,  // number of fields
   sizeof(v2x_msg::msg::GenericLane),
   GenericLane_message_member_array,  // message members
   GenericLane_init_function,  // function to initialize message memory (memory has to be allocated)

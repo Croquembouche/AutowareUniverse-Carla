@@ -26,8 +26,8 @@
 #include "v2x_msg/msg/detail/connection__functions.h"
 #include "v2x_msg/msg/detail/node_list_xy__functions.h"
 // end nested array functions include
-bool v2x_msg__msg__allowed_maneuvers__convert_from_py(PyObject * _pymsg, void * _ros_message);
-PyObject * v2x_msg__msg__allowed_maneuvers__convert_to_py(void * raw_ros_message);
+bool v2x_msg__msg__lane_attributes__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * v2x_msg__msg__lane_attributes__convert_to_py(void * raw_ros_message);
 bool v2x_msg__msg__node_list_xy__convert_from_py(PyObject * _pymsg, void * _ros_message);
 PyObject * v2x_msg__msg__node_list_xy__convert_to_py(void * raw_ros_message);
 bool v2x_msg__msg__connection__convert_from_py(PyObject * _pymsg, void * _ros_message);
@@ -108,15 +108,30 @@ bool v2x_msg__msg__generic_lane__convert_from_py(PyObject * _pymsg, void * _ros_
     ros_message->egressapproach = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
+  {  // laneattributes
+    PyObject * field = PyObject_GetAttrString(_pymsg, "laneattributes");
+    if (!field) {
+      return false;
+    }
+    if (!v2x_msg__msg__lane_attributes__convert_from_py(field, &ros_message->laneattributes)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
   {  // maneuvers
     PyObject * field = PyObject_GetAttrString(_pymsg, "maneuvers");
     if (!field) {
       return false;
     }
-    if (!v2x_msg__msg__allowed_maneuvers__convert_from_py(field, &ros_message->maneuvers)) {
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
       Py_DECREF(field);
       return false;
     }
+    rosidl_runtime_c__String__assign(&ros_message->maneuvers, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
   {  // nodelist
@@ -319,9 +334,26 @@ PyObject * v2x_msg__msg__generic_lane__convert_to_py(void * raw_ros_message)
       }
     }
   }
+  {  // laneattributes
+    PyObject * field = NULL;
+    field = v2x_msg__msg__lane_attributes__convert_to_py(&ros_message->laneattributes);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "laneattributes", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // maneuvers
     PyObject * field = NULL;
-    field = v2x_msg__msg__allowed_maneuvers__convert_to_py(&ros_message->maneuvers);
+    field = PyUnicode_DecodeUTF8(
+      ros_message->maneuvers.data,
+      strlen(ros_message->maneuvers.data),
+      "strict");
     if (!field) {
       return NULL;
     }

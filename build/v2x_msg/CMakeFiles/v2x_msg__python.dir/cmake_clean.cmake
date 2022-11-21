@@ -44,6 +44,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/v2x_msg__python.dir/rosidl_generator_py/v2x_msg/msg/_itis_speed_limit_s.c.o"
   "CMakeFiles/v2x_msg__python.dir/rosidl_generator_py/v2x_msg/msg/_itis_speed_limitcontent_s.c.o"
   "CMakeFiles/v2x_msg__python.dir/rosidl_generator_py/v2x_msg/msg/_j1939data_s.c.o"
+  "CMakeFiles/v2x_msg__python.dir/rosidl_generator_py/v2x_msg/msg/_lane_attributes_s.c.o"
   "CMakeFiles/v2x_msg__python.dir/rosidl_generator_py/v2x_msg/msg/_lane_data_attribute_s.c.o"
   "CMakeFiles/v2x_msg__python.dir/rosidl_generator_py/v2x_msg/msg/_lane_id_s.c.o"
   "CMakeFiles/v2x_msg__python.dir/rosidl_generator_py/v2x_msg/msg/_latency_s.c.o"

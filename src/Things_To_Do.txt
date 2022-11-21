@@ -1,0 +1,25 @@
+
+
+
+
+
+
+
+
+
+Danlaw <-> Autoware
+
+How can the messages be sent from Danlaw to Autoware vehicle?
+    Mount a danlaw device
+
+How can Autoware decrypt the message?
+    The message starts as a UPPERHEX/ASN
+    Then, UPPERHEX/ASN needs to be converted to ROS2 messages. 
+        How does this step work?
+        ASN -> JSON -> ROS2
+
+How can Autoware send messages?
+    The message starts as ROS2 messages recevied from sensors or PC.
+    The ROS2 message is converted into UPPERHEX/ASN.
+        how does this step work?
+    The UPPERHEX/ASN is sent via danlaw device.

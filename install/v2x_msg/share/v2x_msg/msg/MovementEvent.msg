@@ -1,1 +1,3 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/MovementEvent.msg
+int64 movementphasestate
+TimeChangeDetails timing
+AdvisorySpeed[] speeds

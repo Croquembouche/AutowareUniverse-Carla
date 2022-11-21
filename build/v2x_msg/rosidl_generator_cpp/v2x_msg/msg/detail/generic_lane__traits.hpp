@@ -13,8 +13,8 @@
 #include <type_traits>
 
 // Include directives for member types
-// Member 'maneuvers'
-#include "v2x_msg/msg/detail/allowed_maneuvers__traits.hpp"
+// Member 'laneattributes'
+#include "v2x_msg/msg/detail/lane_attributes__traits.hpp"
 // Member 'nodelist'
 #include "v2x_msg/msg/detail/node_list_xy__traits.hpp"
 // Member 'connectsto'
@@ -67,13 +67,23 @@ inline void to_yaml(
     out << "\n";
   }
 
+  // member: laneattributes
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "laneattributes:\n";
+    to_yaml(msg.laneattributes, out, indentation + 2);
+  }
+
   // member: maneuvers
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "maneuvers:\n";
-    to_yaml(msg.maneuvers, out, indentation + 2);
+    out << "maneuvers: ";
+    value_to_yaml(msg.maneuvers, out);
+    out << "\n";
   }
 
   // member: nodelist

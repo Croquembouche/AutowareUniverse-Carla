@@ -232,6 +232,9 @@ CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generat
  rosidl_generator_c/v2x_msg/msg/detail/j1939data__functions.h
  rosidl_generator_c/v2x_msg/msg/detail/j1939data__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/j1939data__type_support.h
+ rosidl_generator_c/v2x_msg/msg/detail/lane_attributes__functions.h
+ rosidl_generator_c/v2x_msg/msg/detail/lane_attributes__struct.h
+ rosidl_generator_c/v2x_msg/msg/detail/lane_attributes__type_support.h
  rosidl_generator_c/v2x_msg/msg/detail/lane_data_attribute__functions.h
  rosidl_generator_c/v2x_msg/msg/detail/lane_data_attribute__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/lane_data_attribute__type_support.h

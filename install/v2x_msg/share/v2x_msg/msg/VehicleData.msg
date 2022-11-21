@@ -1,1 +1,5 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/VehicleData.msg
+int64 height 
+BumperHeights bumpers 
+int64 mass
+int64 trailerweight
+int64 type

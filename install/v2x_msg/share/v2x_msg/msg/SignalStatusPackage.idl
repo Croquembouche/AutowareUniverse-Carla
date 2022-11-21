@@ -1,1 +1,26 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/SignalStatusPackage.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/SignalStatusPackage.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/IntersectionAccessPoint.idl"
+#include "v2x_msg/msg/SignalRequesterInfo.idl"
+
+module v2x_msg {
+  module msg {
+    struct SignalStatusPackage {
+      v2x_msg::msg::SignalRequesterInfo requester;
+
+      v2x_msg::msg::IntersectionAccessPoint inboundon;
+
+      v2x_msg::msg::IntersectionAccessPoint outboundon;
+
+      int64 minute;
+
+      int64 second;
+
+      int64 duration;
+
+      int64 status;
+    };
+  };
+};

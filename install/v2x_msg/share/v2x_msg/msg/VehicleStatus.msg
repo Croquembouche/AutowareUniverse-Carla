@@ -1,1 +1,21 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/VehicleStatus.msg
+string lights
+int64 lightbar 
+WiperSet wipers
+BrakeSystemStatus brakestatus 
+int64 roadfriction
+int64 sundata
+int64 raindata
+int64 airtemp
+int64 airpres
+Steering steering
+AccelSets accelsets
+Object object 
+FullPositionVector fullpos 
+int64 throttlepos
+SpeedandHeadingandThrottleConfidence speedheadc 
+int64 speedc 
+VehicleData vehicledata 
+VehicleIdent vehicleident 
+J1939data j1939data 
+WeatherReport weatherreport 
+string gnssstatus

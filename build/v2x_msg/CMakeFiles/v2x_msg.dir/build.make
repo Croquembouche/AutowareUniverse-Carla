@@ -110,6 +110,7 @@ CMakeFiles/v2x_msg: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_ms
 CMakeFiles/v2x_msg: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/ITISSpeedLimit.msg
 CMakeFiles/v2x_msg: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/ITISSpeedLimitcontent.msg
 CMakeFiles/v2x_msg: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/J1939data.msg
+CMakeFiles/v2x_msg: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/LaneAttributes.msg
 CMakeFiles/v2x_msg: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/LaneDataAttribute.msg
 CMakeFiles/v2x_msg: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/LaneID.msg
 CMakeFiles/v2x_msg: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg/msg/MovementEvent.msg

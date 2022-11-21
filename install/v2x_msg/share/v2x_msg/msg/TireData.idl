@@ -1,1 +1,24 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/TireData.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/TireData.msg
+// generated code does not contain a copyright notice
+
+
+module v2x_msg {
+  module msg {
+    struct TireData {
+      int64 location;
+
+      int64 pressure;
+
+      int64 temp;
+
+      int64 wheelsensorstatus;
+
+      int64 wheelendelectfault;
+
+      int64 leakagerate;
+
+      int64 detection;
+    };
+  };
+};

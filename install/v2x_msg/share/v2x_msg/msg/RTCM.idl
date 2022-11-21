@@ -1,1 +1,24 @@
-/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/RTCM.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/RTCM.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/FullPositionVector.idl"
+#include "v2x_msg/msg/RTCMheader.idl"
+
+module v2x_msg {
+  module msg {
+    struct RTCM {
+      int64 msgcnt;
+
+      int64 rev;
+
+      int64 timestamp;
+
+      v2x_msg::msg::FullPositionVector anchorpoint;
+
+      v2x_msg::msg::RTCMheader rtcmheader;
+
+      sequence<string> msgs;
+    };
+  };
+};

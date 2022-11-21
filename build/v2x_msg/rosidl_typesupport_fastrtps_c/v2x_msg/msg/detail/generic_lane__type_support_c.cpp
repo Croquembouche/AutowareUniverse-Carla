@@ -36,23 +36,13 @@ extern "C"
 
 #include "rosidl_runtime_c/primitives_sequence.h"  // overlays
 #include "rosidl_runtime_c/primitives_sequence_functions.h"  // overlays
-#include "rosidl_runtime_c/string.h"  // name
-#include "rosidl_runtime_c/string_functions.h"  // name
-#include "v2x_msg/msg/detail/allowed_maneuvers__functions.h"  // maneuvers
+#include "rosidl_runtime_c/string.h"  // maneuvers, name
+#include "rosidl_runtime_c/string_functions.h"  // maneuvers, name
 #include "v2x_msg/msg/detail/connection__functions.h"  // connectsto
+#include "v2x_msg/msg/detail/lane_attributes__functions.h"  // laneattributes
 #include "v2x_msg/msg/detail/node_list_xy__functions.h"  // nodelist
 
 // forward declare type support functions
-size_t get_serialized_size_v2x_msg__msg__AllowedManeuvers(
-  const void * untyped_ros_message,
-  size_t current_alignment);
-
-size_t max_serialized_size_v2x_msg__msg__AllowedManeuvers(
-  bool & full_bounded,
-  size_t current_alignment);
-
-const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, v2x_msg, msg, AllowedManeuvers)();
 size_t get_serialized_size_v2x_msg__msg__Connection(
   const void * untyped_ros_message,
   size_t current_alignment);
@@ -63,6 +53,16 @@ size_t max_serialized_size_v2x_msg__msg__Connection(
 
 const rosidl_message_type_support_t *
   ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, v2x_msg, msg, Connection)();
+size_t get_serialized_size_v2x_msg__msg__LaneAttributes(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+size_t max_serialized_size_v2x_msg__msg__LaneAttributes(
+  bool & full_bounded,
+  size_t current_alignment);
+
+const rosidl_message_type_support_t *
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, v2x_msg, msg, LaneAttributes)();
 size_t get_serialized_size_v2x_msg__msg__NodeListXY(
   const void * untyped_ros_message,
   size_t current_alignment);
@@ -115,18 +115,32 @@ static bool _GenericLane__cdr_serialize(
     cdr << ros_message->egressapproach;
   }
 
-  // Field name: maneuvers
+  // Field name: laneattributes
   {
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, v2x_msg, msg, AllowedManeuvers
+        rosidl_typesupport_fastrtps_c, v2x_msg, msg, LaneAttributes
       )()->data);
     if (!callbacks->cdr_serialize(
-        &ros_message->maneuvers, cdr))
+        &ros_message->laneattributes, cdr))
     {
       return false;
     }
+  }
+
+  // Field name: maneuvers
+  {
+    const rosidl_runtime_c__String * str = &ros_message->maneuvers;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
   }
 
   // Field name: nodelist
@@ -218,16 +232,32 @@ static bool _GenericLane__cdr_deserialize(
     cdr >> ros_message->egressapproach;
   }
 
-  // Field name: maneuvers
+  // Field name: laneattributes
   {
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, v2x_msg, msg, AllowedManeuvers
+        rosidl_typesupport_fastrtps_c, v2x_msg, msg, LaneAttributes
       )()->data);
     if (!callbacks->cdr_deserialize(
-        cdr, &ros_message->maneuvers))
+        cdr, &ros_message->laneattributes))
     {
+      return false;
+    }
+  }
+
+  // Field name: maneuvers
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->maneuvers.data) {
+      rosidl_runtime_c__String__init(&ros_message->maneuvers);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->maneuvers,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'maneuvers'\n");
       return false;
     }
   }
@@ -341,10 +371,14 @@ size_t get_serialized_size_v2x_msg__msg__GenericLane(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name maneuvers
+  // field.name laneattributes
 
-  current_alignment += get_serialized_size_v2x_msg__msg__AllowedManeuvers(
-    &(ros_message->maneuvers), current_alignment);
+  current_alignment += get_serialized_size_v2x_msg__msg__LaneAttributes(
+    &(ros_message->laneattributes), current_alignment);
+  // field.name maneuvers
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->maneuvers.size + 1);
   // field.name nodelist
   {
     size_t array_size = ros_message->nodelist.size;
@@ -436,15 +470,26 @@ size_t max_serialized_size_v2x_msg__msg__GenericLane(
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // member: maneuvers
+  // member: laneattributes
   {
     size_t array_size = 1;
 
 
     for (size_t index = 0; index < array_size; ++index) {
       current_alignment +=
-        max_serialized_size_v2x_msg__msg__AllowedManeuvers(
+        max_serialized_size_v2x_msg__msg__LaneAttributes(
         full_bounded, current_alignment);
+    }
+  }
+  // member: maneuvers
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
     }
   }
   // member: nodelist

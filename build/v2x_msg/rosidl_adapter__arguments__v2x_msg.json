@@ -58,6 +58,7 @@
     "/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg:msg/ITISSpeedLimit.msg",
     "/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg:msg/ITISSpeedLimitcontent.msg",
     "/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg:msg/J1939data.msg",
+    "/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg:msg/LaneAttributes.msg",
     "/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg:msg/LaneDataAttribute.msg",
     "/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg:msg/LaneID.msg",
     "/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg:msg/MovementEvent.msg",

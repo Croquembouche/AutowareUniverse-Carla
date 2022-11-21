@@ -1,0 +1,13 @@
+[0.042s] Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic /usr/bin/cmake --build /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry -- -j20 -l20
+[0.524s] [ 77%] Built target gtest
+[0.524s] [ 77%] Built target gtest_main
+[0.524s] [ 77%] Built target image_geometry
+[0.524s] [ 77%] Built target ament_cmake_python_copy_image_geometry
+[0.525s] [100%] Built target image_geometry-utest
+[0.525s] running egg_info
+[0.525s] writing image_geometry.egg-info/PKG-INFO
+[0.525s] writing dependency_links to image_geometry.egg-info/dependency_links.txt
+[0.525s] writing top-level names to image_geometry.egg-info/top_level.txt
+[0.525s] reading manifest file 'image_geometry.egg-info/SOURCES.txt'
+[0.525s] writing manifest file 'image_geometry.egg-info/SOURCES.txt'
+[0.525s] [100%] Built target ament_cmake_python_build_image_geometry_egg
