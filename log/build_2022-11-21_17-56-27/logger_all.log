@@ -1,0 +1,553 @@
+[0.228s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.228s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f9947b22310>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=20, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f9947b22310>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f994717cdf0>)
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.260s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extension 'ignore'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extension 'ignore_ament_install'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extensions ['colcon_pkg']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extension 'colcon_pkg'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extensions ['colcon_meta']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extension 'colcon_meta'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extensions ['ros']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extension 'ros'
+[0.273s] DEBUG:colcon.colcon_core.package_identification:Package 'src/infrastructure' with type 'ros.ament_python' and name 'infrastructure'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extensions ['ignore', 'ignore_ament_install']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extension 'ignore'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extension 'ignore_ament_install'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extensions ['colcon_pkg']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extension 'colcon_pkg'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extensions ['colcon_meta']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extension 'colcon_meta'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extensions ['ros']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extension 'ros'
+[0.273s] DEBUG:colcon.colcon_core.package_identification:Package 'src/v2x_msg' with type 'ros.ament_cmake' and name 'v2x_msg'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extensions ['ignore', 'ignore_ament_install']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extension 'ignore'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extension 'ignore_ament_install'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extensions ['colcon_pkg']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extension 'colcon_pkg'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extensions ['colcon_meta']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extension 'colcon_meta'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extensions ['ros']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extension 'ros'
+[0.274s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vehicle' with type 'ros.ament_python' and name 'vehicle'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['ignore', 'ignore_ament_install']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'ignore'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'ignore_ament_install'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['colcon_pkg']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'colcon_pkg'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['colcon_meta']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'colcon_meta'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['ros']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'ros'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['cmake', 'python']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'cmake'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'python'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['python_setup_py']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'python_setup_py'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extension 'ignore'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extension 'ignore_ament_install'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extensions ['colcon_pkg']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extension 'colcon_pkg'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extensions ['colcon_meta']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extension 'colcon_meta'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extensions ['ros']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extension 'ros'
+[0.275s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision_opencv/cv_bridge' with type 'ros.ament_cmake' and name 'cv_bridge'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extensions ['ignore', 'ignore_ament_install']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extension 'ignore'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extension 'ignore_ament_install'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extensions ['colcon_pkg']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extension 'colcon_pkg'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extensions ['colcon_meta']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extension 'colcon_meta'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extensions ['ros']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extension 'ros'
+[0.275s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision_opencv/image_geometry' with type 'ros.ament_cmake' and name 'image_geometry'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extensions ['ignore', 'ignore_ament_install']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extension 'ignore'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extension 'ignore_ament_install'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extensions ['colcon_pkg']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extension 'colcon_pkg'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extensions ['colcon_meta']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extension 'colcon_meta'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extensions ['ros']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extension 'ros'
+[0.276s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision_opencv/opencv_tests' with type 'ros.ament_python' and name 'opencv_tests'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extension 'ignore'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extension 'ignore_ament_install'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extensions ['colcon_pkg']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extension 'colcon_pkg'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extensions ['colcon_meta']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extension 'colcon_meta'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extensions ['ros']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extension 'ros'
+[0.276s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision_opencv/vision_opencv' with type 'ros.ament_cmake' and name 'vision_opencv'
+[0.276s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.276s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.276s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.276s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.276s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.292s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.292s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.294s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install
+[0.295s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 268 installed packages in /opt/ros/galactic
+[0.296s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.340s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'cv_bridge' is in: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge, /opt/ros/galactic
+	'image_geometry' is in: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry, /opt/ros/galactic
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding cv_bridge image_geometry
+
+This may be promoted to an error in a future release of colcon-override-check.
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_args' from command line to 'None'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_target' from command line to 'None'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.341s] DEBUG:colcon.colcon_core.verb:Building package 'cv_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge', 'merge_install': False, 'path': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/cv_bridge', 'symlink_install': False, 'test_result_base': None}
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_args' from command line to 'None'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_target' from command line to 'None'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_clean_cache' from command line to 'False'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_clean_first' from command line to 'False'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_force_configure' from command line to 'False'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'ament_cmake_args' from command line to 'None'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'catkin_cmake_args' from command line to 'None'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.342s] DEBUG:colcon.colcon_core.verb:Building package 'image_geometry' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry', 'merge_install': False, 'path': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/image_geometry', 'symlink_install': False, 'test_result_base': None}
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'cmake_args' from command line to 'None'
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'cmake_target' from command line to 'None'
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'cmake_clean_cache' from command line to 'False'
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'cmake_clean_first' from command line to 'False'
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'cmake_force_configure' from command line to 'False'
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'ament_cmake_args' from command line to 'None'
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'catkin_cmake_args' from command line to 'None'
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.343s] DEBUG:colcon.colcon_core.verb:Building package 'infrastructure' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/infrastructure', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure', 'merge_install': False, 'path': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/infrastructure', 'symlink_install': False, 'test_result_base': None}
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'cmake_args' from command line to 'None'
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'cmake_target' from command line to 'None'
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'cmake_clean_first' from command line to 'False'
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'cmake_force_configure' from command line to 'False'
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'ament_cmake_args' from command line to 'None'
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.344s] DEBUG:colcon.colcon_core.verb:Building package 'v2x_msg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg', 'merge_install': False, 'path': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg', 'symlink_install': False, 'test_result_base': None}
+[0.345s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'cmake_args' from command line to 'None'
+[0.345s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'cmake_target' from command line to 'None'
+[0.345s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.345s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'cmake_clean_cache' from command line to 'False'
+[0.345s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'cmake_clean_first' from command line to 'False'
+[0.345s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'cmake_force_configure' from command line to 'False'
+[0.345s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'ament_cmake_args' from command line to 'None'
+[0.345s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'catkin_cmake_args' from command line to 'None'
+[0.345s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.345s] DEBUG:colcon.colcon_core.verb:Building package 'vehicle' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/vehicle', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle', 'merge_install': False, 'path': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vehicle', 'symlink_install': False, 'test_result_base': None}
+[0.346s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_args' from command line to 'None'
+[0.346s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_target' from command line to 'None'
+[0.346s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.346s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_clean_cache' from command line to 'False'
+[0.346s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_clean_first' from command line to 'False'
+[0.346s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_force_configure' from command line to 'False'
+[0.346s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'ament_cmake_args' from command line to 'None'
+[0.346s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'catkin_cmake_args' from command line to 'None'
+[0.346s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.346s] DEBUG:colcon.colcon_core.verb:Building package 'opencv_tests' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/opencv_tests', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests', 'merge_install': False, 'path': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/opencv_tests', 'symlink_install': False, 'test_result_base': None}
+[0.347s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_args' from command line to 'None'
+[0.347s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_target' from command line to 'None'
+[0.347s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.347s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_clean_cache' from command line to 'False'
+[0.347s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_clean_first' from command line to 'False'
+[0.347s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_force_configure' from command line to 'False'
+[0.347s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'ament_cmake_args' from command line to 'None'
+[0.347s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'catkin_cmake_args' from command line to 'None'
+[0.347s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.347s] DEBUG:colcon.colcon_core.verb:Building package 'vision_opencv' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/vision_opencv', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv', 'merge_install': False, 'path': '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/vision_opencv', 'symlink_install': False, 'test_result_base': None}
+[0.348s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.353s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.353s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/cv_bridge' with build type 'ament_cmake'
+[0.353s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/cv_bridge'
+[0.356s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.356s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.356s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.361s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/image_geometry' with build type 'ament_cmake'
+[0.361s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/image_geometry'
+[0.363s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.363s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.367s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/infrastructure' with build type 'ament_python'
+[0.367s] Level 1:colcon.colcon_core.shell:create_environment_hook('infrastructure', 'ament_prefix_path')
+[0.369s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/share/infrastructure/hook/ament_prefix_path.ps1'
+[0.369s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/share/infrastructure/hook/ament_prefix_path.dsv'
+[0.370s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/share/infrastructure/hook/ament_prefix_path.sh'
+[0.371s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.371s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.376s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg' with build type 'ament_cmake'
+[0.376s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/v2x_msg'
+[0.378s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.378s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.382s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vehicle' with build type 'ament_python'
+[0.383s] Level 1:colcon.colcon_core.shell:create_environment_hook('vehicle', 'ament_prefix_path')
+[0.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/share/vehicle/hook/ament_prefix_path.ps1'
+[0.385s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/share/vehicle/hook/ament_prefix_path.dsv'
+[0.385s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/share/vehicle/hook/ament_prefix_path.sh'
+[0.387s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.387s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.396s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic /usr/bin/cmake --build /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge -- -j20 -l20
+[0.400s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic /usr/bin/cmake --build /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry -- -j20 -l20
+[0.594s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/infrastructure'
+[0.596s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.597s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.605s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic /usr/bin/cmake --build /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg -- -j20 -l20
+[0.797s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vehicle'
+[0.799s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.799s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.815s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic /usr/bin/cmake --build /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge -- -j20 -l20
+[0.816s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic /usr/bin/cmake --build /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry -- -j20 -l20
+[0.828s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic /usr/bin/cmake --install /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge
+[0.831s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic /usr/bin/cmake --install /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry
+[0.859s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cv_bridge)
+[0.864s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge' for CMake module files
+[0.865s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge' for CMake config files
+[0.865s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic /usr/bin/cmake --install /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge
+[0.866s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv_bridge', 'cmake_prefix_path')
+[0.867s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.ps1'
+[0.868s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.dsv'
+[0.868s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.sh'
+[0.868s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib'
+[0.868s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv_bridge', 'ld_library_path_lib')
+[0.870s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.ps1'
+[0.870s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.dsv'
+[0.870s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.sh'
+[0.871s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/bin'
+[0.871s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/pkgconfig/cv_bridge.pc'
+[0.871s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages'
+[0.871s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv_bridge', 'pythonpath')
+[0.872s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/pythonpath.ps1'
+[0.873s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/pythonpath.dsv'
+[0.873s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/pythonpath.sh'
+[0.873s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/bin'
+[0.875s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/package.ps1'
+[0.875s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/package.dsv'
+[0.875s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/package.sh'
+[0.876s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/package.bash'
+[0.876s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/package.zsh'
+[0.876s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/colcon-core/packages/cv_bridge)
+[0.878s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(image_geometry)
+[0.881s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry' for CMake module files
+[0.882s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic /usr/bin/cmake --install /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/image_geometry
+[0.882s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry' for CMake config files
+[0.882s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_geometry', 'cmake_prefix_path')
+[0.884s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.ps1'
+[0.884s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.dsv'
+[0.884s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.sh'
+[0.884s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib'
+[0.884s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_geometry', 'ld_library_path_lib')
+[0.886s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.ps1'
+[0.886s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.dsv'
+[0.887s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.sh'
+[0.887s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/bin'
+[0.887s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/pkgconfig/image_geometry.pc'
+[0.887s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages'
+[0.887s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_geometry', 'pythonpath')
+[0.889s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/pythonpath.ps1'
+[0.889s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/pythonpath.dsv'
+[0.889s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/pythonpath.sh'
+[0.889s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/bin'
+[0.891s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/package.ps1'
+[0.891s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/package.dsv'
+[0.891s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/package.sh'
+[0.892s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/package.bash'
+[0.892s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/package.zsh'
+[0.892s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/colcon-core/packages/image_geometry)
+[0.896s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cv_bridge)
+[0.898s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge' for CMake module files
+[0.899s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge' for CMake config files
+[0.899s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv_bridge', 'cmake_prefix_path')
+[0.900s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.ps1'
+[0.901s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.dsv'
+[0.901s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.sh'
+[0.901s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib'
+[0.901s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv_bridge', 'ld_library_path_lib')
+[0.903s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.ps1'
+[0.903s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.dsv'
+[0.903s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.sh'
+[0.903s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/bin'
+[0.903s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/pkgconfig/cv_bridge.pc'
+[0.904s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages'
+[0.904s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv_bridge', 'pythonpath')
+[0.905s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/pythonpath.ps1'
+[0.905s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/pythonpath.dsv'
+[0.905s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/hook/pythonpath.sh'
+[0.906s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/bin'
+[0.907s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/package.ps1'
+[0.908s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/package.dsv'
+[0.908s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/package.sh'
+[0.908s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/package.bash'
+[0.908s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/package.zsh'
+[0.909s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/colcon-core/packages/cv_bridge)
+[0.909s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/opencv_tests' with build type 'ament_python'
+[0.909s] Level 1:colcon.colcon_core.shell:create_environment_hook('opencv_tests', 'ament_prefix_path')
+[0.911s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/share/opencv_tests/hook/ament_prefix_path.ps1'
+[0.911s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/share/opencv_tests/hook/ament_prefix_path.dsv'
+[0.911s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/share/opencv_tests/hook/ament_prefix_path.sh'
+[0.913s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.913s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.921s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(image_geometry)
+[0.923s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry' for CMake module files
+[0.924s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry' for CMake config files
+[0.924s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_geometry', 'cmake_prefix_path')
+[0.925s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.ps1'
+[0.926s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.dsv'
+[0.926s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.sh'
+[0.926s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib'
+[0.926s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_geometry', 'ld_library_path_lib')
+[0.928s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.ps1'
+[0.928s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.dsv'
+[0.928s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.sh'
+[0.928s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/bin'
+[0.928s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/pkgconfig/image_geometry.pc'
+[0.928s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages'
+[0.928s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_geometry', 'pythonpath')
+[0.930s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/pythonpath.ps1'
+[0.930s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/pythonpath.dsv'
+[0.930s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/hook/pythonpath.sh'
+[0.931s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/bin'
+[0.932s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/package.ps1'
+[0.933s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/package.dsv'
+[0.933s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/package.sh'
+[0.934s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/package.bash'
+[0.934s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/package.zsh'
+[0.934s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/colcon-core/packages/image_geometry)
+[0.935s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/vision_opencv' with build type 'ament_cmake'
+[0.935s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/vision_opencv'
+[0.936s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.936s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.139s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/opencv_tests'
+[1.141s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.141s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.147s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic /usr/bin/cmake --build /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg -- -j20 -l20
+[1.153s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/vision_opencv': CMAKE_PREFIX_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic LD_LIBRARY_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib:/usr/local/cuda-11.6/lib64:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib PYTHONPATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/cmake --build /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/vision_opencv -- -j20 -l20
+[1.178s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vehicle': PYTHONPATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/vehicle build --build-base /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/vehicle/build install --prefix /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle --record /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/vehicle/install.log --single-version-externally-managed
+[1.179s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/vision_opencv' returned '0': CMAKE_PREFIX_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic LD_LIBRARY_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib:/usr/local/cuda-11.6/lib64:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib PYTHONPATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/cmake --build /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/vision_opencv -- -j20 -l20
+[1.193s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/vision_opencv': CMAKE_PREFIX_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic LD_LIBRARY_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib:/usr/local/cuda-11.6/lib64:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib PYTHONPATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/cmake --install /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/vision_opencv
+[1.200s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vision_opencv)
+[1.203s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv' for CMake module files
+[1.204s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/vision_opencv' returned '0': CMAKE_PREFIX_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic LD_LIBRARY_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib:/usr/local/cuda-11.6/lib64:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib PYTHONPATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/cmake --install /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/vision_opencv
+[1.204s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv' for CMake config files
+[1.204s] Level 1:colcon.colcon_core.shell:create_environment_hook('vision_opencv', 'cmake_prefix_path')
+[1.205s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.ps1'
+[1.206s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.dsv'
+[1.206s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.sh'
+[1.206s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/bin'
+[1.206s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/lib/pkgconfig/vision_opencv.pc'
+[1.206s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/lib/python3.8/site-packages'
+[1.207s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/bin'
+[1.208s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/vision_opencv/package.ps1'
+[1.209s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/vision_opencv/package.dsv'
+[1.209s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/vision_opencv/package.sh'
+[1.209s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/vision_opencv/package.bash'
+[1.209s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/vision_opencv/package.zsh'
+[1.209s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/colcon-core/packages/vision_opencv)
+[1.217s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/infrastructure': PYTHONPATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/infrastructure build --build-base /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/infrastructure/build install --prefix /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure --record /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/infrastructure/install.log --single-version-externally-managed
+[1.224s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vision_opencv)
+[1.226s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv' for CMake module files
+[1.226s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv' for CMake config files
+[1.226s] Level 1:colcon.colcon_core.shell:create_environment_hook('vision_opencv', 'cmake_prefix_path')
+[1.228s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.ps1'
+[1.228s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.dsv'
+[1.229s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.sh'
+[1.229s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/bin'
+[1.229s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/lib/pkgconfig/vision_opencv.pc'
+[1.229s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/lib/python3.8/site-packages'
+[1.229s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/bin'
+[1.231s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/vision_opencv/package.ps1'
+[1.231s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/vision_opencv/package.dsv'
+[1.231s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/vision_opencv/package.sh'
+[1.232s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/vision_opencv/package.bash'
+[1.232s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/vision_opencv/package.zsh'
+[1.232s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv/share/colcon-core/packages/vision_opencv)
+[1.492s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle' for CMake module files
+[1.493s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vehicle' returned '0': PYTHONPATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/vehicle build --build-base /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/vehicle/build install --prefix /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle --record /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/vehicle/install.log --single-version-externally-managed
+[1.493s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle' for CMake config files
+[1.494s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/lib'
+[1.494s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/bin'
+[1.494s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/lib/pkgconfig/vehicle.pc'
+[1.494s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages'
+[1.494s] Level 1:colcon.colcon_core.shell:create_environment_hook('vehicle', 'pythonpath')
+[1.498s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/share/vehicle/hook/pythonpath.ps1'
+[1.499s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/share/vehicle/hook/pythonpath.dsv'
+[1.499s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/share/vehicle/hook/pythonpath.sh'
+[1.500s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/bin'
+[1.500s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vehicle)
+[1.503s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/share/vehicle/package.ps1'
+[1.504s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/share/vehicle/package.dsv'
+[1.504s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/share/vehicle/package.sh'
+[1.505s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/share/vehicle/package.bash'
+[1.505s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/share/vehicle/package.zsh'
+[1.505s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/share/colcon-core/packages/vehicle)
+[1.527s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure' for CMake module files
+[1.527s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/infrastructure' returned '0': PYTHONPATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/infrastructure build --build-base /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/infrastructure/build install --prefix /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure --record /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/infrastructure/install.log --single-version-externally-managed
+[1.528s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure' for CMake config files
+[1.528s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/lib'
+[1.528s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/bin'
+[1.528s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/lib/pkgconfig/infrastructure.pc'
+[1.529s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages'
+[1.529s] Level 1:colcon.colcon_core.shell:create_environment_hook('infrastructure', 'pythonpath')
+[1.532s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/share/infrastructure/hook/pythonpath.ps1'
+[1.533s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/share/infrastructure/hook/pythonpath.dsv'
+[1.533s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/share/infrastructure/hook/pythonpath.sh'
+[1.534s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/bin'
+[1.534s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(infrastructure)
+[1.537s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/share/infrastructure/package.ps1'
+[1.538s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/share/infrastructure/package.dsv'
+[1.538s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/share/infrastructure/package.sh'
+[1.539s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/share/infrastructure/package.bash'
+[1.539s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/share/infrastructure/package.zsh'
+[1.539s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/share/colcon-core/packages/infrastructure)
+[1.565s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/opencv_tests': CMAKE_PREFIX_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry LD_LIBRARY_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib:/usr/local/cuda-11.6/lib64:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib PYTHONPATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../../build/opencv_tests build --build-base /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/opencv_tests/build install --prefix /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests --record /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/opencv_tests/install.log --single-version-externally-managed
+[1.874s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests' for CMake module files
+[1.874s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/src/vision_opencv/opencv_tests' returned '0': CMAKE_PREFIX_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vision_opencv:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry LD_LIBRARY_PATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib:/usr/local/cuda-11.6/lib64:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib PYTHONPATH=/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../../build/opencv_tests build --build-base /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/opencv_tests/build install --prefix /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests --record /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/opencv_tests/install.log --single-version-externally-managed
+[1.874s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests' for CMake config files
+[1.875s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib'
+[1.875s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/bin'
+[1.875s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/pkgconfig/opencv_tests.pc'
+[1.875s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/lib/python3.8/site-packages'
+[1.875s] Level 1:colcon.colcon_core.shell:create_environment_hook('opencv_tests', 'pythonpath')
+[1.879s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/share/opencv_tests/hook/pythonpath.ps1'
+[1.879s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/share/opencv_tests/hook/pythonpath.dsv'
+[1.880s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/share/opencv_tests/hook/pythonpath.sh'
+[1.880s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/bin'
+[1.880s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(opencv_tests)
+[1.884s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/share/opencv_tests/package.ps1'
+[1.884s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/share/opencv_tests/package.dsv'
+[1.885s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/share/opencv_tests/package.sh'
+[1.885s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/share/opencv_tests/package.bash'
+[1.885s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/share/opencv_tests/package.zsh'
+[1.886s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests/share/colcon-core/packages/opencv_tests)
+[2.225s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic /usr/bin/cmake --install /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg
+[2.324s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(v2x_msg)
+[2.327s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg' for CMake module files
+[2.328s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg' for CMake config files
+[2.328s] Level 1:colcon.colcon_core.shell:create_environment_hook('v2x_msg', 'cmake_prefix_path')
+[2.330s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/cmake_prefix_path.ps1'
+[2.330s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/cmake_prefix_path.dsv'
+[2.331s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/cmake_prefix_path.sh'
+[2.331s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib'
+[2.331s] Level 1:colcon.colcon_core.shell:create_environment_hook('v2x_msg', 'ld_library_path_lib')
+[2.333s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/ld_library_path_lib.ps1'
+[2.333s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/ld_library_path_lib.dsv'
+[2.333s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/ld_library_path_lib.sh'
+[2.334s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/bin'
+[2.334s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib/pkgconfig/v2x_msg.pc'
+[2.334s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib/python3.8/site-packages'
+[2.334s] Level 1:colcon.colcon_core.shell:create_environment_hook('v2x_msg', 'pythonpath')
+[2.336s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/pythonpath.ps1'
+[2.336s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/pythonpath.dsv'
+[2.336s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/pythonpath.sh'
+[2.337s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/bin'
+[2.339s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/package.ps1'
+[2.339s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/package.dsv'
+[2.339s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/package.sh'
+[2.340s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/package.bash'
+[2.340s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/package.zsh'
+[2.340s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/colcon-core/packages/v2x_msg)
+[2.340s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic /usr/bin/cmake --install /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg
+[4.061s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(v2x_msg)
+[4.068s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg' for CMake module files
+[4.069s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg' for CMake config files
+[4.069s] Level 1:colcon.colcon_core.shell:create_environment_hook('v2x_msg', 'cmake_prefix_path')
+[4.072s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/cmake_prefix_path.ps1'
+[4.073s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/cmake_prefix_path.dsv'
+[4.073s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/cmake_prefix_path.sh'
+[4.074s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib'
+[4.074s] Level 1:colcon.colcon_core.shell:create_environment_hook('v2x_msg', 'ld_library_path_lib')
+[4.077s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/ld_library_path_lib.ps1'
+[4.077s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/ld_library_path_lib.dsv'
+[4.078s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/ld_library_path_lib.sh'
+[4.078s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/bin'
+[4.078s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib/pkgconfig/v2x_msg.pc'
+[4.078s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib/python3.8/site-packages'
+[4.078s] Level 1:colcon.colcon_core.shell:create_environment_hook('v2x_msg', 'pythonpath')
+[4.081s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/pythonpath.ps1'
+[4.082s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/pythonpath.dsv'
+[4.082s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/hook/pythonpath.sh'
+[4.083s] Level 1:colcon.colcon_core.environment:checking '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/bin'
+[4.086s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/package.ps1'
+[4.087s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/package.dsv'
+[4.087s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/package.sh'
+[4.087s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/package.bash'
+[4.088s] INFO:colcon.colcon_core.shell:Creating package script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/v2x_msg/package.zsh'
+[4.088s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/share/colcon-core/packages/v2x_msg)
+[4.089s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.089s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.089s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[4.089s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.094s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.094s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.094s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.100s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.103s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/local_setup.ps1'
+[4.104s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/_local_setup_util_ps1.py'
+[4.105s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/setup.ps1'
+[4.107s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/local_setup.sh'
+[4.108s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/_local_setup_util_sh.py'
+[4.108s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/setup.sh'
+[4.110s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/local_setup.bash'
+[4.111s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/setup.bash'
+[4.112s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/local_setup.zsh'
+[4.113s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/setup.zsh'

@@ -123,6 +123,7 @@ class DefaultVehicle(Node):
         self.longacc = 0
         self.latacc = 0
         self.vertacc = 0
+        self.heading = 0
         # initialize CvBridge
         self.bridge = CvBridge()
         self.image_queue = []
@@ -130,7 +131,7 @@ class DefaultVehicle(Node):
         self.subscription_controls = self.create_subscription(String, 'hv_controls', self.vehicleROSControls, 10)
         print("Subscribed to Controls.")
         # subscribe to BSM messages
-        # self.subscrib_bsm = self.create_subscription(BSM, 'BSM', self.BSMSubscriber_cb, 100)
+        self.subscrib_bsm = self.create_subscription(BSM, 'BSM', self.BSMSubscriber_cb, 100)
 # --------------Vehicle ID Generation--------------------------
     def genVehicleID(self):
         first_octet = random.randrange(1000000, 99999999)
@@ -160,7 +161,7 @@ class DefaultVehicle(Node):
         msg.coredata.accuracy.orientation = 65535
         msg.coredata.transmission = self.transmission
         msg.coredata.speed = int(self.speed)
-        msg.coredata.heading = int(self.heading)
+        msg.coredata.heading = 0 #int(self.heading)
         msg.coredata.angle = 127
         msg.coredata.accelset.longitude = int(self.longacc)
         msg.coredata.accelset.lat = int(self.latacc)
@@ -211,6 +212,7 @@ class DefaultVehicle(Node):
             heading += 360
         if heading > 360:
             heading = 360-heading
+        print(heading)
         return speed, heading/360 * 28800
     def getVehicleInformation(self):
         # -------------Vehicle Location-----------------
@@ -219,7 +221,7 @@ class DefaultVehicle(Node):
         self.lat = vehicle_.latitude
         self.longi = vehicle_.longitude
         self.elev = vehicle_.altitude
-        print("current position:", self.lat, self.longi)
+        # print("current position:", self.lat, self.longi)
         # --------------- Vehicle State -----------------
         throttle = self.ego_control.throttle
         reverse = self.ego_control.reverse
@@ -426,13 +428,42 @@ class DefaultVehicle(Node):
 
 
 # -----------------------------Forward Collision Warning----------------------------
-    def FCW(self, bsm_msg):
-        # when do we issue the FCW warning?
-        # same heading, distance is small, speed is high, and brakes = 0 (no brakes)
-        # if we have lane id, need same lane id
-        # else: FCW means, same heading, sidebyside distnace < threshold(same lane), front-back distance < threshold(almost hitting) 
+    def deg2rad(self, deg):
+        return deg * (math.pi/180)
         
-        print("FCW Warning Issued!.")
+    
+    def getDistanceFromLatLonInKm(self, lat1,lon1,lat2,lon2):
+        R = 6371
+        dLat = self.deg2rad(lat2-lat1)
+        dLon = self.deg2rad(lon2-lon1)
+        a = math.sin(dLat/2) * math.sin(dLat/2) + math.cos(self.deg2rad(lat1)) * math.cos(self.deg2rad(lat2)) * math.sin(dLon/2) * math.sin(dLon/2)
+
+        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a)); 
+        d = R * c
+        return d*1000
+    
+    def FCW(self, rv_bsm):
+        # when do we issue the FCW warning?
+        rv_heading = rv_bsm.coredata.heading
+        rv_lat = rv_bsm.coredata.lat/10000000
+        rv_long = rv_bsm.coredata.longitude/10000000
+        hv_heading = self.heading
+        hv_lat = int(self.lat*10000000)/10000000
+        hv_long = int(self.longi*10000000)/10000000
+        # print(hv_lat, hv_long, rv_lat, rv_long)
+        distance = self.getDistanceFromLatLonInKm(hv_lat, hv_long, rv_lat, rv_long)
+        # print(hv_heading)
+        # if abs(hv_heading - rv_heading < 30): # same heading
+            # determine if they are on the same lane...
+            # method 1. compare lat, long with MAP message, find lane id
+            # method 2. find angle between 2 (lat, long) points, angle < 60 degrees
+        dy = hv_lat - rv_lat
+        dx = hv_long - rv_long
+        angle = math.atan2(dy, dx)
+        # distance
+        # print("horizontal distance in meters:", abs(distance*math.sin(angle)))
+        # print("FCW",angle, math.sin(angle))
+        # print("FCW Warning Issued!.")
 
 # ------------------------------------- Destroy -------------------------------------
     def destroy(self):
@@ -452,7 +483,8 @@ def main(args=None):
     # get a list of spawn points
     spawn_points = world.get_map().get_spawn_points()
 
-    spawn_point = spawn_points[random.randint(1, len(spawn_points)-1)]
+    # spawn_point = spawn_points[random.randint(1, len(spawn_points)-1)]
+    spawn_point = spawn_points[1]
     # spawn the vehicle
     demo_veh = DefaultVehicle(world, spawn_point)
     # add lidar sensor

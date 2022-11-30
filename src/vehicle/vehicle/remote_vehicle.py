@@ -103,7 +103,7 @@ class DefaultVehicle(Node):
         self.vehicle = world.spawn_actor(vehicle_bp, spawn_point)
         self.world = world
         self.ego_control = carla.VehicleControl()
-        self.vehicle.set_autopilot(True)
+        # self.vehicle.set_autopilot(True)
         # storing a list of all sensors
         self.sensors = []
         # BSM Message
@@ -218,6 +218,7 @@ class DefaultVehicle(Node):
         self.lat = vehicle_.latitude
         self.longi = vehicle_.longitude
         self.elev = vehicle_.altitude
+        # print("current position:", self.lat, self.longi)
         # --------------- Vehicle State -----------------
         throttle = self.ego_control.throttle
         reverse = self.ego_control.reverse
@@ -433,8 +434,8 @@ def main(args=None):
     # get a list of spawn points
     spawn_points = world.get_map().get_spawn_points()
 
-    spawn_point = spawn_points[random.randint(0, len(spawn_points)-1)]
-    # spawn_point = spawn_points[0]
+    # spawn_point = spawn_points[random.randint(0, len(spawn_points)-1)]
+    spawn_point = spawn_points[0]
     # spawn the vehicle
     demo_veh = DefaultVehicle(world, spawn_point)
     # add lidar sensor
