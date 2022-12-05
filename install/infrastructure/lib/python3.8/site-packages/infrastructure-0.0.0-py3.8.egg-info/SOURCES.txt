@@ -9,6 +9,7 @@ setup.py
 ../../build/infrastructure/infrastructure.egg-info/top_level.txt
 ../../build/infrastructure/infrastructure.egg-info/zip-safe
 infrastructure/MAP.py
+infrastructure/SRM.py
 infrastructure/SSM.py
 infrastructure/__init__.py
 resource/infrastructure

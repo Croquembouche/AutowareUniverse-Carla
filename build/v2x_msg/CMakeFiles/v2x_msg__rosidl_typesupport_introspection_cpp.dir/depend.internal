@@ -1916,7 +1916,6 @@ CMakeFiles/v2x_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_
  rosidl_generator_cpp/v2x_msg/msg/detail/requestor_description__struct.hpp
  rosidl_generator_cpp/v2x_msg/msg/detail/requestor_position_vector__struct.hpp
  rosidl_generator_cpp/v2x_msg/msg/detail/requestor_type__struct.hpp
- rosidl_generator_cpp/v2x_msg/msg/detail/transit_vehicle_status__struct.hpp
  rosidl_generator_cpp/v2x_msg/msg/detail/transmission_and_speed__struct.hpp
  rosidl_generator_cpp/v2x_msg/msg/detail/vehicle_id__struct.hpp
 CMakeFiles/v2x_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2x_msg/msg/detail/requestor_position_vector__type_support.cpp.o
@@ -2423,7 +2422,6 @@ CMakeFiles/v2x_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_
  rosidl_generator_cpp/v2x_msg/msg/detail/signal_request__struct.hpp
  rosidl_generator_cpp/v2x_msg/msg/detail/signal_request_package__struct.hpp
  rosidl_generator_cpp/v2x_msg/msg/detail/srm__struct.hpp
- rosidl_generator_cpp/v2x_msg/msg/detail/transit_vehicle_status__struct.hpp
  rosidl_generator_cpp/v2x_msg/msg/detail/transmission_and_speed__struct.hpp
  rosidl_generator_cpp/v2x_msg/msg/detail/vehicle_id__struct.hpp
 CMakeFiles/v2x_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2x_msg/msg/detail/ssm__type_support.cpp.o

@@ -14,6 +14,7 @@ import cv2 as cv
 import random
 import math
 import threading
+import datetime
 
 try:
     sys.path.append(glob.glob('../carla/dist/carla-*%d.%d-%s.egg' % (
@@ -26,6 +27,8 @@ except IndexError:
 
 # ----------MSGs--------
 from v2x_msg.msg import BSM
+from v2x_msg.msg import SRM
+from v2x_msg.msg import SignalRequestPackage
 from std_msgs.msg import String
 from std_msgs.msg import Header
 from sensor_msgs.msg import Image
@@ -146,6 +149,23 @@ class DefaultVehicle(Node):
         self.msgcnt += 1
         if self.msgcnt > 127:
             self.msgcnt = 0
+# -------------------TimeStamps, DSecond--------------------
+    def getTimeStamp(self):
+        now = datetime.datetime.now()
+        month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+        total_minutes = now.minute + now.hour*60 + now.day*24*60
+        if now.year%4 != 0:
+            month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+        elif now.year%4 == 0:
+            if now.year%100 == 0 and now.year%400 == 0:
+                month_days = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+            else:
+                month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+        for i in range(0, now.month):
+            total_minutes += month_days[i]*24*60
+        milliseconds = now.second * 1000
+        return total_minutes, milliseconds
+
 # ------------------BSM MSG Population------------------------
     def BSMCallback(self):
         msg = BSM()
@@ -354,6 +374,9 @@ class DefaultVehicle(Node):
         if msg.data == "auto off":
             self.vehicle.set_autopilot(False)
 
+        if msg.data == "srm":
+            self.SRM()
+
         if msg.data == "w":
             self.ego_control.throttle = min(self.ego_control.throttle + throttle_increament, 1.0)
             self.ego_control.brake = 0
@@ -491,6 +514,58 @@ class DefaultVehicle(Node):
                 if parellel_distance < 3 and distance_that_matters/self.speed <= 2: # give 2 seconds warning time
                     print("EBW Warning Issued!.")
 
+# ---------------------------Signal Request Message -------------------------------
+    def SRM(self):
+        self.srmpublisher_=self.create_publisher(SRM, "SRM", 10)
+        timer_period = 0.1  # seconds
+        self.srmtimer = self.create_timer(timer_period, self.SRMCallBack)
+
+    def SRMCallBack(self):
+        print("Publishing SRM mesage.")
+        msg = SRM()
+        msg.timestamp, msg.second = self.getTimeStamp()
+        msg.sequencenumber = self.msgcnt
+        self.msgcntIncrem()
+        # requests
+        actors = self.world.get_actors().filter("traffic.traffic_light")
+        # add this to the first in the list
+        lucky_traffic_signal = actors[0]
+        # requests_list = []
+        request_pkg = SignalRequestPackage()
+        request_pkg.signalrequest.id.roadregulatorid = 0
+        request_pkg.signalrequest.id.intersectionid = lucky_traffic_signal.id
+        request_pkg.signalrequest.requestid = 255
+        request_pkg.signalrequest.requesttype = 2
+        request_pkg.signalrequest.inboundlane.lane = 1
+        request_pkg.signalrequest.inboundlane.approach = 1
+        request_pkg.signalrequest.inboundlane.connection = 1
+        request_pkg.signalrequest.outboundlane.lane = 1
+        request_pkg.signalrequest.outboundlane.approach = 1
+        request_pkg.signalrequest.outboundlane.connection = 1
+        request_pkg.minute, request_pkg.second = msg.timestamp, msg.second
+        request_pkg.duration = 65535
+        # requests_list.append(request_pkg)
+        msg.requests = request_pkg
+        # requestor
+        msg.requestor.id.entityid = self.id
+        msg.requestor.id.stationid = 0
+        msg.requestor.type.role = 0
+        msg.requestor.type.subrole = 0
+        msg.requestor.type.request = 0
+        msg.requestor.type.iso3833vehicletype = 0
+        msg.requestor.type.hpmstype = 4
+        msg.requestor.position.position.latitude = int(self.lat*10000000)
+        msg.requestor.position.position.longitude = int(self.longi*10000000)
+        msg.requestor.position.position.elevation = int(self.elev*10)
+        msg.requestor.position.heading = int(self.heading)
+        msg.requestor.position.speed.transmission = self.transmission
+        msg.requestor.position.speed.velocity = int(self.speed)
+        msg.requestor.name = "Mustang"
+        msg.requestor.routename = "Test Route"
+        msg.requestor.transitstatus = "000000"
+        msg.requestor.transitoccupancy = 0
+        msg.requestor.transitschedule = 0
+        self.srmpublisher_.publish(msg)
 # ------------------------------------- Destroy -------------------------------------
     def destroy(self):
         destroyed = self.vehicle.destroy()

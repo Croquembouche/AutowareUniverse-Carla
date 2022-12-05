@@ -55,7 +55,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember VehicleID_mes
   },
   {
     "stationid",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array

@@ -8,7 +8,7 @@ module v2x_msg {
     struct VehicleID {
       string entityid;
 
-      string stationid;
+      int64 stationid;
     };
   };
 };

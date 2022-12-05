@@ -1522,7 +1522,6 @@ CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2x_msg/msg/re
 CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2x_msg/msg/requestor_description__type_support.cpp.o: rosidl_generator_c/v2x_msg/msg/detail/requestor_description__struct.h
 CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2x_msg/msg/requestor_description__type_support.cpp.o: rosidl_generator_c/v2x_msg/msg/detail/requestor_position_vector__struct.h
 CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2x_msg/msg/requestor_description__type_support.cpp.o: rosidl_generator_c/v2x_msg/msg/detail/requestor_type__struct.h
-CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2x_msg/msg/requestor_description__type_support.cpp.o: rosidl_generator_c/v2x_msg/msg/detail/transit_vehicle_status__struct.h
 CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2x_msg/msg/requestor_description__type_support.cpp.o: rosidl_generator_c/v2x_msg/msg/detail/transmission_and_speed__struct.h
 CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2x_msg/msg/requestor_description__type_support.cpp.o: rosidl_generator_c/v2x_msg/msg/detail/vehicle_id__struct.h
 CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2x_msg/msg/requestor_description__type_support.cpp.o: rosidl_typesupport_c/v2x_msg/msg/rosidl_typesupport_c__visibility_control.h
@@ -1932,7 +1931,6 @@ CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2x_msg/msg/sr
 CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2x_msg/msg/srm__type_support.cpp.o: rosidl_generator_c/v2x_msg/msg/detail/signal_request__struct.h
 CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2x_msg/msg/srm__type_support.cpp.o: rosidl_generator_c/v2x_msg/msg/detail/signal_request_package__struct.h
 CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2x_msg/msg/srm__type_support.cpp.o: rosidl_generator_c/v2x_msg/msg/detail/srm__struct.h
-CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2x_msg/msg/srm__type_support.cpp.o: rosidl_generator_c/v2x_msg/msg/detail/transit_vehicle_status__struct.h
 CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2x_msg/msg/srm__type_support.cpp.o: rosidl_generator_c/v2x_msg/msg/detail/transmission_and_speed__struct.h
 CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2x_msg/msg/srm__type_support.cpp.o: rosidl_generator_c/v2x_msg/msg/detail/vehicle_id__struct.h
 CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/v2x_msg/msg/srm__type_support.cpp.o: rosidl_typesupport_c/v2x_msg/msg/rosidl_typesupport_c__visibility_control.h

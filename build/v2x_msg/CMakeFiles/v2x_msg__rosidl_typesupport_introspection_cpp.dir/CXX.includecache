@@ -5737,8 +5737,6 @@ v2x_msg/msg/detail/requestor_type__struct.hpp
 rosidl_generator_cpp/v2x_msg/msg/detail/v2x_msg/msg/detail/requestor_type__struct.hpp
 v2x_msg/msg/detail/requestor_position_vector__struct.hpp
 rosidl_generator_cpp/v2x_msg/msg/detail/v2x_msg/msg/detail/requestor_position_vector__struct.hpp
-v2x_msg/msg/detail/transit_vehicle_status__struct.hpp
-rosidl_generator_cpp/v2x_msg/msg/detail/v2x_msg/msg/detail/transit_vehicle_status__struct.hpp
 
 rosidl_generator_cpp/v2x_msg/msg/detail/requestor_position_vector__struct.hpp
 rosidl_runtime_cpp/bounded_vector.hpp

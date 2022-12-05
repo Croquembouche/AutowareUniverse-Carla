@@ -48,10 +48,6 @@ class Metaclass_RequestorDescription(type):
             if RequestorType.__class__._TYPE_SUPPORT is None:
                 RequestorType.__class__.__import_type_support__()
 
-            from v2x_msg.msg import TransitVehicleStatus
-            if TransitVehicleStatus.__class__._TYPE_SUPPORT is None:
-                TransitVehicleStatus.__class__.__import_type_support__()
-
             from v2x_msg.msg import VehicleID
             if VehicleID.__class__._TYPE_SUPPORT is None:
                 VehicleID.__class__.__import_type_support__()
@@ -85,7 +81,7 @@ class RequestorDescription(metaclass=Metaclass_RequestorDescription):
         'position': 'v2x_msg/RequestorPositionVector',
         'name': 'string',
         'routename': 'string',
-        'transitstatus': 'v2x_msg/TransitVehicleStatus',
+        'transitstatus': 'string',
         'transitoccupancy': 'int64',
         'transitschedule': 'int64',
     }
@@ -96,7 +92,7 @@ class RequestorDescription(metaclass=Metaclass_RequestorDescription):
         rosidl_parser.definition.NamespacedType(['v2x_msg', 'msg'], 'RequestorPositionVector'),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
-        rosidl_parser.definition.NamespacedType(['v2x_msg', 'msg'], 'TransitVehicleStatus'),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
@@ -113,8 +109,7 @@ class RequestorDescription(metaclass=Metaclass_RequestorDescription):
         self.position = kwargs.get('position', RequestorPositionVector())
         self.name = kwargs.get('name', str())
         self.routename = kwargs.get('routename', str())
-        from v2x_msg.msg import TransitVehicleStatus
-        self.transitstatus = kwargs.get('transitstatus', TransitVehicleStatus())
+        self.transitstatus = kwargs.get('transitstatus', str())
         self.transitoccupancy = kwargs.get('transitoccupancy', int())
         self.transitschedule = kwargs.get('transitschedule', int())
 
@@ -246,10 +241,9 @@ class RequestorDescription(metaclass=Metaclass_RequestorDescription):
     @transitstatus.setter
     def transitstatus(self, value):
         if __debug__:
-            from v2x_msg.msg import TransitVehicleStatus
             assert \
-                isinstance(value, TransitVehicleStatus), \
-                "The 'transitstatus' field must be a sub message of type 'TransitVehicleStatus'"
+                isinstance(value, str), \
+                "The 'transitstatus' field must be of type 'str'"
         self._transitstatus = value
 
     @property

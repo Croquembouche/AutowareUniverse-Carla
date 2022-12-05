@@ -27,11 +27,8 @@
 #include "v2x_msg/msg/detail/requestor_position_vector__rosidl_typesupport_introspection_c.h"
 // Member `name`
 // Member `routename`
+// Member `transitstatus`
 #include "rosidl_runtime_c/string_functions.h"
-// Member `transitstatus`
-#include "v2x_msg/msg/transit_vehicle_status.h"
-// Member `transitstatus`
-#include "v2x_msg/msg/detail/transit_vehicle_status__rosidl_typesupport_introspection_c.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -130,9 +127,9 @@ static rosidl_typesupport_introspection_c__MessageMember RequestorDescription__r
   },
   {
     "transitstatus",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message (initialized later)
+    NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -202,8 +199,6 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, RequestorType)();
   RequestorDescription__rosidl_typesupport_introspection_c__RequestorDescription_message_member_array[2].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, RequestorPositionVector)();
-  RequestorDescription__rosidl_typesupport_introspection_c__RequestorDescription_message_member_array[5].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, TransitVehicleStatus)();
   if (!RequestorDescription__rosidl_typesupport_introspection_c__RequestorDescription_message_type_support_handle.typesupport_identifier) {
     RequestorDescription__rosidl_typesupport_introspection_c__RequestorDescription_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;

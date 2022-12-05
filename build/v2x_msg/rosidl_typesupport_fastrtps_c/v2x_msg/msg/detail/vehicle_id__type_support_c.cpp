@@ -34,8 +34,8 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // entityid, stationid
-#include "rosidl_runtime_c/string_functions.h"  // entityid, stationid
+#include "rosidl_runtime_c/string.h"  // entityid
+#include "rosidl_runtime_c/string_functions.h"  // entityid
 
 // forward declare type support functions
 
@@ -67,16 +67,7 @@ static bool _VehicleID__cdr_serialize(
 
   // Field name: stationid
   {
-    const rosidl_runtime_c__String * str = &ros_message->stationid;
-    if (str->capacity == 0 || str->capacity <= str->size) {
-      fprintf(stderr, "string capacity not greater than size\n");
-      return false;
-    }
-    if (str->data[str->size] != '\0') {
-      fprintf(stderr, "string not null-terminated\n");
-      return false;
-    }
-    cdr << str->data;
+    cdr << ros_message->stationid;
   }
 
   return true;
@@ -109,18 +100,7 @@ static bool _VehicleID__cdr_deserialize(
 
   // Field name: stationid
   {
-    std::string tmp;
-    cdr >> tmp;
-    if (!ros_message->stationid.data) {
-      rosidl_runtime_c__String__init(&ros_message->stationid);
-    }
-    bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->stationid,
-      tmp.c_str());
-    if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'stationid'\n");
-      return false;
-    }
+    cdr >> ros_message->stationid;
   }
 
   return true;
@@ -145,9 +125,11 @@ size_t get_serialized_size_v2x_msg__msg__VehicleID(
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->entityid.size + 1);
   // field.name stationid
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->stationid.size + 1);
+  {
+    size_t item_size = sizeof(ros_message->stationid);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -187,12 +169,8 @@ size_t max_serialized_size_v2x_msg__msg__VehicleID(
   {
     size_t array_size = 1;
 
-    full_bounded = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   return current_alignment - initial_alignment;

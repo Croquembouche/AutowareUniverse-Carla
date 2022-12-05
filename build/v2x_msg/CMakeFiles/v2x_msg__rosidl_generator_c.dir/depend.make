@@ -1199,8 +1199,6 @@ CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail
 CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/requestor_description__functions.c.o: rosidl_generator_c/v2x_msg/msg/detail/requestor_position_vector__struct.h
 CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/requestor_description__functions.c.o: rosidl_generator_c/v2x_msg/msg/detail/requestor_type__functions.h
 CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/requestor_description__functions.c.o: rosidl_generator_c/v2x_msg/msg/detail/requestor_type__struct.h
-CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/requestor_description__functions.c.o: rosidl_generator_c/v2x_msg/msg/detail/transit_vehicle_status__functions.h
-CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/requestor_description__functions.c.o: rosidl_generator_c/v2x_msg/msg/detail/transit_vehicle_status__struct.h
 CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/requestor_description__functions.c.o: rosidl_generator_c/v2x_msg/msg/detail/transmission_and_speed__struct.h
 CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/requestor_description__functions.c.o: rosidl_generator_c/v2x_msg/msg/detail/vehicle_id__functions.h
 CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/requestor_description__functions.c.o: rosidl_generator_c/v2x_msg/msg/detail/vehicle_id__struct.h
@@ -1527,7 +1525,6 @@ CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail
 CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/srm__functions.c.o: rosidl_generator_c/v2x_msg/msg/detail/signal_request_package__struct.h
 CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/srm__functions.c.o: rosidl_generator_c/v2x_msg/msg/detail/srm__functions.h
 CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/srm__functions.c.o: rosidl_generator_c/v2x_msg/msg/detail/srm__struct.h
-CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/srm__functions.c.o: rosidl_generator_c/v2x_msg/msg/detail/transit_vehicle_status__struct.h
 CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/srm__functions.c.o: rosidl_generator_c/v2x_msg/msg/detail/transmission_and_speed__struct.h
 CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/srm__functions.c.o: rosidl_generator_c/v2x_msg/msg/detail/vehicle_id__struct.h
 CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/srm__functions.c.o: rosidl_generator_c/v2x_msg/msg/rosidl_generator_c__visibility_control.h

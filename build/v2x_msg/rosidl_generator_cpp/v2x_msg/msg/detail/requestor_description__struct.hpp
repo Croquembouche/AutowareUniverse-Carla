@@ -21,8 +21,6 @@
 #include "v2x_msg/msg/detail/requestor_type__struct.hpp"
 // Member 'position'
 #include "v2x_msg/msg/detail/requestor_position_vector__struct.hpp"
-// Member 'transitstatus'
-#include "v2x_msg/msg/detail/transit_vehicle_status__struct.hpp"
 
 #ifndef _WIN32
 # define DEPRECATED__v2x_msg__msg__RequestorDescription __attribute__((deprecated))
@@ -45,14 +43,14 @@ struct RequestorDescription_
   explicit RequestorDescription_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : id(_init),
     type(_init),
-    position(_init),
-    transitstatus(_init)
+    position(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->name = "";
       this->routename = "";
+      this->transitstatus = "";
       this->transitoccupancy = 0ll;
       this->transitschedule = 0ll;
     }
@@ -64,13 +62,14 @@ struct RequestorDescription_
     position(_alloc, _init),
     name(_alloc),
     routename(_alloc),
-    transitstatus(_alloc, _init)
+    transitstatus(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->name = "";
       this->routename = "";
+      this->transitstatus = "";
       this->transitoccupancy = 0ll;
       this->transitschedule = 0ll;
     }
@@ -93,7 +92,7 @@ struct RequestorDescription_
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _routename_type routename;
   using _transitstatus_type =
-    v2x_msg::msg::TransitVehicleStatus_<ContainerAllocator>;
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _transitstatus_type transitstatus;
   using _transitoccupancy_type =
     int64_t;
@@ -134,7 +133,7 @@ struct RequestorDescription_
     return *this;
   }
   Type & set__transitstatus(
-    const v2x_msg::msg::TransitVehicleStatus_<ContainerAllocator> & _arg)
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
     this->transitstatus = _arg;
     return *this;

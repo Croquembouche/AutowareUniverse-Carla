@@ -115,9 +115,9 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RequestorDesc
   },
   {
     "transitstatus",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<v2x_msg::msg::TransitVehicleStatus>(),  // members of sub message
+    nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound

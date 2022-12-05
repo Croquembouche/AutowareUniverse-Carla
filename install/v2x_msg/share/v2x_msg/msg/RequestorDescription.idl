@@ -4,7 +4,6 @@
 
 #include "v2x_msg/msg/RequestorPositionVector.idl"
 #include "v2x_msg/msg/RequestorType.idl"
-#include "v2x_msg/msg/TransitVehicleStatus.idl"
 #include "v2x_msg/msg/VehicleID.idl"
 
 module v2x_msg {
@@ -20,7 +19,7 @@ module v2x_msg {
 
       string routename;
 
-      v2x_msg::msg::TransitVehicleStatus transitstatus;
+      string transitstatus;
 
       int64 transitoccupancy;
 

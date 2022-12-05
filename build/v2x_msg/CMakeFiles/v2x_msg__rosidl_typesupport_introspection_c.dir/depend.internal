@@ -2397,9 +2397,6 @@ CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_in
  rosidl_generator_c/v2x_msg/msg/detail/requestor_type__functions.h
  rosidl_generator_c/v2x_msg/msg/detail/requestor_type__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/requestor_type__type_support.h
- rosidl_generator_c/v2x_msg/msg/detail/transit_vehicle_status__functions.h
- rosidl_generator_c/v2x_msg/msg/detail/transit_vehicle_status__struct.h
- rosidl_generator_c/v2x_msg/msg/detail/transit_vehicle_status__type_support.h
  rosidl_generator_c/v2x_msg/msg/detail/transmission_and_speed__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/vehicle_id__functions.h
  rosidl_generator_c/v2x_msg/msg/detail/vehicle_id__struct.h
@@ -2407,12 +2404,10 @@ CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_in
  rosidl_generator_c/v2x_msg/msg/requestor_position_vector.h
  rosidl_generator_c/v2x_msg/msg/requestor_type.h
  rosidl_generator_c/v2x_msg/msg/rosidl_generator_c__visibility_control.h
- rosidl_generator_c/v2x_msg/msg/transit_vehicle_status.h
  rosidl_generator_c/v2x_msg/msg/vehicle_id.h
  rosidl_typesupport_introspection_c/v2x_msg/msg/detail/requestor_description__rosidl_typesupport_introspection_c.h
  rosidl_typesupport_introspection_c/v2x_msg/msg/detail/requestor_position_vector__rosidl_typesupport_introspection_c.h
  rosidl_typesupport_introspection_c/v2x_msg/msg/detail/requestor_type__rosidl_typesupport_introspection_c.h
- rosidl_typesupport_introspection_c/v2x_msg/msg/detail/transit_vehicle_status__rosidl_typesupport_introspection_c.h
  rosidl_typesupport_introspection_c/v2x_msg/msg/detail/vehicle_id__rosidl_typesupport_introspection_c.h
  rosidl_typesupport_introspection_c/v2x_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h
 CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/v2x_msg/msg/detail/requestor_position_vector__type_support.c.o
@@ -3034,7 +3029,6 @@ CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_in
  rosidl_generator_c/v2x_msg/msg/detail/signal_request_package__type_support.h
  rosidl_generator_c/v2x_msg/msg/detail/srm__functions.h
  rosidl_generator_c/v2x_msg/msg/detail/srm__struct.h
- rosidl_generator_c/v2x_msg/msg/detail/transit_vehicle_status__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/transmission_and_speed__struct.h
  rosidl_generator_c/v2x_msg/msg/detail/vehicle_id__struct.h
  rosidl_generator_c/v2x_msg/msg/requestor_description.h

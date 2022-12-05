@@ -25,8 +25,6 @@ bool v2x_msg__msg__requestor_type__convert_from_py(PyObject * _pymsg, void * _ro
 PyObject * v2x_msg__msg__requestor_type__convert_to_py(void * raw_ros_message);
 bool v2x_msg__msg__requestor_position_vector__convert_from_py(PyObject * _pymsg, void * _ros_message);
 PyObject * v2x_msg__msg__requestor_position_vector__convert_to_py(void * raw_ros_message);
-bool v2x_msg__msg__transit_vehicle_status__convert_from_py(PyObject * _pymsg, void * _ros_message);
-PyObject * v2x_msg__msg__transit_vehicle_status__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool v2x_msg__msg__requestor_description__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -129,10 +127,14 @@ bool v2x_msg__msg__requestor_description__convert_from_py(PyObject * _pymsg, voi
     if (!field) {
       return false;
     }
-    if (!v2x_msg__msg__transit_vehicle_status__convert_from_py(field, &ros_message->transitstatus)) {
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
       Py_DECREF(field);
       return false;
     }
+    rosidl_runtime_c__String__assign(&ros_message->transitstatus, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
   {  // transitoccupancy
@@ -253,7 +255,10 @@ PyObject * v2x_msg__msg__requestor_description__convert_to_py(void * raw_ros_mes
   }
   {  // transitstatus
     PyObject * field = NULL;
-    field = v2x_msg__msg__transit_vehicle_status__convert_to_py(&ros_message->transitstatus);
+    field = PyUnicode_DecodeUTF8(
+      ros_message->transitstatus.data,
+      strlen(ros_message->transitstatus.data),
+      "strict");
     if (!field) {
       return NULL;
     }

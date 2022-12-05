@@ -73,14 +73,8 @@ bool v2x_msg__msg__vehicle_id__convert_from_py(PyObject * _pymsg, void * _ros_me
     if (!field) {
       return false;
     }
-    assert(PyUnicode_Check(field));
-    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
-    if (!encoded_field) {
-      Py_DECREF(field);
-      return false;
-    }
-    rosidl_runtime_c__String__assign(&ros_message->stationid, PyBytes_AS_STRING(encoded_field));
-    Py_DECREF(encoded_field);
+    assert(PyLong_Check(field));
+    ros_message->stationid = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
 
@@ -124,13 +118,7 @@ PyObject * v2x_msg__msg__vehicle_id__convert_to_py(void * raw_ros_message)
   }
   {  // stationid
     PyObject * field = NULL;
-    field = PyUnicode_DecodeUTF8(
-      ros_message->stationid.data,
-      strlen(ros_message->stationid.data),
-      "strict");
-    if (!field) {
-      return NULL;
-    }
+    field = PyLong_FromLongLong(ros_message->stationid);
     {
       int rc = PyObject_SetAttrString(_pymessage, "stationid", field);
       Py_DECREF(field);

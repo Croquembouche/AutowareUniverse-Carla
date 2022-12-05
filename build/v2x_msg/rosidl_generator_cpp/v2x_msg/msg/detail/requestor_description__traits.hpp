@@ -19,8 +19,6 @@
 #include "v2x_msg/msg/detail/requestor_type__traits.hpp"
 // Member 'position'
 #include "v2x_msg/msg/detail/requestor_position_vector__traits.hpp"
-// Member 'transitstatus'
-#include "v2x_msg/msg/detail/transit_vehicle_status__traits.hpp"
 
 namespace rosidl_generator_traits
 {
@@ -81,8 +79,9 @@ inline void to_yaml(
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "transitstatus:\n";
-    to_yaml(msg.transitstatus, out, indentation + 2);
+    out << "transitstatus: ";
+    value_to_yaml(msg.transitstatus, out);
+    out << "\n";
   }
 
   // member: transitoccupancy

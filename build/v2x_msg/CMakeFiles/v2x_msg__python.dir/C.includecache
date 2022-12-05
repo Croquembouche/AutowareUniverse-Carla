@@ -5115,8 +5115,6 @@ v2x_msg/msg/detail/requestor_position_vector__struct.h
 rosidl_generator_c/v2x_msg/msg/detail/v2x_msg/msg/detail/requestor_position_vector__struct.h
 rosidl_runtime_c/string.h
 rosidl_generator_c/v2x_msg/msg/detail/rosidl_runtime_c/string.h
-v2x_msg/msg/detail/transit_vehicle_status__struct.h
-rosidl_generator_c/v2x_msg/msg/detail/v2x_msg/msg/detail/transit_vehicle_status__struct.h
 
 rosidl_generator_c/v2x_msg/msg/detail/requestor_position_vector__functions.h
 stdbool.h

@@ -14,7 +14,6 @@
 
 // Include directives for member types
 // Member `entityid`
-// Member `stationid`
 #include "rosidl_runtime_c/string_functions.h"
 
 #ifdef __cplusplus
@@ -54,7 +53,7 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleID__rosidl_types
   },
   {
     "stationid",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array

@@ -72,9 +72,11 @@ get_serialized_size(
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message.entityid.size() + 1);
   // Member: stationid
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.stationid.size() + 1);
+  {
+    size_t item_size = sizeof(ros_message.stationid);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -110,12 +112,8 @@ max_serialized_size_VehicleID(
   {
     size_t array_size = 1;
 
-    full_bounded = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   return current_alignment - initial_alignment;

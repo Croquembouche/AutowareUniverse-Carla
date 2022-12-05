@@ -34,11 +34,10 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // name, routename
-#include "rosidl_runtime_c/string_functions.h"  // name, routename
+#include "rosidl_runtime_c/string.h"  // name, routename, transitstatus
+#include "rosidl_runtime_c/string_functions.h"  // name, routename, transitstatus
 #include "v2x_msg/msg/detail/requestor_position_vector__functions.h"  // position
 #include "v2x_msg/msg/detail/requestor_type__functions.h"  // type
-#include "v2x_msg/msg/detail/transit_vehicle_status__functions.h"  // transitstatus
 #include "v2x_msg/msg/detail/vehicle_id__functions.h"  // id
 
 // forward declare type support functions
@@ -62,16 +61,6 @@ size_t max_serialized_size_v2x_msg__msg__RequestorType(
 
 const rosidl_message_type_support_t *
   ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, v2x_msg, msg, RequestorType)();
-size_t get_serialized_size_v2x_msg__msg__TransitVehicleStatus(
-  const void * untyped_ros_message,
-  size_t current_alignment);
-
-size_t max_serialized_size_v2x_msg__msg__TransitVehicleStatus(
-  bool & full_bounded,
-  size_t current_alignment);
-
-const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, v2x_msg, msg, TransitVehicleStatus)();
 size_t get_serialized_size_v2x_msg__msg__VehicleID(
   const void * untyped_ros_message,
   size_t current_alignment);
@@ -167,16 +156,16 @@ static bool _RequestorDescription__cdr_serialize(
 
   // Field name: transitstatus
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, v2x_msg, msg, TransitVehicleStatus
-      )()->data);
-    if (!callbacks->cdr_serialize(
-        &ros_message->transitstatus, cdr))
-    {
+    const rosidl_runtime_c__String * str = &ros_message->transitstatus;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
       return false;
     }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
   }
 
   // Field name: transitoccupancy
@@ -277,14 +266,16 @@ static bool _RequestorDescription__cdr_deserialize(
 
   // Field name: transitstatus
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, v2x_msg, msg, TransitVehicleStatus
-      )()->data);
-    if (!callbacks->cdr_deserialize(
-        cdr, &ros_message->transitstatus))
-    {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->transitstatus.data) {
+      rosidl_runtime_c__String__init(&ros_message->transitstatus);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->transitstatus,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'transitstatus'\n");
       return false;
     }
   }
@@ -337,9 +328,9 @@ size_t get_serialized_size_v2x_msg__msg__RequestorDescription(
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->routename.size + 1);
   // field.name transitstatus
-
-  current_alignment += get_serialized_size_v2x_msg__msg__TransitVehicleStatus(
-    &(ros_message->transitstatus), current_alignment);
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->transitstatus.size + 1);
   // field.name transitoccupancy
   {
     size_t item_size = sizeof(ros_message->transitoccupancy);
@@ -435,11 +426,11 @@ size_t max_serialized_size_v2x_msg__msg__RequestorDescription(
   {
     size_t array_size = 1;
 
-
+    full_bounded = false;
     for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
-        max_serialized_size_v2x_msg__msg__TransitVehicleStatus(
-        full_bounded, current_alignment);
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
     }
   }
   // member: transitoccupancy

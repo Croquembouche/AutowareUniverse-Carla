@@ -34,7 +34,6 @@ except IndexError:
 
 # ----------MSGs--------
 from v2x_msg.msg import SSM
-from v2x_msg.msg import SRM
 from sensor_msgs.msg import Image
 
 class DefaultSSM(Node):

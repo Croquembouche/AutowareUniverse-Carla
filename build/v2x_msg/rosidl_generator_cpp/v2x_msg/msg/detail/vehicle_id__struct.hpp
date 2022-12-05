@@ -38,19 +38,18 @@ struct VehicleID_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->entityid = "";
-      this->stationid = "";
+      this->stationid = 0ll;
     }
   }
 
   explicit VehicleID_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : entityid(_alloc),
-    stationid(_alloc)
+  : entityid(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->entityid = "";
-      this->stationid = "";
+      this->stationid = 0ll;
     }
   }
 
@@ -59,7 +58,7 @@ struct VehicleID_
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _entityid_type entityid;
   using _stationid_type =
-    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+    int64_t;
   _stationid_type stationid;
 
   // setters for named parameter idiom
@@ -70,7 +69,7 @@ struct VehicleID_
     return *this;
   }
   Type & set__stationid(
-    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+    const int64_t & _arg)
   {
     this->stationid = _arg;
     return *this;

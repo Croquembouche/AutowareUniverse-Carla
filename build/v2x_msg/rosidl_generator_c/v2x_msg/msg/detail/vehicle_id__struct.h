@@ -19,14 +19,13 @@ extern "C"
 
 // Include directives for member types
 // Member 'entityid'
-// Member 'stationid'
 #include "rosidl_runtime_c/string.h"
 
 // Struct defined in msg/VehicleID in the package v2x_msg.
 typedef struct v2x_msg__msg__VehicleID
 {
   rosidl_runtime_c__String entityid;
-  rosidl_runtime_c__String stationid;
+  int64_t stationid;
 } v2x_msg__msg__VehicleID;
 
 // Struct for a sequence of v2x_msg__msg__VehicleID.

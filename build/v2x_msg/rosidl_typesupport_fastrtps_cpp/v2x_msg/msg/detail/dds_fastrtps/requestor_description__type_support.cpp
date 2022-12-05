@@ -85,29 +85,6 @@ max_serialized_size_RequestorPositionVector(
 }  // namespace msg
 }  // namespace v2x_msg
 
-namespace v2x_msg
-{
-namespace msg
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const v2x_msg::msg::TransitVehicleStatus &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  v2x_msg::msg::TransitVehicleStatus &);
-size_t get_serialized_size(
-  const v2x_msg::msg::TransitVehicleStatus &,
-  size_t current_alignment);
-size_t
-max_serialized_size_TransitVehicleStatus(
-  bool & full_bounded,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace msg
-}  // namespace v2x_msg
-
 
 namespace v2x_msg
 {
@@ -141,9 +118,7 @@ cdr_serialize(
   // Member: routename
   cdr << ros_message.routename;
   // Member: transitstatus
-  v2x_msg::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.transitstatus,
-    cdr);
+  cdr << ros_message.transitstatus;
   // Member: transitoccupancy
   cdr << ros_message.transitoccupancy;
   // Member: transitschedule
@@ -176,8 +151,7 @@ cdr_deserialize(
   cdr >> ros_message.routename;
 
   // Member: transitstatus
-  v2x_msg::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.transitstatus);
+  cdr >> ros_message.transitstatus;
 
   // Member: transitoccupancy
   cdr >> ros_message.transitoccupancy;
@@ -225,10 +199,9 @@ get_serialized_size(
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message.routename.size() + 1);
   // Member: transitstatus
-
-  current_alignment +=
-    v2x_msg::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.transitstatus, current_alignment);
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.transitstatus.size() + 1);
   // Member: transitoccupancy
   {
     size_t item_size = sizeof(ros_message.transitoccupancy);
@@ -324,11 +297,11 @@ max_serialized_size_RequestorDescription(
   {
     size_t array_size = 1;
 
-
+    full_bounded = false;
     for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
-        v2x_msg::msg::typesupport_fastrtps_cpp::max_serialized_size_TransitVehicleStatus(
-        full_bounded, current_alignment);
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
     }
   }
 

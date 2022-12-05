@@ -59,12 +59,12 @@ class VehicleID(metaclass=Metaclass_VehicleID):
 
     _fields_and_field_types = {
         'entityid': 'string',
-        'stationid': 'string',
+        'stationid': 'int64',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
-        rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -72,7 +72,7 @@ class VehicleID(metaclass=Metaclass_VehicleID):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.entityid = kwargs.get('entityid', str())
-        self.stationid = kwargs.get('stationid', str())
+        self.stationid = kwargs.get('stationid', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -136,6 +136,8 @@ class VehicleID(metaclass=Metaclass_VehicleID):
     def stationid(self, value):
         if __debug__:
             assert \
-                isinstance(value, str), \
-                "The 'stationid' field must be of type 'str'"
+                isinstance(value, int), \
+                "The 'stationid' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'stationid' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._stationid = value

@@ -18,9 +18,8 @@
 #include "v2x_msg/msg/detail/requestor_position_vector__functions.h"
 // Member `name`
 // Member `routename`
-#include "rosidl_runtime_c/string_functions.h"
 // Member `transitstatus`
-#include "v2x_msg/msg/detail/transit_vehicle_status__functions.h"
+#include "rosidl_runtime_c/string_functions.h"
 
 bool
 v2x_msg__msg__RequestorDescription__init(v2x_msg__msg__RequestorDescription * msg)
@@ -54,7 +53,7 @@ v2x_msg__msg__RequestorDescription__init(v2x_msg__msg__RequestorDescription * ms
     return false;
   }
   // transitstatus
-  if (!v2x_msg__msg__TransitVehicleStatus__init(&msg->transitstatus)) {
+  if (!rosidl_runtime_c__String__init(&msg->transitstatus)) {
     v2x_msg__msg__RequestorDescription__fini(msg);
     return false;
   }
@@ -80,7 +79,7 @@ v2x_msg__msg__RequestorDescription__fini(v2x_msg__msg__RequestorDescription * ms
   // routename
   rosidl_runtime_c__String__fini(&msg->routename);
   // transitstatus
-  v2x_msg__msg__TransitVehicleStatus__fini(&msg->transitstatus);
+  rosidl_runtime_c__String__fini(&msg->transitstatus);
   // transitoccupancy
   // transitschedule
 }
@@ -122,7 +121,7 @@ v2x_msg__msg__RequestorDescription__are_equal(const v2x_msg__msg__RequestorDescr
     return false;
   }
   // transitstatus
-  if (!v2x_msg__msg__TransitVehicleStatus__are_equal(
+  if (!rosidl_runtime_c__String__are_equal(
       &(lhs->transitstatus), &(rhs->transitstatus)))
   {
     return false;
@@ -177,7 +176,7 @@ v2x_msg__msg__RequestorDescription__copy(
     return false;
   }
   // transitstatus
-  if (!v2x_msg__msg__TransitVehicleStatus__copy(
+  if (!rosidl_runtime_c__String__copy(
       &(input->transitstatus), &(output->transitstatus)))
   {
     return false;

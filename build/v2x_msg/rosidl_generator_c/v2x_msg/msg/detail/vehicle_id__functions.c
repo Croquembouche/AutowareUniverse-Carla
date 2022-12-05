@@ -11,7 +11,6 @@
 
 // Include directives for member types
 // Member `entityid`
-// Member `stationid`
 #include "rosidl_runtime_c/string_functions.h"
 
 bool
@@ -26,10 +25,6 @@ v2x_msg__msg__VehicleID__init(v2x_msg__msg__VehicleID * msg)
     return false;
   }
   // stationid
-  if (!rosidl_runtime_c__String__init(&msg->stationid)) {
-    v2x_msg__msg__VehicleID__fini(msg);
-    return false;
-  }
   return true;
 }
 
@@ -42,7 +37,6 @@ v2x_msg__msg__VehicleID__fini(v2x_msg__msg__VehicleID * msg)
   // entityid
   rosidl_runtime_c__String__fini(&msg->entityid);
   // stationid
-  rosidl_runtime_c__String__fini(&msg->stationid);
 }
 
 bool
@@ -58,9 +52,7 @@ v2x_msg__msg__VehicleID__are_equal(const v2x_msg__msg__VehicleID * lhs, const v2
     return false;
   }
   // stationid
-  if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->stationid), &(rhs->stationid)))
-  {
+  if (lhs->stationid != rhs->stationid) {
     return false;
   }
   return true;
@@ -81,11 +73,7 @@ v2x_msg__msg__VehicleID__copy(
     return false;
   }
   // stationid
-  if (!rosidl_runtime_c__String__copy(
-      &(input->stationid), &(output->stationid)))
-  {
-    return false;
-  }
+  output->stationid = input->stationid;
   return true;
 }
 

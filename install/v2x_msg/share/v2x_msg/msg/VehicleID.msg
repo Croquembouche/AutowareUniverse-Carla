@@ -1,2 +1,2 @@
 string entityid
-string stationid
+int64 stationid
