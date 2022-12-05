@@ -124,6 +124,7 @@ class DefaultVehicle(Node):
         self.longacc = 0
         self.latacc = 0
         self.vertacc = 0
+        self.heading = 0
         # initialize CvBridge
         self.bridge = CvBridge()
         self.image_queue = []
@@ -166,9 +167,8 @@ class DefaultVehicle(Node):
         msg.coredata.accelset.vert = int(self.vertacc)
         msg.coredata.accelset.yaw = 0
         msg.coredata.brakes.wheelbrakes = "00000"
-
         msg.coredata.brakes.traction = 0
-        msg.coredata.brakes.abs = 0
+        msg.coredata.brakes.abs = 3
         msg.coredata.brakes.scs = 0
         msg.coredata.brakes.brakeboost = 0
         msg.coredata.brakes.auxbrakes = 0
@@ -185,32 +185,30 @@ class DefaultVehicle(Node):
         vy = velocity.y
         vz = velocity.z
         speed = math.sqrt(vx**2 + vy**2 + vz**2)
-        heading = 0
-        if vx == 0 and vy > 0:
-            heading = 0
-        elif vx == 0 and vy < 0:
-            heading = 180
-        elif vx > 0 and vy == 0:
-            heading = 90
-        elif vx < 0 and vy == 0:
-            heading = 270
-        elif vx == 0 and vy == 0:
+        self.speed = speed
+
+        if vx == 0 and vy == 0: # when the vehicle is not moving, do not update heading
             pass
-        else:
-            if -0.1 < vx < 0:
-                vx = -0.1
-            if 0 <=vx < 0.1:
-                vx = 0.1
-            if -0.1 < vy < 0:
-                vy = -0.1
-            if 0 < vx < 0.1:
-                vx = 0.1
-            heading = 90-math.tan(vy/vx) 
-        if heading < 0:
-            heading += 360
-        if heading > 360:
-            heading = 360-heading
-        return speed, heading/360 * 28800
+        if vx != 0 and vy == 0: # when the vehicle is only moving N-S direction
+            if vx > 0:          # moving North
+                self.heading = 0
+
+            elif vx < 0:        # moving South
+                self.heading = 180
+        
+        if vx ==0 and vy != 0:  # when the vehicle is only moving W-E direction
+            if vy > 0:
+                self.heading = 90
+            elif vy < 0:
+                self.heading = 270
+
+        if vx != 0 and vy != 0: # when the vehicle is moving in some other direction
+            self.heading = (math.atan2(vy, vx))/3.14*180
+            if self.heading < 0:
+                self.heading += 360
+        self.heading = self.heading/360*28800
+        if self.heading > 28800:
+            self.heading = 28800
     def getVehicleInformation(self):
         # -------------Vehicle Location-----------------
         vehicle_location = self.vehicle.get_location()
@@ -223,12 +221,10 @@ class DefaultVehicle(Node):
         throttle = self.ego_control.throttle
         reverse = self.ego_control.reverse
         velocity = self.vehicle.get_velocity()
-        speed, heading = self.getSpeedandHeading(velocity)
-        self.speed = speed
-        self.heading = heading
-        if throttle == 0 and speed != 0:
+        self.getSpeedandHeading(velocity)
+        if throttle == 0 and self.speed != 0:
             self.transmission = 0 # neutral
-        elif throttle == 0 and speed == 0:
+        elif throttle == 0 and self.speed == 0:
             self.transmission = 1 # park
         elif throttle > 0 and reverse == False:
             self.transmission = 2 # forward gear
@@ -435,7 +431,7 @@ def main(args=None):
     spawn_points = world.get_map().get_spawn_points()
 
     # spawn_point = spawn_points[random.randint(0, len(spawn_points)-1)]
-    spawn_point = spawn_points[0]
+    spawn_point = spawn_points[5]
     # spawn the vehicle
     demo_veh = DefaultVehicle(world, spawn_point)
     # add lidar sensor

@@ -1,0 +1,49 @@
+[ 22%] Built target gtest_main
+[ 44%] Built target ament_cmake_python_copy_image_geometry
+[ 77%] Built target image_geometry
+[ 77%] Built target gtest
+[100%] Built target image_geometry-utest
+running egg_info
+writing image_geometry.egg-info/PKG-INFO
+writing dependency_links to image_geometry.egg-info/dependency_links.txt
+writing top-level names to image_geometry.egg-info/top_level.txt
+reading manifest file 'image_geometry.egg-info/SOURCES.txt'
+writing manifest file 'image_geometry.egg-info/SOURCES.txt'
+[100%] Built target ament_cmake_python_build_image_geometry_egg
+-- Install configuration: ""
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/environment/pythonpath.sh
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/environment/pythonpath.dsv
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages//image_geometry.egg-info
+-- Installing: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages//image_geometry.egg-info/top_level.txt
+-- Installing: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages//image_geometry.egg-info/SOURCES.txt
+-- Installing: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages//image_geometry.egg-info/dependency_links.txt
+-- Installing: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages//image_geometry.egg-info/PKG-INFO
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages/image_geometry
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages/image_geometry/__init__.py
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages/image_geometry/cameramodels.py
+Listing '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/python3.8/site-packages/image_geometry'...
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/include/image_geometry
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/include/image_geometry/image_geometry
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/include/image_geometry/image_geometry/stereo_camera_model.h
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/include/image_geometry/image_geometry/visibility_control.hpp
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/include/image_geometry/image_geometry/pinhole_camera_model.h
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/lib/libimage_geometry.so
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/ament_index/resource_index/package_run_dependencies/image_geometry
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/ament_index/resource_index/parent_prefix_path/image_geometry
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/environment/ament_prefix_path.sh
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/environment/path.sh
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/environment/path.dsv
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/local_setup.bash
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/local_setup.sh
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/local_setup.zsh
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/local_setup.dsv
+-- Installing: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/package.dsv
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/ament_index/resource_index/packages/image_geometry
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/cmake/export_image_geometryExport.cmake
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/cmake/export_image_geometryExport-noconfig.cmake
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/cmake/image_geometryConfig.cmake
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/cmake/image_geometryConfig-version.cmake
+-- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/image_geometry/share/image_geometry/package.xml

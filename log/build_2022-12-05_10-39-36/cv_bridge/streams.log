@@ -1,0 +1,58 @@
+[0.043s] Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic /usr/bin/cmake --build /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge -- -j20 -l20
+[0.483s] [ 12%] Built target gtest
+[0.483s] [ 25%] Built target gtest_main
+[0.483s] [ 37%] Built target ament_cmake_python_copy_cv_bridge
+[0.484s] [ 43%] Built target cv_bridge
+[0.484s] [ 62%] Built target cv_bridge_boost
+[0.484s] [100%] Built target cv_bridge-utest
+[0.485s] running egg_info
+[0.486s] writing cv_bridge.egg-info/PKG-INFO
+[0.486s] writing dependency_links to cv_bridge.egg-info/dependency_links.txt
+[0.487s] writing top-level names to cv_bridge.egg-info/top_level.txt
+[0.488s] reading manifest file 'cv_bridge.egg-info/SOURCES.txt'
+[0.489s] writing manifest file 'cv_bridge.egg-info/SOURCES.txt'
+[0.489s] [100%] Built target ament_cmake_python_build_cv_bridge_egg
+[0.498s] Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic /usr/bin/cmake --build /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge -- -j20 -l20
+[0.509s] Invoking command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic /usr/bin/cmake --install /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge
+[0.514s] -- Install configuration: ""
+[0.514s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/environment/pythonpath.sh
+[0.514s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/environment/pythonpath.dsv
+[0.514s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages//cv_bridge.egg-info
+[0.514s] -- Installing: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages//cv_bridge.egg-info/top_level.txt
+[0.514s] -- Installing: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages//cv_bridge.egg-info/SOURCES.txt
+[0.514s] -- Installing: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages//cv_bridge.egg-info/dependency_links.txt
+[0.514s] -- Installing: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages//cv_bridge.egg-info/PKG-INFO
+[0.514s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages/cv_bridge
+[0.514s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages/cv_bridge/core.py
+[0.514s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages/cv_bridge/__init__.py
+[0.535s] Listing '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages/cv_bridge'...
+[0.535s] Listing '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages/cv_bridge/boost'...
+[0.539s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/libcv_bridge.so
+[0.539s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/include/cv_bridge/cv_bridge/cv_bridge_export.h
+[0.539s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/python3.8/site-packages/cv_bridge/boost/cv_bridge_boost.so
+[0.539s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/include/cv_bridge
+[0.539s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/include/cv_bridge/cv_bridge
+[0.539s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/include/cv_bridge/cv_bridge/rgb_colors.h
+[0.540s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/include/cv_bridge/cv_bridge/cv_bridge.h
+[0.540s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/lib/libcv_bridge.so
+[0.540s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/ament_index/resource_index/package_run_dependencies/cv_bridge
+[0.540s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/ament_index/resource_index/parent_prefix_path/cv_bridge
+[0.540s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/environment/ament_prefix_path.sh
+[0.540s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/environment/ament_prefix_path.dsv
+[0.540s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/environment/path.sh
+[0.540s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/environment/path.dsv
+[0.540s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/local_setup.bash
+[0.540s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/local_setup.sh
+[0.540s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/local_setup.zsh
+[0.540s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/local_setup.dsv
+[0.540s] -- Installing: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/package.dsv
+[0.541s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/ament_index/resource_index/packages/cv_bridge
+[0.541s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/cmake/export_cv_bridgeExport.cmake
+[0.541s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/cmake/export_cv_bridgeExport-noconfig.cmake
+[0.541s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/cmake/cv_bridge-extras.cmake
+[0.541s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.541s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/cmake/ament_cmake_export_targets-extras.cmake
+[0.541s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/cmake/cv_bridgeConfig.cmake
+[0.541s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/cmake/cv_bridgeConfig-version.cmake
+[0.541s] -- Up-to-date: /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/cv_bridge/share/cv_bridge/package.xml
+[0.544s] Invoked command in '/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/vehicle:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/opencv_tests:/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/infrastructure:/opt/ros/galactic /usr/bin/cmake --install /home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/cv_bridge

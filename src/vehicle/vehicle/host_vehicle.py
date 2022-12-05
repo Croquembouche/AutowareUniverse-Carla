@@ -161,7 +161,7 @@ class DefaultVehicle(Node):
         msg.coredata.accuracy.orientation = 65535
         msg.coredata.transmission = self.transmission
         msg.coredata.speed = int(self.speed)
-        msg.coredata.heading = 0 #int(self.heading)
+        msg.coredata.heading = int(self.heading)
         msg.coredata.angle = 127
         msg.coredata.accelset.longitude = int(self.longacc)
         msg.coredata.accelset.lat = int(self.latacc)
@@ -187,33 +187,31 @@ class DefaultVehicle(Node):
         vy = velocity.y
         vz = velocity.z
         speed = math.sqrt(vx**2 + vy**2 + vz**2)
-        heading = 0
-        if vx == 0 and vy > 0:
-            heading = 0
-        elif vx == 0 and vy < 0:
-            heading = 180
-        elif vx > 0 and vy == 0:
-            heading = 90
-        elif vx < 0 and vy == 0:
-            heading = 270
-        elif vx == 0 and vy == 0:
+        self.speed = speed
+
+        if vx == 0 and vy == 0: # when the vehicle is not moving, do not update heading
             pass
-        else:
-            if -0.1 < vx < 0:
-                vx = -0.1
-            if 0 <=vx < 0.1:
-                vx = 0.1
-            if -0.1 < vy < 0:
-                vy = -0.1
-            if 0 < vx < 0.1:
-                vx = 0.1
-            heading = 90-math.tan(vy/vx) 
-        if heading < 0:
-            heading += 360
-        if heading > 360:
-            heading = 360-heading
-        print(heading)
-        return speed, heading/360 * 28800
+        if vx != 0 and vy == 0: # when the vehicle is only moving N-S direction
+            if vx > 0:          # moving North
+                self.heading = 0
+
+            elif vx < 0:        # moving South
+                self.heading = 180
+        
+        if vx ==0 and vy != 0:  # when the vehicle is only moving W-E direction
+            if vy > 0:
+                self.heading = 90
+            elif vy < 0:
+                self.heading = 270
+
+        if vx != 0 and vy != 0: # when the vehicle is moving in some other direction
+            self.heading = (math.atan2(vy, vx))/3.14*180
+            if self.heading < 0:
+                self.heading += 360
+        self.heading = self.heading/360*28800
+        if self.heading > 28800:
+            self.heading = 28800
+
     def getVehicleInformation(self):
         # -------------Vehicle Location-----------------
         vehicle_location = self.vehicle.get_location()
@@ -226,12 +224,10 @@ class DefaultVehicle(Node):
         throttle = self.ego_control.throttle
         reverse = self.ego_control.reverse
         velocity = self.vehicle.get_velocity()
-        speed, heading = self.getSpeedandHeading(velocity)
-        self.speed = speed
-        self.heading = heading
-        if throttle == 0 and speed != 0:
+        self.getSpeedandHeading(velocity)
+        if throttle == 0 and self.speed != 0:
             self.transmission = 0 # neutral
-        elif throttle == 0 and speed == 0:
+        elif throttle == 0 and self.speed == 0:
             self.transmission = 1 # park
         elif throttle > 0 and reverse == False:
             self.transmission = 2 # forward gear
@@ -417,21 +413,10 @@ class DefaultVehicle(Node):
         for event in pygame.event.get():
             if event.type == pygame.QUIT: break
 
-# ---------------------------Applications---------------------------------------------
-
-# BSM Subscriber
-    def BSMSubscriber_cb(self, bsm_msg):
-        # only care about other vehicle's bsm
-        if bsm_msg.coredata.id != self.id:
-            self.FCW(bsm_msg)
-
-
-
-# -----------------------------Forward Collision Warning----------------------------
+#----------------------------Helper Functions---------------------------------
     def deg2rad(self, deg):
         return deg * (math.pi/180)
-        
-    
+  
     def getDistanceFromLatLonInKm(self, lat1,lon1,lat2,lon2):
         R = 6371
         dLat = self.deg2rad(lat2-lat1)
@@ -441,13 +426,25 @@ class DefaultVehicle(Node):
         c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a)); 
         d = R * c
         return d*1000
+# ---------------------------Applications---------------------------------------------
+# BSM Subscriber
+    def BSMSubscriber_cb(self, bsm_msg):
+        # only care about other vehicle's bsm
+        if bsm_msg.coredata.id != self.id:
+            # self.FCW(bsm_msg)
+            self.EBW(bsm_msg)
+
+# -----------------------------Forward Collision Warning----------------------------
     
     def FCW(self, rv_bsm):
         # when do we issue the FCW warning?
         rv_heading = rv_bsm.coredata.heading
+        hv_heading = self.heading/28800*360
+
+        # if abs(rv_heading-hv_heading) < 200:
         rv_lat = rv_bsm.coredata.lat/10000000
         rv_long = rv_bsm.coredata.longitude/10000000
-        hv_heading = self.heading
+        
         hv_lat = int(self.lat*10000000)/10000000
         hv_long = int(self.longi*10000000)/10000000
         # print(hv_lat, hv_long, rv_lat, rv_long)
@@ -459,11 +456,40 @@ class DefaultVehicle(Node):
             # method 2. find angle between 2 (lat, long) points, angle < 60 degrees
         dy = hv_lat - rv_lat
         dx = hv_long - rv_long
-        angle = math.atan2(dy, dx)
-        # distance
-        # print("horizontal distance in meters:", abs(distance*math.sin(angle)))
-        # print("FCW",angle, math.sin(angle))
-        # print("FCW Warning Issued!.")
+        angle = math.atan2(dy, dx)/3.14*180*-1
+        if angle < 0:
+            angle += 360
+        parellel_distance = abs(distance * math.sin(math.radians(abs(angle-hv_heading)))) # check if on same lane
+        distance_that_matters = abs(distance * math.cos(math.radians(abs(angle-hv_heading))))
+        if self.speed != 0:
+            if parellel_distance < 3 and distance_that_matters/self.speed <= 2: # give 2 seconds warning time
+                print("FCW Warning Issued!.")
+        
+# ---------------------------Emergency Brake Warning-----------------------------
+    def EBW(self, rv_bsm):
+        # when do we issue the EBW warning?
+        if rv_bsm.coredata.brakes.abs == 3:
+            rv_heading = rv_bsm.coredata.heading
+            hv_heading = self.heading/28800*360
+
+            # if abs(rv_heading-hv_heading) < 200:
+            rv_lat = rv_bsm.coredata.lat/10000000
+            rv_long = rv_bsm.coredata.longitude/10000000
+            
+            hv_lat = int(self.lat*10000000)/10000000
+            hv_long = int(self.longi*10000000)/10000000
+            distance = self.getDistanceFromLatLonInKm(hv_lat, hv_long, rv_lat, rv_long)
+
+            dy = hv_lat - rv_lat
+            dx = hv_long - rv_long
+            angle = math.atan2(dy, dx)/3.14*180*-1
+            if angle < 0:
+                angle += 360
+            parellel_distance = abs(distance * math.sin(math.radians(abs(angle-hv_heading)))) # check if on same lane
+            distance_that_matters = abs(distance * math.cos(math.radians(abs(angle-hv_heading))))
+            if self.speed != 0:
+                if parellel_distance < 3 and distance_that_matters/self.speed <= 2: # give 2 seconds warning time
+                    print("EBW Warning Issued!.")
 
 # ------------------------------------- Destroy -------------------------------------
     def destroy(self):
