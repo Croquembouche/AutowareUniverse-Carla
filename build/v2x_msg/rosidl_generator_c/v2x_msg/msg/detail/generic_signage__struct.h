@@ -21,7 +21,7 @@ extern "C"
 // Member 'item'
 #include "v2x_msg/msg/detail/generic_signagecontent__struct.h"
 
-// Struct defined in msg/GenericSignage in the package v2x_msg.
+/// Struct defined in msg/GenericSignage in the package v2x_msg.
 typedef struct v2x_msg__msg__GenericSignage
 {
   v2x_msg__msg__GenericSignagecontent__Sequence item;

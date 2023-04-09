@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -138,7 +140,7 @@ class TransitVehicleStatus(metaclass=Metaclass_TransitVehicleStatus):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def loading(self):
         """Message field 'loading'."""
         return self._loading
@@ -153,7 +155,7 @@ class TransitVehicleStatus(metaclass=Metaclass_TransitVehicleStatus):
                 "The 'loading' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._loading = value
 
-    @property
+    @builtins.property
     def anadause(self):
         """Message field 'anadause'."""
         return self._anadause
@@ -168,7 +170,7 @@ class TransitVehicleStatus(metaclass=Metaclass_TransitVehicleStatus):
                 "The 'anadause' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._anadause = value
 
-    @property
+    @builtins.property
     def abikeload(self):
         """Message field 'abikeload'."""
         return self._abikeload
@@ -183,7 +185,7 @@ class TransitVehicleStatus(metaclass=Metaclass_TransitVehicleStatus):
                 "The 'abikeload' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._abikeload = value
 
-    @property
+    @builtins.property
     def dooropen(self):
         """Message field 'dooropen'."""
         return self._dooropen
@@ -198,7 +200,7 @@ class TransitVehicleStatus(metaclass=Metaclass_TransitVehicleStatus):
                 "The 'dooropen' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._dooropen = value
 
-    @property
+    @builtins.property
     def charging(self):
         """Message field 'charging'."""
         return self._charging
@@ -213,7 +215,7 @@ class TransitVehicleStatus(metaclass=Metaclass_TransitVehicleStatus):
                 "The 'charging' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._charging = value
 
-    @property
+    @builtins.property
     def atstopline(self):
         """Message field 'atstopline'."""
         return self._atstopline

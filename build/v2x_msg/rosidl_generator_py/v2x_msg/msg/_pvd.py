@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -157,7 +159,7 @@ class PVD(metaclass=Metaclass_PVD):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def timstamp(self):
         """Message field 'timstamp'."""
         return self._timstamp
@@ -172,7 +174,7 @@ class PVD(metaclass=Metaclass_PVD):
                 "The 'timstamp' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._timstamp = value
 
-    @property
+    @builtins.property
     def segnum(self):
         """Message field 'segnum'."""
         return self._segnum
@@ -187,7 +189,7 @@ class PVD(metaclass=Metaclass_PVD):
                 "The 'segnum' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._segnum = value
 
-    @property
+    @builtins.property
     def probeid(self):
         """Message field 'probeid'."""
         return self._probeid
@@ -201,7 +203,7 @@ class PVD(metaclass=Metaclass_PVD):
                 "The 'probeid' field must be a sub message of type 'VehicleIdent'"
         self._probeid = value
 
-    @property
+    @builtins.property
     def startvector(self):
         """Message field 'startvector'."""
         return self._startvector
@@ -215,7 +217,7 @@ class PVD(metaclass=Metaclass_PVD):
                 "The 'startvector' field must be a sub message of type 'FullPositionVector'"
         self._startvector = value
 
-    @property
+    @builtins.property
     def vehicletype(self):
         """Message field 'vehicletype'."""
         return self._vehicletype
@@ -229,7 +231,7 @@ class PVD(metaclass=Metaclass_PVD):
                 "The 'vehicletype' field must be a sub message of type 'VehicleClassification'"
         self._vehicletype = value
 
-    @property
+    @builtins.property
     def snapshots(self):
         """Message field 'snapshots'."""
         return self._snapshots

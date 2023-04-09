@@ -5,10 +5,11 @@
 #ifndef V2X_MSG__MSG__DETAIL__CONNECTING_LANE__BUILDER_HPP_
 #define V2X_MSG__MSG__DETAIL__CONNECTING_LANE__BUILDER_HPP_
 
-#include "v2x_msg/msg/detail/connecting_lane__struct.hpp"
-#include <rosidl_runtime_cpp/message_initialization.hpp>
 #include <algorithm>
 #include <utility>
+
+#include "v2x_msg/msg/detail/connecting_lane__struct.hpp"
+#include "rosidl_runtime_cpp/message_initialization.hpp"
 
 
 namespace v2x_msg

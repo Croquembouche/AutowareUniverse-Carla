@@ -5,12 +5,14 @@
 #ifndef V2X_MSG__MSG__DETAIL__TRAVELER_DATA_FRAME__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__TRAVELER_DATA_FRAME__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/traveler_data_frame__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/traveler_data_frame__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'msgid'
@@ -20,11 +22,122 @@
 // Member 'content'
 #include "v2x_msg/msg/detail/content__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::TravelerDataFrame & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const TravelerDataFrame & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: notused
+  {
+    out << "notused: ";
+    rosidl_generator_traits::value_to_yaml(msg.notused, out);
+    out << ", ";
+  }
+
+  // member: frametype
+  {
+    out << "frametype: ";
+    rosidl_generator_traits::value_to_yaml(msg.frametype, out);
+    out << ", ";
+  }
+
+  // member: msgid
+  {
+    out << "msgid: ";
+    to_flow_style_yaml(msg.msgid, out);
+    out << ", ";
+  }
+
+  // member: startyear
+  {
+    out << "startyear: ";
+    rosidl_generator_traits::value_to_yaml(msg.startyear, out);
+    out << ", ";
+  }
+
+  // member: starttime
+  {
+    out << "starttime: ";
+    rosidl_generator_traits::value_to_yaml(msg.starttime, out);
+    out << ", ";
+  }
+
+  // member: durationtime
+  {
+    out << "durationtime: ";
+    rosidl_generator_traits::value_to_yaml(msg.durationtime, out);
+    out << ", ";
+  }
+
+  // member: priority
+  {
+    out << "priority: ";
+    rosidl_generator_traits::value_to_yaml(msg.priority, out);
+    out << ", ";
+  }
+
+  // member: notused1
+  {
+    out << "notused1: ";
+    rosidl_generator_traits::value_to_yaml(msg.notused1, out);
+    out << ", ";
+  }
+
+  // member: regions
+  {
+    if (msg.regions.size() == 0) {
+      out << "regions: []";
+    } else {
+      out << "regions: [";
+      size_t pending_items = msg.regions.size();
+      for (auto item : msg.regions) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: notused2
+  {
+    out << "notused2: ";
+    rosidl_generator_traits::value_to_yaml(msg.notused2, out);
+    out << ", ";
+  }
+
+  // member: notused3
+  {
+    out << "notused3: ";
+    rosidl_generator_traits::value_to_yaml(msg.notused3, out);
+    out << ", ";
+  }
+
+  // member: content
+  {
+    out << "content: ";
+    to_flow_style_yaml(msg.content, out);
+    out << ", ";
+  }
+
+  // member: url
+  {
+    out << "url: ";
+    rosidl_generator_traits::value_to_yaml(msg.url, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const TravelerDataFrame & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: notused
@@ -33,7 +146,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "notused: ";
-    value_to_yaml(msg.notused, out);
+    rosidl_generator_traits::value_to_yaml(msg.notused, out);
     out << "\n";
   }
 
@@ -43,7 +156,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "frametype: ";
-    value_to_yaml(msg.frametype, out);
+    rosidl_generator_traits::value_to_yaml(msg.frametype, out);
     out << "\n";
   }
 
@@ -53,7 +166,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "msgid:\n";
-    to_yaml(msg.msgid, out, indentation + 2);
+    to_block_style_yaml(msg.msgid, out, indentation + 2);
   }
 
   // member: startyear
@@ -62,7 +175,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "startyear: ";
-    value_to_yaml(msg.startyear, out);
+    rosidl_generator_traits::value_to_yaml(msg.startyear, out);
     out << "\n";
   }
 
@@ -72,7 +185,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "starttime: ";
-    value_to_yaml(msg.starttime, out);
+    rosidl_generator_traits::value_to_yaml(msg.starttime, out);
     out << "\n";
   }
 
@@ -82,7 +195,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "durationtime: ";
-    value_to_yaml(msg.durationtime, out);
+    rosidl_generator_traits::value_to_yaml(msg.durationtime, out);
     out << "\n";
   }
 
@@ -92,7 +205,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "priority: ";
-    value_to_yaml(msg.priority, out);
+    rosidl_generator_traits::value_to_yaml(msg.priority, out);
     out << "\n";
   }
 
@@ -102,7 +215,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "notused1: ";
-    value_to_yaml(msg.notused1, out);
+    rosidl_generator_traits::value_to_yaml(msg.notused1, out);
     out << "\n";
   }
 
@@ -120,7 +233,7 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "-\n";
-        to_yaml(item, out, indentation + 2);
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
@@ -131,7 +244,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "notused2: ";
-    value_to_yaml(msg.notused2, out);
+    rosidl_generator_traits::value_to_yaml(msg.notused2, out);
     out << "\n";
   }
 
@@ -141,7 +254,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "notused3: ";
-    value_to_yaml(msg.notused3, out);
+    rosidl_generator_traits::value_to_yaml(msg.notused3, out);
     out << "\n";
   }
 
@@ -151,7 +264,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "content:\n";
-    to_yaml(msg.content, out, indentation + 2);
+    to_block_style_yaml(msg.content, out, indentation + 2);
   }
 
   // member: url
@@ -160,16 +273,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "url: ";
-    value_to_yaml(msg.url, out);
+    rosidl_generator_traits::value_to_yaml(msg.url, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::TravelerDataFrame & msg)
+inline std::string to_yaml(const TravelerDataFrame & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::TravelerDataFrame & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::TravelerDataFrame & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

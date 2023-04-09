@@ -1,2 +1,1 @@
-int64 approach
-int64 lane
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/ApproachOrLane.msg

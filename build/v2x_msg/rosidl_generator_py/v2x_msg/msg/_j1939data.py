@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -170,7 +172,7 @@ class J1939data(metaclass=Metaclass_J1939data):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def tires(self):
         """Message field 'tires'."""
         return self._tires
@@ -194,7 +196,7 @@ class J1939data(metaclass=Metaclass_J1939data):
                 "The 'tires' field must be a set or sequence and each value of type 'TireData'"
         self._tires = value
 
-    @property
+    @builtins.property
     def axles(self):
         """Message field 'axles'."""
         return self._axles
@@ -218,7 +220,7 @@ class J1939data(metaclass=Metaclass_J1939data):
                 "The 'axles' field must be a set or sequence and each value of type 'AxleWeight'"
         self._axles = value
 
-    @property
+    @builtins.property
     def trailerweight(self):
         """Message field 'trailerweight'."""
         return self._trailerweight
@@ -233,7 +235,7 @@ class J1939data(metaclass=Metaclass_J1939data):
                 "The 'trailerweight' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._trailerweight = value
 
-    @property
+    @builtins.property
     def cargoweight(self):
         """Message field 'cargoweight'."""
         return self._cargoweight
@@ -248,7 +250,7 @@ class J1939data(metaclass=Metaclass_J1939data):
                 "The 'cargoweight' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._cargoweight = value
 
-    @property
+    @builtins.property
     def steeringaxletemperture(self):
         """Message field 'steeringaxletemperture'."""
         return self._steeringaxletemperture
@@ -263,7 +265,7 @@ class J1939data(metaclass=Metaclass_J1939data):
                 "The 'steeringaxletemperture' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._steeringaxletemperture = value
 
-    @property
+    @builtins.property
     def driveaxlelocation(self):
         """Message field 'driveaxlelocation'."""
         return self._driveaxlelocation
@@ -278,7 +280,7 @@ class J1939data(metaclass=Metaclass_J1939data):
                 "The 'driveaxlelocation' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._driveaxlelocation = value
 
-    @property
+    @builtins.property
     def driveaxleliftairpressure(self):
         """Message field 'driveaxleliftairpressure'."""
         return self._driveaxleliftairpressure
@@ -293,7 +295,7 @@ class J1939data(metaclass=Metaclass_J1939data):
                 "The 'driveaxleliftairpressure' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._driveaxleliftairpressure = value
 
-    @property
+    @builtins.property
     def driveaxletemperature(self):
         """Message field 'driveaxletemperature'."""
         return self._driveaxletemperature
@@ -308,7 +310,7 @@ class J1939data(metaclass=Metaclass_J1939data):
                 "The 'driveaxletemperature' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._driveaxletemperature = value
 
-    @property
+    @builtins.property
     def driveaxlelubpressure(self):
         """Message field 'driveaxlelubpressure'."""
         return self._driveaxlelubpressure
@@ -323,7 +325,7 @@ class J1939data(metaclass=Metaclass_J1939data):
                 "The 'driveaxlelubpressure' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._driveaxlelubpressure = value
 
-    @property
+    @builtins.property
     def steeringaxlelubepressure(self):
         """Message field 'steeringaxlelubepressure'."""
         return self._steeringaxlelubepressure

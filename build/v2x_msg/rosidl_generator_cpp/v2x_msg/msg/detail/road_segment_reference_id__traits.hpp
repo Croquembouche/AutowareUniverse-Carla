@@ -5,18 +5,43 @@
 #ifndef V2X_MSG__MSG__DETAIL__ROAD_SEGMENT_REFERENCE_ID__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__ROAD_SEGMENT_REFERENCE_ID__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/road_segment_reference_id__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
 
-namespace rosidl_generator_traits
+#include "v2x_msg/msg/detail/road_segment_reference_id__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
+
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::RoadSegmentReferenceID & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const RoadSegmentReferenceID & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: roadregulatorid
+  {
+    out << "roadregulatorid: ";
+    rosidl_generator_traits::value_to_yaml(msg.roadregulatorid, out);
+    out << ", ";
+  }
+
+  // member: roadsegmentid
+  {
+    out << "roadsegmentid: ";
+    rosidl_generator_traits::value_to_yaml(msg.roadsegmentid, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const RoadSegmentReferenceID & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: roadregulatorid
@@ -25,7 +50,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "roadregulatorid: ";
-    value_to_yaml(msg.roadregulatorid, out);
+    rosidl_generator_traits::value_to_yaml(msg.roadregulatorid, out);
     out << "\n";
   }
 
@@ -35,16 +60,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "roadsegmentid: ";
-    value_to_yaml(msg.roadsegmentid, out);
+    rosidl_generator_traits::value_to_yaml(msg.roadsegmentid, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::RoadSegmentReferenceID & msg)
+inline std::string to_yaml(const RoadSegmentReferenceID & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::RoadSegmentReferenceID & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::RoadSegmentReferenceID & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

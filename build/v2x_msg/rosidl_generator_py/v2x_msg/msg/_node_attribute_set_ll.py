@@ -10,6 +10,8 @@
 # Member 'enabled'
 import array  # noqa: E402, I100
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -147,7 +149,7 @@ class NodeAttributeSetLL(metaclass=Metaclass_NodeAttributeSetLL):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def localnode(self):
         """Message field 'localnode'."""
         return self._localnode
@@ -175,7 +177,7 @@ class NodeAttributeSetLL(metaclass=Metaclass_NodeAttributeSetLL):
                 "The 'localnode' field must be a set or sequence and each value of type 'int' and each integer in [-9223372036854775808, 9223372036854775807]"
         self._localnode = array.array('q', value)
 
-    @property
+    @builtins.property
     def disabled(self):
         """Message field 'disabled'."""
         return self._disabled
@@ -203,7 +205,7 @@ class NodeAttributeSetLL(metaclass=Metaclass_NodeAttributeSetLL):
                 "The 'disabled' field must be a set or sequence and each value of type 'int' and each integer in [-9223372036854775808, 9223372036854775807]"
         self._disabled = array.array('q', value)
 
-    @property
+    @builtins.property
     def enabled(self):
         """Message field 'enabled'."""
         return self._enabled
@@ -231,7 +233,7 @@ class NodeAttributeSetLL(metaclass=Metaclass_NodeAttributeSetLL):
                 "The 'enabled' field must be a set or sequence and each value of type 'int' and each integer in [-9223372036854775808, 9223372036854775807]"
         self._enabled = array.array('q', value)
 
-    @property
+    @builtins.property
     def data(self):
         """Message field 'data'."""
         return self._data
@@ -255,7 +257,7 @@ class NodeAttributeSetLL(metaclass=Metaclass_NodeAttributeSetLL):
                 "The 'data' field must be a set or sequence and each value of type 'LaneDataAttribute'"
         self._data = value
 
-    @property
+    @builtins.property
     def dwidth(self):
         """Message field 'dwidth'."""
         return self._dwidth
@@ -270,7 +272,7 @@ class NodeAttributeSetLL(metaclass=Metaclass_NodeAttributeSetLL):
                 "The 'dwidth' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._dwidth = value
 
-    @property
+    @builtins.property
     def delevation(self):
         """Message field 'delevation'."""
         return self._delevation

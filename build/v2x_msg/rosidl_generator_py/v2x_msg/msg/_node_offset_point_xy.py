@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -168,7 +170,7 @@ class NodeOffsetPointXY(metaclass=Metaclass_NodeOffsetPointXY):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def nodexy1(self):
         """Message field 'nodexy1'."""
         return self._nodexy1
@@ -182,7 +184,7 @@ class NodeOffsetPointXY(metaclass=Metaclass_NodeOffsetPointXY):
                 "The 'nodexy1' field must be a sub message of type 'NodeXY22b'"
         self._nodexy1 = value
 
-    @property
+    @builtins.property
     def nodexy2(self):
         """Message field 'nodexy2'."""
         return self._nodexy2
@@ -196,7 +198,7 @@ class NodeOffsetPointXY(metaclass=Metaclass_NodeOffsetPointXY):
                 "The 'nodexy2' field must be a sub message of type 'NodeXY24b'"
         self._nodexy2 = value
 
-    @property
+    @builtins.property
     def nodexy3(self):
         """Message field 'nodexy3'."""
         return self._nodexy3
@@ -210,7 +212,7 @@ class NodeOffsetPointXY(metaclass=Metaclass_NodeOffsetPointXY):
                 "The 'nodexy3' field must be a sub message of type 'NodeXY26b'"
         self._nodexy3 = value
 
-    @property
+    @builtins.property
     def nodexy4(self):
         """Message field 'nodexy4'."""
         return self._nodexy4
@@ -224,7 +226,7 @@ class NodeOffsetPointXY(metaclass=Metaclass_NodeOffsetPointXY):
                 "The 'nodexy4' field must be a sub message of type 'NodeXY28b'"
         self._nodexy4 = value
 
-    @property
+    @builtins.property
     def nodexy5(self):
         """Message field 'nodexy5'."""
         return self._nodexy5
@@ -238,7 +240,7 @@ class NodeOffsetPointXY(metaclass=Metaclass_NodeOffsetPointXY):
                 "The 'nodexy5' field must be a sub message of type 'NodeXY32b'"
         self._nodexy5 = value
 
-    @property
+    @builtins.property
     def nodelatlon(self):
         """Message field 'nodelatlon'."""
         return self._nodelatlon

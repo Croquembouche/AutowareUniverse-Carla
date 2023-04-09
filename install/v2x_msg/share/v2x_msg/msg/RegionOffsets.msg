@@ -1,3 +1,1 @@
-int64 xoffset
-int64 yoffset
-int64 zoffset
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/RegionOffsets.msg

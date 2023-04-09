@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -136,7 +138,7 @@ class TIM(metaclass=Metaclass_TIM):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def msgcnt(self):
         """Message field 'msgcnt'."""
         return self._msgcnt
@@ -151,7 +153,7 @@ class TIM(metaclass=Metaclass_TIM):
                 "The 'msgcnt' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._msgcnt = value
 
-    @property
+    @builtins.property
     def timestamp(self):
         """Message field 'timestamp'."""
         return self._timestamp
@@ -166,7 +168,7 @@ class TIM(metaclass=Metaclass_TIM):
                 "The 'timestamp' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._timestamp = value
 
-    @property
+    @builtins.property
     def packetid(self):
         """Message field 'packetid'."""
         return self._packetid
@@ -181,7 +183,7 @@ class TIM(metaclass=Metaclass_TIM):
                 "The 'packetid' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._packetid = value
 
-    @property
+    @builtins.property
     def urlb(self):
         """Message field 'urlb'."""
         return self._urlb
@@ -194,7 +196,7 @@ class TIM(metaclass=Metaclass_TIM):
                 "The 'urlb' field must be of type 'str'"
         self._urlb = value
 
-    @property
+    @builtins.property
     def dataframes(self):
         """Message field 'dataframes'."""
         return self._dataframes

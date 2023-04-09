@@ -1,3 +1,1 @@
-Position3D anchor 
-int64 scale
-RegionOffsets[] nodelist
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/RegionPointSet.msg

@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -165,7 +167,7 @@ class RequestorDescription(metaclass=Metaclass_RequestorDescription):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def id(self):  # noqa: A003
         """Message field 'id'."""
         return self._id
@@ -179,7 +181,7 @@ class RequestorDescription(metaclass=Metaclass_RequestorDescription):
                 "The 'id' field must be a sub message of type 'VehicleID'"
         self._id = value
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def type(self):  # noqa: A003
         """Message field 'type'."""
         return self._type
@@ -193,7 +195,7 @@ class RequestorDescription(metaclass=Metaclass_RequestorDescription):
                 "The 'type' field must be a sub message of type 'RequestorType'"
         self._type = value
 
-    @property
+    @builtins.property
     def position(self):
         """Message field 'position'."""
         return self._position
@@ -207,7 +209,7 @@ class RequestorDescription(metaclass=Metaclass_RequestorDescription):
                 "The 'position' field must be a sub message of type 'RequestorPositionVector'"
         self._position = value
 
-    @property
+    @builtins.property
     def name(self):
         """Message field 'name'."""
         return self._name
@@ -220,7 +222,7 @@ class RequestorDescription(metaclass=Metaclass_RequestorDescription):
                 "The 'name' field must be of type 'str'"
         self._name = value
 
-    @property
+    @builtins.property
     def routename(self):
         """Message field 'routename'."""
         return self._routename
@@ -233,7 +235,7 @@ class RequestorDescription(metaclass=Metaclass_RequestorDescription):
                 "The 'routename' field must be of type 'str'"
         self._routename = value
 
-    @property
+    @builtins.property
     def transitstatus(self):
         """Message field 'transitstatus'."""
         return self._transitstatus
@@ -246,7 +248,7 @@ class RequestorDescription(metaclass=Metaclass_RequestorDescription):
                 "The 'transitstatus' field must be of type 'str'"
         self._transitstatus = value
 
-    @property
+    @builtins.property
     def transitoccupancy(self):
         """Message field 'transitoccupancy'."""
         return self._transitoccupancy
@@ -261,7 +263,7 @@ class RequestorDescription(metaclass=Metaclass_RequestorDescription):
                 "The 'transitoccupancy' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._transitoccupancy = value
 
-    @property
+    @builtins.property
     def transitschedule(self):
         """Message field 'transitschedule'."""
         return self._transitschedule

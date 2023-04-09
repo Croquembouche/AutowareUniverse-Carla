@@ -57,6 +57,24 @@ void * get_function__Content__advisory(void * untyped_member, size_t index)
   return &member[index];
 }
 
+void fetch_function__Content__advisory(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const v2x_msg::msg::ITIScodesandtext *>(
+    get_const_function__Content__advisory(untyped_member, index));
+  auto & value = *reinterpret_cast<v2x_msg::msg::ITIScodesandtext *>(untyped_value);
+  value = item;
+}
+
+void assign_function__Content__advisory(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<v2x_msg::msg::ITIScodesandtext *>(
+    get_function__Content__advisory(untyped_member, index));
+  const auto & value = *reinterpret_cast<const v2x_msg::msg::ITIScodesandtext *>(untyped_value);
+  item = value;
+}
+
 void resize_function__Content__advisory(void * untyped_member, size_t size)
 {
   auto * member =
@@ -82,6 +100,24 @@ void * get_function__Content__workzone(void * untyped_member, size_t index)
   auto & member =
     *reinterpret_cast<std::vector<v2x_msg::msg::WorkZone> *>(untyped_member);
   return &member[index];
+}
+
+void fetch_function__Content__workzone(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const v2x_msg::msg::WorkZone *>(
+    get_const_function__Content__workzone(untyped_member, index));
+  auto & value = *reinterpret_cast<v2x_msg::msg::WorkZone *>(untyped_value);
+  value = item;
+}
+
+void assign_function__Content__workzone(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<v2x_msg::msg::WorkZone *>(
+    get_function__Content__workzone(untyped_member, index));
+  const auto & value = *reinterpret_cast<const v2x_msg::msg::WorkZone *>(untyped_value);
+  item = value;
 }
 
 void resize_function__Content__workzone(void * untyped_member, size_t size)
@@ -111,6 +147,24 @@ void * get_function__Content__genericsign(void * untyped_member, size_t index)
   return &member[index];
 }
 
+void fetch_function__Content__genericsign(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const v2x_msg::msg::GenericSignage *>(
+    get_const_function__Content__genericsign(untyped_member, index));
+  auto & value = *reinterpret_cast<v2x_msg::msg::GenericSignage *>(untyped_value);
+  value = item;
+}
+
+void assign_function__Content__genericsign(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<v2x_msg::msg::GenericSignage *>(
+    get_function__Content__genericsign(untyped_member, index));
+  const auto & value = *reinterpret_cast<const v2x_msg::msg::GenericSignage *>(untyped_value);
+  item = value;
+}
+
 void resize_function__Content__genericsign(void * untyped_member, size_t size)
 {
   auto * member =
@@ -136,6 +190,24 @@ void * get_function__Content__speedlimit(void * untyped_member, size_t index)
   auto & member =
     *reinterpret_cast<std::vector<v2x_msg::msg::ITISSpeedLimit> *>(untyped_member);
   return &member[index];
+}
+
+void fetch_function__Content__speedlimit(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const v2x_msg::msg::ITISSpeedLimit *>(
+    get_const_function__Content__speedlimit(untyped_member, index));
+  auto & value = *reinterpret_cast<v2x_msg::msg::ITISSpeedLimit *>(untyped_value);
+  value = item;
+}
+
+void assign_function__Content__speedlimit(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<v2x_msg::msg::ITISSpeedLimit *>(
+    get_function__Content__speedlimit(untyped_member, index));
+  const auto & value = *reinterpret_cast<const v2x_msg::msg::ITISSpeedLimit *>(untyped_value);
+  item = value;
 }
 
 void resize_function__Content__speedlimit(void * untyped_member, size_t size)
@@ -165,6 +237,24 @@ void * get_function__Content__exitservice(void * untyped_member, size_t index)
   return &member[index];
 }
 
+void fetch_function__Content__exitservice(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const v2x_msg::msg::ExitService *>(
+    get_const_function__Content__exitservice(untyped_member, index));
+  auto & value = *reinterpret_cast<v2x_msg::msg::ExitService *>(untyped_value);
+  value = item;
+}
+
+void assign_function__Content__exitservice(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<v2x_msg::msg::ExitService *>(
+    get_function__Content__exitservice(untyped_member, index));
+  const auto & value = *reinterpret_cast<const v2x_msg::msg::ExitService *>(untyped_value);
+  item = value;
+}
+
 void resize_function__Content__exitservice(void * untyped_member, size_t size)
 {
   auto * member =
@@ -186,6 +276,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Content_messa
     size_function__Content__advisory,  // size() function pointer
     get_const_function__Content__advisory,  // get_const(index) function pointer
     get_function__Content__advisory,  // get(index) function pointer
+    fetch_function__Content__advisory,  // fetch(index, &value) function pointer
+    assign_function__Content__advisory,  // assign(index, value) function pointer
     resize_function__Content__advisory  // resize(index) function pointer
   },
   {
@@ -201,6 +293,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Content_messa
     size_function__Content__workzone,  // size() function pointer
     get_const_function__Content__workzone,  // get_const(index) function pointer
     get_function__Content__workzone,  // get(index) function pointer
+    fetch_function__Content__workzone,  // fetch(index, &value) function pointer
+    assign_function__Content__workzone,  // assign(index, value) function pointer
     resize_function__Content__workzone  // resize(index) function pointer
   },
   {
@@ -216,6 +310,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Content_messa
     size_function__Content__genericsign,  // size() function pointer
     get_const_function__Content__genericsign,  // get_const(index) function pointer
     get_function__Content__genericsign,  // get(index) function pointer
+    fetch_function__Content__genericsign,  // fetch(index, &value) function pointer
+    assign_function__Content__genericsign,  // assign(index, value) function pointer
     resize_function__Content__genericsign  // resize(index) function pointer
   },
   {
@@ -231,6 +327,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Content_messa
     size_function__Content__speedlimit,  // size() function pointer
     get_const_function__Content__speedlimit,  // get_const(index) function pointer
     get_function__Content__speedlimit,  // get(index) function pointer
+    fetch_function__Content__speedlimit,  // fetch(index, &value) function pointer
+    assign_function__Content__speedlimit,  // assign(index, value) function pointer
     resize_function__Content__speedlimit  // resize(index) function pointer
   },
   {
@@ -246,6 +344,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Content_messa
     size_function__Content__exitservice,  // size() function pointer
     get_const_function__Content__exitservice,  // get_const(index) function pointer
     get_function__Content__exitservice,  // get(index) function pointer
+    fetch_function__Content__exitservice,  // fetch(index, &value) function pointer
+    assign_function__Content__exitservice,  // assign(index, value) function pointer
     resize_function__Content__exitservice  // resize(index) function pointer
   }
 };

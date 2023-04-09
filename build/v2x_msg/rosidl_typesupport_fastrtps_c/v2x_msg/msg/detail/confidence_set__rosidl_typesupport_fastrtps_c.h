@@ -23,6 +23,7 @@ size_t get_serialized_size_v2x_msg__msg__ConfidenceSet(
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_v2x_msg
 size_t max_serialized_size_v2x_msg__msg__ConfidenceSet(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_v2x_msg

@@ -126,7 +126,7 @@ PyObject * v2x_msg__msg__geometric_projection__convert_to_py(void * raw_ros_mess
     field = PyUnicode_DecodeUTF8(
       ros_message->direction.data,
       strlen(ros_message->direction.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

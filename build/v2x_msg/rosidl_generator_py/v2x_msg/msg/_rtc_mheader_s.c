@@ -108,7 +108,7 @@ PyObject * v2x_msg__msg__rtc_mheader__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->status.data,
       strlen(ros_message->status.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

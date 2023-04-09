@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -114,7 +116,7 @@ class Sample(metaclass=Metaclass_Sample):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def samplestart(self):
         """Message field 'samplestart'."""
         return self._samplestart
@@ -129,7 +131,7 @@ class Sample(metaclass=Metaclass_Sample):
                 "The 'samplestart' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._samplestart = value
 
-    @property
+    @builtins.property
     def sampleend(self):
         """Message field 'sampleend'."""
         return self._sampleend

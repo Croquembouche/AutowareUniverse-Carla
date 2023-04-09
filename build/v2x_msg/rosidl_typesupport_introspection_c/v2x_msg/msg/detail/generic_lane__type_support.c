@@ -36,7 +36,7 @@ extern "C"
 {
 #endif
 
-void GenericLane__rosidl_typesupport_introspection_c__GenericLane_init_function(
+void v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__GenericLane_init_function(
   void * message_memory, enum rosidl_runtime_c__message_initialization _init)
 {
   // TODO(karsten1987): initializers are not yet implemented for typesupport c
@@ -45,12 +45,12 @@ void GenericLane__rosidl_typesupport_introspection_c__GenericLane_init_function(
   v2x_msg__msg__GenericLane__init(message_memory);
 }
 
-void GenericLane__rosidl_typesupport_introspection_c__GenericLane_fini_function(void * message_memory)
+void v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__GenericLane_fini_function(void * message_memory)
 {
   v2x_msg__msg__GenericLane__fini(message_memory);
 }
 
-size_t GenericLane__rosidl_typesupport_introspection_c__size_function__NodeListXY__nodelist(
+size_t v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__size_function__GenericLane__nodelist(
   const void * untyped_member)
 {
   const v2x_msg__msg__NodeListXY__Sequence * member =
@@ -58,7 +58,7 @@ size_t GenericLane__rosidl_typesupport_introspection_c__size_function__NodeListX
   return member->size;
 }
 
-const void * GenericLane__rosidl_typesupport_introspection_c__get_const_function__NodeListXY__nodelist(
+const void * v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_const_function__GenericLane__nodelist(
   const void * untyped_member, size_t index)
 {
   const v2x_msg__msg__NodeListXY__Sequence * member =
@@ -66,7 +66,7 @@ const void * GenericLane__rosidl_typesupport_introspection_c__get_const_function
   return &member->data[index];
 }
 
-void * GenericLane__rosidl_typesupport_introspection_c__get_function__NodeListXY__nodelist(
+void * v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_function__GenericLane__nodelist(
   void * untyped_member, size_t index)
 {
   v2x_msg__msg__NodeListXY__Sequence * member =
@@ -74,7 +74,29 @@ void * GenericLane__rosidl_typesupport_introspection_c__get_function__NodeListXY
   return &member->data[index];
 }
 
-bool GenericLane__rosidl_typesupport_introspection_c__resize_function__NodeListXY__nodelist(
+void v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__fetch_function__GenericLane__nodelist(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const v2x_msg__msg__NodeListXY * item =
+    ((const v2x_msg__msg__NodeListXY *)
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_const_function__GenericLane__nodelist(untyped_member, index));
+  v2x_msg__msg__NodeListXY * value =
+    (v2x_msg__msg__NodeListXY *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__assign_function__GenericLane__nodelist(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  v2x_msg__msg__NodeListXY * item =
+    ((v2x_msg__msg__NodeListXY *)
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_function__GenericLane__nodelist(untyped_member, index));
+  const v2x_msg__msg__NodeListXY * value =
+    (const v2x_msg__msg__NodeListXY *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__resize_function__GenericLane__nodelist(
   void * untyped_member, size_t size)
 {
   v2x_msg__msg__NodeListXY__Sequence * member =
@@ -83,7 +105,7 @@ bool GenericLane__rosidl_typesupport_introspection_c__resize_function__NodeListX
   return v2x_msg__msg__NodeListXY__Sequence__init(member, size);
 }
 
-size_t GenericLane__rosidl_typesupport_introspection_c__size_function__Connection__connectsto(
+size_t v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__size_function__GenericLane__connectsto(
   const void * untyped_member)
 {
   const v2x_msg__msg__Connection__Sequence * member =
@@ -91,7 +113,7 @@ size_t GenericLane__rosidl_typesupport_introspection_c__size_function__Connectio
   return member->size;
 }
 
-const void * GenericLane__rosidl_typesupport_introspection_c__get_const_function__Connection__connectsto(
+const void * v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_const_function__GenericLane__connectsto(
   const void * untyped_member, size_t index)
 {
   const v2x_msg__msg__Connection__Sequence * member =
@@ -99,7 +121,7 @@ const void * GenericLane__rosidl_typesupport_introspection_c__get_const_function
   return &member->data[index];
 }
 
-void * GenericLane__rosidl_typesupport_introspection_c__get_function__Connection__connectsto(
+void * v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_function__GenericLane__connectsto(
   void * untyped_member, size_t index)
 {
   v2x_msg__msg__Connection__Sequence * member =
@@ -107,7 +129,29 @@ void * GenericLane__rosidl_typesupport_introspection_c__get_function__Connection
   return &member->data[index];
 }
 
-bool GenericLane__rosidl_typesupport_introspection_c__resize_function__Connection__connectsto(
+void v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__fetch_function__GenericLane__connectsto(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const v2x_msg__msg__Connection * item =
+    ((const v2x_msg__msg__Connection *)
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_const_function__GenericLane__connectsto(untyped_member, index));
+  v2x_msg__msg__Connection * value =
+    (v2x_msg__msg__Connection *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__assign_function__GenericLane__connectsto(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  v2x_msg__msg__Connection * item =
+    ((v2x_msg__msg__Connection *)
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_function__GenericLane__connectsto(untyped_member, index));
+  const v2x_msg__msg__Connection * value =
+    (const v2x_msg__msg__Connection *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__resize_function__GenericLane__connectsto(
   void * untyped_member, size_t size)
 {
   v2x_msg__msg__Connection__Sequence * member =
@@ -116,7 +160,62 @@ bool GenericLane__rosidl_typesupport_introspection_c__resize_function__Connectio
   return v2x_msg__msg__Connection__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_member_array[9] = {
+size_t v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__size_function__GenericLane__overlays(
+  const void * untyped_member)
+{
+  const rosidl_runtime_c__int64__Sequence * member =
+    (const rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_const_function__GenericLane__overlays(
+  const void * untyped_member, size_t index)
+{
+  const rosidl_runtime_c__int64__Sequence * member =
+    (const rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_function__GenericLane__overlays(
+  void * untyped_member, size_t index)
+{
+  rosidl_runtime_c__int64__Sequence * member =
+    (rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__fetch_function__GenericLane__overlays(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const int64_t * item =
+    ((const int64_t *)
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_const_function__GenericLane__overlays(untyped_member, index));
+  int64_t * value =
+    (int64_t *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__assign_function__GenericLane__overlays(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  int64_t * item =
+    ((int64_t *)
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_function__GenericLane__overlays(untyped_member, index));
+  const int64_t * value =
+    (const int64_t *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__resize_function__GenericLane__overlays(
+  void * untyped_member, size_t size)
+{
+  rosidl_runtime_c__int64__Sequence * member =
+    (rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  rosidl_runtime_c__int64__Sequence__fini(member);
+  return rosidl_runtime_c__int64__Sequence__init(member, size);
+}
+
+static rosidl_typesupport_introspection_c__MessageMember v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_member_array[9] = {
   {
     "laneid",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
@@ -130,6 +229,8 @@ static rosidl_typesupport_introspection_c__MessageMember GenericLane__rosidl_typ
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -145,6 +246,8 @@ static rosidl_typesupport_introspection_c__MessageMember GenericLane__rosidl_typ
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -160,6 +263,8 @@ static rosidl_typesupport_introspection_c__MessageMember GenericLane__rosidl_typ
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -175,6 +280,8 @@ static rosidl_typesupport_introspection_c__MessageMember GenericLane__rosidl_typ
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -190,6 +297,8 @@ static rosidl_typesupport_introspection_c__MessageMember GenericLane__rosidl_typ
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -205,6 +314,8 @@ static rosidl_typesupport_introspection_c__MessageMember GenericLane__rosidl_typ
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -217,10 +328,12 @@ static rosidl_typesupport_introspection_c__MessageMember GenericLane__rosidl_typ
     false,  // is upper bound
     offsetof(v2x_msg__msg__GenericLane, nodelist),  // bytes offset in struct
     NULL,  // default value
-    GenericLane__rosidl_typesupport_introspection_c__size_function__NodeListXY__nodelist,  // size() function pointer
-    GenericLane__rosidl_typesupport_introspection_c__get_const_function__NodeListXY__nodelist,  // get_const(index) function pointer
-    GenericLane__rosidl_typesupport_introspection_c__get_function__NodeListXY__nodelist,  // get(index) function pointer
-    GenericLane__rosidl_typesupport_introspection_c__resize_function__NodeListXY__nodelist  // resize(index) function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__size_function__GenericLane__nodelist,  // size() function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_const_function__GenericLane__nodelist,  // get_const(index) function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_function__GenericLane__nodelist,  // get(index) function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__fetch_function__GenericLane__nodelist,  // fetch(index, &value) function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__assign_function__GenericLane__nodelist,  // assign(index, value) function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__resize_function__GenericLane__nodelist  // resize(index) function pointer
   },
   {
     "connectsto",  // name
@@ -232,10 +345,12 @@ static rosidl_typesupport_introspection_c__MessageMember GenericLane__rosidl_typ
     false,  // is upper bound
     offsetof(v2x_msg__msg__GenericLane, connectsto),  // bytes offset in struct
     NULL,  // default value
-    GenericLane__rosidl_typesupport_introspection_c__size_function__Connection__connectsto,  // size() function pointer
-    GenericLane__rosidl_typesupport_introspection_c__get_const_function__Connection__connectsto,  // get_const(index) function pointer
-    GenericLane__rosidl_typesupport_introspection_c__get_function__Connection__connectsto,  // get(index) function pointer
-    GenericLane__rosidl_typesupport_introspection_c__resize_function__Connection__connectsto  // resize(index) function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__size_function__GenericLane__connectsto,  // size() function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_const_function__GenericLane__connectsto,  // get_const(index) function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_function__GenericLane__connectsto,  // get(index) function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__fetch_function__GenericLane__connectsto,  // fetch(index, &value) function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__assign_function__GenericLane__connectsto,  // assign(index, value) function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__resize_function__GenericLane__connectsto  // resize(index) function pointer
   },
   {
     "overlays",  // name
@@ -247,45 +362,47 @@ static rosidl_typesupport_introspection_c__MessageMember GenericLane__rosidl_typ
     false,  // is upper bound
     offsetof(v2x_msg__msg__GenericLane, overlays),  // bytes offset in struct
     NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL  // resize(index) function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__size_function__GenericLane__overlays,  // size() function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_const_function__GenericLane__overlays,  // get_const(index) function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__get_function__GenericLane__overlays,  // get(index) function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__fetch_function__GenericLane__overlays,  // fetch(index, &value) function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__assign_function__GenericLane__overlays,  // assign(index, value) function pointer
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__resize_function__GenericLane__overlays  // resize(index) function pointer
   }
 };
 
-static const rosidl_typesupport_introspection_c__MessageMembers GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_members = {
+static const rosidl_typesupport_introspection_c__MessageMembers v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_members = {
   "v2x_msg__msg",  // message namespace
   "GenericLane",  // message name
   9,  // number of fields
   sizeof(v2x_msg__msg__GenericLane),
-  GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_member_array,  // message members
-  GenericLane__rosidl_typesupport_introspection_c__GenericLane_init_function,  // function to initialize message memory (memory has to be allocated)
-  GenericLane__rosidl_typesupport_introspection_c__GenericLane_fini_function  // function to terminate message instance (will not free memory)
+  v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_member_array,  // message members
+  v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__GenericLane_init_function,  // function to initialize message memory (memory has to be allocated)
+  v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__GenericLane_fini_function  // function to terminate message instance (will not free memory)
 };
 
 // this is not const since it must be initialized on first access
 // since C does not allow non-integral compile-time constants
-static rosidl_message_type_support_t GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_type_support_handle = {
+static rosidl_message_type_support_t v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_type_support_handle = {
   0,
-  &GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_members,
+  &v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_members,
   get_message_typesupport_handle_function,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_v2x_msg
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, GenericLane)() {
-  GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_member_array[4].members_ =
+  v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_member_array[4].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, LaneAttributes)();
-  GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_member_array[6].members_ =
+  v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_member_array[6].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, NodeListXY)();
-  GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_member_array[7].members_ =
+  v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_member_array[7].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, Connection)();
-  if (!GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_type_support_handle.typesupport_identifier) {
-    GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_type_support_handle.typesupport_identifier =
+  if (!v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_type_support_handle.typesupport_identifier) {
+    v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
   }
-  return &GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_type_support_handle;
+  return &v2x_msg__msg__GenericLane__rosidl_typesupport_introspection_c__GenericLane_message_type_support_handle;
 }
 #ifdef __cplusplus
 }

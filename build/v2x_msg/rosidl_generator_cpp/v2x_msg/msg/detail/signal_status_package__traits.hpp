@@ -5,12 +5,14 @@
 #ifndef V2X_MSG__MSG__DETAIL__SIGNAL_STATUS_PACKAGE__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__SIGNAL_STATUS_PACKAGE__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/signal_status_package__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/signal_status_package__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'requester'
@@ -19,11 +21,69 @@
 // Member 'outboundon'
 #include "v2x_msg/msg/detail/intersection_access_point__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::SignalStatusPackage & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const SignalStatusPackage & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: requester
+  {
+    out << "requester: ";
+    to_flow_style_yaml(msg.requester, out);
+    out << ", ";
+  }
+
+  // member: inboundon
+  {
+    out << "inboundon: ";
+    to_flow_style_yaml(msg.inboundon, out);
+    out << ", ";
+  }
+
+  // member: outboundon
+  {
+    out << "outboundon: ";
+    to_flow_style_yaml(msg.outboundon, out);
+    out << ", ";
+  }
+
+  // member: minute
+  {
+    out << "minute: ";
+    rosidl_generator_traits::value_to_yaml(msg.minute, out);
+    out << ", ";
+  }
+
+  // member: second
+  {
+    out << "second: ";
+    rosidl_generator_traits::value_to_yaml(msg.second, out);
+    out << ", ";
+  }
+
+  // member: duration
+  {
+    out << "duration: ";
+    rosidl_generator_traits::value_to_yaml(msg.duration, out);
+    out << ", ";
+  }
+
+  // member: status
+  {
+    out << "status: ";
+    rosidl_generator_traits::value_to_yaml(msg.status, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const SignalStatusPackage & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: requester
@@ -32,7 +92,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "requester:\n";
-    to_yaml(msg.requester, out, indentation + 2);
+    to_block_style_yaml(msg.requester, out, indentation + 2);
   }
 
   // member: inboundon
@@ -41,7 +101,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "inboundon:\n";
-    to_yaml(msg.inboundon, out, indentation + 2);
+    to_block_style_yaml(msg.inboundon, out, indentation + 2);
   }
 
   // member: outboundon
@@ -50,7 +110,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "outboundon:\n";
-    to_yaml(msg.outboundon, out, indentation + 2);
+    to_block_style_yaml(msg.outboundon, out, indentation + 2);
   }
 
   // member: minute
@@ -59,7 +119,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "minute: ";
-    value_to_yaml(msg.minute, out);
+    rosidl_generator_traits::value_to_yaml(msg.minute, out);
     out << "\n";
   }
 
@@ -69,7 +129,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "second: ";
-    value_to_yaml(msg.second, out);
+    rosidl_generator_traits::value_to_yaml(msg.second, out);
     out << "\n";
   }
 
@@ -79,7 +139,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "duration: ";
-    value_to_yaml(msg.duration, out);
+    rosidl_generator_traits::value_to_yaml(msg.duration, out);
     out << "\n";
   }
 
@@ -89,16 +149,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "status: ";
-    value_to_yaml(msg.status, out);
+    rosidl_generator_traits::value_to_yaml(msg.status, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::SignalStatusPackage & msg)
+inline std::string to_yaml(const SignalStatusPackage & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::SignalStatusPackage & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::SignalStatusPackage & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

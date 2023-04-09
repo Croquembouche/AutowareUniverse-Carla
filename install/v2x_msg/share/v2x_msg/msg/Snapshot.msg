@@ -1,3 +1,1 @@
-FullPositionVector theposition
-VehicleSafetyExtensions safetyext 
-VehicleStatus dataset
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/Snapshot.msg

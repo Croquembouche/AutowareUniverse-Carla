@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -149,7 +151,7 @@ class PathHistoryPoint(metaclass=Metaclass_PathHistoryPoint):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def latoffset(self):
         """Message field 'latoffset'."""
         return self._latoffset
@@ -164,7 +166,7 @@ class PathHistoryPoint(metaclass=Metaclass_PathHistoryPoint):
                 "The 'latoffset' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._latoffset = value
 
-    @property
+    @builtins.property
     def lonoffset(self):
         """Message field 'lonoffset'."""
         return self._lonoffset
@@ -179,7 +181,7 @@ class PathHistoryPoint(metaclass=Metaclass_PathHistoryPoint):
                 "The 'lonoffset' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._lonoffset = value
 
-    @property
+    @builtins.property
     def elevationoffset(self):
         """Message field 'elevationoffset'."""
         return self._elevationoffset
@@ -194,7 +196,7 @@ class PathHistoryPoint(metaclass=Metaclass_PathHistoryPoint):
                 "The 'elevationoffset' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._elevationoffset = value
 
-    @property
+    @builtins.property
     def timeoffset(self):
         """Message field 'timeoffset'."""
         return self._timeoffset
@@ -209,7 +211,7 @@ class PathHistoryPoint(metaclass=Metaclass_PathHistoryPoint):
                 "The 'timeoffset' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._timeoffset = value
 
-    @property
+    @builtins.property
     def speed(self):
         """Message field 'speed'."""
         return self._speed
@@ -224,7 +226,7 @@ class PathHistoryPoint(metaclass=Metaclass_PathHistoryPoint):
                 "The 'speed' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._speed = value
 
-    @property
+    @builtins.property
     def accuracy(self):
         """Message field 'accuracy'."""
         return self._accuracy
@@ -238,7 +240,7 @@ class PathHistoryPoint(metaclass=Metaclass_PathHistoryPoint):
                 "The 'accuracy' field must be a sub message of type 'PositionalAccuracy'"
         self._accuracy = value
 
-    @property
+    @builtins.property
     def heading(self):
         """Message field 'heading'."""
         return self._heading

@@ -23,7 +23,7 @@ extern "C"
 {
 #endif
 
-void ExitService__rosidl_typesupport_introspection_c__ExitService_init_function(
+void v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__ExitService_init_function(
   void * message_memory, enum rosidl_runtime_c__message_initialization _init)
 {
   // TODO(karsten1987): initializers are not yet implemented for typesupport c
@@ -32,12 +32,12 @@ void ExitService__rosidl_typesupport_introspection_c__ExitService_init_function(
   v2x_msg__msg__ExitService__init(message_memory);
 }
 
-void ExitService__rosidl_typesupport_introspection_c__ExitService_fini_function(void * message_memory)
+void v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__ExitService_fini_function(void * message_memory)
 {
   v2x_msg__msg__ExitService__fini(message_memory);
 }
 
-size_t ExitService__rosidl_typesupport_introspection_c__size_function__ExitServicecontent__item(
+size_t v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__size_function__ExitService__item(
   const void * untyped_member)
 {
   const v2x_msg__msg__ExitServicecontent__Sequence * member =
@@ -45,7 +45,7 @@ size_t ExitService__rosidl_typesupport_introspection_c__size_function__ExitServi
   return member->size;
 }
 
-const void * ExitService__rosidl_typesupport_introspection_c__get_const_function__ExitServicecontent__item(
+const void * v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__get_const_function__ExitService__item(
   const void * untyped_member, size_t index)
 {
   const v2x_msg__msg__ExitServicecontent__Sequence * member =
@@ -53,7 +53,7 @@ const void * ExitService__rosidl_typesupport_introspection_c__get_const_function
   return &member->data[index];
 }
 
-void * ExitService__rosidl_typesupport_introspection_c__get_function__ExitServicecontent__item(
+void * v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__get_function__ExitService__item(
   void * untyped_member, size_t index)
 {
   v2x_msg__msg__ExitServicecontent__Sequence * member =
@@ -61,7 +61,29 @@ void * ExitService__rosidl_typesupport_introspection_c__get_function__ExitServic
   return &member->data[index];
 }
 
-bool ExitService__rosidl_typesupport_introspection_c__resize_function__ExitServicecontent__item(
+void v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__fetch_function__ExitService__item(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const v2x_msg__msg__ExitServicecontent * item =
+    ((const v2x_msg__msg__ExitServicecontent *)
+    v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__get_const_function__ExitService__item(untyped_member, index));
+  v2x_msg__msg__ExitServicecontent * value =
+    (v2x_msg__msg__ExitServicecontent *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__assign_function__ExitService__item(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  v2x_msg__msg__ExitServicecontent * item =
+    ((v2x_msg__msg__ExitServicecontent *)
+    v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__get_function__ExitService__item(untyped_member, index));
+  const v2x_msg__msg__ExitServicecontent * value =
+    (const v2x_msg__msg__ExitServicecontent *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__resize_function__ExitService__item(
   void * untyped_member, size_t size)
 {
   v2x_msg__msg__ExitServicecontent__Sequence * member =
@@ -70,7 +92,7 @@ bool ExitService__rosidl_typesupport_introspection_c__resize_function__ExitServi
   return v2x_msg__msg__ExitServicecontent__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember ExitService__rosidl_typesupport_introspection_c__ExitService_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__ExitService_message_member_array[1] = {
   {
     "item",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -81,41 +103,43 @@ static rosidl_typesupport_introspection_c__MessageMember ExitService__rosidl_typ
     false,  // is upper bound
     offsetof(v2x_msg__msg__ExitService, item),  // bytes offset in struct
     NULL,  // default value
-    ExitService__rosidl_typesupport_introspection_c__size_function__ExitServicecontent__item,  // size() function pointer
-    ExitService__rosidl_typesupport_introspection_c__get_const_function__ExitServicecontent__item,  // get_const(index) function pointer
-    ExitService__rosidl_typesupport_introspection_c__get_function__ExitServicecontent__item,  // get(index) function pointer
-    ExitService__rosidl_typesupport_introspection_c__resize_function__ExitServicecontent__item  // resize(index) function pointer
+    v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__size_function__ExitService__item,  // size() function pointer
+    v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__get_const_function__ExitService__item,  // get_const(index) function pointer
+    v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__get_function__ExitService__item,  // get(index) function pointer
+    v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__fetch_function__ExitService__item,  // fetch(index, &value) function pointer
+    v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__assign_function__ExitService__item,  // assign(index, value) function pointer
+    v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__resize_function__ExitService__item  // resize(index) function pointer
   }
 };
 
-static const rosidl_typesupport_introspection_c__MessageMembers ExitService__rosidl_typesupport_introspection_c__ExitService_message_members = {
+static const rosidl_typesupport_introspection_c__MessageMembers v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__ExitService_message_members = {
   "v2x_msg__msg",  // message namespace
   "ExitService",  // message name
   1,  // number of fields
   sizeof(v2x_msg__msg__ExitService),
-  ExitService__rosidl_typesupport_introspection_c__ExitService_message_member_array,  // message members
-  ExitService__rosidl_typesupport_introspection_c__ExitService_init_function,  // function to initialize message memory (memory has to be allocated)
-  ExitService__rosidl_typesupport_introspection_c__ExitService_fini_function  // function to terminate message instance (will not free memory)
+  v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__ExitService_message_member_array,  // message members
+  v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__ExitService_init_function,  // function to initialize message memory (memory has to be allocated)
+  v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__ExitService_fini_function  // function to terminate message instance (will not free memory)
 };
 
 // this is not const since it must be initialized on first access
 // since C does not allow non-integral compile-time constants
-static rosidl_message_type_support_t ExitService__rosidl_typesupport_introspection_c__ExitService_message_type_support_handle = {
+static rosidl_message_type_support_t v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__ExitService_message_type_support_handle = {
   0,
-  &ExitService__rosidl_typesupport_introspection_c__ExitService_message_members,
+  &v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__ExitService_message_members,
   get_message_typesupport_handle_function,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_v2x_msg
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, ExitService)() {
-  ExitService__rosidl_typesupport_introspection_c__ExitService_message_member_array[0].members_ =
+  v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__ExitService_message_member_array[0].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, ExitServicecontent)();
-  if (!ExitService__rosidl_typesupport_introspection_c__ExitService_message_type_support_handle.typesupport_identifier) {
-    ExitService__rosidl_typesupport_introspection_c__ExitService_message_type_support_handle.typesupport_identifier =
+  if (!v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__ExitService_message_type_support_handle.typesupport_identifier) {
+    v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__ExitService_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
   }
-  return &ExitService__rosidl_typesupport_introspection_c__ExitService_message_type_support_handle;
+  return &v2x_msg__msg__ExitService__rosidl_typesupport_introspection_c__ExitService_message_type_support_handle;
 }
 #ifdef __cplusplus
 }

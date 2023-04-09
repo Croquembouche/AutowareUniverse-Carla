@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -120,7 +122,7 @@ class AccelSteerYawRateConfidence(metaclass=Metaclass_AccelSteerYawRateConfidenc
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def yawrate(self):
         """Message field 'yawrate'."""
         return self._yawrate
@@ -135,7 +137,7 @@ class AccelSteerYawRateConfidence(metaclass=Metaclass_AccelSteerYawRateConfidenc
                 "The 'yawrate' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._yawrate = value
 
-    @property
+    @builtins.property
     def acceleration(self):
         """Message field 'acceleration'."""
         return self._acceleration
@@ -150,7 +152,7 @@ class AccelSteerYawRateConfidence(metaclass=Metaclass_AccelSteerYawRateConfidenc
                 "The 'acceleration' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._acceleration = value
 
-    @property
+    @builtins.property
     def steeringwheelangle(self):
         """Message field 'steeringwheelangle'."""
         return self._steeringwheelangle

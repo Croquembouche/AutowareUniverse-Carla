@@ -24,7 +24,7 @@ extern "C"
 // Member 'geoidused'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/DataParameters in the package v2x_msg.
+/// Struct defined in msg/DataParameters in the package v2x_msg.
 typedef struct v2x_msg__msg__DataParameters
 {
   rosidl_runtime_c__String processmethod;

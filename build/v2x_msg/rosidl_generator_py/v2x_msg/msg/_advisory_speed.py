@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -132,7 +134,7 @@ class AdvisorySpeed(metaclass=Metaclass_AdvisorySpeed):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def type(self):  # noqa: A003
         """Message field 'type'."""
         return self._type
@@ -147,7 +149,7 @@ class AdvisorySpeed(metaclass=Metaclass_AdvisorySpeed):
                 "The 'type' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._type = value
 
-    @property
+    @builtins.property
     def speed(self):
         """Message field 'speed'."""
         return self._speed
@@ -162,7 +164,7 @@ class AdvisorySpeed(metaclass=Metaclass_AdvisorySpeed):
                 "The 'speed' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._speed = value
 
-    @property
+    @builtins.property
     def confidence(self):
         """Message field 'confidence'."""
         return self._confidence
@@ -177,7 +179,7 @@ class AdvisorySpeed(metaclass=Metaclass_AdvisorySpeed):
                 "The 'confidence' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._confidence = value
 
-    @property
+    @builtins.property
     def zonelength(self):
         """Message field 'zonelength'."""
         return self._zonelength
@@ -192,7 +194,7 @@ class AdvisorySpeed(metaclass=Metaclass_AdvisorySpeed):
                 "The 'zonelength' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._zonelength = value
 
-    @property
+    @builtins.property
     def restrictionclassid(self):
         """Message field 'restrictionclassid'."""
         return self._restrictionclassid

@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -129,7 +131,7 @@ class MovementEvent(metaclass=Metaclass_MovementEvent):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def movementphasestate(self):
         """Message field 'movementphasestate'."""
         return self._movementphasestate
@@ -144,7 +146,7 @@ class MovementEvent(metaclass=Metaclass_MovementEvent):
                 "The 'movementphasestate' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._movementphasestate = value
 
-    @property
+    @builtins.property
     def timing(self):
         """Message field 'timing'."""
         return self._timing
@@ -158,7 +160,7 @@ class MovementEvent(metaclass=Metaclass_MovementEvent):
                 "The 'timing' field must be a sub message of type 'TimeChangeDetails'"
         self._timing = value
 
-    @property
+    @builtins.property
     def speeds(self):
         """Message field 'speeds'."""
         return self._speeds

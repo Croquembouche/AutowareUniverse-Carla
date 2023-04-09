@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -167,7 +169,7 @@ class MAP(metaclass=Metaclass_MAP):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def timestamp(self):
         """Message field 'timestamp'."""
         return self._timestamp
@@ -182,7 +184,7 @@ class MAP(metaclass=Metaclass_MAP):
                 "The 'timestamp' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._timestamp = value
 
-    @property
+    @builtins.property
     def msgissuerevision(self):
         """Message field 'msgissuerevision'."""
         return self._msgissuerevision
@@ -197,7 +199,7 @@ class MAP(metaclass=Metaclass_MAP):
                 "The 'msgissuerevision' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._msgissuerevision = value
 
-    @property
+    @builtins.property
     def layertype(self):
         """Message field 'layertype'."""
         return self._layertype
@@ -212,7 +214,7 @@ class MAP(metaclass=Metaclass_MAP):
                 "The 'layertype' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._layertype = value
 
-    @property
+    @builtins.property
     def layerid(self):
         """Message field 'layerid'."""
         return self._layerid
@@ -227,7 +229,7 @@ class MAP(metaclass=Metaclass_MAP):
                 "The 'layerid' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._layerid = value
 
-    @property
+    @builtins.property
     def intersections(self):
         """Message field 'intersections'."""
         return self._intersections
@@ -251,7 +253,7 @@ class MAP(metaclass=Metaclass_MAP):
                 "The 'intersections' field must be a set or sequence and each value of type 'IntersectionGeometry'"
         self._intersections = value
 
-    @property
+    @builtins.property
     def roadsegments(self):
         """Message field 'roadsegments'."""
         return self._roadsegments
@@ -275,7 +277,7 @@ class MAP(metaclass=Metaclass_MAP):
                 "The 'roadsegments' field must be a set or sequence and each value of type 'RoadSegment'"
         self._roadsegments = value
 
-    @property
+    @builtins.property
     def dataparameters(self):
         """Message field 'dataparameters'."""
         return self._dataparameters
@@ -289,7 +291,7 @@ class MAP(metaclass=Metaclass_MAP):
                 "The 'dataparameters' field must be a sub message of type 'DataParameters'"
         self._dataparameters = value
 
-    @property
+    @builtins.property
     def restrictionlist(self):
         """Message field 'restrictionlist'."""
         return self._restrictionlist

@@ -25,7 +25,7 @@ extern "C"
 // Member 'dataset'
 #include "v2x_msg/msg/detail/vehicle_status__struct.h"
 
-// Struct defined in msg/Snapshot in the package v2x_msg.
+/// Struct defined in msg/Snapshot in the package v2x_msg.
 typedef struct v2x_msg__msg__Snapshot
 {
   v2x_msg__msg__FullPositionVector theposition;

@@ -5,22 +5,82 @@
 #ifndef V2X_MSG__MSG__DETAIL__PATH_HISTORY_POINT__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__PATH_HISTORY_POINT__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/path_history_point__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/path_history_point__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'accuracy'
 #include "v2x_msg/msg/detail/positional_accuracy__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::PathHistoryPoint & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const PathHistoryPoint & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: latoffset
+  {
+    out << "latoffset: ";
+    rosidl_generator_traits::value_to_yaml(msg.latoffset, out);
+    out << ", ";
+  }
+
+  // member: lonoffset
+  {
+    out << "lonoffset: ";
+    rosidl_generator_traits::value_to_yaml(msg.lonoffset, out);
+    out << ", ";
+  }
+
+  // member: elevationoffset
+  {
+    out << "elevationoffset: ";
+    rosidl_generator_traits::value_to_yaml(msg.elevationoffset, out);
+    out << ", ";
+  }
+
+  // member: timeoffset
+  {
+    out << "timeoffset: ";
+    rosidl_generator_traits::value_to_yaml(msg.timeoffset, out);
+    out << ", ";
+  }
+
+  // member: speed
+  {
+    out << "speed: ";
+    rosidl_generator_traits::value_to_yaml(msg.speed, out);
+    out << ", ";
+  }
+
+  // member: accuracy
+  {
+    out << "accuracy: ";
+    to_flow_style_yaml(msg.accuracy, out);
+    out << ", ";
+  }
+
+  // member: heading
+  {
+    out << "heading: ";
+    rosidl_generator_traits::value_to_yaml(msg.heading, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const PathHistoryPoint & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: latoffset
@@ -29,7 +89,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "latoffset: ";
-    value_to_yaml(msg.latoffset, out);
+    rosidl_generator_traits::value_to_yaml(msg.latoffset, out);
     out << "\n";
   }
 
@@ -39,7 +99,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "lonoffset: ";
-    value_to_yaml(msg.lonoffset, out);
+    rosidl_generator_traits::value_to_yaml(msg.lonoffset, out);
     out << "\n";
   }
 
@@ -49,7 +109,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "elevationoffset: ";
-    value_to_yaml(msg.elevationoffset, out);
+    rosidl_generator_traits::value_to_yaml(msg.elevationoffset, out);
     out << "\n";
   }
 
@@ -59,7 +119,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "timeoffset: ";
-    value_to_yaml(msg.timeoffset, out);
+    rosidl_generator_traits::value_to_yaml(msg.timeoffset, out);
     out << "\n";
   }
 
@@ -69,7 +129,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "speed: ";
-    value_to_yaml(msg.speed, out);
+    rosidl_generator_traits::value_to_yaml(msg.speed, out);
     out << "\n";
   }
 
@@ -79,7 +139,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "accuracy:\n";
-    to_yaml(msg.accuracy, out, indentation + 2);
+    to_block_style_yaml(msg.accuracy, out, indentation + 2);
   }
 
   // member: heading
@@ -88,16 +148,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "heading: ";
-    value_to_yaml(msg.heading, out);
+    rosidl_generator_traits::value_to_yaml(msg.heading, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::PathHistoryPoint & msg)
+inline std::string to_yaml(const PathHistoryPoint & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::PathHistoryPoint & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::PathHistoryPoint & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

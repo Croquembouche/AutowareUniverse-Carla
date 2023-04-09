@@ -1,9 +1,1 @@
-int64 msgcnt
-int64 timestamp 
-int64 typeevent
-int64[] desrciption
-string priority
-string heading
-int64 extent
-FullPositionVector position
-string furtherinfoid
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/RSA.msg

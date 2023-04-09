@@ -1,3 +1,1 @@
-int64 lane
-int64 approach
-int64 connection
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/IntersectionAccessPoint.msg

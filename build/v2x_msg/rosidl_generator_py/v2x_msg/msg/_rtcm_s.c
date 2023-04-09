@@ -245,7 +245,7 @@ PyObject * v2x_msg__msg__rtcm__convert_to_py(void * raw_ros_message)
       return NULL;
     }
     for (size_t i = 0; i < size; ++i) {
-      PyObject * decoded_item = PyUnicode_DecodeUTF8(src[i].data, strlen(src[i].data), "strict");
+      PyObject * decoded_item = PyUnicode_DecodeUTF8(src[i].data, strlen(src[i].data), "replace");
       if (!decoded_item) {
         return NULL;
       }

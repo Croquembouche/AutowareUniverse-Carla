@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/Steering in the package v2x_msg.
+/// Struct defined in msg/Steering in the package v2x_msg.
 typedef struct v2x_msg__msg__Steering
 {
   int64_t angle;

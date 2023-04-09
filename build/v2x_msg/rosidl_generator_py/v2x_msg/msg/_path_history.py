@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -129,7 +131,7 @@ class PathHistory(metaclass=Metaclass_PathHistory):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def initialposition(self):
         """Message field 'initialposition'."""
         return self._initialposition
@@ -143,7 +145,7 @@ class PathHistory(metaclass=Metaclass_PathHistory):
                 "The 'initialposition' field must be a sub message of type 'FullPositionVector'"
         self._initialposition = value
 
-    @property
+    @builtins.property
     def currgnssstatus(self):
         """Message field 'currgnssstatus'."""
         return self._currgnssstatus
@@ -156,7 +158,7 @@ class PathHistory(metaclass=Metaclass_PathHistory):
                 "The 'currgnssstatus' field must be of type 'str'"
         self._currgnssstatus = value
 
-    @property
+    @builtins.property
     def crumbdata(self):
         """Message field 'crumbdata'."""
         return self._crumbdata

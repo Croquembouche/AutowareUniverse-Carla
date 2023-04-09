@@ -21,7 +21,7 @@ extern "C"
 // Member 'speedlimits'
 #include "v2x_msg/msg/detail/speed_limit__struct.h"
 
-// Struct defined in msg/LaneDataAttribute in the package v2x_msg.
+/// Struct defined in msg/LaneDataAttribute in the package v2x_msg.
 typedef struct v2x_msg__msg__LaneDataAttribute
 {
   int64_t pathendpointangle;

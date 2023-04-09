@@ -117,7 +117,7 @@ PyObject * v2x_msg__msg__valid_region__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->direction.data,
       strlen(ros_message->direction.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

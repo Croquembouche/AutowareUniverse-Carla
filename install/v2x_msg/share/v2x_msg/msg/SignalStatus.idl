@@ -1,18 +1,1 @@
-// generated from rosidl_adapter/resource/msg.idl.em
-// with input from v2x_msg/msg/SignalStatus.msg
-// generated code does not contain a copyright notice
-
-#include "v2x_msg/msg/IntersectionReferenceID.idl"
-#include "v2x_msg/msg/SignalStatusPackage.idl"
-
-module v2x_msg {
-  module msg {
-    struct SignalStatus {
-      int64 sequencenumber;
-
-      v2x_msg::msg::IntersectionReferenceID id;
-
-      sequence<v2x_msg::msg::SignalStatusPackage> sigstatus;
-    };
-  };
-};
+/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/SignalStatus.idl

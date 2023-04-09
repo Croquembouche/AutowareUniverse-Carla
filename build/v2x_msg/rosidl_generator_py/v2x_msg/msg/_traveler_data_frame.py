@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -194,7 +196,7 @@ class TravelerDataFrame(metaclass=Metaclass_TravelerDataFrame):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def notused(self):
         """Message field 'notused'."""
         return self._notused
@@ -209,7 +211,7 @@ class TravelerDataFrame(metaclass=Metaclass_TravelerDataFrame):
                 "The 'notused' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._notused = value
 
-    @property
+    @builtins.property
     def frametype(self):
         """Message field 'frametype'."""
         return self._frametype
@@ -224,7 +226,7 @@ class TravelerDataFrame(metaclass=Metaclass_TravelerDataFrame):
                 "The 'frametype' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._frametype = value
 
-    @property
+    @builtins.property
     def msgid(self):
         """Message field 'msgid'."""
         return self._msgid
@@ -238,7 +240,7 @@ class TravelerDataFrame(metaclass=Metaclass_TravelerDataFrame):
                 "The 'msgid' field must be a sub message of type 'MsgID'"
         self._msgid = value
 
-    @property
+    @builtins.property
     def startyear(self):
         """Message field 'startyear'."""
         return self._startyear
@@ -253,7 +255,7 @@ class TravelerDataFrame(metaclass=Metaclass_TravelerDataFrame):
                 "The 'startyear' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._startyear = value
 
-    @property
+    @builtins.property
     def starttime(self):
         """Message field 'starttime'."""
         return self._starttime
@@ -268,7 +270,7 @@ class TravelerDataFrame(metaclass=Metaclass_TravelerDataFrame):
                 "The 'starttime' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._starttime = value
 
-    @property
+    @builtins.property
     def durationtime(self):
         """Message field 'durationtime'."""
         return self._durationtime
@@ -283,7 +285,7 @@ class TravelerDataFrame(metaclass=Metaclass_TravelerDataFrame):
                 "The 'durationtime' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._durationtime = value
 
-    @property
+    @builtins.property
     def priority(self):
         """Message field 'priority'."""
         return self._priority
@@ -298,7 +300,7 @@ class TravelerDataFrame(metaclass=Metaclass_TravelerDataFrame):
                 "The 'priority' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._priority = value
 
-    @property
+    @builtins.property
     def notused1(self):
         """Message field 'notused1'."""
         return self._notused1
@@ -313,7 +315,7 @@ class TravelerDataFrame(metaclass=Metaclass_TravelerDataFrame):
                 "The 'notused1' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._notused1 = value
 
-    @property
+    @builtins.property
     def regions(self):
         """Message field 'regions'."""
         return self._regions
@@ -337,7 +339,7 @@ class TravelerDataFrame(metaclass=Metaclass_TravelerDataFrame):
                 "The 'regions' field must be a set or sequence and each value of type 'GeographicalPath'"
         self._regions = value
 
-    @property
+    @builtins.property
     def notused2(self):
         """Message field 'notused2'."""
         return self._notused2
@@ -352,7 +354,7 @@ class TravelerDataFrame(metaclass=Metaclass_TravelerDataFrame):
                 "The 'notused2' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._notused2 = value
 
-    @property
+    @builtins.property
     def notused3(self):
         """Message field 'notused3'."""
         return self._notused3
@@ -367,7 +369,7 @@ class TravelerDataFrame(metaclass=Metaclass_TravelerDataFrame):
                 "The 'notused3' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._notused3 = value
 
-    @property
+    @builtins.property
     def content(self):
         """Message field 'content'."""
         return self._content
@@ -381,7 +383,7 @@ class TravelerDataFrame(metaclass=Metaclass_TravelerDataFrame):
                 "The 'content' field must be a sub message of type 'Content'"
         self._content = value
 
-    @property
+    @builtins.property
     def url(self):
         """Message field 'url'."""
         return self._url

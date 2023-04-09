@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -126,7 +128,7 @@ class SnapshotDistance(metaclass=Metaclass_SnapshotDistance):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def distance1(self):
         """Message field 'distance1'."""
         return self._distance1
@@ -141,7 +143,7 @@ class SnapshotDistance(metaclass=Metaclass_SnapshotDistance):
                 "The 'distance1' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._distance1 = value
 
-    @property
+    @builtins.property
     def speed1(self):
         """Message field 'speed1'."""
         return self._speed1
@@ -156,7 +158,7 @@ class SnapshotDistance(metaclass=Metaclass_SnapshotDistance):
                 "The 'speed1' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._speed1 = value
 
-    @property
+    @builtins.property
     def distance2(self):
         """Message field 'distance2'."""
         return self._distance2
@@ -171,7 +173,7 @@ class SnapshotDistance(metaclass=Metaclass_SnapshotDistance):
                 "The 'distance2' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._distance2 = value
 
-    @property
+    @builtins.property
     def speed2(self):
         """Message field 'speed2'."""
         return self._speed2

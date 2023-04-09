@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -155,7 +157,7 @@ class SignalStatusPackage(metaclass=Metaclass_SignalStatusPackage):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def requester(self):
         """Message field 'requester'."""
         return self._requester
@@ -169,7 +171,7 @@ class SignalStatusPackage(metaclass=Metaclass_SignalStatusPackage):
                 "The 'requester' field must be a sub message of type 'SignalRequesterInfo'"
         self._requester = value
 
-    @property
+    @builtins.property
     def inboundon(self):
         """Message field 'inboundon'."""
         return self._inboundon
@@ -183,7 +185,7 @@ class SignalStatusPackage(metaclass=Metaclass_SignalStatusPackage):
                 "The 'inboundon' field must be a sub message of type 'IntersectionAccessPoint'"
         self._inboundon = value
 
-    @property
+    @builtins.property
     def outboundon(self):
         """Message field 'outboundon'."""
         return self._outboundon
@@ -197,7 +199,7 @@ class SignalStatusPackage(metaclass=Metaclass_SignalStatusPackage):
                 "The 'outboundon' field must be a sub message of type 'IntersectionAccessPoint'"
         self._outboundon = value
 
-    @property
+    @builtins.property
     def minute(self):
         """Message field 'minute'."""
         return self._minute
@@ -212,7 +214,7 @@ class SignalStatusPackage(metaclass=Metaclass_SignalStatusPackage):
                 "The 'minute' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._minute = value
 
-    @property
+    @builtins.property
     def second(self):
         """Message field 'second'."""
         return self._second
@@ -227,7 +229,7 @@ class SignalStatusPackage(metaclass=Metaclass_SignalStatusPackage):
                 "The 'second' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._second = value
 
-    @property
+    @builtins.property
     def duration(self):
         """Message field 'duration'."""
         return self._duration
@@ -242,7 +244,7 @@ class SignalStatusPackage(metaclass=Metaclass_SignalStatusPackage):
                 "The 'duration' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._duration = value
 
-    @property
+    @builtins.property
     def status(self):
         """Message field 'status'."""
         return self._status

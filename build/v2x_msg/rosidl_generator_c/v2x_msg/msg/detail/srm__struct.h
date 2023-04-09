@@ -23,7 +23,7 @@ extern "C"
 // Member 'requestor'
 #include "v2x_msg/msg/detail/requestor_description__struct.h"
 
-// Struct defined in msg/SRM in the package v2x_msg.
+/// Struct defined in msg/SRM in the package v2x_msg.
 typedef struct v2x_msg__msg__SRM
 {
   int64_t timestamp;

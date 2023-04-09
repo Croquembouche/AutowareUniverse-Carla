@@ -23,7 +23,7 @@ extern "C"
 // Member 'sigstatus'
 #include "v2x_msg/msg/detail/signal_status_package__struct.h"
 
-// Struct defined in msg/SignalStatus in the package v2x_msg.
+/// Struct defined in msg/SignalStatus in the package v2x_msg.
 typedef struct v2x_msg__msg__SignalStatus
 {
   int64_t sequencenumber;

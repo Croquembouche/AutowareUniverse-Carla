@@ -57,6 +57,24 @@ void * get_function__PathHistory__crumbdata(void * untyped_member, size_t index)
   return &member[index];
 }
 
+void fetch_function__PathHistory__crumbdata(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const v2x_msg::msg::PathHistoryPoint *>(
+    get_const_function__PathHistory__crumbdata(untyped_member, index));
+  auto & value = *reinterpret_cast<v2x_msg::msg::PathHistoryPoint *>(untyped_value);
+  value = item;
+}
+
+void assign_function__PathHistory__crumbdata(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<v2x_msg::msg::PathHistoryPoint *>(
+    get_function__PathHistory__crumbdata(untyped_member, index));
+  const auto & value = *reinterpret_cast<const v2x_msg::msg::PathHistoryPoint *>(untyped_value);
+  item = value;
+}
+
 void resize_function__PathHistory__crumbdata(void * untyped_member, size_t size)
 {
   auto * member =
@@ -78,6 +96,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember PathHistory_m
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -93,6 +113,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember PathHistory_m
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -108,6 +130,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember PathHistory_m
     size_function__PathHistory__crumbdata,  // size() function pointer
     get_const_function__PathHistory__crumbdata,  // get_const(index) function pointer
     get_function__PathHistory__crumbdata,  // get(index) function pointer
+    fetch_function__PathHistory__crumbdata,  // fetch(index, &value) function pointer
+    assign_function__PathHistory__crumbdata,  // assign(index, value) function pointer
     resize_function__PathHistory__crumbdata  // resize(index) function pointer
   }
 };

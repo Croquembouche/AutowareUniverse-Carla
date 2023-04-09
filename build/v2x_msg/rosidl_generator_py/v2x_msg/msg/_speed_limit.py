@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -114,7 +116,7 @@ class SpeedLimit(metaclass=Metaclass_SpeedLimit):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def type(self):  # noqa: A003
         """Message field 'type'."""
         return self._type
@@ -129,7 +131,7 @@ class SpeedLimit(metaclass=Metaclass_SpeedLimit):
                 "The 'type' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._type = value
 
-    @property
+    @builtins.property
     def speed(self):
         """Message field 'speed'."""
         return self._speed

@@ -5,18 +5,57 @@
 #ifndef V2X_MSG__MSG__DETAIL__STEERING__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__STEERING__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/steering__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
 
-namespace rosidl_generator_traits
+#include "v2x_msg/msg/detail/steering__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
+
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::Steering & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const Steering & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: angle
+  {
+    out << "angle: ";
+    rosidl_generator_traits::value_to_yaml(msg.angle, out);
+    out << ", ";
+  }
+
+  // member: confidence
+  {
+    out << "confidence: ";
+    rosidl_generator_traits::value_to_yaml(msg.confidence, out);
+    out << ", ";
+  }
+
+  // member: rate
+  {
+    out << "rate: ";
+    rosidl_generator_traits::value_to_yaml(msg.rate, out);
+    out << ", ";
+  }
+
+  // member: wheel
+  {
+    out << "wheel: ";
+    rosidl_generator_traits::value_to_yaml(msg.wheel, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const Steering & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: angle
@@ -25,7 +64,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "angle: ";
-    value_to_yaml(msg.angle, out);
+    rosidl_generator_traits::value_to_yaml(msg.angle, out);
     out << "\n";
   }
 
@@ -35,7 +74,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "confidence: ";
-    value_to_yaml(msg.confidence, out);
+    rosidl_generator_traits::value_to_yaml(msg.confidence, out);
     out << "\n";
   }
 
@@ -45,7 +84,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "rate: ";
-    value_to_yaml(msg.rate, out);
+    rosidl_generator_traits::value_to_yaml(msg.rate, out);
     out << "\n";
   }
 
@@ -55,16 +94,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "wheel: ";
-    value_to_yaml(msg.wheel, out);
+    rosidl_generator_traits::value_to_yaml(msg.wheel, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::Steering & msg)
+inline std::string to_yaml(const Steering & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::Steering & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::Steering & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

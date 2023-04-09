@@ -57,6 +57,24 @@ void * get_function__MAP__intersections(void * untyped_member, size_t index)
   return &member[index];
 }
 
+void fetch_function__MAP__intersections(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const v2x_msg::msg::IntersectionGeometry *>(
+    get_const_function__MAP__intersections(untyped_member, index));
+  auto & value = *reinterpret_cast<v2x_msg::msg::IntersectionGeometry *>(untyped_value);
+  value = item;
+}
+
+void assign_function__MAP__intersections(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<v2x_msg::msg::IntersectionGeometry *>(
+    get_function__MAP__intersections(untyped_member, index));
+  const auto & value = *reinterpret_cast<const v2x_msg::msg::IntersectionGeometry *>(untyped_value);
+  item = value;
+}
+
 void resize_function__MAP__intersections(void * untyped_member, size_t size)
 {
   auto * member =
@@ -82,6 +100,24 @@ void * get_function__MAP__roadsegments(void * untyped_member, size_t index)
   auto & member =
     *reinterpret_cast<std::vector<v2x_msg::msg::RoadSegment> *>(untyped_member);
   return &member[index];
+}
+
+void fetch_function__MAP__roadsegments(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const v2x_msg::msg::RoadSegment *>(
+    get_const_function__MAP__roadsegments(untyped_member, index));
+  auto & value = *reinterpret_cast<v2x_msg::msg::RoadSegment *>(untyped_value);
+  value = item;
+}
+
+void assign_function__MAP__roadsegments(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<v2x_msg::msg::RoadSegment *>(
+    get_function__MAP__roadsegments(untyped_member, index));
+  const auto & value = *reinterpret_cast<const v2x_msg::msg::RoadSegment *>(untyped_value);
+  item = value;
 }
 
 void resize_function__MAP__roadsegments(void * untyped_member, size_t size)
@@ -111,6 +147,24 @@ void * get_function__MAP__restrictionlist(void * untyped_member, size_t index)
   return &member[index];
 }
 
+void fetch_function__MAP__restrictionlist(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const v2x_msg::msg::RestrictionClassAssignment *>(
+    get_const_function__MAP__restrictionlist(untyped_member, index));
+  auto & value = *reinterpret_cast<v2x_msg::msg::RestrictionClassAssignment *>(untyped_value);
+  value = item;
+}
+
+void assign_function__MAP__restrictionlist(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<v2x_msg::msg::RestrictionClassAssignment *>(
+    get_function__MAP__restrictionlist(untyped_member, index));
+  const auto & value = *reinterpret_cast<const v2x_msg::msg::RestrictionClassAssignment *>(untyped_value);
+  item = value;
+}
+
 void resize_function__MAP__restrictionlist(void * untyped_member, size_t size)
 {
   auto * member =
@@ -132,6 +186,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MAP_message_m
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -147,6 +203,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MAP_message_m
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -162,6 +220,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MAP_message_m
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -177,6 +237,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MAP_message_m
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -192,6 +254,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MAP_message_m
     size_function__MAP__intersections,  // size() function pointer
     get_const_function__MAP__intersections,  // get_const(index) function pointer
     get_function__MAP__intersections,  // get(index) function pointer
+    fetch_function__MAP__intersections,  // fetch(index, &value) function pointer
+    assign_function__MAP__intersections,  // assign(index, value) function pointer
     resize_function__MAP__intersections  // resize(index) function pointer
   },
   {
@@ -207,6 +271,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MAP_message_m
     size_function__MAP__roadsegments,  // size() function pointer
     get_const_function__MAP__roadsegments,  // get_const(index) function pointer
     get_function__MAP__roadsegments,  // get(index) function pointer
+    fetch_function__MAP__roadsegments,  // fetch(index, &value) function pointer
+    assign_function__MAP__roadsegments,  // assign(index, value) function pointer
     resize_function__MAP__roadsegments  // resize(index) function pointer
   },
   {
@@ -222,6 +288,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MAP_message_m
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -237,6 +305,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MAP_message_m
     size_function__MAP__restrictionlist,  // size() function pointer
     get_const_function__MAP__restrictionlist,  // get_const(index) function pointer
     get_function__MAP__restrictionlist,  // get(index) function pointer
+    fetch_function__MAP__restrictionlist,  // fetch(index, &value) function pointer
+    assign_function__MAP__restrictionlist,  // assign(index, value) function pointer
     resize_function__MAP__restrictionlist  // resize(index) function pointer
   }
 };

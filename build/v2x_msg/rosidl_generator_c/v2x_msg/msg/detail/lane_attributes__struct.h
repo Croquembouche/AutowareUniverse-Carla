@@ -22,7 +22,7 @@ extern "C"
 // Member 'sharedwith'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/LaneAttributes in the package v2x_msg.
+/// Struct defined in msg/LaneAttributes in the package v2x_msg.
 typedef struct v2x_msg__msg__LaneAttributes
 {
   rosidl_runtime_c__String directionaluse;

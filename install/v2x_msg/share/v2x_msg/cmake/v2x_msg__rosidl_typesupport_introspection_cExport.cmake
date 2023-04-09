@@ -54,6 +54,7 @@ endif()
 add_library(v2x_msg::v2x_msg__rosidl_typesupport_introspection_c SHARED IMPORTED)
 
 set_target_properties(v2x_msg::v2x_msg__rosidl_typesupport_introspection_c PROPERTIES
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/v2x_msg"
   INTERFACE_LINK_LIBRARIES "v2x_msg::v2x_msg__rosidl_generator_c;rosidl_typesupport_introspection_c::rosidl_typesupport_introspection_c"
 )
 

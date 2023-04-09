@@ -1,5 +1,1 @@
-int64 datatype
-int64 subtype
-int64 sendonlessthenvalue
-int64 sendonmorethenvalue
-bool sendall
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/VehicleStatusRequest.msg

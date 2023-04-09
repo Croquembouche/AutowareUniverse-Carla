@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -126,7 +128,7 @@ class AccelerationSet4Way(metaclass=Metaclass_AccelerationSet4Way):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def longitude(self):
         """Message field 'longitude'."""
         return self._longitude
@@ -141,7 +143,7 @@ class AccelerationSet4Way(metaclass=Metaclass_AccelerationSet4Way):
                 "The 'longitude' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._longitude = value
 
-    @property
+    @builtins.property
     def lat(self):
         """Message field 'lat'."""
         return self._lat
@@ -156,7 +158,7 @@ class AccelerationSet4Way(metaclass=Metaclass_AccelerationSet4Way):
                 "The 'lat' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._lat = value
 
-    @property
+    @builtins.property
     def vert(self):
         """Message field 'vert'."""
         return self._vert
@@ -171,7 +173,7 @@ class AccelerationSet4Way(metaclass=Metaclass_AccelerationSet4Way):
                 "The 'vert' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._vert = value
 
-    @property
+    @builtins.property
     def yaw(self):
         """Message field 'yaw'."""
         return self._yaw

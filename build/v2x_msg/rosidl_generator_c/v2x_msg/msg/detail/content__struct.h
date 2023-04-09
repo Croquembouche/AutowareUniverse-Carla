@@ -29,7 +29,7 @@ extern "C"
 // Member 'exitservice'
 #include "v2x_msg/msg/detail/exit_service__struct.h"
 
-// Struct defined in msg/Content in the package v2x_msg.
+/// Struct defined in msg/Content in the package v2x_msg.
 typedef struct v2x_msg__msg__Content
 {
   v2x_msg__msg__ITIScodesandtext__Sequence advisory;

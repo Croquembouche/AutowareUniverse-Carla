@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -135,7 +137,7 @@ class Description(metaclass=Metaclass_Description):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def path(self):
         """Message field 'path'."""
         return self._path
@@ -149,7 +151,7 @@ class Description(metaclass=Metaclass_Description):
                 "The 'path' field must be a sub message of type 'OffsetSystem'"
         self._path = value
 
-    @property
+    @builtins.property
     def geometry(self):
         """Message field 'geometry'."""
         return self._geometry
@@ -163,7 +165,7 @@ class Description(metaclass=Metaclass_Description):
                 "The 'geometry' field must be a sub message of type 'GeometricProjection'"
         self._geometry = value
 
-    @property
+    @builtins.property
     def oldregion(self):
         """Message field 'oldregion'."""
         return self._oldregion

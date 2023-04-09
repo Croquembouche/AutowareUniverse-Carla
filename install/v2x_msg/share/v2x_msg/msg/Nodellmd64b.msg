@@ -1,2 +1,1 @@
-int64 longitude
-int64 latitude
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/Nodellmd64b.msg

@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -283,7 +285,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def lights(self):
         """Message field 'lights'."""
         return self._lights
@@ -296,7 +298,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'lights' field must be of type 'str'"
         self._lights = value
 
-    @property
+    @builtins.property
     def lightbar(self):
         """Message field 'lightbar'."""
         return self._lightbar
@@ -311,7 +313,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'lightbar' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._lightbar = value
 
-    @property
+    @builtins.property
     def wipers(self):
         """Message field 'wipers'."""
         return self._wipers
@@ -325,7 +327,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'wipers' field must be a sub message of type 'WiperSet'"
         self._wipers = value
 
-    @property
+    @builtins.property
     def brakestatus(self):
         """Message field 'brakestatus'."""
         return self._brakestatus
@@ -339,7 +341,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'brakestatus' field must be a sub message of type 'BrakeSystemStatus'"
         self._brakestatus = value
 
-    @property
+    @builtins.property
     def roadfriction(self):
         """Message field 'roadfriction'."""
         return self._roadfriction
@@ -354,7 +356,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'roadfriction' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._roadfriction = value
 
-    @property
+    @builtins.property
     def sundata(self):
         """Message field 'sundata'."""
         return self._sundata
@@ -369,7 +371,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'sundata' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._sundata = value
 
-    @property
+    @builtins.property
     def raindata(self):
         """Message field 'raindata'."""
         return self._raindata
@@ -384,7 +386,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'raindata' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._raindata = value
 
-    @property
+    @builtins.property
     def airtemp(self):
         """Message field 'airtemp'."""
         return self._airtemp
@@ -399,7 +401,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'airtemp' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._airtemp = value
 
-    @property
+    @builtins.property
     def airpres(self):
         """Message field 'airpres'."""
         return self._airpres
@@ -414,7 +416,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'airpres' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._airpres = value
 
-    @property
+    @builtins.property
     def steering(self):
         """Message field 'steering'."""
         return self._steering
@@ -428,7 +430,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'steering' field must be a sub message of type 'Steering'"
         self._steering = value
 
-    @property
+    @builtins.property
     def accelsets(self):
         """Message field 'accelsets'."""
         return self._accelsets
@@ -442,7 +444,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'accelsets' field must be a sub message of type 'AccelSets'"
         self._accelsets = value
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def object(self):  # noqa: A003
         """Message field 'object'."""
         return self._object
@@ -456,7 +458,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'object' field must be a sub message of type 'Object'"
         self._object = value
 
-    @property
+    @builtins.property
     def fullpos(self):
         """Message field 'fullpos'."""
         return self._fullpos
@@ -470,7 +472,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'fullpos' field must be a sub message of type 'FullPositionVector'"
         self._fullpos = value
 
-    @property
+    @builtins.property
     def throttlepos(self):
         """Message field 'throttlepos'."""
         return self._throttlepos
@@ -485,7 +487,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'throttlepos' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._throttlepos = value
 
-    @property
+    @builtins.property
     def speedheadc(self):
         """Message field 'speedheadc'."""
         return self._speedheadc
@@ -499,7 +501,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'speedheadc' field must be a sub message of type 'SpeedandHeadingandThrottleConfidence'"
         self._speedheadc = value
 
-    @property
+    @builtins.property
     def speedc(self):
         """Message field 'speedc'."""
         return self._speedc
@@ -514,7 +516,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'speedc' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._speedc = value
 
-    @property
+    @builtins.property
     def vehicledata(self):
         """Message field 'vehicledata'."""
         return self._vehicledata
@@ -528,7 +530,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'vehicledata' field must be a sub message of type 'VehicleData'"
         self._vehicledata = value
 
-    @property
+    @builtins.property
     def vehicleident(self):
         """Message field 'vehicleident'."""
         return self._vehicleident
@@ -542,7 +544,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'vehicleident' field must be a sub message of type 'VehicleIdent'"
         self._vehicleident = value
 
-    @property
+    @builtins.property
     def j1939data(self):
         """Message field 'j1939data'."""
         return self._j1939data
@@ -556,7 +558,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'j1939data' field must be a sub message of type 'J1939data'"
         self._j1939data = value
 
-    @property
+    @builtins.property
     def weatherreport(self):
         """Message field 'weatherreport'."""
         return self._weatherreport
@@ -570,7 +572,7 @@ class VehicleStatus(metaclass=Metaclass_VehicleStatus):
                 "The 'weatherreport' field must be a sub message of type 'WeatherReport'"
         self._weatherreport = value
 
-    @property
+    @builtins.property
     def gnssstatus(self):
         """Message field 'gnssstatus'."""
         return self._gnssstatus

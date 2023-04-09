@@ -95,7 +95,7 @@ PyObject * v2x_msg__msg__latency__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->msgtime.data,
       strlen(ros_message->msgtime.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

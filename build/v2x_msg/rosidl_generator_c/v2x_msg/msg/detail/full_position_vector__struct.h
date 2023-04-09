@@ -29,7 +29,7 @@ extern "C"
 // Member 'speedconfidence'
 #include "v2x_msg/msg/detail/speedand_headingand_throttle_confidence__struct.h"
 
-// Struct defined in msg/FullPositionVector in the package v2x_msg.
+/// Struct defined in msg/FullPositionVector in the package v2x_msg.
 typedef struct v2x_msg__msg__FullPositionVector
 {
   v2x_msg__msg__DDateTime utctime;

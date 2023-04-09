@@ -23,7 +23,7 @@ extern "C"
 // Member 'offsetyaxis'
 #include "v2x_msg/msg/detail/offset_yaxis__struct.h"
 
-// Struct defined in msg/ComputedLane in the package v2x_msg.
+/// Struct defined in msg/ComputedLane in the package v2x_msg.
 typedef struct v2x_msg__msg__ComputedLane
 {
   int64_t referencelaneid;

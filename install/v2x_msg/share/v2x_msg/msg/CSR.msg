@@ -1,4 +1,1 @@
-int64 timestamp
-int64 msgcnt
-string id
-RequestedItem[] requests
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/CSR.msg

@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -181,7 +183,7 @@ class ICA(metaclass=Metaclass_ICA):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def msgcnt(self):
         """Message field 'msgcnt'."""
         return self._msgcnt
@@ -196,7 +198,7 @@ class ICA(metaclass=Metaclass_ICA):
                 "The 'msgcnt' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._msgcnt = value
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def id(self):  # noqa: A003
         """Message field 'id'."""
         return self._id
@@ -209,7 +211,7 @@ class ICA(metaclass=Metaclass_ICA):
                 "The 'id' field must be of type 'str'"
         self._id = value
 
-    @property
+    @builtins.property
     def timestamp(self):
         """Message field 'timestamp'."""
         return self._timestamp
@@ -224,7 +226,7 @@ class ICA(metaclass=Metaclass_ICA):
                 "The 'timestamp' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._timestamp = value
 
-    @property
+    @builtins.property
     def partone(self):
         """Message field 'partone'."""
         return self._partone
@@ -238,7 +240,7 @@ class ICA(metaclass=Metaclass_ICA):
                 "The 'partone' field must be a sub message of type 'BSMCoreData'"
         self._partone = value
 
-    @property
+    @builtins.property
     def path(self):
         """Message field 'path'."""
         return self._path
@@ -252,7 +254,7 @@ class ICA(metaclass=Metaclass_ICA):
                 "The 'path' field must be a sub message of type 'PathHistory'"
         self._path = value
 
-    @property
+    @builtins.property
     def pathprediction(self):
         """Message field 'pathprediction'."""
         return self._pathprediction
@@ -266,7 +268,7 @@ class ICA(metaclass=Metaclass_ICA):
                 "The 'pathprediction' field must be a sub message of type 'PathPrediction'"
         self._pathprediction = value
 
-    @property
+    @builtins.property
     def intersectionid(self):
         """Message field 'intersectionid'."""
         return self._intersectionid
@@ -280,7 +282,7 @@ class ICA(metaclass=Metaclass_ICA):
                 "The 'intersectionid' field must be a sub message of type 'IntersectionReferenceID'"
         self._intersectionid = value
 
-    @property
+    @builtins.property
     def lanenumber(self):
         """Message field 'lanenumber'."""
         return self._lanenumber
@@ -294,7 +296,7 @@ class ICA(metaclass=Metaclass_ICA):
                 "The 'lanenumber' field must be a sub message of type 'ApproachOrLane'"
         self._lanenumber = value
 
-    @property
+    @builtins.property
     def eventflag(self):
         """Message field 'eventflag'."""
         return self._eventflag

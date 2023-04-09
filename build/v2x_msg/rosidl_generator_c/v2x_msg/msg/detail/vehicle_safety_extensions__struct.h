@@ -26,7 +26,7 @@ extern "C"
 // Member 'pathprediction'
 #include "v2x_msg/msg/detail/path_prediction__struct.h"
 
-// Struct defined in msg/VehicleSafetyExtensions in the package v2x_msg.
+/// Struct defined in msg/VehicleSafetyExtensions in the package v2x_msg.
 typedef struct v2x_msg__msg__VehicleSafetyExtensions
 {
   rosidl_runtime_c__String vehicleeventflags;

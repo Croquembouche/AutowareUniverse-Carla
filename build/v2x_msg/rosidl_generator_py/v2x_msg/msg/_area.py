@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -135,7 +137,7 @@ class Area(metaclass=Metaclass_Area):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def shapepointset(self):
         """Message field 'shapepointset'."""
         return self._shapepointset
@@ -149,7 +151,7 @@ class Area(metaclass=Metaclass_Area):
                 "The 'shapepointset' field must be a sub message of type 'ShapePointSet'"
         self._shapepointset = value
 
-    @property
+    @builtins.property
     def cirle(self):
         """Message field 'cirle'."""
         return self._cirle
@@ -163,7 +165,7 @@ class Area(metaclass=Metaclass_Area):
                 "The 'cirle' field must be a sub message of type 'Circle'"
         self._cirle = value
 
-    @property
+    @builtins.property
     def regionpointset(self):
         """Message field 'regionpointset'."""
         return self._regionpointset

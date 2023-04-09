@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -138,7 +140,7 @@ class BrakeSystemStatus(metaclass=Metaclass_BrakeSystemStatus):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def wheelbrakes(self):
         """Message field 'wheelbrakes'."""
         return self._wheelbrakes
@@ -151,7 +153,7 @@ class BrakeSystemStatus(metaclass=Metaclass_BrakeSystemStatus):
                 "The 'wheelbrakes' field must be of type 'str'"
         self._wheelbrakes = value
 
-    @property
+    @builtins.property
     def traction(self):
         """Message field 'traction'."""
         return self._traction
@@ -166,7 +168,7 @@ class BrakeSystemStatus(metaclass=Metaclass_BrakeSystemStatus):
                 "The 'traction' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._traction = value
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def abs(self):  # noqa: A003
         """Message field 'abs'."""
         return self._abs
@@ -181,7 +183,7 @@ class BrakeSystemStatus(metaclass=Metaclass_BrakeSystemStatus):
                 "The 'abs' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._abs = value
 
-    @property
+    @builtins.property
     def scs(self):
         """Message field 'scs'."""
         return self._scs
@@ -196,7 +198,7 @@ class BrakeSystemStatus(metaclass=Metaclass_BrakeSystemStatus):
                 "The 'scs' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._scs = value
 
-    @property
+    @builtins.property
     def brakeboost(self):
         """Message field 'brakeboost'."""
         return self._brakeboost
@@ -211,7 +213,7 @@ class BrakeSystemStatus(metaclass=Metaclass_BrakeSystemStatus):
                 "The 'brakeboost' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._brakeboost = value
 
-    @property
+    @builtins.property
     def auxbrakes(self):
         """Message field 'auxbrakes'."""
         return self._auxbrakes

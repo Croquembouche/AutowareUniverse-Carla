@@ -38,7 +38,7 @@ extern "C"
 {
 #endif
 
-void IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_init_function(
+void v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_init_function(
   void * message_memory, enum rosidl_runtime_c__message_initialization _init)
 {
   // TODO(karsten1987): initializers are not yet implemented for typesupport c
@@ -47,12 +47,12 @@ void IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeome
   v2x_msg__msg__IntersectionGeometry__init(message_memory);
 }
 
-void IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_fini_function(void * message_memory)
+void v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_fini_function(void * message_memory)
 {
   v2x_msg__msg__IntersectionGeometry__fini(message_memory);
 }
 
-size_t IntersectionGeometry__rosidl_typesupport_introspection_c__size_function__SpeedLimit__speedlimits(
+size_t v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__size_function__IntersectionGeometry__speedlimits(
   const void * untyped_member)
 {
   const v2x_msg__msg__SpeedLimit__Sequence * member =
@@ -60,7 +60,7 @@ size_t IntersectionGeometry__rosidl_typesupport_introspection_c__size_function__
   return member->size;
 }
 
-const void * IntersectionGeometry__rosidl_typesupport_introspection_c__get_const_function__SpeedLimit__speedlimits(
+const void * v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__get_const_function__IntersectionGeometry__speedlimits(
   const void * untyped_member, size_t index)
 {
   const v2x_msg__msg__SpeedLimit__Sequence * member =
@@ -68,7 +68,7 @@ const void * IntersectionGeometry__rosidl_typesupport_introspection_c__get_const
   return &member->data[index];
 }
 
-void * IntersectionGeometry__rosidl_typesupport_introspection_c__get_function__SpeedLimit__speedlimits(
+void * v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__get_function__IntersectionGeometry__speedlimits(
   void * untyped_member, size_t index)
 {
   v2x_msg__msg__SpeedLimit__Sequence * member =
@@ -76,7 +76,29 @@ void * IntersectionGeometry__rosidl_typesupport_introspection_c__get_function__S
   return &member->data[index];
 }
 
-bool IntersectionGeometry__rosidl_typesupport_introspection_c__resize_function__SpeedLimit__speedlimits(
+void v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__fetch_function__IntersectionGeometry__speedlimits(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const v2x_msg__msg__SpeedLimit * item =
+    ((const v2x_msg__msg__SpeedLimit *)
+    v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__get_const_function__IntersectionGeometry__speedlimits(untyped_member, index));
+  v2x_msg__msg__SpeedLimit * value =
+    (v2x_msg__msg__SpeedLimit *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__assign_function__IntersectionGeometry__speedlimits(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  v2x_msg__msg__SpeedLimit * item =
+    ((v2x_msg__msg__SpeedLimit *)
+    v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__get_function__IntersectionGeometry__speedlimits(untyped_member, index));
+  const v2x_msg__msg__SpeedLimit * value =
+    (const v2x_msg__msg__SpeedLimit *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__resize_function__IntersectionGeometry__speedlimits(
   void * untyped_member, size_t size)
 {
   v2x_msg__msg__SpeedLimit__Sequence * member =
@@ -85,7 +107,7 @@ bool IntersectionGeometry__rosidl_typesupport_introspection_c__resize_function__
   return v2x_msg__msg__SpeedLimit__Sequence__init(member, size);
 }
 
-size_t IntersectionGeometry__rosidl_typesupport_introspection_c__size_function__GenericLane__laneset(
+size_t v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__size_function__IntersectionGeometry__laneset(
   const void * untyped_member)
 {
   const v2x_msg__msg__GenericLane__Sequence * member =
@@ -93,7 +115,7 @@ size_t IntersectionGeometry__rosidl_typesupport_introspection_c__size_function__
   return member->size;
 }
 
-const void * IntersectionGeometry__rosidl_typesupport_introspection_c__get_const_function__GenericLane__laneset(
+const void * v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__get_const_function__IntersectionGeometry__laneset(
   const void * untyped_member, size_t index)
 {
   const v2x_msg__msg__GenericLane__Sequence * member =
@@ -101,7 +123,7 @@ const void * IntersectionGeometry__rosidl_typesupport_introspection_c__get_const
   return &member->data[index];
 }
 
-void * IntersectionGeometry__rosidl_typesupport_introspection_c__get_function__GenericLane__laneset(
+void * v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__get_function__IntersectionGeometry__laneset(
   void * untyped_member, size_t index)
 {
   v2x_msg__msg__GenericLane__Sequence * member =
@@ -109,7 +131,29 @@ void * IntersectionGeometry__rosidl_typesupport_introspection_c__get_function__G
   return &member->data[index];
 }
 
-bool IntersectionGeometry__rosidl_typesupport_introspection_c__resize_function__GenericLane__laneset(
+void v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__fetch_function__IntersectionGeometry__laneset(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const v2x_msg__msg__GenericLane * item =
+    ((const v2x_msg__msg__GenericLane *)
+    v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__get_const_function__IntersectionGeometry__laneset(untyped_member, index));
+  v2x_msg__msg__GenericLane * value =
+    (v2x_msg__msg__GenericLane *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__assign_function__IntersectionGeometry__laneset(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  v2x_msg__msg__GenericLane * item =
+    ((v2x_msg__msg__GenericLane *)
+    v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__get_function__IntersectionGeometry__laneset(untyped_member, index));
+  const v2x_msg__msg__GenericLane * value =
+    (const v2x_msg__msg__GenericLane *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__resize_function__IntersectionGeometry__laneset(
   void * untyped_member, size_t size)
 {
   v2x_msg__msg__GenericLane__Sequence * member =
@@ -118,7 +162,7 @@ bool IntersectionGeometry__rosidl_typesupport_introspection_c__resize_function__
   return v2x_msg__msg__GenericLane__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_member_array[8] = {
+static rosidl_typesupport_introspection_c__MessageMember v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_member_array[8] = {
   {
     "name",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
@@ -132,6 +176,8 @@ static rosidl_typesupport_introspection_c__MessageMember IntersectionGeometry__r
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -147,6 +193,8 @@ static rosidl_typesupport_introspection_c__MessageMember IntersectionGeometry__r
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -162,6 +210,8 @@ static rosidl_typesupport_introspection_c__MessageMember IntersectionGeometry__r
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -177,6 +227,8 @@ static rosidl_typesupport_introspection_c__MessageMember IntersectionGeometry__r
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -192,6 +244,8 @@ static rosidl_typesupport_introspection_c__MessageMember IntersectionGeometry__r
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -204,10 +258,12 @@ static rosidl_typesupport_introspection_c__MessageMember IntersectionGeometry__r
     false,  // is upper bound
     offsetof(v2x_msg__msg__IntersectionGeometry, speedlimits),  // bytes offset in struct
     NULL,  // default value
-    IntersectionGeometry__rosidl_typesupport_introspection_c__size_function__SpeedLimit__speedlimits,  // size() function pointer
-    IntersectionGeometry__rosidl_typesupport_introspection_c__get_const_function__SpeedLimit__speedlimits,  // get_const(index) function pointer
-    IntersectionGeometry__rosidl_typesupport_introspection_c__get_function__SpeedLimit__speedlimits,  // get(index) function pointer
-    IntersectionGeometry__rosidl_typesupport_introspection_c__resize_function__SpeedLimit__speedlimits  // resize(index) function pointer
+    v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__size_function__IntersectionGeometry__speedlimits,  // size() function pointer
+    v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__get_const_function__IntersectionGeometry__speedlimits,  // get_const(index) function pointer
+    v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__get_function__IntersectionGeometry__speedlimits,  // get(index) function pointer
+    v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__fetch_function__IntersectionGeometry__speedlimits,  // fetch(index, &value) function pointer
+    v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__assign_function__IntersectionGeometry__speedlimits,  // assign(index, value) function pointer
+    v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__resize_function__IntersectionGeometry__speedlimits  // resize(index) function pointer
   },
   {
     "laneset",  // name
@@ -219,10 +275,12 @@ static rosidl_typesupport_introspection_c__MessageMember IntersectionGeometry__r
     false,  // is upper bound
     offsetof(v2x_msg__msg__IntersectionGeometry, laneset),  // bytes offset in struct
     NULL,  // default value
-    IntersectionGeometry__rosidl_typesupport_introspection_c__size_function__GenericLane__laneset,  // size() function pointer
-    IntersectionGeometry__rosidl_typesupport_introspection_c__get_const_function__GenericLane__laneset,  // get_const(index) function pointer
-    IntersectionGeometry__rosidl_typesupport_introspection_c__get_function__GenericLane__laneset,  // get(index) function pointer
-    IntersectionGeometry__rosidl_typesupport_introspection_c__resize_function__GenericLane__laneset  // resize(index) function pointer
+    v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__size_function__IntersectionGeometry__laneset,  // size() function pointer
+    v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__get_const_function__IntersectionGeometry__laneset,  // get_const(index) function pointer
+    v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__get_function__IntersectionGeometry__laneset,  // get(index) function pointer
+    v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__fetch_function__IntersectionGeometry__laneset,  // fetch(index, &value) function pointer
+    v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__assign_function__IntersectionGeometry__laneset,  // assign(index, value) function pointer
+    v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__resize_function__IntersectionGeometry__laneset  // resize(index) function pointer
   },
   {
     "preemptprioritydata",  // name
@@ -237,44 +295,46 @@ static rosidl_typesupport_introspection_c__MessageMember IntersectionGeometry__r
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   }
 };
 
-static const rosidl_typesupport_introspection_c__MessageMembers IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_members = {
+static const rosidl_typesupport_introspection_c__MessageMembers v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_members = {
   "v2x_msg__msg",  // message namespace
   "IntersectionGeometry",  // message name
   8,  // number of fields
   sizeof(v2x_msg__msg__IntersectionGeometry),
-  IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_member_array,  // message members
-  IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_init_function,  // function to initialize message memory (memory has to be allocated)
-  IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_fini_function  // function to terminate message instance (will not free memory)
+  v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_member_array,  // message members
+  v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_init_function,  // function to initialize message memory (memory has to be allocated)
+  v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_fini_function  // function to terminate message instance (will not free memory)
 };
 
 // this is not const since it must be initialized on first access
 // since C does not allow non-integral compile-time constants
-static rosidl_message_type_support_t IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_type_support_handle = {
+static rosidl_message_type_support_t v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_type_support_handle = {
   0,
-  &IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_members,
+  &v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_members,
   get_message_typesupport_handle_function,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_v2x_msg
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, IntersectionGeometry)() {
-  IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_member_array[1].members_ =
+  v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_member_array[1].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, IntersectionReferenceID)();
-  IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_member_array[3].members_ =
+  v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_member_array[3].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, Position3D)();
-  IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_member_array[5].members_ =
+  v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_member_array[5].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, SpeedLimit)();
-  IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_member_array[6].members_ =
+  v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_member_array[6].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, GenericLane)();
-  if (!IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_type_support_handle.typesupport_identifier) {
-    IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_type_support_handle.typesupport_identifier =
+  if (!v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_type_support_handle.typesupport_identifier) {
+    v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
   }
-  return &IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_type_support_handle;
+  return &v2x_msg__msg__IntersectionGeometry__rosidl_typesupport_introspection_c__IntersectionGeometry_message_type_support_handle;
 }
 #ifdef __cplusplus
 }

@@ -44,7 +44,7 @@ extern "C"
 // Member 'weatherreport'
 #include "v2x_msg/msg/detail/weather_report__struct.h"
 
-// Struct defined in msg/VehicleStatus in the package v2x_msg.
+/// Struct defined in msg/VehicleStatus in the package v2x_msg.
 typedef struct v2x_msg__msg__VehicleStatus
 {
   rosidl_runtime_c__String lights;

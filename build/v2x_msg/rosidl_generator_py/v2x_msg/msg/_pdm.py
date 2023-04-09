@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -175,7 +177,7 @@ class PDM(metaclass=Metaclass_PDM):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def timestamp(self):
         """Message field 'timestamp'."""
         return self._timestamp
@@ -190,7 +192,7 @@ class PDM(metaclass=Metaclass_PDM):
                 "The 'timestamp' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._timestamp = value
 
-    @property
+    @builtins.property
     def sample(self):
         """Message field 'sample'."""
         return self._sample
@@ -204,7 +206,7 @@ class PDM(metaclass=Metaclass_PDM):
                 "The 'sample' field must be a sub message of type 'Sample'"
         self._sample = value
 
-    @property
+    @builtins.property
     def directions(self):
         """Message field 'directions'."""
         return self._directions
@@ -217,7 +219,7 @@ class PDM(metaclass=Metaclass_PDM):
                 "The 'directions' field must be of type 'str'"
         self._directions = value
 
-    @property
+    @builtins.property
     def termtime(self):
         """Message field 'termtime'."""
         return self._termtime
@@ -232,7 +234,7 @@ class PDM(metaclass=Metaclass_PDM):
                 "The 'termtime' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._termtime = value
 
-    @property
+    @builtins.property
     def termdistance(self):
         """Message field 'termdistance'."""
         return self._termdistance
@@ -247,7 +249,7 @@ class PDM(metaclass=Metaclass_PDM):
                 "The 'termdistance' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._termdistance = value
 
-    @property
+    @builtins.property
     def snapshottime(self):
         """Message field 'snapshottime'."""
         return self._snapshottime
@@ -261,7 +263,7 @@ class PDM(metaclass=Metaclass_PDM):
                 "The 'snapshottime' field must be a sub message of type 'SnapshotTime'"
         self._snapshottime = value
 
-    @property
+    @builtins.property
     def snapshotdistance(self):
         """Message field 'snapshotdistance'."""
         return self._snapshotdistance
@@ -275,7 +277,7 @@ class PDM(metaclass=Metaclass_PDM):
                 "The 'snapshotdistance' field must be a sub message of type 'SnapshotDistance'"
         self._snapshotdistance = value
 
-    @property
+    @builtins.property
     def txinterval(self):
         """Message field 'txinterval'."""
         return self._txinterval
@@ -290,7 +292,7 @@ class PDM(metaclass=Metaclass_PDM):
                 "The 'txinterval' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._txinterval = value
 
-    @property
+    @builtins.property
     def dataelements(self):
         """Message field 'dataelements'."""
         return self._dataelements

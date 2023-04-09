@@ -1,6 +1,1 @@
-int64 loading
-int64 anadause
-int64 abikeload
-int64 dooropen
-int64 charging
-int64 atstopline
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/TransitVehicleStatus.msg

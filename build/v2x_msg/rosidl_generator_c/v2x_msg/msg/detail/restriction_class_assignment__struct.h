@@ -21,7 +21,7 @@ extern "C"
 // Member 'users'
 #include "v2x_msg/msg/detail/restriction_user_type__struct.h"
 
-// Struct defined in msg/RestrictionClassAssignment in the package v2x_msg.
+/// Struct defined in msg/RestrictionClassAssignment in the package v2x_msg.
 typedef struct v2x_msg__msg__RestrictionClassAssignment
 {
   int64_t restrictionclassid;

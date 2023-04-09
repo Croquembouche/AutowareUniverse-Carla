@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -143,7 +145,7 @@ class EmergencyDetails(metaclass=Metaclass_EmergencyDetails):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def notused(self):
         """Message field 'notused'."""
         return self._notused
@@ -158,7 +160,7 @@ class EmergencyDetails(metaclass=Metaclass_EmergencyDetails):
                 "The 'notused' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._notused = value
 
-    @property
+    @builtins.property
     def sirenuse(self):
         """Message field 'sirenuse'."""
         return self._sirenuse
@@ -173,7 +175,7 @@ class EmergencyDetails(metaclass=Metaclass_EmergencyDetails):
                 "The 'sirenuse' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._sirenuse = value
 
-    @property
+    @builtins.property
     def lightsuse(self):
         """Message field 'lightsuse'."""
         return self._lightsuse
@@ -188,7 +190,7 @@ class EmergencyDetails(metaclass=Metaclass_EmergencyDetails):
                 "The 'lightsuse' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._lightsuse = value
 
-    @property
+    @builtins.property
     def multi(self):
         """Message field 'multi'."""
         return self._multi
@@ -203,7 +205,7 @@ class EmergencyDetails(metaclass=Metaclass_EmergencyDetails):
                 "The 'multi' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._multi = value
 
-    @property
+    @builtins.property
     def events(self):
         """Message field 'events'."""
         return self._events
@@ -217,7 +219,7 @@ class EmergencyDetails(metaclass=Metaclass_EmergencyDetails):
                 "The 'events' field must be a sub message of type 'PrivilegedEvents'"
         self._events = value
 
-    @property
+    @builtins.property
     def responsetype(self):
         """Message field 'responsetype'."""
         return self._responsetype

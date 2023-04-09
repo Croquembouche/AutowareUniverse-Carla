@@ -25,7 +25,7 @@ extern "C"
 // Member 'oldregion'
 #include "v2x_msg/msg/detail/valid_region__struct.h"
 
-// Struct defined in msg/Description in the package v2x_msg.
+/// Struct defined in msg/Description in the package v2x_msg.
 typedef struct v2x_msg__msg__Description
 {
   v2x_msg__msg__OffsetSystem path;

@@ -5,12 +5,14 @@
 #ifndef V2X_MSG__MSG__DETAIL__GEOGRAPHICAL_PATH__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__GEOGRAPHICAL_PATH__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/geographical_path__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/geographical_path__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'id'
@@ -20,11 +22,76 @@
 // Member 'description'
 #include "v2x_msg/msg/detail/description__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::GeographicalPath & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const GeographicalPath & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: name
+  {
+    out << "name: ";
+    rosidl_generator_traits::value_to_yaml(msg.name, out);
+    out << ", ";
+  }
+
+  // member: id
+  {
+    out << "id: ";
+    to_flow_style_yaml(msg.id, out);
+    out << ", ";
+  }
+
+  // member: anchor
+  {
+    out << "anchor: ";
+    to_flow_style_yaml(msg.anchor, out);
+    out << ", ";
+  }
+
+  // member: lanewidth
+  {
+    out << "lanewidth: ";
+    rosidl_generator_traits::value_to_yaml(msg.lanewidth, out);
+    out << ", ";
+  }
+
+  // member: directionality
+  {
+    out << "directionality: ";
+    rosidl_generator_traits::value_to_yaml(msg.directionality, out);
+    out << ", ";
+  }
+
+  // member: closedpath
+  {
+    out << "closedpath: ";
+    rosidl_generator_traits::value_to_yaml(msg.closedpath, out);
+    out << ", ";
+  }
+
+  // member: direction
+  {
+    out << "direction: ";
+    rosidl_generator_traits::value_to_yaml(msg.direction, out);
+    out << ", ";
+  }
+
+  // member: description
+  {
+    out << "description: ";
+    to_flow_style_yaml(msg.description, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const GeographicalPath & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: name
@@ -33,7 +100,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "name: ";
-    value_to_yaml(msg.name, out);
+    rosidl_generator_traits::value_to_yaml(msg.name, out);
     out << "\n";
   }
 
@@ -43,7 +110,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "id:\n";
-    to_yaml(msg.id, out, indentation + 2);
+    to_block_style_yaml(msg.id, out, indentation + 2);
   }
 
   // member: anchor
@@ -52,7 +119,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "anchor:\n";
-    to_yaml(msg.anchor, out, indentation + 2);
+    to_block_style_yaml(msg.anchor, out, indentation + 2);
   }
 
   // member: lanewidth
@@ -61,7 +128,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "lanewidth: ";
-    value_to_yaml(msg.lanewidth, out);
+    rosidl_generator_traits::value_to_yaml(msg.lanewidth, out);
     out << "\n";
   }
 
@@ -71,7 +138,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "directionality: ";
-    value_to_yaml(msg.directionality, out);
+    rosidl_generator_traits::value_to_yaml(msg.directionality, out);
     out << "\n";
   }
 
@@ -81,7 +148,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "closedpath: ";
-    value_to_yaml(msg.closedpath, out);
+    rosidl_generator_traits::value_to_yaml(msg.closedpath, out);
     out << "\n";
   }
 
@@ -91,7 +158,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "direction: ";
-    value_to_yaml(msg.direction, out);
+    rosidl_generator_traits::value_to_yaml(msg.direction, out);
     out << "\n";
   }
 
@@ -101,15 +168,40 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "description:\n";
-    to_yaml(msg.description, out, indentation + 2);
+    to_block_style_yaml(msg.description, out, indentation + 2);
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::GeographicalPath & msg)
+inline std::string to_yaml(const GeographicalPath & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::GeographicalPath & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::GeographicalPath & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

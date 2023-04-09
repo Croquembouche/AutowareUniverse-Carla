@@ -21,7 +21,7 @@ extern "C"
 // Member 'status'
 #include "v2x_msg/msg/detail/signal_status__struct.h"
 
-// Struct defined in msg/SSM in the package v2x_msg.
+/// Struct defined in msg/SSM in the package v2x_msg.
 typedef struct v2x_msg__msg__SSM
 {
   int64_t timestamp;

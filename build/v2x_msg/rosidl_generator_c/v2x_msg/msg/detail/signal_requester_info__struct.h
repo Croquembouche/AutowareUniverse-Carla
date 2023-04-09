@@ -23,7 +23,7 @@ extern "C"
 // Member 'typedata'
 #include "v2x_msg/msg/detail/requestor_type__struct.h"
 
-// Struct defined in msg/SignalRequesterInfo in the package v2x_msg.
+/// Struct defined in msg/SignalRequesterInfo in the package v2x_msg.
 typedef struct v2x_msg__msg__SignalRequesterInfo
 {
   v2x_msg__msg__VehicleID id;

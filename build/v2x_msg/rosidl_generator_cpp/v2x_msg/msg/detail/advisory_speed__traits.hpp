@@ -5,18 +5,64 @@
 #ifndef V2X_MSG__MSG__DETAIL__ADVISORY_SPEED__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__ADVISORY_SPEED__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/advisory_speed__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
 
-namespace rosidl_generator_traits
+#include "v2x_msg/msg/detail/advisory_speed__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
+
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::AdvisorySpeed & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const AdvisorySpeed & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: type
+  {
+    out << "type: ";
+    rosidl_generator_traits::value_to_yaml(msg.type, out);
+    out << ", ";
+  }
+
+  // member: speed
+  {
+    out << "speed: ";
+    rosidl_generator_traits::value_to_yaml(msg.speed, out);
+    out << ", ";
+  }
+
+  // member: confidence
+  {
+    out << "confidence: ";
+    rosidl_generator_traits::value_to_yaml(msg.confidence, out);
+    out << ", ";
+  }
+
+  // member: zonelength
+  {
+    out << "zonelength: ";
+    rosidl_generator_traits::value_to_yaml(msg.zonelength, out);
+    out << ", ";
+  }
+
+  // member: restrictionclassid
+  {
+    out << "restrictionclassid: ";
+    rosidl_generator_traits::value_to_yaml(msg.restrictionclassid, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const AdvisorySpeed & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: type
@@ -25,7 +71,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "type: ";
-    value_to_yaml(msg.type, out);
+    rosidl_generator_traits::value_to_yaml(msg.type, out);
     out << "\n";
   }
 
@@ -35,7 +81,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "speed: ";
-    value_to_yaml(msg.speed, out);
+    rosidl_generator_traits::value_to_yaml(msg.speed, out);
     out << "\n";
   }
 
@@ -45,7 +91,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "confidence: ";
-    value_to_yaml(msg.confidence, out);
+    rosidl_generator_traits::value_to_yaml(msg.confidence, out);
     out << "\n";
   }
 
@@ -55,7 +101,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "zonelength: ";
-    value_to_yaml(msg.zonelength, out);
+    rosidl_generator_traits::value_to_yaml(msg.zonelength, out);
     out << "\n";
   }
 
@@ -65,16 +111,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "restrictionclassid: ";
-    value_to_yaml(msg.restrictionclassid, out);
+    rosidl_generator_traits::value_to_yaml(msg.restrictionclassid, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::AdvisorySpeed & msg)
+inline std::string to_yaml(const AdvisorySpeed & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::AdvisorySpeed & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::AdvisorySpeed & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

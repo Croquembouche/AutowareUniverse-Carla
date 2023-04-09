@@ -1,14 +1,1 @@
-// generated from rosidl_adapter/resource/msg.idl.em
-// with input from v2x_msg/msg/NodeLL28B.msg
-// generated code does not contain a copyright notice
-
-
-module v2x_msg {
-  module msg {
-    struct NodeLL28B {
-      int64 lon;
-
-      int64 lat;
-    };
-  };
-};
+/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/NodeLL28B.idl

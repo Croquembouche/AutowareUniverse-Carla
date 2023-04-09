@@ -25,7 +25,7 @@ extern "C"
 // Member 'msgs'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/RTCM in the package v2x_msg.
+/// Struct defined in msg/RTCM in the package v2x_msg.
 typedef struct v2x_msg__msg__RTCM
 {
   int64_t msgcnt;

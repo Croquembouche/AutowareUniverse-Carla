@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -132,7 +134,7 @@ class VehicleStatusRequest(metaclass=Metaclass_VehicleStatusRequest):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def datatype(self):
         """Message field 'datatype'."""
         return self._datatype
@@ -147,7 +149,7 @@ class VehicleStatusRequest(metaclass=Metaclass_VehicleStatusRequest):
                 "The 'datatype' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._datatype = value
 
-    @property
+    @builtins.property
     def subtype(self):
         """Message field 'subtype'."""
         return self._subtype
@@ -162,7 +164,7 @@ class VehicleStatusRequest(metaclass=Metaclass_VehicleStatusRequest):
                 "The 'subtype' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._subtype = value
 
-    @property
+    @builtins.property
     def sendonlessthenvalue(self):
         """Message field 'sendonlessthenvalue'."""
         return self._sendonlessthenvalue
@@ -177,7 +179,7 @@ class VehicleStatusRequest(metaclass=Metaclass_VehicleStatusRequest):
                 "The 'sendonlessthenvalue' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._sendonlessthenvalue = value
 
-    @property
+    @builtins.property
     def sendonmorethenvalue(self):
         """Message field 'sendonmorethenvalue'."""
         return self._sendonmorethenvalue
@@ -192,7 +194,7 @@ class VehicleStatusRequest(metaclass=Metaclass_VehicleStatusRequest):
                 "The 'sendonmorethenvalue' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._sendonmorethenvalue = value
 
-    @property
+    @builtins.property
     def sendall(self):
         """Message field 'sendall'."""
         return self._sendall

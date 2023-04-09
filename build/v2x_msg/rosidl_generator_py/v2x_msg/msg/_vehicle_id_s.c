@@ -104,7 +104,7 @@ PyObject * v2x_msg__msg__vehicle_id__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->entityid.data,
       strlen(ros_message->entityid.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

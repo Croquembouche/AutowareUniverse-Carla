@@ -1,0 +1,2 @@
+Invoking command in '/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg': /usr/bin/cmake /home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg -DCMAKE_INSTALL_PREFIX=/home/carla/Github/C-V2X-Autoware-Carla/install/v2x_msg
+Invoked command in '/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg' returned '1': /usr/bin/cmake /home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg -DCMAKE_INSTALL_PREFIX=/home/carla/Github/C-V2X-Autoware-Carla/install/v2x_msg

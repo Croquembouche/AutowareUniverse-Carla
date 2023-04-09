@@ -5,18 +5,64 @@
 #ifndef V2X_MSG__MSG__DETAIL__WEATHER_REPORT__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__WEATHER_REPORT__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/weather_report__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
 
-namespace rosidl_generator_traits
+#include "v2x_msg/msg/detail/weather_report__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
+
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::WeatherReport & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const WeatherReport & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: israining
+  {
+    out << "israining: ";
+    rosidl_generator_traits::value_to_yaml(msg.israining, out);
+    out << ", ";
+  }
+
+  // member: rainrate
+  {
+    out << "rainrate: ";
+    rosidl_generator_traits::value_to_yaml(msg.rainrate, out);
+    out << ", ";
+  }
+
+  // member: precipsituation
+  {
+    out << "precipsituation: ";
+    rosidl_generator_traits::value_to_yaml(msg.precipsituation, out);
+    out << ", ";
+  }
+
+  // member: solarradiation
+  {
+    out << "solarradiation: ";
+    rosidl_generator_traits::value_to_yaml(msg.solarradiation, out);
+    out << ", ";
+  }
+
+  // member: friction
+  {
+    out << "friction: ";
+    rosidl_generator_traits::value_to_yaml(msg.friction, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const WeatherReport & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: israining
@@ -25,7 +71,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "israining: ";
-    value_to_yaml(msg.israining, out);
+    rosidl_generator_traits::value_to_yaml(msg.israining, out);
     out << "\n";
   }
 
@@ -35,7 +81,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "rainrate: ";
-    value_to_yaml(msg.rainrate, out);
+    rosidl_generator_traits::value_to_yaml(msg.rainrate, out);
     out << "\n";
   }
 
@@ -45,7 +91,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "precipsituation: ";
-    value_to_yaml(msg.precipsituation, out);
+    rosidl_generator_traits::value_to_yaml(msg.precipsituation, out);
     out << "\n";
   }
 
@@ -55,7 +101,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "solarradiation: ";
-    value_to_yaml(msg.solarradiation, out);
+    rosidl_generator_traits::value_to_yaml(msg.solarradiation, out);
     out << "\n";
   }
 
@@ -65,16 +111,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "friction: ";
-    value_to_yaml(msg.friction, out);
+    rosidl_generator_traits::value_to_yaml(msg.friction, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::WeatherReport & msg)
+inline std::string to_yaml(const WeatherReport & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::WeatherReport & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::WeatherReport & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

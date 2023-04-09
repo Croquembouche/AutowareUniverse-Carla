@@ -5,18 +5,78 @@
 #ifndef V2X_MSG__MSG__DETAIL__D_DATE_TIME__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__D_DATE_TIME__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/d_date_time__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
 
-namespace rosidl_generator_traits
+#include "v2x_msg/msg/detail/d_date_time__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
+
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::DDateTime & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const DDateTime & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: year
+  {
+    out << "year: ";
+    rosidl_generator_traits::value_to_yaml(msg.year, out);
+    out << ", ";
+  }
+
+  // member: month
+  {
+    out << "month: ";
+    rosidl_generator_traits::value_to_yaml(msg.month, out);
+    out << ", ";
+  }
+
+  // member: day
+  {
+    out << "day: ";
+    rosidl_generator_traits::value_to_yaml(msg.day, out);
+    out << ", ";
+  }
+
+  // member: hour
+  {
+    out << "hour: ";
+    rosidl_generator_traits::value_to_yaml(msg.hour, out);
+    out << ", ";
+  }
+
+  // member: minute
+  {
+    out << "minute: ";
+    rosidl_generator_traits::value_to_yaml(msg.minute, out);
+    out << ", ";
+  }
+
+  // member: second
+  {
+    out << "second: ";
+    rosidl_generator_traits::value_to_yaml(msg.second, out);
+    out << ", ";
+  }
+
+  // member: offset
+  {
+    out << "offset: ";
+    rosidl_generator_traits::value_to_yaml(msg.offset, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const DDateTime & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: year
@@ -25,7 +85,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "year: ";
-    value_to_yaml(msg.year, out);
+    rosidl_generator_traits::value_to_yaml(msg.year, out);
     out << "\n";
   }
 
@@ -35,7 +95,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "month: ";
-    value_to_yaml(msg.month, out);
+    rosidl_generator_traits::value_to_yaml(msg.month, out);
     out << "\n";
   }
 
@@ -45,7 +105,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "day: ";
-    value_to_yaml(msg.day, out);
+    rosidl_generator_traits::value_to_yaml(msg.day, out);
     out << "\n";
   }
 
@@ -55,7 +115,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "hour: ";
-    value_to_yaml(msg.hour, out);
+    rosidl_generator_traits::value_to_yaml(msg.hour, out);
     out << "\n";
   }
 
@@ -65,7 +125,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "minute: ";
-    value_to_yaml(msg.minute, out);
+    rosidl_generator_traits::value_to_yaml(msg.minute, out);
     out << "\n";
   }
 
@@ -75,7 +135,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "second: ";
-    value_to_yaml(msg.second, out);
+    rosidl_generator_traits::value_to_yaml(msg.second, out);
     out << "\n";
   }
 
@@ -85,16 +145,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "offset: ";
-    value_to_yaml(msg.offset, out);
+    rosidl_generator_traits::value_to_yaml(msg.offset, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::DDateTime & msg)
+inline std::string to_yaml(const DDateTime & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::DDateTime & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::DDateTime & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

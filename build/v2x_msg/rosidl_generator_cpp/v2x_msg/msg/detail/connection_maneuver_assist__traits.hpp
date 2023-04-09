@@ -5,18 +5,64 @@
 #ifndef V2X_MSG__MSG__DETAIL__CONNECTION_MANEUVER_ASSIST__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__CONNECTION_MANEUVER_ASSIST__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/connection_maneuver_assist__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
 
-namespace rosidl_generator_traits
+#include "v2x_msg/msg/detail/connection_maneuver_assist__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
+
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::ConnectionManeuverAssist & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const ConnectionManeuverAssist & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: connectionid
+  {
+    out << "connectionid: ";
+    rosidl_generator_traits::value_to_yaml(msg.connectionid, out);
+    out << ", ";
+  }
+
+  // member: queuelength
+  {
+    out << "queuelength: ";
+    rosidl_generator_traits::value_to_yaml(msg.queuelength, out);
+    out << ", ";
+  }
+
+  // member: availablestoragelength
+  {
+    out << "availablestoragelength: ";
+    rosidl_generator_traits::value_to_yaml(msg.availablestoragelength, out);
+    out << ", ";
+  }
+
+  // member: waitonstop
+  {
+    out << "waitonstop: ";
+    rosidl_generator_traits::value_to_yaml(msg.waitonstop, out);
+    out << ", ";
+  }
+
+  // member: pedbicycledetect
+  {
+    out << "pedbicycledetect: ";
+    rosidl_generator_traits::value_to_yaml(msg.pedbicycledetect, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const ConnectionManeuverAssist & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: connectionid
@@ -25,7 +71,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "connectionid: ";
-    value_to_yaml(msg.connectionid, out);
+    rosidl_generator_traits::value_to_yaml(msg.connectionid, out);
     out << "\n";
   }
 
@@ -35,7 +81,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "queuelength: ";
-    value_to_yaml(msg.queuelength, out);
+    rosidl_generator_traits::value_to_yaml(msg.queuelength, out);
     out << "\n";
   }
 
@@ -45,7 +91,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "availablestoragelength: ";
-    value_to_yaml(msg.availablestoragelength, out);
+    rosidl_generator_traits::value_to_yaml(msg.availablestoragelength, out);
     out << "\n";
   }
 
@@ -55,7 +101,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "waitonstop: ";
-    value_to_yaml(msg.waitonstop, out);
+    rosidl_generator_traits::value_to_yaml(msg.waitonstop, out);
     out << "\n";
   }
 
@@ -65,16 +111,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "pedbicycledetect: ";
-    value_to_yaml(msg.pedbicycledetect, out);
+    rosidl_generator_traits::value_to_yaml(msg.pedbicycledetect, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::ConnectionManeuverAssist & msg)
+inline std::string to_yaml(const ConnectionManeuverAssist & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::ConnectionManeuverAssist & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::ConnectionManeuverAssist & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

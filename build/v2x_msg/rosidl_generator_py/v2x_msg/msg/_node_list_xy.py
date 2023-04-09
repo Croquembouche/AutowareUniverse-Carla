@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -123,7 +125,7 @@ class NodeListXY(metaclass=Metaclass_NodeListXY):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def nodes(self):
         """Message field 'nodes'."""
         return self._nodes
@@ -147,7 +149,7 @@ class NodeListXY(metaclass=Metaclass_NodeListXY):
                 "The 'nodes' field must be a set or sequence and each value of type 'NodeXY'"
         self._nodes = value
 
-    @property
+    @builtins.property
     def computed(self):
         """Message field 'computed'."""
         return self._computed

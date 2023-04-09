@@ -5,22 +5,119 @@
 #ifndef V2X_MSG__MSG__DETAIL__NODE_ATTRIBUTE_SET_XY__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__NODE_ATTRIBUTE_SET_XY__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/node_attribute_set_xy__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/node_attribute_set_xy__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'data'
 #include "v2x_msg/msg/detail/lane_data_attribute__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::NodeAttributeSetXY & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const NodeAttributeSetXY & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: localnode
+  {
+    if (msg.localnode.size() == 0) {
+      out << "localnode: []";
+    } else {
+      out << "localnode: [";
+      size_t pending_items = msg.localnode.size();
+      for (auto item : msg.localnode) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: disabled
+  {
+    if (msg.disabled.size() == 0) {
+      out << "disabled: []";
+    } else {
+      out << "disabled: [";
+      size_t pending_items = msg.disabled.size();
+      for (auto item : msg.disabled) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: enabled
+  {
+    if (msg.enabled.size() == 0) {
+      out << "enabled: []";
+    } else {
+      out << "enabled: [";
+      size_t pending_items = msg.enabled.size();
+      for (auto item : msg.enabled) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: data
+  {
+    if (msg.data.size() == 0) {
+      out << "data: []";
+    } else {
+      out << "data: [";
+      size_t pending_items = msg.data.size();
+      for (auto item : msg.data) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: dwidth
+  {
+    out << "dwidth: ";
+    rosidl_generator_traits::value_to_yaml(msg.dwidth, out);
+    out << ", ";
+  }
+
+  // member: delevation
+  {
+    out << "delevation: ";
+    rosidl_generator_traits::value_to_yaml(msg.delevation, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const NodeAttributeSetXY & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: localnode
@@ -37,7 +134,7 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "- ";
-        value_to_yaml(item, out);
+        rosidl_generator_traits::value_to_yaml(item, out);
         out << "\n";
       }
     }
@@ -57,7 +154,7 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "- ";
-        value_to_yaml(item, out);
+        rosidl_generator_traits::value_to_yaml(item, out);
         out << "\n";
       }
     }
@@ -77,7 +174,7 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "- ";
-        value_to_yaml(item, out);
+        rosidl_generator_traits::value_to_yaml(item, out);
         out << "\n";
       }
     }
@@ -97,7 +194,7 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "-\n";
-        to_yaml(item, out, indentation + 2);
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
@@ -108,7 +205,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "dwidth: ";
-    value_to_yaml(msg.dwidth, out);
+    rosidl_generator_traits::value_to_yaml(msg.dwidth, out);
     out << "\n";
   }
 
@@ -118,16 +215,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "delevation: ";
-    value_to_yaml(msg.delevation, out);
+    rosidl_generator_traits::value_to_yaml(msg.delevation, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::NodeAttributeSetXY & msg)
+inline std::string to_yaml(const NodeAttributeSetXY & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::NodeAttributeSetXY & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::NodeAttributeSetXY & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -130,7 +132,7 @@ class RequestorPositionVector(metaclass=Metaclass_RequestorPositionVector):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def position(self):
         """Message field 'position'."""
         return self._position
@@ -144,7 +146,7 @@ class RequestorPositionVector(metaclass=Metaclass_RequestorPositionVector):
                 "The 'position' field must be a sub message of type 'Position3D'"
         self._position = value
 
-    @property
+    @builtins.property
     def heading(self):
         """Message field 'heading'."""
         return self._heading
@@ -159,7 +161,7 @@ class RequestorPositionVector(metaclass=Metaclass_RequestorPositionVector):
                 "The 'heading' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._heading = value
 
-    @property
+    @builtins.property
     def speed(self):
         """Message field 'speed'."""
         return self._speed

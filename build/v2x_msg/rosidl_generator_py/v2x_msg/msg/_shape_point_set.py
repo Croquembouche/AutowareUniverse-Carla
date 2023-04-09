@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -136,7 +138,7 @@ class ShapePointSet(metaclass=Metaclass_ShapePointSet):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def anchor(self):
         """Message field 'anchor'."""
         return self._anchor
@@ -150,7 +152,7 @@ class ShapePointSet(metaclass=Metaclass_ShapePointSet):
                 "The 'anchor' field must be a sub message of type 'Position3D'"
         self._anchor = value
 
-    @property
+    @builtins.property
     def lanewidth(self):
         """Message field 'lanewidth'."""
         return self._lanewidth
@@ -165,7 +167,7 @@ class ShapePointSet(metaclass=Metaclass_ShapePointSet):
                 "The 'lanewidth' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._lanewidth = value
 
-    @property
+    @builtins.property
     def directionality(self):
         """Message field 'directionality'."""
         return self._directionality
@@ -180,7 +182,7 @@ class ShapePointSet(metaclass=Metaclass_ShapePointSet):
                 "The 'directionality' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._directionality = value
 
-    @property
+    @builtins.property
     def nodelist(self):
         """Message field 'nodelist'."""
         return self._nodelist

@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -120,7 +122,7 @@ class AntennaOffsetSet(metaclass=Metaclass_AntennaOffsetSet):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def antoffsetx(self):
         """Message field 'antoffsetx'."""
         return self._antoffsetx
@@ -135,7 +137,7 @@ class AntennaOffsetSet(metaclass=Metaclass_AntennaOffsetSet):
                 "The 'antoffsetx' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._antoffsetx = value
 
-    @property
+    @builtins.property
     def antoffsety(self):
         """Message field 'antoffsety'."""
         return self._antoffsety
@@ -150,7 +152,7 @@ class AntennaOffsetSet(metaclass=Metaclass_AntennaOffsetSet):
                 "The 'antoffsety' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._antoffsety = value
 
-    @property
+    @builtins.property
     def antoffsetz(self):
         """Message field 'antoffsetz'."""
         return self._antoffsetz

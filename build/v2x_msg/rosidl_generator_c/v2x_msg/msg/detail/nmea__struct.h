@@ -21,7 +21,7 @@ extern "C"
 // Member 'payload'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/NMEA in the package v2x_msg.
+/// Struct defined in msg/NMEA in the package v2x_msg.
 typedef struct v2x_msg__msg__NMEA
 {
   int64_t timestamp;

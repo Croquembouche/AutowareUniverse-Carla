@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -112,7 +114,7 @@ class ITISSpeedLimit(metaclass=Metaclass_ITISSpeedLimit):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def item(self):
         """Message field 'item'."""
         return self._item

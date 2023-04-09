@@ -1,5 +1,1 @@
-ITIScodesandtext[] advisory
-WorkZone[] workzone
-GenericSignage[] genericsign
-ITISSpeedLimit[] speedlimit
-ExitService[] exitservice
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/Content.msg

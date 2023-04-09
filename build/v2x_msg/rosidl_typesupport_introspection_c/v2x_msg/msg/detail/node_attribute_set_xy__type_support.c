@@ -27,7 +27,7 @@ extern "C"
 {
 #endif
 
-void NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_init_function(
+void v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_init_function(
   void * message_memory, enum rosidl_runtime_c__message_initialization _init)
 {
   // TODO(karsten1987): initializers are not yet implemented for typesupport c
@@ -36,12 +36,177 @@ void NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_
   v2x_msg__msg__NodeAttributeSetXY__init(message_memory);
 }
 
-void NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_fini_function(void * message_memory)
+void v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_fini_function(void * message_memory)
 {
   v2x_msg__msg__NodeAttributeSetXY__fini(message_memory);
 }
 
-size_t NodeAttributeSetXY__rosidl_typesupport_introspection_c__size_function__LaneDataAttribute__data(
+size_t v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__size_function__NodeAttributeSetXY__localnode(
+  const void * untyped_member)
+{
+  const rosidl_runtime_c__int64__Sequence * member =
+    (const rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_const_function__NodeAttributeSetXY__localnode(
+  const void * untyped_member, size_t index)
+{
+  const rosidl_runtime_c__int64__Sequence * member =
+    (const rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_function__NodeAttributeSetXY__localnode(
+  void * untyped_member, size_t index)
+{
+  rosidl_runtime_c__int64__Sequence * member =
+    (rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__fetch_function__NodeAttributeSetXY__localnode(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const int64_t * item =
+    ((const int64_t *)
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_const_function__NodeAttributeSetXY__localnode(untyped_member, index));
+  int64_t * value =
+    (int64_t *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__assign_function__NodeAttributeSetXY__localnode(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  int64_t * item =
+    ((int64_t *)
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_function__NodeAttributeSetXY__localnode(untyped_member, index));
+  const int64_t * value =
+    (const int64_t *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__resize_function__NodeAttributeSetXY__localnode(
+  void * untyped_member, size_t size)
+{
+  rosidl_runtime_c__int64__Sequence * member =
+    (rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  rosidl_runtime_c__int64__Sequence__fini(member);
+  return rosidl_runtime_c__int64__Sequence__init(member, size);
+}
+
+size_t v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__size_function__NodeAttributeSetXY__disabled(
+  const void * untyped_member)
+{
+  const rosidl_runtime_c__int64__Sequence * member =
+    (const rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_const_function__NodeAttributeSetXY__disabled(
+  const void * untyped_member, size_t index)
+{
+  const rosidl_runtime_c__int64__Sequence * member =
+    (const rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_function__NodeAttributeSetXY__disabled(
+  void * untyped_member, size_t index)
+{
+  rosidl_runtime_c__int64__Sequence * member =
+    (rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__fetch_function__NodeAttributeSetXY__disabled(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const int64_t * item =
+    ((const int64_t *)
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_const_function__NodeAttributeSetXY__disabled(untyped_member, index));
+  int64_t * value =
+    (int64_t *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__assign_function__NodeAttributeSetXY__disabled(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  int64_t * item =
+    ((int64_t *)
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_function__NodeAttributeSetXY__disabled(untyped_member, index));
+  const int64_t * value =
+    (const int64_t *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__resize_function__NodeAttributeSetXY__disabled(
+  void * untyped_member, size_t size)
+{
+  rosidl_runtime_c__int64__Sequence * member =
+    (rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  rosidl_runtime_c__int64__Sequence__fini(member);
+  return rosidl_runtime_c__int64__Sequence__init(member, size);
+}
+
+size_t v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__size_function__NodeAttributeSetXY__enabled(
+  const void * untyped_member)
+{
+  const rosidl_runtime_c__int64__Sequence * member =
+    (const rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_const_function__NodeAttributeSetXY__enabled(
+  const void * untyped_member, size_t index)
+{
+  const rosidl_runtime_c__int64__Sequence * member =
+    (const rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_function__NodeAttributeSetXY__enabled(
+  void * untyped_member, size_t index)
+{
+  rosidl_runtime_c__int64__Sequence * member =
+    (rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__fetch_function__NodeAttributeSetXY__enabled(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const int64_t * item =
+    ((const int64_t *)
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_const_function__NodeAttributeSetXY__enabled(untyped_member, index));
+  int64_t * value =
+    (int64_t *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__assign_function__NodeAttributeSetXY__enabled(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  int64_t * item =
+    ((int64_t *)
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_function__NodeAttributeSetXY__enabled(untyped_member, index));
+  const int64_t * value =
+    (const int64_t *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__resize_function__NodeAttributeSetXY__enabled(
+  void * untyped_member, size_t size)
+{
+  rosidl_runtime_c__int64__Sequence * member =
+    (rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  rosidl_runtime_c__int64__Sequence__fini(member);
+  return rosidl_runtime_c__int64__Sequence__init(member, size);
+}
+
+size_t v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__size_function__NodeAttributeSetXY__data(
   const void * untyped_member)
 {
   const v2x_msg__msg__LaneDataAttribute__Sequence * member =
@@ -49,7 +214,7 @@ size_t NodeAttributeSetXY__rosidl_typesupport_introspection_c__size_function__La
   return member->size;
 }
 
-const void * NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_const_function__LaneDataAttribute__data(
+const void * v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_const_function__NodeAttributeSetXY__data(
   const void * untyped_member, size_t index)
 {
   const v2x_msg__msg__LaneDataAttribute__Sequence * member =
@@ -57,7 +222,7 @@ const void * NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_const_f
   return &member->data[index];
 }
 
-void * NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_function__LaneDataAttribute__data(
+void * v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_function__NodeAttributeSetXY__data(
   void * untyped_member, size_t index)
 {
   v2x_msg__msg__LaneDataAttribute__Sequence * member =
@@ -65,7 +230,29 @@ void * NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_function__Lan
   return &member->data[index];
 }
 
-bool NodeAttributeSetXY__rosidl_typesupport_introspection_c__resize_function__LaneDataAttribute__data(
+void v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__fetch_function__NodeAttributeSetXY__data(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const v2x_msg__msg__LaneDataAttribute * item =
+    ((const v2x_msg__msg__LaneDataAttribute *)
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_const_function__NodeAttributeSetXY__data(untyped_member, index));
+  v2x_msg__msg__LaneDataAttribute * value =
+    (v2x_msg__msg__LaneDataAttribute *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__assign_function__NodeAttributeSetXY__data(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  v2x_msg__msg__LaneDataAttribute * item =
+    ((v2x_msg__msg__LaneDataAttribute *)
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_function__NodeAttributeSetXY__data(untyped_member, index));
+  const v2x_msg__msg__LaneDataAttribute * value =
+    (const v2x_msg__msg__LaneDataAttribute *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__resize_function__NodeAttributeSetXY__data(
   void * untyped_member, size_t size)
 {
   v2x_msg__msg__LaneDataAttribute__Sequence * member =
@@ -74,7 +261,7 @@ bool NodeAttributeSetXY__rosidl_typesupport_introspection_c__resize_function__La
   return v2x_msg__msg__LaneDataAttribute__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_member_array[6] = {
+static rosidl_typesupport_introspection_c__MessageMember v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_member_array[6] = {
   {
     "localnode",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
@@ -85,10 +272,12 @@ static rosidl_typesupport_introspection_c__MessageMember NodeAttributeSetXY__ros
     false,  // is upper bound
     offsetof(v2x_msg__msg__NodeAttributeSetXY, localnode),  // bytes offset in struct
     NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL  // resize(index) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__size_function__NodeAttributeSetXY__localnode,  // size() function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_const_function__NodeAttributeSetXY__localnode,  // get_const(index) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_function__NodeAttributeSetXY__localnode,  // get(index) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__fetch_function__NodeAttributeSetXY__localnode,  // fetch(index, &value) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__assign_function__NodeAttributeSetXY__localnode,  // assign(index, value) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__resize_function__NodeAttributeSetXY__localnode  // resize(index) function pointer
   },
   {
     "disabled",  // name
@@ -100,10 +289,12 @@ static rosidl_typesupport_introspection_c__MessageMember NodeAttributeSetXY__ros
     false,  // is upper bound
     offsetof(v2x_msg__msg__NodeAttributeSetXY, disabled),  // bytes offset in struct
     NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL  // resize(index) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__size_function__NodeAttributeSetXY__disabled,  // size() function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_const_function__NodeAttributeSetXY__disabled,  // get_const(index) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_function__NodeAttributeSetXY__disabled,  // get(index) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__fetch_function__NodeAttributeSetXY__disabled,  // fetch(index, &value) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__assign_function__NodeAttributeSetXY__disabled,  // assign(index, value) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__resize_function__NodeAttributeSetXY__disabled  // resize(index) function pointer
   },
   {
     "enabled",  // name
@@ -115,10 +306,12 @@ static rosidl_typesupport_introspection_c__MessageMember NodeAttributeSetXY__ros
     false,  // is upper bound
     offsetof(v2x_msg__msg__NodeAttributeSetXY, enabled),  // bytes offset in struct
     NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL  // resize(index) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__size_function__NodeAttributeSetXY__enabled,  // size() function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_const_function__NodeAttributeSetXY__enabled,  // get_const(index) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_function__NodeAttributeSetXY__enabled,  // get(index) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__fetch_function__NodeAttributeSetXY__enabled,  // fetch(index, &value) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__assign_function__NodeAttributeSetXY__enabled,  // assign(index, value) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__resize_function__NodeAttributeSetXY__enabled  // resize(index) function pointer
   },
   {
     "data",  // name
@@ -130,10 +323,12 @@ static rosidl_typesupport_introspection_c__MessageMember NodeAttributeSetXY__ros
     false,  // is upper bound
     offsetof(v2x_msg__msg__NodeAttributeSetXY, data),  // bytes offset in struct
     NULL,  // default value
-    NodeAttributeSetXY__rosidl_typesupport_introspection_c__size_function__LaneDataAttribute__data,  // size() function pointer
-    NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_const_function__LaneDataAttribute__data,  // get_const(index) function pointer
-    NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_function__LaneDataAttribute__data,  // get(index) function pointer
-    NodeAttributeSetXY__rosidl_typesupport_introspection_c__resize_function__LaneDataAttribute__data  // resize(index) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__size_function__NodeAttributeSetXY__data,  // size() function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_const_function__NodeAttributeSetXY__data,  // get_const(index) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__get_function__NodeAttributeSetXY__data,  // get(index) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__fetch_function__NodeAttributeSetXY__data,  // fetch(index, &value) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__assign_function__NodeAttributeSetXY__data,  // assign(index, value) function pointer
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__resize_function__NodeAttributeSetXY__data  // resize(index) function pointer
   },
   {
     "dwidth",  // name
@@ -148,6 +343,8 @@ static rosidl_typesupport_introspection_c__MessageMember NodeAttributeSetXY__ros
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -163,38 +360,40 @@ static rosidl_typesupport_introspection_c__MessageMember NodeAttributeSetXY__ros
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   }
 };
 
-static const rosidl_typesupport_introspection_c__MessageMembers NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_members = {
+static const rosidl_typesupport_introspection_c__MessageMembers v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_members = {
   "v2x_msg__msg",  // message namespace
   "NodeAttributeSetXY",  // message name
   6,  // number of fields
   sizeof(v2x_msg__msg__NodeAttributeSetXY),
-  NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_member_array,  // message members
-  NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_init_function,  // function to initialize message memory (memory has to be allocated)
-  NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_fini_function  // function to terminate message instance (will not free memory)
+  v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_member_array,  // message members
+  v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_init_function,  // function to initialize message memory (memory has to be allocated)
+  v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_fini_function  // function to terminate message instance (will not free memory)
 };
 
 // this is not const since it must be initialized on first access
 // since C does not allow non-integral compile-time constants
-static rosidl_message_type_support_t NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_type_support_handle = {
+static rosidl_message_type_support_t v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_type_support_handle = {
   0,
-  &NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_members,
+  &v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_members,
   get_message_typesupport_handle_function,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_v2x_msg
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, NodeAttributeSetXY)() {
-  NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_member_array[3].members_ =
+  v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_member_array[3].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, LaneDataAttribute)();
-  if (!NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_type_support_handle.typesupport_identifier) {
-    NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_type_support_handle.typesupport_identifier =
+  if (!v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_type_support_handle.typesupport_identifier) {
+    v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
   }
-  return &NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_type_support_handle;
+  return &v2x_msg__msg__NodeAttributeSetXY__rosidl_typesupport_introspection_c__NodeAttributeSetXY_message_type_support_handle;
 }
 #ifdef __cplusplus
 }

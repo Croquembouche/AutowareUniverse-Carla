@@ -23,7 +23,7 @@ extern "C"
 // Member 'nodes'
 #include "v2x_msg/msg/detail/node_ll__struct.h"
 
-// Struct defined in msg/Offset in the package v2x_msg.
+/// Struct defined in msg/Offset in the package v2x_msg.
 typedef struct v2x_msg__msg__Offset
 {
   v2x_msg__msg__NodeListXY xy;

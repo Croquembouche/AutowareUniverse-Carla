@@ -1,18 +1,1 @@
-// generated from rosidl_adapter/resource/msg.idl.em
-// with input from v2x_msg/msg/AccelerationSet4Way.msg
-// generated code does not contain a copyright notice
-
-
-module v2x_msg {
-  module msg {
-    struct AccelerationSet4Way {
-      int64 longitude;
-
-      int64 lat;
-
-      int64 vert;
-
-      int64 yaw;
-    };
-  };
-};
+/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/AccelerationSet4Way.idl

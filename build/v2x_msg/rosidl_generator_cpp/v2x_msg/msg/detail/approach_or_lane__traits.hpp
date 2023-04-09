@@ -5,18 +5,43 @@
 #ifndef V2X_MSG__MSG__DETAIL__APPROACH_OR_LANE__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__APPROACH_OR_LANE__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/approach_or_lane__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
 
-namespace rosidl_generator_traits
+#include "v2x_msg/msg/detail/approach_or_lane__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
+
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::ApproachOrLane & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const ApproachOrLane & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: approach
+  {
+    out << "approach: ";
+    rosidl_generator_traits::value_to_yaml(msg.approach, out);
+    out << ", ";
+  }
+
+  // member: lane
+  {
+    out << "lane: ";
+    rosidl_generator_traits::value_to_yaml(msg.lane, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const ApproachOrLane & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: approach
@@ -25,7 +50,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "approach: ";
-    value_to_yaml(msg.approach, out);
+    rosidl_generator_traits::value_to_yaml(msg.approach, out);
     out << "\n";
   }
 
@@ -35,16 +60,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "lane: ";
-    value_to_yaml(msg.lane, out);
+    rosidl_generator_traits::value_to_yaml(msg.lane, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::ApproachOrLane & msg)
+inline std::string to_yaml(const ApproachOrLane & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::ApproachOrLane & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::ApproachOrLane & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

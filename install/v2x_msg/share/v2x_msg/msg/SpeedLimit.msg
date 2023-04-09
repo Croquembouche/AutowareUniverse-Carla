@@ -1,2 +1,1 @@
-int64 type
-int64 speed
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/SpeedLimit.msg

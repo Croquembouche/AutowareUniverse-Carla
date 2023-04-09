@@ -5,18 +5,50 @@
 #ifndef V2X_MSG__MSG__DETAIL__POSITIONAL_ACCURACY__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__POSITIONAL_ACCURACY__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/positional_accuracy__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
 
-namespace rosidl_generator_traits
+#include "v2x_msg/msg/detail/positional_accuracy__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
+
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::PositionalAccuracy & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const PositionalAccuracy & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: semimajor
+  {
+    out << "semimajor: ";
+    rosidl_generator_traits::value_to_yaml(msg.semimajor, out);
+    out << ", ";
+  }
+
+  // member: semiminor
+  {
+    out << "semiminor: ";
+    rosidl_generator_traits::value_to_yaml(msg.semiminor, out);
+    out << ", ";
+  }
+
+  // member: orientation
+  {
+    out << "orientation: ";
+    rosidl_generator_traits::value_to_yaml(msg.orientation, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const PositionalAccuracy & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: semimajor
@@ -25,7 +57,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "semimajor: ";
-    value_to_yaml(msg.semimajor, out);
+    rosidl_generator_traits::value_to_yaml(msg.semimajor, out);
     out << "\n";
   }
 
@@ -35,7 +67,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "semiminor: ";
-    value_to_yaml(msg.semiminor, out);
+    rosidl_generator_traits::value_to_yaml(msg.semiminor, out);
     out << "\n";
   }
 
@@ -45,16 +77,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "orientation: ";
-    value_to_yaml(msg.orientation, out);
+    rosidl_generator_traits::value_to_yaml(msg.orientation, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::PositionalAccuracy & msg)
+inline std::string to_yaml(const PositionalAccuracy & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::PositionalAccuracy & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::PositionalAccuracy & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

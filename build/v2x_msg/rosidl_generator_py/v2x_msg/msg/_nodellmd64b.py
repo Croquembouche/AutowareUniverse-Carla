@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -114,7 +116,7 @@ class Nodellmd64b(metaclass=Metaclass_Nodellmd64b):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def longitude(self):
         """Message field 'longitude'."""
         return self._longitude
@@ -129,7 +131,7 @@ class Nodellmd64b(metaclass=Metaclass_Nodellmd64b):
                 "The 'longitude' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._longitude = value
 
-    @property
+    @builtins.property
     def latitude(self):
         """Message field 'latitude'."""
         return self._latitude

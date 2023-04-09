@@ -1,0 +1,7 @@
+-- The C compiler identification is unknown
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- broken
+-- Configuring incomplete, errors occurred!
+See also "/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/CMakeFiles/CMakeOutput.log".
+See also "/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/CMakeFiles/CMakeError.log".

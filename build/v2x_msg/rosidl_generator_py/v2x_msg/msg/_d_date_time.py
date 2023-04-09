@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -144,7 +146,7 @@ class DDateTime(metaclass=Metaclass_DDateTime):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def year(self):
         """Message field 'year'."""
         return self._year
@@ -159,7 +161,7 @@ class DDateTime(metaclass=Metaclass_DDateTime):
                 "The 'year' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._year = value
 
-    @property
+    @builtins.property
     def month(self):
         """Message field 'month'."""
         return self._month
@@ -174,7 +176,7 @@ class DDateTime(metaclass=Metaclass_DDateTime):
                 "The 'month' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._month = value
 
-    @property
+    @builtins.property
     def day(self):
         """Message field 'day'."""
         return self._day
@@ -189,7 +191,7 @@ class DDateTime(metaclass=Metaclass_DDateTime):
                 "The 'day' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._day = value
 
-    @property
+    @builtins.property
     def hour(self):
         """Message field 'hour'."""
         return self._hour
@@ -204,7 +206,7 @@ class DDateTime(metaclass=Metaclass_DDateTime):
                 "The 'hour' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._hour = value
 
-    @property
+    @builtins.property
     def minute(self):
         """Message field 'minute'."""
         return self._minute
@@ -219,7 +221,7 @@ class DDateTime(metaclass=Metaclass_DDateTime):
                 "The 'minute' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._minute = value
 
-    @property
+    @builtins.property
     def second(self):
         """Message field 'second'."""
         return self._second
@@ -234,7 +236,7 @@ class DDateTime(metaclass=Metaclass_DDateTime):
                 "The 'second' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._second = value
 
-    @property
+    @builtins.property
     def offset(self):
         """Message field 'offset'."""
         return self._offset

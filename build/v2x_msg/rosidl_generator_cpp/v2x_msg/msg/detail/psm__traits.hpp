@@ -5,12 +5,14 @@
 #ifndef V2X_MSG__MSG__DETAIL__PSM__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__PSM__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/psm__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/psm__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'position'
@@ -26,11 +28,195 @@
 // Member 'propulsion'
 #include "v2x_msg/msg/detail/propelled_information__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::PSM & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const PSM & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: basictype
+  {
+    out << "basictype: ";
+    rosidl_generator_traits::value_to_yaml(msg.basictype, out);
+    out << ", ";
+  }
+
+  // member: secmark
+  {
+    out << "secmark: ";
+    rosidl_generator_traits::value_to_yaml(msg.secmark, out);
+    out << ", ";
+  }
+
+  // member: msgcnt
+  {
+    out << "msgcnt: ";
+    rosidl_generator_traits::value_to_yaml(msg.msgcnt, out);
+    out << ", ";
+  }
+
+  // member: id
+  {
+    out << "id: ";
+    rosidl_generator_traits::value_to_yaml(msg.id, out);
+    out << ", ";
+  }
+
+  // member: position
+  {
+    out << "position: ";
+    to_flow_style_yaml(msg.position, out);
+    out << ", ";
+  }
+
+  // member: accuracy
+  {
+    out << "accuracy: ";
+    to_flow_style_yaml(msg.accuracy, out);
+    out << ", ";
+  }
+
+  // member: speed
+  {
+    out << "speed: ";
+    rosidl_generator_traits::value_to_yaml(msg.speed, out);
+    out << ", ";
+  }
+
+  // member: heading
+  {
+    out << "heading: ";
+    rosidl_generator_traits::value_to_yaml(msg.heading, out);
+    out << ", ";
+  }
+
+  // member: accelset
+  {
+    out << "accelset: ";
+    to_flow_style_yaml(msg.accelset, out);
+    out << ", ";
+  }
+
+  // member: pathhistory
+  {
+    out << "pathhistory: ";
+    to_flow_style_yaml(msg.pathhistory, out);
+    out << ", ";
+  }
+
+  // member: pathprediction
+  {
+    out << "pathprediction: ";
+    to_flow_style_yaml(msg.pathprediction, out);
+    out << ", ";
+  }
+
+  // member: propulsion
+  {
+    out << "propulsion: ";
+    to_flow_style_yaml(msg.propulsion, out);
+    out << ", ";
+  }
+
+  // member: usestate
+  {
+    out << "usestate: ";
+    rosidl_generator_traits::value_to_yaml(msg.usestate, out);
+    out << ", ";
+  }
+
+  // member: crossrequest
+  {
+    out << "crossrequest: ";
+    rosidl_generator_traits::value_to_yaml(msg.crossrequest, out);
+    out << ", ";
+  }
+
+  // member: crossstate
+  {
+    out << "crossstate: ";
+    rosidl_generator_traits::value_to_yaml(msg.crossstate, out);
+    out << ", ";
+  }
+
+  // member: clustersize
+  {
+    out << "clustersize: ";
+    rosidl_generator_traits::value_to_yaml(msg.clustersize, out);
+    out << ", ";
+  }
+
+  // member: clusterradius
+  {
+    out << "clusterradius: ";
+    rosidl_generator_traits::value_to_yaml(msg.clusterradius, out);
+    out << ", ";
+  }
+
+  // member: eventrespondertype
+  {
+    out << "eventrespondertype: ";
+    rosidl_generator_traits::value_to_yaml(msg.eventrespondertype, out);
+    out << ", ";
+  }
+
+  // member: activitytype
+  {
+    out << "activitytype: ";
+    rosidl_generator_traits::value_to_yaml(msg.activitytype, out);
+    out << ", ";
+  }
+
+  // member: activitysubtype
+  {
+    out << "activitysubtype: ";
+    rosidl_generator_traits::value_to_yaml(msg.activitysubtype, out);
+    out << ", ";
+  }
+
+  // member: assisttype
+  {
+    out << "assisttype: ";
+    rosidl_generator_traits::value_to_yaml(msg.assisttype, out);
+    out << ", ";
+  }
+
+  // member: sizing
+  {
+    out << "sizing: ";
+    rosidl_generator_traits::value_to_yaml(msg.sizing, out);
+    out << ", ";
+  }
+
+  // member: attachment
+  {
+    out << "attachment: ";
+    rosidl_generator_traits::value_to_yaml(msg.attachment, out);
+    out << ", ";
+  }
+
+  // member: attachmentradius
+  {
+    out << "attachmentradius: ";
+    rosidl_generator_traits::value_to_yaml(msg.attachmentradius, out);
+    out << ", ";
+  }
+
+  // member: animaltype
+  {
+    out << "animaltype: ";
+    rosidl_generator_traits::value_to_yaml(msg.animaltype, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const PSM & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: basictype
@@ -39,7 +225,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "basictype: ";
-    value_to_yaml(msg.basictype, out);
+    rosidl_generator_traits::value_to_yaml(msg.basictype, out);
     out << "\n";
   }
 
@@ -49,7 +235,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "secmark: ";
-    value_to_yaml(msg.secmark, out);
+    rosidl_generator_traits::value_to_yaml(msg.secmark, out);
     out << "\n";
   }
 
@@ -59,7 +245,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "msgcnt: ";
-    value_to_yaml(msg.msgcnt, out);
+    rosidl_generator_traits::value_to_yaml(msg.msgcnt, out);
     out << "\n";
   }
 
@@ -69,7 +255,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "id: ";
-    value_to_yaml(msg.id, out);
+    rosidl_generator_traits::value_to_yaml(msg.id, out);
     out << "\n";
   }
 
@@ -79,7 +265,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "position:\n";
-    to_yaml(msg.position, out, indentation + 2);
+    to_block_style_yaml(msg.position, out, indentation + 2);
   }
 
   // member: accuracy
@@ -88,7 +274,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "accuracy:\n";
-    to_yaml(msg.accuracy, out, indentation + 2);
+    to_block_style_yaml(msg.accuracy, out, indentation + 2);
   }
 
   // member: speed
@@ -97,7 +283,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "speed: ";
-    value_to_yaml(msg.speed, out);
+    rosidl_generator_traits::value_to_yaml(msg.speed, out);
     out << "\n";
   }
 
@@ -107,7 +293,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "heading: ";
-    value_to_yaml(msg.heading, out);
+    rosidl_generator_traits::value_to_yaml(msg.heading, out);
     out << "\n";
   }
 
@@ -117,7 +303,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "accelset:\n";
-    to_yaml(msg.accelset, out, indentation + 2);
+    to_block_style_yaml(msg.accelset, out, indentation + 2);
   }
 
   // member: pathhistory
@@ -126,7 +312,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "pathhistory:\n";
-    to_yaml(msg.pathhistory, out, indentation + 2);
+    to_block_style_yaml(msg.pathhistory, out, indentation + 2);
   }
 
   // member: pathprediction
@@ -135,7 +321,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "pathprediction:\n";
-    to_yaml(msg.pathprediction, out, indentation + 2);
+    to_block_style_yaml(msg.pathprediction, out, indentation + 2);
   }
 
   // member: propulsion
@@ -144,7 +330,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "propulsion:\n";
-    to_yaml(msg.propulsion, out, indentation + 2);
+    to_block_style_yaml(msg.propulsion, out, indentation + 2);
   }
 
   // member: usestate
@@ -153,7 +339,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "usestate: ";
-    value_to_yaml(msg.usestate, out);
+    rosidl_generator_traits::value_to_yaml(msg.usestate, out);
     out << "\n";
   }
 
@@ -163,7 +349,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "crossrequest: ";
-    value_to_yaml(msg.crossrequest, out);
+    rosidl_generator_traits::value_to_yaml(msg.crossrequest, out);
     out << "\n";
   }
 
@@ -173,7 +359,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "crossstate: ";
-    value_to_yaml(msg.crossstate, out);
+    rosidl_generator_traits::value_to_yaml(msg.crossstate, out);
     out << "\n";
   }
 
@@ -183,7 +369,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "clustersize: ";
-    value_to_yaml(msg.clustersize, out);
+    rosidl_generator_traits::value_to_yaml(msg.clustersize, out);
     out << "\n";
   }
 
@@ -193,7 +379,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "clusterradius: ";
-    value_to_yaml(msg.clusterradius, out);
+    rosidl_generator_traits::value_to_yaml(msg.clusterradius, out);
     out << "\n";
   }
 
@@ -203,7 +389,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "eventrespondertype: ";
-    value_to_yaml(msg.eventrespondertype, out);
+    rosidl_generator_traits::value_to_yaml(msg.eventrespondertype, out);
     out << "\n";
   }
 
@@ -213,7 +399,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "activitytype: ";
-    value_to_yaml(msg.activitytype, out);
+    rosidl_generator_traits::value_to_yaml(msg.activitytype, out);
     out << "\n";
   }
 
@@ -223,7 +409,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "activitysubtype: ";
-    value_to_yaml(msg.activitysubtype, out);
+    rosidl_generator_traits::value_to_yaml(msg.activitysubtype, out);
     out << "\n";
   }
 
@@ -233,7 +419,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "assisttype: ";
-    value_to_yaml(msg.assisttype, out);
+    rosidl_generator_traits::value_to_yaml(msg.assisttype, out);
     out << "\n";
   }
 
@@ -243,7 +429,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "sizing: ";
-    value_to_yaml(msg.sizing, out);
+    rosidl_generator_traits::value_to_yaml(msg.sizing, out);
     out << "\n";
   }
 
@@ -253,7 +439,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "attachment: ";
-    value_to_yaml(msg.attachment, out);
+    rosidl_generator_traits::value_to_yaml(msg.attachment, out);
     out << "\n";
   }
 
@@ -263,7 +449,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "attachmentradius: ";
-    value_to_yaml(msg.attachmentradius, out);
+    rosidl_generator_traits::value_to_yaml(msg.attachmentradius, out);
     out << "\n";
   }
 
@@ -273,16 +459,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "animaltype: ";
-    value_to_yaml(msg.animaltype, out);
+    rosidl_generator_traits::value_to_yaml(msg.animaltype, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::PSM & msg)
+inline std::string to_yaml(const PSM & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::PSM & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::PSM & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

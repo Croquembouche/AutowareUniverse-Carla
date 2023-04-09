@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -120,7 +122,7 @@ class Position3D(metaclass=Metaclass_Position3D):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def latitude(self):
         """Message field 'latitude'."""
         return self._latitude
@@ -135,7 +137,7 @@ class Position3D(metaclass=Metaclass_Position3D):
                 "The 'latitude' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._latitude = value
 
-    @property
+    @builtins.property
     def longitude(self):
         """Message field 'longitude'."""
         return self._longitude
@@ -150,7 +152,7 @@ class Position3D(metaclass=Metaclass_Position3D):
                 "The 'longitude' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._longitude = value
 
-    @property
+    @builtins.property
     def elevation(self):
         """Message field 'elevation'."""
         return self._elevation

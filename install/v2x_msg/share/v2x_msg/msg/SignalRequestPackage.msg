@@ -1,4 +1,1 @@
-SignalRequest signalrequest
-int64 minute
-int64 second
-int64 duration
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/SignalRequestPackage.msg

@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -198,7 +200,7 @@ class IntersectionStatusObject(metaclass=Metaclass_IntersectionStatusObject):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def manualcontrolisenabled(self):
         """Message field 'manualcontrolisenabled'."""
         return self._manualcontrolisenabled
@@ -213,7 +215,7 @@ class IntersectionStatusObject(metaclass=Metaclass_IntersectionStatusObject):
                 "The 'manualcontrolisenabled' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._manualcontrolisenabled = value
 
-    @property
+    @builtins.property
     def stoptimeisactivated(self):
         """Message field 'stoptimeisactivated'."""
         return self._stoptimeisactivated
@@ -228,7 +230,7 @@ class IntersectionStatusObject(metaclass=Metaclass_IntersectionStatusObject):
                 "The 'stoptimeisactivated' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._stoptimeisactivated = value
 
-    @property
+    @builtins.property
     def failureflash(self):
         """Message field 'failureflash'."""
         return self._failureflash
@@ -243,7 +245,7 @@ class IntersectionStatusObject(metaclass=Metaclass_IntersectionStatusObject):
                 "The 'failureflash' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._failureflash = value
 
-    @property
+    @builtins.property
     def preemptisactive(self):
         """Message field 'preemptisactive'."""
         return self._preemptisactive
@@ -258,7 +260,7 @@ class IntersectionStatusObject(metaclass=Metaclass_IntersectionStatusObject):
                 "The 'preemptisactive' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._preemptisactive = value
 
-    @property
+    @builtins.property
     def signalpriorityisactive(self):
         """Message field 'signalpriorityisactive'."""
         return self._signalpriorityisactive
@@ -273,7 +275,7 @@ class IntersectionStatusObject(metaclass=Metaclass_IntersectionStatusObject):
                 "The 'signalpriorityisactive' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._signalpriorityisactive = value
 
-    @property
+    @builtins.property
     def fixedtimeoperation(self):
         """Message field 'fixedtimeoperation'."""
         return self._fixedtimeoperation
@@ -288,7 +290,7 @@ class IntersectionStatusObject(metaclass=Metaclass_IntersectionStatusObject):
                 "The 'fixedtimeoperation' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._fixedtimeoperation = value
 
-    @property
+    @builtins.property
     def trafficdependentoperation(self):
         """Message field 'trafficdependentoperation'."""
         return self._trafficdependentoperation
@@ -303,7 +305,7 @@ class IntersectionStatusObject(metaclass=Metaclass_IntersectionStatusObject):
                 "The 'trafficdependentoperation' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._trafficdependentoperation = value
 
-    @property
+    @builtins.property
     def standbyoperation(self):
         """Message field 'standbyoperation'."""
         return self._standbyoperation
@@ -318,7 +320,7 @@ class IntersectionStatusObject(metaclass=Metaclass_IntersectionStatusObject):
                 "The 'standbyoperation' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._standbyoperation = value
 
-    @property
+    @builtins.property
     def failuremode(self):
         """Message field 'failuremode'."""
         return self._failuremode
@@ -333,7 +335,7 @@ class IntersectionStatusObject(metaclass=Metaclass_IntersectionStatusObject):
                 "The 'failuremode' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._failuremode = value
 
-    @property
+    @builtins.property
     def off(self):
         """Message field 'off'."""
         return self._off
@@ -348,7 +350,7 @@ class IntersectionStatusObject(metaclass=Metaclass_IntersectionStatusObject):
                 "The 'off' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._off = value
 
-    @property
+    @builtins.property
     def recentmapmessageupdate(self):
         """Message field 'recentmapmessageupdate'."""
         return self._recentmapmessageupdate
@@ -363,7 +365,7 @@ class IntersectionStatusObject(metaclass=Metaclass_IntersectionStatusObject):
                 "The 'recentmapmessageupdate' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._recentmapmessageupdate = value
 
-    @property
+    @builtins.property
     def recentchangeinmapassignedlanesidsused(self):
         """Message field 'recentchangeinmapassignedlanesidsused'."""
         return self._recentchangeinmapassignedlanesidsused
@@ -378,7 +380,7 @@ class IntersectionStatusObject(metaclass=Metaclass_IntersectionStatusObject):
                 "The 'recentchangeinmapassignedlanesidsused' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._recentchangeinmapassignedlanesidsused = value
 
-    @property
+    @builtins.property
     def novalidmapisabilableatthistime(self):
         """Message field 'novalidmapisabilableatthistime'."""
         return self._novalidmapisabilableatthistime
@@ -393,7 +395,7 @@ class IntersectionStatusObject(metaclass=Metaclass_IntersectionStatusObject):
                 "The 'novalidmapisabilableatthistime' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._novalidmapisabilableatthistime = value
 
-    @property
+    @builtins.property
     def nobalidspatisabilableatthistime(self):
         """Message field 'nobalidspatisabilableatthistime'."""
         return self._nobalidspatisabilableatthistime
@@ -408,7 +410,7 @@ class IntersectionStatusObject(metaclass=Metaclass_IntersectionStatusObject):
                 "The 'nobalidspatisabilableatthistime' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._nobalidspatisabilableatthistime = value
 
-    @property
+    @builtins.property
     def reserve14(self):
         """Message field 'reserve14'."""
         return self._reserve14
@@ -423,7 +425,7 @@ class IntersectionStatusObject(metaclass=Metaclass_IntersectionStatusObject):
                 "The 'reserve14' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._reserve14 = value
 
-    @property
+    @builtins.property
     def reserve15(self):
         """Message field 'reserve15'."""
         return self._reserve15

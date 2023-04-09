@@ -27,7 +27,7 @@ extern "C"
 // Member 'snapshots'
 #include "v2x_msg/msg/detail/snapshot__struct.h"
 
-// Struct defined in msg/PVD in the package v2x_msg.
+/// Struct defined in msg/PVD in the package v2x_msg.
 typedef struct v2x_msg__msg__PVD
 {
   int64_t timstamp;

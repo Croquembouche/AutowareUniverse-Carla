@@ -1,3 +1,1 @@
-int64 vgroup
-int64 rgroup
-int64 requip
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/VehicleClass.msg

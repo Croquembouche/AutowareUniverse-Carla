@@ -23,7 +23,7 @@ extern "C"
 {
 #endif
 
-void ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_init_function(
+void v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_init_function(
   void * message_memory, enum rosidl_runtime_c__message_initialization _init)
 {
   // TODO(karsten1987): initializers are not yet implemented for typesupport c
@@ -32,12 +32,12 @@ void ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_init
   v2x_msg__msg__ITIScodesandtext__init(message_memory);
 }
 
-void ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_fini_function(void * message_memory)
+void v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_fini_function(void * message_memory)
 {
   v2x_msg__msg__ITIScodesandtext__fini(message_memory);
 }
 
-size_t ITIScodesandtext__rosidl_typesupport_introspection_c__size_function__ITIScodesandtextcontent__item(
+size_t v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__size_function__ITIScodesandtext__item(
   const void * untyped_member)
 {
   const v2x_msg__msg__ITIScodesandtextcontent__Sequence * member =
@@ -45,7 +45,7 @@ size_t ITIScodesandtext__rosidl_typesupport_introspection_c__size_function__ITIS
   return member->size;
 }
 
-const void * ITIScodesandtext__rosidl_typesupport_introspection_c__get_const_function__ITIScodesandtextcontent__item(
+const void * v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__get_const_function__ITIScodesandtext__item(
   const void * untyped_member, size_t index)
 {
   const v2x_msg__msg__ITIScodesandtextcontent__Sequence * member =
@@ -53,7 +53,7 @@ const void * ITIScodesandtext__rosidl_typesupport_introspection_c__get_const_fun
   return &member->data[index];
 }
 
-void * ITIScodesandtext__rosidl_typesupport_introspection_c__get_function__ITIScodesandtextcontent__item(
+void * v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__get_function__ITIScodesandtext__item(
   void * untyped_member, size_t index)
 {
   v2x_msg__msg__ITIScodesandtextcontent__Sequence * member =
@@ -61,7 +61,29 @@ void * ITIScodesandtext__rosidl_typesupport_introspection_c__get_function__ITISc
   return &member->data[index];
 }
 
-bool ITIScodesandtext__rosidl_typesupport_introspection_c__resize_function__ITIScodesandtextcontent__item(
+void v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__fetch_function__ITIScodesandtext__item(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const v2x_msg__msg__ITIScodesandtextcontent * item =
+    ((const v2x_msg__msg__ITIScodesandtextcontent *)
+    v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__get_const_function__ITIScodesandtext__item(untyped_member, index));
+  v2x_msg__msg__ITIScodesandtextcontent * value =
+    (v2x_msg__msg__ITIScodesandtextcontent *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__assign_function__ITIScodesandtext__item(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  v2x_msg__msg__ITIScodesandtextcontent * item =
+    ((v2x_msg__msg__ITIScodesandtextcontent *)
+    v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__get_function__ITIScodesandtext__item(untyped_member, index));
+  const v2x_msg__msg__ITIScodesandtextcontent * value =
+    (const v2x_msg__msg__ITIScodesandtextcontent *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__resize_function__ITIScodesandtext__item(
   void * untyped_member, size_t size)
 {
   v2x_msg__msg__ITIScodesandtextcontent__Sequence * member =
@@ -70,7 +92,7 @@ bool ITIScodesandtext__rosidl_typesupport_introspection_c__resize_function__ITIS
   return v2x_msg__msg__ITIScodesandtextcontent__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_member_array[1] = {
   {
     "item",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -81,41 +103,43 @@ static rosidl_typesupport_introspection_c__MessageMember ITIScodesandtext__rosid
     false,  // is upper bound
     offsetof(v2x_msg__msg__ITIScodesandtext, item),  // bytes offset in struct
     NULL,  // default value
-    ITIScodesandtext__rosidl_typesupport_introspection_c__size_function__ITIScodesandtextcontent__item,  // size() function pointer
-    ITIScodesandtext__rosidl_typesupport_introspection_c__get_const_function__ITIScodesandtextcontent__item,  // get_const(index) function pointer
-    ITIScodesandtext__rosidl_typesupport_introspection_c__get_function__ITIScodesandtextcontent__item,  // get(index) function pointer
-    ITIScodesandtext__rosidl_typesupport_introspection_c__resize_function__ITIScodesandtextcontent__item  // resize(index) function pointer
+    v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__size_function__ITIScodesandtext__item,  // size() function pointer
+    v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__get_const_function__ITIScodesandtext__item,  // get_const(index) function pointer
+    v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__get_function__ITIScodesandtext__item,  // get(index) function pointer
+    v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__fetch_function__ITIScodesandtext__item,  // fetch(index, &value) function pointer
+    v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__assign_function__ITIScodesandtext__item,  // assign(index, value) function pointer
+    v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__resize_function__ITIScodesandtext__item  // resize(index) function pointer
   }
 };
 
-static const rosidl_typesupport_introspection_c__MessageMembers ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_members = {
+static const rosidl_typesupport_introspection_c__MessageMembers v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_members = {
   "v2x_msg__msg",  // message namespace
   "ITIScodesandtext",  // message name
   1,  // number of fields
   sizeof(v2x_msg__msg__ITIScodesandtext),
-  ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_member_array,  // message members
-  ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_init_function,  // function to initialize message memory (memory has to be allocated)
-  ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_fini_function  // function to terminate message instance (will not free memory)
+  v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_member_array,  // message members
+  v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_init_function,  // function to initialize message memory (memory has to be allocated)
+  v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_fini_function  // function to terminate message instance (will not free memory)
 };
 
 // this is not const since it must be initialized on first access
 // since C does not allow non-integral compile-time constants
-static rosidl_message_type_support_t ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_type_support_handle = {
+static rosidl_message_type_support_t v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_type_support_handle = {
   0,
-  &ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_members,
+  &v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_members,
   get_message_typesupport_handle_function,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_v2x_msg
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, ITIScodesandtext)() {
-  ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_member_array[0].members_ =
+  v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_member_array[0].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, ITIScodesandtextcontent)();
-  if (!ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_type_support_handle.typesupport_identifier) {
-    ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_type_support_handle.typesupport_identifier =
+  if (!v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_type_support_handle.typesupport_identifier) {
+    v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
   }
-  return &ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_type_support_handle;
+  return &v2x_msg__msg__ITIScodesandtext__rosidl_typesupport_introspection_c__ITIScodesandtext_message_type_support_handle;
 }
 #ifdef __cplusplus
 }

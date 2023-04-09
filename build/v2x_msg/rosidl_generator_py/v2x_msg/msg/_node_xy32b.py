@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -114,7 +116,7 @@ class NodeXY32b(metaclass=Metaclass_NodeXY32b):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def x(self):
         """Message field 'x'."""
         return self._x
@@ -129,7 +131,7 @@ class NodeXY32b(metaclass=Metaclass_NodeXY32b):
                 "The 'x' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._x = value
 
-    @property
+    @builtins.property
     def y(self):
         """Message field 'y'."""
         return self._y

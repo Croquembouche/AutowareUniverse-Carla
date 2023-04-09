@@ -1,3 +1,1 @@
-int64 timestamp
-string name
-IntersectionState[] intersections
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/SPAT.msg

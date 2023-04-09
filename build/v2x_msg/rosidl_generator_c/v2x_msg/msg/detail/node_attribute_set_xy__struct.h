@@ -25,7 +25,7 @@ extern "C"
 // Member 'data'
 #include "v2x_msg/msg/detail/lane_data_attribute__struct.h"
 
-// Struct defined in msg/NodeAttributeSetXY in the package v2x_msg.
+/// Struct defined in msg/NodeAttributeSetXY in the package v2x_msg.
 typedef struct v2x_msg__msg__NodeAttributeSetXY
 {
   rosidl_runtime_c__int64__Sequence localnode;

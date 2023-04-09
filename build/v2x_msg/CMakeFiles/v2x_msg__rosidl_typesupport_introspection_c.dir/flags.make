@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_FLAGS = -fPIC   -Wall -std=gnu11
 
-C_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"v2x_msg\" -Dv2x_msg__rosidl_typesupport_introspection_c_EXPORTS
+C_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_v2x_msg -DROS_PACKAGE_NAME=\"v2x_msg\"
 
-C_INCLUDES = -I/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_generator_c -I/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_introspection_c -isystem /opt/ros/galactic/include 
+C_INCLUDES = -I/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_introspection_c -I/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_generator_c -isystem /home/carla/ros2_humble/install/rosidl_runtime_c/include/rosidl_runtime_c -isystem /home/carla/ros2_humble/install/rcutils/include/rcutils -isystem /home/carla/ros2_humble/install/rosidl_typesupport_interface/include/rosidl_typesupport_interface -isystem /home/carla/ros2_humble/install/rosidl_typesupport_introspection_c/include/rosidl_typesupport_introspection_c 
 

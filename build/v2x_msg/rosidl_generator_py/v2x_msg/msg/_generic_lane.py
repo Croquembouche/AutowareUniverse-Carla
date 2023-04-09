@@ -8,6 +8,8 @@
 # Member 'overlays'
 import array  # noqa: E402, I100
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -172,7 +174,7 @@ class GenericLane(metaclass=Metaclass_GenericLane):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def laneid(self):
         """Message field 'laneid'."""
         return self._laneid
@@ -187,7 +189,7 @@ class GenericLane(metaclass=Metaclass_GenericLane):
                 "The 'laneid' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._laneid = value
 
-    @property
+    @builtins.property
     def name(self):
         """Message field 'name'."""
         return self._name
@@ -200,7 +202,7 @@ class GenericLane(metaclass=Metaclass_GenericLane):
                 "The 'name' field must be of type 'str'"
         self._name = value
 
-    @property
+    @builtins.property
     def ingressapproach(self):
         """Message field 'ingressapproach'."""
         return self._ingressapproach
@@ -215,7 +217,7 @@ class GenericLane(metaclass=Metaclass_GenericLane):
                 "The 'ingressapproach' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._ingressapproach = value
 
-    @property
+    @builtins.property
     def egressapproach(self):
         """Message field 'egressapproach'."""
         return self._egressapproach
@@ -230,7 +232,7 @@ class GenericLane(metaclass=Metaclass_GenericLane):
                 "The 'egressapproach' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._egressapproach = value
 
-    @property
+    @builtins.property
     def laneattributes(self):
         """Message field 'laneattributes'."""
         return self._laneattributes
@@ -244,7 +246,7 @@ class GenericLane(metaclass=Metaclass_GenericLane):
                 "The 'laneattributes' field must be a sub message of type 'LaneAttributes'"
         self._laneattributes = value
 
-    @property
+    @builtins.property
     def maneuvers(self):
         """Message field 'maneuvers'."""
         return self._maneuvers
@@ -257,7 +259,7 @@ class GenericLane(metaclass=Metaclass_GenericLane):
                 "The 'maneuvers' field must be of type 'str'"
         self._maneuvers = value
 
-    @property
+    @builtins.property
     def nodelist(self):
         """Message field 'nodelist'."""
         return self._nodelist
@@ -281,7 +283,7 @@ class GenericLane(metaclass=Metaclass_GenericLane):
                 "The 'nodelist' field must be a set or sequence and each value of type 'NodeListXY'"
         self._nodelist = value
 
-    @property
+    @builtins.property
     def connectsto(self):
         """Message field 'connectsto'."""
         return self._connectsto
@@ -305,7 +307,7 @@ class GenericLane(metaclass=Metaclass_GenericLane):
                 "The 'connectsto' field must be a set or sequence and each value of type 'Connection'"
         self._connectsto = value
 
-    @property
+    @builtins.property
     def overlays(self):
         """Message field 'overlays'."""
         return self._overlays

@@ -57,6 +57,24 @@ void * get_function__RTCM__msgs(void * untyped_member, size_t index)
   return &member[index];
 }
 
+void fetch_function__RTCM__msgs(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const std::string *>(
+    get_const_function__RTCM__msgs(untyped_member, index));
+  auto & value = *reinterpret_cast<std::string *>(untyped_value);
+  value = item;
+}
+
+void assign_function__RTCM__msgs(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<std::string *>(
+    get_function__RTCM__msgs(untyped_member, index));
+  const auto & value = *reinterpret_cast<const std::string *>(untyped_value);
+  item = value;
+}
+
 void resize_function__RTCM__msgs(void * untyped_member, size_t size)
 {
   auto * member =
@@ -78,6 +96,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RTCM_message_
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -93,6 +113,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RTCM_message_
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -108,6 +130,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RTCM_message_
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -123,6 +147,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RTCM_message_
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -138,6 +164,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RTCM_message_
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -153,6 +181,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RTCM_message_
     size_function__RTCM__msgs,  // size() function pointer
     get_const_function__RTCM__msgs,  // get_const(index) function pointer
     get_function__RTCM__msgs,  // get(index) function pointer
+    fetch_function__RTCM__msgs,  // fetch(index, &value) function pointer
+    assign_function__RTCM__msgs,  // assign(index, value) function pointer
     resize_function__RTCM__msgs  // resize(index) function pointer
   }
 };

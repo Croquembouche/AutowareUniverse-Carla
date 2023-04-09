@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -124,7 +126,7 @@ class NodeXY(metaclass=Metaclass_NodeXY):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def delta(self):
         """Message field 'delta'."""
         return self._delta
@@ -138,7 +140,7 @@ class NodeXY(metaclass=Metaclass_NodeXY):
                 "The 'delta' field must be a sub message of type 'NodeOffsetPointXY'"
         self._delta = value
 
-    @property
+    @builtins.property
     def attributes(self):
         """Message field 'attributes'."""
         return self._attributes

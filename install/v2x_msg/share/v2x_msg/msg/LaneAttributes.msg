@@ -1,3 +1,1 @@
-string directionaluse
-string sharedwith
-int64 lanetype
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/LaneAttributes.msg

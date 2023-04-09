@@ -57,6 +57,24 @@ void * get_function__TravelerDataFrame__regions(void * untyped_member, size_t in
   return &member[index];
 }
 
+void fetch_function__TravelerDataFrame__regions(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const v2x_msg::msg::GeographicalPath *>(
+    get_const_function__TravelerDataFrame__regions(untyped_member, index));
+  auto & value = *reinterpret_cast<v2x_msg::msg::GeographicalPath *>(untyped_value);
+  value = item;
+}
+
+void assign_function__TravelerDataFrame__regions(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<v2x_msg::msg::GeographicalPath *>(
+    get_function__TravelerDataFrame__regions(untyped_member, index));
+  const auto & value = *reinterpret_cast<const v2x_msg::msg::GeographicalPath *>(untyped_value);
+  item = value;
+}
+
 void resize_function__TravelerDataFrame__regions(void * untyped_member, size_t size)
 {
   auto * member =
@@ -78,6 +96,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TravelerDataF
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -93,6 +113,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TravelerDataF
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -108,6 +130,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TravelerDataF
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -123,6 +147,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TravelerDataF
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -138,6 +164,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TravelerDataF
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -153,6 +181,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TravelerDataF
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -168,6 +198,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TravelerDataF
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -183,6 +215,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TravelerDataF
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -198,6 +232,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TravelerDataF
     size_function__TravelerDataFrame__regions,  // size() function pointer
     get_const_function__TravelerDataFrame__regions,  // get_const(index) function pointer
     get_function__TravelerDataFrame__regions,  // get(index) function pointer
+    fetch_function__TravelerDataFrame__regions,  // fetch(index, &value) function pointer
+    assign_function__TravelerDataFrame__regions,  // assign(index, value) function pointer
     resize_function__TravelerDataFrame__regions  // resize(index) function pointer
   },
   {
@@ -213,6 +249,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TravelerDataF
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -228,6 +266,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TravelerDataF
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -243,6 +283,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TravelerDataF
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -258,6 +300,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TravelerDataF
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   }
 };

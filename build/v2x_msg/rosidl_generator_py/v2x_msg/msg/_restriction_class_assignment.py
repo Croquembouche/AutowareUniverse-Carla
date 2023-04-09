@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -118,7 +120,7 @@ class RestrictionClassAssignment(metaclass=Metaclass_RestrictionClassAssignment)
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def restrictionclassid(self):
         """Message field 'restrictionclassid'."""
         return self._restrictionclassid
@@ -133,7 +135,7 @@ class RestrictionClassAssignment(metaclass=Metaclass_RestrictionClassAssignment)
                 "The 'restrictionclassid' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._restrictionclassid = value
 
-    @property
+    @builtins.property
     def users(self):
         """Message field 'users'."""
         return self._users

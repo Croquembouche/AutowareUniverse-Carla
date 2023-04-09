@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -120,7 +122,7 @@ class PositionalAccuracy(metaclass=Metaclass_PositionalAccuracy):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def semimajor(self):
         """Message field 'semimajor'."""
         return self._semimajor
@@ -135,7 +137,7 @@ class PositionalAccuracy(metaclass=Metaclass_PositionalAccuracy):
                 "The 'semimajor' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._semimajor = value
 
-    @property
+    @builtins.property
     def semiminor(self):
         """Message field 'semiminor'."""
         return self._semiminor
@@ -150,7 +152,7 @@ class PositionalAccuracy(metaclass=Metaclass_PositionalAccuracy):
                 "The 'semiminor' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._semiminor = value
 
-    @property
+    @builtins.property
     def orientation(self):
         """Message field 'orientation'."""
         return self._orientation

@@ -1,5 +1,1 @@
-ConnectingLane connectinglane 
-IntersectionReferenceID remoteintersection
-int64 signalgroup
-int64 userclass
-int64 laneconnectonid
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/Connection.msg

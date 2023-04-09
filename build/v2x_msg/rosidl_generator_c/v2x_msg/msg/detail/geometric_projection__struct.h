@@ -23,7 +23,7 @@ extern "C"
 // Member 'circle'
 #include "v2x_msg/msg/detail/circle__struct.h"
 
-// Struct defined in msg/GeometricProjection in the package v2x_msg.
+/// Struct defined in msg/GeometricProjection in the package v2x_msg.
 typedef struct v2x_msg__msg__GeometricProjection
 {
   rosidl_runtime_c__String direction;

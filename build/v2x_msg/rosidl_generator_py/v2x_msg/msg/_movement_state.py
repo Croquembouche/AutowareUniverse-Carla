@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -135,7 +137,7 @@ class MovementState(metaclass=Metaclass_MovementState):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def movementname(self):
         """Message field 'movementname'."""
         return self._movementname
@@ -148,7 +150,7 @@ class MovementState(metaclass=Metaclass_MovementState):
                 "The 'movementname' field must be of type 'str'"
         self._movementname = value
 
-    @property
+    @builtins.property
     def signalgroupid(self):
         """Message field 'signalgroupid'."""
         return self._signalgroupid
@@ -163,7 +165,7 @@ class MovementState(metaclass=Metaclass_MovementState):
                 "The 'signalgroupid' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._signalgroupid = value
 
-    @property
+    @builtins.property
     def statetimespeed(self):
         """Message field 'statetimespeed'."""
         return self._statetimespeed
@@ -187,7 +189,7 @@ class MovementState(metaclass=Metaclass_MovementState):
                 "The 'statetimespeed' field must be a set or sequence and each value of type 'MovementEvent'"
         self._statetimespeed = value
 
-    @property
+    @builtins.property
     def maneuverassistlist(self):
         """Message field 'maneuverassistlist'."""
         return self._maneuverassistlist

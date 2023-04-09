@@ -5,18 +5,50 @@
 #ifndef V2X_MSG__MSG__DETAIL__ACCEL_STEER_YAW_RATE_CONFIDENCE__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__ACCEL_STEER_YAW_RATE_CONFIDENCE__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/accel_steer_yaw_rate_confidence__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
 
-namespace rosidl_generator_traits
+#include "v2x_msg/msg/detail/accel_steer_yaw_rate_confidence__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
+
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::AccelSteerYawRateConfidence & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const AccelSteerYawRateConfidence & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: yawrate
+  {
+    out << "yawrate: ";
+    rosidl_generator_traits::value_to_yaml(msg.yawrate, out);
+    out << ", ";
+  }
+
+  // member: acceleration
+  {
+    out << "acceleration: ";
+    rosidl_generator_traits::value_to_yaml(msg.acceleration, out);
+    out << ", ";
+  }
+
+  // member: steeringwheelangle
+  {
+    out << "steeringwheelangle: ";
+    rosidl_generator_traits::value_to_yaml(msg.steeringwheelangle, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const AccelSteerYawRateConfidence & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: yawrate
@@ -25,7 +57,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "yawrate: ";
-    value_to_yaml(msg.yawrate, out);
+    rosidl_generator_traits::value_to_yaml(msg.yawrate, out);
     out << "\n";
   }
 
@@ -35,7 +67,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "acceleration: ";
-    value_to_yaml(msg.acceleration, out);
+    rosidl_generator_traits::value_to_yaml(msg.acceleration, out);
     out << "\n";
   }
 
@@ -45,16 +77,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "steeringwheelangle: ";
-    value_to_yaml(msg.steeringwheelangle, out);
+    rosidl_generator_traits::value_to_yaml(msg.steeringwheelangle, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::AccelSteerYawRateConfidence & msg)
+inline std::string to_yaml(const AccelSteerYawRateConfidence & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::AccelSteerYawRateConfidence & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::AccelSteerYawRateConfidence & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

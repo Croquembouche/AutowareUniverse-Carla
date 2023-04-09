@@ -5,12 +5,14 @@
 #ifndef V2X_MSG__MSG__DETAIL__INTERSECTION_STATE__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__INTERSECTION_STATE__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/intersection_state__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/intersection_state__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'id'
@@ -24,11 +26,116 @@
 // Member 'maneuverassistlist'
 #include "v2x_msg/msg/detail/connection_maneuver_assist__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::IntersectionState & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const IntersectionState & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: name
+  {
+    out << "name: ";
+    rosidl_generator_traits::value_to_yaml(msg.name, out);
+    out << ", ";
+  }
+
+  // member: id
+  {
+    out << "id: ";
+    to_flow_style_yaml(msg.id, out);
+    out << ", ";
+  }
+
+  // member: revision
+  {
+    out << "revision: ";
+    rosidl_generator_traits::value_to_yaml(msg.revision, out);
+    out << ", ";
+  }
+
+  // member: status
+  {
+    out << "status: ";
+    to_flow_style_yaml(msg.status, out);
+    out << ", ";
+  }
+
+  // member: moy
+  {
+    out << "moy: ";
+    rosidl_generator_traits::value_to_yaml(msg.moy, out);
+    out << ", ";
+  }
+
+  // member: timestamp
+  {
+    out << "timestamp: ";
+    rosidl_generator_traits::value_to_yaml(msg.timestamp, out);
+    out << ", ";
+  }
+
+  // member: enabledlanes
+  {
+    if (msg.enabledlanes.size() == 0) {
+      out << "enabledlanes: []";
+    } else {
+      out << "enabledlanes: [";
+      size_t pending_items = msg.enabledlanes.size();
+      for (auto item : msg.enabledlanes) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: states
+  {
+    if (msg.states.size() == 0) {
+      out << "states: []";
+    } else {
+      out << "states: [";
+      size_t pending_items = msg.states.size();
+      for (auto item : msg.states) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: maneuverassistlist
+  {
+    if (msg.maneuverassistlist.size() == 0) {
+      out << "maneuverassistlist: []";
+    } else {
+      out << "maneuverassistlist: [";
+      size_t pending_items = msg.maneuverassistlist.size();
+      for (auto item : msg.maneuverassistlist) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const IntersectionState & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: name
@@ -37,7 +144,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "name: ";
-    value_to_yaml(msg.name, out);
+    rosidl_generator_traits::value_to_yaml(msg.name, out);
     out << "\n";
   }
 
@@ -47,7 +154,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "id:\n";
-    to_yaml(msg.id, out, indentation + 2);
+    to_block_style_yaml(msg.id, out, indentation + 2);
   }
 
   // member: revision
@@ -56,7 +163,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "revision: ";
-    value_to_yaml(msg.revision, out);
+    rosidl_generator_traits::value_to_yaml(msg.revision, out);
     out << "\n";
   }
 
@@ -66,7 +173,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "status:\n";
-    to_yaml(msg.status, out, indentation + 2);
+    to_block_style_yaml(msg.status, out, indentation + 2);
   }
 
   // member: moy
@@ -75,7 +182,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "moy: ";
-    value_to_yaml(msg.moy, out);
+    rosidl_generator_traits::value_to_yaml(msg.moy, out);
     out << "\n";
   }
 
@@ -85,7 +192,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "timestamp: ";
-    value_to_yaml(msg.timestamp, out);
+    rosidl_generator_traits::value_to_yaml(msg.timestamp, out);
     out << "\n";
   }
 
@@ -103,7 +210,7 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "-\n";
-        to_yaml(item, out, indentation + 2);
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
@@ -122,7 +229,7 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "-\n";
-        to_yaml(item, out, indentation + 2);
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
@@ -141,17 +248,42 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "-\n";
-        to_yaml(item, out, indentation + 2);
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::IntersectionState & msg)
+inline std::string to_yaml(const IntersectionState & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::IntersectionState & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::IntersectionState & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

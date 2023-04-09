@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -135,7 +137,7 @@ class Snapshot(metaclass=Metaclass_Snapshot):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def theposition(self):
         """Message field 'theposition'."""
         return self._theposition
@@ -149,7 +151,7 @@ class Snapshot(metaclass=Metaclass_Snapshot):
                 "The 'theposition' field must be a sub message of type 'FullPositionVector'"
         self._theposition = value
 
-    @property
+    @builtins.property
     def safetyext(self):
         """Message field 'safetyext'."""
         return self._safetyext
@@ -163,7 +165,7 @@ class Snapshot(metaclass=Metaclass_Snapshot):
                 "The 'safetyext' field must be a sub message of type 'VehicleSafetyExtensions'"
         self._safetyext = value
 
-    @property
+    @builtins.property
     def dataset(self):
         """Message field 'dataset'."""
         return self._dataset

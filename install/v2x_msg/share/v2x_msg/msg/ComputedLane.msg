@@ -1,6 +1,1 @@
-int64 referencelaneid
-OffsetXaxis offsetxaxis
-OffsetYaxis offsetyaxis
-int64 rotatexy
-int64 scalexaxis
-int64 scaleyaxis
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/ComputedLane.msg

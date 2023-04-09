@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -114,7 +116,7 @@ class RoadSegmentReferenceID(metaclass=Metaclass_RoadSegmentReferenceID):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def roadregulatorid(self):
         """Message field 'roadregulatorid'."""
         return self._roadregulatorid
@@ -129,7 +131,7 @@ class RoadSegmentReferenceID(metaclass=Metaclass_RoadSegmentReferenceID):
                 "The 'roadregulatorid' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._roadregulatorid = value
 
-    @property
+    @builtins.property
     def roadsegmentid(self):
         """Message field 'roadsegmentid'."""
         return self._roadsegmentid

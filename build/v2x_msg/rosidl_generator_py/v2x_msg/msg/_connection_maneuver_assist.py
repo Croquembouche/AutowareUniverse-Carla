@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -132,7 +134,7 @@ class ConnectionManeuverAssist(metaclass=Metaclass_ConnectionManeuverAssist):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def connectionid(self):
         """Message field 'connectionid'."""
         return self._connectionid
@@ -147,7 +149,7 @@ class ConnectionManeuverAssist(metaclass=Metaclass_ConnectionManeuverAssist):
                 "The 'connectionid' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._connectionid = value
 
-    @property
+    @builtins.property
     def queuelength(self):
         """Message field 'queuelength'."""
         return self._queuelength
@@ -162,7 +164,7 @@ class ConnectionManeuverAssist(metaclass=Metaclass_ConnectionManeuverAssist):
                 "The 'queuelength' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._queuelength = value
 
-    @property
+    @builtins.property
     def availablestoragelength(self):
         """Message field 'availablestoragelength'."""
         return self._availablestoragelength
@@ -177,7 +179,7 @@ class ConnectionManeuverAssist(metaclass=Metaclass_ConnectionManeuverAssist):
                 "The 'availablestoragelength' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._availablestoragelength = value
 
-    @property
+    @builtins.property
     def waitonstop(self):
         """Message field 'waitonstop'."""
         return self._waitonstop
@@ -190,7 +192,7 @@ class ConnectionManeuverAssist(metaclass=Metaclass_ConnectionManeuverAssist):
                 "The 'waitonstop' field must be of type 'bool'"
         self._waitonstop = value
 
-    @property
+    @builtins.property
     def pedbicycledetect(self):
         """Message field 'pedbicycledetect'."""
         return self._pedbicycledetect

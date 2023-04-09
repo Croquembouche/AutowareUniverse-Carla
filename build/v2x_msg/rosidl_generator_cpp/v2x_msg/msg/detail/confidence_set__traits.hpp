@@ -5,12 +5,14 @@
 #ifndef V2X_MSG__MSG__DETAIL__CONFIDENCE_SET__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__CONFIDENCE_SET__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/confidence_set__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/confidence_set__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'accelconfidence'
@@ -20,11 +22,69 @@
 // Member 'posconfidence'
 #include "v2x_msg/msg/detail/position_confidence_set__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::ConfidenceSet & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const ConfidenceSet & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: accelconfidence
+  {
+    out << "accelconfidence: ";
+    to_flow_style_yaml(msg.accelconfidence, out);
+    out << ", ";
+  }
+
+  // member: speedconfidence
+  {
+    out << "speedconfidence: ";
+    to_flow_style_yaml(msg.speedconfidence, out);
+    out << ", ";
+  }
+
+  // member: timeconfidence
+  {
+    out << "timeconfidence: ";
+    rosidl_generator_traits::value_to_yaml(msg.timeconfidence, out);
+    out << ", ";
+  }
+
+  // member: posconfidence
+  {
+    out << "posconfidence: ";
+    to_flow_style_yaml(msg.posconfidence, out);
+    out << ", ";
+  }
+
+  // member: steerconfidence
+  {
+    out << "steerconfidence: ";
+    rosidl_generator_traits::value_to_yaml(msg.steerconfidence, out);
+    out << ", ";
+  }
+
+  // member: headingconfidence
+  {
+    out << "headingconfidence: ";
+    rosidl_generator_traits::value_to_yaml(msg.headingconfidence, out);
+    out << ", ";
+  }
+
+  // member: throttleconfidence
+  {
+    out << "throttleconfidence: ";
+    rosidl_generator_traits::value_to_yaml(msg.throttleconfidence, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const ConfidenceSet & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: accelconfidence
@@ -33,7 +93,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "accelconfidence:\n";
-    to_yaml(msg.accelconfidence, out, indentation + 2);
+    to_block_style_yaml(msg.accelconfidence, out, indentation + 2);
   }
 
   // member: speedconfidence
@@ -42,7 +102,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "speedconfidence:\n";
-    to_yaml(msg.speedconfidence, out, indentation + 2);
+    to_block_style_yaml(msg.speedconfidence, out, indentation + 2);
   }
 
   // member: timeconfidence
@@ -51,7 +111,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "timeconfidence: ";
-    value_to_yaml(msg.timeconfidence, out);
+    rosidl_generator_traits::value_to_yaml(msg.timeconfidence, out);
     out << "\n";
   }
 
@@ -61,7 +121,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "posconfidence:\n";
-    to_yaml(msg.posconfidence, out, indentation + 2);
+    to_block_style_yaml(msg.posconfidence, out, indentation + 2);
   }
 
   // member: steerconfidence
@@ -70,7 +130,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "steerconfidence: ";
-    value_to_yaml(msg.steerconfidence, out);
+    rosidl_generator_traits::value_to_yaml(msg.steerconfidence, out);
     out << "\n";
   }
 
@@ -80,7 +140,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "headingconfidence: ";
-    value_to_yaml(msg.headingconfidence, out);
+    rosidl_generator_traits::value_to_yaml(msg.headingconfidence, out);
     out << "\n";
   }
 
@@ -90,16 +150,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "throttleconfidence: ";
-    value_to_yaml(msg.throttleconfidence, out);
+    rosidl_generator_traits::value_to_yaml(msg.throttleconfidence, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::ConfidenceSet & msg)
+inline std::string to_yaml(const ConfidenceSet & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::ConfidenceSet & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::ConfidenceSet & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

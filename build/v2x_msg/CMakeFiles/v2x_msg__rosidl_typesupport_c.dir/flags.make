@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS = -fPIC   -Wall -std=gnu++14
 
-CXX_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"v2x_msg\" -Dv2x_msg__rosidl_typesupport_c_EXPORTS
+CXX_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROSIDL_GENERATOR_C_BUILDING_DLL_v2x_msg -DROS_PACKAGE_NAME=\"v2x_msg\"
 
-CXX_INCLUDES = -I/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_generator_c -I/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_c -isystem /opt/ros/galactic/include 
+CXX_INCLUDES = -I/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_generator_c -isystem /home/carla/ros2_humble/install/rosidl_runtime_c/include/rosidl_runtime_c -isystem /home/carla/ros2_humble/install/rcutils/include/rcutils -isystem /home/carla/ros2_humble/install/rosidl_typesupport_interface/include/rosidl_typesupport_interface -isystem /home/carla/ros2_humble/install/rosidl_typesupport_c/include/rosidl_typesupport_c 
 

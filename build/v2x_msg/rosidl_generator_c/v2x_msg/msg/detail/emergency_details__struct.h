@@ -21,7 +21,7 @@ extern "C"
 // Member 'events'
 #include "v2x_msg/msg/detail/privileged_events__struct.h"
 
-// Struct defined in msg/EmergencyDetails in the package v2x_msg.
+/// Struct defined in msg/EmergencyDetails in the package v2x_msg.
 typedef struct v2x_msg__msg__EmergencyDetails
 {
   int64_t notused;

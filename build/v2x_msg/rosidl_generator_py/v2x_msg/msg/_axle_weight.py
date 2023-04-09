@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -114,7 +116,7 @@ class AxleWeight(metaclass=Metaclass_AxleWeight):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def location(self):
         """Message field 'location'."""
         return self._location
@@ -129,7 +131,7 @@ class AxleWeight(metaclass=Metaclass_AxleWeight):
                 "The 'location' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._location = value
 
-    @property
+    @builtins.property
     def weight(self):
         """Message field 'weight'."""
         return self._weight

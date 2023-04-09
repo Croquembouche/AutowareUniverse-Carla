@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -124,7 +126,7 @@ class SPAT(metaclass=Metaclass_SPAT):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def timestamp(self):
         """Message field 'timestamp'."""
         return self._timestamp
@@ -139,7 +141,7 @@ class SPAT(metaclass=Metaclass_SPAT):
                 "The 'timestamp' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._timestamp = value
 
-    @property
+    @builtins.property
     def name(self):
         """Message field 'name'."""
         return self._name
@@ -152,7 +154,7 @@ class SPAT(metaclass=Metaclass_SPAT):
                 "The 'name' field must be of type 'str'"
         self._name = value
 
-    @property
+    @builtins.property
     def intersections(self):
         """Message field 'intersections'."""
         return self._intersections

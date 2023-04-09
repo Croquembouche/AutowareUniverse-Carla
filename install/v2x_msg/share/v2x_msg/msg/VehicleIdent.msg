@@ -1,6 +1,1 @@
-string name
-string vin
-string ownercode
-VehicleID id 
-int64 vehicletype
-VehicleClass vehicleclass
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/VehicleIdent.msg

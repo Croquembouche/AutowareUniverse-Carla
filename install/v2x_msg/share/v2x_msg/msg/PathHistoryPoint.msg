@@ -1,7 +1,1 @@
-int64 latoffset
-int64 lonoffset
-int64 elevationoffset
-int64 timeoffset
-int64 speed
-PositionalAccuracy accuracy 
-int64 heading
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/PathHistoryPoint.msg

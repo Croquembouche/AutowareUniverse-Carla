@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -174,7 +176,7 @@ class AllowedManeuvers(metaclass=Metaclass_AllowedManeuvers):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def maneuverstraightallowed(self):
         """Message field 'maneuverstraightallowed'."""
         return self._maneuverstraightallowed
@@ -189,7 +191,7 @@ class AllowedManeuvers(metaclass=Metaclass_AllowedManeuvers):
                 "The 'maneuverstraightallowed' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._maneuverstraightallowed = value
 
-    @property
+    @builtins.property
     def maneuverleftallowed(self):
         """Message field 'maneuverleftallowed'."""
         return self._maneuverleftallowed
@@ -204,7 +206,7 @@ class AllowedManeuvers(metaclass=Metaclass_AllowedManeuvers):
                 "The 'maneuverleftallowed' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._maneuverleftallowed = value
 
-    @property
+    @builtins.property
     def maneuverrightallowed(self):
         """Message field 'maneuverrightallowed'."""
         return self._maneuverrightallowed
@@ -219,7 +221,7 @@ class AllowedManeuvers(metaclass=Metaclass_AllowedManeuvers):
                 "The 'maneuverrightallowed' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._maneuverrightallowed = value
 
-    @property
+    @builtins.property
     def maneuveruturnallowed(self):
         """Message field 'maneuveruturnallowed'."""
         return self._maneuveruturnallowed
@@ -234,7 +236,7 @@ class AllowedManeuvers(metaclass=Metaclass_AllowedManeuvers):
                 "The 'maneuveruturnallowed' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._maneuveruturnallowed = value
 
-    @property
+    @builtins.property
     def maneuverleftturnonredallowed(self):
         """Message field 'maneuverleftturnonredallowed'."""
         return self._maneuverleftturnonredallowed
@@ -249,7 +251,7 @@ class AllowedManeuvers(metaclass=Metaclass_AllowedManeuvers):
                 "The 'maneuverleftturnonredallowed' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._maneuverleftturnonredallowed = value
 
-    @property
+    @builtins.property
     def maneverrightturnonredallowed(self):
         """Message field 'maneverrightturnonredallowed'."""
         return self._maneverrightturnonredallowed
@@ -264,7 +266,7 @@ class AllowedManeuvers(metaclass=Metaclass_AllowedManeuvers):
                 "The 'maneverrightturnonredallowed' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._maneverrightturnonredallowed = value
 
-    @property
+    @builtins.property
     def maneuverlanechangeallowed(self):
         """Message field 'maneuverlanechangeallowed'."""
         return self._maneuverlanechangeallowed
@@ -279,7 +281,7 @@ class AllowedManeuvers(metaclass=Metaclass_AllowedManeuvers):
                 "The 'maneuverlanechangeallowed' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._maneuverlanechangeallowed = value
 
-    @property
+    @builtins.property
     def maneuvernostoppingallowed(self):
         """Message field 'maneuvernostoppingallowed'."""
         return self._maneuvernostoppingallowed
@@ -294,7 +296,7 @@ class AllowedManeuvers(metaclass=Metaclass_AllowedManeuvers):
                 "The 'maneuvernostoppingallowed' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._maneuvernostoppingallowed = value
 
-    @property
+    @builtins.property
     def yieldallwaysrequired(self):
         """Message field 'yieldallwaysrequired'."""
         return self._yieldallwaysrequired
@@ -309,7 +311,7 @@ class AllowedManeuvers(metaclass=Metaclass_AllowedManeuvers):
                 "The 'yieldallwaysrequired' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._yieldallwaysrequired = value
 
-    @property
+    @builtins.property
     def gowithhalt(self):
         """Message field 'gowithhalt'."""
         return self._gowithhalt
@@ -324,7 +326,7 @@ class AllowedManeuvers(metaclass=Metaclass_AllowedManeuvers):
                 "The 'gowithhalt' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._gowithhalt = value
 
-    @property
+    @builtins.property
     def caution(self):
         """Message field 'caution'."""
         return self._caution
@@ -339,7 +341,7 @@ class AllowedManeuvers(metaclass=Metaclass_AllowedManeuvers):
                 "The 'caution' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._caution = value
 
-    @property
+    @builtins.property
     def reserved1(self):
         """Message field 'reserved1'."""
         return self._reserved1

@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -142,7 +144,7 @@ class Connection(metaclass=Metaclass_Connection):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def connectinglane(self):
         """Message field 'connectinglane'."""
         return self._connectinglane
@@ -156,7 +158,7 @@ class Connection(metaclass=Metaclass_Connection):
                 "The 'connectinglane' field must be a sub message of type 'ConnectingLane'"
         self._connectinglane = value
 
-    @property
+    @builtins.property
     def remoteintersection(self):
         """Message field 'remoteintersection'."""
         return self._remoteintersection
@@ -170,7 +172,7 @@ class Connection(metaclass=Metaclass_Connection):
                 "The 'remoteintersection' field must be a sub message of type 'IntersectionReferenceID'"
         self._remoteintersection = value
 
-    @property
+    @builtins.property
     def signalgroup(self):
         """Message field 'signalgroup'."""
         return self._signalgroup
@@ -185,7 +187,7 @@ class Connection(metaclass=Metaclass_Connection):
                 "The 'signalgroup' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._signalgroup = value
 
-    @property
+    @builtins.property
     def userclass(self):
         """Message field 'userclass'."""
         return self._userclass
@@ -200,7 +202,7 @@ class Connection(metaclass=Metaclass_Connection):
                 "The 'userclass' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._userclass = value
 
-    @property
+    @builtins.property
     def laneconnectonid(self):
         """Message field 'laneconnectonid'."""
         return self._laneconnectonid

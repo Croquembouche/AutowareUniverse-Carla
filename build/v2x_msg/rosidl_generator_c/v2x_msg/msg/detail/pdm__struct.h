@@ -29,7 +29,7 @@ extern "C"
 // Member 'dataelements'
 #include "v2x_msg/msg/detail/vehicle_status_request__struct.h"
 
-// Struct defined in msg/PDM in the package v2x_msg.
+/// Struct defined in msg/PDM in the package v2x_msg.
 typedef struct v2x_msg__msg__PDM
 {
   int64_t timestamp;

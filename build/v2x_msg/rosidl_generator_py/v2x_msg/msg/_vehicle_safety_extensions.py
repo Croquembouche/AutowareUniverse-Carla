@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -136,7 +138,7 @@ class VehicleSafetyExtensions(metaclass=Metaclass_VehicleSafetyExtensions):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def vehicleeventflags(self):
         """Message field 'vehicleeventflags'."""
         return self._vehicleeventflags
@@ -149,7 +151,7 @@ class VehicleSafetyExtensions(metaclass=Metaclass_VehicleSafetyExtensions):
                 "The 'vehicleeventflags' field must be of type 'str'"
         self._vehicleeventflags = value
 
-    @property
+    @builtins.property
     def pathhistory(self):
         """Message field 'pathhistory'."""
         return self._pathhistory
@@ -163,7 +165,7 @@ class VehicleSafetyExtensions(metaclass=Metaclass_VehicleSafetyExtensions):
                 "The 'pathhistory' field must be a sub message of type 'PathHistory'"
         self._pathhistory = value
 
-    @property
+    @builtins.property
     def pathprediction(self):
         """Message field 'pathprediction'."""
         return self._pathprediction
@@ -177,7 +179,7 @@ class VehicleSafetyExtensions(metaclass=Metaclass_VehicleSafetyExtensions):
                 "The 'pathprediction' field must be a sub message of type 'PathPrediction'"
         self._pathprediction = value
 
-    @property
+    @builtins.property
     def texteriorlights(self):
         """Message field 'texteriorlights'."""
         return self._texteriorlights

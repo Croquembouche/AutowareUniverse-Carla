@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/PositionalAccuracy in the package v2x_msg.
+/// Struct defined in msg/PositionalAccuracy in the package v2x_msg.
 typedef struct v2x_msg__msg__PositionalAccuracy
 {
   int64_t semimajor;

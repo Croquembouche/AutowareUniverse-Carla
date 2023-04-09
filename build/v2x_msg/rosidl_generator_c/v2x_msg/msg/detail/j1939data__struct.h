@@ -23,7 +23,7 @@ extern "C"
 // Member 'axles'
 #include "v2x_msg/msg/detail/axle_weight__struct.h"
 
-// Struct defined in msg/J1939data in the package v2x_msg.
+/// Struct defined in msg/J1939data in the package v2x_msg.
 typedef struct v2x_msg__msg__J1939data
 {
   v2x_msg__msg__TireData__Sequence tires;

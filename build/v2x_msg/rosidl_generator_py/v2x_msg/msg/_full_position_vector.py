@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -187,7 +189,7 @@ class FullPositionVector(metaclass=Metaclass_FullPositionVector):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def utctime(self):
         """Message field 'utctime'."""
         return self._utctime
@@ -201,7 +203,7 @@ class FullPositionVector(metaclass=Metaclass_FullPositionVector):
                 "The 'utctime' field must be a sub message of type 'DDateTime'"
         self._utctime = value
 
-    @property
+    @builtins.property
     def longitude(self):
         """Message field 'longitude'."""
         return self._longitude
@@ -216,7 +218,7 @@ class FullPositionVector(metaclass=Metaclass_FullPositionVector):
                 "The 'longitude' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._longitude = value
 
-    @property
+    @builtins.property
     def lat(self):
         """Message field 'lat'."""
         return self._lat
@@ -231,7 +233,7 @@ class FullPositionVector(metaclass=Metaclass_FullPositionVector):
                 "The 'lat' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._lat = value
 
-    @property
+    @builtins.property
     def elevation(self):
         """Message field 'elevation'."""
         return self._elevation
@@ -246,7 +248,7 @@ class FullPositionVector(metaclass=Metaclass_FullPositionVector):
                 "The 'elevation' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._elevation = value
 
-    @property
+    @builtins.property
     def heading(self):
         """Message field 'heading'."""
         return self._heading
@@ -261,7 +263,7 @@ class FullPositionVector(metaclass=Metaclass_FullPositionVector):
                 "The 'heading' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._heading = value
 
-    @property
+    @builtins.property
     def speed(self):
         """Message field 'speed'."""
         return self._speed
@@ -275,7 +277,7 @@ class FullPositionVector(metaclass=Metaclass_FullPositionVector):
                 "The 'speed' field must be a sub message of type 'TransmissionAndSpeed'"
         self._speed = value
 
-    @property
+    @builtins.property
     def posaccuracy(self):
         """Message field 'posaccuracy'."""
         return self._posaccuracy
@@ -289,7 +291,7 @@ class FullPositionVector(metaclass=Metaclass_FullPositionVector):
                 "The 'posaccuracy' field must be a sub message of type 'PositionalAccuracy'"
         self._posaccuracy = value
 
-    @property
+    @builtins.property
     def timeconfidence(self):
         """Message field 'timeconfidence'."""
         return self._timeconfidence
@@ -304,7 +306,7 @@ class FullPositionVector(metaclass=Metaclass_FullPositionVector):
                 "The 'timeconfidence' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._timeconfidence = value
 
-    @property
+    @builtins.property
     def posconfidence(self):
         """Message field 'posconfidence'."""
         return self._posconfidence
@@ -318,7 +320,7 @@ class FullPositionVector(metaclass=Metaclass_FullPositionVector):
                 "The 'posconfidence' field must be a sub message of type 'PositionConfidenceSet'"
         self._posconfidence = value
 
-    @property
+    @builtins.property
     def speedconfidence(self):
         """Message field 'speedconfidence'."""
         return self._speedconfidence

@@ -5,12 +5,14 @@
 #ifndef V2X_MSG__MSG__DETAIL__CONTENT__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__CONTENT__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/content__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/content__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'advisory'
@@ -24,11 +26,110 @@
 // Member 'exitservice'
 #include "v2x_msg/msg/detail/exit_service__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::Content & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const Content & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: advisory
+  {
+    if (msg.advisory.size() == 0) {
+      out << "advisory: []";
+    } else {
+      out << "advisory: [";
+      size_t pending_items = msg.advisory.size();
+      for (auto item : msg.advisory) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: workzone
+  {
+    if (msg.workzone.size() == 0) {
+      out << "workzone: []";
+    } else {
+      out << "workzone: [";
+      size_t pending_items = msg.workzone.size();
+      for (auto item : msg.workzone) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: genericsign
+  {
+    if (msg.genericsign.size() == 0) {
+      out << "genericsign: []";
+    } else {
+      out << "genericsign: [";
+      size_t pending_items = msg.genericsign.size();
+      for (auto item : msg.genericsign) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: speedlimit
+  {
+    if (msg.speedlimit.size() == 0) {
+      out << "speedlimit: []";
+    } else {
+      out << "speedlimit: [";
+      size_t pending_items = msg.speedlimit.size();
+      for (auto item : msg.speedlimit) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: exitservice
+  {
+    if (msg.exitservice.size() == 0) {
+      out << "exitservice: []";
+    } else {
+      out << "exitservice: [";
+      size_t pending_items = msg.exitservice.size();
+      for (auto item : msg.exitservice) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const Content & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: advisory
@@ -45,7 +146,7 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "-\n";
-        to_yaml(item, out, indentation + 2);
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
@@ -64,7 +165,7 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "-\n";
-        to_yaml(item, out, indentation + 2);
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
@@ -83,7 +184,7 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "-\n";
-        to_yaml(item, out, indentation + 2);
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
@@ -102,7 +203,7 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "-\n";
-        to_yaml(item, out, indentation + 2);
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
@@ -121,17 +222,42 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "-\n";
-        to_yaml(item, out, indentation + 2);
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::Content & msg)
+inline std::string to_yaml(const Content & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::Content & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::Content & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

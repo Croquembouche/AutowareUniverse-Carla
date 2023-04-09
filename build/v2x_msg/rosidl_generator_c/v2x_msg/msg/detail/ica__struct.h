@@ -32,7 +32,7 @@ extern "C"
 // Member 'lanenumber'
 #include "v2x_msg/msg/detail/approach_or_lane__struct.h"
 
-// Struct defined in msg/ICA in the package v2x_msg.
+/// Struct defined in msg/ICA in the package v2x_msg.
 typedef struct v2x_msg__msg__ICA
 {
   int64_t msgcnt;

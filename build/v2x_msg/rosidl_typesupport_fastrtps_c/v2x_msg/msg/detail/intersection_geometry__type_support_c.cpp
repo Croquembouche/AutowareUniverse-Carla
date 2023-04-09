@@ -48,6 +48,7 @@ size_t get_serialized_size_v2x_msg__msg__GenericLane(
 
 size_t max_serialized_size_v2x_msg__msg__GenericLane(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -58,6 +59,7 @@ size_t get_serialized_size_v2x_msg__msg__IntersectionReferenceID(
 
 size_t max_serialized_size_v2x_msg__msg__IntersectionReferenceID(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -68,6 +70,7 @@ size_t get_serialized_size_v2x_msg__msg__Position3D(
 
 size_t max_serialized_size_v2x_msg__msg__Position3D(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -78,6 +81,7 @@ size_t get_serialized_size_v2x_msg__msg__SpeedLimit(
 
 size_t max_serialized_size_v2x_msg__msg__SpeedLimit(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -418,6 +422,7 @@ static uint32_t _IntersectionGeometry__get_serialized_size(const void * untyped_
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_v2x_msg
 size_t max_serialized_size_v2x_msg__msg__IntersectionGeometry(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment)
 {
   size_t initial_alignment = current_alignment;
@@ -426,13 +431,16 @@ size_t max_serialized_size_v2x_msg__msg__IntersectionGeometry(
   const size_t wchar_size = 4;
   (void)padding;
   (void)wchar_size;
-  (void)full_bounded;
+
+  full_bounded = true;
+  is_plain = true;
 
   // member: name
   {
     size_t array_size = 1;
 
     full_bounded = false;
+    is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
       current_alignment += padding +
         eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
@@ -445,9 +453,13 @@ size_t max_serialized_size_v2x_msg__msg__IntersectionGeometry(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__IntersectionReferenceID(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: revision
@@ -463,9 +475,13 @@ size_t max_serialized_size_v2x_msg__msg__IntersectionGeometry(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__Position3D(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: lanewidth
@@ -479,28 +495,38 @@ size_t max_serialized_size_v2x_msg__msg__IntersectionGeometry(
   {
     size_t array_size = 0;
     full_bounded = false;
+    is_plain = false;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__SpeedLimit(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: laneset
   {
     size_t array_size = 0;
     full_bounded = false;
+    is_plain = false;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__GenericLane(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: preemptprioritydata
@@ -508,6 +534,7 @@ size_t max_serialized_size_v2x_msg__msg__IntersectionGeometry(
     size_t array_size = 1;
 
     full_bounded = false;
+    is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
       current_alignment += padding +
         eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
@@ -518,10 +545,19 @@ size_t max_serialized_size_v2x_msg__msg__IntersectionGeometry(
   return current_alignment - initial_alignment;
 }
 
-static size_t _IntersectionGeometry__max_serialized_size(bool & full_bounded)
+static size_t _IntersectionGeometry__max_serialized_size(char & bounds_info)
 {
-  return max_serialized_size_v2x_msg__msg__IntersectionGeometry(
-    full_bounded, 0);
+  bool full_bounded;
+  bool is_plain;
+  size_t ret_val;
+
+  ret_val = max_serialized_size_v2x_msg__msg__IntersectionGeometry(
+    full_bounded, is_plain, 0);
+
+  bounds_info =
+    is_plain ? ROSIDL_TYPESUPPORT_FASTRTPS_PLAIN_TYPE :
+    full_bounded ? ROSIDL_TYPESUPPORT_FASTRTPS_BOUNDED_TYPE : ROSIDL_TYPESUPPORT_FASTRTPS_UNBOUNDED_TYPE;
+  return ret_val;
 }
 
 

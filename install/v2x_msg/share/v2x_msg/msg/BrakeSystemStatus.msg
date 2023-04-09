@@ -1,6 +1,1 @@
-string wheelbrakes
-int64 traction
-int64 abs
-int64 scs
-int64 brakeboost
-int64 auxbrakes
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/BrakeSystemStatus.msg

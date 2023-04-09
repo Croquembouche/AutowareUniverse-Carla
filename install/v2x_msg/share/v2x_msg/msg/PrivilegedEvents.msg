@@ -1,2 +1,1 @@
-int64 notused
-string event
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/PrivilegedEvents.msg

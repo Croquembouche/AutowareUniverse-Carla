@@ -5,12 +5,14 @@
 #ifndef V2X_MSG__MSG__DETAIL__SIGNAL_REQUESTER_INFO__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__SIGNAL_REQUESTER_INFO__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/signal_requester_info__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/signal_requester_info__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'id'
@@ -18,11 +20,55 @@
 // Member 'typedata'
 #include "v2x_msg/msg/detail/requestor_type__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::SignalRequesterInfo & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const SignalRequesterInfo & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: id
+  {
+    out << "id: ";
+    to_flow_style_yaml(msg.id, out);
+    out << ", ";
+  }
+
+  // member: request
+  {
+    out << "request: ";
+    rosidl_generator_traits::value_to_yaml(msg.request, out);
+    out << ", ";
+  }
+
+  // member: sequencenumber
+  {
+    out << "sequencenumber: ";
+    rosidl_generator_traits::value_to_yaml(msg.sequencenumber, out);
+    out << ", ";
+  }
+
+  // member: basicvehiclerole
+  {
+    out << "basicvehiclerole: ";
+    rosidl_generator_traits::value_to_yaml(msg.basicvehiclerole, out);
+    out << ", ";
+  }
+
+  // member: typedata
+  {
+    out << "typedata: ";
+    to_flow_style_yaml(msg.typedata, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const SignalRequesterInfo & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: id
@@ -31,7 +77,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "id:\n";
-    to_yaml(msg.id, out, indentation + 2);
+    to_block_style_yaml(msg.id, out, indentation + 2);
   }
 
   // member: request
@@ -40,7 +86,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "request: ";
-    value_to_yaml(msg.request, out);
+    rosidl_generator_traits::value_to_yaml(msg.request, out);
     out << "\n";
   }
 
@@ -50,7 +96,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "sequencenumber: ";
-    value_to_yaml(msg.sequencenumber, out);
+    rosidl_generator_traits::value_to_yaml(msg.sequencenumber, out);
     out << "\n";
   }
 
@@ -60,7 +106,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "basicvehiclerole: ";
-    value_to_yaml(msg.basicvehiclerole, out);
+    rosidl_generator_traits::value_to_yaml(msg.basicvehiclerole, out);
     out << "\n";
   }
 
@@ -70,15 +116,40 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "typedata:\n";
-    to_yaml(msg.typedata, out, indentation + 2);
+    to_block_style_yaml(msg.typedata, out, indentation + 2);
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::SignalRequesterInfo & msg)
+inline std::string to_yaml(const SignalRequesterInfo & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::SignalRequesterInfo & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::SignalRequesterInfo & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

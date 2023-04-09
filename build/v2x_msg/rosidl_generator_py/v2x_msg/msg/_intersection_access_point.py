@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -120,7 +122,7 @@ class IntersectionAccessPoint(metaclass=Metaclass_IntersectionAccessPoint):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def lane(self):
         """Message field 'lane'."""
         return self._lane
@@ -135,7 +137,7 @@ class IntersectionAccessPoint(metaclass=Metaclass_IntersectionAccessPoint):
                 "The 'lane' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._lane = value
 
-    @property
+    @builtins.property
     def approach(self):
         """Message field 'approach'."""
         return self._approach
@@ -150,7 +152,7 @@ class IntersectionAccessPoint(metaclass=Metaclass_IntersectionAccessPoint):
                 "The 'approach' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._approach = value
 
-    @property
+    @builtins.property
     def connection(self):
         """Message field 'connection'."""
         return self._connection

@@ -5,12 +5,14 @@
 #ifndef V2X_MSG__MSG__DETAIL__VEHICLE_STATUS__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__VEHICLE_STATUS__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/vehicle_status__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/vehicle_status__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'wipers'
@@ -36,11 +38,167 @@
 // Member 'weatherreport'
 #include "v2x_msg/msg/detail/weather_report__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::VehicleStatus & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const VehicleStatus & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: lights
+  {
+    out << "lights: ";
+    rosidl_generator_traits::value_to_yaml(msg.lights, out);
+    out << ", ";
+  }
+
+  // member: lightbar
+  {
+    out << "lightbar: ";
+    rosidl_generator_traits::value_to_yaml(msg.lightbar, out);
+    out << ", ";
+  }
+
+  // member: wipers
+  {
+    out << "wipers: ";
+    to_flow_style_yaml(msg.wipers, out);
+    out << ", ";
+  }
+
+  // member: brakestatus
+  {
+    out << "brakestatus: ";
+    to_flow_style_yaml(msg.brakestatus, out);
+    out << ", ";
+  }
+
+  // member: roadfriction
+  {
+    out << "roadfriction: ";
+    rosidl_generator_traits::value_to_yaml(msg.roadfriction, out);
+    out << ", ";
+  }
+
+  // member: sundata
+  {
+    out << "sundata: ";
+    rosidl_generator_traits::value_to_yaml(msg.sundata, out);
+    out << ", ";
+  }
+
+  // member: raindata
+  {
+    out << "raindata: ";
+    rosidl_generator_traits::value_to_yaml(msg.raindata, out);
+    out << ", ";
+  }
+
+  // member: airtemp
+  {
+    out << "airtemp: ";
+    rosidl_generator_traits::value_to_yaml(msg.airtemp, out);
+    out << ", ";
+  }
+
+  // member: airpres
+  {
+    out << "airpres: ";
+    rosidl_generator_traits::value_to_yaml(msg.airpres, out);
+    out << ", ";
+  }
+
+  // member: steering
+  {
+    out << "steering: ";
+    to_flow_style_yaml(msg.steering, out);
+    out << ", ";
+  }
+
+  // member: accelsets
+  {
+    out << "accelsets: ";
+    to_flow_style_yaml(msg.accelsets, out);
+    out << ", ";
+  }
+
+  // member: object
+  {
+    out << "object: ";
+    to_flow_style_yaml(msg.object, out);
+    out << ", ";
+  }
+
+  // member: fullpos
+  {
+    out << "fullpos: ";
+    to_flow_style_yaml(msg.fullpos, out);
+    out << ", ";
+  }
+
+  // member: throttlepos
+  {
+    out << "throttlepos: ";
+    rosidl_generator_traits::value_to_yaml(msg.throttlepos, out);
+    out << ", ";
+  }
+
+  // member: speedheadc
+  {
+    out << "speedheadc: ";
+    to_flow_style_yaml(msg.speedheadc, out);
+    out << ", ";
+  }
+
+  // member: speedc
+  {
+    out << "speedc: ";
+    rosidl_generator_traits::value_to_yaml(msg.speedc, out);
+    out << ", ";
+  }
+
+  // member: vehicledata
+  {
+    out << "vehicledata: ";
+    to_flow_style_yaml(msg.vehicledata, out);
+    out << ", ";
+  }
+
+  // member: vehicleident
+  {
+    out << "vehicleident: ";
+    to_flow_style_yaml(msg.vehicleident, out);
+    out << ", ";
+  }
+
+  // member: j1939data
+  {
+    out << "j1939data: ";
+    to_flow_style_yaml(msg.j1939data, out);
+    out << ", ";
+  }
+
+  // member: weatherreport
+  {
+    out << "weatherreport: ";
+    to_flow_style_yaml(msg.weatherreport, out);
+    out << ", ";
+  }
+
+  // member: gnssstatus
+  {
+    out << "gnssstatus: ";
+    rosidl_generator_traits::value_to_yaml(msg.gnssstatus, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const VehicleStatus & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: lights
@@ -49,7 +207,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "lights: ";
-    value_to_yaml(msg.lights, out);
+    rosidl_generator_traits::value_to_yaml(msg.lights, out);
     out << "\n";
   }
 
@@ -59,7 +217,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "lightbar: ";
-    value_to_yaml(msg.lightbar, out);
+    rosidl_generator_traits::value_to_yaml(msg.lightbar, out);
     out << "\n";
   }
 
@@ -69,7 +227,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "wipers:\n";
-    to_yaml(msg.wipers, out, indentation + 2);
+    to_block_style_yaml(msg.wipers, out, indentation + 2);
   }
 
   // member: brakestatus
@@ -78,7 +236,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "brakestatus:\n";
-    to_yaml(msg.brakestatus, out, indentation + 2);
+    to_block_style_yaml(msg.brakestatus, out, indentation + 2);
   }
 
   // member: roadfriction
@@ -87,7 +245,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "roadfriction: ";
-    value_to_yaml(msg.roadfriction, out);
+    rosidl_generator_traits::value_to_yaml(msg.roadfriction, out);
     out << "\n";
   }
 
@@ -97,7 +255,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "sundata: ";
-    value_to_yaml(msg.sundata, out);
+    rosidl_generator_traits::value_to_yaml(msg.sundata, out);
     out << "\n";
   }
 
@@ -107,7 +265,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "raindata: ";
-    value_to_yaml(msg.raindata, out);
+    rosidl_generator_traits::value_to_yaml(msg.raindata, out);
     out << "\n";
   }
 
@@ -117,7 +275,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "airtemp: ";
-    value_to_yaml(msg.airtemp, out);
+    rosidl_generator_traits::value_to_yaml(msg.airtemp, out);
     out << "\n";
   }
 
@@ -127,7 +285,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "airpres: ";
-    value_to_yaml(msg.airpres, out);
+    rosidl_generator_traits::value_to_yaml(msg.airpres, out);
     out << "\n";
   }
 
@@ -137,7 +295,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "steering:\n";
-    to_yaml(msg.steering, out, indentation + 2);
+    to_block_style_yaml(msg.steering, out, indentation + 2);
   }
 
   // member: accelsets
@@ -146,7 +304,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "accelsets:\n";
-    to_yaml(msg.accelsets, out, indentation + 2);
+    to_block_style_yaml(msg.accelsets, out, indentation + 2);
   }
 
   // member: object
@@ -155,7 +313,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "object:\n";
-    to_yaml(msg.object, out, indentation + 2);
+    to_block_style_yaml(msg.object, out, indentation + 2);
   }
 
   // member: fullpos
@@ -164,7 +322,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "fullpos:\n";
-    to_yaml(msg.fullpos, out, indentation + 2);
+    to_block_style_yaml(msg.fullpos, out, indentation + 2);
   }
 
   // member: throttlepos
@@ -173,7 +331,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "throttlepos: ";
-    value_to_yaml(msg.throttlepos, out);
+    rosidl_generator_traits::value_to_yaml(msg.throttlepos, out);
     out << "\n";
   }
 
@@ -183,7 +341,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "speedheadc:\n";
-    to_yaml(msg.speedheadc, out, indentation + 2);
+    to_block_style_yaml(msg.speedheadc, out, indentation + 2);
   }
 
   // member: speedc
@@ -192,7 +350,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "speedc: ";
-    value_to_yaml(msg.speedc, out);
+    rosidl_generator_traits::value_to_yaml(msg.speedc, out);
     out << "\n";
   }
 
@@ -202,7 +360,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "vehicledata:\n";
-    to_yaml(msg.vehicledata, out, indentation + 2);
+    to_block_style_yaml(msg.vehicledata, out, indentation + 2);
   }
 
   // member: vehicleident
@@ -211,7 +369,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "vehicleident:\n";
-    to_yaml(msg.vehicleident, out, indentation + 2);
+    to_block_style_yaml(msg.vehicleident, out, indentation + 2);
   }
 
   // member: j1939data
@@ -220,7 +378,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "j1939data:\n";
-    to_yaml(msg.j1939data, out, indentation + 2);
+    to_block_style_yaml(msg.j1939data, out, indentation + 2);
   }
 
   // member: weatherreport
@@ -229,7 +387,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "weatherreport:\n";
-    to_yaml(msg.weatherreport, out, indentation + 2);
+    to_block_style_yaml(msg.weatherreport, out, indentation + 2);
   }
 
   // member: gnssstatus
@@ -238,16 +396,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "gnssstatus: ";
-    value_to_yaml(msg.gnssstatus, out);
+    rosidl_generator_traits::value_to_yaml(msg.gnssstatus, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::VehicleStatus & msg)
+inline std::string to_yaml(const VehicleStatus & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::VehicleStatus & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::VehicleStatus & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

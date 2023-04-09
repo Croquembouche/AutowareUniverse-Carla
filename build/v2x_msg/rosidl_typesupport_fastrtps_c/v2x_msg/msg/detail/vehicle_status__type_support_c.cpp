@@ -55,6 +55,7 @@ size_t get_serialized_size_v2x_msg__msg__AccelSets(
 
 size_t max_serialized_size_v2x_msg__msg__AccelSets(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -65,6 +66,7 @@ size_t get_serialized_size_v2x_msg__msg__BrakeSystemStatus(
 
 size_t max_serialized_size_v2x_msg__msg__BrakeSystemStatus(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -75,6 +77,7 @@ size_t get_serialized_size_v2x_msg__msg__FullPositionVector(
 
 size_t max_serialized_size_v2x_msg__msg__FullPositionVector(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -85,6 +88,7 @@ size_t get_serialized_size_v2x_msg__msg__J1939data(
 
 size_t max_serialized_size_v2x_msg__msg__J1939data(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -95,6 +99,7 @@ size_t get_serialized_size_v2x_msg__msg__Object(
 
 size_t max_serialized_size_v2x_msg__msg__Object(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -105,6 +110,7 @@ size_t get_serialized_size_v2x_msg__msg__SpeedandHeadingandThrottleConfidence(
 
 size_t max_serialized_size_v2x_msg__msg__SpeedandHeadingandThrottleConfidence(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -115,6 +121,7 @@ size_t get_serialized_size_v2x_msg__msg__Steering(
 
 size_t max_serialized_size_v2x_msg__msg__Steering(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -125,6 +132,7 @@ size_t get_serialized_size_v2x_msg__msg__VehicleData(
 
 size_t max_serialized_size_v2x_msg__msg__VehicleData(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -135,6 +143,7 @@ size_t get_serialized_size_v2x_msg__msg__VehicleIdent(
 
 size_t max_serialized_size_v2x_msg__msg__VehicleIdent(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -145,6 +154,7 @@ size_t get_serialized_size_v2x_msg__msg__WeatherReport(
 
 size_t max_serialized_size_v2x_msg__msg__WeatherReport(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -155,6 +165,7 @@ size_t get_serialized_size_v2x_msg__msg__WiperSet(
 
 size_t max_serialized_size_v2x_msg__msg__WiperSet(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -763,6 +774,7 @@ static uint32_t _VehicleStatus__get_serialized_size(const void * untyped_ros_mes
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_v2x_msg
 size_t max_serialized_size_v2x_msg__msg__VehicleStatus(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment)
 {
   size_t initial_alignment = current_alignment;
@@ -771,13 +783,16 @@ size_t max_serialized_size_v2x_msg__msg__VehicleStatus(
   const size_t wchar_size = 4;
   (void)padding;
   (void)wchar_size;
-  (void)full_bounded;
+
+  full_bounded = true;
+  is_plain = true;
 
   // member: lights
   {
     size_t array_size = 1;
 
     full_bounded = false;
+    is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
       current_alignment += padding +
         eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
@@ -797,9 +812,13 @@ size_t max_serialized_size_v2x_msg__msg__VehicleStatus(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__WiperSet(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: brakestatus
@@ -808,9 +827,13 @@ size_t max_serialized_size_v2x_msg__msg__VehicleStatus(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__BrakeSystemStatus(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: roadfriction
@@ -854,9 +877,13 @@ size_t max_serialized_size_v2x_msg__msg__VehicleStatus(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__Steering(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: accelsets
@@ -865,9 +892,13 @@ size_t max_serialized_size_v2x_msg__msg__VehicleStatus(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__AccelSets(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: object
@@ -876,9 +907,13 @@ size_t max_serialized_size_v2x_msg__msg__VehicleStatus(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__Object(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: fullpos
@@ -887,9 +922,13 @@ size_t max_serialized_size_v2x_msg__msg__VehicleStatus(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__FullPositionVector(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: throttlepos
@@ -905,9 +944,13 @@ size_t max_serialized_size_v2x_msg__msg__VehicleStatus(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__SpeedandHeadingandThrottleConfidence(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: speedc
@@ -923,9 +966,13 @@ size_t max_serialized_size_v2x_msg__msg__VehicleStatus(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__VehicleData(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: vehicleident
@@ -934,9 +981,13 @@ size_t max_serialized_size_v2x_msg__msg__VehicleStatus(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__VehicleIdent(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: j1939data
@@ -945,9 +996,13 @@ size_t max_serialized_size_v2x_msg__msg__VehicleStatus(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__J1939data(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: weatherreport
@@ -956,9 +1011,13 @@ size_t max_serialized_size_v2x_msg__msg__VehicleStatus(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__WeatherReport(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: gnssstatus
@@ -966,6 +1025,7 @@ size_t max_serialized_size_v2x_msg__msg__VehicleStatus(
     size_t array_size = 1;
 
     full_bounded = false;
+    is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
       current_alignment += padding +
         eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
@@ -976,10 +1036,19 @@ size_t max_serialized_size_v2x_msg__msg__VehicleStatus(
   return current_alignment - initial_alignment;
 }
 
-static size_t _VehicleStatus__max_serialized_size(bool & full_bounded)
+static size_t _VehicleStatus__max_serialized_size(char & bounds_info)
 {
-  return max_serialized_size_v2x_msg__msg__VehicleStatus(
-    full_bounded, 0);
+  bool full_bounded;
+  bool is_plain;
+  size_t ret_val;
+
+  ret_val = max_serialized_size_v2x_msg__msg__VehicleStatus(
+    full_bounded, is_plain, 0);
+
+  bounds_info =
+    is_plain ? ROSIDL_TYPESUPPORT_FASTRTPS_PLAIN_TYPE :
+    full_bounded ? ROSIDL_TYPESUPPORT_FASTRTPS_BOUNDED_TYPE : ROSIDL_TYPESUPPORT_FASTRTPS_UNBOUNDED_TYPE;
+  return ret_val;
 }
 
 

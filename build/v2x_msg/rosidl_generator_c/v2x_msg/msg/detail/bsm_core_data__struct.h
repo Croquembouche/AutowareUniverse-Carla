@@ -29,7 +29,7 @@ extern "C"
 // Member 'size'
 #include "v2x_msg/msg/detail/vehicle_size__struct.h"
 
-// Struct defined in msg/BSMCoreData in the package v2x_msg.
+/// Struct defined in msg/BSMCoreData in the package v2x_msg.
 typedef struct v2x_msg__msg__BSMCoreData
 {
   int64_t msgcnt;

@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -119,7 +121,7 @@ class OffsetSystem(metaclass=Metaclass_OffsetSystem):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def scale(self):
         """Message field 'scale'."""
         return self._scale
@@ -134,7 +136,7 @@ class OffsetSystem(metaclass=Metaclass_OffsetSystem):
                 "The 'scale' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._scale = value
 
-    @property
+    @builtins.property
     def offset(self):
         """Message field 'offset'."""
         return self._offset

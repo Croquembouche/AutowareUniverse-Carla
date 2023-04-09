@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/NodeXY22b in the package v2x_msg.
+/// Struct defined in msg/NodeXY22b in the package v2x_msg.
 typedef struct v2x_msg__msg__NodeXY22b
 {
   int64_t x;

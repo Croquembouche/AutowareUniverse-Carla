@@ -25,7 +25,7 @@ extern "C"
 // Member 'regionpointset'
 #include "v2x_msg/msg/detail/region_point_set__struct.h"
 
-// Struct defined in msg/Area in the package v2x_msg.
+/// Struct defined in msg/Area in the package v2x_msg.
 typedef struct v2x_msg__msg__Area
 {
   v2x_msg__msg__ShapePointSet shapepointset;

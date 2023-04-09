@@ -5,18 +5,64 @@
 #ifndef V2X_MSG__MSG__DETAIL__NMEA__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__NMEA__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/nmea__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
 
-namespace rosidl_generator_traits
+#include "v2x_msg/msg/detail/nmea__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
+
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::NMEA & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const NMEA & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: timestamp
+  {
+    out << "timestamp: ";
+    rosidl_generator_traits::value_to_yaml(msg.timestamp, out);
+    out << ", ";
+  }
+
+  // member: rev
+  {
+    out << "rev: ";
+    rosidl_generator_traits::value_to_yaml(msg.rev, out);
+    out << ", ";
+  }
+
+  // member: msg
+  {
+    out << "msg: ";
+    rosidl_generator_traits::value_to_yaml(msg.msg, out);
+    out << ", ";
+  }
+
+  // member: wdcount
+  {
+    out << "wdcount: ";
+    rosidl_generator_traits::value_to_yaml(msg.wdcount, out);
+    out << ", ";
+  }
+
+  // member: payload
+  {
+    out << "payload: ";
+    rosidl_generator_traits::value_to_yaml(msg.payload, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const NMEA & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: timestamp
@@ -25,7 +71,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "timestamp: ";
-    value_to_yaml(msg.timestamp, out);
+    rosidl_generator_traits::value_to_yaml(msg.timestamp, out);
     out << "\n";
   }
 
@@ -35,7 +81,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "rev: ";
-    value_to_yaml(msg.rev, out);
+    rosidl_generator_traits::value_to_yaml(msg.rev, out);
     out << "\n";
   }
 
@@ -45,7 +91,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "msg: ";
-    value_to_yaml(msg.msg, out);
+    rosidl_generator_traits::value_to_yaml(msg.msg, out);
     out << "\n";
   }
 
@@ -55,7 +101,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "wdcount: ";
-    value_to_yaml(msg.wdcount, out);
+    rosidl_generator_traits::value_to_yaml(msg.wdcount, out);
     out << "\n";
   }
 
@@ -65,16 +111,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "payload: ";
-    value_to_yaml(msg.payload, out);
+    rosidl_generator_traits::value_to_yaml(msg.payload, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::NMEA & msg)
+inline std::string to_yaml(const NMEA & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::NMEA & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::NMEA & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

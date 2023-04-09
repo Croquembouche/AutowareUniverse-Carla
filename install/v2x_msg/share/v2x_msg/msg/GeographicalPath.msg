@@ -1,8 +1,1 @@
-string name
-RoadSegmentReferenceID id 
-Position3D anchor 
-int64 lanewidth
-int64 directionality
-bool closedpath
-string direction
-Description description
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/GeographicalPath.msg

@@ -136,7 +136,7 @@ PyObject * v2x_msg__msg__vehicle_safety_extensions__convert_to_py(void * raw_ros
     field = PyUnicode_DecodeUTF8(
       ros_message->vehicleeventflags.data,
       strlen(ros_message->vehicleeventflags.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -181,7 +181,7 @@ PyObject * v2x_msg__msg__vehicle_safety_extensions__convert_to_py(void * raw_ros
     field = PyUnicode_DecodeUTF8(
       ros_message->texteriorlights.data,
       strlen(ros_message->texteriorlights.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

@@ -23,7 +23,7 @@ extern "C"
 // Member 'roadsignid'
 #include "v2x_msg/msg/detail/road_sign_id__struct.h"
 
-// Struct defined in msg/MsgID in the package v2x_msg.
+/// Struct defined in msg/MsgID in the package v2x_msg.
 typedef struct v2x_msg__msg__MsgID
 {
   rosidl_runtime_c__String furtherinfoid;

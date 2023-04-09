@@ -163,7 +163,7 @@ PyObject * v2x_msg__msg__path_history__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->currgnssstatus.data,
       strlen(ros_message->currgnssstatus.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

@@ -27,7 +27,7 @@ extern "C"
 // Member 'restrictionlist'
 #include "v2x_msg/msg/detail/restriction_class_assignment__struct.h"
 
-// Struct defined in msg/MAP in the package v2x_msg.
+/// Struct defined in msg/MAP in the package v2x_msg.
 typedef struct v2x_msg__msg__MAP
 {
   int64_t timestamp;

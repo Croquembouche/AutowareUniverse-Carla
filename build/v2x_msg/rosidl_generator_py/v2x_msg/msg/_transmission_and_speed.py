@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -114,7 +116,7 @@ class TransmissionAndSpeed(metaclass=Metaclass_TransmissionAndSpeed):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def transmission(self):
         """Message field 'transmission'."""
         return self._transmission
@@ -129,7 +131,7 @@ class TransmissionAndSpeed(metaclass=Metaclass_TransmissionAndSpeed):
                 "The 'transmission' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._transmission = value
 
-    @property
+    @builtins.property
     def velocity(self):
         """Message field 'velocity'."""
         return self._velocity

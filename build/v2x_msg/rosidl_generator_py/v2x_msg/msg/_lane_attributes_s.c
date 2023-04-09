@@ -119,7 +119,7 @@ PyObject * v2x_msg__msg__lane_attributes__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->directionaluse.data,
       strlen(ros_message->directionaluse.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -136,7 +136,7 @@ PyObject * v2x_msg__msg__lane_attributes__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->sharedwith.data,
       strlen(ros_message->sharedwith.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

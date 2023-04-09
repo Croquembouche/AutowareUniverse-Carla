@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -114,7 +116,7 @@ class VehicleID(metaclass=Metaclass_VehicleID):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def entityid(self):
         """Message field 'entityid'."""
         return self._entityid
@@ -127,7 +129,7 @@ class VehicleID(metaclass=Metaclass_VehicleID):
                 "The 'entityid' field must be of type 'str'"
         self._entityid = value
 
-    @property
+    @builtins.property
     def stationid(self):
         """Message field 'stationid'."""
         return self._stationid

@@ -57,6 +57,24 @@ void * get_function__IntersectionGeometry__speedlimits(void * untyped_member, si
   return &member[index];
 }
 
+void fetch_function__IntersectionGeometry__speedlimits(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const v2x_msg::msg::SpeedLimit *>(
+    get_const_function__IntersectionGeometry__speedlimits(untyped_member, index));
+  auto & value = *reinterpret_cast<v2x_msg::msg::SpeedLimit *>(untyped_value);
+  value = item;
+}
+
+void assign_function__IntersectionGeometry__speedlimits(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<v2x_msg::msg::SpeedLimit *>(
+    get_function__IntersectionGeometry__speedlimits(untyped_member, index));
+  const auto & value = *reinterpret_cast<const v2x_msg::msg::SpeedLimit *>(untyped_value);
+  item = value;
+}
+
 void resize_function__IntersectionGeometry__speedlimits(void * untyped_member, size_t size)
 {
   auto * member =
@@ -84,6 +102,24 @@ void * get_function__IntersectionGeometry__laneset(void * untyped_member, size_t
   return &member[index];
 }
 
+void fetch_function__IntersectionGeometry__laneset(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const v2x_msg::msg::GenericLane *>(
+    get_const_function__IntersectionGeometry__laneset(untyped_member, index));
+  auto & value = *reinterpret_cast<v2x_msg::msg::GenericLane *>(untyped_value);
+  value = item;
+}
+
+void assign_function__IntersectionGeometry__laneset(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<v2x_msg::msg::GenericLane *>(
+    get_function__IntersectionGeometry__laneset(untyped_member, index));
+  const auto & value = *reinterpret_cast<const v2x_msg::msg::GenericLane *>(untyped_value);
+  item = value;
+}
+
 void resize_function__IntersectionGeometry__laneset(void * untyped_member, size_t size)
 {
   auto * member =
@@ -105,6 +141,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember IntersectionG
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -120,6 +158,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember IntersectionG
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -135,6 +175,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember IntersectionG
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -150,6 +192,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember IntersectionG
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -165,6 +209,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember IntersectionG
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -180,6 +226,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember IntersectionG
     size_function__IntersectionGeometry__speedlimits,  // size() function pointer
     get_const_function__IntersectionGeometry__speedlimits,  // get_const(index) function pointer
     get_function__IntersectionGeometry__speedlimits,  // get(index) function pointer
+    fetch_function__IntersectionGeometry__speedlimits,  // fetch(index, &value) function pointer
+    assign_function__IntersectionGeometry__speedlimits,  // assign(index, value) function pointer
     resize_function__IntersectionGeometry__speedlimits  // resize(index) function pointer
   },
   {
@@ -195,6 +243,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember IntersectionG
     size_function__IntersectionGeometry__laneset,  // size() function pointer
     get_const_function__IntersectionGeometry__laneset,  // get_const(index) function pointer
     get_function__IntersectionGeometry__laneset,  // get(index) function pointer
+    fetch_function__IntersectionGeometry__laneset,  // fetch(index, &value) function pointer
+    assign_function__IntersectionGeometry__laneset,  // assign(index, value) function pointer
     resize_function__IntersectionGeometry__laneset  // resize(index) function pointer
   },
   {
@@ -210,6 +260,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember IntersectionG
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   }
 };

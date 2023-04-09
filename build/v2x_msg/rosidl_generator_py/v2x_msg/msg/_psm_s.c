@@ -398,7 +398,7 @@ PyObject * v2x_msg__msg__psm__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->id.data,
       strlen(ros_message->id.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -521,7 +521,7 @@ PyObject * v2x_msg__msg__psm__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->usestate.data,
       strlen(ros_message->usestate.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -593,7 +593,7 @@ PyObject * v2x_msg__msg__psm__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->activitytype.data,
       strlen(ros_message->activitytype.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -610,7 +610,7 @@ PyObject * v2x_msg__msg__psm__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->activitysubtype.data,
       strlen(ros_message->activitysubtype.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -627,7 +627,7 @@ PyObject * v2x_msg__msg__psm__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->assisttype.data,
       strlen(ros_message->assisttype.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -644,7 +644,7 @@ PyObject * v2x_msg__msg__psm__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->sizing.data,
       strlen(ros_message->sizing.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

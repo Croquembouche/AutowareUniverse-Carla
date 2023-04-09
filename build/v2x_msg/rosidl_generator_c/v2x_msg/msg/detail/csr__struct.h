@@ -23,7 +23,7 @@ extern "C"
 // Member 'requests'
 #include "v2x_msg/msg/detail/requested_item__struct.h"
 
-// Struct defined in msg/CSR in the package v2x_msg.
+/// Struct defined in msg/CSR in the package v2x_msg.
 typedef struct v2x_msg__msg__CSR
 {
   int64_t timestamp;

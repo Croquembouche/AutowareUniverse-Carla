@@ -35,7 +35,7 @@ extern "C"
 {
 #endif
 
-void PVD__rosidl_typesupport_introspection_c__PVD_init_function(
+void v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__PVD_init_function(
   void * message_memory, enum rosidl_runtime_c__message_initialization _init)
 {
   // TODO(karsten1987): initializers are not yet implemented for typesupport c
@@ -44,12 +44,12 @@ void PVD__rosidl_typesupport_introspection_c__PVD_init_function(
   v2x_msg__msg__PVD__init(message_memory);
 }
 
-void PVD__rosidl_typesupport_introspection_c__PVD_fini_function(void * message_memory)
+void v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__PVD_fini_function(void * message_memory)
 {
   v2x_msg__msg__PVD__fini(message_memory);
 }
 
-size_t PVD__rosidl_typesupport_introspection_c__size_function__Snapshot__snapshots(
+size_t v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__size_function__PVD__snapshots(
   const void * untyped_member)
 {
   const v2x_msg__msg__Snapshot__Sequence * member =
@@ -57,7 +57,7 @@ size_t PVD__rosidl_typesupport_introspection_c__size_function__Snapshot__snapsho
   return member->size;
 }
 
-const void * PVD__rosidl_typesupport_introspection_c__get_const_function__Snapshot__snapshots(
+const void * v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__get_const_function__PVD__snapshots(
   const void * untyped_member, size_t index)
 {
   const v2x_msg__msg__Snapshot__Sequence * member =
@@ -65,7 +65,7 @@ const void * PVD__rosidl_typesupport_introspection_c__get_const_function__Snapsh
   return &member->data[index];
 }
 
-void * PVD__rosidl_typesupport_introspection_c__get_function__Snapshot__snapshots(
+void * v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__get_function__PVD__snapshots(
   void * untyped_member, size_t index)
 {
   v2x_msg__msg__Snapshot__Sequence * member =
@@ -73,7 +73,29 @@ void * PVD__rosidl_typesupport_introspection_c__get_function__Snapshot__snapshot
   return &member->data[index];
 }
 
-bool PVD__rosidl_typesupport_introspection_c__resize_function__Snapshot__snapshots(
+void v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__fetch_function__PVD__snapshots(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const v2x_msg__msg__Snapshot * item =
+    ((const v2x_msg__msg__Snapshot *)
+    v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__get_const_function__PVD__snapshots(untyped_member, index));
+  v2x_msg__msg__Snapshot * value =
+    (v2x_msg__msg__Snapshot *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__assign_function__PVD__snapshots(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  v2x_msg__msg__Snapshot * item =
+    ((v2x_msg__msg__Snapshot *)
+    v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__get_function__PVD__snapshots(untyped_member, index));
+  const v2x_msg__msg__Snapshot * value =
+    (const v2x_msg__msg__Snapshot *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__resize_function__PVD__snapshots(
   void * untyped_member, size_t size)
 {
   v2x_msg__msg__Snapshot__Sequence * member =
@@ -82,7 +104,7 @@ bool PVD__rosidl_typesupport_introspection_c__resize_function__Snapshot__snapsho
   return v2x_msg__msg__Snapshot__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember PVD__rosidl_typesupport_introspection_c__PVD_message_member_array[6] = {
+static rosidl_typesupport_introspection_c__MessageMember v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__PVD_message_member_array[6] = {
   {
     "timstamp",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
@@ -96,6 +118,8 @@ static rosidl_typesupport_introspection_c__MessageMember PVD__rosidl_typesupport
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -111,6 +135,8 @@ static rosidl_typesupport_introspection_c__MessageMember PVD__rosidl_typesupport
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -126,6 +152,8 @@ static rosidl_typesupport_introspection_c__MessageMember PVD__rosidl_typesupport
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -141,6 +169,8 @@ static rosidl_typesupport_introspection_c__MessageMember PVD__rosidl_typesupport
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -156,6 +186,8 @@ static rosidl_typesupport_introspection_c__MessageMember PVD__rosidl_typesupport
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -168,47 +200,49 @@ static rosidl_typesupport_introspection_c__MessageMember PVD__rosidl_typesupport
     false,  // is upper bound
     offsetof(v2x_msg__msg__PVD, snapshots),  // bytes offset in struct
     NULL,  // default value
-    PVD__rosidl_typesupport_introspection_c__size_function__Snapshot__snapshots,  // size() function pointer
-    PVD__rosidl_typesupport_introspection_c__get_const_function__Snapshot__snapshots,  // get_const(index) function pointer
-    PVD__rosidl_typesupport_introspection_c__get_function__Snapshot__snapshots,  // get(index) function pointer
-    PVD__rosidl_typesupport_introspection_c__resize_function__Snapshot__snapshots  // resize(index) function pointer
+    v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__size_function__PVD__snapshots,  // size() function pointer
+    v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__get_const_function__PVD__snapshots,  // get_const(index) function pointer
+    v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__get_function__PVD__snapshots,  // get(index) function pointer
+    v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__fetch_function__PVD__snapshots,  // fetch(index, &value) function pointer
+    v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__assign_function__PVD__snapshots,  // assign(index, value) function pointer
+    v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__resize_function__PVD__snapshots  // resize(index) function pointer
   }
 };
 
-static const rosidl_typesupport_introspection_c__MessageMembers PVD__rosidl_typesupport_introspection_c__PVD_message_members = {
+static const rosidl_typesupport_introspection_c__MessageMembers v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__PVD_message_members = {
   "v2x_msg__msg",  // message namespace
   "PVD",  // message name
   6,  // number of fields
   sizeof(v2x_msg__msg__PVD),
-  PVD__rosidl_typesupport_introspection_c__PVD_message_member_array,  // message members
-  PVD__rosidl_typesupport_introspection_c__PVD_init_function,  // function to initialize message memory (memory has to be allocated)
-  PVD__rosidl_typesupport_introspection_c__PVD_fini_function  // function to terminate message instance (will not free memory)
+  v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__PVD_message_member_array,  // message members
+  v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__PVD_init_function,  // function to initialize message memory (memory has to be allocated)
+  v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__PVD_fini_function  // function to terminate message instance (will not free memory)
 };
 
 // this is not const since it must be initialized on first access
 // since C does not allow non-integral compile-time constants
-static rosidl_message_type_support_t PVD__rosidl_typesupport_introspection_c__PVD_message_type_support_handle = {
+static rosidl_message_type_support_t v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__PVD_message_type_support_handle = {
   0,
-  &PVD__rosidl_typesupport_introspection_c__PVD_message_members,
+  &v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__PVD_message_members,
   get_message_typesupport_handle_function,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_v2x_msg
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, PVD)() {
-  PVD__rosidl_typesupport_introspection_c__PVD_message_member_array[2].members_ =
+  v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__PVD_message_member_array[2].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, VehicleIdent)();
-  PVD__rosidl_typesupport_introspection_c__PVD_message_member_array[3].members_ =
+  v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__PVD_message_member_array[3].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, FullPositionVector)();
-  PVD__rosidl_typesupport_introspection_c__PVD_message_member_array[4].members_ =
+  v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__PVD_message_member_array[4].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, VehicleClassification)();
-  PVD__rosidl_typesupport_introspection_c__PVD_message_member_array[5].members_ =
+  v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__PVD_message_member_array[5].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, Snapshot)();
-  if (!PVD__rosidl_typesupport_introspection_c__PVD_message_type_support_handle.typesupport_identifier) {
-    PVD__rosidl_typesupport_introspection_c__PVD_message_type_support_handle.typesupport_identifier =
+  if (!v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__PVD_message_type_support_handle.typesupport_identifier) {
+    v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__PVD_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
   }
-  return &PVD__rosidl_typesupport_introspection_c__PVD_message_type_support_handle;
+  return &v2x_msg__msg__PVD__rosidl_typesupport_introspection_c__PVD_message_type_support_handle;
 }
 #ifdef __cplusplus
 }

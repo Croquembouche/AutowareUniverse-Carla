@@ -5,18 +5,78 @@
 #ifndef V2X_MSG__MSG__DETAIL__TIRE_DATA__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__TIRE_DATA__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/tire_data__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
 
-namespace rosidl_generator_traits
+#include "v2x_msg/msg/detail/tire_data__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
+
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::TireData & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const TireData & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: location
+  {
+    out << "location: ";
+    rosidl_generator_traits::value_to_yaml(msg.location, out);
+    out << ", ";
+  }
+
+  // member: pressure
+  {
+    out << "pressure: ";
+    rosidl_generator_traits::value_to_yaml(msg.pressure, out);
+    out << ", ";
+  }
+
+  // member: temp
+  {
+    out << "temp: ";
+    rosidl_generator_traits::value_to_yaml(msg.temp, out);
+    out << ", ";
+  }
+
+  // member: wheelsensorstatus
+  {
+    out << "wheelsensorstatus: ";
+    rosidl_generator_traits::value_to_yaml(msg.wheelsensorstatus, out);
+    out << ", ";
+  }
+
+  // member: wheelendelectfault
+  {
+    out << "wheelendelectfault: ";
+    rosidl_generator_traits::value_to_yaml(msg.wheelendelectfault, out);
+    out << ", ";
+  }
+
+  // member: leakagerate
+  {
+    out << "leakagerate: ";
+    rosidl_generator_traits::value_to_yaml(msg.leakagerate, out);
+    out << ", ";
+  }
+
+  // member: detection
+  {
+    out << "detection: ";
+    rosidl_generator_traits::value_to_yaml(msg.detection, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const TireData & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: location
@@ -25,7 +85,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "location: ";
-    value_to_yaml(msg.location, out);
+    rosidl_generator_traits::value_to_yaml(msg.location, out);
     out << "\n";
   }
 
@@ -35,7 +95,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "pressure: ";
-    value_to_yaml(msg.pressure, out);
+    rosidl_generator_traits::value_to_yaml(msg.pressure, out);
     out << "\n";
   }
 
@@ -45,7 +105,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "temp: ";
-    value_to_yaml(msg.temp, out);
+    rosidl_generator_traits::value_to_yaml(msg.temp, out);
     out << "\n";
   }
 
@@ -55,7 +115,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "wheelsensorstatus: ";
-    value_to_yaml(msg.wheelsensorstatus, out);
+    rosidl_generator_traits::value_to_yaml(msg.wheelsensorstatus, out);
     out << "\n";
   }
 
@@ -65,7 +125,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "wheelendelectfault: ";
-    value_to_yaml(msg.wheelendelectfault, out);
+    rosidl_generator_traits::value_to_yaml(msg.wheelendelectfault, out);
     out << "\n";
   }
 
@@ -75,7 +135,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "leakagerate: ";
-    value_to_yaml(msg.leakagerate, out);
+    rosidl_generator_traits::value_to_yaml(msg.leakagerate, out);
     out << "\n";
   }
 
@@ -85,16 +145,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "detection: ";
-    value_to_yaml(msg.detection, out);
+    rosidl_generator_traits::value_to_yaml(msg.detection, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::TireData & msg)
+inline std::string to_yaml(const TireData & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::TireData & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::TireData & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

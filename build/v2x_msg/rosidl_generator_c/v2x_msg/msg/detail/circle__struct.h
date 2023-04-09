@@ -21,7 +21,7 @@ extern "C"
 // Member 'center'
 #include "v2x_msg/msg/detail/position3_d__struct.h"
 
-// Struct defined in msg/Circle in the package v2x_msg.
+/// Struct defined in msg/Circle in the package v2x_msg.
 typedef struct v2x_msg__msg__Circle
 {
   v2x_msg__msg__Position3D center;

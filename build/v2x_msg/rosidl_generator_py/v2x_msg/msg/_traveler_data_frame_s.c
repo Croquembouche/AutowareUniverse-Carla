@@ -398,7 +398,7 @@ PyObject * v2x_msg__msg__traveler_data_frame__convert_to_py(void * raw_ros_messa
     field = PyUnicode_DecodeUTF8(
       ros_message->url.data,
       strlen(ros_message->url.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

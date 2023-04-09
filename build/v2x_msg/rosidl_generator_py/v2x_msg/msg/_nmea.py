@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -132,7 +134,7 @@ class NMEA(metaclass=Metaclass_NMEA):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def timestamp(self):
         """Message field 'timestamp'."""
         return self._timestamp
@@ -147,7 +149,7 @@ class NMEA(metaclass=Metaclass_NMEA):
                 "The 'timestamp' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._timestamp = value
 
-    @property
+    @builtins.property
     def rev(self):
         """Message field 'rev'."""
         return self._rev
@@ -162,7 +164,7 @@ class NMEA(metaclass=Metaclass_NMEA):
                 "The 'rev' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._rev = value
 
-    @property
+    @builtins.property
     def msg(self):
         """Message field 'msg'."""
         return self._msg
@@ -177,7 +179,7 @@ class NMEA(metaclass=Metaclass_NMEA):
                 "The 'msg' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._msg = value
 
-    @property
+    @builtins.property
     def wdcount(self):
         """Message field 'wdcount'."""
         return self._wdcount
@@ -192,7 +194,7 @@ class NMEA(metaclass=Metaclass_NMEA):
                 "The 'wdcount' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._wdcount = value
 
-    @property
+    @builtins.property
     def payload(self):
         """Message field 'payload'."""
         return self._payload

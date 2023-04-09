@@ -29,7 +29,7 @@ extern "C"
 // Member 'roadlaneset'
 #include "v2x_msg/msg/detail/generic_lane__struct.h"
 
-// Struct defined in msg/RoadSegment in the package v2x_msg.
+/// Struct defined in msg/RoadSegment in the package v2x_msg.
 typedef struct v2x_msg__msg__RoadSegment
 {
   rosidl_runtime_c__String name;

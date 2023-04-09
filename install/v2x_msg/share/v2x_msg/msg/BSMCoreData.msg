@@ -1,14 +1,1 @@
-int64 msgcnt
-string id
-int64 secmark
-int64 lat
-int64 longitude
-int64 elev
-PositionalAccuracy accuracy 
-int64 transmission
-int64 speed
-int64 heading
-int64 angle
-AccelerationSet4Way accelset
-BrakeSystemStatus brakes
-VehicleSize size
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/BSMCoreData.msg

@@ -1,3 +1,1 @@
-int64 latitude
-int64 longitude
-int64 elevation
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/Position3D.msg

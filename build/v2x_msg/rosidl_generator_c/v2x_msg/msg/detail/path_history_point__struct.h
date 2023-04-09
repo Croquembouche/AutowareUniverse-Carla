@@ -21,7 +21,7 @@ extern "C"
 // Member 'accuracy'
 #include "v2x_msg/msg/detail/positional_accuracy__struct.h"
 
-// Struct defined in msg/PathHistoryPoint in the package v2x_msg.
+/// Struct defined in msg/PathHistoryPoint in the package v2x_msg.
 typedef struct v2x_msg__msg__PathHistoryPoint
 {
   int64_t latoffset;

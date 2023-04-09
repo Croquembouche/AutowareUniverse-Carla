@@ -21,7 +21,7 @@ extern "C"
 // Member 'signalrequest'
 #include "v2x_msg/msg/detail/signal_request__struct.h"
 
-// Struct defined in msg/SignalRequestPackage in the package v2x_msg.
+/// Struct defined in msg/SignalRequestPackage in the package v2x_msg.
 typedef struct v2x_msg__msg__SignalRequestPackage
 {
   v2x_msg__msg__SignalRequest signalrequest;

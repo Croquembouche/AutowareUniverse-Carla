@@ -1,0 +1,6 @@
+CMake Error at cmake_install.cmake:97 (file):
+  file INSTALL cannot find
+  "/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/CMakeFiles/CMakeRelink.dir/libv2x_msg__rosidl_typesupport_introspection_cpp.so":
+  No such file or directory.
+
+

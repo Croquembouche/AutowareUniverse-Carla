@@ -23,7 +23,7 @@ extern "C"
 // Member 'computed'
 #include "v2x_msg/msg/detail/computed_lane__struct.h"
 
-// Struct defined in msg/NodeListXY in the package v2x_msg.
+/// Struct defined in msg/NodeListXY in the package v2x_msg.
 typedef struct v2x_msg__msg__NodeListXY
 {
   v2x_msg__msg__NodeXY__Sequence nodes;

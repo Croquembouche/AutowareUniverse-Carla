@@ -23,7 +23,7 @@ extern "C"
 // Member 'area'
 #include "v2x_msg/msg/detail/area__struct.h"
 
-// Struct defined in msg/ValidRegion in the package v2x_msg.
+/// Struct defined in msg/ValidRegion in the package v2x_msg.
 typedef struct v2x_msg__msg__ValidRegion
 {
   rosidl_runtime_c__String direction;

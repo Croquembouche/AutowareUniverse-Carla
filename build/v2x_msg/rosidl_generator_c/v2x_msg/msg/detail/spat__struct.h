@@ -23,7 +23,7 @@ extern "C"
 // Member 'intersections'
 #include "v2x_msg/msg/detail/intersection_state__struct.h"
 
-// Struct defined in msg/SPAT in the package v2x_msg.
+/// Struct defined in msg/SPAT in the package v2x_msg.
 typedef struct v2x_msg__msg__SPAT
 {
   int64_t timestamp;

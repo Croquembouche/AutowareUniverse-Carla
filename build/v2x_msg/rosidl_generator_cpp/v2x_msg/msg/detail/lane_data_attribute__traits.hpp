@@ -5,22 +5,86 @@
 #ifndef V2X_MSG__MSG__DETAIL__LANE_DATA_ATTRIBUTE__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__LANE_DATA_ATTRIBUTE__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/lane_data_attribute__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/lane_data_attribute__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'speedlimits'
 #include "v2x_msg/msg/detail/speed_limit__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::LaneDataAttribute & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const LaneDataAttribute & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: pathendpointangle
+  {
+    out << "pathendpointangle: ";
+    rosidl_generator_traits::value_to_yaml(msg.pathendpointangle, out);
+    out << ", ";
+  }
+
+  // member: lanecrownpointcenter
+  {
+    out << "lanecrownpointcenter: ";
+    rosidl_generator_traits::value_to_yaml(msg.lanecrownpointcenter, out);
+    out << ", ";
+  }
+
+  // member: lancrownpointleft
+  {
+    out << "lancrownpointleft: ";
+    rosidl_generator_traits::value_to_yaml(msg.lancrownpointleft, out);
+    out << ", ";
+  }
+
+  // member: lanecrownpointright
+  {
+    out << "lanecrownpointright: ";
+    rosidl_generator_traits::value_to_yaml(msg.lanecrownpointright, out);
+    out << ", ";
+  }
+
+  // member: laneangle
+  {
+    out << "laneangle: ";
+    rosidl_generator_traits::value_to_yaml(msg.laneangle, out);
+    out << ", ";
+  }
+
+  // member: speedlimits
+  {
+    if (msg.speedlimits.size() == 0) {
+      out << "speedlimits: []";
+    } else {
+      out << "speedlimits: [";
+      size_t pending_items = msg.speedlimits.size();
+      for (auto item : msg.speedlimits) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const LaneDataAttribute & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: pathendpointangle
@@ -29,7 +93,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "pathendpointangle: ";
-    value_to_yaml(msg.pathendpointangle, out);
+    rosidl_generator_traits::value_to_yaml(msg.pathendpointangle, out);
     out << "\n";
   }
 
@@ -39,7 +103,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "lanecrownpointcenter: ";
-    value_to_yaml(msg.lanecrownpointcenter, out);
+    rosidl_generator_traits::value_to_yaml(msg.lanecrownpointcenter, out);
     out << "\n";
   }
 
@@ -49,7 +113,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "lancrownpointleft: ";
-    value_to_yaml(msg.lancrownpointleft, out);
+    rosidl_generator_traits::value_to_yaml(msg.lancrownpointleft, out);
     out << "\n";
   }
 
@@ -59,7 +123,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "lanecrownpointright: ";
-    value_to_yaml(msg.lanecrownpointright, out);
+    rosidl_generator_traits::value_to_yaml(msg.lanecrownpointright, out);
     out << "\n";
   }
 
@@ -69,7 +133,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "laneangle: ";
-    value_to_yaml(msg.laneangle, out);
+    rosidl_generator_traits::value_to_yaml(msg.laneangle, out);
     out << "\n";
   }
 
@@ -87,17 +151,42 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "-\n";
-        to_yaml(item, out, indentation + 2);
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::LaneDataAttribute & msg)
+inline std::string to_yaml(const LaneDataAttribute & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::LaneDataAttribute & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::LaneDataAttribute & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

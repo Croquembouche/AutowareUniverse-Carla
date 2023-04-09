@@ -8,6 +8,8 @@
 # Member 'desrciption'
 import array  # noqa: E402, I100
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -164,7 +166,7 @@ class RSA(metaclass=Metaclass_RSA):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def msgcnt(self):
         """Message field 'msgcnt'."""
         return self._msgcnt
@@ -179,7 +181,7 @@ class RSA(metaclass=Metaclass_RSA):
                 "The 'msgcnt' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._msgcnt = value
 
-    @property
+    @builtins.property
     def timestamp(self):
         """Message field 'timestamp'."""
         return self._timestamp
@@ -194,7 +196,7 @@ class RSA(metaclass=Metaclass_RSA):
                 "The 'timestamp' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._timestamp = value
 
-    @property
+    @builtins.property
     def typeevent(self):
         """Message field 'typeevent'."""
         return self._typeevent
@@ -209,7 +211,7 @@ class RSA(metaclass=Metaclass_RSA):
                 "The 'typeevent' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._typeevent = value
 
-    @property
+    @builtins.property
     def desrciption(self):
         """Message field 'desrciption'."""
         return self._desrciption
@@ -237,7 +239,7 @@ class RSA(metaclass=Metaclass_RSA):
                 "The 'desrciption' field must be a set or sequence and each value of type 'int' and each integer in [-9223372036854775808, 9223372036854775807]"
         self._desrciption = array.array('q', value)
 
-    @property
+    @builtins.property
     def priority(self):
         """Message field 'priority'."""
         return self._priority
@@ -250,7 +252,7 @@ class RSA(metaclass=Metaclass_RSA):
                 "The 'priority' field must be of type 'str'"
         self._priority = value
 
-    @property
+    @builtins.property
     def heading(self):
         """Message field 'heading'."""
         return self._heading
@@ -263,7 +265,7 @@ class RSA(metaclass=Metaclass_RSA):
                 "The 'heading' field must be of type 'str'"
         self._heading = value
 
-    @property
+    @builtins.property
     def extent(self):
         """Message field 'extent'."""
         return self._extent
@@ -278,7 +280,7 @@ class RSA(metaclass=Metaclass_RSA):
                 "The 'extent' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._extent = value
 
-    @property
+    @builtins.property
     def position(self):
         """Message field 'position'."""
         return self._position
@@ -292,7 +294,7 @@ class RSA(metaclass=Metaclass_RSA):
                 "The 'position' field must be a sub message of type 'FullPositionVector'"
         self._position = value
 
-    @property
+    @builtins.property
     def furtherinfoid(self):
         """Message field 'furtherinfoid'."""
         return self._furtherinfoid

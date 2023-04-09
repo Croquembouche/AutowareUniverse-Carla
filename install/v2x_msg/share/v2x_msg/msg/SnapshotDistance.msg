@@ -1,4 +1,1 @@
-int64 distance1
-int64 speed1
-int64 distance2
-int64 speed2
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/SnapshotDistance.msg

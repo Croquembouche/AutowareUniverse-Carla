@@ -21,7 +21,7 @@ extern "C"
 // Member 'item'
 #include "v2x_msg/msg/detail/iti_scodesandtextcontent__struct.h"
 
-// Struct defined in msg/ITIScodesandtext in the package v2x_msg.
+/// Struct defined in msg/ITIScodesandtext in the package v2x_msg.
 typedef struct v2x_msg__msg__ITIScodesandtext
 {
   v2x_msg__msg__ITIScodesandtextcontent__Sequence item;

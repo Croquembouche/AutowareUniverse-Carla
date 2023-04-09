@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -125,7 +127,7 @@ class ValidRegion(metaclass=Metaclass_ValidRegion):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def direction(self):
         """Message field 'direction'."""
         return self._direction
@@ -138,7 +140,7 @@ class ValidRegion(metaclass=Metaclass_ValidRegion):
                 "The 'direction' field must be of type 'str'"
         self._direction = value
 
-    @property
+    @builtins.property
     def extent(self):
         """Message field 'extent'."""
         return self._extent
@@ -153,7 +155,7 @@ class ValidRegion(metaclass=Metaclass_ValidRegion):
                 "The 'extent' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._extent = value
 
-    @property
+    @builtins.property
     def area(self):
         """Message field 'area'."""
         return self._area

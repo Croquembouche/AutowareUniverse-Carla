@@ -41,7 +41,7 @@ extern "C"
 {
 #endif
 
-void IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_init_function(
+void v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_init_function(
   void * message_memory, enum rosidl_runtime_c__message_initialization _init)
 {
   // TODO(karsten1987): initializers are not yet implemented for typesupport c
@@ -50,12 +50,12 @@ void IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_in
   v2x_msg__msg__IntersectionState__init(message_memory);
 }
 
-void IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_fini_function(void * message_memory)
+void v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_fini_function(void * message_memory)
 {
   v2x_msg__msg__IntersectionState__fini(message_memory);
 }
 
-size_t IntersectionState__rosidl_typesupport_introspection_c__size_function__LaneID__enabledlanes(
+size_t v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__size_function__IntersectionState__enabledlanes(
   const void * untyped_member)
 {
   const v2x_msg__msg__LaneID__Sequence * member =
@@ -63,7 +63,7 @@ size_t IntersectionState__rosidl_typesupport_introspection_c__size_function__Lan
   return member->size;
 }
 
-const void * IntersectionState__rosidl_typesupport_introspection_c__get_const_function__LaneID__enabledlanes(
+const void * v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_const_function__IntersectionState__enabledlanes(
   const void * untyped_member, size_t index)
 {
   const v2x_msg__msg__LaneID__Sequence * member =
@@ -71,7 +71,7 @@ const void * IntersectionState__rosidl_typesupport_introspection_c__get_const_fu
   return &member->data[index];
 }
 
-void * IntersectionState__rosidl_typesupport_introspection_c__get_function__LaneID__enabledlanes(
+void * v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_function__IntersectionState__enabledlanes(
   void * untyped_member, size_t index)
 {
   v2x_msg__msg__LaneID__Sequence * member =
@@ -79,7 +79,29 @@ void * IntersectionState__rosidl_typesupport_introspection_c__get_function__Lane
   return &member->data[index];
 }
 
-bool IntersectionState__rosidl_typesupport_introspection_c__resize_function__LaneID__enabledlanes(
+void v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__fetch_function__IntersectionState__enabledlanes(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const v2x_msg__msg__LaneID * item =
+    ((const v2x_msg__msg__LaneID *)
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_const_function__IntersectionState__enabledlanes(untyped_member, index));
+  v2x_msg__msg__LaneID * value =
+    (v2x_msg__msg__LaneID *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__assign_function__IntersectionState__enabledlanes(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  v2x_msg__msg__LaneID * item =
+    ((v2x_msg__msg__LaneID *)
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_function__IntersectionState__enabledlanes(untyped_member, index));
+  const v2x_msg__msg__LaneID * value =
+    (const v2x_msg__msg__LaneID *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__resize_function__IntersectionState__enabledlanes(
   void * untyped_member, size_t size)
 {
   v2x_msg__msg__LaneID__Sequence * member =
@@ -88,7 +110,7 @@ bool IntersectionState__rosidl_typesupport_introspection_c__resize_function__Lan
   return v2x_msg__msg__LaneID__Sequence__init(member, size);
 }
 
-size_t IntersectionState__rosidl_typesupport_introspection_c__size_function__MovementState__states(
+size_t v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__size_function__IntersectionState__states(
   const void * untyped_member)
 {
   const v2x_msg__msg__MovementState__Sequence * member =
@@ -96,7 +118,7 @@ size_t IntersectionState__rosidl_typesupport_introspection_c__size_function__Mov
   return member->size;
 }
 
-const void * IntersectionState__rosidl_typesupport_introspection_c__get_const_function__MovementState__states(
+const void * v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_const_function__IntersectionState__states(
   const void * untyped_member, size_t index)
 {
   const v2x_msg__msg__MovementState__Sequence * member =
@@ -104,7 +126,7 @@ const void * IntersectionState__rosidl_typesupport_introspection_c__get_const_fu
   return &member->data[index];
 }
 
-void * IntersectionState__rosidl_typesupport_introspection_c__get_function__MovementState__states(
+void * v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_function__IntersectionState__states(
   void * untyped_member, size_t index)
 {
   v2x_msg__msg__MovementState__Sequence * member =
@@ -112,7 +134,29 @@ void * IntersectionState__rosidl_typesupport_introspection_c__get_function__Move
   return &member->data[index];
 }
 
-bool IntersectionState__rosidl_typesupport_introspection_c__resize_function__MovementState__states(
+void v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__fetch_function__IntersectionState__states(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const v2x_msg__msg__MovementState * item =
+    ((const v2x_msg__msg__MovementState *)
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_const_function__IntersectionState__states(untyped_member, index));
+  v2x_msg__msg__MovementState * value =
+    (v2x_msg__msg__MovementState *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__assign_function__IntersectionState__states(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  v2x_msg__msg__MovementState * item =
+    ((v2x_msg__msg__MovementState *)
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_function__IntersectionState__states(untyped_member, index));
+  const v2x_msg__msg__MovementState * value =
+    (const v2x_msg__msg__MovementState *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__resize_function__IntersectionState__states(
   void * untyped_member, size_t size)
 {
   v2x_msg__msg__MovementState__Sequence * member =
@@ -121,7 +165,7 @@ bool IntersectionState__rosidl_typesupport_introspection_c__resize_function__Mov
   return v2x_msg__msg__MovementState__Sequence__init(member, size);
 }
 
-size_t IntersectionState__rosidl_typesupport_introspection_c__size_function__ConnectionManeuverAssist__maneuverassistlist(
+size_t v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__size_function__IntersectionState__maneuverassistlist(
   const void * untyped_member)
 {
   const v2x_msg__msg__ConnectionManeuverAssist__Sequence * member =
@@ -129,7 +173,7 @@ size_t IntersectionState__rosidl_typesupport_introspection_c__size_function__Con
   return member->size;
 }
 
-const void * IntersectionState__rosidl_typesupport_introspection_c__get_const_function__ConnectionManeuverAssist__maneuverassistlist(
+const void * v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_const_function__IntersectionState__maneuverassistlist(
   const void * untyped_member, size_t index)
 {
   const v2x_msg__msg__ConnectionManeuverAssist__Sequence * member =
@@ -137,7 +181,7 @@ const void * IntersectionState__rosidl_typesupport_introspection_c__get_const_fu
   return &member->data[index];
 }
 
-void * IntersectionState__rosidl_typesupport_introspection_c__get_function__ConnectionManeuverAssist__maneuverassistlist(
+void * v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_function__IntersectionState__maneuverassistlist(
   void * untyped_member, size_t index)
 {
   v2x_msg__msg__ConnectionManeuverAssist__Sequence * member =
@@ -145,7 +189,29 @@ void * IntersectionState__rosidl_typesupport_introspection_c__get_function__Conn
   return &member->data[index];
 }
 
-bool IntersectionState__rosidl_typesupport_introspection_c__resize_function__ConnectionManeuverAssist__maneuverassistlist(
+void v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__fetch_function__IntersectionState__maneuverassistlist(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const v2x_msg__msg__ConnectionManeuverAssist * item =
+    ((const v2x_msg__msg__ConnectionManeuverAssist *)
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_const_function__IntersectionState__maneuverassistlist(untyped_member, index));
+  v2x_msg__msg__ConnectionManeuverAssist * value =
+    (v2x_msg__msg__ConnectionManeuverAssist *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__assign_function__IntersectionState__maneuverassistlist(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  v2x_msg__msg__ConnectionManeuverAssist * item =
+    ((v2x_msg__msg__ConnectionManeuverAssist *)
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_function__IntersectionState__maneuverassistlist(untyped_member, index));
+  const v2x_msg__msg__ConnectionManeuverAssist * value =
+    (const v2x_msg__msg__ConnectionManeuverAssist *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__resize_function__IntersectionState__maneuverassistlist(
   void * untyped_member, size_t size)
 {
   v2x_msg__msg__ConnectionManeuverAssist__Sequence * member =
@@ -154,7 +220,7 @@ bool IntersectionState__rosidl_typesupport_introspection_c__resize_function__Con
   return v2x_msg__msg__ConnectionManeuverAssist__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_member_array[9] = {
+static rosidl_typesupport_introspection_c__MessageMember v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_member_array[9] = {
   {
     "name",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
@@ -168,6 +234,8 @@ static rosidl_typesupport_introspection_c__MessageMember IntersectionState__rosi
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -183,6 +251,8 @@ static rosidl_typesupport_introspection_c__MessageMember IntersectionState__rosi
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -198,6 +268,8 @@ static rosidl_typesupport_introspection_c__MessageMember IntersectionState__rosi
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -213,6 +285,8 @@ static rosidl_typesupport_introspection_c__MessageMember IntersectionState__rosi
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -228,6 +302,8 @@ static rosidl_typesupport_introspection_c__MessageMember IntersectionState__rosi
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -243,6 +319,8 @@ static rosidl_typesupport_introspection_c__MessageMember IntersectionState__rosi
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -255,10 +333,12 @@ static rosidl_typesupport_introspection_c__MessageMember IntersectionState__rosi
     false,  // is upper bound
     offsetof(v2x_msg__msg__IntersectionState, enabledlanes),  // bytes offset in struct
     NULL,  // default value
-    IntersectionState__rosidl_typesupport_introspection_c__size_function__LaneID__enabledlanes,  // size() function pointer
-    IntersectionState__rosidl_typesupport_introspection_c__get_const_function__LaneID__enabledlanes,  // get_const(index) function pointer
-    IntersectionState__rosidl_typesupport_introspection_c__get_function__LaneID__enabledlanes,  // get(index) function pointer
-    IntersectionState__rosidl_typesupport_introspection_c__resize_function__LaneID__enabledlanes  // resize(index) function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__size_function__IntersectionState__enabledlanes,  // size() function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_const_function__IntersectionState__enabledlanes,  // get_const(index) function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_function__IntersectionState__enabledlanes,  // get(index) function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__fetch_function__IntersectionState__enabledlanes,  // fetch(index, &value) function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__assign_function__IntersectionState__enabledlanes,  // assign(index, value) function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__resize_function__IntersectionState__enabledlanes  // resize(index) function pointer
   },
   {
     "states",  // name
@@ -270,10 +350,12 @@ static rosidl_typesupport_introspection_c__MessageMember IntersectionState__rosi
     false,  // is upper bound
     offsetof(v2x_msg__msg__IntersectionState, states),  // bytes offset in struct
     NULL,  // default value
-    IntersectionState__rosidl_typesupport_introspection_c__size_function__MovementState__states,  // size() function pointer
-    IntersectionState__rosidl_typesupport_introspection_c__get_const_function__MovementState__states,  // get_const(index) function pointer
-    IntersectionState__rosidl_typesupport_introspection_c__get_function__MovementState__states,  // get(index) function pointer
-    IntersectionState__rosidl_typesupport_introspection_c__resize_function__MovementState__states  // resize(index) function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__size_function__IntersectionState__states,  // size() function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_const_function__IntersectionState__states,  // get_const(index) function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_function__IntersectionState__states,  // get(index) function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__fetch_function__IntersectionState__states,  // fetch(index, &value) function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__assign_function__IntersectionState__states,  // assign(index, value) function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__resize_function__IntersectionState__states  // resize(index) function pointer
   },
   {
     "maneuverassistlist",  // name
@@ -285,49 +367,51 @@ static rosidl_typesupport_introspection_c__MessageMember IntersectionState__rosi
     false,  // is upper bound
     offsetof(v2x_msg__msg__IntersectionState, maneuverassistlist),  // bytes offset in struct
     NULL,  // default value
-    IntersectionState__rosidl_typesupport_introspection_c__size_function__ConnectionManeuverAssist__maneuverassistlist,  // size() function pointer
-    IntersectionState__rosidl_typesupport_introspection_c__get_const_function__ConnectionManeuverAssist__maneuverassistlist,  // get_const(index) function pointer
-    IntersectionState__rosidl_typesupport_introspection_c__get_function__ConnectionManeuverAssist__maneuverassistlist,  // get(index) function pointer
-    IntersectionState__rosidl_typesupport_introspection_c__resize_function__ConnectionManeuverAssist__maneuverassistlist  // resize(index) function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__size_function__IntersectionState__maneuverassistlist,  // size() function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_const_function__IntersectionState__maneuverassistlist,  // get_const(index) function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__get_function__IntersectionState__maneuverassistlist,  // get(index) function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__fetch_function__IntersectionState__maneuverassistlist,  // fetch(index, &value) function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__assign_function__IntersectionState__maneuverassistlist,  // assign(index, value) function pointer
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__resize_function__IntersectionState__maneuverassistlist  // resize(index) function pointer
   }
 };
 
-static const rosidl_typesupport_introspection_c__MessageMembers IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_members = {
+static const rosidl_typesupport_introspection_c__MessageMembers v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_members = {
   "v2x_msg__msg",  // message namespace
   "IntersectionState",  // message name
   9,  // number of fields
   sizeof(v2x_msg__msg__IntersectionState),
-  IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_member_array,  // message members
-  IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_init_function,  // function to initialize message memory (memory has to be allocated)
-  IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_fini_function  // function to terminate message instance (will not free memory)
+  v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_member_array,  // message members
+  v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_init_function,  // function to initialize message memory (memory has to be allocated)
+  v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_fini_function  // function to terminate message instance (will not free memory)
 };
 
 // this is not const since it must be initialized on first access
 // since C does not allow non-integral compile-time constants
-static rosidl_message_type_support_t IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_type_support_handle = {
+static rosidl_message_type_support_t v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_type_support_handle = {
   0,
-  &IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_members,
+  &v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_members,
   get_message_typesupport_handle_function,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_v2x_msg
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, IntersectionState)() {
-  IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_member_array[1].members_ =
+  v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_member_array[1].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, IntersectionReferenceID)();
-  IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_member_array[3].members_ =
+  v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_member_array[3].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, IntersectionStatusObject)();
-  IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_member_array[6].members_ =
+  v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_member_array[6].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, LaneID)();
-  IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_member_array[7].members_ =
+  v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_member_array[7].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, MovementState)();
-  IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_member_array[8].members_ =
+  v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_member_array[8].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, ConnectionManeuverAssist)();
-  if (!IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_type_support_handle.typesupport_identifier) {
-    IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_type_support_handle.typesupport_identifier =
+  if (!v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_type_support_handle.typesupport_identifier) {
+    v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
   }
-  return &IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_type_support_handle;
+  return &v2x_msg__msg__IntersectionState__rosidl_typesupport_introspection_c__IntersectionState_message_type_support_handle;
 }
 #ifdef __cplusplus
 }

@@ -5,18 +5,64 @@
 #ifndef V2X_MSG__MSG__DETAIL__VEHICLE_STATUS_REQUEST__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__VEHICLE_STATUS_REQUEST__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/vehicle_status_request__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
 
-namespace rosidl_generator_traits
+#include "v2x_msg/msg/detail/vehicle_status_request__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
+
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::VehicleStatusRequest & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const VehicleStatusRequest & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: datatype
+  {
+    out << "datatype: ";
+    rosidl_generator_traits::value_to_yaml(msg.datatype, out);
+    out << ", ";
+  }
+
+  // member: subtype
+  {
+    out << "subtype: ";
+    rosidl_generator_traits::value_to_yaml(msg.subtype, out);
+    out << ", ";
+  }
+
+  // member: sendonlessthenvalue
+  {
+    out << "sendonlessthenvalue: ";
+    rosidl_generator_traits::value_to_yaml(msg.sendonlessthenvalue, out);
+    out << ", ";
+  }
+
+  // member: sendonmorethenvalue
+  {
+    out << "sendonmorethenvalue: ";
+    rosidl_generator_traits::value_to_yaml(msg.sendonmorethenvalue, out);
+    out << ", ";
+  }
+
+  // member: sendall
+  {
+    out << "sendall: ";
+    rosidl_generator_traits::value_to_yaml(msg.sendall, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const VehicleStatusRequest & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: datatype
@@ -25,7 +71,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "datatype: ";
-    value_to_yaml(msg.datatype, out);
+    rosidl_generator_traits::value_to_yaml(msg.datatype, out);
     out << "\n";
   }
 
@@ -35,7 +81,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "subtype: ";
-    value_to_yaml(msg.subtype, out);
+    rosidl_generator_traits::value_to_yaml(msg.subtype, out);
     out << "\n";
   }
 
@@ -45,7 +91,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "sendonlessthenvalue: ";
-    value_to_yaml(msg.sendonlessthenvalue, out);
+    rosidl_generator_traits::value_to_yaml(msg.sendonlessthenvalue, out);
     out << "\n";
   }
 
@@ -55,7 +101,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "sendonmorethenvalue: ";
-    value_to_yaml(msg.sendonmorethenvalue, out);
+    rosidl_generator_traits::value_to_yaml(msg.sendonmorethenvalue, out);
     out << "\n";
   }
 
@@ -65,16 +111,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "sendall: ";
-    value_to_yaml(msg.sendall, out);
+    rosidl_generator_traits::value_to_yaml(msg.sendall, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::VehicleStatusRequest & msg)
+inline std::string to_yaml(const VehicleStatusRequest & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::VehicleStatusRequest & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::VehicleStatusRequest & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

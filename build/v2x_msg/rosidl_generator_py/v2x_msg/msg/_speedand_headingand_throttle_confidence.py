@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -120,7 +122,7 @@ class SpeedandHeadingandThrottleConfidence(metaclass=Metaclass_SpeedandHeadingan
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def heading(self):
         """Message field 'heading'."""
         return self._heading
@@ -135,7 +137,7 @@ class SpeedandHeadingandThrottleConfidence(metaclass=Metaclass_SpeedandHeadingan
                 "The 'heading' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._heading = value
 
-    @property
+    @builtins.property
     def speed(self):
         """Message field 'speed'."""
         return self._speed
@@ -150,7 +152,7 @@ class SpeedandHeadingandThrottleConfidence(metaclass=Metaclass_SpeedandHeadingan
                 "The 'speed' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._speed = value
 
-    @property
+    @builtins.property
     def throttle(self):
         """Message field 'throttle'."""
         return self._throttle

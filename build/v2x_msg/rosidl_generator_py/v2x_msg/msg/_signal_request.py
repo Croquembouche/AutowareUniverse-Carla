@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -143,7 +145,7 @@ class SignalRequest(metaclass=Metaclass_SignalRequest):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def id(self):  # noqa: A003
         """Message field 'id'."""
         return self._id
@@ -157,7 +159,7 @@ class SignalRequest(metaclass=Metaclass_SignalRequest):
                 "The 'id' field must be a sub message of type 'IntersectionReferenceID'"
         self._id = value
 
-    @property
+    @builtins.property
     def requestid(self):
         """Message field 'requestid'."""
         return self._requestid
@@ -172,7 +174,7 @@ class SignalRequest(metaclass=Metaclass_SignalRequest):
                 "The 'requestid' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._requestid = value
 
-    @property
+    @builtins.property
     def requesttype(self):
         """Message field 'requesttype'."""
         return self._requesttype
@@ -187,7 +189,7 @@ class SignalRequest(metaclass=Metaclass_SignalRequest):
                 "The 'requesttype' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._requesttype = value
 
-    @property
+    @builtins.property
     def inboundlane(self):
         """Message field 'inboundlane'."""
         return self._inboundlane
@@ -201,7 +203,7 @@ class SignalRequest(metaclass=Metaclass_SignalRequest):
                 "The 'inboundlane' field must be a sub message of type 'IntersectionAccessPoint'"
         self._inboundlane = value
 
-    @property
+    @builtins.property
     def outboundlane(self):
         """Message field 'outboundlane'."""
         return self._outboundlane

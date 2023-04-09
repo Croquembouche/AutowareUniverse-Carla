@@ -30,7 +30,7 @@ extern "C"
 // Member 'overlays'
 #include "rosidl_runtime_c/primitives_sequence.h"
 
-// Struct defined in msg/GenericLane in the package v2x_msg.
+/// Struct defined in msg/GenericLane in the package v2x_msg.
 typedef struct v2x_msg__msg__GenericLane
 {
   int64_t laneid;

@@ -23,7 +23,7 @@ extern "C"
 // Member 'attributes'
 #include "v2x_msg/msg/detail/node_attribute_set_ll__struct.h"
 
-// Struct defined in msg/NodeLL in the package v2x_msg.
+/// Struct defined in msg/NodeLL in the package v2x_msg.
 typedef struct v2x_msg__msg__NodeLL
 {
   v2x_msg__msg__NodeOffsetPointLL delta;

@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -150,7 +152,7 @@ class VehicleClassification(metaclass=Metaclass_VehicleClassification):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def keytype(self):
         """Message field 'keytype'."""
         return self._keytype
@@ -165,7 +167,7 @@ class VehicleClassification(metaclass=Metaclass_VehicleClassification):
                 "The 'keytype' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._keytype = value
 
-    @property
+    @builtins.property
     def role(self):
         """Message field 'role'."""
         return self._role
@@ -180,7 +182,7 @@ class VehicleClassification(metaclass=Metaclass_VehicleClassification):
                 "The 'role' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._role = value
 
-    @property
+    @builtins.property
     def iso3883(self):
         """Message field 'iso3883'."""
         return self._iso3883
@@ -195,7 +197,7 @@ class VehicleClassification(metaclass=Metaclass_VehicleClassification):
                 "The 'iso3883' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._iso3883 = value
 
-    @property
+    @builtins.property
     def hpmstype(self):
         """Message field 'hpmstype'."""
         return self._hpmstype
@@ -210,7 +212,7 @@ class VehicleClassification(metaclass=Metaclass_VehicleClassification):
                 "The 'hpmstype' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._hpmstype = value
 
-    @property
+    @builtins.property
     def vehicletype(self):
         """Message field 'vehicletype'."""
         return self._vehicletype
@@ -225,7 +227,7 @@ class VehicleClassification(metaclass=Metaclass_VehicleClassification):
                 "The 'vehicletype' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._vehicletype = value
 
-    @property
+    @builtins.property
     def responseequip(self):
         """Message field 'responseequip'."""
         return self._responseequip
@@ -240,7 +242,7 @@ class VehicleClassification(metaclass=Metaclass_VehicleClassification):
                 "The 'responseequip' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._responseequip = value
 
-    @property
+    @builtins.property
     def respondertype(self):
         """Message field 'respondertype'."""
         return self._respondertype
@@ -255,7 +257,7 @@ class VehicleClassification(metaclass=Metaclass_VehicleClassification):
                 "The 'respondertype' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._respondertype = value
 
-    @property
+    @builtins.property
     def fueltype(self):
         """Message field 'fueltype'."""
         return self._fueltype

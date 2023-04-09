@@ -23,7 +23,7 @@ extern "C"
 // Member 'speed'
 #include "v2x_msg/msg/detail/transmission_and_speed__struct.h"
 
-// Struct defined in msg/RequestorPositionVector in the package v2x_msg.
+/// Struct defined in msg/RequestorPositionVector in the package v2x_msg.
 typedef struct v2x_msg__msg__RequestorPositionVector
 {
   v2x_msg__msg__Position3D position;

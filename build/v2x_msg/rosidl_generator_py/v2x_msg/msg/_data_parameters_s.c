@@ -140,7 +140,7 @@ PyObject * v2x_msg__msg__data_parameters__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->processmethod.data,
       strlen(ros_message->processmethod.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -157,7 +157,7 @@ PyObject * v2x_msg__msg__data_parameters__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->processagency.data,
       strlen(ros_message->processagency.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -174,7 +174,7 @@ PyObject * v2x_msg__msg__data_parameters__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->lastcheckeddate.data,
       strlen(ros_message->lastcheckeddate.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -191,7 +191,7 @@ PyObject * v2x_msg__msg__data_parameters__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->geoidused.data,
       strlen(ros_message->geoidused.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

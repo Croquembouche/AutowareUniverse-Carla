@@ -23,7 +23,7 @@ extern "C"
 // Member 'confidenceset'
 #include "v2x_msg/msg/detail/confidence_set__struct.h"
 
-// Struct defined in msg/AccelSets in the package v2x_msg.
+/// Struct defined in msg/AccelSets in the package v2x_msg.
 typedef struct v2x_msg__msg__AccelSets
 {
   v2x_msg__msg__AccelerationSet4Way angle;

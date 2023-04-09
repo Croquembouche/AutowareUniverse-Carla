@@ -5,22 +5,61 @@
 #ifndef V2X_MSG__MSG__DETAIL__ROAD_SIGN_ID__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__ROAD_SIGN_ID__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/road_sign_id__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/road_sign_id__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'position'
 #include "v2x_msg/msg/detail/position3_d__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::RoadSignID & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const RoadSignID & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: position
+  {
+    out << "position: ";
+    to_flow_style_yaml(msg.position, out);
+    out << ", ";
+  }
+
+  // member: viewangle
+  {
+    out << "viewangle: ";
+    rosidl_generator_traits::value_to_yaml(msg.viewangle, out);
+    out << ", ";
+  }
+
+  // member: mutcdcode
+  {
+    out << "mutcdcode: ";
+    rosidl_generator_traits::value_to_yaml(msg.mutcdcode, out);
+    out << ", ";
+  }
+
+  // member: msgcrc
+  {
+    out << "msgcrc: ";
+    rosidl_generator_traits::value_to_yaml(msg.msgcrc, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const RoadSignID & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: position
@@ -29,7 +68,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "position:\n";
-    to_yaml(msg.position, out, indentation + 2);
+    to_block_style_yaml(msg.position, out, indentation + 2);
   }
 
   // member: viewangle
@@ -38,7 +77,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "viewangle: ";
-    value_to_yaml(msg.viewangle, out);
+    rosidl_generator_traits::value_to_yaml(msg.viewangle, out);
     out << "\n";
   }
 
@@ -48,7 +87,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "mutcdcode: ";
-    value_to_yaml(msg.mutcdcode, out);
+    rosidl_generator_traits::value_to_yaml(msg.mutcdcode, out);
     out << "\n";
   }
 
@@ -58,16 +97,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "msgcrc: ";
-    value_to_yaml(msg.msgcrc, out);
+    rosidl_generator_traits::value_to_yaml(msg.msgcrc, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::RoadSignID & msg)
+inline std::string to_yaml(const RoadSignID & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::RoadSignID & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::RoadSignID & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

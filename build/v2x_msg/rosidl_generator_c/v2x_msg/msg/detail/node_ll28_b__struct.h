@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/NodeLL28B in the package v2x_msg.
+/// Struct defined in msg/NodeLL28B in the package v2x_msg.
 typedef struct v2x_msg__msg__NodeLL28B
 {
   int64_t lon;

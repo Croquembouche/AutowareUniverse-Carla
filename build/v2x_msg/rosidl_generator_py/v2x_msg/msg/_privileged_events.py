@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -114,7 +116,7 @@ class PrivilegedEvents(metaclass=Metaclass_PrivilegedEvents):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def notused(self):
         """Message field 'notused'."""
         return self._notused
@@ -129,7 +131,7 @@ class PrivilegedEvents(metaclass=Metaclass_PrivilegedEvents):
                 "The 'notused' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._notused = value
 
-    @property
+    @builtins.property
     def event(self):
         """Message field 'event'."""
         return self._event

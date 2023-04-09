@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -142,7 +144,7 @@ class LaneDataAttribute(metaclass=Metaclass_LaneDataAttribute):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def pathendpointangle(self):
         """Message field 'pathendpointangle'."""
         return self._pathendpointangle
@@ -157,7 +159,7 @@ class LaneDataAttribute(metaclass=Metaclass_LaneDataAttribute):
                 "The 'pathendpointangle' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._pathendpointangle = value
 
-    @property
+    @builtins.property
     def lanecrownpointcenter(self):
         """Message field 'lanecrownpointcenter'."""
         return self._lanecrownpointcenter
@@ -172,7 +174,7 @@ class LaneDataAttribute(metaclass=Metaclass_LaneDataAttribute):
                 "The 'lanecrownpointcenter' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._lanecrownpointcenter = value
 
-    @property
+    @builtins.property
     def lancrownpointleft(self):
         """Message field 'lancrownpointleft'."""
         return self._lancrownpointleft
@@ -187,7 +189,7 @@ class LaneDataAttribute(metaclass=Metaclass_LaneDataAttribute):
                 "The 'lancrownpointleft' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._lancrownpointleft = value
 
-    @property
+    @builtins.property
     def lanecrownpointright(self):
         """Message field 'lanecrownpointright'."""
         return self._lanecrownpointright
@@ -202,7 +204,7 @@ class LaneDataAttribute(metaclass=Metaclass_LaneDataAttribute):
                 "The 'lanecrownpointright' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._lanecrownpointright = value
 
-    @property
+    @builtins.property
     def laneangle(self):
         """Message field 'laneangle'."""
         return self._laneangle
@@ -217,7 +219,7 @@ class LaneDataAttribute(metaclass=Metaclass_LaneDataAttribute):
                 "The 'laneangle' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._laneangle = value
 
-    @property
+    @builtins.property
     def speedlimits(self):
         """Message field 'speedlimits'."""
         return self._speedlimits

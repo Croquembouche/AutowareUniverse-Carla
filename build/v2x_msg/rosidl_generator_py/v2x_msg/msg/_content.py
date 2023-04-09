@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -152,7 +154,7 @@ class Content(metaclass=Metaclass_Content):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def advisory(self):
         """Message field 'advisory'."""
         return self._advisory
@@ -176,7 +178,7 @@ class Content(metaclass=Metaclass_Content):
                 "The 'advisory' field must be a set or sequence and each value of type 'ITIScodesandtext'"
         self._advisory = value
 
-    @property
+    @builtins.property
     def workzone(self):
         """Message field 'workzone'."""
         return self._workzone
@@ -200,7 +202,7 @@ class Content(metaclass=Metaclass_Content):
                 "The 'workzone' field must be a set or sequence and each value of type 'WorkZone'"
         self._workzone = value
 
-    @property
+    @builtins.property
     def genericsign(self):
         """Message field 'genericsign'."""
         return self._genericsign
@@ -224,7 +226,7 @@ class Content(metaclass=Metaclass_Content):
                 "The 'genericsign' field must be a set or sequence and each value of type 'GenericSignage'"
         self._genericsign = value
 
-    @property
+    @builtins.property
     def speedlimit(self):
         """Message field 'speedlimit'."""
         return self._speedlimit
@@ -248,7 +250,7 @@ class Content(metaclass=Metaclass_Content):
                 "The 'speedlimit' field must be a set or sequence and each value of type 'ITISSpeedLimit'"
         self._speedlimit = value
 
-    @property
+    @builtins.property
     def exitservice(self):
         """Message field 'exitservice'."""
         return self._exitservice

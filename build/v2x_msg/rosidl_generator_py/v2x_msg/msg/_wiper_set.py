@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -126,7 +128,7 @@ class WiperSet(metaclass=Metaclass_WiperSet):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def statusfront(self):
         """Message field 'statusfront'."""
         return self._statusfront
@@ -141,7 +143,7 @@ class WiperSet(metaclass=Metaclass_WiperSet):
                 "The 'statusfront' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._statusfront = value
 
-    @property
+    @builtins.property
     def ratefront(self):
         """Message field 'ratefront'."""
         return self._ratefront
@@ -156,7 +158,7 @@ class WiperSet(metaclass=Metaclass_WiperSet):
                 "The 'ratefront' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._ratefront = value
 
-    @property
+    @builtins.property
     def statusrear(self):
         """Message field 'statusrear'."""
         return self._statusrear
@@ -171,7 +173,7 @@ class WiperSet(metaclass=Metaclass_WiperSet):
                 "The 'statusrear' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._statusrear = value
 
-    @property
+    @builtins.property
     def raterear(self):
         """Message field 'raterear'."""
         return self._raterear

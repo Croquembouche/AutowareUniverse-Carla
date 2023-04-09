@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -123,7 +125,7 @@ class Offset(metaclass=Metaclass_Offset):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def xy(self):
         """Message field 'xy'."""
         return self._xy
@@ -137,7 +139,7 @@ class Offset(metaclass=Metaclass_Offset):
                 "The 'xy' field must be a sub message of type 'NodeListXY'"
         self._xy = value
 
-    @property
+    @builtins.property
     def nodes(self):
         """Message field 'nodes'."""
         return self._nodes

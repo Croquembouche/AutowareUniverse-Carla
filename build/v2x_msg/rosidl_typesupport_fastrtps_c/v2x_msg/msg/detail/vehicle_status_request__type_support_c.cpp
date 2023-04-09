@@ -174,6 +174,7 @@ static uint32_t _VehicleStatusRequest__get_serialized_size(const void * untyped_
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_v2x_msg
 size_t max_serialized_size_v2x_msg__msg__VehicleStatusRequest(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment)
 {
   size_t initial_alignment = current_alignment;
@@ -182,7 +183,9 @@ size_t max_serialized_size_v2x_msg__msg__VehicleStatusRequest(
   const size_t wchar_size = 4;
   (void)padding;
   (void)wchar_size;
-  (void)full_bounded;
+
+  full_bounded = true;
+  is_plain = true;
 
   // member: datatype
   {
@@ -222,10 +225,19 @@ size_t max_serialized_size_v2x_msg__msg__VehicleStatusRequest(
   return current_alignment - initial_alignment;
 }
 
-static size_t _VehicleStatusRequest__max_serialized_size(bool & full_bounded)
+static size_t _VehicleStatusRequest__max_serialized_size(char & bounds_info)
 {
-  return max_serialized_size_v2x_msg__msg__VehicleStatusRequest(
-    full_bounded, 0);
+  bool full_bounded;
+  bool is_plain;
+  size_t ret_val;
+
+  ret_val = max_serialized_size_v2x_msg__msg__VehicleStatusRequest(
+    full_bounded, is_plain, 0);
+
+  bounds_info =
+    is_plain ? ROSIDL_TYPESUPPORT_FASTRTPS_PLAIN_TYPE :
+    full_bounded ? ROSIDL_TYPESUPPORT_FASTRTPS_BOUNDED_TYPE : ROSIDL_TYPESUPPORT_FASTRTPS_UNBOUNDED_TYPE;
+  return ret_val;
 }
 
 

@@ -1,5 +1,1 @@
-int64 msgcnt
-int64 timestamp
-int64 packetid
-string urlb
-TravelerDataFrame[] dataframes
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/TIM.msg

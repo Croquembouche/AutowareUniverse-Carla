@@ -4,8 +4,8 @@
 
 #include "cstddef"
 #include "rosidl_runtime_c/message_type_support_struct.h"
-#include "v2x_msg/msg/rosidl_typesupport_c__visibility_control.h"
 #include "v2x_msg/msg/detail/itis_speed_limit__struct.h"
+#include "v2x_msg/msg/detail/itis_speed_limit__type_support.h"
 #include "rosidl_typesupport_c/identifier.h"
 #include "rosidl_typesupport_c/message_type_support_dispatch.h"
 #include "rosidl_typesupport_c/type_support_map.h"
@@ -85,7 +85,6 @@ extern "C"
 {
 #endif
 
-ROSIDL_TYPESUPPORT_C_EXPORT_v2x_msg
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_c, v2x_msg, msg, ITISSpeedLimit)() {
   return &::v2x_msg::msg::rosidl_typesupport_c::ITISSpeedLimit_message_type_support_handle;

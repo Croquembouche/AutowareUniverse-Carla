@@ -23,7 +23,7 @@ extern "C"
 {
 #endif
 
-void Object__rosidl_typesupport_introspection_c__Object_init_function(
+void v2x_msg__msg__Object__rosidl_typesupport_introspection_c__Object_init_function(
   void * message_memory, enum rosidl_runtime_c__message_initialization _init)
 {
   // TODO(karsten1987): initializers are not yet implemented for typesupport c
@@ -32,12 +32,12 @@ void Object__rosidl_typesupport_introspection_c__Object_init_function(
   v2x_msg__msg__Object__init(message_memory);
 }
 
-void Object__rosidl_typesupport_introspection_c__Object_fini_function(void * message_memory)
+void v2x_msg__msg__Object__rosidl_typesupport_introspection_c__Object_fini_function(void * message_memory)
 {
   v2x_msg__msg__Object__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember Object__rosidl_typesupport_introspection_c__Object_message_member_array[3] = {
+static rosidl_typesupport_introspection_c__MessageMember v2x_msg__msg__Object__rosidl_typesupport_introspection_c__Object_message_member_array[3] = {
   {
     "obdist",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
@@ -51,6 +51,8 @@ static rosidl_typesupport_introspection_c__MessageMember Object__rosidl_typesupp
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -66,6 +68,8 @@ static rosidl_typesupport_introspection_c__MessageMember Object__rosidl_typesupp
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -81,38 +85,40 @@ static rosidl_typesupport_introspection_c__MessageMember Object__rosidl_typesupp
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   }
 };
 
-static const rosidl_typesupport_introspection_c__MessageMembers Object__rosidl_typesupport_introspection_c__Object_message_members = {
+static const rosidl_typesupport_introspection_c__MessageMembers v2x_msg__msg__Object__rosidl_typesupport_introspection_c__Object_message_members = {
   "v2x_msg__msg",  // message namespace
   "Object",  // message name
   3,  // number of fields
   sizeof(v2x_msg__msg__Object),
-  Object__rosidl_typesupport_introspection_c__Object_message_member_array,  // message members
-  Object__rosidl_typesupport_introspection_c__Object_init_function,  // function to initialize message memory (memory has to be allocated)
-  Object__rosidl_typesupport_introspection_c__Object_fini_function  // function to terminate message instance (will not free memory)
+  v2x_msg__msg__Object__rosidl_typesupport_introspection_c__Object_message_member_array,  // message members
+  v2x_msg__msg__Object__rosidl_typesupport_introspection_c__Object_init_function,  // function to initialize message memory (memory has to be allocated)
+  v2x_msg__msg__Object__rosidl_typesupport_introspection_c__Object_fini_function  // function to terminate message instance (will not free memory)
 };
 
 // this is not const since it must be initialized on first access
 // since C does not allow non-integral compile-time constants
-static rosidl_message_type_support_t Object__rosidl_typesupport_introspection_c__Object_message_type_support_handle = {
+static rosidl_message_type_support_t v2x_msg__msg__Object__rosidl_typesupport_introspection_c__Object_message_type_support_handle = {
   0,
-  &Object__rosidl_typesupport_introspection_c__Object_message_members,
+  &v2x_msg__msg__Object__rosidl_typesupport_introspection_c__Object_message_members,
   get_message_typesupport_handle_function,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_v2x_msg
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, Object)() {
-  Object__rosidl_typesupport_introspection_c__Object_message_member_array[2].members_ =
+  v2x_msg__msg__Object__rosidl_typesupport_introspection_c__Object_message_member_array[2].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, DDateTime)();
-  if (!Object__rosidl_typesupport_introspection_c__Object_message_type_support_handle.typesupport_identifier) {
-    Object__rosidl_typesupport_introspection_c__Object_message_type_support_handle.typesupport_identifier =
+  if (!v2x_msg__msg__Object__rosidl_typesupport_introspection_c__Object_message_type_support_handle.typesupport_identifier) {
+    v2x_msg__msg__Object__rosidl_typesupport_introspection_c__Object_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
   }
-  return &Object__rosidl_typesupport_introspection_c__Object_message_type_support_handle;
+  return &v2x_msg__msg__Object__rosidl_typesupport_introspection_c__Object_message_type_support_handle;
 }
 #ifdef __cplusplus
 }

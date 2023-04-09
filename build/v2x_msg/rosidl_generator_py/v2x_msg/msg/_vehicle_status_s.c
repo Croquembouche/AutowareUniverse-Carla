@@ -325,7 +325,7 @@ PyObject * v2x_msg__msg__vehicle_status__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->lights.data,
       strlen(ros_message->lights.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -584,7 +584,7 @@ PyObject * v2x_msg__msg__vehicle_status__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->gnssstatus.data,
       strlen(ros_message->gnssstatus.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

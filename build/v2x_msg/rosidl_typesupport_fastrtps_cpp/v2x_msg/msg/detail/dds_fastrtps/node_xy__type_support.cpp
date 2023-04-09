@@ -34,6 +34,7 @@ size_t get_serialized_size(
 size_t
 max_serialized_size_NodeOffsetPointXY(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 }  // namespace typesupport_fastrtps_cpp
 }  // namespace msg
@@ -57,6 +58,7 @@ size_t get_serialized_size(
 size_t
 max_serialized_size_NodeAttributeSetXY(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 }  // namespace typesupport_fastrtps_cpp
 }  // namespace msg
@@ -137,6 +139,7 @@ size_t
 ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_v2x_msg
 max_serialized_size_NodeXY(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment)
 {
   size_t initial_alignment = current_alignment;
@@ -145,7 +148,9 @@ max_serialized_size_NodeXY(
   const size_t wchar_size = 4;
   (void)padding;
   (void)wchar_size;
-  (void)full_bounded;
+
+  full_bounded = true;
+  is_plain = true;
 
 
   // Member: delta
@@ -154,9 +159,13 @@ max_serialized_size_NodeXY(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         v2x_msg::msg::typesupport_fastrtps_cpp::max_serialized_size_NodeOffsetPointXY(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
 
@@ -166,9 +175,13 @@ max_serialized_size_NodeXY(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         v2x_msg::msg::typesupport_fastrtps_cpp::max_serialized_size_NodeAttributeSetXY(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
 
@@ -204,9 +217,18 @@ static uint32_t _NodeXY__get_serialized_size(
   return static_cast<uint32_t>(get_serialized_size(*typed_message, 0));
 }
 
-static size_t _NodeXY__max_serialized_size(bool & full_bounded)
+static size_t _NodeXY__max_serialized_size(char & bounds_info)
 {
-  return max_serialized_size_NodeXY(full_bounded, 0);
+  bool full_bounded;
+  bool is_plain;
+  size_t ret_val;
+
+  ret_val = max_serialized_size_NodeXY(full_bounded, is_plain, 0);
+
+  bounds_info =
+    is_plain ? ROSIDL_TYPESUPPORT_FASTRTPS_PLAIN_TYPE :
+    full_bounded ? ROSIDL_TYPESUPPORT_FASTRTPS_BOUNDED_TYPE : ROSIDL_TYPESUPPORT_FASTRTPS_UNBOUNDED_TYPE;
+  return ret_val;
 }
 
 static message_type_support_callbacks_t _NodeXY__callbacks = {

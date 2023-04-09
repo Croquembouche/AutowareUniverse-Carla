@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -172,7 +174,7 @@ class EVA(metaclass=Metaclass_EVA):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def timestamp(self):
         """Message field 'timestamp'."""
         return self._timestamp
@@ -187,7 +189,7 @@ class EVA(metaclass=Metaclass_EVA):
                 "The 'timestamp' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._timestamp = value
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def id(self):  # noqa: A003
         """Message field 'id'."""
         return self._id
@@ -200,7 +202,7 @@ class EVA(metaclass=Metaclass_EVA):
                 "The 'id' field must be of type 'str'"
         self._id = value
 
-    @property
+    @builtins.property
     def rsamsg(self):
         """Message field 'rsamsg'."""
         return self._rsamsg
@@ -214,7 +216,7 @@ class EVA(metaclass=Metaclass_EVA):
                 "The 'rsamsg' field must be a sub message of type 'RSA'"
         self._rsamsg = value
 
-    @property
+    @builtins.property
     def responsetype(self):
         """Message field 'responsetype'."""
         return self._responsetype
@@ -229,7 +231,7 @@ class EVA(metaclass=Metaclass_EVA):
                 "The 'responsetype' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._responsetype = value
 
-    @property
+    @builtins.property
     def details(self):
         """Message field 'details'."""
         return self._details
@@ -243,7 +245,7 @@ class EVA(metaclass=Metaclass_EVA):
                 "The 'details' field must be a sub message of type 'EmergencyDetails'"
         self._details = value
 
-    @property
+    @builtins.property
     def mass(self):
         """Message field 'mass'."""
         return self._mass
@@ -258,7 +260,7 @@ class EVA(metaclass=Metaclass_EVA):
                 "The 'mass' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._mass = value
 
-    @property
+    @builtins.property
     def basictype(self):
         """Message field 'basictype'."""
         return self._basictype
@@ -273,7 +275,7 @@ class EVA(metaclass=Metaclass_EVA):
                 "The 'basictype' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._basictype = value
 
-    @property
+    @builtins.property
     def vehicletype(self):
         """Message field 'vehicletype'."""
         return self._vehicletype
@@ -288,7 +290,7 @@ class EVA(metaclass=Metaclass_EVA):
                 "The 'vehicletype' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._vehicletype = value
 
-    @property
+    @builtins.property
     def responseequip(self):
         """Message field 'responseequip'."""
         return self._responseequip
@@ -303,7 +305,7 @@ class EVA(metaclass=Metaclass_EVA):
                 "The 'responseequip' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._responseequip = value
 
-    @property
+    @builtins.property
     def respondertype(self):
         """Message field 'respondertype'."""
         return self._respondertype

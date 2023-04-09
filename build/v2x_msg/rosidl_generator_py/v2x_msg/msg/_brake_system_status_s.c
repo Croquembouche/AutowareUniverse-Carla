@@ -140,7 +140,7 @@ PyObject * v2x_msg__msg__brake_system_status__convert_to_py(void * raw_ros_messa
     field = PyUnicode_DecodeUTF8(
       ros_message->wheelbrakes.data,
       strlen(ros_message->wheelbrakes.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

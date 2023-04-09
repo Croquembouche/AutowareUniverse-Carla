@@ -5,12 +5,14 @@
 #ifndef V2X_MSG__MSG__DETAIL__PDM__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__PDM__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/pdm__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/pdm__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'sample'
@@ -22,11 +24,94 @@
 // Member 'dataelements'
 #include "v2x_msg/msg/detail/vehicle_status_request__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::PDM & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const PDM & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: timestamp
+  {
+    out << "timestamp: ";
+    rosidl_generator_traits::value_to_yaml(msg.timestamp, out);
+    out << ", ";
+  }
+
+  // member: sample
+  {
+    out << "sample: ";
+    to_flow_style_yaml(msg.sample, out);
+    out << ", ";
+  }
+
+  // member: directions
+  {
+    out << "directions: ";
+    rosidl_generator_traits::value_to_yaml(msg.directions, out);
+    out << ", ";
+  }
+
+  // member: termtime
+  {
+    out << "termtime: ";
+    rosidl_generator_traits::value_to_yaml(msg.termtime, out);
+    out << ", ";
+  }
+
+  // member: termdistance
+  {
+    out << "termdistance: ";
+    rosidl_generator_traits::value_to_yaml(msg.termdistance, out);
+    out << ", ";
+  }
+
+  // member: snapshottime
+  {
+    out << "snapshottime: ";
+    to_flow_style_yaml(msg.snapshottime, out);
+    out << ", ";
+  }
+
+  // member: snapshotdistance
+  {
+    out << "snapshotdistance: ";
+    to_flow_style_yaml(msg.snapshotdistance, out);
+    out << ", ";
+  }
+
+  // member: txinterval
+  {
+    out << "txinterval: ";
+    rosidl_generator_traits::value_to_yaml(msg.txinterval, out);
+    out << ", ";
+  }
+
+  // member: dataelements
+  {
+    if (msg.dataelements.size() == 0) {
+      out << "dataelements: []";
+    } else {
+      out << "dataelements: [";
+      size_t pending_items = msg.dataelements.size();
+      for (auto item : msg.dataelements) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const PDM & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: timestamp
@@ -35,7 +120,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "timestamp: ";
-    value_to_yaml(msg.timestamp, out);
+    rosidl_generator_traits::value_to_yaml(msg.timestamp, out);
     out << "\n";
   }
 
@@ -45,7 +130,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "sample:\n";
-    to_yaml(msg.sample, out, indentation + 2);
+    to_block_style_yaml(msg.sample, out, indentation + 2);
   }
 
   // member: directions
@@ -54,7 +139,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "directions: ";
-    value_to_yaml(msg.directions, out);
+    rosidl_generator_traits::value_to_yaml(msg.directions, out);
     out << "\n";
   }
 
@@ -64,7 +149,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "termtime: ";
-    value_to_yaml(msg.termtime, out);
+    rosidl_generator_traits::value_to_yaml(msg.termtime, out);
     out << "\n";
   }
 
@@ -74,7 +159,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "termdistance: ";
-    value_to_yaml(msg.termdistance, out);
+    rosidl_generator_traits::value_to_yaml(msg.termdistance, out);
     out << "\n";
   }
 
@@ -84,7 +169,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "snapshottime:\n";
-    to_yaml(msg.snapshottime, out, indentation + 2);
+    to_block_style_yaml(msg.snapshottime, out, indentation + 2);
   }
 
   // member: snapshotdistance
@@ -93,7 +178,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "snapshotdistance:\n";
-    to_yaml(msg.snapshotdistance, out, indentation + 2);
+    to_block_style_yaml(msg.snapshotdistance, out, indentation + 2);
   }
 
   // member: txinterval
@@ -102,7 +187,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "txinterval: ";
-    value_to_yaml(msg.txinterval, out);
+    rosidl_generator_traits::value_to_yaml(msg.txinterval, out);
     out << "\n";
   }
 
@@ -120,17 +205,42 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "-\n";
-        to_yaml(item, out, indentation + 2);
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::PDM & msg)
+inline std::string to_yaml(const PDM & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::PDM & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::PDM & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

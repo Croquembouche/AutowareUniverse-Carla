@@ -224,7 +224,7 @@ PyObject * v2x_msg__msg__requestor_description__convert_to_py(void * raw_ros_mes
     field = PyUnicode_DecodeUTF8(
       ros_message->name.data,
       strlen(ros_message->name.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -241,7 +241,7 @@ PyObject * v2x_msg__msg__requestor_description__convert_to_py(void * raw_ros_mes
     field = PyUnicode_DecodeUTF8(
       ros_message->routename.data,
       strlen(ros_message->routename.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -258,7 +258,7 @@ PyObject * v2x_msg__msg__requestor_description__convert_to_py(void * raw_ros_mes
     field = PyUnicode_DecodeUTF8(
       ros_message->transitstatus.data,
       strlen(ros_message->transitstatus.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

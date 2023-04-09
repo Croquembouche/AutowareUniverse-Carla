@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -125,7 +127,7 @@ class Circle(metaclass=Metaclass_Circle):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def center(self):
         """Message field 'center'."""
         return self._center
@@ -139,7 +141,7 @@ class Circle(metaclass=Metaclass_Circle):
                 "The 'center' field must be a sub message of type 'Position3D'"
         self._center = value
 
-    @property
+    @builtins.property
     def radius(self):
         """Message field 'radius'."""
         return self._radius
@@ -154,7 +156,7 @@ class Circle(metaclass=Metaclass_Circle):
                 "The 'radius' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._radius = value
 
-    @property
+    @builtins.property
     def units(self):
         """Message field 'units'."""
         return self._units

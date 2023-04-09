@@ -1,3 +1,1 @@
-int64 human
-int64 animal
-int64 motor
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/PropelledInformation.msg

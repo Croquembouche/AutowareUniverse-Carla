@@ -27,7 +27,7 @@ extern "C"
 {
 #endif
 
-void NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_init_function(
+void v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_init_function(
   void * message_memory, enum rosidl_runtime_c__message_initialization _init)
 {
   // TODO(karsten1987): initializers are not yet implemented for typesupport c
@@ -36,12 +36,12 @@ void NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_init_function(
   v2x_msg__msg__NodeListXY__init(message_memory);
 }
 
-void NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_fini_function(void * message_memory)
+void v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_fini_function(void * message_memory)
 {
   v2x_msg__msg__NodeListXY__fini(message_memory);
 }
 
-size_t NodeListXY__rosidl_typesupport_introspection_c__size_function__NodeXY__nodes(
+size_t v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__size_function__NodeListXY__nodes(
   const void * untyped_member)
 {
   const v2x_msg__msg__NodeXY__Sequence * member =
@@ -49,7 +49,7 @@ size_t NodeListXY__rosidl_typesupport_introspection_c__size_function__NodeXY__no
   return member->size;
 }
 
-const void * NodeListXY__rosidl_typesupport_introspection_c__get_const_function__NodeXY__nodes(
+const void * v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__get_const_function__NodeListXY__nodes(
   const void * untyped_member, size_t index)
 {
   const v2x_msg__msg__NodeXY__Sequence * member =
@@ -57,7 +57,7 @@ const void * NodeListXY__rosidl_typesupport_introspection_c__get_const_function_
   return &member->data[index];
 }
 
-void * NodeListXY__rosidl_typesupport_introspection_c__get_function__NodeXY__nodes(
+void * v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__get_function__NodeListXY__nodes(
   void * untyped_member, size_t index)
 {
   v2x_msg__msg__NodeXY__Sequence * member =
@@ -65,7 +65,29 @@ void * NodeListXY__rosidl_typesupport_introspection_c__get_function__NodeXY__nod
   return &member->data[index];
 }
 
-bool NodeListXY__rosidl_typesupport_introspection_c__resize_function__NodeXY__nodes(
+void v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__fetch_function__NodeListXY__nodes(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const v2x_msg__msg__NodeXY * item =
+    ((const v2x_msg__msg__NodeXY *)
+    v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__get_const_function__NodeListXY__nodes(untyped_member, index));
+  v2x_msg__msg__NodeXY * value =
+    (v2x_msg__msg__NodeXY *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__assign_function__NodeListXY__nodes(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  v2x_msg__msg__NodeXY * item =
+    ((v2x_msg__msg__NodeXY *)
+    v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__get_function__NodeListXY__nodes(untyped_member, index));
+  const v2x_msg__msg__NodeXY * value =
+    (const v2x_msg__msg__NodeXY *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__resize_function__NodeListXY__nodes(
   void * untyped_member, size_t size)
 {
   v2x_msg__msg__NodeXY__Sequence * member =
@@ -74,7 +96,7 @@ bool NodeListXY__rosidl_typesupport_introspection_c__resize_function__NodeXY__no
   return v2x_msg__msg__NodeXY__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_member_array[2] = {
+static rosidl_typesupport_introspection_c__MessageMember v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_member_array[2] = {
   {
     "nodes",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -85,10 +107,12 @@ static rosidl_typesupport_introspection_c__MessageMember NodeListXY__rosidl_type
     false,  // is upper bound
     offsetof(v2x_msg__msg__NodeListXY, nodes),  // bytes offset in struct
     NULL,  // default value
-    NodeListXY__rosidl_typesupport_introspection_c__size_function__NodeXY__nodes,  // size() function pointer
-    NodeListXY__rosidl_typesupport_introspection_c__get_const_function__NodeXY__nodes,  // get_const(index) function pointer
-    NodeListXY__rosidl_typesupport_introspection_c__get_function__NodeXY__nodes,  // get(index) function pointer
-    NodeListXY__rosidl_typesupport_introspection_c__resize_function__NodeXY__nodes  // resize(index) function pointer
+    v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__size_function__NodeListXY__nodes,  // size() function pointer
+    v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__get_const_function__NodeListXY__nodes,  // get_const(index) function pointer
+    v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__get_function__NodeListXY__nodes,  // get(index) function pointer
+    v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__fetch_function__NodeListXY__nodes,  // fetch(index, &value) function pointer
+    v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__assign_function__NodeListXY__nodes,  // assign(index, value) function pointer
+    v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__resize_function__NodeListXY__nodes  // resize(index) function pointer
   },
   {
     "computed",  // name
@@ -103,40 +127,42 @@ static rosidl_typesupport_introspection_c__MessageMember NodeListXY__rosidl_type
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   }
 };
 
-static const rosidl_typesupport_introspection_c__MessageMembers NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_members = {
+static const rosidl_typesupport_introspection_c__MessageMembers v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_members = {
   "v2x_msg__msg",  // message namespace
   "NodeListXY",  // message name
   2,  // number of fields
   sizeof(v2x_msg__msg__NodeListXY),
-  NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_member_array,  // message members
-  NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_init_function,  // function to initialize message memory (memory has to be allocated)
-  NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_fini_function  // function to terminate message instance (will not free memory)
+  v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_member_array,  // message members
+  v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_init_function,  // function to initialize message memory (memory has to be allocated)
+  v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_fini_function  // function to terminate message instance (will not free memory)
 };
 
 // this is not const since it must be initialized on first access
 // since C does not allow non-integral compile-time constants
-static rosidl_message_type_support_t NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_type_support_handle = {
+static rosidl_message_type_support_t v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_type_support_handle = {
   0,
-  &NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_members,
+  &v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_members,
   get_message_typesupport_handle_function,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_v2x_msg
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, NodeListXY)() {
-  NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_member_array[0].members_ =
+  v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_member_array[0].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, NodeXY)();
-  NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_member_array[1].members_ =
+  v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_member_array[1].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, ComputedLane)();
-  if (!NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_type_support_handle.typesupport_identifier) {
-    NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_type_support_handle.typesupport_identifier =
+  if (!v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_type_support_handle.typesupport_identifier) {
+    v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
   }
-  return &NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_type_support_handle;
+  return &v2x_msg__msg__NodeListXY__rosidl_typesupport_introspection_c__NodeListXY_message_type_support_handle;
 }
 #ifdef __cplusplus
 }

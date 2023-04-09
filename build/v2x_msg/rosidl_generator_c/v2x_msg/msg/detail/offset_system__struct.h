@@ -21,7 +21,7 @@ extern "C"
 // Member 'offset'
 #include "v2x_msg/msg/detail/offset__struct.h"
 
-// Struct defined in msg/OffsetSystem in the package v2x_msg.
+/// Struct defined in msg/OffsetSystem in the package v2x_msg.
 typedef struct v2x_msg__msg__OffsetSystem
 {
   int64_t scale;

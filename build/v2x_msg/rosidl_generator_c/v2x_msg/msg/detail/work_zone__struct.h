@@ -21,7 +21,7 @@ extern "C"
 // Member 'item'
 #include "v2x_msg/msg/detail/work_zonecontent__struct.h"
 
-// Struct defined in msg/WorkZone in the package v2x_msg.
+/// Struct defined in msg/WorkZone in the package v2x_msg.
 typedef struct v2x_msg__msg__WorkZone
 {
   v2x_msg__msg__WorkZonecontent__Sequence item;

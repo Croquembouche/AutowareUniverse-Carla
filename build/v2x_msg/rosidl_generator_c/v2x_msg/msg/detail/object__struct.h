@@ -21,7 +21,7 @@ extern "C"
 // Member 'datetime'
 #include "v2x_msg/msg/detail/d_date_time__struct.h"
 
-// Struct defined in msg/Object in the package v2x_msg.
+/// Struct defined in msg/Object in the package v2x_msg.
 typedef struct v2x_msg__msg__Object
 {
   int64_t obdist;

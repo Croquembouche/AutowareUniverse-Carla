@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -142,7 +144,7 @@ class SignalRequesterInfo(metaclass=Metaclass_SignalRequesterInfo):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def id(self):  # noqa: A003
         """Message field 'id'."""
         return self._id
@@ -156,7 +158,7 @@ class SignalRequesterInfo(metaclass=Metaclass_SignalRequesterInfo):
                 "The 'id' field must be a sub message of type 'VehicleID'"
         self._id = value
 
-    @property
+    @builtins.property
     def request(self):
         """Message field 'request'."""
         return self._request
@@ -171,7 +173,7 @@ class SignalRequesterInfo(metaclass=Metaclass_SignalRequesterInfo):
                 "The 'request' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._request = value
 
-    @property
+    @builtins.property
     def sequencenumber(self):
         """Message field 'sequencenumber'."""
         return self._sequencenumber
@@ -186,7 +188,7 @@ class SignalRequesterInfo(metaclass=Metaclass_SignalRequesterInfo):
                 "The 'sequencenumber' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._sequencenumber = value
 
-    @property
+    @builtins.property
     def basicvehiclerole(self):
         """Message field 'basicvehiclerole'."""
         return self._basicvehiclerole
@@ -201,7 +203,7 @@ class SignalRequesterInfo(metaclass=Metaclass_SignalRequesterInfo):
                 "The 'basicvehiclerole' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._basicvehiclerole = value
 
-    @property
+    @builtins.property
     def typedata(self):
         """Message field 'typedata'."""
         return self._typedata

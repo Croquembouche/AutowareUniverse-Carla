@@ -27,7 +27,7 @@ extern "C"
 // Member 'position'
 #include "v2x_msg/msg/detail/full_position_vector__struct.h"
 
-// Struct defined in msg/RSA in the package v2x_msg.
+/// Struct defined in msg/RSA in the package v2x_msg.
 typedef struct v2x_msg__msg__RSA
 {
   int64_t msgcnt;

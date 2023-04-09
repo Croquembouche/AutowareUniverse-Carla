@@ -1,0 +1,1 @@
+/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_introspection_cpp/v2x_msg/msg/detail/node_offset_point_xy__rosidl_typesupport_introspection_cpp.hpp

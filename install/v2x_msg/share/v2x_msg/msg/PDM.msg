@@ -1,9 +1,1 @@
-int64 timestamp
-Sample sample
-string directions
-int64 termtime
-int64 termdistance
-SnapshotTime snapshottime
-SnapshotDistance snapshotdistance 
-int64 txinterval
-VehicleStatusRequest[] dataelements
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/PDM.msg

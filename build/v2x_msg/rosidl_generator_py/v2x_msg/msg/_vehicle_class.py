@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -120,7 +122,7 @@ class VehicleClass(metaclass=Metaclass_VehicleClass):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def vgroup(self):
         """Message field 'vgroup'."""
         return self._vgroup
@@ -135,7 +137,7 @@ class VehicleClass(metaclass=Metaclass_VehicleClass):
                 "The 'vgroup' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._vgroup = value
 
-    @property
+    @builtins.property
     def rgroup(self):
         """Message field 'rgroup'."""
         return self._rgroup
@@ -150,7 +152,7 @@ class VehicleClass(metaclass=Metaclass_VehicleClass):
                 "The 'rgroup' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._rgroup = value
 
-    @property
+    @builtins.property
     def requip(self):
         """Message field 'requip'."""
         return self._requip

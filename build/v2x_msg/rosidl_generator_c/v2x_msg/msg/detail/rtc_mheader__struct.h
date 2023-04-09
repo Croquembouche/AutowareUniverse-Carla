@@ -23,7 +23,7 @@ extern "C"
 // Member 'offsetset'
 #include "v2x_msg/msg/detail/antenna_offset_set__struct.h"
 
-// Struct defined in msg/RTCMheader in the package v2x_msg.
+/// Struct defined in msg/RTCMheader in the package v2x_msg.
 typedef struct v2x_msg__msg__RTCMheader
 {
   rosidl_runtime_c__String status;

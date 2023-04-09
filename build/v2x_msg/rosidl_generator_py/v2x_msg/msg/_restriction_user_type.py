@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -108,7 +110,7 @@ class RestrictionUserType(metaclass=Metaclass_RestrictionUserType):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def basictype(self):
         """Message field 'basictype'."""
         return self._basictype

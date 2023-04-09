@@ -37,7 +37,7 @@ extern "C"
 {
 #endif
 
-void RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_init_function(
+void v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_init_function(
   void * message_memory, enum rosidl_runtime_c__message_initialization _init)
 {
   // TODO(karsten1987): initializers are not yet implemented for typesupport c
@@ -46,12 +46,12 @@ void RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_init_function(
   v2x_msg__msg__RoadSegment__init(message_memory);
 }
 
-void RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_fini_function(void * message_memory)
+void v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_fini_function(void * message_memory)
 {
   v2x_msg__msg__RoadSegment__fini(message_memory);
 }
 
-size_t RoadSegment__rosidl_typesupport_introspection_c__size_function__SpeedLimit__speedlimits(
+size_t v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__size_function__RoadSegment__speedlimits(
   const void * untyped_member)
 {
   const v2x_msg__msg__SpeedLimit__Sequence * member =
@@ -59,7 +59,7 @@ size_t RoadSegment__rosidl_typesupport_introspection_c__size_function__SpeedLimi
   return member->size;
 }
 
-const void * RoadSegment__rosidl_typesupport_introspection_c__get_const_function__SpeedLimit__speedlimits(
+const void * v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__get_const_function__RoadSegment__speedlimits(
   const void * untyped_member, size_t index)
 {
   const v2x_msg__msg__SpeedLimit__Sequence * member =
@@ -67,7 +67,7 @@ const void * RoadSegment__rosidl_typesupport_introspection_c__get_const_function
   return &member->data[index];
 }
 
-void * RoadSegment__rosidl_typesupport_introspection_c__get_function__SpeedLimit__speedlimits(
+void * v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__get_function__RoadSegment__speedlimits(
   void * untyped_member, size_t index)
 {
   v2x_msg__msg__SpeedLimit__Sequence * member =
@@ -75,7 +75,29 @@ void * RoadSegment__rosidl_typesupport_introspection_c__get_function__SpeedLimit
   return &member->data[index];
 }
 
-bool RoadSegment__rosidl_typesupport_introspection_c__resize_function__SpeedLimit__speedlimits(
+void v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__fetch_function__RoadSegment__speedlimits(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const v2x_msg__msg__SpeedLimit * item =
+    ((const v2x_msg__msg__SpeedLimit *)
+    v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__get_const_function__RoadSegment__speedlimits(untyped_member, index));
+  v2x_msg__msg__SpeedLimit * value =
+    (v2x_msg__msg__SpeedLimit *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__assign_function__RoadSegment__speedlimits(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  v2x_msg__msg__SpeedLimit * item =
+    ((v2x_msg__msg__SpeedLimit *)
+    v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__get_function__RoadSegment__speedlimits(untyped_member, index));
+  const v2x_msg__msg__SpeedLimit * value =
+    (const v2x_msg__msg__SpeedLimit *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__resize_function__RoadSegment__speedlimits(
   void * untyped_member, size_t size)
 {
   v2x_msg__msg__SpeedLimit__Sequence * member =
@@ -84,7 +106,7 @@ bool RoadSegment__rosidl_typesupport_introspection_c__resize_function__SpeedLimi
   return v2x_msg__msg__SpeedLimit__Sequence__init(member, size);
 }
 
-size_t RoadSegment__rosidl_typesupport_introspection_c__size_function__GenericLane__roadlaneset(
+size_t v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__size_function__RoadSegment__roadlaneset(
   const void * untyped_member)
 {
   const v2x_msg__msg__GenericLane__Sequence * member =
@@ -92,7 +114,7 @@ size_t RoadSegment__rosidl_typesupport_introspection_c__size_function__GenericLa
   return member->size;
 }
 
-const void * RoadSegment__rosidl_typesupport_introspection_c__get_const_function__GenericLane__roadlaneset(
+const void * v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__get_const_function__RoadSegment__roadlaneset(
   const void * untyped_member, size_t index)
 {
   const v2x_msg__msg__GenericLane__Sequence * member =
@@ -100,7 +122,7 @@ const void * RoadSegment__rosidl_typesupport_introspection_c__get_const_function
   return &member->data[index];
 }
 
-void * RoadSegment__rosidl_typesupport_introspection_c__get_function__GenericLane__roadlaneset(
+void * v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__get_function__RoadSegment__roadlaneset(
   void * untyped_member, size_t index)
 {
   v2x_msg__msg__GenericLane__Sequence * member =
@@ -108,7 +130,29 @@ void * RoadSegment__rosidl_typesupport_introspection_c__get_function__GenericLan
   return &member->data[index];
 }
 
-bool RoadSegment__rosidl_typesupport_introspection_c__resize_function__GenericLane__roadlaneset(
+void v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__fetch_function__RoadSegment__roadlaneset(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const v2x_msg__msg__GenericLane * item =
+    ((const v2x_msg__msg__GenericLane *)
+    v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__get_const_function__RoadSegment__roadlaneset(untyped_member, index));
+  v2x_msg__msg__GenericLane * value =
+    (v2x_msg__msg__GenericLane *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__assign_function__RoadSegment__roadlaneset(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  v2x_msg__msg__GenericLane * item =
+    ((v2x_msg__msg__GenericLane *)
+    v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__get_function__RoadSegment__roadlaneset(untyped_member, index));
+  const v2x_msg__msg__GenericLane * value =
+    (const v2x_msg__msg__GenericLane *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__resize_function__RoadSegment__roadlaneset(
   void * untyped_member, size_t size)
 {
   v2x_msg__msg__GenericLane__Sequence * member =
@@ -117,7 +161,7 @@ bool RoadSegment__rosidl_typesupport_introspection_c__resize_function__GenericLa
   return v2x_msg__msg__GenericLane__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_member_array[7] = {
+static rosidl_typesupport_introspection_c__MessageMember v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_member_array[7] = {
   {
     "name",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
@@ -131,6 +175,8 @@ static rosidl_typesupport_introspection_c__MessageMember RoadSegment__rosidl_typ
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -146,6 +192,8 @@ static rosidl_typesupport_introspection_c__MessageMember RoadSegment__rosidl_typ
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -161,6 +209,8 @@ static rosidl_typesupport_introspection_c__MessageMember RoadSegment__rosidl_typ
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -176,6 +226,8 @@ static rosidl_typesupport_introspection_c__MessageMember RoadSegment__rosidl_typ
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -191,6 +243,8 @@ static rosidl_typesupport_introspection_c__MessageMember RoadSegment__rosidl_typ
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -203,10 +257,12 @@ static rosidl_typesupport_introspection_c__MessageMember RoadSegment__rosidl_typ
     false,  // is upper bound
     offsetof(v2x_msg__msg__RoadSegment, speedlimits),  // bytes offset in struct
     NULL,  // default value
-    RoadSegment__rosidl_typesupport_introspection_c__size_function__SpeedLimit__speedlimits,  // size() function pointer
-    RoadSegment__rosidl_typesupport_introspection_c__get_const_function__SpeedLimit__speedlimits,  // get_const(index) function pointer
-    RoadSegment__rosidl_typesupport_introspection_c__get_function__SpeedLimit__speedlimits,  // get(index) function pointer
-    RoadSegment__rosidl_typesupport_introspection_c__resize_function__SpeedLimit__speedlimits  // resize(index) function pointer
+    v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__size_function__RoadSegment__speedlimits,  // size() function pointer
+    v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__get_const_function__RoadSegment__speedlimits,  // get_const(index) function pointer
+    v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__get_function__RoadSegment__speedlimits,  // get(index) function pointer
+    v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__fetch_function__RoadSegment__speedlimits,  // fetch(index, &value) function pointer
+    v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__assign_function__RoadSegment__speedlimits,  // assign(index, value) function pointer
+    v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__resize_function__RoadSegment__speedlimits  // resize(index) function pointer
   },
   {
     "roadlaneset",  // name
@@ -218,47 +274,49 @@ static rosidl_typesupport_introspection_c__MessageMember RoadSegment__rosidl_typ
     false,  // is upper bound
     offsetof(v2x_msg__msg__RoadSegment, roadlaneset),  // bytes offset in struct
     NULL,  // default value
-    RoadSegment__rosidl_typesupport_introspection_c__size_function__GenericLane__roadlaneset,  // size() function pointer
-    RoadSegment__rosidl_typesupport_introspection_c__get_const_function__GenericLane__roadlaneset,  // get_const(index) function pointer
-    RoadSegment__rosidl_typesupport_introspection_c__get_function__GenericLane__roadlaneset,  // get(index) function pointer
-    RoadSegment__rosidl_typesupport_introspection_c__resize_function__GenericLane__roadlaneset  // resize(index) function pointer
+    v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__size_function__RoadSegment__roadlaneset,  // size() function pointer
+    v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__get_const_function__RoadSegment__roadlaneset,  // get_const(index) function pointer
+    v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__get_function__RoadSegment__roadlaneset,  // get(index) function pointer
+    v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__fetch_function__RoadSegment__roadlaneset,  // fetch(index, &value) function pointer
+    v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__assign_function__RoadSegment__roadlaneset,  // assign(index, value) function pointer
+    v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__resize_function__RoadSegment__roadlaneset  // resize(index) function pointer
   }
 };
 
-static const rosidl_typesupport_introspection_c__MessageMembers RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_members = {
+static const rosidl_typesupport_introspection_c__MessageMembers v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_members = {
   "v2x_msg__msg",  // message namespace
   "RoadSegment",  // message name
   7,  // number of fields
   sizeof(v2x_msg__msg__RoadSegment),
-  RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_member_array,  // message members
-  RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_init_function,  // function to initialize message memory (memory has to be allocated)
-  RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_fini_function  // function to terminate message instance (will not free memory)
+  v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_member_array,  // message members
+  v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_init_function,  // function to initialize message memory (memory has to be allocated)
+  v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_fini_function  // function to terminate message instance (will not free memory)
 };
 
 // this is not const since it must be initialized on first access
 // since C does not allow non-integral compile-time constants
-static rosidl_message_type_support_t RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_type_support_handle = {
+static rosidl_message_type_support_t v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_type_support_handle = {
   0,
-  &RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_members,
+  &v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_members,
   get_message_typesupport_handle_function,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_v2x_msg
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, RoadSegment)() {
-  RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_member_array[1].members_ =
+  v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_member_array[1].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, RoadSegmentReferenceID)();
-  RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_member_array[3].members_ =
+  v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_member_array[3].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, Position3D)();
-  RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_member_array[5].members_ =
+  v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_member_array[5].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, SpeedLimit)();
-  RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_member_array[6].members_ =
+  v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_member_array[6].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, GenericLane)();
-  if (!RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_type_support_handle.typesupport_identifier) {
-    RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_type_support_handle.typesupport_identifier =
+  if (!v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_type_support_handle.typesupport_identifier) {
+    v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
   }
-  return &RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_type_support_handle;
+  return &v2x_msg__msg__RoadSegment__rosidl_typesupport_introspection_c__RoadSegment_message_type_support_handle;
 }
 #ifdef __cplusplus
 }

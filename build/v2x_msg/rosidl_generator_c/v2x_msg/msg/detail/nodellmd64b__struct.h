@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/Nodellmd64b in the package v2x_msg.
+/// Struct defined in msg/Nodellmd64b in the package v2x_msg.
 typedef struct v2x_msg__msg__Nodellmd64b
 {
   int64_t longitude;

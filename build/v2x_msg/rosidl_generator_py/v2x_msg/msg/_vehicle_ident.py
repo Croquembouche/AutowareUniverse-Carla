@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -148,7 +150,7 @@ class VehicleIdent(metaclass=Metaclass_VehicleIdent):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def name(self):
         """Message field 'name'."""
         return self._name
@@ -161,7 +163,7 @@ class VehicleIdent(metaclass=Metaclass_VehicleIdent):
                 "The 'name' field must be of type 'str'"
         self._name = value
 
-    @property
+    @builtins.property
     def vin(self):
         """Message field 'vin'."""
         return self._vin
@@ -174,7 +176,7 @@ class VehicleIdent(metaclass=Metaclass_VehicleIdent):
                 "The 'vin' field must be of type 'str'"
         self._vin = value
 
-    @property
+    @builtins.property
     def ownercode(self):
         """Message field 'ownercode'."""
         return self._ownercode
@@ -187,7 +189,7 @@ class VehicleIdent(metaclass=Metaclass_VehicleIdent):
                 "The 'ownercode' field must be of type 'str'"
         self._ownercode = value
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def id(self):  # noqa: A003
         """Message field 'id'."""
         return self._id
@@ -201,7 +203,7 @@ class VehicleIdent(metaclass=Metaclass_VehicleIdent):
                 "The 'id' field must be a sub message of type 'VehicleID'"
         self._id = value
 
-    @property
+    @builtins.property
     def vehicletype(self):
         """Message field 'vehicletype'."""
         return self._vehicletype
@@ -216,7 +218,7 @@ class VehicleIdent(metaclass=Metaclass_VehicleIdent):
                 "The 'vehicletype' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._vehicletype = value
 
-    @property
+    @builtins.property
     def vehicleclass(self):
         """Message field 'vehicleclass'."""
         return self._vehicleclass

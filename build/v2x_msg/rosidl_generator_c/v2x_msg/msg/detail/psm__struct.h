@@ -38,7 +38,7 @@ extern "C"
 // Member 'propulsion'
 #include "v2x_msg/msg/detail/propelled_information__struct.h"
 
-// Struct defined in msg/PSM in the package v2x_msg.
+/// Struct defined in msg/PSM in the package v2x_msg.
 typedef struct v2x_msg__msg__PSM
 {
   int64_t basictype;

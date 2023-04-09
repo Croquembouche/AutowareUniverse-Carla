@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -142,7 +144,7 @@ class AccelSets(metaclass=Metaclass_AccelSets):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def angle(self):
         """Message field 'angle'."""
         return self._angle
@@ -156,7 +158,7 @@ class AccelSets(metaclass=Metaclass_AccelSets):
                 "The 'angle' field must be a sub message of type 'AccelerationSet4Way'"
         self._angle = value
 
-    @property
+    @builtins.property
     def certaccelthres(self):
         """Message field 'certaccelthres'."""
         return self._certaccelthres
@@ -171,7 +173,7 @@ class AccelSets(metaclass=Metaclass_AccelSets):
                 "The 'certaccelthres' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._certaccelthres = value
 
-    @property
+    @builtins.property
     def yawratecon(self):
         """Message field 'yawratecon'."""
         return self._yawratecon
@@ -186,7 +188,7 @@ class AccelSets(metaclass=Metaclass_AccelSets):
                 "The 'yawratecon' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._yawratecon = value
 
-    @property
+    @builtins.property
     def hozaccelcon(self):
         """Message field 'hozaccelcon'."""
         return self._hozaccelcon
@@ -201,7 +203,7 @@ class AccelSets(metaclass=Metaclass_AccelSets):
                 "The 'hozaccelcon' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._hozaccelcon = value
 
-    @property
+    @builtins.property
     def confidenceset(self):
         """Message field 'confidenceset'."""
         return self._confidenceset

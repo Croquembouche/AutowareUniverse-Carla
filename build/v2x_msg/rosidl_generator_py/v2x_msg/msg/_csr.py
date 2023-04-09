@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -130,7 +132,7 @@ class CSR(metaclass=Metaclass_CSR):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def timestamp(self):
         """Message field 'timestamp'."""
         return self._timestamp
@@ -145,7 +147,7 @@ class CSR(metaclass=Metaclass_CSR):
                 "The 'timestamp' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._timestamp = value
 
-    @property
+    @builtins.property
     def msgcnt(self):
         """Message field 'msgcnt'."""
         return self._msgcnt
@@ -160,7 +162,7 @@ class CSR(metaclass=Metaclass_CSR):
                 "The 'msgcnt' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._msgcnt = value
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def id(self):  # noqa: A003
         """Message field 'id'."""
         return self._id
@@ -173,7 +175,7 @@ class CSR(metaclass=Metaclass_CSR):
                 "The 'id' field must be of type 'str'"
         self._id = value
 
-    @property
+    @builtins.property
     def requests(self):
         """Message field 'requests'."""
         return self._requests

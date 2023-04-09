@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -120,7 +122,7 @@ class LaneAttributes(metaclass=Metaclass_LaneAttributes):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def directionaluse(self):
         """Message field 'directionaluse'."""
         return self._directionaluse
@@ -133,7 +135,7 @@ class LaneAttributes(metaclass=Metaclass_LaneAttributes):
                 "The 'directionaluse' field must be of type 'str'"
         self._directionaluse = value
 
-    @property
+    @builtins.property
     def sharedwith(self):
         """Message field 'sharedwith'."""
         return self._sharedwith
@@ -146,7 +148,7 @@ class LaneAttributes(metaclass=Metaclass_LaneAttributes):
                 "The 'sharedwith' field must be of type 'str'"
         self._sharedwith = value
 
-    @property
+    @builtins.property
     def lanetype(self):
         """Message field 'lanetype'."""
         return self._lanetype

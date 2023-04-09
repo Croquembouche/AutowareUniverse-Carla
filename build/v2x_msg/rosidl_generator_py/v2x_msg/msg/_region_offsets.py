@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -120,7 +122,7 @@ class RegionOffsets(metaclass=Metaclass_RegionOffsets):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def xoffset(self):
         """Message field 'xoffset'."""
         return self._xoffset
@@ -135,7 +137,7 @@ class RegionOffsets(metaclass=Metaclass_RegionOffsets):
                 "The 'xoffset' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._xoffset = value
 
-    @property
+    @builtins.property
     def yoffset(self):
         """Message field 'yoffset'."""
         return self._yoffset
@@ -150,7 +152,7 @@ class RegionOffsets(metaclass=Metaclass_RegionOffsets):
                 "The 'yoffset' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._yoffset = value
 
-    @property
+    @builtins.property
     def zoffset(self):
         """Message field 'zoffset'."""
         return self._zoffset

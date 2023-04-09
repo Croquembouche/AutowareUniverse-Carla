@@ -24,7 +24,7 @@ extern "C"
 // Member 'outboundon'
 #include "v2x_msg/msg/detail/intersection_access_point__struct.h"
 
-// Struct defined in msg/SignalStatusPackage in the package v2x_msg.
+/// Struct defined in msg/SignalStatusPackage in the package v2x_msg.
 typedef struct v2x_msg__msg__SignalStatusPackage
 {
   v2x_msg__msg__SignalRequesterInfo requester;

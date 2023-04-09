@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -165,7 +167,7 @@ class GeographicalPath(metaclass=Metaclass_GeographicalPath):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def name(self):
         """Message field 'name'."""
         return self._name
@@ -178,7 +180,7 @@ class GeographicalPath(metaclass=Metaclass_GeographicalPath):
                 "The 'name' field must be of type 'str'"
         self._name = value
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def id(self):  # noqa: A003
         """Message field 'id'."""
         return self._id
@@ -192,7 +194,7 @@ class GeographicalPath(metaclass=Metaclass_GeographicalPath):
                 "The 'id' field must be a sub message of type 'RoadSegmentReferenceID'"
         self._id = value
 
-    @property
+    @builtins.property
     def anchor(self):
         """Message field 'anchor'."""
         return self._anchor
@@ -206,7 +208,7 @@ class GeographicalPath(metaclass=Metaclass_GeographicalPath):
                 "The 'anchor' field must be a sub message of type 'Position3D'"
         self._anchor = value
 
-    @property
+    @builtins.property
     def lanewidth(self):
         """Message field 'lanewidth'."""
         return self._lanewidth
@@ -221,7 +223,7 @@ class GeographicalPath(metaclass=Metaclass_GeographicalPath):
                 "The 'lanewidth' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._lanewidth = value
 
-    @property
+    @builtins.property
     def directionality(self):
         """Message field 'directionality'."""
         return self._directionality
@@ -236,7 +238,7 @@ class GeographicalPath(metaclass=Metaclass_GeographicalPath):
                 "The 'directionality' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._directionality = value
 
-    @property
+    @builtins.property
     def closedpath(self):
         """Message field 'closedpath'."""
         return self._closedpath
@@ -249,7 +251,7 @@ class GeographicalPath(metaclass=Metaclass_GeographicalPath):
                 "The 'closedpath' field must be of type 'bool'"
         self._closedpath = value
 
-    @property
+    @builtins.property
     def direction(self):
         """Message field 'direction'."""
         return self._direction
@@ -262,7 +264,7 @@ class GeographicalPath(metaclass=Metaclass_GeographicalPath):
                 "The 'direction' field must be of type 'str'"
         self._direction = value
 
-    @property
+    @builtins.property
     def description(self):
         """Message field 'description'."""
         return self._description

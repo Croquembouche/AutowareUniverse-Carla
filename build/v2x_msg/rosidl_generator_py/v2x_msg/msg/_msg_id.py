@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -119,7 +121,7 @@ class MsgID(metaclass=Metaclass_MsgID):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def furtherinfoid(self):
         """Message field 'furtherinfoid'."""
         return self._furtherinfoid
@@ -132,7 +134,7 @@ class MsgID(metaclass=Metaclass_MsgID):
                 "The 'furtherinfoid' field must be of type 'str'"
         self._furtherinfoid = value
 
-    @property
+    @builtins.property
     def roadsignid(self):
         """Message field 'roadsignid'."""
         return self._roadsignid

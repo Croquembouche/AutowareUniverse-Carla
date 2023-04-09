@@ -1,2 +1,1 @@
-string entityid
-int64 stationid
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/VehicleID.msg

@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -130,7 +132,7 @@ class SSM(metaclass=Metaclass_SSM):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def timestamp(self):
         """Message field 'timestamp'."""
         return self._timestamp
@@ -145,7 +147,7 @@ class SSM(metaclass=Metaclass_SSM):
                 "The 'timestamp' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._timestamp = value
 
-    @property
+    @builtins.property
     def second(self):
         """Message field 'second'."""
         return self._second
@@ -160,7 +162,7 @@ class SSM(metaclass=Metaclass_SSM):
                 "The 'second' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._second = value
 
-    @property
+    @builtins.property
     def sequencenumber(self):
         """Message field 'sequencenumber'."""
         return self._sequencenumber
@@ -175,7 +177,7 @@ class SSM(metaclass=Metaclass_SSM):
                 "The 'sequencenumber' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._sequencenumber = value
 
-    @property
+    @builtins.property
     def status(self):
         """Message field 'status'."""
         return self._status

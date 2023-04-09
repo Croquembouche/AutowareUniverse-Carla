@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -119,7 +121,7 @@ class RTCMheader(metaclass=Metaclass_RTCMheader):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def status(self):
         """Message field 'status'."""
         return self._status
@@ -132,7 +134,7 @@ class RTCMheader(metaclass=Metaclass_RTCMheader):
                 "The 'status' field must be of type 'str'"
         self._status = value
 
-    @property
+    @builtins.property
     def offsetset(self):
         """Message field 'offsetset'."""
         return self._offsetset

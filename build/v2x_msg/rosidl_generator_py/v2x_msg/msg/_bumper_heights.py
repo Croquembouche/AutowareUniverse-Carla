@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -114,7 +116,7 @@ class BumperHeights(metaclass=Metaclass_BumperHeights):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def front(self):
         """Message field 'front'."""
         return self._front
@@ -129,7 +131,7 @@ class BumperHeights(metaclass=Metaclass_BumperHeights):
                 "The 'front' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._front = value
 
-    @property
+    @builtins.property
     def rear(self):
         """Message field 'rear'."""
         return self._rear

@@ -24,7 +24,7 @@ extern "C"
 // Member 'msgcrc'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/RoadSignID in the package v2x_msg.
+/// Struct defined in msg/RoadSignID in the package v2x_msg.
 typedef struct v2x_msg__msg__RoadSignID
 {
   v2x_msg__msg__Position3D position;

@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -144,7 +146,7 @@ class TireData(metaclass=Metaclass_TireData):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def location(self):
         """Message field 'location'."""
         return self._location
@@ -159,7 +161,7 @@ class TireData(metaclass=Metaclass_TireData):
                 "The 'location' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._location = value
 
-    @property
+    @builtins.property
     def pressure(self):
         """Message field 'pressure'."""
         return self._pressure
@@ -174,7 +176,7 @@ class TireData(metaclass=Metaclass_TireData):
                 "The 'pressure' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._pressure = value
 
-    @property
+    @builtins.property
     def temp(self):
         """Message field 'temp'."""
         return self._temp
@@ -189,7 +191,7 @@ class TireData(metaclass=Metaclass_TireData):
                 "The 'temp' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._temp = value
 
-    @property
+    @builtins.property
     def wheelsensorstatus(self):
         """Message field 'wheelsensorstatus'."""
         return self._wheelsensorstatus
@@ -204,7 +206,7 @@ class TireData(metaclass=Metaclass_TireData):
                 "The 'wheelsensorstatus' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._wheelsensorstatus = value
 
-    @property
+    @builtins.property
     def wheelendelectfault(self):
         """Message field 'wheelendelectfault'."""
         return self._wheelendelectfault
@@ -219,7 +221,7 @@ class TireData(metaclass=Metaclass_TireData):
                 "The 'wheelendelectfault' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._wheelendelectfault = value
 
-    @property
+    @builtins.property
     def leakagerate(self):
         """Message field 'leakagerate'."""
         return self._leakagerate
@@ -234,7 +236,7 @@ class TireData(metaclass=Metaclass_TireData):
                 "The 'leakagerate' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._leakagerate = value
 
-    @property
+    @builtins.property
     def detection(self):
         """Message field 'detection'."""
         return self._detection

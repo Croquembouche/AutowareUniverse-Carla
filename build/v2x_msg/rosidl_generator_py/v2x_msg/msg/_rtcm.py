@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -148,7 +150,7 @@ class RTCM(metaclass=Metaclass_RTCM):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def msgcnt(self):
         """Message field 'msgcnt'."""
         return self._msgcnt
@@ -163,7 +165,7 @@ class RTCM(metaclass=Metaclass_RTCM):
                 "The 'msgcnt' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._msgcnt = value
 
-    @property
+    @builtins.property
     def rev(self):
         """Message field 'rev'."""
         return self._rev
@@ -178,7 +180,7 @@ class RTCM(metaclass=Metaclass_RTCM):
                 "The 'rev' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._rev = value
 
-    @property
+    @builtins.property
     def timestamp(self):
         """Message field 'timestamp'."""
         return self._timestamp
@@ -193,7 +195,7 @@ class RTCM(metaclass=Metaclass_RTCM):
                 "The 'timestamp' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._timestamp = value
 
-    @property
+    @builtins.property
     def anchorpoint(self):
         """Message field 'anchorpoint'."""
         return self._anchorpoint
@@ -207,7 +209,7 @@ class RTCM(metaclass=Metaclass_RTCM):
                 "The 'anchorpoint' field must be a sub message of type 'FullPositionVector'"
         self._anchorpoint = value
 
-    @property
+    @builtins.property
     def rtcmheader(self):
         """Message field 'rtcmheader'."""
         return self._rtcmheader
@@ -221,7 +223,7 @@ class RTCM(metaclass=Metaclass_RTCM):
                 "The 'rtcmheader' field must be a sub message of type 'RTCMheader'"
         self._rtcmheader = value
 
-    @property
+    @builtins.property
     def msgs(self):
         """Message field 'msgs'."""
         return self._msgs

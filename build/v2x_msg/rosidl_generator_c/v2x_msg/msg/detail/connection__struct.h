@@ -23,7 +23,7 @@ extern "C"
 // Member 'remoteintersection'
 #include "v2x_msg/msg/detail/intersection_reference_id__struct.h"
 
-// Struct defined in msg/Connection in the package v2x_msg.
+/// Struct defined in msg/Connection in the package v2x_msg.
 typedef struct v2x_msg__msg__Connection
 {
   v2x_msg__msg__ConnectingLane connectinglane;

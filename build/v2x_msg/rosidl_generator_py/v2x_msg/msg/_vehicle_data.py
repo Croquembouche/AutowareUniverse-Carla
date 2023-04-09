@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -137,7 +139,7 @@ class VehicleData(metaclass=Metaclass_VehicleData):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def height(self):
         """Message field 'height'."""
         return self._height
@@ -152,7 +154,7 @@ class VehicleData(metaclass=Metaclass_VehicleData):
                 "The 'height' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._height = value
 
-    @property
+    @builtins.property
     def bumpers(self):
         """Message field 'bumpers'."""
         return self._bumpers
@@ -166,7 +168,7 @@ class VehicleData(metaclass=Metaclass_VehicleData):
                 "The 'bumpers' field must be a sub message of type 'BumperHeights'"
         self._bumpers = value
 
-    @property
+    @builtins.property
     def mass(self):
         """Message field 'mass'."""
         return self._mass
@@ -181,7 +183,7 @@ class VehicleData(metaclass=Metaclass_VehicleData):
                 "The 'mass' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._mass = value
 
-    @property
+    @builtins.property
     def trailerweight(self):
         """Message field 'trailerweight'."""
         return self._trailerweight
@@ -196,7 +198,7 @@ class VehicleData(metaclass=Metaclass_VehicleData):
                 "The 'trailerweight' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._trailerweight = value
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def type(self):  # noqa: A003
         """Message field 'type'."""
         return self._type

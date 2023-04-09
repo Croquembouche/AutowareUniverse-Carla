@@ -5,22 +5,107 @@
 #ifndef V2X_MSG__MSG__DETAIL__RSA__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__RSA__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/rsa__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/rsa__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'position'
 #include "v2x_msg/msg/detail/full_position_vector__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::RSA & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const RSA & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: msgcnt
+  {
+    out << "msgcnt: ";
+    rosidl_generator_traits::value_to_yaml(msg.msgcnt, out);
+    out << ", ";
+  }
+
+  // member: timestamp
+  {
+    out << "timestamp: ";
+    rosidl_generator_traits::value_to_yaml(msg.timestamp, out);
+    out << ", ";
+  }
+
+  // member: typeevent
+  {
+    out << "typeevent: ";
+    rosidl_generator_traits::value_to_yaml(msg.typeevent, out);
+    out << ", ";
+  }
+
+  // member: desrciption
+  {
+    if (msg.desrciption.size() == 0) {
+      out << "desrciption: []";
+    } else {
+      out << "desrciption: [";
+      size_t pending_items = msg.desrciption.size();
+      for (auto item : msg.desrciption) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: priority
+  {
+    out << "priority: ";
+    rosidl_generator_traits::value_to_yaml(msg.priority, out);
+    out << ", ";
+  }
+
+  // member: heading
+  {
+    out << "heading: ";
+    rosidl_generator_traits::value_to_yaml(msg.heading, out);
+    out << ", ";
+  }
+
+  // member: extent
+  {
+    out << "extent: ";
+    rosidl_generator_traits::value_to_yaml(msg.extent, out);
+    out << ", ";
+  }
+
+  // member: position
+  {
+    out << "position: ";
+    to_flow_style_yaml(msg.position, out);
+    out << ", ";
+  }
+
+  // member: furtherinfoid
+  {
+    out << "furtherinfoid: ";
+    rosidl_generator_traits::value_to_yaml(msg.furtherinfoid, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const RSA & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: msgcnt
@@ -29,7 +114,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "msgcnt: ";
-    value_to_yaml(msg.msgcnt, out);
+    rosidl_generator_traits::value_to_yaml(msg.msgcnt, out);
     out << "\n";
   }
 
@@ -39,7 +124,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "timestamp: ";
-    value_to_yaml(msg.timestamp, out);
+    rosidl_generator_traits::value_to_yaml(msg.timestamp, out);
     out << "\n";
   }
 
@@ -49,7 +134,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "typeevent: ";
-    value_to_yaml(msg.typeevent, out);
+    rosidl_generator_traits::value_to_yaml(msg.typeevent, out);
     out << "\n";
   }
 
@@ -67,7 +152,7 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "- ";
-        value_to_yaml(item, out);
+        rosidl_generator_traits::value_to_yaml(item, out);
         out << "\n";
       }
     }
@@ -79,7 +164,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "priority: ";
-    value_to_yaml(msg.priority, out);
+    rosidl_generator_traits::value_to_yaml(msg.priority, out);
     out << "\n";
   }
 
@@ -89,7 +174,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "heading: ";
-    value_to_yaml(msg.heading, out);
+    rosidl_generator_traits::value_to_yaml(msg.heading, out);
     out << "\n";
   }
 
@@ -99,7 +184,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "extent: ";
-    value_to_yaml(msg.extent, out);
+    rosidl_generator_traits::value_to_yaml(msg.extent, out);
     out << "\n";
   }
 
@@ -109,7 +194,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "position:\n";
-    to_yaml(msg.position, out, indentation + 2);
+    to_block_style_yaml(msg.position, out, indentation + 2);
   }
 
   // member: furtherinfoid
@@ -118,16 +203,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "furtherinfoid: ";
-    value_to_yaml(msg.furtherinfoid, out);
+    rosidl_generator_traits::value_to_yaml(msg.furtherinfoid, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::RSA & msg)
+inline std::string to_yaml(const RSA & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::RSA & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::RSA & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -120,7 +122,7 @@ class PropelledInformation(metaclass=Metaclass_PropelledInformation):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def human(self):
         """Message field 'human'."""
         return self._human
@@ -135,7 +137,7 @@ class PropelledInformation(metaclass=Metaclass_PropelledInformation):
                 "The 'human' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._human = value
 
-    @property
+    @builtins.property
     def animal(self):
         """Message field 'animal'."""
         return self._animal
@@ -150,7 +152,7 @@ class PropelledInformation(metaclass=Metaclass_PropelledInformation):
                 "The 'animal' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._animal = value
 
-    @property
+    @builtins.property
     def motor(self):
         """Message field 'motor'."""
         return self._motor

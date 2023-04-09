@@ -23,7 +23,7 @@ extern "C"
 // Member 'nodelist'
 #include "v2x_msg/msg/detail/node_list_xy__struct.h"
 
-// Struct defined in msg/ShapePointSet in the package v2x_msg.
+/// Struct defined in msg/ShapePointSet in the package v2x_msg.
 typedef struct v2x_msg__msg__ShapePointSet
 {
   v2x_msg__msg__Position3D anchor;

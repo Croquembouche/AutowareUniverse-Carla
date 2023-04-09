@@ -57,6 +57,24 @@ void * get_function__NodeAttributeSetXY__localnode(void * untyped_member, size_t
   return &member[index];
 }
 
+void fetch_function__NodeAttributeSetXY__localnode(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const int64_t *>(
+    get_const_function__NodeAttributeSetXY__localnode(untyped_member, index));
+  auto & value = *reinterpret_cast<int64_t *>(untyped_value);
+  value = item;
+}
+
+void assign_function__NodeAttributeSetXY__localnode(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<int64_t *>(
+    get_function__NodeAttributeSetXY__localnode(untyped_member, index));
+  const auto & value = *reinterpret_cast<const int64_t *>(untyped_value);
+  item = value;
+}
+
 void resize_function__NodeAttributeSetXY__localnode(void * untyped_member, size_t size)
 {
   auto * member =
@@ -82,6 +100,24 @@ void * get_function__NodeAttributeSetXY__disabled(void * untyped_member, size_t 
   auto & member =
     *reinterpret_cast<std::vector<int64_t> *>(untyped_member);
   return &member[index];
+}
+
+void fetch_function__NodeAttributeSetXY__disabled(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const int64_t *>(
+    get_const_function__NodeAttributeSetXY__disabled(untyped_member, index));
+  auto & value = *reinterpret_cast<int64_t *>(untyped_value);
+  value = item;
+}
+
+void assign_function__NodeAttributeSetXY__disabled(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<int64_t *>(
+    get_function__NodeAttributeSetXY__disabled(untyped_member, index));
+  const auto & value = *reinterpret_cast<const int64_t *>(untyped_value);
+  item = value;
 }
 
 void resize_function__NodeAttributeSetXY__disabled(void * untyped_member, size_t size)
@@ -111,6 +147,24 @@ void * get_function__NodeAttributeSetXY__enabled(void * untyped_member, size_t i
   return &member[index];
 }
 
+void fetch_function__NodeAttributeSetXY__enabled(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const int64_t *>(
+    get_const_function__NodeAttributeSetXY__enabled(untyped_member, index));
+  auto & value = *reinterpret_cast<int64_t *>(untyped_value);
+  value = item;
+}
+
+void assign_function__NodeAttributeSetXY__enabled(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<int64_t *>(
+    get_function__NodeAttributeSetXY__enabled(untyped_member, index));
+  const auto & value = *reinterpret_cast<const int64_t *>(untyped_value);
+  item = value;
+}
+
 void resize_function__NodeAttributeSetXY__enabled(void * untyped_member, size_t size)
 {
   auto * member =
@@ -138,6 +192,24 @@ void * get_function__NodeAttributeSetXY__data(void * untyped_member, size_t inde
   return &member[index];
 }
 
+void fetch_function__NodeAttributeSetXY__data(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const v2x_msg::msg::LaneDataAttribute *>(
+    get_const_function__NodeAttributeSetXY__data(untyped_member, index));
+  auto & value = *reinterpret_cast<v2x_msg::msg::LaneDataAttribute *>(untyped_value);
+  value = item;
+}
+
+void assign_function__NodeAttributeSetXY__data(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<v2x_msg::msg::LaneDataAttribute *>(
+    get_function__NodeAttributeSetXY__data(untyped_member, index));
+  const auto & value = *reinterpret_cast<const v2x_msg::msg::LaneDataAttribute *>(untyped_value);
+  item = value;
+}
+
 void resize_function__NodeAttributeSetXY__data(void * untyped_member, size_t size)
 {
   auto * member =
@@ -159,6 +231,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember NodeAttribute
     size_function__NodeAttributeSetXY__localnode,  // size() function pointer
     get_const_function__NodeAttributeSetXY__localnode,  // get_const(index) function pointer
     get_function__NodeAttributeSetXY__localnode,  // get(index) function pointer
+    fetch_function__NodeAttributeSetXY__localnode,  // fetch(index, &value) function pointer
+    assign_function__NodeAttributeSetXY__localnode,  // assign(index, value) function pointer
     resize_function__NodeAttributeSetXY__localnode  // resize(index) function pointer
   },
   {
@@ -174,6 +248,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember NodeAttribute
     size_function__NodeAttributeSetXY__disabled,  // size() function pointer
     get_const_function__NodeAttributeSetXY__disabled,  // get_const(index) function pointer
     get_function__NodeAttributeSetXY__disabled,  // get(index) function pointer
+    fetch_function__NodeAttributeSetXY__disabled,  // fetch(index, &value) function pointer
+    assign_function__NodeAttributeSetXY__disabled,  // assign(index, value) function pointer
     resize_function__NodeAttributeSetXY__disabled  // resize(index) function pointer
   },
   {
@@ -189,6 +265,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember NodeAttribute
     size_function__NodeAttributeSetXY__enabled,  // size() function pointer
     get_const_function__NodeAttributeSetXY__enabled,  // get_const(index) function pointer
     get_function__NodeAttributeSetXY__enabled,  // get(index) function pointer
+    fetch_function__NodeAttributeSetXY__enabled,  // fetch(index, &value) function pointer
+    assign_function__NodeAttributeSetXY__enabled,  // assign(index, value) function pointer
     resize_function__NodeAttributeSetXY__enabled  // resize(index) function pointer
   },
   {
@@ -204,6 +282,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember NodeAttribute
     size_function__NodeAttributeSetXY__data,  // size() function pointer
     get_const_function__NodeAttributeSetXY__data,  // get_const(index) function pointer
     get_function__NodeAttributeSetXY__data,  // get(index) function pointer
+    fetch_function__NodeAttributeSetXY__data,  // fetch(index, &value) function pointer
+    assign_function__NodeAttributeSetXY__data,  // assign(index, value) function pointer
     resize_function__NodeAttributeSetXY__data  // resize(index) function pointer
   },
   {
@@ -219,6 +299,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember NodeAttribute
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -234,6 +316,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember NodeAttribute
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   }
 };

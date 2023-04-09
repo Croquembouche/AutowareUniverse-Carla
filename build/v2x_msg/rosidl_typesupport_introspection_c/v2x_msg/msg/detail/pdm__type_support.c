@@ -37,7 +37,7 @@ extern "C"
 {
 #endif
 
-void PDM__rosidl_typesupport_introspection_c__PDM_init_function(
+void v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__PDM_init_function(
   void * message_memory, enum rosidl_runtime_c__message_initialization _init)
 {
   // TODO(karsten1987): initializers are not yet implemented for typesupport c
@@ -46,12 +46,12 @@ void PDM__rosidl_typesupport_introspection_c__PDM_init_function(
   v2x_msg__msg__PDM__init(message_memory);
 }
 
-void PDM__rosidl_typesupport_introspection_c__PDM_fini_function(void * message_memory)
+void v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__PDM_fini_function(void * message_memory)
 {
   v2x_msg__msg__PDM__fini(message_memory);
 }
 
-size_t PDM__rosidl_typesupport_introspection_c__size_function__VehicleStatusRequest__dataelements(
+size_t v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__size_function__PDM__dataelements(
   const void * untyped_member)
 {
   const v2x_msg__msg__VehicleStatusRequest__Sequence * member =
@@ -59,7 +59,7 @@ size_t PDM__rosidl_typesupport_introspection_c__size_function__VehicleStatusRequ
   return member->size;
 }
 
-const void * PDM__rosidl_typesupport_introspection_c__get_const_function__VehicleStatusRequest__dataelements(
+const void * v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__get_const_function__PDM__dataelements(
   const void * untyped_member, size_t index)
 {
   const v2x_msg__msg__VehicleStatusRequest__Sequence * member =
@@ -67,7 +67,7 @@ const void * PDM__rosidl_typesupport_introspection_c__get_const_function__Vehicl
   return &member->data[index];
 }
 
-void * PDM__rosidl_typesupport_introspection_c__get_function__VehicleStatusRequest__dataelements(
+void * v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__get_function__PDM__dataelements(
   void * untyped_member, size_t index)
 {
   v2x_msg__msg__VehicleStatusRequest__Sequence * member =
@@ -75,7 +75,29 @@ void * PDM__rosidl_typesupport_introspection_c__get_function__VehicleStatusReque
   return &member->data[index];
 }
 
-bool PDM__rosidl_typesupport_introspection_c__resize_function__VehicleStatusRequest__dataelements(
+void v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__fetch_function__PDM__dataelements(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const v2x_msg__msg__VehicleStatusRequest * item =
+    ((const v2x_msg__msg__VehicleStatusRequest *)
+    v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__get_const_function__PDM__dataelements(untyped_member, index));
+  v2x_msg__msg__VehicleStatusRequest * value =
+    (v2x_msg__msg__VehicleStatusRequest *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__assign_function__PDM__dataelements(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  v2x_msg__msg__VehicleStatusRequest * item =
+    ((v2x_msg__msg__VehicleStatusRequest *)
+    v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__get_function__PDM__dataelements(untyped_member, index));
+  const v2x_msg__msg__VehicleStatusRequest * value =
+    (const v2x_msg__msg__VehicleStatusRequest *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__resize_function__PDM__dataelements(
   void * untyped_member, size_t size)
 {
   v2x_msg__msg__VehicleStatusRequest__Sequence * member =
@@ -84,7 +106,7 @@ bool PDM__rosidl_typesupport_introspection_c__resize_function__VehicleStatusRequ
   return v2x_msg__msg__VehicleStatusRequest__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember PDM__rosidl_typesupport_introspection_c__PDM_message_member_array[9] = {
+static rosidl_typesupport_introspection_c__MessageMember v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__PDM_message_member_array[9] = {
   {
     "timestamp",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
@@ -98,6 +120,8 @@ static rosidl_typesupport_introspection_c__MessageMember PDM__rosidl_typesupport
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -113,6 +137,8 @@ static rosidl_typesupport_introspection_c__MessageMember PDM__rosidl_typesupport
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -128,6 +154,8 @@ static rosidl_typesupport_introspection_c__MessageMember PDM__rosidl_typesupport
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -143,6 +171,8 @@ static rosidl_typesupport_introspection_c__MessageMember PDM__rosidl_typesupport
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -158,6 +188,8 @@ static rosidl_typesupport_introspection_c__MessageMember PDM__rosidl_typesupport
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -173,6 +205,8 @@ static rosidl_typesupport_introspection_c__MessageMember PDM__rosidl_typesupport
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -188,6 +222,8 @@ static rosidl_typesupport_introspection_c__MessageMember PDM__rosidl_typesupport
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -203,6 +239,8 @@ static rosidl_typesupport_introspection_c__MessageMember PDM__rosidl_typesupport
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -215,47 +253,49 @@ static rosidl_typesupport_introspection_c__MessageMember PDM__rosidl_typesupport
     false,  // is upper bound
     offsetof(v2x_msg__msg__PDM, dataelements),  // bytes offset in struct
     NULL,  // default value
-    PDM__rosidl_typesupport_introspection_c__size_function__VehicleStatusRequest__dataelements,  // size() function pointer
-    PDM__rosidl_typesupport_introspection_c__get_const_function__VehicleStatusRequest__dataelements,  // get_const(index) function pointer
-    PDM__rosidl_typesupport_introspection_c__get_function__VehicleStatusRequest__dataelements,  // get(index) function pointer
-    PDM__rosidl_typesupport_introspection_c__resize_function__VehicleStatusRequest__dataelements  // resize(index) function pointer
+    v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__size_function__PDM__dataelements,  // size() function pointer
+    v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__get_const_function__PDM__dataelements,  // get_const(index) function pointer
+    v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__get_function__PDM__dataelements,  // get(index) function pointer
+    v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__fetch_function__PDM__dataelements,  // fetch(index, &value) function pointer
+    v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__assign_function__PDM__dataelements,  // assign(index, value) function pointer
+    v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__resize_function__PDM__dataelements  // resize(index) function pointer
   }
 };
 
-static const rosidl_typesupport_introspection_c__MessageMembers PDM__rosidl_typesupport_introspection_c__PDM_message_members = {
+static const rosidl_typesupport_introspection_c__MessageMembers v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__PDM_message_members = {
   "v2x_msg__msg",  // message namespace
   "PDM",  // message name
   9,  // number of fields
   sizeof(v2x_msg__msg__PDM),
-  PDM__rosidl_typesupport_introspection_c__PDM_message_member_array,  // message members
-  PDM__rosidl_typesupport_introspection_c__PDM_init_function,  // function to initialize message memory (memory has to be allocated)
-  PDM__rosidl_typesupport_introspection_c__PDM_fini_function  // function to terminate message instance (will not free memory)
+  v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__PDM_message_member_array,  // message members
+  v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__PDM_init_function,  // function to initialize message memory (memory has to be allocated)
+  v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__PDM_fini_function  // function to terminate message instance (will not free memory)
 };
 
 // this is not const since it must be initialized on first access
 // since C does not allow non-integral compile-time constants
-static rosidl_message_type_support_t PDM__rosidl_typesupport_introspection_c__PDM_message_type_support_handle = {
+static rosidl_message_type_support_t v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__PDM_message_type_support_handle = {
   0,
-  &PDM__rosidl_typesupport_introspection_c__PDM_message_members,
+  &v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__PDM_message_members,
   get_message_typesupport_handle_function,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_v2x_msg
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, PDM)() {
-  PDM__rosidl_typesupport_introspection_c__PDM_message_member_array[1].members_ =
+  v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__PDM_message_member_array[1].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, Sample)();
-  PDM__rosidl_typesupport_introspection_c__PDM_message_member_array[5].members_ =
+  v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__PDM_message_member_array[5].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, SnapshotTime)();
-  PDM__rosidl_typesupport_introspection_c__PDM_message_member_array[6].members_ =
+  v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__PDM_message_member_array[6].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, SnapshotDistance)();
-  PDM__rosidl_typesupport_introspection_c__PDM_message_member_array[8].members_ =
+  v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__PDM_message_member_array[8].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, VehicleStatusRequest)();
-  if (!PDM__rosidl_typesupport_introspection_c__PDM_message_type_support_handle.typesupport_identifier) {
-    PDM__rosidl_typesupport_introspection_c__PDM_message_type_support_handle.typesupport_identifier =
+  if (!v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__PDM_message_type_support_handle.typesupport_identifier) {
+    v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__PDM_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
   }
-  return &PDM__rosidl_typesupport_introspection_c__PDM_message_type_support_handle;
+  return &v2x_msg__msg__PDM__rosidl_typesupport_introspection_c__PDM_message_type_support_handle;
 }
 #ifdef __cplusplus
 }

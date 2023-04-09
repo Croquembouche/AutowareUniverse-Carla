@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -108,7 +110,7 @@ class Latency(metaclass=Metaclass_Latency):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def msgtime(self):
         """Message field 'msgtime'."""
         return self._msgtime

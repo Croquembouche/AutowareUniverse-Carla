@@ -176,7 +176,7 @@ PyObject * v2x_msg__msg__geographical_path__convert_to_py(void * raw_ros_message
     field = PyUnicode_DecodeUTF8(
       ros_message->name.data,
       strlen(ros_message->name.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -254,7 +254,7 @@ PyObject * v2x_msg__msg__geographical_path__convert_to_py(void * raw_ros_message
     field = PyUnicode_DecodeUTF8(
       ros_message->direction.data,
       strlen(ros_message->direction.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

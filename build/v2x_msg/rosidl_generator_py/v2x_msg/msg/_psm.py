@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -282,7 +284,7 @@ class PSM(metaclass=Metaclass_PSM):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def basictype(self):
         """Message field 'basictype'."""
         return self._basictype
@@ -297,7 +299,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'basictype' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._basictype = value
 
-    @property
+    @builtins.property
     def secmark(self):
         """Message field 'secmark'."""
         return self._secmark
@@ -312,7 +314,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'secmark' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._secmark = value
 
-    @property
+    @builtins.property
     def msgcnt(self):
         """Message field 'msgcnt'."""
         return self._msgcnt
@@ -327,7 +329,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'msgcnt' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._msgcnt = value
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def id(self):  # noqa: A003
         """Message field 'id'."""
         return self._id
@@ -340,7 +342,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'id' field must be of type 'str'"
         self._id = value
 
-    @property
+    @builtins.property
     def position(self):
         """Message field 'position'."""
         return self._position
@@ -354,7 +356,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'position' field must be a sub message of type 'Position3D'"
         self._position = value
 
-    @property
+    @builtins.property
     def accuracy(self):
         """Message field 'accuracy'."""
         return self._accuracy
@@ -368,7 +370,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'accuracy' field must be a sub message of type 'PositionalAccuracy'"
         self._accuracy = value
 
-    @property
+    @builtins.property
     def speed(self):
         """Message field 'speed'."""
         return self._speed
@@ -383,7 +385,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'speed' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._speed = value
 
-    @property
+    @builtins.property
     def heading(self):
         """Message field 'heading'."""
         return self._heading
@@ -398,7 +400,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'heading' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._heading = value
 
-    @property
+    @builtins.property
     def accelset(self):
         """Message field 'accelset'."""
         return self._accelset
@@ -412,7 +414,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'accelset' field must be a sub message of type 'AccelerationSet4Way'"
         self._accelset = value
 
-    @property
+    @builtins.property
     def pathhistory(self):
         """Message field 'pathhistory'."""
         return self._pathhistory
@@ -426,7 +428,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'pathhistory' field must be a sub message of type 'PathHistory'"
         self._pathhistory = value
 
-    @property
+    @builtins.property
     def pathprediction(self):
         """Message field 'pathprediction'."""
         return self._pathprediction
@@ -440,7 +442,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'pathprediction' field must be a sub message of type 'PathPrediction'"
         self._pathprediction = value
 
-    @property
+    @builtins.property
     def propulsion(self):
         """Message field 'propulsion'."""
         return self._propulsion
@@ -454,7 +456,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'propulsion' field must be a sub message of type 'PropelledInformation'"
         self._propulsion = value
 
-    @property
+    @builtins.property
     def usestate(self):
         """Message field 'usestate'."""
         return self._usestate
@@ -467,7 +469,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'usestate' field must be of type 'str'"
         self._usestate = value
 
-    @property
+    @builtins.property
     def crossrequest(self):
         """Message field 'crossrequest'."""
         return self._crossrequest
@@ -480,7 +482,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'crossrequest' field must be of type 'bool'"
         self._crossrequest = value
 
-    @property
+    @builtins.property
     def crossstate(self):
         """Message field 'crossstate'."""
         return self._crossstate
@@ -493,7 +495,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'crossstate' field must be of type 'bool'"
         self._crossstate = value
 
-    @property
+    @builtins.property
     def clustersize(self):
         """Message field 'clustersize'."""
         return self._clustersize
@@ -508,7 +510,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'clustersize' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._clustersize = value
 
-    @property
+    @builtins.property
     def clusterradius(self):
         """Message field 'clusterradius'."""
         return self._clusterradius
@@ -523,7 +525,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'clusterradius' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._clusterradius = value
 
-    @property
+    @builtins.property
     def eventrespondertype(self):
         """Message field 'eventrespondertype'."""
         return self._eventrespondertype
@@ -538,7 +540,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'eventrespondertype' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._eventrespondertype = value
 
-    @property
+    @builtins.property
     def activitytype(self):
         """Message field 'activitytype'."""
         return self._activitytype
@@ -551,7 +553,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'activitytype' field must be of type 'str'"
         self._activitytype = value
 
-    @property
+    @builtins.property
     def activitysubtype(self):
         """Message field 'activitysubtype'."""
         return self._activitysubtype
@@ -564,7 +566,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'activitysubtype' field must be of type 'str'"
         self._activitysubtype = value
 
-    @property
+    @builtins.property
     def assisttype(self):
         """Message field 'assisttype'."""
         return self._assisttype
@@ -577,7 +579,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'assisttype' field must be of type 'str'"
         self._assisttype = value
 
-    @property
+    @builtins.property
     def sizing(self):
         """Message field 'sizing'."""
         return self._sizing
@@ -590,7 +592,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'sizing' field must be of type 'str'"
         self._sizing = value
 
-    @property
+    @builtins.property
     def attachment(self):
         """Message field 'attachment'."""
         return self._attachment
@@ -605,7 +607,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'attachment' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._attachment = value
 
-    @property
+    @builtins.property
     def attachmentradius(self):
         """Message field 'attachmentradius'."""
         return self._attachmentradius
@@ -620,7 +622,7 @@ class PSM(metaclass=Metaclass_PSM):
                 "The 'attachmentradius' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._attachmentradius = value
 
-    @property
+    @builtins.property
     def animaltype(self):
         """Message field 'animaltype'."""
         return self._animaltype

@@ -21,7 +21,7 @@ extern "C"
 // Member 'text'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/ExitServicecontent in the package v2x_msg.
+/// Struct defined in msg/ExitServicecontent in the package v2x_msg.
 typedef struct v2x_msg__msg__ExitServicecontent
 {
   int64_t itis;

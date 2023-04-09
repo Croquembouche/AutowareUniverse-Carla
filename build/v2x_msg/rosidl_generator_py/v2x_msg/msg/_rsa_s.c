@@ -329,7 +329,7 @@ PyObject * v2x_msg__msg__rsa__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->priority.data,
       strlen(ros_message->priority.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -346,7 +346,7 @@ PyObject * v2x_msg__msg__rsa__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->heading.data,
       strlen(ros_message->heading.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -388,7 +388,7 @@ PyObject * v2x_msg__msg__rsa__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->furtherinfoid.data,
       strlen(ros_message->furtherinfoid.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

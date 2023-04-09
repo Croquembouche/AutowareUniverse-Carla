@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -125,7 +127,7 @@ class Object(metaclass=Metaclass_Object):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def obdist(self):
         """Message field 'obdist'."""
         return self._obdist
@@ -140,7 +142,7 @@ class Object(metaclass=Metaclass_Object):
                 "The 'obdist' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._obdist = value
 
-    @property
+    @builtins.property
     def obdirect(self):
         """Message field 'obdirect'."""
         return self._obdirect
@@ -155,7 +157,7 @@ class Object(metaclass=Metaclass_Object):
                 "The 'obdirect' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._obdirect = value
 
-    @property
+    @builtins.property
     def datetime(self):
         """Message field 'datetime'."""
         return self._datetime

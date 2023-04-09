@@ -160,7 +160,7 @@ PyObject * v2x_msg__msg__vehicle_ident__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->name.data,
       strlen(ros_message->name.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -177,7 +177,7 @@ PyObject * v2x_msg__msg__vehicle_ident__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->vin.data,
       strlen(ros_message->vin.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -194,7 +194,7 @@ PyObject * v2x_msg__msg__vehicle_ident__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->ownercode.data,
       strlen(ros_message->ownercode.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

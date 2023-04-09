@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -179,7 +181,7 @@ class NodeOffsetPointLL(metaclass=Metaclass_NodeOffsetPointLL):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def nodell1(self):
         """Message field 'nodell1'."""
         return self._nodell1
@@ -193,7 +195,7 @@ class NodeOffsetPointLL(metaclass=Metaclass_NodeOffsetPointLL):
                 "The 'nodell1' field must be a sub message of type 'NodeLL24B'"
         self._nodell1 = value
 
-    @property
+    @builtins.property
     def nodell2(self):
         """Message field 'nodell2'."""
         return self._nodell2
@@ -207,7 +209,7 @@ class NodeOffsetPointLL(metaclass=Metaclass_NodeOffsetPointLL):
                 "The 'nodell2' field must be a sub message of type 'NodeLL28B'"
         self._nodell2 = value
 
-    @property
+    @builtins.property
     def nodell3(self):
         """Message field 'nodell3'."""
         return self._nodell3
@@ -221,7 +223,7 @@ class NodeOffsetPointLL(metaclass=Metaclass_NodeOffsetPointLL):
                 "The 'nodell3' field must be a sub message of type 'NodeLL32B'"
         self._nodell3 = value
 
-    @property
+    @builtins.property
     def nodell4(self):
         """Message field 'nodell4'."""
         return self._nodell4
@@ -235,7 +237,7 @@ class NodeOffsetPointLL(metaclass=Metaclass_NodeOffsetPointLL):
                 "The 'nodell4' field must be a sub message of type 'NodeLL36B'"
         self._nodell4 = value
 
-    @property
+    @builtins.property
     def nodell5(self):
         """Message field 'nodell5'."""
         return self._nodell5
@@ -249,7 +251,7 @@ class NodeOffsetPointLL(metaclass=Metaclass_NodeOffsetPointLL):
                 "The 'nodell5' field must be a sub message of type 'NodeLL44B'"
         self._nodell5 = value
 
-    @property
+    @builtins.property
     def nodell6(self):
         """Message field 'nodell6'."""
         return self._nodell6
@@ -263,7 +265,7 @@ class NodeOffsetPointLL(metaclass=Metaclass_NodeOffsetPointLL):
                 "The 'nodell6' field must be a sub message of type 'NodeLL48B'"
         self._nodell6 = value
 
-    @property
+    @builtins.property
     def nodelatlon(self):
         """Message field 'nodelatlon'."""
         return self._nodelatlon

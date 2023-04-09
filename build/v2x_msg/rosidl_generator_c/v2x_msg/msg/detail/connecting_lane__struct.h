@@ -21,7 +21,7 @@ extern "C"
 // Member 'maneuver'
 #include "v2x_msg/msg/detail/allowed_maneuvers__struct.h"
 
-// Struct defined in msg/ConnectingLane in the package v2x_msg.
+/// Struct defined in msg/ConnectingLane in the package v2x_msg.
 typedef struct v2x_msg__msg__ConnectingLane
 {
   int64_t laneid;

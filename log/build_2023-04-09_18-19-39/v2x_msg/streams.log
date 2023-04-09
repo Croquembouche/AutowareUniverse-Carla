@@ -1,0 +1,49 @@
+[0.432s] Invoking command in '/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg': /usr/bin/cmake /home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg -DCMAKE_INSTALL_PREFIX=/home/carla/Github/C-V2X-Autoware-Carla/install/v2x_msg
+[0.453s] -- Found ament_cmake: 1.3.3 (/home/carla/ros2_humble/install/ament_cmake/share/ament_cmake/cmake)
+[1.718s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.729s] -- Found rosidl_default_generators: 1.2.0 (/home/carla/ros2_humble/install/rosidl_default_generators/share/rosidl_default_generators/cmake)
+[1.800s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+[1.803s] -- Found rosidl_adapter: 3.1.4 (/home/carla/ros2_humble/install/rosidl_adapter/share/rosidl_adapter/cmake)
+[1.851s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+[3.453s] Error parsing '/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/package.xml':
+[3.567s] Traceback (most recent call last):
+[3.567s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 610, in parse_package_string
+[3.567s]     root = dom.parseString(data)
+[3.567s]   File "/usr/lib/python3.8/xml/dom/minidom.py", line 1969, in parseString
+[3.567s]     return expatbuilder.parseString(string)
+[3.567s]   File "/usr/lib/python3.8/xml/dom/expatbuilder.py", line 925, in parseString
+[3.567s]     return builder.parseString(string)
+[3.567s]   File "/usr/lib/python3.8/xml/dom/expatbuilder.py", line 223, in parseString
+[3.567s]     parser.Parse(string, True)
+[3.567s] xml.parsers.expat.ExpatError: mismatched tag: line 9, column 47
+[3.567s] 
+[3.567s] During handling of the above exception, another exception occurred:
+[3.567s] 
+[3.567s] Traceback (most recent call last):
+[3.567s]   File "/home/carla/ros2_humble/install/ament_cmake_core/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>
+[3.568s]     main()
+[3.568s]   File "/home/carla/ros2_humble/install/ament_cmake_core/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main
+[3.568s]     raise e
+[3.568s]   File "/home/carla/ros2_humble/install/ament_cmake_core/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main
+[3.568s]     package = parse_package_string(
+[3.568s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 612, in parse_package_string
+[3.568s]     raise InvalidPackage('The manifest contains invalid XML:\n%s' % ex, filename)
+[3.568s] catkin_pkg.package.InvalidPackage: Error(s) in package '/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/package.xml':
+[3.568s] The manifest contains invalid XML:
+[3.568s] mismatched tag: line 9, column 47
+[3.575s] CMake Error at /home/carla/ros2_humble/install/ament_cmake_core/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[3.575s]   execute_process(/usr/bin/python3.8
+[3.575s]   /home/carla/ros2_humble/install/ament_cmake_core/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[3.575s]   /home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/package.xml
+[3.575s]   /home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/ament_cmake_core/package.cmake)
+[3.575s]   returned error code 1
+[3.575s] Call Stack (most recent call first):
+[3.575s]   /home/carla/ros2_humble/install/ament_cmake_core/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[3.575s]   /home/carla/ros2_humble/install/rosidl_cmake/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)
+[3.575s]   CMakeLists.txt:16 (rosidl_generate_interfaces)
+[3.575s] 
+[3.575s] 
+[3.576s] -- Configuring incomplete, errors occurred!
+[3.576s] See also "/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/CMakeFiles/CMakeOutput.log".
+[3.576s] See also "/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/CMakeFiles/CMakeError.log".
+[3.579s] Invoked command in '/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg' returned '1': /usr/bin/cmake /home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg -DCMAKE_INSTALL_PREFIX=/home/carla/Github/C-V2X-Autoware-Carla/install/v2x_msg

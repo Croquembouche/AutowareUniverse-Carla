@@ -17,7 +17,7 @@ extern "C"
 
 // Constants defined in the message
 
-// Struct defined in msg/AntennaOffsetSet in the package v2x_msg.
+/// Struct defined in msg/AntennaOffsetSet in the package v2x_msg.
 typedef struct v2x_msg__msg__AntennaOffsetSet
 {
   int64_t antoffsetx;

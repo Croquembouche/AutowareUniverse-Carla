@@ -21,7 +21,7 @@ extern "C"
 // Member 'wheelbrakes'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/BrakeSystemStatus in the package v2x_msg.
+/// Struct defined in msg/BrakeSystemStatus in the package v2x_msg.
 typedef struct v2x_msg__msg__BrakeSystemStatus
 {
   rosidl_runtime_c__String wheelbrakes;

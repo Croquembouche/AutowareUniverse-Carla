@@ -146,7 +146,7 @@ PyObject * v2x_msg__msg__road_sign_id__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->viewangle.data,
       strlen(ros_message->viewangle.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -174,7 +174,7 @@ PyObject * v2x_msg__msg__road_sign_id__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->msgcrc.data,
       strlen(ros_message->msgcrc.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

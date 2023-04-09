@@ -1,0 +1,18 @@
+[1.279s] Invoking command in '/home/carla/Github/C-V2X-Autoware-Carla/build/vehicle': PYTHONPATH=/home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/prefix_override:/home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/build --no-deps install_data
+[1.665s] running develop
+[1.769s] running egg_info
+[1.769s] writing vehicle.egg-info/PKG-INFO
+[1.769s] writing dependency_links to vehicle.egg-info/dependency_links.txt
+[1.769s] writing entry points to vehicle.egg-info/entry_points.txt
+[1.769s] writing requirements to vehicle.egg-info/requires.txt
+[1.769s] writing top-level names to vehicle.egg-info/top_level.txt
+[1.786s] reading manifest file 'vehicle.egg-info/SOURCES.txt'
+[1.786s] writing manifest file 'vehicle.egg-info/SOURCES.txt'
+[1.788s] running build_ext
+[1.789s] Creating /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages/vehicle.egg-link (link to .)
+[1.789s] Installing host_vehicle script to /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/vehicle
+[1.789s] Installing remote_vehicle script to /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/vehicle
+[1.789s] 
+[1.789s] Installed /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle
+[1.789s] running install_data
+[1.823s] Invoked command in '/home/carla/Github/C-V2X-Autoware-Carla/build/vehicle' returned '0': PYTHONPATH=/home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/prefix_override:/home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/build --no-deps install_data

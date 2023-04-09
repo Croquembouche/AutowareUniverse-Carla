@@ -1,6 +1,1 @@
-int64 msgcnt
-int64 rev
-int64 timestamp
-FullPositionVector anchorpoint
-RTCMheader rtcmheader
-string[] msgs
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/RTCM.msg

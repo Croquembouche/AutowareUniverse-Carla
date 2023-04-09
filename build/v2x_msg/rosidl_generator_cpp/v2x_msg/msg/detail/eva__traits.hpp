@@ -5,12 +5,14 @@
 #ifndef V2X_MSG__MSG__DETAIL__EVA__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__EVA__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/eva__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/eva__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'rsamsg'
@@ -18,11 +20,90 @@
 // Member 'details'
 #include "v2x_msg/msg/detail/emergency_details__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::EVA & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const EVA & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: timestamp
+  {
+    out << "timestamp: ";
+    rosidl_generator_traits::value_to_yaml(msg.timestamp, out);
+    out << ", ";
+  }
+
+  // member: id
+  {
+    out << "id: ";
+    rosidl_generator_traits::value_to_yaml(msg.id, out);
+    out << ", ";
+  }
+
+  // member: rsamsg
+  {
+    out << "rsamsg: ";
+    to_flow_style_yaml(msg.rsamsg, out);
+    out << ", ";
+  }
+
+  // member: responsetype
+  {
+    out << "responsetype: ";
+    rosidl_generator_traits::value_to_yaml(msg.responsetype, out);
+    out << ", ";
+  }
+
+  // member: details
+  {
+    out << "details: ";
+    to_flow_style_yaml(msg.details, out);
+    out << ", ";
+  }
+
+  // member: mass
+  {
+    out << "mass: ";
+    rosidl_generator_traits::value_to_yaml(msg.mass, out);
+    out << ", ";
+  }
+
+  // member: basictype
+  {
+    out << "basictype: ";
+    rosidl_generator_traits::value_to_yaml(msg.basictype, out);
+    out << ", ";
+  }
+
+  // member: vehicletype
+  {
+    out << "vehicletype: ";
+    rosidl_generator_traits::value_to_yaml(msg.vehicletype, out);
+    out << ", ";
+  }
+
+  // member: responseequip
+  {
+    out << "responseequip: ";
+    rosidl_generator_traits::value_to_yaml(msg.responseequip, out);
+    out << ", ";
+  }
+
+  // member: respondertype
+  {
+    out << "respondertype: ";
+    rosidl_generator_traits::value_to_yaml(msg.respondertype, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const EVA & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: timestamp
@@ -31,7 +112,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "timestamp: ";
-    value_to_yaml(msg.timestamp, out);
+    rosidl_generator_traits::value_to_yaml(msg.timestamp, out);
     out << "\n";
   }
 
@@ -41,7 +122,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "id: ";
-    value_to_yaml(msg.id, out);
+    rosidl_generator_traits::value_to_yaml(msg.id, out);
     out << "\n";
   }
 
@@ -51,7 +132,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "rsamsg:\n";
-    to_yaml(msg.rsamsg, out, indentation + 2);
+    to_block_style_yaml(msg.rsamsg, out, indentation + 2);
   }
 
   // member: responsetype
@@ -60,7 +141,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "responsetype: ";
-    value_to_yaml(msg.responsetype, out);
+    rosidl_generator_traits::value_to_yaml(msg.responsetype, out);
     out << "\n";
   }
 
@@ -70,7 +151,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "details:\n";
-    to_yaml(msg.details, out, indentation + 2);
+    to_block_style_yaml(msg.details, out, indentation + 2);
   }
 
   // member: mass
@@ -79,7 +160,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "mass: ";
-    value_to_yaml(msg.mass, out);
+    rosidl_generator_traits::value_to_yaml(msg.mass, out);
     out << "\n";
   }
 
@@ -89,7 +170,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "basictype: ";
-    value_to_yaml(msg.basictype, out);
+    rosidl_generator_traits::value_to_yaml(msg.basictype, out);
     out << "\n";
   }
 
@@ -99,7 +180,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "vehicletype: ";
-    value_to_yaml(msg.vehicletype, out);
+    rosidl_generator_traits::value_to_yaml(msg.vehicletype, out);
     out << "\n";
   }
 
@@ -109,7 +190,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "responseequip: ";
-    value_to_yaml(msg.responseequip, out);
+    rosidl_generator_traits::value_to_yaml(msg.responseequip, out);
     out << "\n";
   }
 
@@ -119,16 +200,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "respondertype: ";
-    value_to_yaml(msg.respondertype, out);
+    rosidl_generator_traits::value_to_yaml(msg.respondertype, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::EVA & msg)
+inline std::string to_yaml(const EVA & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::EVA & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::EVA & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -119,7 +121,7 @@ class ConnectingLane(metaclass=Metaclass_ConnectingLane):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def laneid(self):
         """Message field 'laneid'."""
         return self._laneid
@@ -134,7 +136,7 @@ class ConnectingLane(metaclass=Metaclass_ConnectingLane):
                 "The 'laneid' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._laneid = value
 
-    @property
+    @builtins.property
     def maneuver(self):
         """Message field 'maneuver'."""
         return self._maneuver

@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -178,7 +180,7 @@ class IntersectionState(metaclass=Metaclass_IntersectionState):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def name(self):
         """Message field 'name'."""
         return self._name
@@ -191,7 +193,7 @@ class IntersectionState(metaclass=Metaclass_IntersectionState):
                 "The 'name' field must be of type 'str'"
         self._name = value
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def id(self):  # noqa: A003
         """Message field 'id'."""
         return self._id
@@ -205,7 +207,7 @@ class IntersectionState(metaclass=Metaclass_IntersectionState):
                 "The 'id' field must be a sub message of type 'IntersectionReferenceID'"
         self._id = value
 
-    @property
+    @builtins.property
     def revision(self):
         """Message field 'revision'."""
         return self._revision
@@ -220,7 +222,7 @@ class IntersectionState(metaclass=Metaclass_IntersectionState):
                 "The 'revision' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._revision = value
 
-    @property
+    @builtins.property
     def status(self):
         """Message field 'status'."""
         return self._status
@@ -234,7 +236,7 @@ class IntersectionState(metaclass=Metaclass_IntersectionState):
                 "The 'status' field must be a sub message of type 'IntersectionStatusObject'"
         self._status = value
 
-    @property
+    @builtins.property
     def moy(self):
         """Message field 'moy'."""
         return self._moy
@@ -249,7 +251,7 @@ class IntersectionState(metaclass=Metaclass_IntersectionState):
                 "The 'moy' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._moy = value
 
-    @property
+    @builtins.property
     def timestamp(self):
         """Message field 'timestamp'."""
         return self._timestamp
@@ -264,7 +266,7 @@ class IntersectionState(metaclass=Metaclass_IntersectionState):
                 "The 'timestamp' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._timestamp = value
 
-    @property
+    @builtins.property
     def enabledlanes(self):
         """Message field 'enabledlanes'."""
         return self._enabledlanes
@@ -288,7 +290,7 @@ class IntersectionState(metaclass=Metaclass_IntersectionState):
                 "The 'enabledlanes' field must be a set or sequence and each value of type 'LaneID'"
         self._enabledlanes = value
 
-    @property
+    @builtins.property
     def states(self):
         """Message field 'states'."""
         return self._states
@@ -312,7 +314,7 @@ class IntersectionState(metaclass=Metaclass_IntersectionState):
                 "The 'states' field must be a set or sequence and each value of type 'MovementState'"
         self._states = value
 
-    @property
+    @builtins.property
     def maneuverassistlist(self):
         """Message field 'maneuverassistlist'."""
         return self._maneuverassistlist

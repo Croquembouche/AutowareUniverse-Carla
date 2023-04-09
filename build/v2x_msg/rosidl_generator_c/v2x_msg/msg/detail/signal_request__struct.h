@@ -24,7 +24,7 @@ extern "C"
 // Member 'outboundlane'
 #include "v2x_msg/msg/detail/intersection_access_point__struct.h"
 
-// Struct defined in msg/SignalRequest in the package v2x_msg.
+/// Struct defined in msg/SignalRequest in the package v2x_msg.
 typedef struct v2x_msg__msg__SignalRequest
 {
   v2x_msg__msg__IntersectionReferenceID id;

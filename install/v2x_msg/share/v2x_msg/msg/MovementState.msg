@@ -1,4 +1,1 @@
-string movementname
-int64 signalgroupid
-MovementEvent[] statetimespeed
-ConnectionManeuverAssist maneuverassistlist
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/MovementState.msg

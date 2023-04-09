@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -132,7 +134,7 @@ class RequestorType(metaclass=Metaclass_RequestorType):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def role(self):
         """Message field 'role'."""
         return self._role
@@ -147,7 +149,7 @@ class RequestorType(metaclass=Metaclass_RequestorType):
                 "The 'role' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._role = value
 
-    @property
+    @builtins.property
     def subrole(self):
         """Message field 'subrole'."""
         return self._subrole
@@ -162,7 +164,7 @@ class RequestorType(metaclass=Metaclass_RequestorType):
                 "The 'subrole' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._subrole = value
 
-    @property
+    @builtins.property
     def request(self):
         """Message field 'request'."""
         return self._request
@@ -177,7 +179,7 @@ class RequestorType(metaclass=Metaclass_RequestorType):
                 "The 'request' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._request = value
 
-    @property
+    @builtins.property
     def iso3833vehicletype(self):
         """Message field 'iso3833vehicletype'."""
         return self._iso3833vehicletype
@@ -192,7 +194,7 @@ class RequestorType(metaclass=Metaclass_RequestorType):
                 "The 'iso3833vehicletype' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._iso3833vehicletype = value
 
-    @property
+    @builtins.property
     def hpmstype(self):
         """Message field 'hpmstype'."""
         return self._hpmstype

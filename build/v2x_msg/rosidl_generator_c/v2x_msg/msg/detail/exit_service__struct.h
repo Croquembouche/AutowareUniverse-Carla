@@ -21,7 +21,7 @@ extern "C"
 // Member 'item'
 #include "v2x_msg/msg/detail/exit_servicecontent__struct.h"
 
-// Struct defined in msg/ExitService in the package v2x_msg.
+/// Struct defined in msg/ExitService in the package v2x_msg.
 typedef struct v2x_msg__msg__ExitService
 {
   v2x_msg__msg__ExitServicecontent__Sequence item;

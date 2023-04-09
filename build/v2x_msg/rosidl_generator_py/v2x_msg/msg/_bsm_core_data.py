@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -206,7 +208,7 @@ class BSMCoreData(metaclass=Metaclass_BSMCoreData):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def msgcnt(self):
         """Message field 'msgcnt'."""
         return self._msgcnt
@@ -221,7 +223,7 @@ class BSMCoreData(metaclass=Metaclass_BSMCoreData):
                 "The 'msgcnt' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._msgcnt = value
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def id(self):  # noqa: A003
         """Message field 'id'."""
         return self._id
@@ -234,7 +236,7 @@ class BSMCoreData(metaclass=Metaclass_BSMCoreData):
                 "The 'id' field must be of type 'str'"
         self._id = value
 
-    @property
+    @builtins.property
     def secmark(self):
         """Message field 'secmark'."""
         return self._secmark
@@ -249,7 +251,7 @@ class BSMCoreData(metaclass=Metaclass_BSMCoreData):
                 "The 'secmark' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._secmark = value
 
-    @property
+    @builtins.property
     def lat(self):
         """Message field 'lat'."""
         return self._lat
@@ -264,7 +266,7 @@ class BSMCoreData(metaclass=Metaclass_BSMCoreData):
                 "The 'lat' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._lat = value
 
-    @property
+    @builtins.property
     def longitude(self):
         """Message field 'longitude'."""
         return self._longitude
@@ -279,7 +281,7 @@ class BSMCoreData(metaclass=Metaclass_BSMCoreData):
                 "The 'longitude' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._longitude = value
 
-    @property
+    @builtins.property
     def elev(self):
         """Message field 'elev'."""
         return self._elev
@@ -294,7 +296,7 @@ class BSMCoreData(metaclass=Metaclass_BSMCoreData):
                 "The 'elev' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._elev = value
 
-    @property
+    @builtins.property
     def accuracy(self):
         """Message field 'accuracy'."""
         return self._accuracy
@@ -308,7 +310,7 @@ class BSMCoreData(metaclass=Metaclass_BSMCoreData):
                 "The 'accuracy' field must be a sub message of type 'PositionalAccuracy'"
         self._accuracy = value
 
-    @property
+    @builtins.property
     def transmission(self):
         """Message field 'transmission'."""
         return self._transmission
@@ -323,7 +325,7 @@ class BSMCoreData(metaclass=Metaclass_BSMCoreData):
                 "The 'transmission' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._transmission = value
 
-    @property
+    @builtins.property
     def speed(self):
         """Message field 'speed'."""
         return self._speed
@@ -338,7 +340,7 @@ class BSMCoreData(metaclass=Metaclass_BSMCoreData):
                 "The 'speed' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._speed = value
 
-    @property
+    @builtins.property
     def heading(self):
         """Message field 'heading'."""
         return self._heading
@@ -353,7 +355,7 @@ class BSMCoreData(metaclass=Metaclass_BSMCoreData):
                 "The 'heading' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._heading = value
 
-    @property
+    @builtins.property
     def angle(self):
         """Message field 'angle'."""
         return self._angle
@@ -368,7 +370,7 @@ class BSMCoreData(metaclass=Metaclass_BSMCoreData):
                 "The 'angle' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._angle = value
 
-    @property
+    @builtins.property
     def accelset(self):
         """Message field 'accelset'."""
         return self._accelset
@@ -382,7 +384,7 @@ class BSMCoreData(metaclass=Metaclass_BSMCoreData):
                 "The 'accelset' field must be a sub message of type 'AccelerationSet4Way'"
         self._accelset = value
 
-    @property
+    @builtins.property
     def brakes(self):
         """Message field 'brakes'."""
         return self._brakes
@@ -396,7 +398,7 @@ class BSMCoreData(metaclass=Metaclass_BSMCoreData):
                 "The 'brakes' field must be a sub message of type 'BrakeSystemStatus'"
         self._brakes = value
 
-    @property
+    @builtins.property
     def size(self):
         """Message field 'size'."""
         return self._size

@@ -1,2 +1,1 @@
-int64 transmission
-int64 velocity
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/TransmissionAndSpeed.msg

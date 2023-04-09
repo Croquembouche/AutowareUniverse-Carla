@@ -5,12 +5,14 @@
 #ifndef V2X_MSG__MSG__DETAIL__J1939DATA__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__J1939DATA__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/j1939data__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/j1939data__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'tires'
@@ -18,11 +20,112 @@
 // Member 'axles'
 #include "v2x_msg/msg/detail/axle_weight__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::J1939data & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const J1939data & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: tires
+  {
+    if (msg.tires.size() == 0) {
+      out << "tires: []";
+    } else {
+      out << "tires: [";
+      size_t pending_items = msg.tires.size();
+      for (auto item : msg.tires) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: axles
+  {
+    if (msg.axles.size() == 0) {
+      out << "axles: []";
+    } else {
+      out << "axles: [";
+      size_t pending_items = msg.axles.size();
+      for (auto item : msg.axles) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: trailerweight
+  {
+    out << "trailerweight: ";
+    rosidl_generator_traits::value_to_yaml(msg.trailerweight, out);
+    out << ", ";
+  }
+
+  // member: cargoweight
+  {
+    out << "cargoweight: ";
+    rosidl_generator_traits::value_to_yaml(msg.cargoweight, out);
+    out << ", ";
+  }
+
+  // member: steeringaxletemperture
+  {
+    out << "steeringaxletemperture: ";
+    rosidl_generator_traits::value_to_yaml(msg.steeringaxletemperture, out);
+    out << ", ";
+  }
+
+  // member: driveaxlelocation
+  {
+    out << "driveaxlelocation: ";
+    rosidl_generator_traits::value_to_yaml(msg.driveaxlelocation, out);
+    out << ", ";
+  }
+
+  // member: driveaxleliftairpressure
+  {
+    out << "driveaxleliftairpressure: ";
+    rosidl_generator_traits::value_to_yaml(msg.driveaxleliftairpressure, out);
+    out << ", ";
+  }
+
+  // member: driveaxletemperature
+  {
+    out << "driveaxletemperature: ";
+    rosidl_generator_traits::value_to_yaml(msg.driveaxletemperature, out);
+    out << ", ";
+  }
+
+  // member: driveaxlelubpressure
+  {
+    out << "driveaxlelubpressure: ";
+    rosidl_generator_traits::value_to_yaml(msg.driveaxlelubpressure, out);
+    out << ", ";
+  }
+
+  // member: steeringaxlelubepressure
+  {
+    out << "steeringaxlelubepressure: ";
+    rosidl_generator_traits::value_to_yaml(msg.steeringaxlelubepressure, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const J1939data & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: tires
@@ -39,7 +142,7 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "-\n";
-        to_yaml(item, out, indentation + 2);
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
@@ -58,7 +161,7 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "-\n";
-        to_yaml(item, out, indentation + 2);
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }
@@ -69,7 +172,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "trailerweight: ";
-    value_to_yaml(msg.trailerweight, out);
+    rosidl_generator_traits::value_to_yaml(msg.trailerweight, out);
     out << "\n";
   }
 
@@ -79,7 +182,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "cargoweight: ";
-    value_to_yaml(msg.cargoweight, out);
+    rosidl_generator_traits::value_to_yaml(msg.cargoweight, out);
     out << "\n";
   }
 
@@ -89,7 +192,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "steeringaxletemperture: ";
-    value_to_yaml(msg.steeringaxletemperture, out);
+    rosidl_generator_traits::value_to_yaml(msg.steeringaxletemperture, out);
     out << "\n";
   }
 
@@ -99,7 +202,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "driveaxlelocation: ";
-    value_to_yaml(msg.driveaxlelocation, out);
+    rosidl_generator_traits::value_to_yaml(msg.driveaxlelocation, out);
     out << "\n";
   }
 
@@ -109,7 +212,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "driveaxleliftairpressure: ";
-    value_to_yaml(msg.driveaxleliftairpressure, out);
+    rosidl_generator_traits::value_to_yaml(msg.driveaxleliftairpressure, out);
     out << "\n";
   }
 
@@ -119,7 +222,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "driveaxletemperature: ";
-    value_to_yaml(msg.driveaxletemperature, out);
+    rosidl_generator_traits::value_to_yaml(msg.driveaxletemperature, out);
     out << "\n";
   }
 
@@ -129,7 +232,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "driveaxlelubpressure: ";
-    value_to_yaml(msg.driveaxlelubpressure, out);
+    rosidl_generator_traits::value_to_yaml(msg.driveaxlelubpressure, out);
     out << "\n";
   }
 
@@ -139,16 +242,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "steeringaxlelubepressure: ";
-    value_to_yaml(msg.steeringaxlelubepressure, out);
+    rosidl_generator_traits::value_to_yaml(msg.steeringaxlelubepressure, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::J1939data & msg)
+inline std::string to_yaml(const J1939data & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::J1939data & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::J1939data & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

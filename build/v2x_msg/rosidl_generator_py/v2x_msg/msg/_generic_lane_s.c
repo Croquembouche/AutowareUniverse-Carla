@@ -300,7 +300,7 @@ PyObject * v2x_msg__msg__generic_lane__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->name.data,
       strlen(ros_message->name.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -353,7 +353,7 @@ PyObject * v2x_msg__msg__generic_lane__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->maneuvers.data,
       strlen(ros_message->maneuvers.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

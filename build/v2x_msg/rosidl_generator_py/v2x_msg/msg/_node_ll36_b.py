@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -114,7 +116,7 @@ class NodeLL36B(metaclass=Metaclass_NodeLL36B):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def lon(self):
         """Message field 'lon'."""
         return self._lon
@@ -129,7 +131,7 @@ class NodeLL36B(metaclass=Metaclass_NodeLL36B):
                 "The 'lon' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._lon = value
 
-    @property
+    @builtins.property
     def lat(self):
         """Message field 'lat'."""
         return self._lat

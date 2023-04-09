@@ -5,18 +5,43 @@
 #ifndef V2X_MSG__MSG__DETAIL__NODE_LL28_B__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__NODE_LL28_B__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/node_ll28_b__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
 
-namespace rosidl_generator_traits
+#include "v2x_msg/msg/detail/node_ll28_b__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
+
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::NodeLL28B & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const NodeLL28B & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: lon
+  {
+    out << "lon: ";
+    rosidl_generator_traits::value_to_yaml(msg.lon, out);
+    out << ", ";
+  }
+
+  // member: lat
+  {
+    out << "lat: ";
+    rosidl_generator_traits::value_to_yaml(msg.lat, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const NodeLL28B & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: lon
@@ -25,7 +50,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "lon: ";
-    value_to_yaml(msg.lon, out);
+    rosidl_generator_traits::value_to_yaml(msg.lon, out);
     out << "\n";
   }
 
@@ -35,16 +60,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "lat: ";
-    value_to_yaml(msg.lat, out);
+    rosidl_generator_traits::value_to_yaml(msg.lat, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::NodeLL28B & msg)
+inline std::string to_yaml(const NodeLL28B & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::NodeLL28B & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::NodeLL28B & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

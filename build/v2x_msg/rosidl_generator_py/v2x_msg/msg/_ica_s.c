@@ -204,7 +204,7 @@ PyObject * v2x_msg__msg__ica__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->id.data,
       strlen(ros_message->id.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }
@@ -302,7 +302,7 @@ PyObject * v2x_msg__msg__ica__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->eventflag.data,
       strlen(ros_message->eventflag.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

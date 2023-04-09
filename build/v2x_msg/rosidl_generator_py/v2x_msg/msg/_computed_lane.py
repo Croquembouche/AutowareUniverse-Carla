@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -148,7 +150,7 @@ class ComputedLane(metaclass=Metaclass_ComputedLane):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def referencelaneid(self):
         """Message field 'referencelaneid'."""
         return self._referencelaneid
@@ -163,7 +165,7 @@ class ComputedLane(metaclass=Metaclass_ComputedLane):
                 "The 'referencelaneid' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._referencelaneid = value
 
-    @property
+    @builtins.property
     def offsetxaxis(self):
         """Message field 'offsetxaxis'."""
         return self._offsetxaxis
@@ -177,7 +179,7 @@ class ComputedLane(metaclass=Metaclass_ComputedLane):
                 "The 'offsetxaxis' field must be a sub message of type 'OffsetXaxis'"
         self._offsetxaxis = value
 
-    @property
+    @builtins.property
     def offsetyaxis(self):
         """Message field 'offsetyaxis'."""
         return self._offsetyaxis
@@ -191,7 +193,7 @@ class ComputedLane(metaclass=Metaclass_ComputedLane):
                 "The 'offsetyaxis' field must be a sub message of type 'OffsetYaxis'"
         self._offsetyaxis = value
 
-    @property
+    @builtins.property
     def rotatexy(self):
         """Message field 'rotatexy'."""
         return self._rotatexy
@@ -206,7 +208,7 @@ class ComputedLane(metaclass=Metaclass_ComputedLane):
                 "The 'rotatexy' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._rotatexy = value
 
-    @property
+    @builtins.property
     def scalexaxis(self):
         """Message field 'scalexaxis'."""
         return self._scalexaxis
@@ -221,7 +223,7 @@ class ComputedLane(metaclass=Metaclass_ComputedLane):
                 "The 'scalexaxis' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._scalexaxis = value
 
-    @property
+    @builtins.property
     def scaleyaxis(self):
         """Message field 'scaleyaxis'."""
         return self._scaleyaxis

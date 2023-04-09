@@ -8,6 +8,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "rcutils/allocator.h"
+
 
 // Include directives for member types
 // Member `name`
@@ -162,14 +164,15 @@ v2x_msg__msg__VehicleIdent__copy(
 v2x_msg__msg__VehicleIdent *
 v2x_msg__msg__VehicleIdent__create()
 {
-  v2x_msg__msg__VehicleIdent * msg = (v2x_msg__msg__VehicleIdent *)malloc(sizeof(v2x_msg__msg__VehicleIdent));
+  rcutils_allocator_t allocator = rcutils_get_default_allocator();
+  v2x_msg__msg__VehicleIdent * msg = (v2x_msg__msg__VehicleIdent *)allocator.allocate(sizeof(v2x_msg__msg__VehicleIdent), allocator.state);
   if (!msg) {
     return NULL;
   }
   memset(msg, 0, sizeof(v2x_msg__msg__VehicleIdent));
   bool success = v2x_msg__msg__VehicleIdent__init(msg);
   if (!success) {
-    free(msg);
+    allocator.deallocate(msg, allocator.state);
     return NULL;
   }
   return msg;
@@ -178,10 +181,11 @@ v2x_msg__msg__VehicleIdent__create()
 void
 v2x_msg__msg__VehicleIdent__destroy(v2x_msg__msg__VehicleIdent * msg)
 {
+  rcutils_allocator_t allocator = rcutils_get_default_allocator();
   if (msg) {
     v2x_msg__msg__VehicleIdent__fini(msg);
   }
-  free(msg);
+  allocator.deallocate(msg, allocator.state);
 }
 
 
@@ -191,9 +195,11 @@ v2x_msg__msg__VehicleIdent__Sequence__init(v2x_msg__msg__VehicleIdent__Sequence 
   if (!array) {
     return false;
   }
+  rcutils_allocator_t allocator = rcutils_get_default_allocator();
   v2x_msg__msg__VehicleIdent * data = NULL;
+
   if (size) {
-    data = (v2x_msg__msg__VehicleIdent *)calloc(size, sizeof(v2x_msg__msg__VehicleIdent));
+    data = (v2x_msg__msg__VehicleIdent *)allocator.zero_allocate(size, sizeof(v2x_msg__msg__VehicleIdent), allocator.state);
     if (!data) {
       return false;
     }
@@ -210,7 +216,7 @@ v2x_msg__msg__VehicleIdent__Sequence__init(v2x_msg__msg__VehicleIdent__Sequence 
       for (; i > 0; --i) {
         v2x_msg__msg__VehicleIdent__fini(&data[i - 1]);
       }
-      free(data);
+      allocator.deallocate(data, allocator.state);
       return false;
     }
   }
@@ -226,6 +232,8 @@ v2x_msg__msg__VehicleIdent__Sequence__fini(v2x_msg__msg__VehicleIdent__Sequence 
   if (!array) {
     return;
   }
+  rcutils_allocator_t allocator = rcutils_get_default_allocator();
+
   if (array->data) {
     // ensure that data and capacity values are consistent
     assert(array->capacity > 0);
@@ -233,7 +241,7 @@ v2x_msg__msg__VehicleIdent__Sequence__fini(v2x_msg__msg__VehicleIdent__Sequence 
     for (size_t i = 0; i < array->capacity; ++i) {
       v2x_msg__msg__VehicleIdent__fini(&array->data[i]);
     }
-    free(array->data);
+    allocator.deallocate(array->data, allocator.state);
     array->data = NULL;
     array->size = 0;
     array->capacity = 0;
@@ -247,13 +255,14 @@ v2x_msg__msg__VehicleIdent__Sequence__fini(v2x_msg__msg__VehicleIdent__Sequence 
 v2x_msg__msg__VehicleIdent__Sequence *
 v2x_msg__msg__VehicleIdent__Sequence__create(size_t size)
 {
-  v2x_msg__msg__VehicleIdent__Sequence * array = (v2x_msg__msg__VehicleIdent__Sequence *)malloc(sizeof(v2x_msg__msg__VehicleIdent__Sequence));
+  rcutils_allocator_t allocator = rcutils_get_default_allocator();
+  v2x_msg__msg__VehicleIdent__Sequence * array = (v2x_msg__msg__VehicleIdent__Sequence *)allocator.allocate(sizeof(v2x_msg__msg__VehicleIdent__Sequence), allocator.state);
   if (!array) {
     return NULL;
   }
   bool success = v2x_msg__msg__VehicleIdent__Sequence__init(array, size);
   if (!success) {
-    free(array);
+    allocator.deallocate(array, allocator.state);
     return NULL;
   }
   return array;
@@ -262,10 +271,11 @@ v2x_msg__msg__VehicleIdent__Sequence__create(size_t size)
 void
 v2x_msg__msg__VehicleIdent__Sequence__destroy(v2x_msg__msg__VehicleIdent__Sequence * array)
 {
+  rcutils_allocator_t allocator = rcutils_get_default_allocator();
   if (array) {
     v2x_msg__msg__VehicleIdent__Sequence__fini(array);
   }
-  free(array);
+  allocator.deallocate(array, allocator.state);
 }
 
 bool
@@ -296,22 +306,27 @@ v2x_msg__msg__VehicleIdent__Sequence__copy(
   if (output->capacity < input->size) {
     const size_t allocation_size =
       input->size * sizeof(v2x_msg__msg__VehicleIdent);
+    rcutils_allocator_t allocator = rcutils_get_default_allocator();
     v2x_msg__msg__VehicleIdent * data =
-      (v2x_msg__msg__VehicleIdent *)realloc(output->data, allocation_size);
+      (v2x_msg__msg__VehicleIdent *)allocator.reallocate(
+      output->data, allocation_size, allocator.state);
     if (!data) {
       return false;
     }
+    // If reallocation succeeded, memory may or may not have been moved
+    // to fulfill the allocation request, invalidating output->data.
+    output->data = data;
     for (size_t i = output->capacity; i < input->size; ++i) {
-      if (!v2x_msg__msg__VehicleIdent__init(&data[i])) {
-        /* free currently allocated and return false */
+      if (!v2x_msg__msg__VehicleIdent__init(&output->data[i])) {
+        // If initialization of any new item fails, roll back
+        // all previously initialized items. Existing items
+        // in output are to be left unmodified.
         for (; i-- > output->capacity; ) {
-          v2x_msg__msg__VehicleIdent__fini(&data[i]);
+          v2x_msg__msg__VehicleIdent__fini(&output->data[i]);
         }
-        free(data);
         return false;
       }
     }
-    output->data = data;
     output->capacity = input->size;
   }
   output->size = input->size;

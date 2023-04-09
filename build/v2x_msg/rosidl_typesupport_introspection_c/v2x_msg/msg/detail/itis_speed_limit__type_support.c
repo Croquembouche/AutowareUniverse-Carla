@@ -23,7 +23,7 @@ extern "C"
 {
 #endif
 
-void ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_init_function(
+void v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_init_function(
   void * message_memory, enum rosidl_runtime_c__message_initialization _init)
 {
   // TODO(karsten1987): initializers are not yet implemented for typesupport c
@@ -32,12 +32,12 @@ void ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_init_fun
   v2x_msg__msg__ITISSpeedLimit__init(message_memory);
 }
 
-void ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_fini_function(void * message_memory)
+void v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_fini_function(void * message_memory)
 {
   v2x_msg__msg__ITISSpeedLimit__fini(message_memory);
 }
 
-size_t ITISSpeedLimit__rosidl_typesupport_introspection_c__size_function__ITISSpeedLimitcontent__item(
+size_t v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__size_function__ITISSpeedLimit__item(
   const void * untyped_member)
 {
   const v2x_msg__msg__ITISSpeedLimitcontent__Sequence * member =
@@ -45,7 +45,7 @@ size_t ITISSpeedLimit__rosidl_typesupport_introspection_c__size_function__ITISSp
   return member->size;
 }
 
-const void * ITISSpeedLimit__rosidl_typesupport_introspection_c__get_const_function__ITISSpeedLimitcontent__item(
+const void * v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__get_const_function__ITISSpeedLimit__item(
   const void * untyped_member, size_t index)
 {
   const v2x_msg__msg__ITISSpeedLimitcontent__Sequence * member =
@@ -53,7 +53,7 @@ const void * ITISSpeedLimit__rosidl_typesupport_introspection_c__get_const_funct
   return &member->data[index];
 }
 
-void * ITISSpeedLimit__rosidl_typesupport_introspection_c__get_function__ITISSpeedLimitcontent__item(
+void * v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__get_function__ITISSpeedLimit__item(
   void * untyped_member, size_t index)
 {
   v2x_msg__msg__ITISSpeedLimitcontent__Sequence * member =
@@ -61,7 +61,29 @@ void * ITISSpeedLimit__rosidl_typesupport_introspection_c__get_function__ITISSpe
   return &member->data[index];
 }
 
-bool ITISSpeedLimit__rosidl_typesupport_introspection_c__resize_function__ITISSpeedLimitcontent__item(
+void v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__fetch_function__ITISSpeedLimit__item(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const v2x_msg__msg__ITISSpeedLimitcontent * item =
+    ((const v2x_msg__msg__ITISSpeedLimitcontent *)
+    v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__get_const_function__ITISSpeedLimit__item(untyped_member, index));
+  v2x_msg__msg__ITISSpeedLimitcontent * value =
+    (v2x_msg__msg__ITISSpeedLimitcontent *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__assign_function__ITISSpeedLimit__item(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  v2x_msg__msg__ITISSpeedLimitcontent * item =
+    ((v2x_msg__msg__ITISSpeedLimitcontent *)
+    v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__get_function__ITISSpeedLimit__item(untyped_member, index));
+  const v2x_msg__msg__ITISSpeedLimitcontent * value =
+    (const v2x_msg__msg__ITISSpeedLimitcontent *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__resize_function__ITISSpeedLimit__item(
   void * untyped_member, size_t size)
 {
   v2x_msg__msg__ITISSpeedLimitcontent__Sequence * member =
@@ -70,7 +92,7 @@ bool ITISSpeedLimit__rosidl_typesupport_introspection_c__resize_function__ITISSp
   return v2x_msg__msg__ITISSpeedLimitcontent__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_member_array[1] = {
   {
     "item",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -81,41 +103,43 @@ static rosidl_typesupport_introspection_c__MessageMember ITISSpeedLimit__rosidl_
     false,  // is upper bound
     offsetof(v2x_msg__msg__ITISSpeedLimit, item),  // bytes offset in struct
     NULL,  // default value
-    ITISSpeedLimit__rosidl_typesupport_introspection_c__size_function__ITISSpeedLimitcontent__item,  // size() function pointer
-    ITISSpeedLimit__rosidl_typesupport_introspection_c__get_const_function__ITISSpeedLimitcontent__item,  // get_const(index) function pointer
-    ITISSpeedLimit__rosidl_typesupport_introspection_c__get_function__ITISSpeedLimitcontent__item,  // get(index) function pointer
-    ITISSpeedLimit__rosidl_typesupport_introspection_c__resize_function__ITISSpeedLimitcontent__item  // resize(index) function pointer
+    v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__size_function__ITISSpeedLimit__item,  // size() function pointer
+    v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__get_const_function__ITISSpeedLimit__item,  // get_const(index) function pointer
+    v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__get_function__ITISSpeedLimit__item,  // get(index) function pointer
+    v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__fetch_function__ITISSpeedLimit__item,  // fetch(index, &value) function pointer
+    v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__assign_function__ITISSpeedLimit__item,  // assign(index, value) function pointer
+    v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__resize_function__ITISSpeedLimit__item  // resize(index) function pointer
   }
 };
 
-static const rosidl_typesupport_introspection_c__MessageMembers ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_members = {
+static const rosidl_typesupport_introspection_c__MessageMembers v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_members = {
   "v2x_msg__msg",  // message namespace
   "ITISSpeedLimit",  // message name
   1,  // number of fields
   sizeof(v2x_msg__msg__ITISSpeedLimit),
-  ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_member_array,  // message members
-  ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_init_function,  // function to initialize message memory (memory has to be allocated)
-  ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_fini_function  // function to terminate message instance (will not free memory)
+  v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_member_array,  // message members
+  v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_init_function,  // function to initialize message memory (memory has to be allocated)
+  v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_fini_function  // function to terminate message instance (will not free memory)
 };
 
 // this is not const since it must be initialized on first access
 // since C does not allow non-integral compile-time constants
-static rosidl_message_type_support_t ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_type_support_handle = {
+static rosidl_message_type_support_t v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_type_support_handle = {
   0,
-  &ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_members,
+  &v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_members,
   get_message_typesupport_handle_function,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_v2x_msg
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, ITISSpeedLimit)() {
-  ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_member_array[0].members_ =
+  v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_member_array[0].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, ITISSpeedLimitcontent)();
-  if (!ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_type_support_handle.typesupport_identifier) {
-    ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_type_support_handle.typesupport_identifier =
+  if (!v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_type_support_handle.typesupport_identifier) {
+    v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
   }
-  return &ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_type_support_handle;
+  return &v2x_msg__msg__ITISSpeedLimit__rosidl_typesupport_introspection_c__ITISSpeedLimit_message_type_support_handle;
 }
 #ifdef __cplusplus
 }

@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -114,7 +116,7 @@ class ApproachOrLane(metaclass=Metaclass_ApproachOrLane):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def approach(self):
         """Message field 'approach'."""
         return self._approach
@@ -129,7 +131,7 @@ class ApproachOrLane(metaclass=Metaclass_ApproachOrLane):
                 "The 'approach' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._approach = value
 
-    @property
+    @builtins.property
     def lane(self):
         """Message field 'lane'."""
         return self._lane

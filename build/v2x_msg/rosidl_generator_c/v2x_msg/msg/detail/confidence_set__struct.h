@@ -25,7 +25,7 @@ extern "C"
 // Member 'posconfidence'
 #include "v2x_msg/msg/detail/position_confidence_set__struct.h"
 
-// Struct defined in msg/ConfidenceSet in the package v2x_msg.
+/// Struct defined in msg/ConfidenceSet in the package v2x_msg.
 typedef struct v2x_msg__msg__ConfidenceSet
 {
   v2x_msg__msg__AccelSteerYawRateConfidence accelconfidence;

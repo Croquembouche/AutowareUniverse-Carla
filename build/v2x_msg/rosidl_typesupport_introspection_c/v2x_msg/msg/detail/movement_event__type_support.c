@@ -27,7 +27,7 @@ extern "C"
 {
 #endif
 
-void MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_init_function(
+void v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_init_function(
   void * message_memory, enum rosidl_runtime_c__message_initialization _init)
 {
   // TODO(karsten1987): initializers are not yet implemented for typesupport c
@@ -36,12 +36,12 @@ void MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_init_funct
   v2x_msg__msg__MovementEvent__init(message_memory);
 }
 
-void MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_fini_function(void * message_memory)
+void v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_fini_function(void * message_memory)
 {
   v2x_msg__msg__MovementEvent__fini(message_memory);
 }
 
-size_t MovementEvent__rosidl_typesupport_introspection_c__size_function__AdvisorySpeed__speeds(
+size_t v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__size_function__MovementEvent__speeds(
   const void * untyped_member)
 {
   const v2x_msg__msg__AdvisorySpeed__Sequence * member =
@@ -49,7 +49,7 @@ size_t MovementEvent__rosidl_typesupport_introspection_c__size_function__Advisor
   return member->size;
 }
 
-const void * MovementEvent__rosidl_typesupport_introspection_c__get_const_function__AdvisorySpeed__speeds(
+const void * v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__get_const_function__MovementEvent__speeds(
   const void * untyped_member, size_t index)
 {
   const v2x_msg__msg__AdvisorySpeed__Sequence * member =
@@ -57,7 +57,7 @@ const void * MovementEvent__rosidl_typesupport_introspection_c__get_const_functi
   return &member->data[index];
 }
 
-void * MovementEvent__rosidl_typesupport_introspection_c__get_function__AdvisorySpeed__speeds(
+void * v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__get_function__MovementEvent__speeds(
   void * untyped_member, size_t index)
 {
   v2x_msg__msg__AdvisorySpeed__Sequence * member =
@@ -65,7 +65,29 @@ void * MovementEvent__rosidl_typesupport_introspection_c__get_function__Advisory
   return &member->data[index];
 }
 
-bool MovementEvent__rosidl_typesupport_introspection_c__resize_function__AdvisorySpeed__speeds(
+void v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__fetch_function__MovementEvent__speeds(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const v2x_msg__msg__AdvisorySpeed * item =
+    ((const v2x_msg__msg__AdvisorySpeed *)
+    v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__get_const_function__MovementEvent__speeds(untyped_member, index));
+  v2x_msg__msg__AdvisorySpeed * value =
+    (v2x_msg__msg__AdvisorySpeed *)(untyped_value);
+  *value = *item;
+}
+
+void v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__assign_function__MovementEvent__speeds(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  v2x_msg__msg__AdvisorySpeed * item =
+    ((v2x_msg__msg__AdvisorySpeed *)
+    v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__get_function__MovementEvent__speeds(untyped_member, index));
+  const v2x_msg__msg__AdvisorySpeed * value =
+    (const v2x_msg__msg__AdvisorySpeed *)(untyped_value);
+  *item = *value;
+}
+
+bool v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__resize_function__MovementEvent__speeds(
   void * untyped_member, size_t size)
 {
   v2x_msg__msg__AdvisorySpeed__Sequence * member =
@@ -74,7 +96,7 @@ bool MovementEvent__rosidl_typesupport_introspection_c__resize_function__Advisor
   return v2x_msg__msg__AdvisorySpeed__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_member_array[3] = {
+static rosidl_typesupport_introspection_c__MessageMember v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_member_array[3] = {
   {
     "movementphasestate",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
@@ -88,6 +110,8 @@ static rosidl_typesupport_introspection_c__MessageMember MovementEvent__rosidl_t
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -103,6 +127,8 @@ static rosidl_typesupport_introspection_c__MessageMember MovementEvent__rosidl_t
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -115,43 +141,45 @@ static rosidl_typesupport_introspection_c__MessageMember MovementEvent__rosidl_t
     false,  // is upper bound
     offsetof(v2x_msg__msg__MovementEvent, speeds),  // bytes offset in struct
     NULL,  // default value
-    MovementEvent__rosidl_typesupport_introspection_c__size_function__AdvisorySpeed__speeds,  // size() function pointer
-    MovementEvent__rosidl_typesupport_introspection_c__get_const_function__AdvisorySpeed__speeds,  // get_const(index) function pointer
-    MovementEvent__rosidl_typesupport_introspection_c__get_function__AdvisorySpeed__speeds,  // get(index) function pointer
-    MovementEvent__rosidl_typesupport_introspection_c__resize_function__AdvisorySpeed__speeds  // resize(index) function pointer
+    v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__size_function__MovementEvent__speeds,  // size() function pointer
+    v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__get_const_function__MovementEvent__speeds,  // get_const(index) function pointer
+    v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__get_function__MovementEvent__speeds,  // get(index) function pointer
+    v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__fetch_function__MovementEvent__speeds,  // fetch(index, &value) function pointer
+    v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__assign_function__MovementEvent__speeds,  // assign(index, value) function pointer
+    v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__resize_function__MovementEvent__speeds  // resize(index) function pointer
   }
 };
 
-static const rosidl_typesupport_introspection_c__MessageMembers MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_members = {
+static const rosidl_typesupport_introspection_c__MessageMembers v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_members = {
   "v2x_msg__msg",  // message namespace
   "MovementEvent",  // message name
   3,  // number of fields
   sizeof(v2x_msg__msg__MovementEvent),
-  MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_member_array,  // message members
-  MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_init_function,  // function to initialize message memory (memory has to be allocated)
-  MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_fini_function  // function to terminate message instance (will not free memory)
+  v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_member_array,  // message members
+  v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_init_function,  // function to initialize message memory (memory has to be allocated)
+  v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_fini_function  // function to terminate message instance (will not free memory)
 };
 
 // this is not const since it must be initialized on first access
 // since C does not allow non-integral compile-time constants
-static rosidl_message_type_support_t MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_type_support_handle = {
+static rosidl_message_type_support_t v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_type_support_handle = {
   0,
-  &MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_members,
+  &v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_members,
   get_message_typesupport_handle_function,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_v2x_msg
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, MovementEvent)() {
-  MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_member_array[1].members_ =
+  v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_member_array[1].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, TimeChangeDetails)();
-  MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_member_array[2].members_ =
+  v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_member_array[2].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, v2x_msg, msg, AdvisorySpeed)();
-  if (!MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_type_support_handle.typesupport_identifier) {
-    MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_type_support_handle.typesupport_identifier =
+  if (!v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_type_support_handle.typesupport_identifier) {
+    v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
   }
-  return &MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_type_support_handle;
+  return &v2x_msg__msg__MovementEvent__rosidl_typesupport_introspection_c__MovementEvent_message_type_support_handle;
 }
 #ifdef __cplusplus
 }

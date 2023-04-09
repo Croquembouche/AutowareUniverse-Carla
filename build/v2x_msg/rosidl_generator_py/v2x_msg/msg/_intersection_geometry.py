@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -168,7 +170,7 @@ class IntersectionGeometry(metaclass=Metaclass_IntersectionGeometry):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def name(self):
         """Message field 'name'."""
         return self._name
@@ -181,7 +183,7 @@ class IntersectionGeometry(metaclass=Metaclass_IntersectionGeometry):
                 "The 'name' field must be of type 'str'"
         self._name = value
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def id(self):  # noqa: A003
         """Message field 'id'."""
         return self._id
@@ -195,7 +197,7 @@ class IntersectionGeometry(metaclass=Metaclass_IntersectionGeometry):
                 "The 'id' field must be a sub message of type 'IntersectionReferenceID'"
         self._id = value
 
-    @property
+    @builtins.property
     def revision(self):
         """Message field 'revision'."""
         return self._revision
@@ -210,7 +212,7 @@ class IntersectionGeometry(metaclass=Metaclass_IntersectionGeometry):
                 "The 'revision' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._revision = value
 
-    @property
+    @builtins.property
     def refpoint(self):
         """Message field 'refpoint'."""
         return self._refpoint
@@ -224,7 +226,7 @@ class IntersectionGeometry(metaclass=Metaclass_IntersectionGeometry):
                 "The 'refpoint' field must be a sub message of type 'Position3D'"
         self._refpoint = value
 
-    @property
+    @builtins.property
     def lanewidth(self):
         """Message field 'lanewidth'."""
         return self._lanewidth
@@ -239,7 +241,7 @@ class IntersectionGeometry(metaclass=Metaclass_IntersectionGeometry):
                 "The 'lanewidth' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._lanewidth = value
 
-    @property
+    @builtins.property
     def speedlimits(self):
         """Message field 'speedlimits'."""
         return self._speedlimits
@@ -263,7 +265,7 @@ class IntersectionGeometry(metaclass=Metaclass_IntersectionGeometry):
                 "The 'speedlimits' field must be a set or sequence and each value of type 'SpeedLimit'"
         self._speedlimits = value
 
-    @property
+    @builtins.property
     def laneset(self):
         """Message field 'laneset'."""
         return self._laneset
@@ -287,7 +289,7 @@ class IntersectionGeometry(metaclass=Metaclass_IntersectionGeometry):
                 "The 'laneset' field must be a set or sequence and each value of type 'GenericLane'"
         self._laneset = value
 
-    @property
+    @builtins.property
     def preemptprioritydata(self):
         """Message field 'preemptprioritydata'."""
         return self._preemptprioritydata

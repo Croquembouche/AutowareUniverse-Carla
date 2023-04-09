@@ -31,7 +31,7 @@ extern "C"
 // Member 'maneuverassistlist'
 #include "v2x_msg/msg/detail/connection_maneuver_assist__struct.h"
 
-// Struct defined in msg/IntersectionState in the package v2x_msg.
+/// Struct defined in msg/IntersectionState in the package v2x_msg.
 typedef struct v2x_msg__msg__IntersectionState
 {
   rosidl_runtime_c__String name;

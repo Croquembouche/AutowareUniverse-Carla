@@ -1,10 +1,1 @@
-DDateTime utctime
-int64 longitude
-int64 lat
-int64 elevation
-int64 heading
-TransmissionAndSpeed speed 
-PositionalAccuracy posaccuracy 
-int64 timeconfidence
-PositionConfidenceSet posconfidence
-SpeedandHeadingandThrottleConfidence speedconfidence
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/FullPositionVector.msg

@@ -1,0 +1,26 @@
+[1.252s] Invoking command in '/home/carla/Github/C-V2X-Autoware-Carla/build/vehicle': PYTHONPATH=/home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/prefix_override:/home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/build --no-deps install_data
+[1.636s] running develop
+[1.737s] running egg_info
+[1.737s] creating vehicle.egg-info
+[1.738s] writing vehicle.egg-info/PKG-INFO
+[1.738s] writing dependency_links to vehicle.egg-info/dependency_links.txt
+[1.738s] writing entry points to vehicle.egg-info/entry_points.txt
+[1.738s] writing requirements to vehicle.egg-info/requires.txt
+[1.738s] writing top-level names to vehicle.egg-info/top_level.txt
+[1.738s] writing manifest file 'vehicle.egg-info/SOURCES.txt'
+[1.765s] reading manifest file 'vehicle.egg-info/SOURCES.txt'
+[1.765s] writing manifest file 'vehicle.egg-info/SOURCES.txt'
+[1.767s] running build_ext
+[1.767s] Creating /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages/site.py
+[1.769s] Creating /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages/vehicle.egg-link (link to .)
+[1.769s] Installing host_vehicle script to /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/vehicle
+[1.769s] Installing remote_vehicle script to /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/vehicle
+[1.769s] 
+[1.769s] Installed /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle
+[1.769s] running install_data
+[1.769s] creating /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/share/ament_index
+[1.769s] creating /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/share/ament_index/resource_index
+[1.769s] creating /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/share/ament_index/resource_index/packages
+[1.769s] copying resource/vehicle -> /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/share/ament_index/resource_index/packages
+[1.769s] copying package.xml -> /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/share/vehicle
+[1.785s] Invoked command in '/home/carla/Github/C-V2X-Autoware-Carla/build/vehicle' returned '0': PYTHONPATH=/home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/prefix_override:/home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/build --no-deps install_data

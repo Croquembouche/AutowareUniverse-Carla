@@ -30,7 +30,7 @@ extern "C"
 // Member 'laneset'
 #include "v2x_msg/msg/detail/generic_lane__struct.h"
 
-// Struct defined in msg/IntersectionGeometry in the package v2x_msg.
+/// Struct defined in msg/IntersectionGeometry in the package v2x_msg.
 typedef struct v2x_msg__msg__IntersectionGeometry
 {
   rosidl_runtime_c__String name;

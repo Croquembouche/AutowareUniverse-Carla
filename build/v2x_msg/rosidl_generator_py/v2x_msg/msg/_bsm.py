@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -113,7 +115,7 @@ class BSM(metaclass=Metaclass_BSM):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def coredata(self):
         """Message field 'coredata'."""
         return self._coredata

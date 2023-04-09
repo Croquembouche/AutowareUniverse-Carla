@@ -5,12 +5,14 @@
 #ifndef V2X_MSG__MSG__DETAIL__REQUESTOR_DESCRIPTION__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__REQUESTOR_DESCRIPTION__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/requestor_description__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/requestor_description__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'id'
@@ -20,11 +22,76 @@
 // Member 'position'
 #include "v2x_msg/msg/detail/requestor_position_vector__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::RequestorDescription & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const RequestorDescription & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: id
+  {
+    out << "id: ";
+    to_flow_style_yaml(msg.id, out);
+    out << ", ";
+  }
+
+  // member: type
+  {
+    out << "type: ";
+    to_flow_style_yaml(msg.type, out);
+    out << ", ";
+  }
+
+  // member: position
+  {
+    out << "position: ";
+    to_flow_style_yaml(msg.position, out);
+    out << ", ";
+  }
+
+  // member: name
+  {
+    out << "name: ";
+    rosidl_generator_traits::value_to_yaml(msg.name, out);
+    out << ", ";
+  }
+
+  // member: routename
+  {
+    out << "routename: ";
+    rosidl_generator_traits::value_to_yaml(msg.routename, out);
+    out << ", ";
+  }
+
+  // member: transitstatus
+  {
+    out << "transitstatus: ";
+    rosidl_generator_traits::value_to_yaml(msg.transitstatus, out);
+    out << ", ";
+  }
+
+  // member: transitoccupancy
+  {
+    out << "transitoccupancy: ";
+    rosidl_generator_traits::value_to_yaml(msg.transitoccupancy, out);
+    out << ", ";
+  }
+
+  // member: transitschedule
+  {
+    out << "transitschedule: ";
+    rosidl_generator_traits::value_to_yaml(msg.transitschedule, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const RequestorDescription & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: id
@@ -33,7 +100,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "id:\n";
-    to_yaml(msg.id, out, indentation + 2);
+    to_block_style_yaml(msg.id, out, indentation + 2);
   }
 
   // member: type
@@ -42,7 +109,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "type:\n";
-    to_yaml(msg.type, out, indentation + 2);
+    to_block_style_yaml(msg.type, out, indentation + 2);
   }
 
   // member: position
@@ -51,7 +118,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "position:\n";
-    to_yaml(msg.position, out, indentation + 2);
+    to_block_style_yaml(msg.position, out, indentation + 2);
   }
 
   // member: name
@@ -60,7 +127,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "name: ";
-    value_to_yaml(msg.name, out);
+    rosidl_generator_traits::value_to_yaml(msg.name, out);
     out << "\n";
   }
 
@@ -70,7 +137,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "routename: ";
-    value_to_yaml(msg.routename, out);
+    rosidl_generator_traits::value_to_yaml(msg.routename, out);
     out << "\n";
   }
 
@@ -80,7 +147,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "transitstatus: ";
-    value_to_yaml(msg.transitstatus, out);
+    rosidl_generator_traits::value_to_yaml(msg.transitstatus, out);
     out << "\n";
   }
 
@@ -90,7 +157,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "transitoccupancy: ";
-    value_to_yaml(msg.transitoccupancy, out);
+    rosidl_generator_traits::value_to_yaml(msg.transitoccupancy, out);
     out << "\n";
   }
 
@@ -100,16 +167,41 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "transitschedule: ";
-    value_to_yaml(msg.transitschedule, out);
+    rosidl_generator_traits::value_to_yaml(msg.transitschedule, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::RequestorDescription & msg)
+inline std::string to_yaml(const RequestorDescription & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::RequestorDescription & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::RequestorDescription & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

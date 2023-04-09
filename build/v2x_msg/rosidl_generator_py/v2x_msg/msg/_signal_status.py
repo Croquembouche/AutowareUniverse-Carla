@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -129,7 +131,7 @@ class SignalStatus(metaclass=Metaclass_SignalStatus):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def sequencenumber(self):
         """Message field 'sequencenumber'."""
         return self._sequencenumber
@@ -144,7 +146,7 @@ class SignalStatus(metaclass=Metaclass_SignalStatus):
                 "The 'sequencenumber' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._sequencenumber = value
 
-    @property  # noqa: A003
+    @builtins.property  # noqa: A003
     def id(self):  # noqa: A003
         """Message field 'id'."""
         return self._id
@@ -158,7 +160,7 @@ class SignalStatus(metaclass=Metaclass_SignalStatus):
                 "The 'id' field must be a sub message of type 'IntersectionReferenceID'"
         self._id = value
 
-    @property
+    @builtins.property
     def sigstatus(self):
         """Message field 'sigstatus'."""
         return self._sigstatus

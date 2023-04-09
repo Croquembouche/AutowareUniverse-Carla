@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -126,7 +128,7 @@ class Steering(metaclass=Metaclass_Steering):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def angle(self):
         """Message field 'angle'."""
         return self._angle
@@ -141,7 +143,7 @@ class Steering(metaclass=Metaclass_Steering):
                 "The 'angle' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._angle = value
 
-    @property
+    @builtins.property
     def confidence(self):
         """Message field 'confidence'."""
         return self._confidence
@@ -156,7 +158,7 @@ class Steering(metaclass=Metaclass_Steering):
                 "The 'confidence' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._confidence = value
 
-    @property
+    @builtins.property
     def rate(self):
         """Message field 'rate'."""
         return self._rate
@@ -171,7 +173,7 @@ class Steering(metaclass=Metaclass_Steering):
                 "The 'rate' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._rate = value
 
-    @property
+    @builtins.property
     def wheel(self):
         """Message field 'wheel'."""
         return self._wheel

@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -131,7 +133,7 @@ class SignalRequestPackage(metaclass=Metaclass_SignalRequestPackage):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def signalrequest(self):
         """Message field 'signalrequest'."""
         return self._signalrequest
@@ -145,7 +147,7 @@ class SignalRequestPackage(metaclass=Metaclass_SignalRequestPackage):
                 "The 'signalrequest' field must be a sub message of type 'SignalRequest'"
         self._signalrequest = value
 
-    @property
+    @builtins.property
     def minute(self):
         """Message field 'minute'."""
         return self._minute
@@ -160,7 +162,7 @@ class SignalRequestPackage(metaclass=Metaclass_SignalRequestPackage):
                 "The 'minute' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._minute = value
 
-    @property
+    @builtins.property
     def second(self):
         """Message field 'second'."""
         return self._second
@@ -175,7 +177,7 @@ class SignalRequestPackage(metaclass=Metaclass_SignalRequestPackage):
                 "The 'second' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._second = value
 
-    @property
+    @builtins.property
     def duration(self):
         """Message field 'duration'."""
         return self._duration

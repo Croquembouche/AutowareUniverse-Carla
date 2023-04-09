@@ -5,12 +5,14 @@
 #ifndef V2X_MSG__MSG__DETAIL__SIGNAL_REQUEST__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__SIGNAL_REQUEST__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/signal_request__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/signal_request__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'id'
@@ -19,11 +21,55 @@
 // Member 'outboundlane'
 #include "v2x_msg/msg/detail/intersection_access_point__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::SignalRequest & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const SignalRequest & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: id
+  {
+    out << "id: ";
+    to_flow_style_yaml(msg.id, out);
+    out << ", ";
+  }
+
+  // member: requestid
+  {
+    out << "requestid: ";
+    rosidl_generator_traits::value_to_yaml(msg.requestid, out);
+    out << ", ";
+  }
+
+  // member: requesttype
+  {
+    out << "requesttype: ";
+    rosidl_generator_traits::value_to_yaml(msg.requesttype, out);
+    out << ", ";
+  }
+
+  // member: inboundlane
+  {
+    out << "inboundlane: ";
+    to_flow_style_yaml(msg.inboundlane, out);
+    out << ", ";
+  }
+
+  // member: outboundlane
+  {
+    out << "outboundlane: ";
+    to_flow_style_yaml(msg.outboundlane, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const SignalRequest & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: id
@@ -32,7 +78,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "id:\n";
-    to_yaml(msg.id, out, indentation + 2);
+    to_block_style_yaml(msg.id, out, indentation + 2);
   }
 
   // member: requestid
@@ -41,7 +87,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "requestid: ";
-    value_to_yaml(msg.requestid, out);
+    rosidl_generator_traits::value_to_yaml(msg.requestid, out);
     out << "\n";
   }
 
@@ -51,7 +97,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "requesttype: ";
-    value_to_yaml(msg.requesttype, out);
+    rosidl_generator_traits::value_to_yaml(msg.requesttype, out);
     out << "\n";
   }
 
@@ -61,7 +107,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "inboundlane:\n";
-    to_yaml(msg.inboundlane, out, indentation + 2);
+    to_block_style_yaml(msg.inboundlane, out, indentation + 2);
   }
 
   // member: outboundlane
@@ -70,15 +116,40 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "outboundlane:\n";
-    to_yaml(msg.outboundlane, out, indentation + 2);
+    to_block_style_yaml(msg.outboundlane, out, indentation + 2);
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::SignalRequest & msg)
+inline std::string to_yaml(const SignalRequest & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::SignalRequest & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::SignalRequest & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

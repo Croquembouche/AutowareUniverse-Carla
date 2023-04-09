@@ -23,7 +23,7 @@ extern "C"
 // Member 'speeds'
 #include "v2x_msg/msg/detail/advisory_speed__struct.h"
 
-// Struct defined in msg/MovementEvent in the package v2x_msg.
+/// Struct defined in msg/MovementEvent in the package v2x_msg.
 typedef struct v2x_msg__msg__MovementEvent
 {
   int64_t movementphasestate;

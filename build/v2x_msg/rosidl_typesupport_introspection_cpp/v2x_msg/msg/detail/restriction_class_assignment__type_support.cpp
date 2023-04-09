@@ -57,6 +57,24 @@ void * get_function__RestrictionClassAssignment__users(void * untyped_member, si
   return &member[index];
 }
 
+void fetch_function__RestrictionClassAssignment__users(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const v2x_msg::msg::RestrictionUserType *>(
+    get_const_function__RestrictionClassAssignment__users(untyped_member, index));
+  auto & value = *reinterpret_cast<v2x_msg::msg::RestrictionUserType *>(untyped_value);
+  value = item;
+}
+
+void assign_function__RestrictionClassAssignment__users(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<v2x_msg::msg::RestrictionUserType *>(
+    get_function__RestrictionClassAssignment__users(untyped_member, index));
+  const auto & value = *reinterpret_cast<const v2x_msg::msg::RestrictionUserType *>(untyped_value);
+  item = value;
+}
+
 void resize_function__RestrictionClassAssignment__users(void * untyped_member, size_t size)
 {
   auto * member =
@@ -78,6 +96,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RestrictionCl
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -93,6 +113,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RestrictionCl
     size_function__RestrictionClassAssignment__users,  // size() function pointer
     get_const_function__RestrictionClassAssignment__users,  // get_const(index) function pointer
     get_function__RestrictionClassAssignment__users,  // get(index) function pointer
+    fetch_function__RestrictionClassAssignment__users,  // fetch(index, &value) function pointer
+    assign_function__RestrictionClassAssignment__users,  // assign(index, value) function pointer
     resize_function__RestrictionClassAssignment__users  // resize(index) function pointer
   }
 };

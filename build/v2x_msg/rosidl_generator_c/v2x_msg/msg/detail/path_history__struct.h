@@ -25,7 +25,7 @@ extern "C"
 // Member 'crumbdata'
 #include "v2x_msg/msg/detail/path_history_point__struct.h"
 
-// Struct defined in msg/PathHistory in the package v2x_msg.
+/// Struct defined in msg/PathHistory in the package v2x_msg.
 typedef struct v2x_msg__msg__PathHistory
 {
   v2x_msg__msg__FullPositionVector initialposition;

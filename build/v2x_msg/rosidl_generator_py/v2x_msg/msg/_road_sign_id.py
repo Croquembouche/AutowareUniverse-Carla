@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -131,7 +133,7 @@ class RoadSignID(metaclass=Metaclass_RoadSignID):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def position(self):
         """Message field 'position'."""
         return self._position
@@ -145,7 +147,7 @@ class RoadSignID(metaclass=Metaclass_RoadSignID):
                 "The 'position' field must be a sub message of type 'Position3D'"
         self._position = value
 
-    @property
+    @builtins.property
     def viewangle(self):
         """Message field 'viewangle'."""
         return self._viewangle
@@ -158,7 +160,7 @@ class RoadSignID(metaclass=Metaclass_RoadSignID):
                 "The 'viewangle' field must be of type 'str'"
         self._viewangle = value
 
-    @property
+    @builtins.property
     def mutcdcode(self):
         """Message field 'mutcdcode'."""
         return self._mutcdcode
@@ -173,7 +175,7 @@ class RoadSignID(metaclass=Metaclass_RoadSignID):
                 "The 'mutcdcode' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._mutcdcode = value
 
-    @property
+    @builtins.property
     def msgcrc(self):
         """Message field 'msgcrc'."""
         return self._msgcrc

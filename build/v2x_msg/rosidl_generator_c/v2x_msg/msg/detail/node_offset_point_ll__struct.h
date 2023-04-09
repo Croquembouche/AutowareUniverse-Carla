@@ -33,7 +33,7 @@ extern "C"
 // Member 'nodelatlon'
 #include "v2x_msg/msg/detail/nodellmd64b__struct.h"
 
-// Struct defined in msg/NodeOffsetPointLL in the package v2x_msg.
+/// Struct defined in msg/NodeOffsetPointLL in the package v2x_msg.
 typedef struct v2x_msg__msg__NodeOffsetPointLL
 {
   v2x_msg__msg__NodeLL24B nodell1;

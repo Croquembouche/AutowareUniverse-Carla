@@ -25,7 +25,7 @@ extern "C"
 // Member 'details'
 #include "v2x_msg/msg/detail/emergency_details__struct.h"
 
-// Struct defined in msg/EVA in the package v2x_msg.
+/// Struct defined in msg/EVA in the package v2x_msg.
 typedef struct v2x_msg__msg__EVA
 {
   int64_t timestamp;

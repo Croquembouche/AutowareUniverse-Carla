@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -142,7 +144,7 @@ class SRM(metaclass=Metaclass_SRM):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def timestamp(self):
         """Message field 'timestamp'."""
         return self._timestamp
@@ -157,7 +159,7 @@ class SRM(metaclass=Metaclass_SRM):
                 "The 'timestamp' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._timestamp = value
 
-    @property
+    @builtins.property
     def second(self):
         """Message field 'second'."""
         return self._second
@@ -172,7 +174,7 @@ class SRM(metaclass=Metaclass_SRM):
                 "The 'second' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._second = value
 
-    @property
+    @builtins.property
     def sequencenumber(self):
         """Message field 'sequencenumber'."""
         return self._sequencenumber
@@ -187,7 +189,7 @@ class SRM(metaclass=Metaclass_SRM):
                 "The 'sequencenumber' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._sequencenumber = value
 
-    @property
+    @builtins.property
     def requests(self):
         """Message field 'requests'."""
         return self._requests
@@ -201,7 +203,7 @@ class SRM(metaclass=Metaclass_SRM):
                 "The 'requests' field must be a sub message of type 'SignalRequestPackage'"
         self._requests = value
 
-    @property
+    @builtins.property
     def requestor(self):
         """Message field 'requestor'."""
         return self._requestor

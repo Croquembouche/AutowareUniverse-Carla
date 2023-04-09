@@ -1,0 +1,1 @@
+/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_typesupport_introspection_cpp/v2x_msg/msg/detail/vehicle_size__rosidl_typesupport_introspection_cpp.hpp

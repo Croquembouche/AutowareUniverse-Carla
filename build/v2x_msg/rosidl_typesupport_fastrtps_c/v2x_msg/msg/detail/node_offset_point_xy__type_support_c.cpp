@@ -48,6 +48,7 @@ size_t get_serialized_size_v2x_msg__msg__NodeXY22b(
 
 size_t max_serialized_size_v2x_msg__msg__NodeXY22b(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -58,6 +59,7 @@ size_t get_serialized_size_v2x_msg__msg__NodeXY24b(
 
 size_t max_serialized_size_v2x_msg__msg__NodeXY24b(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -68,6 +70,7 @@ size_t get_serialized_size_v2x_msg__msg__NodeXY26b(
 
 size_t max_serialized_size_v2x_msg__msg__NodeXY26b(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -78,6 +81,7 @@ size_t get_serialized_size_v2x_msg__msg__NodeXY28b(
 
 size_t max_serialized_size_v2x_msg__msg__NodeXY28b(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -88,6 +92,7 @@ size_t get_serialized_size_v2x_msg__msg__NodeXY32b(
 
 size_t max_serialized_size_v2x_msg__msg__NodeXY32b(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -98,6 +103,7 @@ size_t get_serialized_size_v2x_msg__msg__Nodellmd64b(
 
 size_t max_serialized_size_v2x_msg__msg__Nodellmd64b(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -350,6 +356,7 @@ static uint32_t _NodeOffsetPointXY__get_serialized_size(const void * untyped_ros
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_v2x_msg
 size_t max_serialized_size_v2x_msg__msg__NodeOffsetPointXY(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment)
 {
   size_t initial_alignment = current_alignment;
@@ -358,7 +365,9 @@ size_t max_serialized_size_v2x_msg__msg__NodeOffsetPointXY(
   const size_t wchar_size = 4;
   (void)padding;
   (void)wchar_size;
-  (void)full_bounded;
+
+  full_bounded = true;
+  is_plain = true;
 
   // member: nodexy1
   {
@@ -366,9 +375,13 @@ size_t max_serialized_size_v2x_msg__msg__NodeOffsetPointXY(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__NodeXY22b(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: nodexy2
@@ -377,9 +390,13 @@ size_t max_serialized_size_v2x_msg__msg__NodeOffsetPointXY(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__NodeXY24b(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: nodexy3
@@ -388,9 +405,13 @@ size_t max_serialized_size_v2x_msg__msg__NodeOffsetPointXY(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__NodeXY26b(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: nodexy4
@@ -399,9 +420,13 @@ size_t max_serialized_size_v2x_msg__msg__NodeOffsetPointXY(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__NodeXY28b(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: nodexy5
@@ -410,9 +435,13 @@ size_t max_serialized_size_v2x_msg__msg__NodeOffsetPointXY(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__NodeXY32b(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: nodelatlon
@@ -421,19 +450,32 @@ size_t max_serialized_size_v2x_msg__msg__NodeOffsetPointXY(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__Nodellmd64b(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
 
   return current_alignment - initial_alignment;
 }
 
-static size_t _NodeOffsetPointXY__max_serialized_size(bool & full_bounded)
+static size_t _NodeOffsetPointXY__max_serialized_size(char & bounds_info)
 {
-  return max_serialized_size_v2x_msg__msg__NodeOffsetPointXY(
-    full_bounded, 0);
+  bool full_bounded;
+  bool is_plain;
+  size_t ret_val;
+
+  ret_val = max_serialized_size_v2x_msg__msg__NodeOffsetPointXY(
+    full_bounded, is_plain, 0);
+
+  bounds_info =
+    is_plain ? ROSIDL_TYPESUPPORT_FASTRTPS_PLAIN_TYPE :
+    full_bounded ? ROSIDL_TYPESUPPORT_FASTRTPS_BOUNDED_TYPE : ROSIDL_TYPESUPPORT_FASTRTPS_UNBOUNDED_TYPE;
+  return ret_val;
 }
 
 

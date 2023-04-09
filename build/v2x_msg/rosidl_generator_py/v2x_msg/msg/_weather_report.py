@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -132,7 +134,7 @@ class WeatherReport(metaclass=Metaclass_WeatherReport):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def israining(self):
         """Message field 'israining'."""
         return self._israining
@@ -147,7 +149,7 @@ class WeatherReport(metaclass=Metaclass_WeatherReport):
                 "The 'israining' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._israining = value
 
-    @property
+    @builtins.property
     def rainrate(self):
         """Message field 'rainrate'."""
         return self._rainrate
@@ -162,7 +164,7 @@ class WeatherReport(metaclass=Metaclass_WeatherReport):
                 "The 'rainrate' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._rainrate = value
 
-    @property
+    @builtins.property
     def precipsituation(self):
         """Message field 'precipsituation'."""
         return self._precipsituation
@@ -177,7 +179,7 @@ class WeatherReport(metaclass=Metaclass_WeatherReport):
                 "The 'precipsituation' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._precipsituation = value
 
-    @property
+    @builtins.property
     def solarradiation(self):
         """Message field 'solarradiation'."""
         return self._solarradiation
@@ -192,7 +194,7 @@ class WeatherReport(metaclass=Metaclass_WeatherReport):
                 "The 'solarradiation' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._solarradiation = value
 
-    @property
+    @builtins.property
     def friction(self):
         """Message field 'friction'."""
         return self._friction

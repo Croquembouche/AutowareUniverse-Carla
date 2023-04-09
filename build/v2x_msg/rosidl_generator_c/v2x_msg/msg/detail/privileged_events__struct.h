@@ -21,7 +21,7 @@ extern "C"
 // Member 'event'
 #include "rosidl_runtime_c/string.h"
 
-// Struct defined in msg/PrivilegedEvents in the package v2x_msg.
+/// Struct defined in msg/PrivilegedEvents in the package v2x_msg.
 typedef struct v2x_msg__msg__PrivilegedEvents
 {
   int64_t notused;

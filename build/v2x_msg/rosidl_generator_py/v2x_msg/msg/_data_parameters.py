@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -126,7 +128,7 @@ class DataParameters(metaclass=Metaclass_DataParameters):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def processmethod(self):
         """Message field 'processmethod'."""
         return self._processmethod
@@ -139,7 +141,7 @@ class DataParameters(metaclass=Metaclass_DataParameters):
                 "The 'processmethod' field must be of type 'str'"
         self._processmethod = value
 
-    @property
+    @builtins.property
     def processagency(self):
         """Message field 'processagency'."""
         return self._processagency
@@ -152,7 +154,7 @@ class DataParameters(metaclass=Metaclass_DataParameters):
                 "The 'processagency' field must be of type 'str'"
         self._processagency = value
 
-    @property
+    @builtins.property
     def lastcheckeddate(self):
         """Message field 'lastcheckeddate'."""
         return self._lastcheckeddate
@@ -165,7 +167,7 @@ class DataParameters(metaclass=Metaclass_DataParameters):
                 "The 'lastcheckeddate' field must be of type 'str'"
         self._lastcheckeddate = value
 
-    @property
+    @builtins.property
     def geoidused(self):
         """Message field 'geoidused'."""
         return self._geoidused

@@ -57,6 +57,24 @@ void * get_function__ITIScodesandtext__item(void * untyped_member, size_t index)
   return &member[index];
 }
 
+void fetch_function__ITIScodesandtext__item(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const v2x_msg::msg::ITIScodesandtextcontent *>(
+    get_const_function__ITIScodesandtext__item(untyped_member, index));
+  auto & value = *reinterpret_cast<v2x_msg::msg::ITIScodesandtextcontent *>(untyped_value);
+  value = item;
+}
+
+void assign_function__ITIScodesandtext__item(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<v2x_msg::msg::ITIScodesandtextcontent *>(
+    get_function__ITIScodesandtext__item(untyped_member, index));
+  const auto & value = *reinterpret_cast<const v2x_msg::msg::ITIScodesandtextcontent *>(untyped_value);
+  item = value;
+}
+
 void resize_function__ITIScodesandtext__item(void * untyped_member, size_t size)
 {
   auto * member =
@@ -78,6 +96,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ITIScodesandt
     size_function__ITIScodesandtext__item,  // size() function pointer
     get_const_function__ITIScodesandtext__item,  // get_const(index) function pointer
     get_function__ITIScodesandtext__item,  // get(index) function pointer
+    fetch_function__ITIScodesandtext__item,  // fetch(index, &value) function pointer
+    assign_function__ITIScodesandtext__item,  // assign(index, value) function pointer
     resize_function__ITIScodesandtext__item  // resize(index) function pointer
   }
 };

@@ -196,7 +196,7 @@ PyObject * v2x_msg__msg__tim__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->urlb.data,
       strlen(ros_message->urlb.data),
-      "strict");
+      "replace");
     if (!field) {
       return NULL;
     }

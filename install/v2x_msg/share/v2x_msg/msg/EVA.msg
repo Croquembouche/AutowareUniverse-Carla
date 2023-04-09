@@ -1,10 +1,1 @@
-int64 timestamp
-string id
-RSA rsamsg
-int64 responsetype
-EmergencyDetails details
-int64 mass
-int64 basictype
-int64 vehicletype
-int64 responseequip
-int64 respondertype
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/EVA.msg

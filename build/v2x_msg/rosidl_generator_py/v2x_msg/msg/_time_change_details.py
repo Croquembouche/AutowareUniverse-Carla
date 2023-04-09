@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -138,7 +140,7 @@ class TimeChangeDetails(metaclass=Metaclass_TimeChangeDetails):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def startime(self):
         """Message field 'startime'."""
         return self._startime
@@ -153,7 +155,7 @@ class TimeChangeDetails(metaclass=Metaclass_TimeChangeDetails):
                 "The 'startime' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._startime = value
 
-    @property
+    @builtins.property
     def minendtime(self):
         """Message field 'minendtime'."""
         return self._minendtime
@@ -168,7 +170,7 @@ class TimeChangeDetails(metaclass=Metaclass_TimeChangeDetails):
                 "The 'minendtime' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._minendtime = value
 
-    @property
+    @builtins.property
     def maxendtime(self):
         """Message field 'maxendtime'."""
         return self._maxendtime
@@ -183,7 +185,7 @@ class TimeChangeDetails(metaclass=Metaclass_TimeChangeDetails):
                 "The 'maxendtime' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._maxendtime = value
 
-    @property
+    @builtins.property
     def likelytime(self):
         """Message field 'likelytime'."""
         return self._likelytime
@@ -198,7 +200,7 @@ class TimeChangeDetails(metaclass=Metaclass_TimeChangeDetails):
                 "The 'likelytime' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._likelytime = value
 
-    @property
+    @builtins.property
     def confidence(self):
         """Message field 'confidence'."""
         return self._confidence
@@ -213,7 +215,7 @@ class TimeChangeDetails(metaclass=Metaclass_TimeChangeDetails):
                 "The 'confidence' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._confidence = value
 
-    @property
+    @builtins.property
     def nexttime(self):
         """Message field 'nexttime'."""
         return self._nexttime

@@ -27,7 +27,7 @@ extern "C"
 // Member 'vehicleclass'
 #include "v2x_msg/msg/detail/vehicle_class__struct.h"
 
-// Struct defined in msg/VehicleIdent in the package v2x_msg.
+/// Struct defined in msg/VehicleIdent in the package v2x_msg.
 typedef struct v2x_msg__msg__VehicleIdent
 {
   rosidl_runtime_c__String name;

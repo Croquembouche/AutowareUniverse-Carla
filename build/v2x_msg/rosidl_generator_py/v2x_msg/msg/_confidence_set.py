@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -159,7 +161,7 @@ class ConfidenceSet(metaclass=Metaclass_ConfidenceSet):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def accelconfidence(self):
         """Message field 'accelconfidence'."""
         return self._accelconfidence
@@ -173,7 +175,7 @@ class ConfidenceSet(metaclass=Metaclass_ConfidenceSet):
                 "The 'accelconfidence' field must be a sub message of type 'AccelSteerYawRateConfidence'"
         self._accelconfidence = value
 
-    @property
+    @builtins.property
     def speedconfidence(self):
         """Message field 'speedconfidence'."""
         return self._speedconfidence
@@ -187,7 +189,7 @@ class ConfidenceSet(metaclass=Metaclass_ConfidenceSet):
                 "The 'speedconfidence' field must be a sub message of type 'SpeedandHeadingandThrottleConfidence'"
         self._speedconfidence = value
 
-    @property
+    @builtins.property
     def timeconfidence(self):
         """Message field 'timeconfidence'."""
         return self._timeconfidence
@@ -202,7 +204,7 @@ class ConfidenceSet(metaclass=Metaclass_ConfidenceSet):
                 "The 'timeconfidence' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._timeconfidence = value
 
-    @property
+    @builtins.property
     def posconfidence(self):
         """Message field 'posconfidence'."""
         return self._posconfidence
@@ -216,7 +218,7 @@ class ConfidenceSet(metaclass=Metaclass_ConfidenceSet):
                 "The 'posconfidence' field must be a sub message of type 'PositionConfidenceSet'"
         self._posconfidence = value
 
-    @property
+    @builtins.property
     def steerconfidence(self):
         """Message field 'steerconfidence'."""
         return self._steerconfidence
@@ -231,7 +233,7 @@ class ConfidenceSet(metaclass=Metaclass_ConfidenceSet):
                 "The 'steerconfidence' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._steerconfidence = value
 
-    @property
+    @builtins.property
     def headingconfidence(self):
         """Message field 'headingconfidence'."""
         return self._headingconfidence
@@ -246,7 +248,7 @@ class ConfidenceSet(metaclass=Metaclass_ConfidenceSet):
                 "The 'headingconfidence' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._headingconfidence = value
 
-    @property
+    @builtins.property
     def throttleconfidence(self):
         """Message field 'throttleconfidence'."""
         return self._throttleconfidence

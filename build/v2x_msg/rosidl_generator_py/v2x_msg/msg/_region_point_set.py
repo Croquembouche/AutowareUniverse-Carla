@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -129,7 +131,7 @@ class RegionPointSet(metaclass=Metaclass_RegionPointSet):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def anchor(self):
         """Message field 'anchor'."""
         return self._anchor
@@ -143,7 +145,7 @@ class RegionPointSet(metaclass=Metaclass_RegionPointSet):
                 "The 'anchor' field must be a sub message of type 'Position3D'"
         self._anchor = value
 
-    @property
+    @builtins.property
     def scale(self):
         """Message field 'scale'."""
         return self._scale
@@ -158,7 +160,7 @@ class RegionPointSet(metaclass=Metaclass_RegionPointSet):
                 "The 'scale' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._scale = value
 
-    @property
+    @builtins.property
     def nodelist(self):
         """Message field 'nodelist'."""
         return self._nodelist

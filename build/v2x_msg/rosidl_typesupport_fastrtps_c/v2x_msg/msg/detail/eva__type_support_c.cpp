@@ -46,6 +46,7 @@ size_t get_serialized_size_v2x_msg__msg__EmergencyDetails(
 
 size_t max_serialized_size_v2x_msg__msg__EmergencyDetails(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -56,6 +57,7 @@ size_t get_serialized_size_v2x_msg__msg__RSA(
 
 size_t max_serialized_size_v2x_msg__msg__RSA(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -326,6 +328,7 @@ static uint32_t _EVA__get_serialized_size(const void * untyped_ros_message)
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_v2x_msg
 size_t max_serialized_size_v2x_msg__msg__EVA(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment)
 {
   size_t initial_alignment = current_alignment;
@@ -334,7 +337,9 @@ size_t max_serialized_size_v2x_msg__msg__EVA(
   const size_t wchar_size = 4;
   (void)padding;
   (void)wchar_size;
-  (void)full_bounded;
+
+  full_bounded = true;
+  is_plain = true;
 
   // member: timestamp
   {
@@ -348,6 +353,7 @@ size_t max_serialized_size_v2x_msg__msg__EVA(
     size_t array_size = 1;
 
     full_bounded = false;
+    is_plain = false;
     for (size_t index = 0; index < array_size; ++index) {
       current_alignment += padding +
         eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
@@ -360,9 +366,13 @@ size_t max_serialized_size_v2x_msg__msg__EVA(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__RSA(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: responsetype
@@ -378,9 +388,13 @@ size_t max_serialized_size_v2x_msg__msg__EVA(
 
 
     for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
       current_alignment +=
         max_serialized_size_v2x_msg__msg__EmergencyDetails(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: mass
@@ -422,10 +436,19 @@ size_t max_serialized_size_v2x_msg__msg__EVA(
   return current_alignment - initial_alignment;
 }
 
-static size_t _EVA__max_serialized_size(bool & full_bounded)
+static size_t _EVA__max_serialized_size(char & bounds_info)
 {
-  return max_serialized_size_v2x_msg__msg__EVA(
-    full_bounded, 0);
+  bool full_bounded;
+  bool is_plain;
+  size_t ret_val;
+
+  ret_val = max_serialized_size_v2x_msg__msg__EVA(
+    full_bounded, is_plain, 0);
+
+  bounds_info =
+    is_plain ? ROSIDL_TYPESUPPORT_FASTRTPS_PLAIN_TYPE :
+    full_bounded ? ROSIDL_TYPESUPPORT_FASTRTPS_BOUNDED_TYPE : ROSIDL_TYPESUPPORT_FASTRTPS_UNBOUNDED_TYPE;
+  return ret_val;
 }
 
 

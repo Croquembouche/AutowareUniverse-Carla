@@ -5,12 +5,14 @@
 #ifndef V2X_MSG__MSG__DETAIL__RTCM__TRAITS_HPP_
 #define V2X_MSG__MSG__DETAIL__RTCM__TRAITS_HPP_
 
-#include "v2x_msg/msg/detail/rtcm__struct.hpp"
 #include <stdint.h>
-#include <rosidl_runtime_cpp/traits.hpp>
+
 #include <sstream>
 #include <string>
 #include <type_traits>
+
+#include "v2x_msg/msg/detail/rtcm__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
 // Member 'anchorpoint'
@@ -18,11 +20,73 @@
 // Member 'rtcmheader'
 #include "v2x_msg/msg/detail/rtc_mheader__traits.hpp"
 
-namespace rosidl_generator_traits
+namespace v2x_msg
 {
 
-inline void to_yaml(
-  const v2x_msg::msg::RTCM & msg,
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const RTCM & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: msgcnt
+  {
+    out << "msgcnt: ";
+    rosidl_generator_traits::value_to_yaml(msg.msgcnt, out);
+    out << ", ";
+  }
+
+  // member: rev
+  {
+    out << "rev: ";
+    rosidl_generator_traits::value_to_yaml(msg.rev, out);
+    out << ", ";
+  }
+
+  // member: timestamp
+  {
+    out << "timestamp: ";
+    rosidl_generator_traits::value_to_yaml(msg.timestamp, out);
+    out << ", ";
+  }
+
+  // member: anchorpoint
+  {
+    out << "anchorpoint: ";
+    to_flow_style_yaml(msg.anchorpoint, out);
+    out << ", ";
+  }
+
+  // member: rtcmheader
+  {
+    out << "rtcmheader: ";
+    to_flow_style_yaml(msg.rtcmheader, out);
+    out << ", ";
+  }
+
+  // member: msgs
+  {
+    if (msg.msgs.size() == 0) {
+      out << "msgs: []";
+    } else {
+      out << "msgs: [";
+      size_t pending_items = msg.msgs.size();
+      for (auto item : msg.msgs) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const RTCM & msg,
   std::ostream & out, size_t indentation = 0)
 {
   // member: msgcnt
@@ -31,7 +95,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "msgcnt: ";
-    value_to_yaml(msg.msgcnt, out);
+    rosidl_generator_traits::value_to_yaml(msg.msgcnt, out);
     out << "\n";
   }
 
@@ -41,7 +105,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "rev: ";
-    value_to_yaml(msg.rev, out);
+    rosidl_generator_traits::value_to_yaml(msg.rev, out);
     out << "\n";
   }
 
@@ -51,7 +115,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "timestamp: ";
-    value_to_yaml(msg.timestamp, out);
+    rosidl_generator_traits::value_to_yaml(msg.timestamp, out);
     out << "\n";
   }
 
@@ -61,7 +125,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "anchorpoint:\n";
-    to_yaml(msg.anchorpoint, out, indentation + 2);
+    to_block_style_yaml(msg.anchorpoint, out, indentation + 2);
   }
 
   // member: rtcmheader
@@ -70,7 +134,7 @@ inline void to_yaml(
       out << std::string(indentation, ' ');
     }
     out << "rtcmheader:\n";
-    to_yaml(msg.rtcmheader, out, indentation + 2);
+    to_block_style_yaml(msg.rtcmheader, out, indentation + 2);
   }
 
   // member: msgs
@@ -87,18 +151,43 @@ inline void to_yaml(
           out << std::string(indentation, ' ');
         }
         out << "- ";
-        value_to_yaml(item, out);
+        rosidl_generator_traits::value_to_yaml(item, out);
         out << "\n";
       }
     }
   }
 }  // NOLINT(readability/fn_size)
 
-inline std::string to_yaml(const v2x_msg::msg::RTCM & msg)
+inline std::string to_yaml(const RTCM & msg, bool use_flow_style = false)
 {
   std::ostringstream out;
-  to_yaml(msg, out);
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
   return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace v2x_msg
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use v2x_msg::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const v2x_msg::msg::RTCM & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  v2x_msg::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use v2x_msg::msg::to_yaml() instead")]]
+inline std::string to_yaml(const v2x_msg::msg::RTCM & msg)
+{
+  return v2x_msg::msg::to_yaml(msg);
 }
 
 template<>

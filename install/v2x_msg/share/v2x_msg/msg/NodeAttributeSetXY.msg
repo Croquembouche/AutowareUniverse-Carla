@@ -1,6 +1,1 @@
-int64[] localnode
-int64[] disabled
-int64[] enabled
-LaneDataAttribute[] data 
-int64 dwidth
-int64 delevation
+/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/NodeAttributeSetXY.msg
