@@ -1,0 +1,25 @@
+[1.499s] Invoking command in '/home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure': PYTHONPATH=/home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/prefix_override:/home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build
+[1.919s] running develop
+[2.055s] Invoked command in '/home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure' returned '0': PYTHONPATH=/home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/prefix_override:/home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build
+[2.057s] Invoking command in '/home/carla/Github/C-V2X-Autoware-Carla/src/infrastructure': PYTHONPATH=/home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/prefix_override:/home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/infrastructure build --build-base /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build install --record /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/install.log --single-version-externally-managed
+[2.481s] running egg_info
+[2.481s] writing ../../build/infrastructure/infrastructure.egg-info/PKG-INFO
+[2.481s] writing dependency_links to ../../build/infrastructure/infrastructure.egg-info/dependency_links.txt
+[2.482s] writing entry points to ../../build/infrastructure/infrastructure.egg-info/entry_points.txt
+[2.482s] writing requirements to ../../build/infrastructure/infrastructure.egg-info/requires.txt
+[2.482s] writing top-level names to ../../build/infrastructure/infrastructure.egg-info/top_level.txt
+[2.506s] reading manifest file '../../build/infrastructure/infrastructure.egg-info/SOURCES.txt'
+[2.507s] writing manifest file '../../build/infrastructure/infrastructure.egg-info/SOURCES.txt'
+[2.507s] running build
+[2.507s] running build_py
+[2.507s] running install
+[2.508s] running install_lib
+[2.510s] running install_data
+[2.510s] running install_egg_info
+[2.512s] removing '/home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages/infrastructure-0.0.0-py3.8.egg-info' (and everything under it)
+[2.513s] Copying ../../build/infrastructure/infrastructure.egg-info to /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages/infrastructure-0.0.0-py3.8.egg-info
+[2.513s] running install_scripts
+[2.532s] Installing MAP script to /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/infrastructure
+[2.533s] Installing SSM script to /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/infrastructure
+[2.533s] writing list of installed files to '/home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/install.log'
+[2.552s] Invoked command in '/home/carla/Github/C-V2X-Autoware-Carla/src/infrastructure' returned '0': PYTHONPATH=/home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/prefix_override:/home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/infrastructure build --build-base /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build install --record /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/install.log --single-version-externally-managed

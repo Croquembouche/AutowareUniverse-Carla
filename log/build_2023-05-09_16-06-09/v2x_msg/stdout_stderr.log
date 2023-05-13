@@ -1,0 +1,54 @@
+[  0%] Built target v2x_msg__cpp
+[  0%] Built target ament_cmake_python_symlink_v2x_msg
+[ 12%] Built target v2x_msg__rosidl_generator_c
+[ 24%] Built target v2x_msg__rosidl_typesupport_cpp
+[ 37%] Built target v2x_msg__rosidl_typesupport_introspection_cpp
+[ 49%] Built target v2x_msg__rosidl_typesupport_fastrtps_cpp
+[ 62%] Built target v2x_msg__rosidl_typesupport_c
+[ 75%] Built target v2x_msg__rosidl_typesupport_fastrtps_c
+[ 88%] Built target v2x_msg__rosidl_typesupport_introspection_c
+[ 88%] Built target v2x_msg
+[ 88%] Built target v2x_msg__py
+[100%] Built target v2x_msg__rosidl_generator_py
+[100%] Built target v2x_msg__rosidl_typesupport_fastrtps_c__pyext
+[100%] Built target v2x_msg__rosidl_typesupport_c__pyext
+[100%] Built target v2x_msg__rosidl_typesupport_introspection_c__pyext
+running egg_info
+writing v2x_msg.egg-info/PKG-INFO
+writing dependency_links to v2x_msg.egg-info/dependency_links.txt
+writing top-level names to v2x_msg.egg-info/top_level.txt
+reading manifest file 'v2x_msg.egg-info/SOURCES.txt'
+writing manifest file 'v2x_msg.egg-info/SOURCES.txt'
+[100%] Built target ament_cmake_python_build_v2x_msg_egg
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_parallel_executor/executor/parallel.py", line 67, in execute
+    loop.run_until_complete(future)
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 603, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 570, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 1823, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/usr/lib/python3.8/selectors.py", line 468, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__
+    rc = await self.task(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__
+    return await task_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_cmake/build.py", line 59, in build
+    rc = await extension.build(
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/build.py", line 110, in build
+    if await has_target(args.build_base, 'install'):
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/__init__.py", line 57, in has_target
+    return target in await get_makefile_targets(path)
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/__init__.py", line 77, in get_makefile_targets
+    output = await check_output([
+  File "/usr/lib/python3/dist-packages/colcon_core/subprocess.py", line 128, in check_output
+    assert not rc, f'Expected {args} to pass: {stderr_data}'
+AssertionError: Expected ['/usr/bin/cmake', '--build', '/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg', '--target', 'help'] to pass: make: *** [Makefile:32022: help] Interrupt
+
