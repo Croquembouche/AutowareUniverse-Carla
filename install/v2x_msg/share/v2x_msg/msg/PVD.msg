@@ -1,1 +1,6 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/PVD.msg
+int64 timstamp
+int64 segnum
+VehicleIdent probeid
+FullPositionVector startvector
+VehicleClassification vehicletype
+Snapshot[] snapshots

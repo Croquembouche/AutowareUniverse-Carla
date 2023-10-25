@@ -1,1 +1,4 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/DataParameters.msg
+string processmethod
+string processagency
+string lastcheckeddate
+string geoidused

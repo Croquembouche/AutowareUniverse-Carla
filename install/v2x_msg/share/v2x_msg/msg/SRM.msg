@@ -1,1 +1,5 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/SRM.msg
+int64 timestamp
+int64 second
+int64 sequencenumber
+SignalRequestPackage requests
+RequestorDescription requestor

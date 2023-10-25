@@ -1,0 +1,7 @@
+msg/AutowareState.idl
+msg/ControlDiagnostic.idl
+msg/DiagnosticHeader.idl
+msg/DrivingCapability.idl
+msg/EmergencyState.idl
+msg/HazardStatus.idl
+msg/HazardStatusStamped.idl

@@ -1,1 +1,33 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/IntersectionState.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/IntersectionState.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/ConnectionManeuverAssist.idl"
+#include "v2x_msg/msg/IntersectionReferenceID.idl"
+#include "v2x_msg/msg/IntersectionStatusObject.idl"
+#include "v2x_msg/msg/LaneID.idl"
+#include "v2x_msg/msg/MovementState.idl"
+
+module v2x_msg {
+  module msg {
+    struct IntersectionState {
+      string name;
+
+      v2x_msg::msg::IntersectionReferenceID id;
+
+      int64 revision;
+
+      v2x_msg::msg::IntersectionStatusObject status;
+
+      int64 moy;
+
+      int64 timestamp;
+
+      sequence<v2x_msg::msg::LaneID> enabledlanes;
+
+      sequence<v2x_msg::msg::MovementState> states;
+
+      sequence<v2x_msg::msg::ConnectionManeuverAssist> maneuverassistlist;
+    };
+  };
+};

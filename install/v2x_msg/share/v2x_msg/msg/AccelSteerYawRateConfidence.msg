@@ -1,1 +1,3 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/AccelSteerYawRateConfidence.msg
+int64 yawrate
+int64 acceleration 
+int64 steeringwheelangle

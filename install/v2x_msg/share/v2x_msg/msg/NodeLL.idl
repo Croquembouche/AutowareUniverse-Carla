@@ -1,1 +1,16 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/NodeLL.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/NodeLL.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/NodeAttributeSetLL.idl"
+#include "v2x_msg/msg/NodeOffsetPointLL.idl"
+
+module v2x_msg {
+  module msg {
+    struct NodeLL {
+      v2x_msg::msg::NodeOffsetPointLL delta;
+
+      v2x_msg::msg::NodeAttributeSetLL attributes;
+    };
+  };
+};

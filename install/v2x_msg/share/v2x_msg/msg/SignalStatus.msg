@@ -1,1 +1,3 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/SignalStatus.msg
+int64 sequencenumber
+IntersectionReferenceID id 
+SignalStatusPackage[] sigstatus

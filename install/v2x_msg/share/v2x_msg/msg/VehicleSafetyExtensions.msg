@@ -1,1 +1,4 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/VehicleSafetyExtensions.msg
+string vehicleeventflags
+PathHistory pathhistory 
+PathPrediction pathprediction 
+string texteriorlights

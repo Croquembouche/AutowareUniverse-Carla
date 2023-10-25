@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             'host_vehicle = vehicle.host_vehicle:main',
-            'remote_vehicle = vehicle.remote_vehicle:main'
+            'remote_vehicle = vehicle.remote_vehicle:main',
+            'ren_vehicle = vehicle.ren_vehicle:main' 
         ],
     },
 )

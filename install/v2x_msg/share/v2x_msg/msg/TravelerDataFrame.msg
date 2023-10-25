@@ -1,1 +1,13 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/TravelerDataFrame.msg
+int64 notused
+int64 frametype
+MsgID msgid 
+int64 startyear
+int64 starttime
+int64 durationtime
+int64 priority
+int64 notused1
+GeographicalPath[] regions
+int64 notused2
+int64 notused3
+Content content 
+string url

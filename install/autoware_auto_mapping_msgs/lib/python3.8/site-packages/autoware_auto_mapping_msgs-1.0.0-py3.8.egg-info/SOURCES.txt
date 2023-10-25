@@ -1,0 +1,12 @@
+setup.py
+autoware_auto_mapping_msgs/__init__.py
+autoware_auto_mapping_msgs.egg-info/PKG-INFO
+autoware_auto_mapping_msgs.egg-info/SOURCES.txt
+autoware_auto_mapping_msgs.egg-info/dependency_links.txt
+autoware_auto_mapping_msgs.egg-info/top_level.txt
+autoware_auto_mapping_msgs/msg/__init__.py
+autoware_auto_mapping_msgs/msg/_had_map_bin.py
+autoware_auto_mapping_msgs/msg/_had_map_segment.py
+autoware_auto_mapping_msgs/msg/_map_primitive.py
+autoware_auto_mapping_msgs/srv/__init__.py
+autoware_auto_mapping_msgs/srv/_had_map_service.py

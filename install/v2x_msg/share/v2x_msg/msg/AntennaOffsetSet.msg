@@ -1,1 +1,3 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/AntennaOffsetSet.msg
+int64 antoffsetx
+int64 antoffsety
+int64 antoffsetz

@@ -1,1 +1,3 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/RequestorPositionVector.msg
+Position3D position 
+int64 heading
+TransmissionAndSpeed speed

@@ -1,4 +1,7 @@
 import carla
+import sys
+import glob
+import os
 import numpy as np
 # -------------PyGame----------------
 import pynput
@@ -49,6 +52,13 @@ try:
 except ImportError:
     raise RuntimeError('cannot import pygame, make sure pygame package is installed')
 
+try:
+    sys.path.append(glob.glob('../carla/dist/carla-*%d.%d-%s.egg' % (
+        sys.version_info.major,
+        sys.version_info.minor,
+        'win-amd64' if os.name == 'nt' else 'linux-x86_64'))[0])
+except IndexError:
+    pass
 
 # Render object to keep and pass the PyGame surface
 class RenderObject(object):

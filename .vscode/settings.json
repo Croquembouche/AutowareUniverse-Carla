@@ -6,5 +6,6 @@
     "python.analysis.extraPaths": [
         "/home/carla/Documents/GitHub/C-V2X-Autoware-Carla/install/v2x_msg/lib/python3.8/site-packages",
         "/opt/ros/galactic/lib/python3.8/site-packages"
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }

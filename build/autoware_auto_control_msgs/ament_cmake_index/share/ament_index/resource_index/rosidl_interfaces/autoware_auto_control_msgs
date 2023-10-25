@@ -1,0 +1,4 @@
+msg/AckermannControlCommand.idl
+msg/AckermannLateralCommand.idl
+msg/HighLevelControlCommand.idl
+msg/LongitudinalCommand.idl

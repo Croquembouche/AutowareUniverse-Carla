@@ -60,7 +60,7 @@ class DefaultVehicle(Node):
         self.id = self.genVehicleID()
         # initialize lat, long, elev
         self.lat = 0
-        self.longi = 0
+        self.lon = 0
         self.elev = 0
         # initialize other vehicle info
         self.transmission = 1 # parked
@@ -97,7 +97,7 @@ class DefaultVehicle(Node):
         msg.coredata.secmark = 65535
         self.getVehicleInformation()
         msg.coredata.lat = int(self.lat*10000000)
-        msg.coredata.longitude = int(self.longi*10000000)
+        msg.coredata.longitude = int(self.lon*10000000)
         msg.coredata.elev = int(self.elev*10)
         msg.coredata.accuracy.semimajor = 65535
         msg.coredata.accuracy.semiminor = 65535
@@ -158,9 +158,9 @@ class DefaultVehicle(Node):
         vehicle_location = self.vehicle.get_location()
         vehicle_ = self.world.get_map().transform_to_geolocation(vehicle_location)
         self.lat = vehicle_.latitude
-        self.longi = vehicle_.longitude
+        self.lon = vehicle_.longitude
         self.elev = vehicle_.altitude
-        # print("current position:", self.lat, self.longi)
+        # print("current position:", self.lat, self.lon)
         # --------------- Vehicle State -----------------
         throttle = self.ego_control.throttle
         reverse = self.ego_control.reverse

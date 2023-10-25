@@ -1,1 +1,24 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/ComputedLane.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/ComputedLane.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/OffsetXaxis.idl"
+#include "v2x_msg/msg/OffsetYaxis.idl"
+
+module v2x_msg {
+  module msg {
+    struct ComputedLane {
+      int64 referencelaneid;
+
+      v2x_msg::msg::OffsetXaxis offsetxaxis;
+
+      v2x_msg::msg::OffsetYaxis offsetyaxis;
+
+      int64 rotatexy;
+
+      int64 scalexaxis;
+
+      int64 scaleyaxis;
+    };
+  };
+};

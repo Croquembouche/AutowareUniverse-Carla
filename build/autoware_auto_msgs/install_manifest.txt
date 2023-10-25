@@ -1,0 +1,13 @@
+/home/carla/Github/C-V2X-Autoware-Carla/install/autoware_auto_msgs/share/ament_index/resource_index/package_run_dependencies/autoware_auto_msgs
+/home/carla/Github/C-V2X-Autoware-Carla/install/autoware_auto_msgs/share/ament_index/resource_index/parent_prefix_path/autoware_auto_msgs
+/home/carla/Github/C-V2X-Autoware-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/environment/ament_prefix_path.dsv
+/home/carla/Github/C-V2X-Autoware-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/environment/path.dsv
+/home/carla/Github/C-V2X-Autoware-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/local_setup.bash
+/home/carla/Github/C-V2X-Autoware-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/local_setup.sh
+/home/carla/Github/C-V2X-Autoware-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/local_setup.zsh
+/home/carla/Github/C-V2X-Autoware-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/local_setup.dsv
+/home/carla/Github/C-V2X-Autoware-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/package.dsv
+/home/carla/Github/C-V2X-Autoware-Carla/install/autoware_auto_msgs/share/ament_index/resource_index/packages/autoware_auto_msgs
+/home/carla/Github/C-V2X-Autoware-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/cmake/autoware_auto_msgsConfig.cmake
+/home/carla/Github/C-V2X-Autoware-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/cmake/autoware_auto_msgsConfig-version.cmake
+/home/carla/Github/C-V2X-Autoware-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/package.xml

@@ -1,1 +1,3 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/PositionalAccuracy.msg
+int64 semimajor
+int64 semiminor
+int64 orientation

@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CMakeRelink.dir/libv2x_msg__rosidl_typesupport_cpp.so"
   "CMakeFiles/v2x_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2x_msg/msg/accel_sets__type_support.cpp.o"
   "CMakeFiles/v2x_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2x_msg/msg/accel_steer_yaw_rate_confidence__type_support.cpp.o"
   "CMakeFiles/v2x_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2x_msg/msg/acceleration_set4_way__type_support.cpp.o"

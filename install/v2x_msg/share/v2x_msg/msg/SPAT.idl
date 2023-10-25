@@ -1,1 +1,17 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/SPAT.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/SPAT.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/IntersectionState.idl"
+
+module v2x_msg {
+  module msg {
+    struct SPAT {
+      int64 timestamp;
+
+      string name;
+
+      sequence<v2x_msg::msg::IntersectionState> intersections;
+    };
+  };
+};

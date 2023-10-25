@@ -1,0 +1,21 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/autoware_auto_mapping_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/autoware_auto_mapping_msgs/msg/detail/had_map_bin__type_support.c.o"
+  "CMakeFiles/autoware_auto_mapping_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/autoware_auto_mapping_msgs/msg/detail/had_map_segment__type_support.c.o"
+  "CMakeFiles/autoware_auto_mapping_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/autoware_auto_mapping_msgs/msg/detail/map_primitive__type_support.c.o"
+  "CMakeFiles/autoware_auto_mapping_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/autoware_auto_mapping_msgs/srv/detail/had_map_service__type_support.c.o"
+  "libautoware_auto_mapping_msgs__rosidl_typesupport_introspection_c.pdb"
+  "libautoware_auto_mapping_msgs__rosidl_typesupport_introspection_c.so"
+  "rosidl_typesupport_introspection_c/autoware_auto_mapping_msgs/msg/detail/had_map_bin__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/autoware_auto_mapping_msgs/msg/detail/had_map_bin__type_support.c"
+  "rosidl_typesupport_introspection_c/autoware_auto_mapping_msgs/msg/detail/had_map_segment__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/autoware_auto_mapping_msgs/msg/detail/had_map_segment__type_support.c"
+  "rosidl_typesupport_introspection_c/autoware_auto_mapping_msgs/msg/detail/map_primitive__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/autoware_auto_mapping_msgs/msg/detail/map_primitive__type_support.c"
+  "rosidl_typesupport_introspection_c/autoware_auto_mapping_msgs/srv/detail/had_map_service__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/autoware_auto_mapping_msgs/srv/detail/had_map_service__type_support.c"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/autoware_auto_mapping_msgs__rosidl_typesupport_introspection_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

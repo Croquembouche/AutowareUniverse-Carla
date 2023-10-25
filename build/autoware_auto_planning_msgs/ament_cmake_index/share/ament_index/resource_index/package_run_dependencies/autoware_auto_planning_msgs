@@ -1,0 +1,1 @@
+autoware_auto_geometry_msgs;autoware_auto_mapping_msgs;builtin_interfaces;action_msgs;geometry_msgs;nav_msgs;std_msgs;rosidl_default_runtime;ament_lint_auto;ament_lint_common

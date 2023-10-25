@@ -1,1 +1,2 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/NodeLL.msg
+NodeOffsetPointLL delta
+NodeAttributeSetLL attributes

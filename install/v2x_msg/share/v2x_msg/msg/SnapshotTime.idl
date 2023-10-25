@@ -1,1 +1,18 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/SnapshotTime.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/SnapshotTime.msg
+// generated code does not contain a copyright notice
+
+
+module v2x_msg {
+  module msg {
+    struct SnapshotTime {
+      int64 speed1;
+
+      int64 time1;
+
+      int64 speed2;
+
+      int64 time2;
+    };
+  };
+};

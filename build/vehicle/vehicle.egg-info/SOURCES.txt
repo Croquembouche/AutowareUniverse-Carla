@@ -15,4 +15,5 @@ test/test_pep257.py
 vehicle/__init__.py
 vehicle/host_vehicle.py
 vehicle/remote_vehicle.py
+vehicle/ren_vehicle.py
 vehicle/start_multiple.py

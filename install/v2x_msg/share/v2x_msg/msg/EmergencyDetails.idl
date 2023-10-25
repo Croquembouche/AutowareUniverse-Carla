@@ -1,1 +1,23 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/EmergencyDetails.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/EmergencyDetails.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/PrivilegedEvents.idl"
+
+module v2x_msg {
+  module msg {
+    struct EmergencyDetails {
+      int64 notused;
+
+      int64 sirenuse;
+
+      int64 lightsuse;
+
+      int64 multi;
+
+      v2x_msg::msg::PrivilegedEvents events;
+
+      int64 responsetype;
+    };
+  };
+};

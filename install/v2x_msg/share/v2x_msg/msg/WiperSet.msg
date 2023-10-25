@@ -1,1 +1,4 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/WiperSet.msg
+int64 statusfront
+int64 ratefront
+int64 statusrear
+int64 raterear

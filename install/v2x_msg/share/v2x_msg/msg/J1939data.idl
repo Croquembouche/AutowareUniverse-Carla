@@ -1,1 +1,32 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/J1939data.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/J1939data.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/AxleWeight.idl"
+#include "v2x_msg/msg/TireData.idl"
+
+module v2x_msg {
+  module msg {
+    struct J1939data {
+      sequence<v2x_msg::msg::TireData> tires;
+
+      sequence<v2x_msg::msg::AxleWeight> axles;
+
+      int64 trailerweight;
+
+      int64 cargoweight;
+
+      int64 steeringaxletemperture;
+
+      int64 driveaxlelocation;
+
+      int64 driveaxleliftairpressure;
+
+      int64 driveaxletemperature;
+
+      int64 driveaxlelubpressure;
+
+      int64 steeringaxlelubepressure;
+    };
+  };
+};

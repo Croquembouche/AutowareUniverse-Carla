@@ -1,1 +1,5 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/SignalRequest.msg
+IntersectionReferenceID id 
+int64 requestid
+int64 requesttype
+IntersectionAccessPoint inboundlane
+IntersectionAccessPoint outboundlane

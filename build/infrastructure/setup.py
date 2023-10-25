@@ -1,1 +1,0 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/infrastructure/setup.py

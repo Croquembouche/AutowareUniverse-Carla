@@ -206,11 +206,6 @@ v2x_msg__rosidl_generator_py/fast:
 	$(MAKE) -f CMakeFiles/v2x_msg__rosidl_generator_py.dir/build.make CMakeFiles/v2x_msg__rosidl_generator_py.dir/build
 .PHONY : v2x_msg__rosidl_generator_py/fast
 
-# Manual pre-install relink rule for target.
-v2x_msg__rosidl_generator_py/preinstall:
-	$(MAKE) -f CMakeFiles/v2x_msg__rosidl_generator_py.dir/build.make CMakeFiles/v2x_msg__rosidl_generator_py.dir/preinstall
-.PHONY : v2x_msg__rosidl_generator_py/preinstall
-
 #=============================================================================
 # Target rules for targets named ament_cmake_python_build_v2x_msg_egg
 
@@ -249,11 +244,6 @@ v2x_msg__rosidl_typesupport_cpp: cmake_check_build_system
 v2x_msg__rosidl_typesupport_cpp/fast:
 	$(MAKE) -f CMakeFiles/v2x_msg__rosidl_typesupport_cpp.dir/build.make CMakeFiles/v2x_msg__rosidl_typesupport_cpp.dir/build
 .PHONY : v2x_msg__rosidl_typesupport_cpp/fast
-
-# Manual pre-install relink rule for target.
-v2x_msg__rosidl_typesupport_cpp/preinstall:
-	$(MAKE) -f CMakeFiles/v2x_msg__rosidl_typesupport_cpp.dir/build.make CMakeFiles/v2x_msg__rosidl_typesupport_cpp.dir/preinstall
-.PHONY : v2x_msg__rosidl_typesupport_cpp/preinstall
 
 #=============================================================================
 # Target rules for targets named v2x_msg__rosidl_typesupport_introspection_c__pyext
@@ -294,11 +284,6 @@ v2x_msg__rosidl_generator_c/fast:
 	$(MAKE) -f CMakeFiles/v2x_msg__rosidl_generator_c.dir/build.make CMakeFiles/v2x_msg__rosidl_generator_c.dir/build
 .PHONY : v2x_msg__rosidl_generator_c/fast
 
-# Manual pre-install relink rule for target.
-v2x_msg__rosidl_generator_c/preinstall:
-	$(MAKE) -f CMakeFiles/v2x_msg__rosidl_generator_c.dir/build.make CMakeFiles/v2x_msg__rosidl_generator_c.dir/preinstall
-.PHONY : v2x_msg__rosidl_generator_c/preinstall
-
 #=============================================================================
 # Target rules for targets named v2x_msg__rosidl_typesupport_introspection_c
 
@@ -312,11 +297,6 @@ v2x_msg__rosidl_typesupport_introspection_c/fast:
 	$(MAKE) -f CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/build
 .PHONY : v2x_msg__rosidl_typesupport_introspection_c/fast
 
-# Manual pre-install relink rule for target.
-v2x_msg__rosidl_typesupport_introspection_c/preinstall:
-	$(MAKE) -f CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/v2x_msg__rosidl_typesupport_introspection_c.dir/preinstall
-.PHONY : v2x_msg__rosidl_typesupport_introspection_c/preinstall
-
 #=============================================================================
 # Target rules for targets named v2x_msg__rosidl_typesupport_fastrtps_c
 
@@ -329,11 +309,6 @@ v2x_msg__rosidl_typesupport_fastrtps_c: cmake_check_build_system
 v2x_msg__rosidl_typesupport_fastrtps_c/fast:
 	$(MAKE) -f CMakeFiles/v2x_msg__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/v2x_msg__rosidl_typesupport_fastrtps_c.dir/build
 .PHONY : v2x_msg__rosidl_typesupport_fastrtps_c/fast
-
-# Manual pre-install relink rule for target.
-v2x_msg__rosidl_typesupport_fastrtps_c/preinstall:
-	$(MAKE) -f CMakeFiles/v2x_msg__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/v2x_msg__rosidl_typesupport_fastrtps_c.dir/preinstall
-.PHONY : v2x_msg__rosidl_typesupport_fastrtps_c/preinstall
 
 #=============================================================================
 # Target rules for targets named v2x_msg
@@ -374,11 +349,6 @@ v2x_msg__rosidl_typesupport_introspection_cpp/fast:
 	$(MAKE) -f CMakeFiles/v2x_msg__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/v2x_msg__rosidl_typesupport_introspection_cpp.dir/build
 .PHONY : v2x_msg__rosidl_typesupport_introspection_cpp/fast
 
-# Manual pre-install relink rule for target.
-v2x_msg__rosidl_typesupport_introspection_cpp/preinstall:
-	$(MAKE) -f CMakeFiles/v2x_msg__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/v2x_msg__rosidl_typesupport_introspection_cpp.dir/preinstall
-.PHONY : v2x_msg__rosidl_typesupport_introspection_cpp/preinstall
-
 #=============================================================================
 # Target rules for targets named v2x_msg__rosidl_typesupport_c
 
@@ -391,11 +361,6 @@ v2x_msg__rosidl_typesupport_c: cmake_check_build_system
 v2x_msg__rosidl_typesupport_c/fast:
 	$(MAKE) -f CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/build.make CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/build
 .PHONY : v2x_msg__rosidl_typesupport_c/fast
-
-# Manual pre-install relink rule for target.
-v2x_msg__rosidl_typesupport_c/preinstall:
-	$(MAKE) -f CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/build.make CMakeFiles/v2x_msg__rosidl_typesupport_c.dir/preinstall
-.PHONY : v2x_msg__rosidl_typesupport_c/preinstall
 
 #=============================================================================
 # Target rules for targets named v2x_msg__rosidl_typesupport_fastrtps_cpp
@@ -410,23 +375,18 @@ v2x_msg__rosidl_typesupport_fastrtps_cpp/fast:
 	$(MAKE) -f CMakeFiles/v2x_msg__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/v2x_msg__rosidl_typesupport_fastrtps_cpp.dir/build
 .PHONY : v2x_msg__rosidl_typesupport_fastrtps_cpp/fast
 
-# Manual pre-install relink rule for target.
-v2x_msg__rosidl_typesupport_fastrtps_cpp/preinstall:
-	$(MAKE) -f CMakeFiles/v2x_msg__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/v2x_msg__rosidl_typesupport_fastrtps_cpp.dir/preinstall
-.PHONY : v2x_msg__rosidl_typesupport_fastrtps_cpp/preinstall
-
 #=============================================================================
-# Target rules for targets named ament_cmake_python_symlink_v2x_msg
+# Target rules for targets named ament_cmake_python_copy_v2x_msg
 
 # Build rule for target.
-ament_cmake_python_symlink_v2x_msg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_v2x_msg
-.PHONY : ament_cmake_python_symlink_v2x_msg
+ament_cmake_python_copy_v2x_msg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ament_cmake_python_copy_v2x_msg
+.PHONY : ament_cmake_python_copy_v2x_msg
 
 # fast build rule for target.
-ament_cmake_python_symlink_v2x_msg/fast:
-	$(MAKE) -f CMakeFiles/ament_cmake_python_symlink_v2x_msg.dir/build.make CMakeFiles/ament_cmake_python_symlink_v2x_msg.dir/build
-.PHONY : ament_cmake_python_symlink_v2x_msg/fast
+ament_cmake_python_copy_v2x_msg/fast:
+	$(MAKE) -f CMakeFiles/ament_cmake_python_copy_v2x_msg.dir/build.make CMakeFiles/ament_cmake_python_copy_v2x_msg.dir/build
+.PHONY : ament_cmake_python_copy_v2x_msg/fast
 
 #=============================================================================
 # Target rules for targets named v2x_msg__py
@@ -30791,7 +30751,7 @@ help:
 	@echo "... v2x_msg__rosidl_typesupport_introspection_cpp"
 	@echo "... v2x_msg__rosidl_typesupport_c"
 	@echo "... v2x_msg__rosidl_typesupport_fastrtps_cpp"
-	@echo "... ament_cmake_python_symlink_v2x_msg"
+	@echo "... ament_cmake_python_copy_v2x_msg"
 	@echo "... v2x_msg__py"
 	@echo "... rosidl_generator_c/v2x_msg/msg/detail/accel_sets__functions.o"
 	@echo "... rosidl_generator_c/v2x_msg/msg/detail/accel_sets__functions.i"

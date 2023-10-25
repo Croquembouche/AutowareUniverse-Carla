@@ -1,1 +1,27 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake
+# generated from ament_cmake_export_targets/cmake/ament_cmake_export_targets-extras.cmake.in
+
+set(_exported_targets "export_v2x_msg__rosidl_generator_c;v2x_msg__rosidl_typesupport_introspection_c;export_v2x_msg__rosidl_typesupport_fastrtps_c;v2x_msg__rosidl_typesupport_c;export_v2x_msg__rosidl_generator_cpp;v2x_msg__rosidl_typesupport_introspection_cpp;export_v2x_msg__rosidl_typesupport_fastrtps_cpp;v2x_msg__rosidl_typesupport_cpp;export_v2x_msg__rosidl_generator_py")
+
+# include all exported targets
+if(NOT _exported_targets STREQUAL "")
+  foreach(_target ${_exported_targets})
+    set(_export_file "${v2x_msg_DIR}/${_target}Export.cmake")
+    include("${_export_file}")
+
+    # extract the target names associated with the export
+    set(_regex "foreach\\((_cmake)?_expected_?[Tt]arget (IN ITEMS )?(.+)\\)")
+    file(
+      STRINGS "${_export_file}" _foreach_targets
+      REGEX "${_regex}")
+    list(LENGTH _foreach_targets _matches)
+    if(NOT _matches EQUAL 1)
+      message(FATAL_ERROR
+        "Failed to find exported target names in '${_export_file}'")
+    endif()
+    string(REGEX REPLACE "${_regex}" "\\3" _targets "${_foreach_targets}")
+    string(REPLACE " " ";" _targets "${_targets}")
+    list(LENGTH _targets _length)
+
+    list(APPEND v2x_msg_TARGETS ${_targets})
+  endforeach()
+endif()

@@ -1,0 +1,31 @@
+{
+  "package_name": "autoware_auto_control_msgs",
+  "output_dir": "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_control_msgs/rosidl_typesupport_introspection_cpp/autoware_auto_control_msgs",
+  "template_dir": "/home/carla/ros2_humble/install/rosidl_typesupport_introspection_cpp/share/rosidl_typesupport_introspection_cpp/resource",
+  "idl_tuples": [
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_auto_control_msgs:msg/AckermannControlCommand.idl",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_auto_control_msgs:msg/AckermannLateralCommand.idl",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_auto_control_msgs:msg/HighLevelControlCommand.idl",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_auto_control_msgs:msg/LongitudinalCommand.idl"
+  ],
+  "ros_interface_dependencies": [
+    "builtin_interfaces:/home/carla/ros2_humble/install/builtin_interfaces/share/builtin_interfaces/msg/Duration.idl",
+    "builtin_interfaces:/home/carla/ros2_humble/install/builtin_interfaces/share/builtin_interfaces/msg/Time.idl"
+  ],
+  "target_dependencies": [
+    "/home/carla/ros2_humble/install/rosidl_typesupport_introspection_cpp/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp",
+    "/home/carla/ros2_humble/install/rosidl_typesupport_introspection_cpp/lib/python3.8/site-packages/rosidl_typesupport_introspection_cpp/__init__.py",
+    "/home/carla/ros2_humble/install/rosidl_typesupport_introspection_cpp/share/rosidl_typesupport_introspection_cpp/resource/idl__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/home/carla/ros2_humble/install/rosidl_typesupport_introspection_cpp/share/rosidl_typesupport_introspection_cpp/resource/idl__type_support.cpp.em",
+    "/home/carla/ros2_humble/install/rosidl_typesupport_introspection_cpp/share/rosidl_typesupport_introspection_cpp/resource/msg__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/home/carla/ros2_humble/install/rosidl_typesupport_introspection_cpp/share/rosidl_typesupport_introspection_cpp/resource/msg__type_support.cpp.em",
+    "/home/carla/ros2_humble/install/rosidl_typesupport_introspection_cpp/share/rosidl_typesupport_introspection_cpp/resource/srv__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/home/carla/ros2_humble/install/rosidl_typesupport_introspection_cpp/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_auto_control_msgs/msg/AckermannControlCommand.idl",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_auto_control_msgs/msg/AckermannLateralCommand.idl",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_auto_control_msgs/msg/HighLevelControlCommand.idl",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_auto_control_msgs/msg/LongitudinalCommand.idl",
+    "/home/carla/ros2_humble/install/builtin_interfaces/share/builtin_interfaces/msg/Duration.idl",
+    "/home/carla/ros2_humble/install/builtin_interfaces/share/builtin_interfaces/msg/Time.idl"
+  ]
+}

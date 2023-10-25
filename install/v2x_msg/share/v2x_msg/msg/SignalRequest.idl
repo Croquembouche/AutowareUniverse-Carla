@@ -1,1 +1,22 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/SignalRequest.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/SignalRequest.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/IntersectionAccessPoint.idl"
+#include "v2x_msg/msg/IntersectionReferenceID.idl"
+
+module v2x_msg {
+  module msg {
+    struct SignalRequest {
+      v2x_msg::msg::IntersectionReferenceID id;
+
+      int64 requestid;
+
+      int64 requesttype;
+
+      v2x_msg::msg::IntersectionAccessPoint inboundlane;
+
+      v2x_msg::msg::IntersectionAccessPoint outboundlane;
+    };
+  };
+};

@@ -1,1 +1,4 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/SSM.msg
+int64 timestamp
+int64 second
+int64 sequencenumber
+SignalStatus[] status

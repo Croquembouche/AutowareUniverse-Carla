@@ -1,1 +1,7 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/NodeOffsetPointLL.msg
+NodeLL24B nodell1
+NodeLL28B nodell2
+NodeLL32B nodell3
+NodeLL36B nodell4
+NodeLL44B nodell5
+NodeLL48B nodell6
+Nodellmd64b nodelatlon

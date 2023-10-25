@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CMakeRelink.dir/libv2x_msg__rosidl_generator_c.so"
   "CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/accel_sets__functions.c.o"
   "CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/accel_steer_yaw_rate_confidence__functions.c.o"
   "CMakeFiles/v2x_msg__rosidl_generator_c.dir/rosidl_generator_c/v2x_msg/msg/detail/acceleration_set4_way__functions.c.o"

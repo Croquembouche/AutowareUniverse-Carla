@@ -1,1 +1,3 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/SpeedandHeadingandThrottleConfidence.msg
+int64 heading 
+int64 speed 
+int64 throttle

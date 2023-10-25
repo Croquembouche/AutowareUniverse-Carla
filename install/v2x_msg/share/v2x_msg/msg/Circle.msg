@@ -1,1 +1,3 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/Circle.msg
+Position3D center
+int64 radius
+int64 units

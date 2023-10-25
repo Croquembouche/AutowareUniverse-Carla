@@ -1,1 +1,25 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/PSM.msg
+int64 basictype
+int64 secmark
+int64 msgcnt
+string id
+Position3D position 
+PositionalAccuracy accuracy 
+int64 speed
+int64 heading
+AccelerationSet4Way accelset 
+PathHistory pathhistory 
+PathPrediction pathprediction 
+PropelledInformation propulsion
+string usestate
+bool crossrequest
+bool crossstate
+int64 clustersize
+int64 clusterradius
+int64 eventrespondertype
+string activitytype
+string activitysubtype
+string assisttype
+string sizing
+int64 attachment
+int64 attachmentradius
+int64 animaltype

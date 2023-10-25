@@ -1,1 +1,20 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/ShapePointSet.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/ShapePointSet.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/NodeListXY.idl"
+#include "v2x_msg/msg/Position3D.idl"
+
+module v2x_msg {
+  module msg {
+    struct ShapePointSet {
+      v2x_msg::msg::Position3D anchor;
+
+      int64 lanewidth;
+
+      int64 directionality;
+
+      v2x_msg::msg::NodeListXY nodelist;
+    };
+  };
+};

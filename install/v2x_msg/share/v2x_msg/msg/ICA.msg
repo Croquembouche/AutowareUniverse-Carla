@@ -1,1 +1,9 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/ICA.msg
+int64 msgcnt
+string id
+int64 timestamp
+BSMCoreData partone
+PathHistory path
+PathPrediction pathprediction 
+IntersectionReferenceID intersectionid
+ApproachOrLane lanenumber
+string eventflag

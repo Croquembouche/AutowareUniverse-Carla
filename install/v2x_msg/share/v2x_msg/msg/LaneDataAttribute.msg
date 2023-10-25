@@ -1,1 +1,6 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/LaneDataAttribute.msg
+int64 pathendpointangle
+int64 lanecrownpointcenter
+int64 lancrownpointleft
+int64 lanecrownpointright
+int64 laneangle
+SpeedLimit[] speedlimits

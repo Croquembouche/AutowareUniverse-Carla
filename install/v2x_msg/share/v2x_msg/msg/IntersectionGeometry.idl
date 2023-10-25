@@ -1,1 +1,30 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_adapter/v2x_msg/msg/IntersectionGeometry.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from v2x_msg/msg/IntersectionGeometry.msg
+// generated code does not contain a copyright notice
+
+#include "v2x_msg/msg/GenericLane.idl"
+#include "v2x_msg/msg/IntersectionReferenceID.idl"
+#include "v2x_msg/msg/Position3D.idl"
+#include "v2x_msg/msg/SpeedLimit.idl"
+
+module v2x_msg {
+  module msg {
+    struct IntersectionGeometry {
+      string name;
+
+      v2x_msg::msg::IntersectionReferenceID id;
+
+      int64 revision;
+
+      v2x_msg::msg::Position3D refpoint;
+
+      int64 lanewidth;
+
+      sequence<v2x_msg::msg::SpeedLimit> speedlimits;
+
+      sequence<v2x_msg::msg::GenericLane> laneset;
+
+      string preemptprioritydata;
+    };
+  };
+};

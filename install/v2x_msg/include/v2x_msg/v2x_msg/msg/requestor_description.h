@@ -1,1 +1,12 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/rosidl_generator_c/v2x_msg/msg/requestor_description.h
+// generated from rosidl_generator_c/resource/idl.h.em
+// with input from v2x_msg:msg/RequestorDescription.idl
+// generated code does not contain a copyright notice
+
+#ifndef V2X_MSG__MSG__REQUESTOR_DESCRIPTION_H_
+#define V2X_MSG__MSG__REQUESTOR_DESCRIPTION_H_
+
+#include "v2x_msg/msg/detail/requestor_description__struct.h"
+#include "v2x_msg/msg/detail/requestor_description__functions.h"
+#include "v2x_msg/msg/detail/requestor_description__type_support.h"
+
+#endif  // V2X_MSG__MSG__REQUESTOR_DESCRIPTION_H_

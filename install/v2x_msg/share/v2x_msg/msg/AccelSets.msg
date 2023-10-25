@@ -1,1 +1,6 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/AccelSets.msg
+AccelerationSet4Way angle
+int64 certaccelthres
+int64 yawratecon
+int64 hozaccelcon
+ConfidenceSet confidenceset
+

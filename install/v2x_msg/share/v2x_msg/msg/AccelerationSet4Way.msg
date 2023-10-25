@@ -1,1 +1,4 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/AccelerationSet4Way.msg
+int64 longitude
+int64 lat 
+int64 vert
+int64 yaw

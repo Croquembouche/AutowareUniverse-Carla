@@ -1,0 +1,4 @@
+# generated from rosidl_cmake/cmake/rosidl_cmake-extras.cmake.in
+
+set(autoware_auto_vehicle_msgs_IDL_FILES "msg/ControlModeCommand.idl;msg/ControlModeReport.idl;msg/Engage.idl;msg/GearCommand.idl;msg/GearReport.idl;msg/HandBrakeCommand.idl;msg/HandBrakeReport.idl;msg/HazardLightsCommand.idl;msg/HazardLightsReport.idl;msg/HeadlightsCommand.idl;msg/HeadlightsReport.idl;msg/HornCommand.idl;msg/HornReport.idl;msg/RawControlCommand.idl;msg/StationaryLockingCommand.idl;msg/SteeringReport.idl;msg/TurnIndicatorsCommand.idl;msg/TurnIndicatorsReport.idl;msg/VehicleControlCommand.idl;msg/VehicleKinematicState.idl;msg/VehicleOdometry.idl;msg/VehicleStateCommand.idl;msg/VehicleStateReport.idl;msg/VelocityReport.idl;msg/WheelEncoder.idl;msg/WipersCommand.idl;msg/WipersReport.idl;srv/AutonomyModeChange.idl;srv/ControlModeCommand.idl")
+set(autoware_auto_vehicle_msgs_INTERFACE_FILES "srv/ControlModeCommand.srv;srv/ControlModeCommand_Request.msg;srv/ControlModeCommand_Response.msg")

@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from autoware_auto_vehicle_msgs/srv/ControlModeCommand.srv
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module autoware_auto_vehicle_msgs {
+  module srv {
+    module ControlModeCommand_Request_Constants {
+      const uint8 NO_COMMAND = 0;
+      const uint8 AUTONOMOUS = 1;
+      const uint8 AUTONOMOUS_STEER_ONLY = 2;
+      const uint8 AUTONOMOUS_VELOCITY_ONLY = 3;
+      const uint8 MANUAL = 4;
+    };
+    struct ControlModeCommand_Request {
+      builtin_interfaces::msg::Time stamp;
+
+      uint8 mode;
+    };
+    struct ControlModeCommand_Response {
+      boolean success;
+    };
+  };
+};

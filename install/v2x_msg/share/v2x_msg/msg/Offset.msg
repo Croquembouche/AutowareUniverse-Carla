@@ -1,1 +1,2 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/Offset.msg
+NodeListXY xy
+NodeLL[] nodes

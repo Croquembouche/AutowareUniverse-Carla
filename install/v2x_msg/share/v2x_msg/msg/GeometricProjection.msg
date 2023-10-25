@@ -1,1 +1,4 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/v2x_msg/msg/GeometricProjection.msg
+string direction 
+int64 extent
+int64 lanewidth
+Circle circle
