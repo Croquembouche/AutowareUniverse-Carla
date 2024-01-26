@@ -38,19 +38,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/rosidl_interfaces" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/autoware_auto_system_msgs")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/autoware_auto_system_msgs/autoware_auto_system_msgs" TYPE DIRECTORY FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/rosidl_generator_c/autoware_auto_system_msgs/" REGEX "/[^/]*\\.h$")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/environment" TYPE FILE FILES "/home/carla/ros2_humble/build/ament_package/ament_package/template/environment_hook/library_path.sh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/environment" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_environment_hooks/library_path.dsv")
+  include("/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -77,10 +65,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/autoware_auto_system_msgs/autoware_auto_system_msgs" TYPE DIRECTORY FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/rosidl_typesupport_introspection_c/autoware_auto_system_msgs/" REGEX "/[^/]*\\.h$")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libautoware_auto_system_msgs__rosidl_typesupport_introspection_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libautoware_auto_system_msgs__rosidl_typesupport_introspection_c.so")
     file(RPATH_CHECK
@@ -101,10 +85,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/autoware_auto_system_msgs/autoware_auto_system_msgs" TYPE DIRECTORY FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/rosidl_typesupport_fastrtps_c/autoware_auto_system_msgs/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -154,14 +134,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/autoware_auto_system_msgs/autoware_auto_system_msgs" TYPE DIRECTORY FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/rosidl_generator_cpp/autoware_auto_system_msgs/" REGEX "/[^/]*\\.hpp$")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/autoware_auto_system_msgs/autoware_auto_system_msgs" TYPE DIRECTORY FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/rosidl_typesupport_introspection_cpp/autoware_auto_system_msgs/" REGEX "/[^/]*\\.hpp$")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libautoware_auto_system_msgs__rosidl_typesupport_introspection_cpp.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libautoware_auto_system_msgs__rosidl_typesupport_introspection_cpp.so")
     file(RPATH_CHECK
@@ -182,10 +154,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/autoware_auto_system_msgs/autoware_auto_system_msgs" TYPE DIRECTORY FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/rosidl_typesupport_fastrtps_cpp/autoware_auto_system_msgs/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -235,96 +203,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/environment" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_environment_hooks/pythonpath.sh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/environment" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_environment_hooks/pythonpath.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs-1.0.0-py3.8.egg-info" TYPE DIRECTORY FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_python/autoware_auto_system_msgs/autoware_auto_system_msgs.egg-info/")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs" TYPE DIRECTORY FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/rosidl_generator_py/autoware_auto_system_msgs/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
         "/usr/bin/python3.8" "-m" "compileall"
         "/home/carla/Github/C-V2X-Autoware-Carla/install/autoware_auto_system_msgs/lib/python3.8/site-packages/autoware_auto_system_msgs"
       )
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs" TYPE SHARED_LIBRARY FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/rosidl_generator_py/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/rosidl_generator_py/autoware_auto_system_msgs:/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs:/home/carla/ros2_humble/install/diagnostic_msgs/lib:/home/carla/ros2_humble/install/std_msgs/lib:/home/carla/ros2_humble/install/rmw/lib:/home/carla/ros2_humble/install/builtin_interfaces/lib:/home/carla/ros2_humble/install/rosidl_typesupport_fastrtps_c/lib:/home/carla/ros2_humble/install/rosidl_typesupport_fastrtps_cpp/lib:/home/carla/ros2_humble/install/fastcdr/lib:/home/carla/ros2_humble/install/rosidl_typesupport_introspection_cpp/lib:/home/carla/ros2_humble/install/rosidl_typesupport_introspection_c/lib:/home/carla/ros2_humble/install/rosidl_typesupport_cpp/lib:/home/carla/ros2_humble/install/rosidl_typesupport_c/lib:/home/carla/ros2_humble/install/rosidl_runtime_c/lib:/home/carla/ros2_humble/install/rcpputils/lib:/home/carla/ros2_humble/install/rcutils/lib:"
-         NEW_RPATH "")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so")
-    endif()
-  endif()
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs" TYPE SHARED_LIBRARY FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/rosidl_generator_py/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/rosidl_generator_py/autoware_auto_system_msgs:/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs:/home/carla/ros2_humble/install/diagnostic_msgs/lib:/home/carla/ros2_humble/install/std_msgs/lib:/home/carla/ros2_humble/install/rmw/lib:/home/carla/ros2_humble/install/builtin_interfaces/lib:/home/carla/ros2_humble/install/rosidl_typesupport_fastrtps_c/lib:/home/carla/ros2_humble/install/rosidl_typesupport_fastrtps_cpp/lib:/home/carla/ros2_humble/install/fastcdr/lib:/home/carla/ros2_humble/install/rosidl_typesupport_introspection_cpp/lib:/home/carla/ros2_humble/install/rosidl_typesupport_introspection_c/lib:/home/carla/ros2_humble/install/rosidl_typesupport_cpp/lib:/home/carla/ros2_humble/install/rosidl_typesupport_c/lib:/home/carla/ros2_humble/install/rosidl_runtime_c/lib:/home/carla/ros2_humble/install/rcpputils/lib:/home/carla/ros2_humble/install/rcutils/lib:"
-         NEW_RPATH "")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so")
-    endif()
-  endif()
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs" TYPE SHARED_LIBRARY FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/rosidl_generator_py/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/rosidl_generator_py/autoware_auto_system_msgs:/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs:/home/carla/ros2_humble/install/diagnostic_msgs/lib:/home/carla/ros2_humble/install/std_msgs/lib:/home/carla/ros2_humble/install/rmw/lib:/home/carla/ros2_humble/install/builtin_interfaces/lib:/home/carla/ros2_humble/install/rosidl_typesupport_fastrtps_c/lib:/home/carla/ros2_humble/install/rosidl_typesupport_fastrtps_cpp/lib:/home/carla/ros2_humble/install/fastcdr/lib:/home/carla/ros2_humble/install/rosidl_typesupport_introspection_cpp/lib:/home/carla/ros2_humble/install/rosidl_typesupport_introspection_c/lib:/home/carla/ros2_humble/install/rosidl_typesupport_cpp/lib:/home/carla/ros2_humble/install/rosidl_typesupport_c/lib:/home/carla/ros2_humble/install/rosidl_runtime_c/lib:/home/carla/ros2_humble/install/rcpputils/lib:/home/carla/ros2_humble/install/rcutils/lib:"
-         NEW_RPATH "")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/autoware_auto_system_msgs/autoware_auto_system_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so")
-    endif()
-  endif()
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -348,82 +231,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/msg" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_auto_system_msgs/msg/AutowareState.idl")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/msg" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_auto_system_msgs/msg/ControlDiagnostic.idl")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/msg" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_auto_system_msgs/msg/DiagnosticHeader.idl")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/msg" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_auto_system_msgs/msg/DrivingCapability.idl")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/msg" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_auto_system_msgs/msg/EmergencyState.idl")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/msg" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_auto_system_msgs/msg/HazardStatus.idl")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/msg" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_auto_system_msgs/msg/HazardStatusStamped.idl")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/autoware_auto_system_msgs")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/autoware_auto_system_msgs")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/environment" TYPE FILE FILES "/home/carla/ros2_humble/install/ament_cmake_core/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/environment" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_environment_hooks/ament_prefix_path.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/environment" TYPE FILE FILES "/home/carla/ros2_humble/install/ament_cmake_core/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/environment" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_environment_hooks/path.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_environment_hooks/local_setup.bash")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_environment_hooks/local_setup.sh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_environment_hooks/local_setup.zsh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_environment_hooks/local_setup.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_environment_hooks/package.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_index/share/ament_index/resource_index/packages/autoware_auto_system_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -592,45 +399,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
     file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/cmake" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/CMakeFiles/Export/share/autoware_auto_system_msgs/cmake/export_autoware_auto_system_msgs__rosidl_generator_pyExport-noconfig.cmake")
   endif()
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/cmake" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/rosidl_cmake/rosidl_cmake-extras.cmake")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/cmake" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/cmake" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/cmake" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/cmake" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/cmake" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/cmake" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs/cmake" TYPE FILE FILES
-    "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_core/autoware_auto_system_msgsConfig.cmake"
-    "/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_core/autoware_auto_system_msgsConfig-version.cmake"
-    )
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoware_auto_system_msgs" TYPE FILE FILES "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_auto_system_msgs/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

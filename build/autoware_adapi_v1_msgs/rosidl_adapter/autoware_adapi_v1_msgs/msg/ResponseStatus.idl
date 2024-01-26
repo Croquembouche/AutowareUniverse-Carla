@@ -1,0 +1,31 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from autoware_adapi_v1_msgs/common/msg/ResponseStatus.msg
+// generated code does not contain a copyright notice
+
+
+module autoware_adapi_v1_msgs {
+  module msg {
+    module ResponseStatus_Constants {
+      const uint16 UNKNOWN = 50000;
+      const uint16 SERVICE_UNREADY = 50001;
+      const uint16 SERVICE_TIMEOUT = 50002;
+      const uint16 TRANSFORM_ERROR = 50003;
+      const uint16 PARAMETER_ERROR = 50004;
+      @verbatim (language="comment", text=
+        "warning code")
+      const uint16 DEPRECATED = 60000;
+      const uint16 NO_EFFECT = 60001;
+    };
+    @verbatim (language="comment", text=
+      "error code")
+    struct ResponseStatus {
+      @verbatim (language="comment", text=
+        "variables")
+      boolean success;
+
+      uint16 code;
+
+      string message;
+    };
+  };
+};

@@ -1,0 +1,20 @@
+[4.287s] Invoking command in '/home/carla/Github/C-V2X-Autoware-Carla/build/vehicle': PYTHONPATH=/home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/prefix_override:/home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/build --no-deps install_data
+[5.028s] running develop
+[5.270s] running egg_info
+[5.271s] writing vehicle.egg-info/PKG-INFO
+[5.271s] writing dependency_links to vehicle.egg-info/dependency_links.txt
+[5.271s] writing entry points to vehicle.egg-info/entry_points.txt
+[5.271s] writing requirements to vehicle.egg-info/requires.txt
+[5.271s] writing top-level names to vehicle.egg-info/top_level.txt
+[5.299s] reading manifest file 'vehicle.egg-info/SOURCES.txt'
+[5.300s] writing manifest file 'vehicle.egg-info/SOURCES.txt'
+[5.347s] running build_ext
+[5.348s] Creating /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages/site.py
+[5.352s] Creating /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages/vehicle.egg-link (link to .)
+[5.354s] Installing host_vehicle script to /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/vehicle
+[5.354s] Installing remote_vehicle script to /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/vehicle
+[5.354s] Installing ren_vehicle script to /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/vehicle
+[5.355s] 
+[5.355s] Installed /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle
+[5.355s] running install_data
+[5.425s] Invoked command in '/home/carla/Github/C-V2X-Autoware-Carla/build/vehicle' returned '0': PYTHONPATH=/home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/prefix_override:/home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/build --no-deps install_data

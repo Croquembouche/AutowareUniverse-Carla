@@ -311,6 +311,19 @@ autoware_auto_geometry_msgs__rosidl_typesupport_fastrtps_c/fast:
 .PHONY : autoware_auto_geometry_msgs__rosidl_typesupport_fastrtps_c/fast
 
 #=============================================================================
+# Target rules for targets named ament_cmake_python_symlink_autoware_auto_geometry_msgs
+
+# Build rule for target.
+ament_cmake_python_symlink_autoware_auto_geometry_msgs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_autoware_auto_geometry_msgs
+.PHONY : ament_cmake_python_symlink_autoware_auto_geometry_msgs
+
+# fast build rule for target.
+ament_cmake_python_symlink_autoware_auto_geometry_msgs/fast:
+	$(MAKE) -f CMakeFiles/ament_cmake_python_symlink_autoware_auto_geometry_msgs.dir/build.make CMakeFiles/ament_cmake_python_symlink_autoware_auto_geometry_msgs.dir/build
+.PHONY : ament_cmake_python_symlink_autoware_auto_geometry_msgs/fast
+
+#=============================================================================
 # Target rules for targets named autoware_auto_geometry_msgs_uninstall
 
 # Build rule for target.
@@ -335,19 +348,6 @@ autoware_auto_geometry_msgs__cpp: cmake_check_build_system
 autoware_auto_geometry_msgs__cpp/fast:
 	$(MAKE) -f CMakeFiles/autoware_auto_geometry_msgs__cpp.dir/build.make CMakeFiles/autoware_auto_geometry_msgs__cpp.dir/build
 .PHONY : autoware_auto_geometry_msgs__cpp/fast
-
-#=============================================================================
-# Target rules for targets named ament_cmake_python_copy_autoware_auto_geometry_msgs
-
-# Build rule for target.
-ament_cmake_python_copy_autoware_auto_geometry_msgs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ament_cmake_python_copy_autoware_auto_geometry_msgs
-.PHONY : ament_cmake_python_copy_autoware_auto_geometry_msgs
-
-# fast build rule for target.
-ament_cmake_python_copy_autoware_auto_geometry_msgs/fast:
-	$(MAKE) -f CMakeFiles/ament_cmake_python_copy_autoware_auto_geometry_msgs.dir/build.make CMakeFiles/ament_cmake_python_copy_autoware_auto_geometry_msgs.dir/build
-.PHONY : ament_cmake_python_copy_autoware_auto_geometry_msgs/fast
 
 #=============================================================================
 # Target rules for targets named autoware_auto_geometry_msgs__rosidl_typesupport_introspection_cpp
@@ -1154,9 +1154,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... autoware_auto_geometry_msgs__rosidl_generator_c"
 	@echo "... autoware_auto_geometry_msgs__rosidl_typesupport_fastrtps_c"
+	@echo "... ament_cmake_python_symlink_autoware_auto_geometry_msgs"
 	@echo "... autoware_auto_geometry_msgs_uninstall"
 	@echo "... autoware_auto_geometry_msgs__cpp"
-	@echo "... ament_cmake_python_copy_autoware_auto_geometry_msgs"
 	@echo "... autoware_auto_geometry_msgs__rosidl_typesupport_introspection_cpp"
 	@echo "... autoware_auto_geometry_msgs__rosidl_typesupport_fastrtps_cpp"
 	@echo "... autoware_auto_geometry_msgs__rosidl_typesupport_cpp"

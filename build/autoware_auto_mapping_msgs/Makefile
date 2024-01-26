@@ -90,28 +90,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -134,6 +112,28 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -207,6 +207,19 @@ autoware_auto_mapping_msgs__rosidl_typesupport_fastrtps_c/fast:
 .PHONY : autoware_auto_mapping_msgs__rosidl_typesupport_fastrtps_c/fast
 
 #=============================================================================
+# Target rules for targets named autoware_auto_mapping_msgs
+
+# Build rule for target.
+autoware_auto_mapping_msgs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 autoware_auto_mapping_msgs
+.PHONY : autoware_auto_mapping_msgs
+
+# fast build rule for target.
+autoware_auto_mapping_msgs/fast:
+	$(MAKE) -f CMakeFiles/autoware_auto_mapping_msgs.dir/build.make CMakeFiles/autoware_auto_mapping_msgs.dir/build
+.PHONY : autoware_auto_mapping_msgs/fast
+
+#=============================================================================
 # Target rules for targets named autoware_auto_mapping_msgs__rosidl_typesupport_introspection_c
 
 # Build rule for target.
@@ -257,32 +270,6 @@ autoware_auto_mapping_msgs__rosidl_generator_c: cmake_check_build_system
 autoware_auto_mapping_msgs__rosidl_generator_c/fast:
 	$(MAKE) -f CMakeFiles/autoware_auto_mapping_msgs__rosidl_generator_c.dir/build.make CMakeFiles/autoware_auto_mapping_msgs__rosidl_generator_c.dir/build
 .PHONY : autoware_auto_mapping_msgs__rosidl_generator_c/fast
-
-#=============================================================================
-# Target rules for targets named autoware_auto_mapping_msgs
-
-# Build rule for target.
-autoware_auto_mapping_msgs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 autoware_auto_mapping_msgs
-.PHONY : autoware_auto_mapping_msgs
-
-# fast build rule for target.
-autoware_auto_mapping_msgs/fast:
-	$(MAKE) -f CMakeFiles/autoware_auto_mapping_msgs.dir/build.make CMakeFiles/autoware_auto_mapping_msgs.dir/build
-.PHONY : autoware_auto_mapping_msgs/fast
-
-#=============================================================================
-# Target rules for targets named ament_cmake_python_copy_autoware_auto_mapping_msgs
-
-# Build rule for target.
-ament_cmake_python_copy_autoware_auto_mapping_msgs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ament_cmake_python_copy_autoware_auto_mapping_msgs
-.PHONY : ament_cmake_python_copy_autoware_auto_mapping_msgs
-
-# fast build rule for target.
-ament_cmake_python_copy_autoware_auto_mapping_msgs/fast:
-	$(MAKE) -f CMakeFiles/ament_cmake_python_copy_autoware_auto_mapping_msgs.dir/build.make CMakeFiles/ament_cmake_python_copy_autoware_auto_mapping_msgs.dir/build
-.PHONY : ament_cmake_python_copy_autoware_auto_mapping_msgs/fast
 
 #=============================================================================
 # Target rules for targets named autoware_auto_mapping_msgs__rosidl_typesupport_introspection_c__pyext
@@ -387,6 +374,19 @@ autoware_auto_mapping_msgs__rosidl_typesupport_cpp: cmake_check_build_system
 autoware_auto_mapping_msgs__rosidl_typesupport_cpp/fast:
 	$(MAKE) -f CMakeFiles/autoware_auto_mapping_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/autoware_auto_mapping_msgs__rosidl_typesupport_cpp.dir/build
 .PHONY : autoware_auto_mapping_msgs__rosidl_typesupport_cpp/fast
+
+#=============================================================================
+# Target rules for targets named ament_cmake_python_symlink_autoware_auto_mapping_msgs
+
+# Build rule for target.
+ament_cmake_python_symlink_autoware_auto_mapping_msgs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_autoware_auto_mapping_msgs
+.PHONY : ament_cmake_python_symlink_autoware_auto_mapping_msgs
+
+# fast build rule for target.
+ament_cmake_python_symlink_autoware_auto_mapping_msgs/fast:
+	$(MAKE) -f CMakeFiles/ament_cmake_python_symlink_autoware_auto_mapping_msgs.dir/build.make CMakeFiles/ament_cmake_python_symlink_autoware_auto_mapping_msgs.dir/build
+.PHONY : ament_cmake_python_symlink_autoware_auto_mapping_msgs/fast
 
 #=============================================================================
 # Target rules for targets named autoware_auto_mapping_msgs__py
@@ -1355,18 +1355,15 @@ help:
 	@echo "... install/strip"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... autoware_auto_mapping_msgs__rosidl_generator_py"
 	@echo "... autoware_auto_mapping_msgs_uninstall"
 	@echo "... autoware_auto_mapping_msgs__rosidl_typesupport_fastrtps_c"
+	@echo "... autoware_auto_mapping_msgs"
 	@echo "... autoware_auto_mapping_msgs__rosidl_typesupport_introspection_c"
 	@echo "... test"
 	@echo "... ament_cmake_python_build_autoware_auto_mapping_msgs_egg"
 	@echo "... uninstall"
 	@echo "... autoware_auto_mapping_msgs__rosidl_generator_c"
-	@echo "... autoware_auto_mapping_msgs"
-	@echo "... ament_cmake_python_copy_autoware_auto_mapping_msgs"
 	@echo "... autoware_auto_mapping_msgs__rosidl_typesupport_introspection_c__pyext"
 	@echo "... autoware_auto_mapping_msgs__rosidl_typesupport_c"
 	@echo "... autoware_auto_mapping_msgs__rosidl_typesupport_fastrtps_c__pyext"
@@ -1376,6 +1373,9 @@ help:
 	@echo "... install/local"
 	@echo "... autoware_auto_mapping_msgs__rosidl_typesupport_c__pyext"
 	@echo "... autoware_auto_mapping_msgs__rosidl_typesupport_cpp"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... ament_cmake_python_symlink_autoware_auto_mapping_msgs"
 	@echo "... autoware_auto_mapping_msgs__py"
 	@echo "... rosidl_generator_c/autoware_auto_mapping_msgs/msg/detail/had_map_bin__functions.o"
 	@echo "... rosidl_generator_c/autoware_auto_mapping_msgs/msg/detail/had_map_bin__functions.i"

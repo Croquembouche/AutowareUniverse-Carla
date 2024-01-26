@@ -1,0 +1,50 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from autoware_adapi_v1_msgs/planning/msg/VelocityFactor.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+
+module autoware_adapi_v1_msgs {
+  module msg {
+    module VelocityFactor_Constants {
+      const uint16 UNKNOWN = 0;
+      @verbatim (language="comment", text=
+        "constants for type")
+      const uint16 SURROUNDING_OBSTACLE = 1;
+      const uint16 ROUTE_OBSTACLE = 2;
+      const uint16 INTERSECTION = 3;
+      const uint16 CROSSWALK = 4;
+      const uint16 REAR_CHECK = 5;
+      const uint16 USER_DEFINED_DETECTION_AREA = 6;
+      const uint16 NO_STOPPING_AREA = 7;
+      const uint16 STOP_SIGN = 8;
+      const uint16 TRAFFIC_SIGNAL = 9;
+      const uint16 V2I_GATE_CONTROL_ENTER = 10;
+      const uint16 V2I_GATE_CONTROL_LEAVE = 11;
+      const uint16 MERGE = 12;
+      const uint16 SIDEWALK = 13;
+      const uint16 LANE_CHANGE = 14;
+      const uint16 AVOIDANCE = 15;
+      const uint16 EMERGENCY_STOP_OPERATION = 16;
+      @verbatim (language="comment", text=
+        "constants for status")
+      const uint16 APPROACHING = 1;
+      const uint16 STOPPED = 2;
+    };
+    @verbatim (language="comment", text=
+      "constants for common use")
+    struct VelocityFactor {
+      @verbatim (language="comment", text=
+        "variables")
+      geometry_msgs::msg::Pose pose;
+
+      float distance;
+
+      uint16 type;
+
+      uint16 status;
+
+      string detail;
+    };
+  };
+};

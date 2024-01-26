@@ -1,0 +1,5 @@
+[ 10%] Built target autoware_auto_mapping_msgs__rosidl_generator_c
+[ 12%] Built target autoware_auto_mapping_msgs__cpp
+[ 23%] Built target autoware_auto_mapping_msgs__rosidl_typesupport_introspection_c
+[ 34%] Built target autoware_auto_mapping_msgs__rosidl_typesupport_fastrtps_c
+[ 45%] Built target autoware_auto_mapping_msgs__rosidl_typesupport_c

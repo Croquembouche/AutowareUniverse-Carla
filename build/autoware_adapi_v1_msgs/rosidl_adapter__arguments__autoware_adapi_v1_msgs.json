@@ -1,0 +1,26 @@
+{
+  "package_name": "autoware_adapi_v1_msgs",
+  "non_idl_tuples": [
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:common/msg/ResponseStatus.msg",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:localization/msg/LocalizationInitializationState.msg",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:localization/srv/InitializeLocalization.srv",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:routing/msg/RouteState.msg",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:routing/msg/Route.msg",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:routing/msg/RouteData.msg",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:routing/msg/RouteOption.msg",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:routing/msg/RoutePrimitive.msg",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:routing/msg/RouteSegment.msg",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:routing/srv/ClearRoute.srv",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:routing/srv/SetRoute.srv",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:routing/srv/SetRoutePoints.srv",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:operation_mode/msg/OperationModeState.msg",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:operation_mode/srv/ChangeOperationMode.srv",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:motion/msg/MotionState.msg",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:motion/srv/AcceptStart.srv",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:planning/msg/SteeringFactor.msg",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:planning/msg/SteeringFactorArray.msg",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:planning/msg/VelocityFactor.msg",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:planning/msg/VelocityFactorArray.msg",
+    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs:system/msg/MrmState.msg"
+  ]
+}

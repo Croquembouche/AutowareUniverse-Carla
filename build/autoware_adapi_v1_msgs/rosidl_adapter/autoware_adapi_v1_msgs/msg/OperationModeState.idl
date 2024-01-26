@@ -1,0 +1,38 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from autoware_adapi_v1_msgs/operation_mode/msg/OperationModeState.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module autoware_adapi_v1_msgs {
+  module msg {
+    module OperationModeState_Constants {
+      const uint8 UNKNOWN = 0;
+      const uint8 STOP = 1;
+      const uint8 AUTONOMOUS = 2;
+      const uint8 LOCAL = 3;
+      const uint8 REMOTE = 4;
+    };
+    @verbatim (language="comment", text=
+      "constants for mode")
+    struct OperationModeState {
+      @verbatim (language="comment", text=
+        "variables")
+      builtin_interfaces::msg::Time stamp;
+
+      uint8 mode;
+
+      boolean is_autoware_control_enabled;
+
+      boolean is_in_transition;
+
+      boolean is_stop_mode_available;
+
+      boolean is_autonomous_mode_available;
+
+      boolean is_local_mode_available;
+
+      boolean is_remote_mode_available;
+    };
+  };
+};

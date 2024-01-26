@@ -1,0 +1,21 @@
+running egg_info
+writing ../../build/vehicle/vehicle.egg-info/PKG-INFO
+writing dependency_links to ../../build/vehicle/vehicle.egg-info/dependency_links.txt
+writing entry points to ../../build/vehicle/vehicle.egg-info/entry_points.txt
+writing requirements to ../../build/vehicle/vehicle.egg-info/requires.txt
+writing top-level names to ../../build/vehicle/vehicle.egg-info/top_level.txt
+reading manifest file '../../build/vehicle/vehicle.egg-info/SOURCES.txt'
+writing manifest file '../../build/vehicle/vehicle.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages/vehicle-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../../build/vehicle/vehicle.egg-info to /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages/vehicle-0.0.0-py3.8.egg-info
+running install_scripts
+Installing host_vehicle script to /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/vehicle
+Installing remote_vehicle script to /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/vehicle
+Installing ren_vehicle script to /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/vehicle
+writing list of installed files to '/home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/install.log'

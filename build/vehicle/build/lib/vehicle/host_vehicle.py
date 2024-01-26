@@ -50,6 +50,8 @@ from geometry_msgs.msg import Quaternion
 from autoware_auto_vehicle_msgs.msg import VelocityReport
 from autoware_auto_vehicle_msgs.msg import SteeringReport
 from autoware_auto_control_msgs.msg import AckermannControlCommand
+from autoware_auto_vehicle_msgs.msg import ControlModeReport
+from autoware_adapi_v1_msgs.msg import OperationModeState
 
 _DATATYPES = {}
 _DATATYPES[PointField.INT8] = ('b', 1)
@@ -85,6 +87,7 @@ class DefaultVehicle(Node):
         # self.get_clock().ros_clock = ROSClock()
         # print(ROSClock())
         self.setUpPublishers()
+        self.setUpSubscribers()
         # grabbing all bps
         self.blueprint_library = world.get_blueprint_library()
         # finding the desired bp
@@ -96,8 +99,10 @@ class DefaultVehicle(Node):
         self.vehicle = world.spawn_actor(vehicle_bp, spawn_point)
         self.world = world
         self.ego_control = carla.VehicleControl()
+        self.get_vehicle_speed()
         # initialize control to all zeros
         self.initializeControl()
+        self.control_mode = 0
         # self.vehicle.set_autopilot(True) # set Autopilot on start to test lidar
         # storing a list of all sensors
         self.sensors = []
@@ -123,15 +128,11 @@ class DefaultVehicle(Node):
         # initialize CvBridge
         self.bridge = CvBridge()
         self.image_queue = []
-        # subscribe to controls
-        # self.subscription_controls = self.create_subscription(String, 'hv_controls', self.vehicleROSControls, 10)
-        # print("Subscribed to Controls.")
-        # subscribe to BSM messages
-        self.subscrib_bsm = self.create_subscription(BSM, 'BSM', self.BSMSubscriber_cb, 10)
         self.init = False
     def initializeControl(self):
         self.ego_control.throttle = 0.0
         self.ego_control.steer = 0.0
+        self.ego_control.brake = 1
         self.vehicle.apply_control(self.ego_control)
 
 # --------------Vehicle ID Generation--------------------------
@@ -200,10 +201,10 @@ class DefaultVehicle(Node):
         # change msgcnt
         self.msgcntIncrem()
 # -------------Vehicle Related-------------------------------        
-    def getSpeedandHeading(self, velocity):
-        vx = velocity.x
-        vy = velocity.y
-        vz = velocity.z
+    def getSpeedandHeading(self):
+        vx = self.vel_in_vehicle[0]
+        vy = self.vel_in_vehicle[1]
+        vz = self.vel_in_vehicle[2]
         speed = math.sqrt(vx**2 + vy**2 + vz**2)
         self.speed = speed
 
@@ -233,6 +234,7 @@ class DefaultVehicle(Node):
         # --------------Publishing Autoware Required Information--------------
         self.pubVelocityReport()
         self.pubSteeringReport()
+        self.pubVehicleControlMode()
         # -------------Vehicle Location-----------------
         vehicle_location = self.vehicle.get_location()
         vehicle_ = self.world.get_map().transform_to_geolocation(vehicle_location)
@@ -243,8 +245,8 @@ class DefaultVehicle(Node):
         # --------------- Vehicle State -----------------
         throttle = self.ego_control.throttle
         reverse = self.ego_control.reverse
-        velocity = self.vehicle.get_velocity()
-        self.getSpeedandHeading(velocity)
+        self.get_vehicle_speed()
+        self.getSpeedandHeading()
         if throttle == 0 and self.speed != 0:
             self.transmission = 0 # neutral
         elif throttle == 0 and self.speed == 0:
@@ -260,6 +262,23 @@ class DefaultVehicle(Node):
         self.vertacc = acceleration.z
         # ------------------Vehicle Brakes--------------------
         self.brakes = self.ego_control.brake
+    # corrected vehicle longitudinal and latitudinal speed
+    def get_vehicle_speed(self):
+        """
+         Get the longitudinal speed of a carla vehicle
+         :param carla_vehicle: the carla vehicle
+         :type carla_vehicle: carla.Vehicle
+         :return: speed of a carla vehicle [m/s]
+         :rtype: float64
+        """
+        carla_velocity_vec3 = self.vehicle.get_velocity()
+        vec4 = np.array([carla_velocity_vec3.x,
+                         carla_velocity_vec3.y,
+                         carla_velocity_vec3.z, 1]).reshape(4, 1)
+        carla_trans = np.array(self.vehicle.get_transform().get_matrix())
+        carla_trans.reshape(4, 4)
+        carla_trans[0:3, 3] = 0.0
+        self.vel_in_vehicle = np.linalg.inv(carla_trans) @ vec4
 # -------------------LiDAR Sensor----------------------------
     def create_cloud(self, header, fields, points):
         # """
@@ -324,24 +343,12 @@ class DefaultVehicle(Node):
         self.ndt_lidarpublisher_.publish(sensing_msg)
         # change msgcnt
         self.msgcntIncrem() 
-    def addLidarSensor(self, x=0,y=0, z=1.7, pitch=0,yaw=0,row=0, channels="16", pps="300000", rot_freq="100", up_fov="15", low_fov="-15", range="100"):
+    def addLidarSensor(self, x=-0.9,y=0, z=1.8, pitch=0,yaw=0,row=0, channels="16", pps="300000", rot_freq="100", up_fov="15", low_fov="-15", range="80"):
         # creating a publisher
-        sensing_qos = QoSProfile(
-            reliability=QoSReliabilityPolicy.BEST_EFFORT,
-            durability=QoSDurabilityPolicy.VOLATILE,
-            history=QoSHistoryPolicy.KEEP_LAST,
-            depth=10
-        )
-        ndt_qos = QoSProfile(
-            reliability=QoSReliabilityPolicy.BEST_EFFORT,
-            durability=QoSDurabilityPolicy.VOLATILE,
-            history=QoSHistoryPolicy.KEEP_LAST,
-            depth=10
-        )
-        self.ndt_lidarpublisher_ = self.create_publisher(PointCloud2, '/sensing/lidar/top/outlier_filtered/pointcloud', qos_profile=ndt_qos)
+        self.ndt_lidarpublisher_ = self.create_publisher(PointCloud2, '/sensing/lidar/top/outlier_filtered/pointcloud', qos_profile=10)
         print("Publishing Lidar Sensor Data for NDT")
-        self.sensing_lidarpublisher_ = self.create_publisher(PointCloud2, '/sensing/lidar/concatenated/pointcloud', qos_profile=sensing_qos)
-        # print("Publishing Lidar Sensor Data for Sensing")
+        self.sensing_lidarpublisher_ = self.create_publisher(PointCloud2, '/sensing/lidar/concatenated/pointcloud', qos_profile=10)
+        print("Publishing Lidar Sensor Data for Sensing")
 
         # finding the lidar bp
         lidar_bp = self.world.get_blueprint_library().find('sensor.lidar.ray_cast')
@@ -361,8 +368,8 @@ class DefaultVehicle(Node):
         lidar_sen = self.world.spawn_actor(lidar_bp,lidar_transform,attach_to=self.vehicle)
         self.sensors.append(lidar_sen)
         # add a callback function to publish data via ros2
-        # lidar_sen.listen(lambda point_cloud: self.lidarSensorCallback(point_cloud))
-        lidar_sen.listen(lambda point_cloud: point_cloud.save_to_disk('/home/carla/Github/C-V2X-Autoware-Carla/src/vehicle/lidar_data/%.6d.ply' % point_cloud.frame))
+        lidar_sen.listen(lambda point_cloud: self.lidarSensorCallback(point_cloud))
+        # lidar_sen.listen(lambda point_cloud: point_cloud.save_to_disk('/home/carla/Github/C-V2X-Autoware-Carla/src/vehicle/lidar_data/%.6d.ply' % point_cloud.frame))
 # ----------------------RBG Sensor---------------------------------
     def convertCARLAIMGtoROSIMG(self, original):
         array = np.frombuffer(original.raw_data, dtype=np.dtype("uint8")) 
@@ -405,7 +412,7 @@ class DefaultVehicle(Node):
             history=QoSHistoryPolicy.KEEP_LAST,
             depth=10
         )
-        self.camera_publisher_ = self.create_publisher(Image, 'camera', qos_profile=qos)
+        self.camera_publisher_ = self.create_publisher(Image, '/sensing/camera/camera0/image_rect_color', qos_profile=qos)
         print("Publishing Camera Data")
         # get camera blueprint
         camera_bp = self.blueprint_library.find('sensor.camera.rgb')
@@ -418,15 +425,49 @@ class DefaultVehicle(Node):
         self.sensors.append(front_camera)
         front_camera.listen(lambda image: self.RGBSensorcallback(image)) 
 # -------------------GNSS Sensor------------------------------------------
-    def pubGNSS(self):
+    # def pubGNSS(self):
         # -------------Vehicle Location-----------------
-        vehicle_location = self.vehicle.get_location()
-        vehicle_ = self.world.get_map().transform_to_geolocation(vehicle_location)
-        orientation = self.vehicle.get_transform().rotation
-        # Access the pitch, yaw, and roll angles
-        pitch = orientation.pitch
-        yaw = orientation.yaw
-        roll = orientation.roll
+        # vehicle_location = self.vehicle.get_location()
+        # # vehicle_ = self.world.get_map().transform_to_geolocation(vehicle_location)
+        # orientation = self.vehicle.get_transform().rotation
+        # # Access the pitch, yaw, and roll angles
+        # pitch = orientation.pitch
+        # yaw = orientation.yaw
+        # roll = orientation.roll
+        # cy = math.cos(yaw * 0.5)
+        # sy = math.sin(yaw * 0.5)
+        # cr = math.cos(roll * 0.5)
+        # sr = math.sin(roll * 0.5)
+        # cp = math.cos(pitch * 0.5)
+        # sp = math.sin(pitch * 0.5)
+
+        # qw = cy * cr * cp + sy * sr * sp
+        # qx = cy * sr * cp - sy * cr * sp
+        # qy = cy * cr * sp + sy * sr * cp
+        # qz = sy * cr * cp - cy * sr * sp
+        # # print(self.lat, self.lon, self.elev, pitch, yaw, roll  )
+        # gnss_msg = PoseWithCovarianceStamped()
+        # gnss_msg.header.stamp =Clock().now().to_msg()
+        # gnss_msg.header.frame_id = "gnss_link"
+        # gnss_msg.pose.pose.position.x = vehicle_location.x+11
+        # gnss_msg.pose.pose.position.y = vehicle_location.y-7
+        # gnss_msg.pose.pose.position.z = vehicle_location.z-2
+        # gnss_msg.pose.pose.orientation.x = math.radians(qx)
+        # gnss_msg.pose.pose.orientation.y = math.radians(qy)
+        # gnss_msg.pose.pose.orientation.z = math.radians(qz)
+        # gnss_msg.pose.pose.orientation.w = math.radians(qw+180)
+
+
+        # self.gnss_pub.publish(gnss_msg)
+
+    def GNSSSensorCallback(self, gnss):
+        vehicle_location = gnss.transform.location
+        vehicle_orientation = gnss.transform.rotation
+
+        roll = math.radians(vehicle_orientation.roll)
+        pitch = math.radians(vehicle_orientation.pitch)
+        yaw = -math.radians(vehicle_orientation.yaw)  # Inverting yaw for coordinate system change
+
         cy = math.cos(yaw * 0.5)
         sy = math.sin(yaw * 0.5)
         cr = math.cos(roll * 0.5)
@@ -438,36 +479,24 @@ class DefaultVehicle(Node):
         qx = cy * sr * cp - sy * cr * sp
         qy = cy * cr * sp + sy * sr * cp
         qz = sy * cr * cp - cy * sr * sp
-        # print(self.lat, self.lon, self.elev, pitch, yaw, roll  )
+
         gnss_msg = PoseWithCovarianceStamped()
         gnss_msg.header.stamp =Clock().now().to_msg()
-        gnss_msg.header.frame_id = "map"
-        gnss_msg.pose.pose.position.x = self.lat
-        gnss_msg.pose.pose.position.y = self.lon
-        gnss_msg.pose.pose.position.z = vehicle_.altitude
-        gnss_msg.pose.pose.orientation.x = qx
-        gnss_msg.pose.pose.orientation.y = qy
-        gnss_msg.pose.pose.orientation.z = qz
-        gnss_msg.pose.pose.orientation.w = qw
+        gnss_msg.header.frame_id = "gnss_link"
+        gnss_msg.pose.pose.position.x = vehicle_location.x+11
+        gnss_msg.pose.pose.position.y = vehicle_location.y-7
+        gnss_msg.pose.pose.position.z = vehicle_location.z
+        gnss_msg.pose.pose.orientation.x = math.radians(qx)
+        gnss_msg.pose.pose.orientation.y = math.radians(qy)
+        gnss_msg.pose.pose.orientation.z = math.radians(qz)
+        gnss_msg.pose.pose.orientation.w = math.radians(qw)
 
         self.gnss_pub.publish(gnss_msg)
 
-    def GNSSSensorCallback(self, gnss):
-        self.lat = gnss.latitude
-        self.lon = gnss.longitude
-        # if self.init == False:
-        #     # Publish /initialpose3d to initialize autoware vehicle, message format: geometry_msgs::msg::PoseWithCovarianceStamped 
-        #     self.pubGNSS()
-        #     self.init = True
-        # else:
-        #     # print("Publishing /sensing/gnss/pose_with_covariance.")
-        #     self.pubGNSS()
-        self.pubGNSS()
-
     def addGNSSSensor(self):
         gnss_bp = self.blueprint_library.find('sensor.other.gnss')
-        gnss_location = carla.Location(0,0,0)
-        gnss_rotation = carla.Rotation(0,0,0)
+        gnss_location = carla.Location(-0.9,0,1.35)
+        gnss_rotation = carla.Rotation(0,180,0) #yzx
         gnss_transform = carla.Transform(gnss_location,gnss_rotation)   
         # spawn onto vehicle
         center_gnss = self.world.spawn_actor(gnss_bp, gnss_transform, attach_to=self.vehicle)
@@ -478,13 +507,13 @@ class DefaultVehicle(Node):
     def IMUSensorCallback(self, imu_data):
         imu_msg = Imu()
         imu_msg.header.stamp =Clock().now().to_msg()
-        imu_msg.header.frame_id = "base_link"
+        imu_msg.header.frame_id = "tamagawa/imu_link"
         imu_msg.linear_acceleration.x = imu_data.accelerometer.x
         imu_msg.linear_acceleration.y = imu_data.accelerometer.y
-        imu_msg.linear_acceleration.z = imu_data.accelerometer.z
+        imu_msg.linear_acceleration.z = -imu_data.accelerometer.z
         imu_msg.angular_velocity.x = imu_data.gyroscope.x
         imu_msg.angular_velocity.y = imu_data.gyroscope.y
-        imu_msg.angular_velocity.z = imu_data.gyroscope.z
+        imu_msg.angular_velocity.z = -imu_data.gyroscope.z
         quaternion = Quaternion()
         quaternion.x = 0.0
         quaternion.y = 0.0
@@ -495,7 +524,7 @@ class DefaultVehicle(Node):
 
     def addIMUSensor(self):
         imu_bp = self.blueprint_library.find('sensor.other.imu')
-        imu_location = carla.Location(0,0,0)
+        imu_location = carla.Location(-0.9,0,1.35)
         imu_rotation = carla.Rotation(0,0,0)
         imu_transform = carla.Transform(imu_location,imu_rotation)   
         # spawn onto vehicle
@@ -505,36 +534,43 @@ class DefaultVehicle(Node):
 
 # --------------------Vehicle ROS Controls-----------------------
     def vehicleROSControls(self, msg):
-        throttle_increament = 0.05
+        # ros2 topic pub /hv_controls std_msgs/String "{data: 'Autoware on'}" --once
+        if msg.data == "Autoware on":
+            print("Enabling Autoware Control")
+            self.AutowareControl()
+        if msg.data == "Autoware off":
+            self.autoware_control = NULL
 
-        if msg.data == "auto on":
-            self.vehicle.set_autopilot(True)
+        # throttle_increament = 0.05
 
-        if msg.data == "auto off":
-            self.vehicle.set_autopilot(False)
+        # if msg.data == "auto on":
+        #     self.vehicle.set_autopilot(True)
 
-        if msg.data == "srm":
-            self.SRM()
+        # if msg.data == "auto off":
+        #     self.vehicle.set_autopilot(False)
 
-        if msg.data == "w":
-            self.ego_control.throttle = min(self.ego_control.throttle + throttle_increament, 1.0)
-            self.ego_control.brake = 0
+        # if msg.data == "srm":
+        #     self.SRM()
 
-        if msg.data == "s":
-            self.ego_control.throttle = max(self.ego_control.throttle - throttle_increament, 0)
-        steer_increment = 0.2
+        # if msg.data == "w":
+        #     self.ego_control.throttle = min(self.ego_control.throttle + throttle_increament, 1.0)
+        #     self.ego_control.brake = 0
 
-        if msg.data == "a":
+        # if msg.data == "s":
+        #     self.ego_control.throttle = max(self.ego_control.throttle - throttle_increament, 0)
+        # steer_increment = 0.2
 
-            self.ego_control.steer = max(self.ego_control.steer - steer_increment, -1.0)
-        if msg.data == "d":
+        # if msg.data == "a":
 
-            self.ego_control.steer = min(self.ego_control.steer + steer_increment, 1.0)
-        if msg.data == "b":
+        #     self.ego_control.steer = max(self.ego_control.steer - steer_increment, -1.0)
+        # if msg.data == "d":
 
-            self.ego_control.brake = 1
+        #     self.ego_control.steer = min(self.ego_control.steer + steer_increment, 1.0)
+        # if msg.data == "b":
 
-        self.vehicle.apply_control(self.ego_control)     
+        #     self.ego_control.brake = 1
+
+        # self.vehicle.apply_control(self.ego_control)     
 
 #----------------------------Helper Functions---------------------------------
     def deg2rad(self, deg):
@@ -675,44 +711,59 @@ class DefaultVehicle(Node):
 
 # --------------------Autoware Related Topics-----------------------------
     def AutowareControllCallbacks(self, controlmsg):
-        desired_steering = controlmsg.lateral.steering_tire_angle * (180.0 / math.pi)
-        desired_steering_rate = controlmsg.lateral.steering_tire_rotation_rate* (180.0 / math.pi)
-        desired_acceleration = controlmsg.longitudinal.acceleration
-
-        self.ego_control.steer = desired_steering + desired_steering_rate
-        self.vehicle.apply_control(self.ego_control) 
-        throttle_increament = 0.05
-        brake_increament = 0.05
-
-        if desired_acceleration > 0: # we are moving forward
-            self.transmission = 2
-            while self.vehicle.get_acceleration().x < desired_acceleration:
-                self.ego_control.throttle = min(self.ego_control.throttle + throttle_increament, 1.0)
-                self.vehicle.apply_control(self.ego_control) 
-            self.ego_control.throttle = 0 # stop pressing on throttle after target acceleration has been reached.
-        else:
-            if self.speed == 0: # meaning autoware wants us to go in reverse
-                self.transmission = 3
-                self.vehicle.apply_control(self.ego_control)
-                while self.vehicle.get_acceleration().x > desired_acceleration:
-                    self.ego_control.throttle = min(self.ego_control.throttle + throttle_increament, 1.0)
-                    self.vehicle.apply_control(self.ego_control) 
-                self.ego_control.throttle = 0 # stop pressing on throttle after target acceleration has been reached.
-            else: # we are breaking
-                while self.vehicle.get_acceleration().x > desired_acceleration:
-                    self.ego_control.throttle = min(self.ego_control.brake + brake_increament, 1.0)
-                    self.vehicle.apply_control(self.ego_control) 
-                self.ego_control.brake = 0
-
-
+        # lateral
+        # print("controlmsg", controlmsg)
+        desired_steering = controlmsg.lateral.steering_tire_angle 
+        desired_steering_rate = controlmsg.lateral.steering_tire_rotation_rate
         
-        self.vehicle.apply_control(self.ego_control) 
+        # longitudinal
+        desired_speed = controlmsg.longitudinal.speed
+        # print("desired steering", desired_steering, "; actual steering", self.vehicle.get_control().steer)
+        # desired_acceleration = controlmsg.longitudinal.acceleration
 
-    def AutowareControl(self, enabled=True):
-        self.enabled = enabled
-        if self.enabled:
-            print("Enabling Autoware Control")
-            self.autoware_control = self.create_subscription(AckermannControlCommand, '/control/command/control_cmd', self.AutowareControllCallbacks, 10)
+        self.ego_control.steer = 0-desired_steering # + desired_steering_rate
+
+        # throttle increments
+        increment = 0.1
+        if desired_speed == 0:
+            self.ego_control.brake = 1
+        elif desired_speed > self.vel_in_vehicle[0]: # need to speed up
+            self.ego_control.brake = 0
+            self.get_vehicle_speed()
+            longitudinal_speed = float(self.vel_in_vehicle[0])
+            while desired_speed > longitudinal_speed:
+                # print(desired_speed, ".....................", longitudinal_speed)
+                self.ego_control.throttle = min(self.ego_control.throttle + increment, 1.0)
+                self.get_vehicle_speed()
+                longitudinal_speed = float(self.vel_in_vehicle[0])
+                # print("attemping to speed up.", self.ego_control.throttle)
+                self.vehicle.apply_control(self.ego_control)
+            self.ego_control.throttle = 0 # once we reach the desired speed, stop pressing on the gas pedal
+            self.vehicle.apply_control(self.ego_control)
+        elif desired_speed < self.vel_in_vehicle[0]: # need to slow down
+            while desired_speed > self.vel_in_vehicle[0]:
+                self.ego_control.brake = min(self.ego_control.brake + increment, 1.0)
+                self.vehicle.apply_control(self.ego_control)
+            self.ego_control.brake = 0 # once we reach the desired speed, stop pressing on the gas pedal
+            self.vehicle.apply_control(self.ego_control)
+    
+    def ModeTransition(self, msg):
+        mode = msg.mode # UNKNOWN = 0 STOP = 1  AUTONOMOUS = 2 LOCAL = 3  REMOTE = 4
+        is_autoware_control_enabled = msg.is_autoware_control_enabled
+        is_in_transition = msg.is_in_transition
+        is_stop_mode_available = msg.is_stop_mode_available
+        is_autonomous_mode_available = msg.is_autonomous_mode_available
+        is_local_mode_available = msg.is_local_mode_available
+        is_remote_mode_available = msg.is_remote_mode_available
+
+        print("autonomous mode is available %s", {is_autonomous_mode_available})
+
+        # transition from normal to autoware control
+        if mode == 1 and is_in_transition == True and is_autoware_control_enabled == False:
+            self.control_mode = 1 # NO_COMMAND = 0; AUTONOMOUS = 1; AUTONOMOUS_STEER_ONLY = 2; AUTONOMOUS_VELOCITY_ONLY = 3; MANUAL = 4; DISENGAGED = 5; NOT_READY = 6;
+            print("Transition Completed.")
+        elif mode == 1 and is_in_transition == True and is_autoware_control_enabled == True: # auto to normal
+            self.control_mode = 0
 
 # -------------------Setting up Publishers ------------------------------
     def setUpPublishers(self):
@@ -728,28 +779,48 @@ class DefaultVehicle(Node):
         print("Publishing Steering Report")
         self.gnss_pub = self.create_publisher(PoseWithCovarianceStamped, "/sensing/gnss/pose_with_covariance", 10)
         print("Publishing GNSS Pose with Covar")
-        self.imu_pub = self.create_publisher(Imu, "/sensing/imu/imu_data", 100)
+        self.imu_pub = self.create_publisher(Imu, "/sensing/imu/imu_data", 10)
         print("Publishing IMU Data")
+        self.vehicle_status_control_mode_pub = self.create_publisher(ControlModeReport, "/vehicle/status/control_mode", 10)
+        print("Publishing Vehicle Control Mode")
 
+# -------------------Setting up Subscribers ------------------------
+    def setUpSubscribers(self):
+        # subscribe to trajectory cmds, this is subjected to change
+        self.autoware_control_sub = self.create_subscription(AckermannControlCommand, '/control/trajectory_follower/control_cmd', self.AutowareControllCallbacks, 10)
+        # subscribe to controls
+        self.enabled = False
+        # self.subscription_controls = self.create_subscription(String, 'hv_controls', self.vehicleROSControls, 10)
+        # subscribe to BSM messages
+        self.bsm_sub = self.create_subscription(BSM, 'BSM', self.BSMSubscriber_cb, 10)
+        # subscribe to autoware mode transition msg
+        self.mode_transition_sub = self.create_subscription(OperationModeState, "/api/operation_mode/state", self.ModeTransition, 10)
 # --------------------Velocity Report -------------------------
     def pubVelocityReport(self):
         # print(self.vehicle.get_angular_velocity())
         velocity_report = VelocityReport()
         velocity_report.header.stamp=Clock().now().to_msg()
         velocity_report.header.frame_id = "base_link"
-        velocity_report.longitudinal_velocity = 0-self.vehicle.get_velocity().y 
-        velocity_report.lateral_velocity = 0-self.vehicle.get_velocity().x
-        velocity_report.heading_rate = 0-self.vehicle.get_angular_velocity().z
+        velocity_report.longitudinal_velocity = float(self.vel_in_vehicle[0])
+        velocity_report.lateral_velocity = float(self.vel_in_vehicle[1])
+        velocity_report.heading_rate = float(math.radians(self.vel_in_vehicle[2]))
         self.vehicle_report_pub.publish(velocity_report)
+# ------------------- Vehicle Control Mode
+    def pubVehicleControlMode(self):
+        msg = ControlModeReport()
+        msg.stamp = Clock().now().to_msg()
+        msg.mode = self.control_mode
+        self.vehicle_status_control_mode_pub.publish(msg)
     
     def pubSteeringReport(self):
-        steering_angle = self.vehicle.get_control().steer
-        steering_angle_degrees = steering_angle * 45.0  # Scaling to [-45, 45] degrees
-        steering_angle_radians = math.radians(steering_angle_degrees)
+        steering_angle = 0-self.vehicle.get_control().steer
         
+        # steering_angle_degrees = steering_angle * 45.0  # Scaling to [-45, 45] degrees
+        # steering_angle_radians = math.radians(steering_angle_degrees)
+        # carla and autoware's steering angle is opposite
         msg = SteeringReport()
         msg.stamp=Clock().now().to_msg()
-        msg.steering_tire_angle = steering_angle_radians
+        msg.steering_tire_angle = 0-steering_angle
         self.steering_report_pub.publish(msg)
 
 # ------------------------------------- Destroy -------------------------------------
@@ -794,7 +865,7 @@ def main(args=None):
     # add IMU Sensor
     demo_veh.addIMUSensor()
     # print("Publishing IMU Sensor Data")
-    # demo_veh.AutowareControl(True)
+    
     
     
     try:

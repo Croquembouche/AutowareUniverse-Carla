@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from autoware_adapi_v1_msgs/localization/srv/InitializeLocalization.srv
+// generated code does not contain a copyright notice
+
+#include "autoware_adapi_v1_msgs/msg/ResponseStatus.idl"
+#include "geometry_msgs/msg/PoseWithCovarianceStamped.idl"
+
+module autoware_adapi_v1_msgs {
+  module srv {
+    struct InitializeLocalization_Request {
+      sequence<geometry_msgs::msg::PoseWithCovarianceStamped, 1> pose;
+    };
+    module InitializeLocalization_Response_Constants {
+      const uint16 ERROR_UNSAFE = 1;
+      const uint16 ERROR_GNSS_SUPPORT = 2;
+      const uint16 ERROR_GNSS = 3;
+      const uint16 ERROR_ESTIMATION = 4;
+    };
+    struct InitializeLocalization_Response {
+      autoware_adapi_v1_msgs::msg::ResponseStatus status;
+    };
+  };
+};

@@ -1,0 +1,3 @@
+[console_scripts]
+map = map.map:main
+

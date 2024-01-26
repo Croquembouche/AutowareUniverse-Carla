@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from autoware_adapi_v1_msgs/routing/msg/RouteSegment.msg
+// generated code does not contain a copyright notice
+
+#include "autoware_adapi_v1_msgs/msg/RoutePrimitive.idl"
+
+module autoware_adapi_v1_msgs {
+  module msg {
+    struct RouteSegment {
+      autoware_adapi_v1_msgs::msg::RoutePrimitive preferred;
+
+      @verbatim (language="comment", text=
+        "Does not include the preferred primitive.")
+      sequence<autoware_adapi_v1_msgs::msg::RoutePrimitive> alternatives;
+    };
+  };
+};

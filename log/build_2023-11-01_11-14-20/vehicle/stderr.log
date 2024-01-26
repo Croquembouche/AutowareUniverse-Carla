@@ -1,0 +1,5 @@
+  File "/home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages/vehicle/host_vehicle.py", line 751
+    self.control_mode =
+                       ^
+SyntaxError: invalid syntax
+

@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from autoware_adapi_v1_msgs/routing/msg/RouteState.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module autoware_adapi_v1_msgs {
+  module msg {
+    module RouteState_Constants {
+      const uint16 UNKNOWN = 0;
+      const uint16 UNSET = 1;
+      const uint16 SET = 2;
+      const uint16 ARRIVED = 3;
+      const uint16 CHANGING = 4;
+    };
+    struct RouteState {
+      builtin_interfaces::msg::Time stamp;
+
+      uint16 state;
+    };
+  };
+};

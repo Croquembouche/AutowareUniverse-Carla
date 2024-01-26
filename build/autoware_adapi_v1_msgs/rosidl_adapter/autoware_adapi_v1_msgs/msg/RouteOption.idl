@@ -1,0 +1,12 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from autoware_adapi_v1_msgs/routing/msg/RouteOption.msg
+// generated code does not contain a copyright notice
+
+
+module autoware_adapi_v1_msgs {
+  module msg {
+    struct RouteOption {
+      boolean allow_goal_modification;
+    };
+  };
+};

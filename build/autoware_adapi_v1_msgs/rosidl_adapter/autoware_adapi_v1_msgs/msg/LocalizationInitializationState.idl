@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from autoware_adapi_v1_msgs/localization/msg/LocalizationInitializationState.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module autoware_adapi_v1_msgs {
+  module msg {
+    module LocalizationInitializationState_Constants {
+      const uint16 UNKNOWN = 0;
+      const uint16 UNINITIALIZED = 1;
+      const uint16 INITIALIZING = 2;
+      const uint16 INITIALIZED = 3;
+    };
+    struct LocalizationInitializationState {
+      builtin_interfaces::msg::Time stamp;
+
+      uint16 state;
+    };
+  };
+};

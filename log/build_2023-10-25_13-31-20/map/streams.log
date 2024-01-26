@@ -1,0 +1,37 @@
+[4.662s] Invoking command in '/home/carla/Github/C-V2X-Autoware-Carla/src/map': PYTHONPATH=/home/carla/Github/C-V2X-Autoware-Carla/build/map/prefix_override:/home/carla/Github/C-V2X-Autoware-Carla/install/map/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/map build --build-base /home/carla/Github/C-V2X-Autoware-Carla/build/map/build install --record /home/carla/Github/C-V2X-Autoware-Carla/build/map/install.log --single-version-externally-managed
+[5.421s] running egg_info
+[5.421s] creating ../../build/map/map.egg-info
+[5.421s] writing ../../build/map/map.egg-info/PKG-INFO
+[5.422s] writing dependency_links to ../../build/map/map.egg-info/dependency_links.txt
+[5.422s] writing entry points to ../../build/map/map.egg-info/entry_points.txt
+[5.422s] writing requirements to ../../build/map/map.egg-info/requires.txt
+[5.422s] writing top-level names to ../../build/map/map.egg-info/top_level.txt
+[5.423s] writing manifest file '../../build/map/map.egg-info/SOURCES.txt'
+[5.448s] reading manifest file '../../build/map/map.egg-info/SOURCES.txt'
+[5.448s] writing manifest file '../../build/map/map.egg-info/SOURCES.txt'
+[5.448s] running build
+[5.448s] running build_py
+[5.448s] creating /home/carla/Github/C-V2X-Autoware-Carla/build/map/build
+[5.448s] creating /home/carla/Github/C-V2X-Autoware-Carla/build/map/build/lib
+[5.448s] creating /home/carla/Github/C-V2X-Autoware-Carla/build/map/build/lib/map
+[5.448s] copying map/map.py -> /home/carla/Github/C-V2X-Autoware-Carla/build/map/build/lib/map
+[5.448s] copying map/__init__.py -> /home/carla/Github/C-V2X-Autoware-Carla/build/map/build/lib/map
+[5.448s] running install
+[5.450s] running install_lib
+[5.451s] creating /home/carla/Github/C-V2X-Autoware-Carla/install/map/lib/python3.8/site-packages/map
+[5.451s] copying /home/carla/Github/C-V2X-Autoware-Carla/build/map/build/lib/map/map.py -> /home/carla/Github/C-V2X-Autoware-Carla/install/map/lib/python3.8/site-packages/map
+[5.451s] copying /home/carla/Github/C-V2X-Autoware-Carla/build/map/build/lib/map/__init__.py -> /home/carla/Github/C-V2X-Autoware-Carla/install/map/lib/python3.8/site-packages/map
+[5.452s] byte-compiling /home/carla/Github/C-V2X-Autoware-Carla/install/map/lib/python3.8/site-packages/map/map.py to map.cpython-38.pyc
+[5.453s] byte-compiling /home/carla/Github/C-V2X-Autoware-Carla/install/map/lib/python3.8/site-packages/map/__init__.py to __init__.cpython-38.pyc
+[5.453s] running install_data
+[5.454s] creating /home/carla/Github/C-V2X-Autoware-Carla/install/map/share/ament_index
+[5.454s] creating /home/carla/Github/C-V2X-Autoware-Carla/install/map/share/ament_index/resource_index
+[5.454s] creating /home/carla/Github/C-V2X-Autoware-Carla/install/map/share/ament_index/resource_index/packages
+[5.454s] copying resource/map -> /home/carla/Github/C-V2X-Autoware-Carla/install/map/share/ament_index/resource_index/packages
+[5.454s] copying package.xml -> /home/carla/Github/C-V2X-Autoware-Carla/install/map/share/map
+[5.454s] running install_egg_info
+[5.456s] Copying ../../build/map/map.egg-info to /home/carla/Github/C-V2X-Autoware-Carla/install/map/lib/python3.8/site-packages/map-0.0.0-py3.8.egg-info
+[5.456s] running install_scripts
+[5.482s] Installing map script to /home/carla/Github/C-V2X-Autoware-Carla/install/map/lib/map
+[5.483s] writing list of installed files to '/home/carla/Github/C-V2X-Autoware-Carla/build/map/install.log'
+[6.037s] Invoked command in '/home/carla/Github/C-V2X-Autoware-Carla/src/map' returned '0': PYTHONPATH=/home/carla/Github/C-V2X-Autoware-Carla/build/map/prefix_override:/home/carla/Github/C-V2X-Autoware-Carla/install/map/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/map build --build-base /home/carla/Github/C-V2X-Autoware-Carla/build/map/build install --record /home/carla/Github/C-V2X-Autoware-Carla/build/map/install.log --single-version-externally-managed

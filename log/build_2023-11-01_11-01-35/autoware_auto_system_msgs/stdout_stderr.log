@@ -1,0 +1,13 @@
+failed to create symbolic link '/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_system_msgs/ament_cmake_python/autoware_auto_system_msgs/autoware_auto_system_msgs' because existing path cannot be removed: Is a directory
+make[2]: *** [CMakeFiles/ament_cmake_python_symlink_autoware_auto_system_msgs.dir/build.make:57: CMakeFiles/ament_cmake_python_symlink_autoware_auto_system_msgs] Error 1
+make[1]: *** [CMakeFiles/Makefile2:576: CMakeFiles/ament_cmake_python_symlink_autoware_auto_system_msgs.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:141: all] Error 2
+[  1%] Built target autoware_auto_system_msgs__cpp
+[ 12%] Built target autoware_auto_system_msgs__rosidl_generator_c
+[ 35%] Built target autoware_auto_system_msgs__rosidl_typesupport_cpp
+[ 35%] Built target autoware_auto_system_msgs__rosidl_typesupport_fastrtps_cpp
+[ 58%] Built target autoware_auto_system_msgs__rosidl_typesupport_introspection_cpp
+[ 56%] Built target autoware_auto_system_msgs__rosidl_typesupport_c
+[ 69%] Built target autoware_auto_system_msgs__rosidl_typesupport_fastrtps_c
+[ 81%] Built target autoware_auto_system_msgs__rosidl_typesupport_introspection_c

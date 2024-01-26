@@ -1,0 +1,7 @@
+
+uint16 ERROR_ROUTE_EXISTS = 1 # Deprecated. Use ERROR_INVALID_STATE.
+uint16 ERROR_INVALID_STATE = 1
+uint16 ERROR_PLANNER_UNREADY = 2
+uint16 ERROR_PLANNER_FAILED = 3
+uint16 ERROR_REROUTE_FAILED = 4
+autoware_adapi_v1_msgs/ResponseStatus status

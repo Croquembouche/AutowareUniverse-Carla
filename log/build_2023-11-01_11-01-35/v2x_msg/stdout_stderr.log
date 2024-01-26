@@ -1,0 +1,8 @@
+[35m[1mScanning dependencies of target ament_cmake_python_symlink_v2x_msg[0m
+failed to create symbolic link '/home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/ament_cmake_python/v2x_msg/v2x_msg' because existing path cannot be removed: Is a directory
+make[2]: *** [CMakeFiles/ament_cmake_python_symlink_v2x_msg.dir/build.make:57: CMakeFiles/ament_cmake_python_symlink_v2x_msg] Error 1
+make[1]: *** [CMakeFiles/Makefile2:576: CMakeFiles/ament_cmake_python_symlink_v2x_msg.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[  0%] Built target v2x_msg__cpp
+[ 12%] Built target v2x_msg__rosidl_generator_c
+make: *** [Makefile:141: all] Error 2

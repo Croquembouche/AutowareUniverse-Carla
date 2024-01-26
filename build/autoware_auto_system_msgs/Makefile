@@ -168,19 +168,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named autoware_auto_system_msgs__rosidl_typesupport_c__pyext
-
-# Build rule for target.
-autoware_auto_system_msgs__rosidl_typesupport_c__pyext: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 autoware_auto_system_msgs__rosidl_typesupport_c__pyext
-.PHONY : autoware_auto_system_msgs__rosidl_typesupport_c__pyext
-
-# fast build rule for target.
-autoware_auto_system_msgs__rosidl_typesupport_c__pyext/fast:
-	$(MAKE) -f CMakeFiles/autoware_auto_system_msgs__rosidl_typesupport_c__pyext.dir/build.make CMakeFiles/autoware_auto_system_msgs__rosidl_typesupport_c__pyext.dir/build
-.PHONY : autoware_auto_system_msgs__rosidl_typesupport_c__pyext/fast
-
-#=============================================================================
 # Target rules for targets named autoware_auto_system_msgs__rosidl_typesupport_fastrtps_c__pyext
 
 # Build rule for target.
@@ -363,19 +350,6 @@ autoware_auto_system_msgs__rosidl_typesupport_introspection_cpp/fast:
 .PHONY : autoware_auto_system_msgs__rosidl_typesupport_introspection_cpp/fast
 
 #=============================================================================
-# Target rules for targets named ament_cmake_python_copy_autoware_auto_system_msgs
-
-# Build rule for target.
-ament_cmake_python_copy_autoware_auto_system_msgs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ament_cmake_python_copy_autoware_auto_system_msgs
-.PHONY : ament_cmake_python_copy_autoware_auto_system_msgs
-
-# fast build rule for target.
-ament_cmake_python_copy_autoware_auto_system_msgs/fast:
-	$(MAKE) -f CMakeFiles/ament_cmake_python_copy_autoware_auto_system_msgs.dir/build.make CMakeFiles/ament_cmake_python_copy_autoware_auto_system_msgs.dir/build
-.PHONY : ament_cmake_python_copy_autoware_auto_system_msgs/fast
-
-#=============================================================================
 # Target rules for targets named autoware_auto_system_msgs__rosidl_typesupport_cpp
 
 # Build rule for target.
@@ -387,6 +361,32 @@ autoware_auto_system_msgs__rosidl_typesupport_cpp: cmake_check_build_system
 autoware_auto_system_msgs__rosidl_typesupport_cpp/fast:
 	$(MAKE) -f CMakeFiles/autoware_auto_system_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/autoware_auto_system_msgs__rosidl_typesupport_cpp.dir/build
 .PHONY : autoware_auto_system_msgs__rosidl_typesupport_cpp/fast
+
+#=============================================================================
+# Target rules for targets named autoware_auto_system_msgs__rosidl_typesupport_c__pyext
+
+# Build rule for target.
+autoware_auto_system_msgs__rosidl_typesupport_c__pyext: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 autoware_auto_system_msgs__rosidl_typesupport_c__pyext
+.PHONY : autoware_auto_system_msgs__rosidl_typesupport_c__pyext
+
+# fast build rule for target.
+autoware_auto_system_msgs__rosidl_typesupport_c__pyext/fast:
+	$(MAKE) -f CMakeFiles/autoware_auto_system_msgs__rosidl_typesupport_c__pyext.dir/build.make CMakeFiles/autoware_auto_system_msgs__rosidl_typesupport_c__pyext.dir/build
+.PHONY : autoware_auto_system_msgs__rosidl_typesupport_c__pyext/fast
+
+#=============================================================================
+# Target rules for targets named ament_cmake_python_symlink_autoware_auto_system_msgs
+
+# Build rule for target.
+ament_cmake_python_symlink_autoware_auto_system_msgs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_autoware_auto_system_msgs
+.PHONY : ament_cmake_python_symlink_autoware_auto_system_msgs
+
+# fast build rule for target.
+ament_cmake_python_symlink_autoware_auto_system_msgs/fast:
+	$(MAKE) -f CMakeFiles/ament_cmake_python_symlink_autoware_auto_system_msgs.dir/build.make CMakeFiles/ament_cmake_python_symlink_autoware_auto_system_msgs.dir/build
+.PHONY : ament_cmake_python_symlink_autoware_auto_system_msgs/fast
 
 #=============================================================================
 # Target rules for targets named autoware_auto_system_msgs__py
@@ -2002,7 +2002,6 @@ help:
 	@echo "... depend"
 	@echo "... install/local"
 	@echo "... install"
-	@echo "... autoware_auto_system_msgs__rosidl_typesupport_c__pyext"
 	@echo "... list_install_components"
 	@echo "... autoware_auto_system_msgs__rosidl_typesupport_fastrtps_c__pyext"
 	@echo "... autoware_auto_system_msgs__rosidl_typesupport_introspection_c__pyext"
@@ -2022,8 +2021,9 @@ help:
 	@echo "... autoware_auto_system_msgs__rosidl_generator_c"
 	@echo "... autoware_auto_system_msgs__rosidl_typesupport_c"
 	@echo "... autoware_auto_system_msgs__rosidl_typesupport_introspection_cpp"
-	@echo "... ament_cmake_python_copy_autoware_auto_system_msgs"
 	@echo "... autoware_auto_system_msgs__rosidl_typesupport_cpp"
+	@echo "... autoware_auto_system_msgs__rosidl_typesupport_c__pyext"
+	@echo "... ament_cmake_python_symlink_autoware_auto_system_msgs"
 	@echo "... autoware_auto_system_msgs__py"
 	@echo "... rosidl_generator_c/autoware_auto_system_msgs/msg/detail/autoware_state__functions.o"
 	@echo "... rosidl_generator_c/autoware_auto_system_msgs/msg/detail/autoware_state__functions.i"

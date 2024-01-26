@@ -376,17 +376,17 @@ v2x_msg__rosidl_typesupport_fastrtps_cpp/fast:
 .PHONY : v2x_msg__rosidl_typesupport_fastrtps_cpp/fast
 
 #=============================================================================
-# Target rules for targets named ament_cmake_python_copy_v2x_msg
+# Target rules for targets named ament_cmake_python_symlink_v2x_msg
 
 # Build rule for target.
-ament_cmake_python_copy_v2x_msg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ament_cmake_python_copy_v2x_msg
-.PHONY : ament_cmake_python_copy_v2x_msg
+ament_cmake_python_symlink_v2x_msg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_v2x_msg
+.PHONY : ament_cmake_python_symlink_v2x_msg
 
 # fast build rule for target.
-ament_cmake_python_copy_v2x_msg/fast:
-	$(MAKE) -f CMakeFiles/ament_cmake_python_copy_v2x_msg.dir/build.make CMakeFiles/ament_cmake_python_copy_v2x_msg.dir/build
-.PHONY : ament_cmake_python_copy_v2x_msg/fast
+ament_cmake_python_symlink_v2x_msg/fast:
+	$(MAKE) -f CMakeFiles/ament_cmake_python_symlink_v2x_msg.dir/build.make CMakeFiles/ament_cmake_python_symlink_v2x_msg.dir/build
+.PHONY : ament_cmake_python_symlink_v2x_msg/fast
 
 #=============================================================================
 # Target rules for targets named v2x_msg__py
@@ -30751,7 +30751,7 @@ help:
 	@echo "... v2x_msg__rosidl_typesupport_introspection_cpp"
 	@echo "... v2x_msg__rosidl_typesupport_c"
 	@echo "... v2x_msg__rosidl_typesupport_fastrtps_cpp"
-	@echo "... ament_cmake_python_copy_v2x_msg"
+	@echo "... ament_cmake_python_symlink_v2x_msg"
 	@echo "... v2x_msg__py"
 	@echo "... rosidl_generator_c/v2x_msg/msg/detail/accel_sets__functions.o"
 	@echo "... rosidl_generator_c/v2x_msg/msg/detail/accel_sets__functions.i"

@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from autoware_adapi_v1_msgs/motion/msg/MotionState.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module autoware_adapi_v1_msgs {
+  module msg {
+    module MotionState_Constants {
+      const uint16 UNKNOWN = 0;
+      const uint16 STOPPED = 1;
+      const uint16 STARTING = 2;
+      const uint16 MOVING = 3;
+    };
+    struct MotionState {
+      builtin_interfaces::msg::Time stamp;
+
+      uint16 state;
+    };
+  };
+};

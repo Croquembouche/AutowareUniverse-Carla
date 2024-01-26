@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from autoware_adapi_v1_msgs/routing/srv/SetRoutePoints.srv
+// generated code does not contain a copyright notice
+
+#include "autoware_adapi_v1_msgs/msg/ResponseStatus.idl"
+#include "autoware_adapi_v1_msgs/msg/RouteOption.idl"
+#include "geometry_msgs/msg/Pose.idl"
+#include "std_msgs/msg/Header.idl"
+
+module autoware_adapi_v1_msgs {
+  module srv {
+    struct SetRoutePoints_Request {
+      std_msgs::msg::Header header;
+
+      autoware_adapi_v1_msgs::msg::RouteOption option;
+
+      geometry_msgs::msg::Pose goal;
+
+      sequence<geometry_msgs::msg::Pose> waypoints;
+    };
+    module SetRoutePoints_Response_Constants {
+      @verbatim (language="comment", text=
+        "Deprecated. Use ERROR_INVALID_STATE.")
+      const uint16 ERROR_ROUTE_EXISTS = 1;
+      const uint16 ERROR_INVALID_STATE = 1;
+      const uint16 ERROR_PLANNER_UNREADY = 2;
+      const uint16 ERROR_PLANNER_FAILED = 3;
+      const uint16 ERROR_REROUTE_FAILED = 4;
+    };
+    struct SetRoutePoints_Response {
+      autoware_adapi_v1_msgs::msg::ResponseStatus status;
+    };
+  };
+};

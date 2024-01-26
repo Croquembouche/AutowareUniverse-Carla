@@ -233,6 +233,19 @@ autoware_auto_control_msgs/fast:
 .PHONY : autoware_auto_control_msgs/fast
 
 #=============================================================================
+# Target rules for targets named ament_cmake_python_symlink_autoware_auto_control_msgs
+
+# Build rule for target.
+ament_cmake_python_symlink_autoware_auto_control_msgs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_autoware_auto_control_msgs
+.PHONY : ament_cmake_python_symlink_autoware_auto_control_msgs
+
+# fast build rule for target.
+ament_cmake_python_symlink_autoware_auto_control_msgs/fast:
+	$(MAKE) -f CMakeFiles/ament_cmake_python_symlink_autoware_auto_control_msgs.dir/build.make CMakeFiles/ament_cmake_python_symlink_autoware_auto_control_msgs.dir/build
+.PHONY : ament_cmake_python_symlink_autoware_auto_control_msgs/fast
+
+#=============================================================================
 # Target rules for targets named autoware_auto_control_msgs__rosidl_typesupport_introspection_c
 
 # Build rule for target.
@@ -361,19 +374,6 @@ autoware_auto_control_msgs__rosidl_typesupport_introspection_cpp: cmake_check_bu
 autoware_auto_control_msgs__rosidl_typesupport_introspection_cpp/fast:
 	$(MAKE) -f CMakeFiles/autoware_auto_control_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/autoware_auto_control_msgs__rosidl_typesupport_introspection_cpp.dir/build
 .PHONY : autoware_auto_control_msgs__rosidl_typesupport_introspection_cpp/fast
-
-#=============================================================================
-# Target rules for targets named ament_cmake_python_copy_autoware_auto_control_msgs
-
-# Build rule for target.
-ament_cmake_python_copy_autoware_auto_control_msgs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ament_cmake_python_copy_autoware_auto_control_msgs
-.PHONY : ament_cmake_python_copy_autoware_auto_control_msgs
-
-# fast build rule for target.
-ament_cmake_python_copy_autoware_auto_control_msgs/fast:
-	$(MAKE) -f CMakeFiles/ament_cmake_python_copy_autoware_auto_control_msgs.dir/build.make CMakeFiles/ament_cmake_python_copy_autoware_auto_control_msgs.dir/build
-.PHONY : ament_cmake_python_copy_autoware_auto_control_msgs/fast
 
 #=============================================================================
 # Target rules for targets named autoware_auto_control_msgs__rosidl_typesupport_cpp
@@ -1360,6 +1360,7 @@ help:
 	@echo "... ament_cmake_python_build_autoware_auto_control_msgs_egg"
 	@echo "... autoware_auto_control_msgs__cpp"
 	@echo "... autoware_auto_control_msgs"
+	@echo "... ament_cmake_python_symlink_autoware_auto_control_msgs"
 	@echo "... autoware_auto_control_msgs__rosidl_typesupport_introspection_c"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
@@ -1374,7 +1375,6 @@ help:
 	@echo "... autoware_auto_control_msgs__rosidl_generator_py"
 	@echo "... autoware_auto_control_msgs_uninstall"
 	@echo "... autoware_auto_control_msgs__rosidl_typesupport_introspection_cpp"
-	@echo "... ament_cmake_python_copy_autoware_auto_control_msgs"
 	@echo "... autoware_auto_control_msgs__rosidl_typesupport_cpp"
 	@echo "... autoware_auto_control_msgs__py"
 	@echo "... rosidl_generator_c/autoware_auto_control_msgs/msg/detail/ackermann_control_command__functions.o"

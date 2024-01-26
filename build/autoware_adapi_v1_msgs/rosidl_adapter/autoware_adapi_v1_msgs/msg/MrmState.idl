@@ -1,0 +1,33 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from autoware_adapi_v1_msgs/system/msg/MrmState.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module autoware_adapi_v1_msgs {
+  module msg {
+    module MrmState_Constants {
+      @verbatim (language="comment", text=
+        "For common use")
+      const uint16 UNKNOWN = 0;
+      @verbatim (language="comment", text=
+        "For state")
+      const uint16 NORMAL = 1;
+      const uint16 MRM_OPERATING = 2;
+      const uint16 MRM_SUCCEEDED = 3;
+      const uint16 MRM_FAILED = 4;
+      @verbatim (language="comment", text=
+        "For behavior")
+      const uint16 NONE = 1;
+      const uint16 EMERGENCY_STOP = 2;
+      const uint16 COMFORTABLE_STOP = 3;
+    };
+    struct MrmState {
+      builtin_interfaces::msg::Time stamp;
+
+      uint16 state;
+
+      uint16 behavior;
+    };
+  };
+};
