@@ -4,7 +4,7 @@ This Repo creates a default vehicle inside CARLA and publishes the data for Auto
 The Autoware Files needed to correctly run the Co-Sim is here: https://drive.google.com/drive/folders/1EJQ4LxNBwBwqXWHvvh2cltkt-IORBK9z?usp=sharing
 
 ## How to use?
-### Setting up CARLA
+### Setting up CARLA: Version Compatibility: >= 0.9.13
 1. Install CARLA
 2. Ingest map. If CARLA Built from source: https://carla.readthedocs.io/en/0.9.13/tuto_M_add_map_source/; If CARLA Pre-Built: https://carla.readthedocs.io/en/0.9.13/tuto_M_add_map_package/
 
@@ -12,7 +12,7 @@ The Autoware Files needed to correctly run the Co-Sim is here: https://drive.goo
 #### Install From Source
 
 1. Download and Install Autoware Universe from the offical documentation: https://github.com/autowarefoundation/autoware
-2. Replace/Merge the Existing Autoware files with my files.
+2. Replace/Merge the Existing Autoware files with files in Google Drive.
 3. Build package
 
 ### Building this repo
@@ -21,7 +21,7 @@ The Autoware Files needed to correctly run the Co-Sim is here: https://drive.goo
 
 #### If using Docker/Rocker Container
 1. Terminal command to run docker: `rocker --nvidia --x11 williamhecoin/bluebird:blueice`
-2. Merge/replace existing autoware files with this.
+2. Merge/replace existing autoware files with files in Google Drive.
 
 ## Running the Co-Sim
 1. Start Carla simulation
