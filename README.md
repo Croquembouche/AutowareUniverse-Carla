@@ -37,4 +37,5 @@ The Autoware Files needed to correctly run the Co-Sim is here: https://drive.goo
 1. The vehicle should receive commands through `/control/command/control_cmd`, but it current receives control from `/control/trajectory_follower/control_cmd`
 2. GNSS Sensor is currently disabled due to it flying around.
 
-## If you have further questions, email me at willhe@udel.edu
+#### If you have further questions, email me at willhe@udel.edu
+#### Paper to Cite: Still Under Review
