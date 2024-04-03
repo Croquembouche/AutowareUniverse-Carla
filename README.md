@@ -1,27 +1,20 @@
 # Autoware-Carla (BlueICE Baseline)
 
-This Repo creates a default vehicle inside CARLA and publishes the data for Autoware.Universe to use.
-The Autoware Files needed to correctly run the Co-Sim is here: https://drive.google.com/drive/folders/1EJQ4LxNBwBwqXWHvvh2cltkt-IORBK9z?usp=sharing
+docker file is available at williamcoin/bluebice:v1.0
 
 ## How to use?
 ### Setting up CARLA: Version Compatibility: >= 0.9.13
 1. Install CARLA
 2. Ingest map. If CARLA Built from source: https://carla.readthedocs.io/en/0.9.13/tuto_M_add_map_source/; If CARLA Pre-Built: https://carla.readthedocs.io/en/0.9.13/tuto_M_add_map_package/
+3. Required map files are located in autoware_map/ud-modular-lab
 
 ### Setting up Autoware
-#### Install From Source
 
-1. Download and Install Autoware Universe from the offical documentation: https://github.com/autowarefoundation/autoware
-2. Replace/Merge the Existing Autoware files with files in Google Drive.
-3. Build package
-
-### Building this repo
-1. Build package.
-2. If you encounter any errors with building the autoware msgs, run`colcon build --packages-select vehicle`
+#### Installation from source
+Installing from source is currently unavailable. I have not had the chance to update the existing files to the newest autoware version
 
 #### If using Docker/Rocker Container
-1. Terminal command to run docker: `rocker --nvidia --x11 williamhecoin/bluebird:blueice`
-2. Merge/replace existing autoware files with files in Google Drive.
+1. Terminal command to run docker: `rocker --nvidia --x11 williamhecoin/blueice:v1.0'
 
 ## Running the Co-Sim
 1. Start Carla simulation
@@ -35,7 +28,6 @@ The Autoware Files needed to correctly run the Co-Sim is here: https://drive.goo
 
 #### Known Bug
 1. The vehicle should receive commands through `/control/command/control_cmd`, but it current receives control from `/control/trajectory_follower/control_cmd`
-2. GNSS Sensor is currently disabled due to it flying around.
 
 #### If you have further questions, email me at willhe@udel.edu
 #### Paper to Cite: Still Under Review
