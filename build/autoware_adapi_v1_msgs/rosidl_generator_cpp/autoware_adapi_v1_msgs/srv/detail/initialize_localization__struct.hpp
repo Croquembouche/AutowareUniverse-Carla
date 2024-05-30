@@ -238,14 +238,26 @@ using InitializeLocalization_Response =
   autoware_adapi_v1_msgs::srv::InitializeLocalization_Response_<std::allocator<void>>;
 
 // constant definitions
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint16_t InitializeLocalization_Response_<ContainerAllocator>::ERROR_UNSAFE;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint16_t InitializeLocalization_Response_<ContainerAllocator>::ERROR_GNSS_SUPPORT;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint16_t InitializeLocalization_Response_<ContainerAllocator>::ERROR_GNSS;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint16_t InitializeLocalization_Response_<ContainerAllocator>::ERROR_ESTIMATION;
+#endif  // __cplusplus < 201703L
 
 }  // namespace srv
 

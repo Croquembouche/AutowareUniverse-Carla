@@ -222,14 +222,26 @@ using HazardStatus =
   autoware_auto_system_msgs::msg::HazardStatus_<std::allocator<void>>;
 
 // constant definitions
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t HazardStatus_<ContainerAllocator>::NO_FAULT;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t HazardStatus_<ContainerAllocator>::SAFE_FAULT;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t HazardStatus_<ContainerAllocator>::LATENT_FAULT;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t HazardStatus_<ContainerAllocator>::SINGLE_POINT_FAULT;
+#endif  // __cplusplus < 201703L
 
 }  // namespace msg
 

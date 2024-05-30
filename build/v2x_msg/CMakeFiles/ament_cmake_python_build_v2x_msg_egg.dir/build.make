@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg
 include CMakeFiles/ament_cmake_python_build_v2x_msg_egg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_build_v2x_msg_egg:
-	cd /home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/ament_cmake_python/v2x_msg && /usr/bin/python3.8 setup.py egg_info
+	cd /home/carla/Github/C-V2X-Autoware-Carla/build/v2x_msg/ament_cmake_python/v2x_msg && /usr/bin/python3 setup.py egg_info
 
 ament_cmake_python_build_v2x_msg_egg: CMakeFiles/ament_cmake_python_build_v2x_msg_egg
 ament_cmake_python_build_v2x_msg_egg: CMakeFiles/ament_cmake_python_build_v2x_msg_egg.dir/build.make

@@ -77,7 +77,7 @@ rosidl_generator_c/autoware_auto_control_msgs/msg/ackermann_control_command.h: /
 rosidl_generator_c/autoware_auto_control_msgs/msg/ackermann_control_command.h: /home/carla/ros2_humble/install/builtin_interfaces/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_c/autoware_auto_control_msgs/msg/ackermann_control_command.h: /home/carla/ros2_humble/install/builtin_interfaces/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_control_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
-	/usr/bin/python3.8 /home/carla/ros2_humble/install/rosidl_generator_c/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_control_msgs/rosidl_generator_c__arguments.json
+	/usr/bin/python3 /home/carla/ros2_humble/install/rosidl_generator_c/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_control_msgs/rosidl_generator_c__arguments.json
 
 rosidl_generator_c/autoware_auto_control_msgs/msg/detail/ackermann_control_command__functions.h: rosidl_generator_c/autoware_auto_control_msgs/msg/ackermann_control_command.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/autoware_auto_control_msgs/msg/detail/ackermann_control_command__functions.h

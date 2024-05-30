@@ -229,8 +229,11 @@ using AcceptStart_Response =
   autoware_adapi_v1_msgs::srv::AcceptStart_Response_<std::allocator<void>>;
 
 // constant definitions
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint16_t AcceptStart_Response_<ContainerAllocator>::ERROR_NOT_STARTING;
+#endif  // __cplusplus < 201703L
 
 }  // namespace srv
 

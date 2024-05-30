@@ -12,6 +12,7 @@ infrastructure/MAP.py
 infrastructure/SRM.py
 infrastructure/SSM.py
 infrastructure/__init__.py
+infrastructure/update.py
 resource/infrastructure
 test/test_copyright.py
 test/test_flake8.py

@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_m
 include CMakeFiles/ament_cmake_python_build_autoware_auto_mapping_msgs_egg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_build_autoware_auto_mapping_msgs_egg:
-	cd /home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_mapping_msgs/ament_cmake_python/autoware_auto_mapping_msgs && /usr/bin/python3.8 setup.py egg_info
+	cd /home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_mapping_msgs/ament_cmake_python/autoware_auto_mapping_msgs && /usr/bin/python3 setup.py egg_info
 
 ament_cmake_python_build_autoware_auto_mapping_msgs_egg: CMakeFiles/ament_cmake_python_build_autoware_auto_mapping_msgs_egg
 ament_cmake_python_build_autoware_auto_mapping_msgs_egg: CMakeFiles/ament_cmake_python_build_autoware_auto_mapping_msgs_egg.dir/build.make

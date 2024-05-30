@@ -287,16 +287,31 @@ using SetRoute_Response =
   autoware_adapi_v1_msgs::srv::SetRoute_Response_<std::allocator<void>>;
 
 // constant definitions
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint16_t SetRoute_Response_<ContainerAllocator>::ERROR_ROUTE_EXISTS;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint16_t SetRoute_Response_<ContainerAllocator>::ERROR_INVALID_STATE;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint16_t SetRoute_Response_<ContainerAllocator>::ERROR_PLANNER_UNREADY;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint16_t SetRoute_Response_<ContainerAllocator>::ERROR_PLANNER_FAILED;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint16_t SetRoute_Response_<ContainerAllocator>::ERROR_REROUTE_FAILED;
+#endif  // __cplusplus < 201703L
 
 }  // namespace srv
 

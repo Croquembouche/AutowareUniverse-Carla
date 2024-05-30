@@ -205,7 +205,7 @@ endif()
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
-        "/usr/bin/python3.8" "-m" "compileall"
+        "/usr/bin/python3" "-m" "compileall"
         "/home/carla/Github/C-V2X-Autoware-Carla/install/autoware_auto_control_msgs/lib/python3.8/site-packages/autoware_auto_control_msgs"
       )
 endif()

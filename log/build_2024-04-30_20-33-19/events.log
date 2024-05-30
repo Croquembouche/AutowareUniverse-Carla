@@ -1,0 +1,55 @@
+[0.000000] (-) TimerEvent: {}
+[0.000203] (-) JobUnselected: {'identifier': 'autoware_adapi_v1_msgs'}
+[0.000247] (-) JobUnselected: {'identifier': 'autoware_auto_control_msgs'}
+[0.000257] (-) JobUnselected: {'identifier': 'autoware_auto_geometry_msgs'}
+[0.000265] (-) JobUnselected: {'identifier': 'autoware_auto_mapping_msgs'}
+[0.000271] (-) JobUnselected: {'identifier': 'autoware_auto_msgs'}
+[0.000278] (-) JobUnselected: {'identifier': 'autoware_auto_perception_msgs'}
+[0.000285] (-) JobUnselected: {'identifier': 'autoware_auto_planning_msgs'}
+[0.000291] (-) JobUnselected: {'identifier': 'autoware_auto_system_msgs'}
+[0.000298] (-) JobUnselected: {'identifier': 'autoware_auto_vehicle_msgs'}
+[0.000304] (-) JobUnselected: {'identifier': 'map'}
+[0.000311] (-) JobUnselected: {'identifier': 'v2x_msg'}
+[0.000318] (-) JobUnselected: {'identifier': 'vehicle'}
+[0.000325] (infrastructure) JobQueued: {'identifier': 'infrastructure', 'dependencies': OrderedDict()}
+[0.000420] (infrastructure) JobStarted: {'identifier': 'infrastructure'}
+[0.100020] (-) TimerEvent: {}
+[0.200254] (-) TimerEvent: {}
+[0.300497] (-) TimerEvent: {}
+[0.379184] (infrastructure) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/infrastructure', 'build', '--build-base', '/home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build', 'install', '--record', '/home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/carla/Github/C-V2X-Autoware-Carla/src/infrastructure', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'C_INCLUDE_PATH': '/usr/include/gdal', 'USER': 'carla', 'SSH_AGENT_PID': '1475', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib:/usr/local/cuda-11.7/lib64:', 'HOME': '/home/carla', 'DESKTOP_SESSION': 'ubuntu', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1343', 'CMAKE_ROOT': '/usr/local/share/cmake-3.29', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'CPLUS_INCLUDE_PATH': '/usr/include/gdal', 'IM_CONFIG_PHASE': '1', 'LOGNAME': 'carla', 'SUMO_HOME': '/usr/share/sumo', 'JOURNAL_STREAM': '8:52444', '_': '/usr/bin/colcon', 'XDG_SESSION_CLASS': 'user', 'ROS1_INSTALL_PATH': '/opt/ros/noetic', 'USERNAME': 'carla', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS2_INSTALL_PATH': '/home/carla/ros2_humble/install', 'WINDOWPATH': '2', 'PATH': '/usr/lib:/usr/bin:/usr/local/cuda-11.7/bin:/home/carla/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/carla:@/tmp/.ICE-unix/1510,unix/carla:/tmp/.ICE-unix/1510', 'INVOCATION_ID': '9c93b9ac63e84909b2f02063da042a3e', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/01cb0e80_5722_482e_8964_4e3b0835a579', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.1227', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'UE4_ROOT': '/home/carla/UnrealEngine', 'COLCON': '1', 'VTE_VERSION': '6003', 'PYTHONPATH': '/home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/prefix_override:/home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages:'}, 'shell': False}
+[0.400592] (-) TimerEvent: {}
+[0.485609] (infrastructure) StdoutLine: {'line': b'running egg_info\n'}
+[0.491310] (infrastructure) StdoutLine: {'line': b'writing ../../build/infrastructure/infrastructure.egg-info/PKG-INFO\n'}
+[0.491514] (infrastructure) StdoutLine: {'line': b'writing dependency_links to ../../build/infrastructure/infrastructure.egg-info/dependency_links.txt\n'}
+[0.491617] (infrastructure) StdoutLine: {'line': b'writing entry points to ../../build/infrastructure/infrastructure.egg-info/entry_points.txt\n'}
+[0.491729] (infrastructure) StdoutLine: {'line': b'writing requirements to ../../build/infrastructure/infrastructure.egg-info/requires.txt\n'}
+[0.491756] (infrastructure) StdoutLine: {'line': b'writing top-level names to ../../build/infrastructure/infrastructure.egg-info/top_level.txt\n'}
+[0.500647] (-) TimerEvent: {}
+[0.503896] (infrastructure) StdoutLine: {'line': b"reading manifest file '../../build/infrastructure/infrastructure.egg-info/SOURCES.txt'\n"}
+[0.504412] (infrastructure) StdoutLine: {'line': b"writing manifest file '../../build/infrastructure/infrastructure.egg-info/SOURCES.txt'\n"}
+[0.504445] (infrastructure) StdoutLine: {'line': b'running build\n'}
+[0.504495] (infrastructure) StdoutLine: {'line': b'running build_py\n'}
+[0.504625] (infrastructure) StdoutLine: {'line': b'copying infrastructure/SSM.py -> /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build/lib/infrastructure\n'}
+[0.504670] (infrastructure) StdoutLine: {'line': b'copying infrastructure/update.py -> /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build/lib/infrastructure\n'}
+[0.504708] (infrastructure) StdoutLine: {'line': b'copying infrastructure/SRM.py -> /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build/lib/infrastructure\n'}
+[0.504747] (infrastructure) StdoutLine: {'line': b'copying infrastructure/__init__.py -> /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build/lib/infrastructure\n'}
+[0.504786] (infrastructure) StdoutLine: {'line': b'copying infrastructure/MAP.py -> /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build/lib/infrastructure\n'}
+[0.504869] (infrastructure) StdoutLine: {'line': b'running install\n'}
+[0.507607] (infrastructure) StdoutLine: {'line': b'running install_lib\n'}
+[0.513556] (infrastructure) StdoutLine: {'line': b'copying /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build/lib/infrastructure/update.py -> /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages/infrastructure\n'}
+[0.513788] (infrastructure) StdoutLine: {'line': b'byte-compiling /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages/infrastructure/update.py to update.cpython-38.pyc\n'}
+[0.514285] (infrastructure) StdoutLine: {'line': b'running install_data\n'}
+[0.514339] (infrastructure) StdoutLine: {'line': b'copying resource/infrastructure -> /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/share/ament_index/resource_index/packages\n'}
+[0.514375] (infrastructure) StdoutLine: {'line': b'copying package.xml -> /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/share/infrastructure\n'}
+[0.514411] (infrastructure) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.521191] (infrastructure) StdoutLine: {'line': b"removing '/home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages/infrastructure-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[0.521350] (infrastructure) StdoutLine: {'line': b'Copying ../../build/infrastructure/infrastructure.egg-info to /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages/infrastructure-0.0.0-py3.8.egg-info\n'}
+[0.521606] (infrastructure) StdoutLine: {'line': b'running install_scripts\n'}
+[0.584884] (infrastructure) StdoutLine: {'line': b'Installing MAP script to /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/infrastructure\n'}
+[0.585008] (infrastructure) StdoutLine: {'line': b'Installing SSM script to /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/infrastructure\n'}
+[0.585040] (infrastructure) StdoutLine: {'line': b'Installing update script to /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/infrastructure\n'}
+[0.585137] (infrastructure) StdoutLine: {'line': b"writing list of installed files to '/home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/install.log'\n"}
+[0.598871] (infrastructure) CommandEnded: {'returncode': 0}
+[0.600747] (-) TimerEvent: {}
+[0.605140] (infrastructure) JobEnded: {'identifier': 'infrastructure', 'rc': 0}
+[0.605440] (-) EventReactorShutdown: {}

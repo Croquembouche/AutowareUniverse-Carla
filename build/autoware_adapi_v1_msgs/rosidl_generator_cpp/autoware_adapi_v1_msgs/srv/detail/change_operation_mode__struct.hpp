@@ -231,10 +231,16 @@ using ChangeOperationMode_Response =
   autoware_adapi_v1_msgs::srv::ChangeOperationMode_Response_<std::allocator<void>>;
 
 // constant definitions
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint16_t ChangeOperationMode_Response_<ContainerAllocator>::ERROR_NOT_AVAILABLE;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint16_t ChangeOperationMode_Response_<ContainerAllocator>::ERROR_IN_TRANSITION;
+#endif  // __cplusplus < 201703L
 
 }  // namespace srv
 

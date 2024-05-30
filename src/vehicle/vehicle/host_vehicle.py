@@ -82,28 +82,31 @@ def _get_struct_fmt(is_bigendian, fields, field_names=None):
     return fmt
 
 class DefaultVehicle(Node):
-    def __init__(self, world, spawn_point):
+    def __init__(self):
         super().__init__('main_vehicle_publisher')
         # self.get_clock().ros_clock = ROSClock()
         # print(ROSClock())
+        # Get server IP from parameter, defaulting to 'localhost'
+        self.declare_parameter('server_ip', 'localhost')
+        server_ip = self.get_parameter('server_ip').get_parameter_value().string_value
+        self.connectToWorld(server_ip)
         self.setUpPublishers()
         self.setUpSubscribers()
         # grabbing all bps
-        self.blueprint_library = world.get_blueprint_library()
+        self.blueprint_library = self.world.get_blueprint_library()
         # finding the desired bp
         vehicle_bp = self.blueprint_library.find("vehicle.ford.mustang")
         # setting some attributes
         vehicle_bp.set_attribute('role_name', 'host_vehicle')
         vehicle_bp.set_attribute('color', '255,255,255')
         # spawning the bp
-        self.vehicle = world.spawn_actor(vehicle_bp, spawn_point)
-        self.world = world
+        self.vehicle = self.world.spawn_actor(vehicle_bp, self.spawn_point)
         self.ego_control = carla.VehicleControl()
         self.get_vehicle_speed()
         # initialize control to all zeros
         self.initializeControl()
         self.control_mode = 0
-        # self.vehicle.set_autopilot(True) # set Autopilot on start to test lidar
+        # self.vehicle.set_autopilot(True) # set Aut opilot on start to test lidar
         # storing a list of all sensors
         self.sensors = []
         # BSM Message
@@ -129,11 +132,23 @@ class DefaultVehicle(Node):
         self.bridge = CvBridge()
         self.image_queue = []
         self.init = False
+    def connectToWorld(self, server_ip):
+        # 1. Connect to world
+        client = carla.Client(server_ip, 2000)
+        client.set_timeout(10.0) #seconds
+        # 2. Get World Information
+        self.world = client.get_world()
+        # Toggle all buildings off
+        # world.unload_map_layer(carla.MapLayer.Buildings)
+        # get a list of spawn points
+        self.spawn_points = self.world.get_map().get_spawn_points()
+        # spawn_point = spawn_points[random.randint(1, len(spawn_points)-1)]
+        self.spawn_point = self.spawn_points[1]
     def initializeControl(self):
         self.ego_control.throttle = 0.0
         self.ego_control.steer = 0.0
         self.ego_control.brake = 1
-        self.vehicle.apply_control(self.ego_control)
+        # self.vehicle.apply_control(self.ego_control)
 
 # --------------Vehicle ID Generation--------------------------
     def genVehicleID(self):
@@ -343,7 +358,7 @@ class DefaultVehicle(Node):
         self.ndt_lidarpublisher_.publish(sensing_msg)
         # change msgcnt
         self.msgcntIncrem() 
-    def addLidarSensor(self, x=-0.9,y=0, z=1.8, pitch=0,yaw=0,row=0, channels="16", pps="300000", rot_freq="100", up_fov="15", low_fov="-15", range="80"):
+    def addLidarSensor(self, x=-0.9,y=0, z=1.8, pitch=0,yaw=0,row=0, channels="16", pps="300000", rot_freq="600", up_fov="25", low_fov="-15", range="80"):
         # creating a publisher
         self.ndt_lidarpublisher_ = self.create_publisher(PointCloud2, '/sensing/lidar/top/outlier_filtered/pointcloud', qos_profile=10)
         print("Publishing Lidar Sensor Data for NDT")
@@ -496,7 +511,7 @@ class DefaultVehicle(Node):
     def addGNSSSensor(self):
         gnss_bp = self.blueprint_library.find('sensor.other.gnss')
         gnss_location = carla.Location(-0.9,0,1.35)
-        gnss_rotation = carla.Rotation(0,180,0) #yzx
+        gnss_rotation = carla.Rotation(0,0,0) #yzx
         gnss_transform = carla.Transform(gnss_location,gnss_rotation)   
         # spawn onto vehicle
         center_gnss = self.world.spawn_actor(gnss_bp, gnss_transform, attach_to=self.vehicle)
@@ -712,7 +727,7 @@ class DefaultVehicle(Node):
 # --------------------Autoware Related Topics-----------------------------
     def AutowareControllCallbacks(self, controlmsg):
         # lateral
-        # print("controlmsg", controlmsg)
+
         desired_steering = controlmsg.lateral.steering_tire_angle 
         desired_steering_rate = controlmsg.lateral.steering_tire_rotation_rate
         
@@ -737,15 +752,15 @@ class DefaultVehicle(Node):
                 self.get_vehicle_speed()
                 longitudinal_speed = float(self.vel_in_vehicle[0])
                 # print("attemping to speed up.", self.ego_control.throttle)
-                self.vehicle.apply_control(self.ego_control)
+                # self.vehicle.apply_control(self.ego_control)
             self.ego_control.throttle = 0 # once we reach the desired speed, stop pressing on the gas pedal
-            self.vehicle.apply_control(self.ego_control)
+            # self.vehicle.apply_control(self.ego_control)
         elif desired_speed < self.vel_in_vehicle[0]: # need to slow down
             while desired_speed > self.vel_in_vehicle[0]:
                 self.ego_control.brake = min(self.ego_control.brake + increment, 1.0)
-                self.vehicle.apply_control(self.ego_control)
+                # self.vehicle.apply_control(self.ego_control)
             self.ego_control.brake = 0 # once we reach the desired speed, stop pressing on the gas pedal
-            self.vehicle.apply_control(self.ego_control)
+            # self.vehicle.apply_control(self.ego_control)
     
     def ModeTransition(self, msg):
         mode = msg.mode # UNKNOWN = 0 STOP = 1  AUTONOMOUS = 2 LOCAL = 3  REMOTE = 4
@@ -787,7 +802,7 @@ class DefaultVehicle(Node):
 # -------------------Setting up Subscribers ------------------------
     def setUpSubscribers(self):
         # subscribe to trajectory cmds, this is subjected to change
-        self.autoware_control_sub = self.create_subscription(AckermannControlCommand, '/control/trajectory_follower/control_cmd', self.AutowareControllCallbacks, 10)
+        # self.autoware_control_sub = self.create_subscription(AckermannControlCommand, '/control/trajectory_follower/control_cmd', self.AutowareControllCallbacks, 10)
         # subscribe to controls
         self.enabled = False
         # self.subscription_controls = self.create_subscription(String, 'hv_controls', self.vehicleROSControls, 10)
@@ -820,7 +835,7 @@ class DefaultVehicle(Node):
         # carla and autoware's steering angle is opposite
         msg = SteeringReport()
         msg.stamp=Clock().now().to_msg()
-        msg.steering_tire_angle = 0-steering_angle
+        msg.steering_tire_angle = steering_angle
         self.steering_report_pub.publish(msg)
 
 # ------------------------------------- Destroy -------------------------------------
@@ -840,19 +855,18 @@ def main(args=None):
     rclpy.init(args=args)
     # list of things to do
     # 1. Connect to world
-    client = carla.Client('localhost', 2000)
-    client.set_timeout(10.0) #seconds
+    #client = carla.Client('localhost', 2000)
+    #client.set_timeout(10.0) #seconds
     # 2. Get World Information
-    world = client.get_world()
+    #world = client.get_world()
     # Toggle all buildings off
-    world.unload_map_layer(carla.MapLayer.Buildings)
+    # world.unload_map_layer(carla.MapLayer.Buildings)
     # get a list of spawn points
-    spawn_points = world.get_map().get_spawn_points()
-
+    #spawn_points = world.get_map().get_spawn_points()
     # spawn_point = spawn_points[random.randint(1, len(spawn_points)-1)]
-    spawn_point = spawn_points[1]
+    #spawn_point = spawn_points[1]
     # spawn the vehicle
-    demo_veh = DefaultVehicle(world, spawn_point)
+    demo_veh = DefaultVehicle()
     # add lidar sensor
     demo_veh.addLidarSensor()
     # print("Publishing Lidar Sensor Data")

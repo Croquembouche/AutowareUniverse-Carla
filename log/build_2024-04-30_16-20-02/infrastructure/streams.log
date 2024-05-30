@@ -1,0 +1,32 @@
+[0.423s] Invoking command in '/home/carla/Github/C-V2X-Autoware-Carla/src/infrastructure': PYTHONPATH=/home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/prefix_override:/home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/infrastructure build --build-base /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build install --record /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/install.log --single-version-externally-managed install_data
+[0.539s] running egg_info
+[0.545s] writing ../../build/infrastructure/infrastructure.egg-info/PKG-INFO
+[0.545s] writing dependency_links to ../../build/infrastructure/infrastructure.egg-info/dependency_links.txt
+[0.545s] writing entry points to ../../build/infrastructure/infrastructure.egg-info/entry_points.txt
+[0.545s] writing requirements to ../../build/infrastructure/infrastructure.egg-info/requires.txt
+[0.545s] writing top-level names to ../../build/infrastructure/infrastructure.egg-info/top_level.txt
+[0.559s] reading manifest file '../../build/infrastructure/infrastructure.egg-info/SOURCES.txt'
+[0.559s] writing manifest file '../../build/infrastructure/infrastructure.egg-info/SOURCES.txt'
+[0.559s] running build
+[0.559s] running build_py
+[0.559s] copying infrastructure/SSM.py -> /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build/lib/infrastructure
+[0.559s] copying infrastructure/update.py -> /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build/lib/infrastructure
+[0.559s] copying infrastructure/SRM.py -> /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build/lib/infrastructure
+[0.559s] copying infrastructure/__init__.py -> /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build/lib/infrastructure
+[0.559s] copying infrastructure/MAP.py -> /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build/lib/infrastructure
+[0.560s] running install
+[0.563s] running install_lib
+[0.570s] copying /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build/lib/infrastructure/update.py -> /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages/infrastructure
+[0.570s] byte-compiling /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages/infrastructure/update.py to update.cpython-38.pyc
+[0.570s] running install_data
+[0.570s] copying resource/infrastructure -> /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/share/ament_index/resource_index/packages
+[0.570s] copying package.xml -> /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/share/infrastructure
+[0.570s] running install_egg_info
+[0.577s] removing '/home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages/infrastructure-0.0.0-py3.8.egg-info' (and everything under it)
+[0.577s] Copying ../../build/infrastructure/infrastructure.egg-info to /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages/infrastructure-0.0.0-py3.8.egg-info
+[0.578s] running install_scripts
+[0.648s] Installing MAP script to /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/infrastructure
+[0.648s] Installing SSM script to /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/infrastructure
+[0.648s] Installing update script to /home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/infrastructure
+[0.648s] writing list of installed files to '/home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/install.log'
+[0.663s] Invoked command in '/home/carla/Github/C-V2X-Autoware-Carla/src/infrastructure' returned '0': PYTHONPATH=/home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/prefix_override:/home/carla/Github/C-V2X-Autoware-Carla/install/infrastructure/lib/python3.8/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/infrastructure build --build-base /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/build install --record /home/carla/Github/C-V2X-Autoware-Carla/build/infrastructure/install.log --single-version-externally-managed install_data

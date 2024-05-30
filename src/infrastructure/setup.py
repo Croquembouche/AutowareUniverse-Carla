@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             'SSM = infrastructure.SSM:main',
-            'MAP = infrastructure.MAP:main'
+            'MAP = infrastructure.MAP:main',
+            'update = infrastructure.update:main',
         ],
     },
 )

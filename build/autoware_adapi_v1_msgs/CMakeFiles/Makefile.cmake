@@ -52,6 +52,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/carla/ros2_humble/install/ament_cmake/share/ament_cmake/cmake/ament_cmakeConfig.cmake"
   "/home/carla/ros2_humble/install/ament_cmake/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake"
   "/home/carla/ros2_humble/install/ament_cmake_auto/share/ament_cmake_auto/cmake/ament_auto_add_executable.cmake"
+  "/home/carla/ros2_humble/install/ament_cmake_auto/share/ament_cmake_auto/cmake/ament_auto_add_gmock.cmake"
   "/home/carla/ros2_humble/install/ament_cmake_auto/share/ament_cmake_auto/cmake/ament_auto_add_gtest.cmake"
   "/home/carla/ros2_humble/install/ament_cmake_auto/share/ament_cmake_auto/cmake/ament_auto_add_library.cmake"
   "/home/carla/ros2_humble/install/ament_cmake_auto/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake"

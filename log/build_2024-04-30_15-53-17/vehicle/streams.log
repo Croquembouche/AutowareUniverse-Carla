@@ -1,0 +1,30 @@
+[3.244s] Invoking command in '/home/carla/Github/C-V2X-Autoware-Carla/src/vehicle': PYTHONPATH=/home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/prefix_override:/home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/vehicle build --build-base /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/build install --record /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/install.log --single-version-externally-managed install_data
+[4.216s] running egg_info
+[4.238s] writing ../../build/vehicle/vehicle.egg-info/PKG-INFO
+[4.238s] writing dependency_links to ../../build/vehicle/vehicle.egg-info/dependency_links.txt
+[4.238s] writing entry points to ../../build/vehicle/vehicle.egg-info/entry_points.txt
+[4.239s] writing requirements to ../../build/vehicle/vehicle.egg-info/requires.txt
+[4.239s] writing top-level names to ../../build/vehicle/vehicle.egg-info/top_level.txt
+[4.281s] reading manifest file '../../build/vehicle/vehicle.egg-info/SOURCES.txt'
+[4.282s] writing manifest file '../../build/vehicle/vehicle.egg-info/SOURCES.txt'
+[4.282s] running build
+[4.282s] running build_py
+[4.282s] copying vehicle/host_vehicle.py -> /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/build/lib/vehicle
+[4.282s] copying vehicle/remote_vehicle.py -> /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/build/lib/vehicle
+[4.282s] copying vehicle/start_multiple.py -> /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/build/lib/vehicle
+[4.283s] copying vehicle/__init__.py -> /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/build/lib/vehicle
+[4.283s] copying vehicle/ren_vehicle.py -> /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/build/lib/vehicle
+[4.283s] running install
+[4.287s] running install_lib
+[4.312s] running install_data
+[4.312s] copying resource/vehicle -> /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/share/ament_index/resource_index/packages
+[4.312s] copying package.xml -> /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/share/vehicle
+[4.312s] running install_egg_info
+[4.335s] removing '/home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages/vehicle-0.0.0-py3.8.egg-info' (and everything under it)
+[4.335s] Copying ../../build/vehicle/vehicle.egg-info to /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages/vehicle-0.0.0-py3.8.egg-info
+[4.336s] running install_scripts
+[4.531s] Installing host_vehicle script to /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/vehicle
+[4.531s] Installing remote_vehicle script to /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/vehicle
+[4.531s] Installing ren_vehicle script to /home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/vehicle
+[4.532s] writing list of installed files to '/home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/install.log'
+[4.550s] Invoked command in '/home/carla/Github/C-V2X-Autoware-Carla/src/vehicle' returned '0': PYTHONPATH=/home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/prefix_override:/home/carla/Github/C-V2X-Autoware-Carla/install/vehicle/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/vehicle build --build-base /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/build install --record /home/carla/Github/C-V2X-Autoware-Carla/build/vehicle/install.log --single-version-externally-managed install_data
