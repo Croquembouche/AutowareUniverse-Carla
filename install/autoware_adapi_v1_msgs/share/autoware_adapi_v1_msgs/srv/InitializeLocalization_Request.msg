@@ -1,1 +1,1 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_adapi_v1_msgs/rosidl_cmake/localization/srv/InitializeLocalization_Request.msg
+geometry_msgs/PoseWithCovarianceStamped[<=1] pose

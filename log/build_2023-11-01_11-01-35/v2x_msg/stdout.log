@@ -1,3 +1,0 @@
-[35m[1mScanning dependencies of target ament_cmake_python_symlink_v2x_msg[0m
-[  0%] Built target v2x_msg__cpp
-[ 12%] Built target v2x_msg__rosidl_generator_c

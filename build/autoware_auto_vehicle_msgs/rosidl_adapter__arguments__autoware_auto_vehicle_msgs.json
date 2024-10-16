@@ -1,6 +1,6 @@
 {
   "package_name": "autoware_auto_vehicle_msgs",
   "non_idl_tuples": [
-    "/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_auto_vehicle_msgs:srv/ControlModeCommand.srv"
+    "/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_vehicle_msgs:srv/ControlModeCommand.srv"
   ]
 }

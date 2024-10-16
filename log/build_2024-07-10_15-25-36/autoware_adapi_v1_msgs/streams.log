@@ -1,0 +1,18 @@
+[0.359s] Invoking command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_adapi_v1_msgs': /usr/bin/cmake --build /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_adapi_v1_msgs -- -j20 -l20
+[4.641s] [  0%] Built target autoware_adapi_v1_msgs__cpp
+[4.791s] [35m[1mConsolidate compiler generated dependencies of target autoware_adapi_v1_msgs__rosidl_generator_c[0m
+[5.307s] [35m[1mConsolidate compiler generated dependencies of target autoware_adapi_v1_msgs__rosidl_typesupport_cpp[0m
+[5.987s] [35m[1mConsolidate compiler generated dependencies of target autoware_adapi_v1_msgs__rosidl_typesupport_introspection_cpp[0m
+[6.078s] [35m[1mConsolidate compiler generated dependencies of target autoware_adapi_v1_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[6.373s] gmake[2]: *** [CMakeFiles/autoware_adapi_v1_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make:694: CMakeFiles/autoware_adapi_v1_msgs__rosidl_typesupport_fastrtps_cpp.dir/depend] Interrupt
+[6.381s] gmake[2]: *** [CMakeFiles/autoware_adapi_v1_msgs__rosidl_typesupport_introspection_cpp.dir/build.make:693: CMakeFiles/autoware_adapi_v1_msgs__rosidl_typesupport_introspection_cpp.dir/depend] Interrupt
+[6.382s] gmake[2]: *** [CMakeFiles/autoware_adapi_v1_msgs__rosidl_generator_c.dir/build.make:948: CMakeFiles/autoware_adapi_v1_msgs__rosidl_generator_c.dir/depend] Interrupt
+[6.383s] gmake[2]: *** [CMakeFiles/ament_cmake_python_copy_autoware_adapi_v1_msgs.dir/build.make:70: CMakeFiles/ament_cmake_python_copy_autoware_adapi_v1_msgs] Interrupt
+[6.384s] gmake[2]: *** [CMakeFiles/autoware_adapi_v1_msgs__rosidl_typesupport_cpp.dir/build.make:607: CMakeFiles/autoware_adapi_v1_msgs__rosidl_typesupport_cpp.dir/depend] Interrupt
+[6.385s] gmake[1]: *** [CMakeFiles/Makefile2:342: CMakeFiles/autoware_adapi_v1_msgs__rosidl_typesupport_fastrtps_cpp.dir/all] Interrupt
+[6.385s] gmake[1]: *** [CMakeFiles/Makefile2:212: CMakeFiles/autoware_adapi_v1_msgs__rosidl_generator_c.dir/all] Interrupt
+[6.386s] gmake[1]: *** [CMakeFiles/Makefile2:421: CMakeFiles/ament_cmake_python_copy_autoware_adapi_v1_msgs.dir/all] Interrupt
+[6.387s] gmake[1]: *** [CMakeFiles/Makefile2:394: CMakeFiles/autoware_adapi_v1_msgs__rosidl_typesupport_cpp.dir/all] Interrupt
+[6.388s] gmake[1]: *** [CMakeFiles/Makefile2:368: CMakeFiles/autoware_adapi_v1_msgs__rosidl_typesupport_introspection_cpp.dir/all] Interrupt
+[6.388s] gmake: *** [Makefile:146: all] Interrupt
+[6.407s] Invoked command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_adapi_v1_msgs' returned '-2': /usr/bin/cmake --build /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_adapi_v1_msgs -- -j20 -l20

@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_geometry_msgs/autoware_auto_geometry_msgs__py
-# Build directory: /home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_geometry_msgs/autoware_auto_geometry_msgs__py
+# Source directory: /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_geometry_msgs/autoware_auto_geometry_msgs__py
+# Build directory: /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_geometry_msgs/autoware_auto_geometry_msgs__py
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

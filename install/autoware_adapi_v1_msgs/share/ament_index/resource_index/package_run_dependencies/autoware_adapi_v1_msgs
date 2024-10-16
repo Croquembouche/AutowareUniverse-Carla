@@ -1,1 +1,1 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_adapi_v1_msgs/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/autoware_adapi_v1_msgs
+builtin_interfaces;geometry_msgs;std_msgs;rosidl_default_runtime;ament_lint_auto;ament_lint_common

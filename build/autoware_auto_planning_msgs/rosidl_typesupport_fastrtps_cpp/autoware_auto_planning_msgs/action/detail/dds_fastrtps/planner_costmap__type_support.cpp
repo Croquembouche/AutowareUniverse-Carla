@@ -109,6 +109,8 @@ max_serialized_size_PlannerCostmap_Goal(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -121,18 +123,34 @@ max_serialized_size_PlannerCostmap_Goal(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size =
         autoware_auto_planning_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_HADMapRoute(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = autoware_auto_planning_msgs::action::PlannerCostmap_Goal;
+    is_plain =
+      (
+      offsetof(DataType, route) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static bool _PlannerCostmap_Goal__cdr_serialize(
@@ -339,6 +357,8 @@ max_serialized_size_PlannerCostmap_Result(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -351,18 +371,34 @@ max_serialized_size_PlannerCostmap_Result(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size =
         nav_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_OccupancyGrid(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = autoware_auto_planning_msgs::action::PlannerCostmap_Result;
+    is_plain =
+      (
+      offsetof(DataType, costmap) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static bool _PlannerCostmap_Result__cdr_serialize(
@@ -569,6 +605,8 @@ max_serialized_size_PlannerCostmap_Feedback(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -581,18 +619,34 @@ max_serialized_size_PlannerCostmap_Feedback(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size =
         std_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_Empty(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = autoware_auto_planning_msgs::action::PlannerCostmap_Feedback;
+    is_plain =
+      (
+      offsetof(DataType, unused_variable) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static bool _PlannerCostmap_Feedback__cdr_serialize(
@@ -730,29 +784,7 @@ max_serialized_size_UUID(
 }  // namespace msg
 }  // namespace unique_identifier_msgs
 
-namespace autoware_auto_planning_msgs
-{
-namespace action
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const autoware_auto_planning_msgs::action::PlannerCostmap_Goal &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  autoware_auto_planning_msgs::action::PlannerCostmap_Goal &);
-size_t get_serialized_size(
-  const autoware_auto_planning_msgs::action::PlannerCostmap_Goal &,
-  size_t current_alignment);
-size_t
-max_serialized_size_PlannerCostmap_Goal(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace action
-}  // namespace autoware_auto_planning_msgs
+// functions for autoware_auto_planning_msgs::action::PlannerCostmap_Goal already declared above
 
 
 namespace autoware_auto_planning_msgs
@@ -836,6 +868,8 @@ max_serialized_size_PlannerCostmap_SendGoal_Request(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -848,12 +882,15 @@ max_serialized_size_PlannerCostmap_SendGoal_Request(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size =
         unique_identifier_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_UUID(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
@@ -864,18 +901,34 @@ max_serialized_size_PlannerCostmap_SendGoal_Request(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size =
         autoware_auto_planning_msgs::action::typesupport_fastrtps_cpp::max_serialized_size_PlannerCostmap_Goal(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = autoware_auto_planning_msgs::action::PlannerCostmap_SendGoal_Request;
+    is_plain =
+      (
+      offsetof(DataType, goal) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static bool _PlannerCostmap_SendGoal_Request__cdr_serialize(
@@ -1098,6 +1151,8 @@ max_serialized_size_PlannerCostmap_SendGoal_Response(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -1109,6 +1164,7 @@ max_serialized_size_PlannerCostmap_SendGoal_Response(
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
 
@@ -1117,18 +1173,34 @@ max_serialized_size_PlannerCostmap_SendGoal_Response(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size =
         builtin_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_Time(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = autoware_auto_planning_msgs::action::PlannerCostmap_SendGoal_Response;
+    is_plain =
+      (
+      offsetof(DataType, stamp) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static bool _PlannerCostmap_SendGoal_Response__cdr_serialize(
@@ -1303,29 +1375,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_fastrtps_cp
 
 
 // forward declaration of message dependencies and their conversion functions
-namespace unique_identifier_msgs
-{
-namespace msg
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const unique_identifier_msgs::msg::UUID &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  unique_identifier_msgs::msg::UUID &);
-size_t get_serialized_size(
-  const unique_identifier_msgs::msg::UUID &,
-  size_t current_alignment);
-size_t
-max_serialized_size_UUID(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace msg
-}  // namespace unique_identifier_msgs
+// functions for unique_identifier_msgs::msg::UUID already declared above
 
 
 namespace autoware_auto_planning_msgs
@@ -1396,6 +1446,8 @@ max_serialized_size_PlannerCostmap_GetResult_Request(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -1408,18 +1460,34 @@ max_serialized_size_PlannerCostmap_GetResult_Request(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size =
         unique_identifier_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_UUID(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = autoware_auto_planning_msgs::action::PlannerCostmap_GetResult_Request;
+    is_plain =
+      (
+      offsetof(DataType, goal_id) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static bool _PlannerCostmap_GetResult_Request__cdr_serialize(
@@ -1534,29 +1602,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_cp
 
 
 // forward declaration of message dependencies and their conversion functions
-namespace autoware_auto_planning_msgs
-{
-namespace action
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const autoware_auto_planning_msgs::action::PlannerCostmap_Result &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  autoware_auto_planning_msgs::action::PlannerCostmap_Result &);
-size_t get_serialized_size(
-  const autoware_auto_planning_msgs::action::PlannerCostmap_Result &,
-  size_t current_alignment);
-size_t
-max_serialized_size_PlannerCostmap_Result(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace action
-}  // namespace autoware_auto_planning_msgs
+// functions for autoware_auto_planning_msgs::action::PlannerCostmap_Result already declared above
 
 
 namespace autoware_auto_planning_msgs
@@ -1638,6 +1684,8 @@ max_serialized_size_PlannerCostmap_GetResult_Response(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -1649,6 +1697,7 @@ max_serialized_size_PlannerCostmap_GetResult_Response(
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
 
@@ -1657,18 +1706,34 @@ max_serialized_size_PlannerCostmap_GetResult_Response(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size =
         autoware_auto_planning_msgs::action::typesupport_fastrtps_cpp::max_serialized_size_PlannerCostmap_Result(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = autoware_auto_planning_msgs::action::PlannerCostmap_GetResult_Response;
+    is_plain =
+      (
+      offsetof(DataType, result) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static bool _PlannerCostmap_GetResult_Response__cdr_serialize(
@@ -1846,53 +1911,9 @@ ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_fastrtps_cp
 
 
 // forward declaration of message dependencies and their conversion functions
-namespace unique_identifier_msgs
-{
-namespace msg
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const unique_identifier_msgs::msg::UUID &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  unique_identifier_msgs::msg::UUID &);
-size_t get_serialized_size(
-  const unique_identifier_msgs::msg::UUID &,
-  size_t current_alignment);
-size_t
-max_serialized_size_UUID(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace msg
-}  // namespace unique_identifier_msgs
+// functions for unique_identifier_msgs::msg::UUID already declared above
 
-namespace autoware_auto_planning_msgs
-{
-namespace action
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const autoware_auto_planning_msgs::action::PlannerCostmap_Feedback &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  autoware_auto_planning_msgs::action::PlannerCostmap_Feedback &);
-size_t get_serialized_size(
-  const autoware_auto_planning_msgs::action::PlannerCostmap_Feedback &,
-  size_t current_alignment);
-size_t
-max_serialized_size_PlannerCostmap_Feedback(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace action
-}  // namespace autoware_auto_planning_msgs
+// functions for autoware_auto_planning_msgs::action::PlannerCostmap_Feedback already declared above
 
 
 namespace autoware_auto_planning_msgs
@@ -1976,6 +1997,8 @@ max_serialized_size_PlannerCostmap_FeedbackMessage(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -1988,12 +2011,15 @@ max_serialized_size_PlannerCostmap_FeedbackMessage(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size =
         unique_identifier_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_UUID(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
@@ -2004,18 +2030,34 @@ max_serialized_size_PlannerCostmap_FeedbackMessage(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size =
         autoware_auto_planning_msgs::action::typesupport_fastrtps_cpp::max_serialized_size_PlannerCostmap_Feedback(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = autoware_auto_planning_msgs::action::PlannerCostmap_FeedbackMessage;
+    is_plain =
+      (
+      offsetof(DataType, feedback) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static bool _PlannerCostmap_FeedbackMessage__cdr_serialize(

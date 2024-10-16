@@ -237,6 +237,8 @@ size_t max_serialized_size_v2x_msg__msg__DataParameters(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -292,7 +294,20 @@ size_t max_serialized_size_v2x_msg__msg__DataParameters(
     }
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = v2x_msg__msg__DataParameters;
+    is_plain =
+      (
+      offsetof(DataType, geoidused) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static size_t _DataParameters__max_serialized_size(char & bounds_info)

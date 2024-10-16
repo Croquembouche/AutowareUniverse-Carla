@@ -1,1 +1,7 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs/localization/msg/LocalizationInitializationState.msg
+uint16 UNKNOWN = 0
+uint16 UNINITIALIZED = 1
+uint16 INITIALIZING = 2
+uint16 INITIALIZED = 3
+
+builtin_interfaces/Time stamp
+uint16 state

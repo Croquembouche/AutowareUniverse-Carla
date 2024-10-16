@@ -1,1 +1,4 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_adapi_v1_msgs/rosidl_cmake/operation_mode/srv/ChangeOperationMode_Response.msg
+
+uint16 ERROR_NOT_AVAILABLE = 1
+uint16 ERROR_IN_TRANSITION = 2
+autoware_adapi_v1_msgs/ResponseStatus status

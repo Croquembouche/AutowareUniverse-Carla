@@ -1,0 +1,24 @@
+[0.000000] (-) TimerEvent: {}
+[0.000625] (-) JobUnselected: {'identifier': 'autoware_adapi_v1_msgs'}
+[0.000776] (-) TimerEvent: {}
+[0.000967] (-) JobUnselected: {'identifier': 'autoware_auto_control_msgs'}
+[0.001075] (-) JobUnselected: {'identifier': 'autoware_auto_geometry_msgs'}
+[0.001176] (-) JobUnselected: {'identifier': 'autoware_auto_mapping_msgs'}
+[0.001303] (-) JobUnselected: {'identifier': 'autoware_auto_msgs'}
+[0.001385] (-) JobUnselected: {'identifier': 'autoware_auto_perception_msgs'}
+[0.001470] (-) JobUnselected: {'identifier': 'autoware_auto_planning_msgs'}
+[0.001576] (-) JobUnselected: {'identifier': 'autoware_auto_system_msgs'}
+[0.001693] (-) JobUnselected: {'identifier': 'autoware_auto_vehicle_msgs'}
+[0.001796] (-) JobUnselected: {'identifier': 'infrastructure'}
+[0.001880] (-) JobUnselected: {'identifier': 'map'}
+[0.001959] (-) JobUnselected: {'identifier': 'v2x_msg'}
+[0.002058] (vehicle) JobQueued: {'identifier': 'vehicle', 'dependencies': OrderedDict()}
+[0.002150] (vehicle) JobStarted: {'identifier': 'vehicle'}
+[0.100947] (-) TimerEvent: {}
+[0.201288] (-) TimerEvent: {}
+[0.301709] (-) TimerEvent: {}
+[0.402111] (-) TimerEvent: {}
+[0.469730] (vehicle) StderrLine: {'line': b'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__\n    rc = await self.task(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__\n    return await task_method(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_python/build.py", line 102, in build\n    return await extension.build(additional_hooks=additional_hooks)\n  File "/usr/lib/python3/dist-packages/colcon_core/task/python/build.py", line 94, in build\n    available_commands = await self._get_available_commands(\n  File "/usr/lib/python3/dist-packages/colcon_core/task/python/build.py", line 192, in _get_available_commands\n    output = await check_output(\n  File "/usr/lib/python3/dist-packages/colcon_core/subprocess.py", line 129, in check_output\n    assert not rc, f\'Expected {args} to pass: {stderr_data}\'\nAssertionError: Expected [\'/usr/bin/python3\', \'-W\', \'ignore:setup.py install is deprecated\', \'setup.py\', \'--help-commands\'] to pass: Traceback (most recent call last):\n  File "/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/vehicle/setup.py", line 7, in <module>\n    setup(\n  File "/home/william/.local/lib/python3.10/site-packages/setuptools/__init__.py", line 161, in setup\n    return distutils.core.setup(**attrs)\n  File "/usr/lib/python3.10/distutils/core.py", line 134, in setup\n    ok = dist.parse_command_line()\n  File "/usr/lib/python3.10/distutils/dist.py", line 480, in parse_command_line\n    if self.handle_display_options(option_order):\n  File "/home/william/.local/lib/python3.10/site-packages/setuptools/dist.py", line 1003, in handle_display_options\n    return _Distribution.handle_display_options(self, option_order)\n  File "/usr/lib/python3.10/distutils/dist.py", line 683, in handle_display_options\n    self.print_commands()\n  File "/home/william/.local/lib/python3.10/site-packages/setuptools/dist.py", line 773, in print_commands\n    cmdclass = ep.resolve()\n  File "/home/william/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2467, in resolve\n    module = __import__(self.module_name, fromlist=[\'__name__\'], level=0)\n  File "/home/william/.local/lib/python3.10/site-packages/setuptools/command/bdist_wininst.py", line 1, in <module>\n    import distutils.command.bdist_wininst as orig\nModuleNotFoundError: No module named \'distutils.command.bdist_wininst\'\n\n'}
+[0.637439] (-) TimerEvent: {}
+[0.637797] (vehicle) JobEnded: {'identifier': 'vehicle', 'rc': 1}
+[0.644381] (-) EventReactorShutdown: {}

@@ -1,1 +1,2 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs/routing/msg/RoutePrimitive.msg
+int64 id
+string type  # The same id may be used for each type.

@@ -1,0 +1,19 @@
+[  1%] Built target autoware_auto_control_msgs__cpp
+[35m[1mConsolidate compiler generated dependencies of target autoware_auto_control_msgs__rosidl_generator_c[0m
+[35m[1mConsolidate compiler generated dependencies of target autoware_auto_control_msgs__rosidl_typesupport_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target autoware_auto_control_msgs__rosidl_typesupport_introspection_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target autoware_auto_control_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[ 12%] Built target autoware_auto_control_msgs__rosidl_generator_c
+[35m[1mConsolidate compiler generated dependencies of target autoware_auto_control_msgs__rosidl_typesupport_c[0m
+[35m[1mConsolidate compiler generated dependencies of target autoware_auto_control_msgs__rosidl_typesupport_fastrtps_c[0m
+[35m[1mConsolidate compiler generated dependencies of target autoware_auto_control_msgs__rosidl_typesupport_introspection_c[0m
+[ 12%] Built target ament_cmake_python_copy_autoware_auto_control_msgs
+[ 23%] Built target autoware_auto_control_msgs__rosidl_typesupport_c
+[ 34%] Built target autoware_auto_control_msgs__rosidl_typesupport_cpp
+[ 47%] Built target autoware_auto_control_msgs__rosidl_typesupport_introspection_cpp
+[ 56%] Built target autoware_auto_control_msgs__rosidl_typesupport_introspection_c
+[ 67%] Built target autoware_auto_control_msgs__rosidl_typesupport_fastrtps_cpp
+running egg_info
+writing autoware_auto_control_msgs.egg-info/PKG-INFO
+writing dependency_links to autoware_auto_control_msgs.egg-info/dependency_links.txt
+writing top-level names to autoware_auto_control_msgs.egg-info/top_level.txt

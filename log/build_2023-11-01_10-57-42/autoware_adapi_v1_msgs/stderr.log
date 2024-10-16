@@ -1,5 +1,0 @@
-CMake Error at CMakeLists.txt:6 (ament_auto_find_build_dependencies):
-  Unknown CMake command "ament_auto_find_build_dependencies".
-
-
-make: *** [Makefile:5576: cmake_check_build_system] Error 1

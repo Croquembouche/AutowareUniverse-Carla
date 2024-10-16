@@ -1,1 +1,16 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_adapi_v1_msgs/rosidl_adapter/autoware_adapi_v1_msgs/srv/ClearRoute.idl
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from autoware_adapi_v1_msgs/routing/srv/ClearRoute.srv
+// generated code does not contain a copyright notice
+
+#include "autoware_adapi_v1_msgs/msg/ResponseStatus.idl"
+
+module autoware_adapi_v1_msgs {
+  module srv {
+    struct ClearRoute_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct ClearRoute_Response {
+      autoware_adapi_v1_msgs::msg::ResponseStatus status;
+    };
+  };
+};

@@ -150,16 +150,31 @@ using EmergencyState =
   autoware_auto_system_msgs::msg::EmergencyState_<std::allocator<void>>;
 
 // constant definitions
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t EmergencyState_<ContainerAllocator>::NORMAL;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t EmergencyState_<ContainerAllocator>::OVERRIDE_REQUESTING;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t EmergencyState_<ContainerAllocator>::MRM_OPERATING;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t EmergencyState_<ContainerAllocator>::MRM_SUCCEEDED;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t EmergencyState_<ContainerAllocator>::MRM_FAILED;
+#endif  // __cplusplus < 201703L
 
 }  // namespace msg
 

@@ -1,0 +1,46 @@
+running egg_info
+creating ../../build/infrastructure/infrastructure.egg-info
+writing ../../build/infrastructure/infrastructure.egg-info/PKG-INFO
+writing dependency_links to ../../build/infrastructure/infrastructure.egg-info/dependency_links.txt
+writing entry points to ../../build/infrastructure/infrastructure.egg-info/entry_points.txt
+writing requirements to ../../build/infrastructure/infrastructure.egg-info/requires.txt
+writing top-level names to ../../build/infrastructure/infrastructure.egg-info/top_level.txt
+writing manifest file '../../build/infrastructure/infrastructure.egg-info/SOURCES.txt'
+reading manifest file '../../build/infrastructure/infrastructure.egg-info/SOURCES.txt'
+writing manifest file '../../build/infrastructure/infrastructure.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build
+creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib
+creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure
+copying infrastructure/MAP.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure
+copying infrastructure/SRM.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure
+copying infrastructure/SSM.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure
+copying infrastructure/update.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure
+copying infrastructure/__init__.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure
+running install
+running install_lib
+creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure
+copying /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure/MAP.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure
+copying /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure/SRM.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure
+copying /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure/SSM.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure
+copying /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure/update.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure
+copying /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure/__init__.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure
+byte-compiling /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure/MAP.py to MAP.cpython-310.pyc
+byte-compiling /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure/SRM.py to SRM.cpython-310.pyc
+byte-compiling /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure/SSM.py to SSM.cpython-310.pyc
+byte-compiling /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure/update.py to update.cpython-310.pyc
+byte-compiling /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/share/ament_index
+creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/share/ament_index/resource_index
+creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/share/ament_index/resource_index/packages
+copying resource/infrastructure -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/share/ament_index/resource_index/packages
+copying package.xml -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/share/infrastructure
+running install_egg_info
+Copying ../../build/infrastructure/infrastructure.egg-info to /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure-0.0.0-py3.10.egg-info
+running install_scripts
+Installing MAP script to /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/infrastructure
+Installing SSM script to /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/infrastructure
+Installing update script to /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/infrastructure
+writing list of installed files to '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/install.log'

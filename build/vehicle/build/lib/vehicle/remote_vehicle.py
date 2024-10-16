@@ -326,7 +326,7 @@ def main(args=None):
     rclpy.init(args=args)
     # list of things to do
     # 1. Connect to world
-    client = carla.Client('localhost', 2000)
+    client = carla.Client('128.4.187.28', 2000)
     client.set_timeout(10.0) #seconds
     # 2. Get World Information
     world = client.get_world()    

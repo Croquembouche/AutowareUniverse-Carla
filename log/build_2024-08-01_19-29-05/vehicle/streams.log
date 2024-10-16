@@ -1,0 +1,34 @@
+[0.358s] Invoking command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/vehicle': PYTHONPATH=/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/vehicle/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/vehicle/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/vehicle build --build-base /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/vehicle/build install --record /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/vehicle/install.log --single-version-externally-managed install_data
+[0.474s] running egg_info
+[0.478s] writing ../../build/vehicle/vehicle.egg-info/PKG-INFO
+[0.479s] writing dependency_links to ../../build/vehicle/vehicle.egg-info/dependency_links.txt
+[0.479s] writing entry points to ../../build/vehicle/vehicle.egg-info/entry_points.txt
+[0.479s] writing requirements to ../../build/vehicle/vehicle.egg-info/requires.txt
+[0.479s] writing top-level names to ../../build/vehicle/vehicle.egg-info/top_level.txt
+[0.491s] reading manifest file '../../build/vehicle/vehicle.egg-info/SOURCES.txt'
+[0.493s] writing manifest file '../../build/vehicle/vehicle.egg-info/SOURCES.txt'
+[0.493s] running build
+[0.493s] running build_py
+[0.494s] copying vehicle/host_vehicle.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/vehicle/build/lib/vehicle
+[0.495s] copying vehicle/remote_vehicle.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/vehicle/build/lib/vehicle
+[0.496s] copying vehicle/ren_vehicle.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/vehicle/build/lib/vehicle
+[0.497s] copying vehicle/start_multiple.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/vehicle/build/lib/vehicle
+[0.497s] copying vehicle/__init__.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/vehicle/build/lib/vehicle
+[0.498s] running install
+[0.500s] running install_lib
+[1.060s] copying /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/vehicle/build/lib/vehicle/host_vehicle.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/vehicle/lib/python3.10/site-packages/vehicle
+[1.063s] copying /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/vehicle/build/lib/vehicle/remote_vehicle.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/vehicle/lib/python3.10/site-packages/vehicle
+[1.084s] byte-compiling /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/vehicle/lib/python3.10/site-packages/vehicle/host_vehicle.py to host_vehicle.cpython-310.pyc
+[1.090s] byte-compiling /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/vehicle/lib/python3.10/site-packages/vehicle/remote_vehicle.py to remote_vehicle.cpython-310.pyc
+[1.093s] running install_data
+[1.094s] copying resource/vehicle -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/vehicle/share/ament_index/resource_index/packages
+[1.095s] copying package.xml -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/vehicle/share/vehicle
+[1.095s] running install_egg_info
+[1.102s] removing '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/vehicle/lib/python3.10/site-packages/vehicle-0.0.0-py3.10.egg-info' (and everything under it)
+[1.103s] Copying ../../build/vehicle/vehicle.egg-info to /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/vehicle/lib/python3.10/site-packages/vehicle-0.0.0-py3.10.egg-info
+[1.107s] running install_scripts
+[1.163s] Installing host_vehicle script to /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/vehicle/lib/vehicle
+[1.163s] Installing remote_vehicle script to /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/vehicle/lib/vehicle
+[1.164s] Installing ren_vehicle script to /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/vehicle/lib/vehicle
+[1.164s] writing list of installed files to '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/vehicle/install.log'
+[1.181s] Invoked command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/vehicle' returned '0': PYTHONPATH=/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/vehicle/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/vehicle/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/vehicle build --build-base /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/vehicle/build install --record /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/vehicle/install.log --single-version-externally-managed install_data

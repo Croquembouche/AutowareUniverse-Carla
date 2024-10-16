@@ -181,8 +181,11 @@ using PointXYZIF =
   autoware_auto_perception_msgs::msg::PointXYZIF_<std::allocator<void>>;
 
 // constant definitions
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint16_t PointXYZIF_<ContainerAllocator>::END_OF_SCAN_ID;
+#endif  // __cplusplus < 201703L
 
 }  // namespace msg
 

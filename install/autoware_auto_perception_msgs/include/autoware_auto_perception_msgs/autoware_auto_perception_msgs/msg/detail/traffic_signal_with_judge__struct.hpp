@@ -162,14 +162,26 @@ using TrafficSignalWithJudge =
   autoware_auto_perception_msgs::msg::TrafficSignalWithJudge_<std::allocator<void>>;
 
 // constant definitions
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t TrafficSignalWithJudge_<ContainerAllocator>::JUDGE;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t TrafficSignalWithJudge_<ContainerAllocator>::NONE;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t TrafficSignalWithJudge_<ContainerAllocator>::STOP;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t TrafficSignalWithJudge_<ContainerAllocator>::GO;
+#endif  // __cplusplus < 201703L
 
 }  // namespace msg
 

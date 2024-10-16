@@ -1,1 +1,2 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs/routing/srv/ClearRoute.srv
+---
+autoware_adapi_v1_msgs/ResponseStatus status

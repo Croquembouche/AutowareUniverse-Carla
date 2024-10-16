@@ -1,7 +1,0 @@
-[35m[1mScanning dependencies of target ament_cmake_python_symlink_autoware_auto_geometry_msgs[0m
-[ 10%] Built target autoware_auto_geometry_msgs__rosidl_generator_c
-[ 12%] Built target autoware_auto_geometry_msgs__cpp
-[ 23%] Built target autoware_auto_geometry_msgs__rosidl_typesupport_c
-[ 34%] Built target autoware_auto_geometry_msgs__rosidl_typesupport_introspection_c
-[ 44%] Built target autoware_auto_geometry_msgs__rosidl_typesupport_cpp
-[ 55%] Built target autoware_auto_geometry_msgs__rosidl_typesupport_fastrtps_c

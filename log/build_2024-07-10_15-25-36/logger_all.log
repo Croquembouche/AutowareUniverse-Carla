@@ -1,0 +1,428 @@
+[0.666s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.666s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x75cb2ad1ead0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x75cb2ad1e560>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x75cb2ad1e560>>, mixin_verb=('build',))
+[0.692s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.693s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.693s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.693s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.693s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.693s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.693s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/media/william/blueicedrive/Github/AutowareUniverse-Carla'
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.713s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.713s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.713s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.713s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.713s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.713s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map) by extensions ['ignore', 'ignore_ament_install']
+[0.713s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map) by extension 'ignore'
+[0.713s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map) by extension 'ignore_ament_install'
+[0.713s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map) by extensions ['colcon_pkg']
+[0.713s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map) by extension 'colcon_pkg'
+[0.713s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map) by extensions ['colcon_meta']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map) by extension 'colcon_meta'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map) by extensions ['ros']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map) by extension 'ros'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map) by extensions ['cmake', 'python']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map) by extension 'cmake'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map) by extension 'python'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map) by extensions ['python_setup_py']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map) by extension 'python_setup_py'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map/ud-modular-lab) by extensions ['ignore', 'ignore_ament_install']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map/ud-modular-lab) by extension 'ignore'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map/ud-modular-lab) by extension 'ignore_ament_install'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map/ud-modular-lab) by extensions ['colcon_pkg']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map/ud-modular-lab) by extension 'colcon_pkg'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map/ud-modular-lab) by extensions ['colcon_meta']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map/ud-modular-lab) by extension 'colcon_meta'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map/ud-modular-lab) by extensions ['ros']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map/ud-modular-lab) by extension 'ros'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map/ud-modular-lab) by extensions ['cmake', 'python']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map/ud-modular-lab) by extension 'cmake'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map/ud-modular-lab) by extension 'python'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map/ud-modular-lab) by extensions ['python_setup_py']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(autoware_map/ud-modular-lab) by extension 'python_setup_py'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_adapi_v1_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_adapi_v1_msgs) by extension 'ignore'
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_adapi_v1_msgs) by extension 'ignore_ament_install'
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_adapi_v1_msgs) by extensions ['colcon_pkg']
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_adapi_v1_msgs) by extension 'colcon_pkg'
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_adapi_v1_msgs) by extensions ['colcon_meta']
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_adapi_v1_msgs) by extension 'colcon_meta'
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_adapi_v1_msgs) by extensions ['ros']
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_adapi_v1_msgs) by extension 'ros'
+[0.718s] DEBUG:colcon.colcon_core.package_identification:Package 'src/autoware_adapi_v1_msgs' with type 'ros.ament_cmake' and name 'autoware_adapi_v1_msgs'
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_control_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_control_msgs) by extension 'ignore'
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_control_msgs) by extension 'ignore_ament_install'
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_control_msgs) by extensions ['colcon_pkg']
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_control_msgs) by extension 'colcon_pkg'
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_control_msgs) by extensions ['colcon_meta']
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_control_msgs) by extension 'colcon_meta'
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_control_msgs) by extensions ['ros']
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_control_msgs) by extension 'ros'
+[0.719s] DEBUG:colcon.colcon_core.package_identification:Package 'src/autoware_auto_control_msgs' with type 'ros.ament_cmake' and name 'autoware_auto_control_msgs'
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_geometry_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_geometry_msgs) by extension 'ignore'
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_geometry_msgs) by extension 'ignore_ament_install'
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_geometry_msgs) by extensions ['colcon_pkg']
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_geometry_msgs) by extension 'colcon_pkg'
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_geometry_msgs) by extensions ['colcon_meta']
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_geometry_msgs) by extension 'colcon_meta'
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_geometry_msgs) by extensions ['ros']
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_geometry_msgs) by extension 'ros'
+[0.720s] DEBUG:colcon.colcon_core.package_identification:Package 'src/autoware_auto_geometry_msgs' with type 'ros.ament_cmake' and name 'autoware_auto_geometry_msgs'
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_mapping_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_mapping_msgs) by extension 'ignore'
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_mapping_msgs) by extension 'ignore_ament_install'
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_mapping_msgs) by extensions ['colcon_pkg']
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_mapping_msgs) by extension 'colcon_pkg'
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_mapping_msgs) by extensions ['colcon_meta']
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_mapping_msgs) by extension 'colcon_meta'
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_mapping_msgs) by extensions ['ros']
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_mapping_msgs) by extension 'ros'
+[0.720s] DEBUG:colcon.colcon_core.package_identification:Package 'src/autoware_auto_mapping_msgs' with type 'ros.ament_cmake' and name 'autoware_auto_mapping_msgs'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_msgs) by extension 'ignore'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_msgs) by extension 'ignore_ament_install'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_msgs) by extensions ['colcon_pkg']
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_msgs) by extension 'colcon_pkg'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_msgs) by extensions ['colcon_meta']
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_msgs) by extension 'colcon_meta'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_msgs) by extensions ['ros']
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_msgs) by extension 'ros'
+[0.721s] DEBUG:colcon.colcon_core.package_identification:Package 'src/autoware_auto_msgs' with type 'ros.ament_cmake' and name 'autoware_auto_msgs'
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_perception_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_perception_msgs) by extension 'ignore'
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_perception_msgs) by extension 'ignore_ament_install'
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_perception_msgs) by extensions ['colcon_pkg']
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_perception_msgs) by extension 'colcon_pkg'
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_perception_msgs) by extensions ['colcon_meta']
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_perception_msgs) by extension 'colcon_meta'
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_perception_msgs) by extensions ['ros']
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_perception_msgs) by extension 'ros'
+[0.722s] DEBUG:colcon.colcon_core.package_identification:Package 'src/autoware_auto_perception_msgs' with type 'ros.ament_cmake' and name 'autoware_auto_perception_msgs'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_planning_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_planning_msgs) by extension 'ignore'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_planning_msgs) by extension 'ignore_ament_install'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_planning_msgs) by extensions ['colcon_pkg']
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_planning_msgs) by extension 'colcon_pkg'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_planning_msgs) by extensions ['colcon_meta']
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_planning_msgs) by extension 'colcon_meta'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_planning_msgs) by extensions ['ros']
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_planning_msgs) by extension 'ros'
+[0.723s] DEBUG:colcon.colcon_core.package_identification:Package 'src/autoware_auto_planning_msgs' with type 'ros.ament_cmake' and name 'autoware_auto_planning_msgs'
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_system_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_system_msgs) by extension 'ignore'
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_system_msgs) by extension 'ignore_ament_install'
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_system_msgs) by extensions ['colcon_pkg']
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_system_msgs) by extension 'colcon_pkg'
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_system_msgs) by extensions ['colcon_meta']
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_system_msgs) by extension 'colcon_meta'
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_system_msgs) by extensions ['ros']
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_system_msgs) by extension 'ros'
+[0.724s] DEBUG:colcon.colcon_core.package_identification:Package 'src/autoware_auto_system_msgs' with type 'ros.ament_cmake' and name 'autoware_auto_system_msgs'
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_vehicle_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_vehicle_msgs) by extension 'ignore'
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_vehicle_msgs) by extension 'ignore_ament_install'
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_vehicle_msgs) by extensions ['colcon_pkg']
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_vehicle_msgs) by extension 'colcon_pkg'
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_vehicle_msgs) by extensions ['colcon_meta']
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_vehicle_msgs) by extension 'colcon_meta'
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_vehicle_msgs) by extensions ['ros']
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/autoware_auto_vehicle_msgs) by extension 'ros'
+[0.725s] DEBUG:colcon.colcon_core.package_identification:Package 'src/autoware_auto_vehicle_msgs' with type 'ros.ament_cmake' and name 'autoware_auto_vehicle_msgs'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extensions ['ignore', 'ignore_ament_install']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extension 'ignore'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extension 'ignore_ament_install'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extensions ['colcon_pkg']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extension 'colcon_pkg'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extensions ['colcon_meta']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extension 'colcon_meta'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extensions ['ros']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/infrastructure) by extension 'ros'
+[0.726s] DEBUG:colcon.colcon_core.package_identification:Package 'src/infrastructure' with type 'ros.ament_python' and name 'infrastructure'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/map) by extensions ['ignore', 'ignore_ament_install']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/map) by extension 'ignore'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/map) by extension 'ignore_ament_install'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/map) by extensions ['colcon_pkg']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/map) by extension 'colcon_pkg'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/map) by extensions ['colcon_meta']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/map) by extension 'colcon_meta'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/map) by extensions ['ros']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/map) by extension 'ros'
+[0.727s] DEBUG:colcon.colcon_core.package_identification:Package 'src/map' with type 'ros.ament_python' and name 'map'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extensions ['ignore', 'ignore_ament_install']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extension 'ignore'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extension 'ignore_ament_install'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extensions ['colcon_pkg']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extension 'colcon_pkg'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extensions ['colcon_meta']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extension 'colcon_meta'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extensions ['ros']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/v2x_msg) by extension 'ros'
+[0.728s] DEBUG:colcon.colcon_core.package_identification:Package 'src/v2x_msg' with type 'ros.ament_cmake' and name 'v2x_msg'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extensions ['ignore', 'ignore_ament_install']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extension 'ignore'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extension 'ignore_ament_install'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extensions ['colcon_pkg']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extension 'colcon_pkg'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extensions ['colcon_meta']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extension 'colcon_meta'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extensions ['ros']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/vehicle) by extension 'ros'
+[0.729s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vehicle' with type 'ros.ament_python' and name 'vehicle'
+[0.729s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.729s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.729s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.729s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.729s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.742s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.742s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.742s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_adapi_v1_msgs' build argument 'cmake_args' from command line to 'None'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_adapi_v1_msgs' build argument 'cmake_target' from command line to 'None'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_adapi_v1_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_adapi_v1_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_adapi_v1_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_adapi_v1_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_adapi_v1_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_adapi_v1_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_adapi_v1_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.743s] DEBUG:colcon.colcon_core.verb:Building package 'autoware_adapi_v1_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_adapi_v1_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_adapi_v1_msgs', 'merge_install': False, 'path': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_adapi_v1_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_control_msgs' build argument 'cmake_args' from command line to 'None'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_control_msgs' build argument 'cmake_target' from command line to 'None'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_control_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_control_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_control_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_control_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_control_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_control_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_control_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.743s] DEBUG:colcon.colcon_core.verb:Building package 'autoware_auto_control_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_control_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_control_msgs', 'merge_install': False, 'path': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_control_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_geometry_msgs' build argument 'cmake_args' from command line to 'None'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_geometry_msgs' build argument 'cmake_target' from command line to 'None'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_geometry_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_geometry_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_geometry_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_geometry_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_geometry_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_geometry_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.743s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_geometry_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.743s] DEBUG:colcon.colcon_core.verb:Building package 'autoware_auto_geometry_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_geometry_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_geometry_msgs', 'merge_install': False, 'path': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_geometry_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_mapping_msgs' build argument 'cmake_args' from command line to 'None'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_mapping_msgs' build argument 'cmake_target' from command line to 'None'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_mapping_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_mapping_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_mapping_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_mapping_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_mapping_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_mapping_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_mapping_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.744s] DEBUG:colcon.colcon_core.verb:Building package 'autoware_auto_mapping_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_mapping_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_mapping_msgs', 'merge_install': False, 'path': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_mapping_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_system_msgs' build argument 'cmake_args' from command line to 'None'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_system_msgs' build argument 'cmake_target' from command line to 'None'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_system_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_system_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_system_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_system_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_system_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_system_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_system_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.744s] DEBUG:colcon.colcon_core.verb:Building package 'autoware_auto_system_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_system_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_system_msgs', 'merge_install': False, 'path': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_system_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'cmake_args' from command line to 'None'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'cmake_target' from command line to 'None'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'cmake_clean_cache' from command line to 'False'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'cmake_clean_first' from command line to 'False'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'cmake_force_configure' from command line to 'False'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'ament_cmake_args' from command line to 'None'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'catkin_cmake_args' from command line to 'None'
+[0.744s] Level 5:colcon.colcon_core.verb:set package 'infrastructure' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.745s] DEBUG:colcon.colcon_core.verb:Building package 'infrastructure' with the following arguments: {'ament_cmake_args': None, 'build_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure', 'merge_install': False, 'path': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/infrastructure', 'symlink_install': False, 'test_result_base': None}
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'map' build argument 'cmake_args' from command line to 'None'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'map' build argument 'cmake_target' from command line to 'None'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'map' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'map' build argument 'cmake_clean_cache' from command line to 'False'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'map' build argument 'cmake_clean_first' from command line to 'False'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'map' build argument 'cmake_force_configure' from command line to 'False'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'map' build argument 'ament_cmake_args' from command line to 'None'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'map' build argument 'catkin_cmake_args' from command line to 'None'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'map' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.745s] DEBUG:colcon.colcon_core.verb:Building package 'map' with the following arguments: {'ament_cmake_args': None, 'build_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map', 'merge_install': False, 'path': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/map', 'symlink_install': False, 'test_result_base': None}
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'cmake_args' from command line to 'None'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'cmake_target' from command line to 'None'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'cmake_clean_first' from command line to 'False'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'cmake_force_configure' from command line to 'False'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'ament_cmake_args' from command line to 'None'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'v2x_msg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.745s] DEBUG:colcon.colcon_core.verb:Building package 'v2x_msg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/v2x_msg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/v2x_msg', 'merge_install': False, 'path': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/v2x_msg', 'symlink_install': False, 'test_result_base': None}
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'cmake_args' from command line to 'None'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'cmake_target' from command line to 'None'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'cmake_clean_cache' from command line to 'False'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'cmake_clean_first' from command line to 'False'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'cmake_force_configure' from command line to 'False'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'ament_cmake_args' from command line to 'None'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'catkin_cmake_args' from command line to 'None'
+[0.745s] Level 5:colcon.colcon_core.verb:set package 'vehicle' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.746s] DEBUG:colcon.colcon_core.verb:Building package 'vehicle' with the following arguments: {'ament_cmake_args': None, 'build_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/vehicle', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/vehicle', 'merge_install': False, 'path': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/vehicle', 'symlink_install': False, 'test_result_base': None}
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_perception_msgs' build argument 'cmake_args' from command line to 'None'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_perception_msgs' build argument 'cmake_target' from command line to 'None'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_perception_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_perception_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_perception_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_perception_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_perception_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_perception_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_perception_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.746s] DEBUG:colcon.colcon_core.verb:Building package 'autoware_auto_perception_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_perception_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_perception_msgs', 'merge_install': False, 'path': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_perception_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_planning_msgs' build argument 'cmake_args' from command line to 'None'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_planning_msgs' build argument 'cmake_target' from command line to 'None'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_planning_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_planning_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_planning_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_planning_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_planning_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_planning_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_planning_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.746s] DEBUG:colcon.colcon_core.verb:Building package 'autoware_auto_planning_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_planning_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_planning_msgs', 'merge_install': False, 'path': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_planning_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_vehicle_msgs' build argument 'cmake_args' from command line to 'None'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_vehicle_msgs' build argument 'cmake_target' from command line to 'None'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_vehicle_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_vehicle_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_vehicle_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_vehicle_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_vehicle_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_vehicle_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.746s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_vehicle_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.747s] DEBUG:colcon.colcon_core.verb:Building package 'autoware_auto_vehicle_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_vehicle_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_vehicle_msgs', 'merge_install': False, 'path': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_vehicle_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.747s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_msgs' build argument 'cmake_args' from command line to 'None'
+[0.747s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_msgs' build argument 'cmake_target' from command line to 'None'
+[0.747s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.747s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.747s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.747s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.747s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.747s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.747s] Level 5:colcon.colcon_core.verb:set package 'autoware_auto_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.747s] DEBUG:colcon.colcon_core.verb:Building package 'autoware_auto_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_msgs', 'merge_install': False, 'path': '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.747s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.747s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.771s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_geometry_msgs' with build type 'ament_cmake'
+[0.771s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_geometry_msgs'
+[0.773s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.773s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.773s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.774s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_mapping_msgs' with build type 'ament_cmake'
+[0.775s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_mapping_msgs'
+[0.775s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.775s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.776s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_control_msgs' with build type 'ament_cmake'
+[0.776s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_control_msgs'
+[0.776s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.776s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.777s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_system_msgs' with build type 'ament_cmake'
+[0.778s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_system_msgs'
+[0.778s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.778s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.779s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_adapi_v1_msgs' with build type 'ament_cmake'
+[0.779s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_adapi_v1_msgs'
+[0.779s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.779s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.781s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/infrastructure' with build type 'ament_python'
+[0.781s] Level 1:colcon.colcon_core.shell:create_environment_hook('infrastructure', 'ament_prefix_path')
+[0.781s] INFO:colcon.colcon_core.shell:Creating environment hook '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/share/infrastructure/hook/ament_prefix_path.ps1'
+[0.782s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/share/infrastructure/hook/ament_prefix_path.dsv'
+[0.784s] INFO:colcon.colcon_core.shell:Creating environment hook '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/share/infrastructure/hook/ament_prefix_path.sh'
+[0.785s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.785s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.787s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/map' with build type 'ament_python'
+[0.787s] Level 1:colcon.colcon_core.shell:create_environment_hook('map', 'ament_prefix_path')
+[0.787s] INFO:colcon.colcon_core.shell:Creating environment hook '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/share/map/hook/ament_prefix_path.ps1'
+[0.788s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/share/map/hook/ament_prefix_path.dsv'
+[0.789s] INFO:colcon.colcon_core.shell:Creating environment hook '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/share/map/hook/ament_prefix_path.sh'
+[0.790s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.790s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.791s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/v2x_msg' with build type 'ament_cmake'
+[0.791s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/v2x_msg'
+[0.792s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.792s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.793s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/vehicle' with build type 'ament_python'
+[0.793s] Level 1:colcon.colcon_core.shell:create_environment_hook('vehicle', 'ament_prefix_path')
+[0.793s] INFO:colcon.colcon_core.shell:Creating environment hook '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/vehicle/share/vehicle/hook/ament_prefix_path.ps1'
+[0.794s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/vehicle/share/vehicle/hook/ament_prefix_path.dsv'
+[0.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/vehicle/share/vehicle/hook/ament_prefix_path.sh'
+[0.796s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.796s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.860s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_geometry_msgs': /usr/bin/cmake --build /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_geometry_msgs -- -j20 -l20
+[0.935s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_mapping_msgs': /usr/bin/cmake --build /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_mapping_msgs -- -j20 -l20
+[1.037s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_control_msgs': /usr/bin/cmake --build /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_control_msgs -- -j20 -l20
+[1.093s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_system_msgs': /usr/bin/cmake --build /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_system_msgs -- -j20 -l20
+[1.138s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_adapi_v1_msgs': /usr/bin/cmake --build /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_adapi_v1_msgs -- -j20 -l20
+[3.351s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/infrastructure'
+[3.388s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.389s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.768s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/map'
+[4.768s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.768s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.897s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/v2x_msg': /usr/bin/cmake --build /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/v2x_msg -- -j20 -l20
+[6.903s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/vehicle'
+[6.904s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.904s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.108s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete was interrupted
+[7.125s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete again
+[7.173s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_geometry_msgs' returned '-2': /usr/bin/cmake --build /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_geometry_msgs -- -j20 -l20
+[7.184s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/v2x_msg' returned '-2': /usr/bin/cmake --build /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/v2x_msg -- -j20 -l20
+[7.186s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_adapi_v1_msgs' returned '-2': /usr/bin/cmake --build /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_adapi_v1_msgs -- -j20 -l20
+[8.326s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished
+[8.326s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[8.326s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[8.326s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[8.330s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[8.330s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[8.330s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[8.339s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[8.339s] INFO:colcon.colcon_core.shell:Creating prefix script '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/local_setup.ps1'
+[8.340s] INFO:colcon.colcon_core.shell:Creating prefix util module '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/_local_setup_util_ps1.py'
+[8.340s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/setup.ps1'
+[8.341s] INFO:colcon.colcon_core.shell:Creating prefix script '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/local_setup.sh'
+[8.341s] INFO:colcon.colcon_core.shell:Creating prefix util module '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/_local_setup_util_sh.py'
+[8.342s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/setup.sh'
+[8.342s] INFO:colcon.colcon_core.shell:Creating prefix script '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/local_setup.bash'
+[8.342s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/setup.bash'
+[8.343s] INFO:colcon.colcon_core.shell:Creating prefix script '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/local_setup.zsh'
+[8.343s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/setup.zsh'

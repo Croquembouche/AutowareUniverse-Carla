@@ -1,1 +1,4 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_adapi_v1_msgs/rosidl_cmake/routing/srv/SetRoute_Request.msg
+std_msgs/Header header
+autoware_adapi_v1_msgs/RouteOption option
+geometry_msgs/Pose goal
+autoware_adapi_v1_msgs/RouteSegment[] segments

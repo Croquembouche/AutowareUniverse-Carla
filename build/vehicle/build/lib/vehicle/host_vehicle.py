@@ -18,23 +18,21 @@ import datetime
 from rclpy.clock import Clock
 import struct
 import ctypes
-import open3d as o3d
 from rclpy.qos import QoSProfile
 from rclpy.qos import QoSReliabilityPolicy, QoSDurabilityPolicy, QoSHistoryPolicy
 from rclpy.clock import ROSClock
-
-
+from pynput import keyboard
 
 try:
-    sys.path.append(glob.glob('../carla/dist/carla-*%d.%d-%s.egg' % (
+    sys.path.append(glob.glob('/home/william/carla/dist/carla-*%d.%d-%s.egg' % (
         sys.version_info.major,
         sys.version_info.minor,
         'win-amd64' if os.name == 'nt' else 'linux-x86_64'))[0])
 except IndexError:
     pass
 
-
 # ----------MSGs--------
+import v2x_msg.msg
 from v2x_msg.msg import BSM
 from v2x_msg.msg import SRM
 from v2x_msg.msg import SignalRequestPackage
@@ -81,13 +79,14 @@ def _get_struct_fmt(is_bigendian, fields, field_names=None):
 
     return fmt
 
+
 class DefaultVehicle(Node):
     def __init__(self):
         super().__init__('main_vehicle_publisher')
         # self.get_clock().ros_clock = ROSClock()
         # print(ROSClock())
         # Get server IP from parameter, defaulting to 'localhost'
-        self.declare_parameter('server_ip', 'localhost')
+        self.declare_parameter('server_ip', '128.175.213.244')
         server_ip = self.get_parameter('server_ip').get_parameter_value().string_value
         self.connectToWorld(server_ip)
         self.setUpPublishers()
@@ -132,6 +131,9 @@ class DefaultVehicle(Node):
         self.bridge = CvBridge()
         self.image_queue = []
         self.init = False
+        # Initialize Keyboard
+        # self.keyboardControl()
+
     def connectToWorld(self, server_ip):
         # 1. Connect to world
         client = carla.Client(server_ip, 2000)
@@ -148,7 +150,34 @@ class DefaultVehicle(Node):
         self.ego_control.throttle = 0.0
         self.ego_control.steer = 0.0
         self.ego_control.brake = 1
-        # self.vehicle.apply_control(self.ego_control)
+        self.vehicle.apply_control(self.ego_control)
+
+    # def keyboardControl(self):
+    #     # Start the keyboard listener
+    #     self.listener = keyboard.Listener(on_press=self.on_press, on_release=self.on_release)
+    #     self.listener.start()
+
+    # def on_press(self, key):
+    #     print(key)
+    #     try:
+    #         if key.char == 'w':
+    #             self.ego_control.throttle = min(self.ego_control.throttle + 0.1, 1.0)
+    #             self.ego_control.brake = 0.0
+    #         elif key.char == 's':
+    #             self.ego_control.brake = min(self.brake + 0.1, 1.0)
+    #             self.ego_control.throttle = 0.0
+    #         elif key.char == 'a':
+    #             self.ego_control.steer = max(self.ego_control.steer - 0.1, -1.0)
+    #         elif key.char == 'd':
+    #             self.ego_control.steer = min(self.ego_control.steer + 0.1, 1.0)
+    #         elif key.char == 'r':
+    #             self.ego_control.reverse = not self.reverse  # Toggle reverse
+    #         self.vehicle.apply_control(self.ego_control)
+    #     except AttributeError:
+    #         pass
+    # def on_release(self, key):
+    #     if key == keyboard.Key.esc:
+    #         return False  # Stop listener
 
 # --------------Vehicle ID Generation--------------------------
     def genVehicleID(self):
@@ -358,11 +387,11 @@ class DefaultVehicle(Node):
         self.ndt_lidarpublisher_.publish(sensing_msg)
         # change msgcnt
         self.msgcntIncrem() 
-    def addLidarSensor(self, x=-0.9,y=0, z=1.8, pitch=0,yaw=0,row=0, channels="16", pps="300000", rot_freq="600", up_fov="25", low_fov="-15", range="80"):
+    def addLidarSensor(self, x=-0.9,y=0, z=1.8, pitch=0,yaw=0,row=0, channels="32", pps="1000000", rot_freq="100", up_fov="15", low_fov="-15", range="100"):
         # creating a publisher
-        self.ndt_lidarpublisher_ = self.create_publisher(PointCloud2, '/sensing/lidar/top/outlier_filtered/pointcloud', qos_profile=10)
+        self.ndt_lidarpublisher_ = self.create_publisher(PointCloud2, '/sensing/lidar/top/outlier_filtered/pointcloud', 1)
         print("Publishing Lidar Sensor Data for NDT")
-        self.sensing_lidarpublisher_ = self.create_publisher(PointCloud2, '/sensing/lidar/concatenated/pointcloud', qos_profile=10)
+        self.sensing_lidarpublisher_ = self.create_publisher(PointCloud2, '/sensing/lidar/concatenated/pointcloud', 1)
         print("Publishing Lidar Sensor Data for Sensing")
 
         # finding the lidar bp
@@ -393,24 +422,11 @@ class DefaultVehicle(Node):
         return image_message
     def RGBSensorcallback(self, img):
         # self.get_logger().info('Publishing: RGB Camera')
+
         try:
             ros_img = self.convertCARLAIMGtoROSIMG(img)
         except CvBridgeError as e:
             print(e)
-
-        try:
-            array = np.frombuffer(img.raw_data, dtype=np.dtype("uint8"))
-            array = np.reshape(array, (img.height, img.width, 4))
-            # Convert BGRA to RGB.
-            array = array[:, :, :3]
-            array = array[:, :, ::-1]
-            # array = np.fliplr(array)
-            # array = np.rot90(array)
-            # array = np.rot90(array)
-            # self.image_queue.append(array)
-            # self.vehicleManualControls()
-        except:
-            print("error occured")
 
         # try:
         #     current_frame = self.bridge.imgmsg_to_cv2(ros_img)
@@ -556,36 +572,16 @@ class DefaultVehicle(Node):
         if msg.data == "Autoware off":
             self.autoware_control = NULL
 
-        # throttle_increament = 0.05
+        if msg.data == "auto on":
+            self.vehicle.set_autopilot(True)
 
-        # if msg.data == "auto on":
-        #     self.vehicle.set_autopilot(True)
+        if msg.data == "auto off":
+            self.vehicle.set_autopilot(False)
 
-        # if msg.data == "auto off":
-        #     self.vehicle.set_autopilot(False)
+        if msg.data == "srm":
+            self.SRM()
 
-        # if msg.data == "srm":
-        #     self.SRM()
-
-        # if msg.data == "w":
-        #     self.ego_control.throttle = min(self.ego_control.throttle + throttle_increament, 1.0)
-        #     self.ego_control.brake = 0
-
-        # if msg.data == "s":
-        #     self.ego_control.throttle = max(self.ego_control.throttle - throttle_increament, 0)
-        # steer_increment = 0.2
-
-        # if msg.data == "a":
-
-        #     self.ego_control.steer = max(self.ego_control.steer - steer_increment, -1.0)
-        # if msg.data == "d":
-
-        #     self.ego_control.steer = min(self.ego_control.steer + steer_increment, 1.0)
-        # if msg.data == "b":
-
-        #     self.ego_control.brake = 1
-
-        # self.vehicle.apply_control(self.ego_control)     
+          
 
 #----------------------------Helper Functions---------------------------------
     def deg2rad(self, deg):
@@ -805,7 +801,7 @@ class DefaultVehicle(Node):
         # self.autoware_control_sub = self.create_subscription(AckermannControlCommand, '/control/trajectory_follower/control_cmd', self.AutowareControllCallbacks, 10)
         # subscribe to controls
         self.enabled = False
-        # self.subscription_controls = self.create_subscription(String, 'hv_controls', self.vehicleROSControls, 10)
+        self.subscription_controls = self.create_subscription(String, 'hv_controls', self.vehicleROSControls, 10)
         # subscribe to BSM messages
         self.bsm_sub = self.create_subscription(BSM, 'BSM', self.BSMSubscriber_cb, 10)
         # subscribe to autoware mode transition msg
@@ -853,47 +849,33 @@ class DefaultVehicle(Node):
 def main(args=None):
     # initialize ROS2
     rclpy.init(args=args)
-    # list of things to do
-    # 1. Connect to world
-    #client = carla.Client('localhost', 2000)
-    #client.set_timeout(10.0) #seconds
-    # 2. Get World Information
-    #world = client.get_world()
-    # Toggle all buildings off
-    # world.unload_map_layer(carla.MapLayer.Buildings)
-    # get a list of spawn points
-    #spawn_points = world.get_map().get_spawn_points()
-    # spawn_point = spawn_points[random.randint(1, len(spawn_points)-1)]
-    #spawn_point = spawn_points[1]
     # spawn the vehicle
-    demo_veh = DefaultVehicle()
+    host_veh = DefaultVehicle()
     # add lidar sensor
-    demo_veh.addLidarSensor()
+    host_veh.addLidarSensor()
     # print("Publishing Lidar Sensor Data")
     # add camera sensor
-    demo_veh.addRBGCameraSensor()
+    host_veh.addRBGCameraSensor()
     # print("Publishing Front Camera Data")
     # add GNSS Sensor
-    demo_veh.addGNSSSensor()
+    host_veh.addGNSSSensor()
     # print("Publishing GNSS Data")
     # add IMU Sensor
-    demo_veh.addIMUSensor()
+    host_veh.addIMUSensor()
     # print("Publishing IMU Sensor Data")
     
-    
-    
     try:
-        rclpy.spin(demo_veh)
-        
+        rclpy.spin(host_veh)
+
     except KeyboardInterrupt:
-        destroyed = demo_veh.destroy()
+        destroyed = host_veh.destroy()
 
         if destroyed:
             print("Vehicle Destroyed")
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the nodbe object)
-    demo_veh.destroy_node()
+    host_veh.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':

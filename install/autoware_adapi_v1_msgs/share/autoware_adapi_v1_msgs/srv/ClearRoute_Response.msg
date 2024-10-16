@@ -1,1 +1,2 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_adapi_v1_msgs/rosidl_cmake/routing/srv/ClearRoute_Response.msg
+
+autoware_adapi_v1_msgs/ResponseStatus status

@@ -1,0 +1,6 @@
+setup.py
+autoware_auto_geometry_msgs/__init__.py
+autoware_auto_geometry_msgs.egg-info/PKG-INFO
+autoware_auto_geometry_msgs.egg-info/SOURCES.txt
+autoware_auto_geometry_msgs.egg-info/dependency_links.txt
+autoware_auto_geometry_msgs.egg-info/top_level.txt

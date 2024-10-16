@@ -150,12 +150,21 @@ using ControlModeCommand =
   autoware_auto_vehicle_msgs::msg::ControlModeCommand_<std::allocator<void>>;
 
 // constant definitions
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t ControlModeCommand_<ContainerAllocator>::NO_COMMAND;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t ControlModeCommand_<ContainerAllocator>::AUTONOMOUS;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t ControlModeCommand_<ContainerAllocator>::MANUAL;
+#endif  // __cplusplus < 201703L
 
 }  // namespace msg
 

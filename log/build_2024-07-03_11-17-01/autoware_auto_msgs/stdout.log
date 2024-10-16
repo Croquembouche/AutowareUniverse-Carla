@@ -1,0 +1,37 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake_auto: 1.3.9 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_msgs
+-- Install configuration: ""
+-- Installing: /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_msgs/share/ament_index/resource_index/package_run_dependencies/autoware_auto_msgs
+-- Installing: /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_msgs/share/ament_index/resource_index/parent_prefix_path/autoware_auto_msgs
+-- Installing: /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/environment/ament_prefix_path.sh
+-- Installing: /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/environment/ament_prefix_path.dsv
+-- Installing: /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/environment/path.sh
+-- Installing: /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/environment/path.dsv
+-- Installing: /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/local_setup.bash
+-- Installing: /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/local_setup.sh
+-- Installing: /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/local_setup.zsh
+-- Installing: /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/local_setup.dsv
+-- Installing: /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/package.dsv
+-- Installing: /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_msgs/share/ament_index/resource_index/packages/autoware_auto_msgs
+-- Installing: /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/cmake/autoware_auto_msgsConfig.cmake
+-- Installing: /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/cmake/autoware_auto_msgsConfig-version.cmake
+-- Installing: /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_msgs/share/autoware_auto_msgs/package.xml

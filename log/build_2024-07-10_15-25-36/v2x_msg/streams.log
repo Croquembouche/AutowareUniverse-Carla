@@ -1,0 +1,6 @@
+[4.105s] Invoking command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/v2x_msg': /usr/bin/cmake --build /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/v2x_msg -- -j20 -l20
+[6.343s] gmake[1]: *** [CMakeFiles/Makefile2:212: CMakeFiles/v2x_msg__rosidl_generator_c.dir/all] Interrupt
+[6.344s] gmake[1]: *** [CMakeFiles/Makefile2:316: CMakeFiles/v2x_msg__cpp.dir/all] Interrupt
+[6.346s] gmake[1]: *** [CMakeFiles/Makefile2:420: CMakeFiles/ament_cmake_python_copy_v2x_msg.dir/all] Interrupt
+[6.351s] gmake: *** [Makefile:146: all] Interrupt
+[6.392s] Invoked command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/v2x_msg' returned '-2': /usr/bin/cmake --build /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/v2x_msg -- -j20 -l20

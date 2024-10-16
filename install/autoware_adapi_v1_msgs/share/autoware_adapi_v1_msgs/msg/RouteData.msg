@@ -1,1 +1,3 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs/routing/msg/RouteData.msg
+geometry_msgs/Pose start
+geometry_msgs/Pose goal
+autoware_adapi_v1_msgs/RouteSegment[] segments

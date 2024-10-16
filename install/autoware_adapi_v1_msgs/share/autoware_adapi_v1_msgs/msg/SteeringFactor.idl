@@ -1,1 +1,56 @@
-/home/carla/Github/C-V2X-Autoware-Carla/build/autoware_adapi_v1_msgs/rosidl_adapter/autoware_adapi_v1_msgs/msg/SteeringFactor.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from autoware_adapi_v1_msgs/planning/msg/SteeringFactor.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+
+module autoware_adapi_v1_msgs {
+  module msg {
+    typedef geometry_msgs::msg::Pose geometry_msgs__msg__Pose;
+    typedef geometry_msgs__msg__Pose geometry_msgs__msg__Pose__2[2];
+    typedef float float__2[2];
+    module SteeringFactor_Constants {
+      const uint16 UNKNOWN = 0;
+      @verbatim (language="comment", text=
+        "constants for type")
+      const uint16 INTERSECTION = 1;
+      const uint16 LANE_CHANGE = 2;
+      const uint16 AVOIDANCE_PATH_CHANGE = 3;
+      const uint16 AVOIDANCE_PATH_RETURN = 4;
+      const uint16 STATION = 5;
+      const uint16 PULL_OUT = 6;
+      @verbatim (language="comment", text=
+        "Deprecated. Use GOAL_PLANNER.")
+      const uint16 PULL_OVER = 7;
+      const uint16 GOAL_PLANNER = 7;
+      const uint16 EMERGENCY_OPERATION = 8;
+      @verbatim (language="comment", text=
+        "constants for direction")
+      const uint16 LEFT = 1;
+      const uint16 RIGHT = 2;
+      const uint16 STRAIGHT = 3;
+      @verbatim (language="comment", text=
+        "constants for status")
+      const uint16 APPROACHING = 1;
+      const uint16 TRYING = 2;
+      const uint16 TURNING = 3;
+    };
+    @verbatim (language="comment", text=
+      "constants for common use")
+    struct SteeringFactor {
+      @verbatim (language="comment", text=
+        "variables")
+      geometry_msgs__msg__Pose__2 pose;
+
+      float__2 distance;
+
+      uint16 type;
+
+      uint16 direction;
+
+      uint16 status;
+
+      string detail;
+    };
+  };
+};

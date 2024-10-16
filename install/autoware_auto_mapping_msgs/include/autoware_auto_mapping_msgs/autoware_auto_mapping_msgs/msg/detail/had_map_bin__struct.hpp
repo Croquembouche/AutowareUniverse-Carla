@@ -200,8 +200,11 @@ using HADMapBin =
   autoware_auto_mapping_msgs::msg::HADMapBin_<std::allocator<void>>;
 
 // constant definitions
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t HADMapBin_<ContainerAllocator>::MAP_FORMAT_LANELET2;
+#endif  // __cplusplus < 201703L
 
 }  // namespace msg
 

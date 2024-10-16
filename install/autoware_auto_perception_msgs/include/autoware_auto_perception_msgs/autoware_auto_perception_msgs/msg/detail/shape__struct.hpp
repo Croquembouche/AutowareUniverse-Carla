@@ -162,12 +162,21 @@ using Shape =
   autoware_auto_perception_msgs::msg::Shape_<std::allocator<void>>;
 
 // constant definitions
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t Shape_<ContainerAllocator>::BOUNDING_BOX;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t Shape_<ContainerAllocator>::CYLINDER;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t Shape_<ContainerAllocator>::POLYGON;
+#endif  // __cplusplus < 201703L
 
 }  // namespace msg
 

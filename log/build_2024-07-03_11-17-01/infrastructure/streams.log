@@ -1,0 +1,48 @@
+[1.439s] Invoking command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/infrastructure': PYTHONPATH=/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/infrastructure build --build-base /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build install --record /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/install.log --single-version-externally-managed install_data
+[1.672s] running egg_info
+[1.673s] creating ../../build/infrastructure/infrastructure.egg-info
+[1.674s] writing ../../build/infrastructure/infrastructure.egg-info/PKG-INFO
+[1.675s] writing dependency_links to ../../build/infrastructure/infrastructure.egg-info/dependency_links.txt
+[1.676s] writing entry points to ../../build/infrastructure/infrastructure.egg-info/entry_points.txt
+[1.676s] writing requirements to ../../build/infrastructure/infrastructure.egg-info/requires.txt
+[1.677s] writing top-level names to ../../build/infrastructure/infrastructure.egg-info/top_level.txt
+[1.678s] writing manifest file '../../build/infrastructure/infrastructure.egg-info/SOURCES.txt'
+[1.682s] reading manifest file '../../build/infrastructure/infrastructure.egg-info/SOURCES.txt'
+[1.687s] writing manifest file '../../build/infrastructure/infrastructure.egg-info/SOURCES.txt'
+[1.687s] running build
+[1.688s] running build_py
+[1.688s] creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build
+[1.689s] creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib
+[1.689s] creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure
+[1.690s] copying infrastructure/MAP.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure
+[1.691s] copying infrastructure/SRM.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure
+[1.693s] copying infrastructure/SSM.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure
+[1.695s] copying infrastructure/update.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure
+[1.697s] copying infrastructure/__init__.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure
+[1.698s] running install
+[1.698s] running install_lib
+[1.701s] creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure
+[1.702s] copying /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure/MAP.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure
+[1.705s] copying /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure/SRM.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure
+[1.708s] copying /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure/SSM.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure
+[1.712s] copying /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure/update.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure
+[1.714s] copying /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build/lib/infrastructure/__init__.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure
+[1.718s] byte-compiling /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure/MAP.py to MAP.cpython-310.pyc
+[1.722s] byte-compiling /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure/SRM.py to SRM.cpython-310.pyc
+[1.726s] byte-compiling /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure/SSM.py to SSM.cpython-310.pyc
+[1.729s] byte-compiling /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure/update.py to update.cpython-310.pyc
+[1.733s] byte-compiling /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure/__init__.py to __init__.cpython-310.pyc
+[1.736s] running install_data
+[1.736s] creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/share/ament_index
+[1.737s] creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/share/ament_index/resource_index
+[1.737s] creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/share/ament_index/resource_index/packages
+[1.738s] copying resource/infrastructure -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/share/ament_index/resource_index/packages
+[1.739s] copying package.xml -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/share/infrastructure
+[1.740s] running install_egg_info
+[1.744s] Copying ../../build/infrastructure/infrastructure.egg-info to /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages/infrastructure-0.0.0-py3.10.egg-info
+[1.768s] running install_scripts
+[1.794s] Installing MAP script to /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/infrastructure
+[1.795s] Installing SSM script to /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/infrastructure
+[1.796s] Installing update script to /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/infrastructure
+[1.798s] writing list of installed files to '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/install.log'
+[1.821s] Invoked command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/infrastructure' returned '0': PYTHONPATH=/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/infrastructure/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/infrastructure build --build-base /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/build install --record /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/infrastructure/install.log --single-version-externally-managed install_data

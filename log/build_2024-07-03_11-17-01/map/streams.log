@@ -1,0 +1,37 @@
+[1.419s] Invoking command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/map': PYTHONPATH=/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/map build --build-base /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/build install --record /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/install.log --single-version-externally-managed install_data
+[1.642s] running egg_info
+[1.643s] creating ../../build/map/map.egg-info
+[1.643s] writing ../../build/map/map.egg-info/PKG-INFO
+[1.645s] writing dependency_links to ../../build/map/map.egg-info/dependency_links.txt
+[1.646s] writing entry points to ../../build/map/map.egg-info/entry_points.txt
+[1.646s] writing requirements to ../../build/map/map.egg-info/requires.txt
+[1.647s] writing top-level names to ../../build/map/map.egg-info/top_level.txt
+[1.647s] writing manifest file '../../build/map/map.egg-info/SOURCES.txt'
+[1.651s] reading manifest file '../../build/map/map.egg-info/SOURCES.txt'
+[1.656s] writing manifest file '../../build/map/map.egg-info/SOURCES.txt'
+[1.656s] running build
+[1.656s] running build_py
+[1.657s] creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/build
+[1.657s] creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/build/lib
+[1.658s] creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/build/lib/map
+[1.659s] copying map/map.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/build/lib/map
+[1.661s] copying map/__init__.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/build/lib/map
+[1.662s] running install
+[1.663s] running install_lib
+[1.665s] creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/lib/python3.10/site-packages/map
+[1.667s] copying /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/build/lib/map/map.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/lib/python3.10/site-packages/map
+[1.670s] copying /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/build/lib/map/__init__.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/lib/python3.10/site-packages/map
+[1.673s] byte-compiling /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/lib/python3.10/site-packages/map/map.py to map.cpython-310.pyc
+[1.677s] byte-compiling /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/lib/python3.10/site-packages/map/__init__.py to __init__.cpython-310.pyc
+[1.680s] running install_data
+[1.680s] creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/share/ament_index
+[1.681s] creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/share/ament_index/resource_index
+[1.681s] creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/share/ament_index/resource_index/packages
+[1.681s] copying resource/map -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/share/ament_index/resource_index/packages
+[1.683s] copying package.xml -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/share/map
+[1.685s] running install_egg_info
+[1.688s] Copying ../../build/map/map.egg-info to /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/lib/python3.10/site-packages/map-0.0.0-py3.10.egg-info
+[1.711s] running install_scripts
+[1.736s] Installing map script to /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/lib/map
+[1.737s] writing list of installed files to '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/install.log'
+[1.752s] Invoked command in '/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/map' returned '0': PYTHONPATH=/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/map build --build-base /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/build install --record /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/install.log --single-version-externally-managed install_data

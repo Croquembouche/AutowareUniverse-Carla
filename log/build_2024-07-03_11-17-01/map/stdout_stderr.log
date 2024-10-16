@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/map/map.egg-info
+writing ../../build/map/map.egg-info/PKG-INFO
+writing dependency_links to ../../build/map/map.egg-info/dependency_links.txt
+writing entry points to ../../build/map/map.egg-info/entry_points.txt
+writing requirements to ../../build/map/map.egg-info/requires.txt
+writing top-level names to ../../build/map/map.egg-info/top_level.txt
+writing manifest file '../../build/map/map.egg-info/SOURCES.txt'
+reading manifest file '../../build/map/map.egg-info/SOURCES.txt'
+writing manifest file '../../build/map/map.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/build
+creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/build/lib
+creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/build/lib/map
+copying map/map.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/build/lib/map
+copying map/__init__.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/build/lib/map
+running install
+running install_lib
+creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/lib/python3.10/site-packages/map
+copying /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/build/lib/map/map.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/lib/python3.10/site-packages/map
+copying /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/build/lib/map/__init__.py -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/lib/python3.10/site-packages/map
+byte-compiling /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/lib/python3.10/site-packages/map/map.py to map.cpython-310.pyc
+byte-compiling /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/lib/python3.10/site-packages/map/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/share/ament_index
+creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/share/ament_index/resource_index
+creating /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/share/ament_index/resource_index/packages
+copying resource/map -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/share/ament_index/resource_index/packages
+copying package.xml -> /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/share/map
+running install_egg_info
+Copying ../../build/map/map.egg-info to /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/lib/python3.10/site-packages/map-0.0.0-py3.10.egg-info
+running install_scripts
+Installing map script to /media/william/blueicedrive/Github/AutowareUniverse-Carla/install/map/lib/map
+writing list of installed files to '/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/map/install.log'

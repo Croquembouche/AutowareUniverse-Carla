@@ -1,8 +1,8 @@
-# Install script for directory: /home/carla/Github/C-V2X-Autoware-Carla/build/autoware_auto_perception_msgs/autoware_auto_perception_msgs__py
+# Install script for directory: /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_perception_msgs/autoware_auto_perception_msgs__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/carla/Github/C-V2X-Autoware-Carla/install/autoware_auto_perception_msgs")
+  set(CMAKE_INSTALL_PREFIX "/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_perception_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -35,5 +35,10 @@ endif()
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+# Set default install directory permissions.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 

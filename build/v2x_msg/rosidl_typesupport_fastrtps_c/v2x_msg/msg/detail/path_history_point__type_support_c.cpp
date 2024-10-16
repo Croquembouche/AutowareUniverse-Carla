@@ -239,6 +239,8 @@ size_t max_serialized_size_v2x_msg__msg__PathHistoryPoint(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -249,6 +251,7 @@ size_t max_serialized_size_v2x_msg__msg__PathHistoryPoint(
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
@@ -256,6 +259,7 @@ size_t max_serialized_size_v2x_msg__msg__PathHistoryPoint(
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
@@ -263,6 +267,7 @@ size_t max_serialized_size_v2x_msg__msg__PathHistoryPoint(
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
@@ -270,6 +275,7 @@ size_t max_serialized_size_v2x_msg__msg__PathHistoryPoint(
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
@@ -277,6 +283,7 @@ size_t max_serialized_size_v2x_msg__msg__PathHistoryPoint(
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
@@ -285,12 +292,16 @@ size_t max_serialized_size_v2x_msg__msg__PathHistoryPoint(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size;
+      inner_size =
         max_serialized_size_v2x_msg__msg__PositionalAccuracy(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
@@ -299,11 +310,25 @@ size_t max_serialized_size_v2x_msg__msg__PathHistoryPoint(
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = v2x_msg__msg__PathHistoryPoint;
+    is_plain =
+      (
+      offsetof(DataType, heading) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static size_t _PathHistoryPoint__max_serialized_size(char & bounds_info)

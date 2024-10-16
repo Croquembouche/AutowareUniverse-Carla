@@ -1,1 +1,8 @@
-/home/carla/Github/C-V2X-Autoware-Carla/src/autoware_adapi_v1_msgs/routing/msg/RouteState.msg
+uint16 UNKNOWN = 0
+uint16 UNSET = 1
+uint16 SET = 2
+uint16 ARRIVED = 3
+uint16 CHANGING = 4
+
+builtin_interfaces/Time stamp
+uint16 state

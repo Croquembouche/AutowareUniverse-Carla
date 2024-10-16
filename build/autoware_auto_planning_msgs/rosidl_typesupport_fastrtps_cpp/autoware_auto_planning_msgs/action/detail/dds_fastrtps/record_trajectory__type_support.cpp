@@ -81,6 +81,8 @@ max_serialized_size_RecordTrajectory_Goal(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -101,7 +103,20 @@ max_serialized_size_RecordTrajectory_Goal(
     }
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = autoware_auto_planning_msgs::action::RecordTrajectory_Goal;
+    is_plain =
+      (
+      offsetof(DataType, record_path) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static bool _RecordTrajectory_Goal__cdr_serialize(
@@ -286,6 +301,8 @@ max_serialized_size_RecordTrajectory_Result(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -297,10 +314,24 @@ max_serialized_size_RecordTrajectory_Result(
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = autoware_auto_planning_msgs::action::RecordTrajectory_Result;
+    is_plain =
+      (
+      offsetof(DataType, unused_flag) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static bool _RecordTrajectory_Result__cdr_serialize(
@@ -481,6 +512,8 @@ max_serialized_size_RecordTrajectory_Feedback(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -492,11 +525,25 @@ max_serialized_size_RecordTrajectory_Feedback(
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = autoware_auto_planning_msgs::action::RecordTrajectory_Feedback;
+    is_plain =
+      (
+      offsetof(DataType, current_length) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static bool _RecordTrajectory_Feedback__cdr_serialize(
@@ -634,29 +681,7 @@ max_serialized_size_UUID(
 }  // namespace msg
 }  // namespace unique_identifier_msgs
 
-namespace autoware_auto_planning_msgs
-{
-namespace action
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const autoware_auto_planning_msgs::action::RecordTrajectory_Goal &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  autoware_auto_planning_msgs::action::RecordTrajectory_Goal &);
-size_t get_serialized_size(
-  const autoware_auto_planning_msgs::action::RecordTrajectory_Goal &,
-  size_t current_alignment);
-size_t
-max_serialized_size_RecordTrajectory_Goal(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace action
-}  // namespace autoware_auto_planning_msgs
+// functions for autoware_auto_planning_msgs::action::RecordTrajectory_Goal already declared above
 
 
 namespace autoware_auto_planning_msgs
@@ -740,6 +765,8 @@ max_serialized_size_RecordTrajectory_SendGoal_Request(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -752,12 +779,15 @@ max_serialized_size_RecordTrajectory_SendGoal_Request(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size =
         unique_identifier_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_UUID(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
@@ -768,18 +798,34 @@ max_serialized_size_RecordTrajectory_SendGoal_Request(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size =
         autoware_auto_planning_msgs::action::typesupport_fastrtps_cpp::max_serialized_size_RecordTrajectory_Goal(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = autoware_auto_planning_msgs::action::RecordTrajectory_SendGoal_Request;
+    is_plain =
+      (
+      offsetof(DataType, goal) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static bool _RecordTrajectory_SendGoal_Request__cdr_serialize(
@@ -1002,6 +1048,8 @@ max_serialized_size_RecordTrajectory_SendGoal_Response(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -1013,6 +1061,7 @@ max_serialized_size_RecordTrajectory_SendGoal_Response(
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
 
@@ -1021,18 +1070,34 @@ max_serialized_size_RecordTrajectory_SendGoal_Response(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size =
         builtin_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_Time(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = autoware_auto_planning_msgs::action::RecordTrajectory_SendGoal_Response;
+    is_plain =
+      (
+      offsetof(DataType, stamp) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static bool _RecordTrajectory_SendGoal_Response__cdr_serialize(
@@ -1207,29 +1272,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_fastrtps_cp
 
 
 // forward declaration of message dependencies and their conversion functions
-namespace unique_identifier_msgs
-{
-namespace msg
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const unique_identifier_msgs::msg::UUID &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  unique_identifier_msgs::msg::UUID &);
-size_t get_serialized_size(
-  const unique_identifier_msgs::msg::UUID &,
-  size_t current_alignment);
-size_t
-max_serialized_size_UUID(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace msg
-}  // namespace unique_identifier_msgs
+// functions for unique_identifier_msgs::msg::UUID already declared above
 
 
 namespace autoware_auto_planning_msgs
@@ -1300,6 +1343,8 @@ max_serialized_size_RecordTrajectory_GetResult_Request(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -1312,18 +1357,34 @@ max_serialized_size_RecordTrajectory_GetResult_Request(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size =
         unique_identifier_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_UUID(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = autoware_auto_planning_msgs::action::RecordTrajectory_GetResult_Request;
+    is_plain =
+      (
+      offsetof(DataType, goal_id) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static bool _RecordTrajectory_GetResult_Request__cdr_serialize(
@@ -1438,29 +1499,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_cp
 
 
 // forward declaration of message dependencies and their conversion functions
-namespace autoware_auto_planning_msgs
-{
-namespace action
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const autoware_auto_planning_msgs::action::RecordTrajectory_Result &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  autoware_auto_planning_msgs::action::RecordTrajectory_Result &);
-size_t get_serialized_size(
-  const autoware_auto_planning_msgs::action::RecordTrajectory_Result &,
-  size_t current_alignment);
-size_t
-max_serialized_size_RecordTrajectory_Result(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace action
-}  // namespace autoware_auto_planning_msgs
+// functions for autoware_auto_planning_msgs::action::RecordTrajectory_Result already declared above
 
 
 namespace autoware_auto_planning_msgs
@@ -1542,6 +1581,8 @@ max_serialized_size_RecordTrajectory_GetResult_Response(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -1553,6 +1594,7 @@ max_serialized_size_RecordTrajectory_GetResult_Response(
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
 
@@ -1561,18 +1603,34 @@ max_serialized_size_RecordTrajectory_GetResult_Response(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size =
         autoware_auto_planning_msgs::action::typesupport_fastrtps_cpp::max_serialized_size_RecordTrajectory_Result(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = autoware_auto_planning_msgs::action::RecordTrajectory_GetResult_Response;
+    is_plain =
+      (
+      offsetof(DataType, result) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static bool _RecordTrajectory_GetResult_Response__cdr_serialize(
@@ -1750,53 +1808,9 @@ ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_fastrtps_cp
 
 
 // forward declaration of message dependencies and their conversion functions
-namespace unique_identifier_msgs
-{
-namespace msg
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const unique_identifier_msgs::msg::UUID &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  unique_identifier_msgs::msg::UUID &);
-size_t get_serialized_size(
-  const unique_identifier_msgs::msg::UUID &,
-  size_t current_alignment);
-size_t
-max_serialized_size_UUID(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace msg
-}  // namespace unique_identifier_msgs
+// functions for unique_identifier_msgs::msg::UUID already declared above
 
-namespace autoware_auto_planning_msgs
-{
-namespace action
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const autoware_auto_planning_msgs::action::RecordTrajectory_Feedback &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  autoware_auto_planning_msgs::action::RecordTrajectory_Feedback &);
-size_t get_serialized_size(
-  const autoware_auto_planning_msgs::action::RecordTrajectory_Feedback &,
-  size_t current_alignment);
-size_t
-max_serialized_size_RecordTrajectory_Feedback(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace action
-}  // namespace autoware_auto_planning_msgs
+// functions for autoware_auto_planning_msgs::action::RecordTrajectory_Feedback already declared above
 
 
 namespace autoware_auto_planning_msgs
@@ -1880,6 +1894,8 @@ max_serialized_size_RecordTrajectory_FeedbackMessage(
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
 
@@ -1892,12 +1908,15 @@ max_serialized_size_RecordTrajectory_FeedbackMessage(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size =
         unique_identifier_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_UUID(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
@@ -1908,18 +1927,34 @@ max_serialized_size_RecordTrajectory_FeedbackMessage(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
       bool inner_is_plain;
-      current_alignment +=
+      size_t inner_size =
         autoware_auto_planning_msgs::action::typesupport_fastrtps_cpp::max_serialized_size_RecordTrajectory_Feedback(
         inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
     }
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = autoware_auto_planning_msgs::action::RecordTrajectory_FeedbackMessage;
+    is_plain =
+      (
+      offsetof(DataType, feedback) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static bool _RecordTrajectory_FeedbackMessage__cdr_serialize(

@@ -152,14 +152,26 @@ using HeadlightsCommand =
   autoware_auto_vehicle_msgs::msg::HeadlightsCommand_<std::allocator<void>>;
 
 // constant definitions
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t HeadlightsCommand_<ContainerAllocator>::NO_COMMAND;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t HeadlightsCommand_<ContainerAllocator>::DISABLE;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t HeadlightsCommand_<ContainerAllocator>::ENABLE_LOW;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t HeadlightsCommand_<ContainerAllocator>::ENABLE_HIGH;
+#endif  // __cplusplus < 201703L
 
 }  // namespace msg
 

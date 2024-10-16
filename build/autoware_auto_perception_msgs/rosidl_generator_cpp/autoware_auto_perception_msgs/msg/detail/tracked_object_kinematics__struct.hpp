@@ -192,12 +192,21 @@ using TrackedObjectKinematics =
   autoware_auto_perception_msgs::msg::TrackedObjectKinematics_<std::allocator<void>>;
 
 // constant definitions
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t TrackedObjectKinematics_<ContainerAllocator>::UNAVAILABLE;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t TrackedObjectKinematics_<ContainerAllocator>::SIGN_UNKNOWN;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
 template<typename ContainerAllocator>
 constexpr uint8_t TrackedObjectKinematics_<ContainerAllocator>::AVAILABLE;
+#endif  // __cplusplus < 201703L
 
 }  // namespace msg
 

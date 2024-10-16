@@ -1,0 +1,15 @@
+[0.000000] (-) TimerEvent: {}
+[0.000106] (-) JobUnselected: {'identifier': 'autoware_adapi_v1_msgs'}
+[0.000144] (-) JobUnselected: {'identifier': 'autoware_auto_control_msgs'}
+[0.000165] (-) JobUnselected: {'identifier': 'autoware_auto_geometry_msgs'}
+[0.000187] (-) JobUnselected: {'identifier': 'autoware_auto_mapping_msgs'}
+[0.000215] (-) JobUnselected: {'identifier': 'autoware_auto_msgs'}
+[0.000233] (-) JobUnselected: {'identifier': 'autoware_auto_perception_msgs'}
+[0.000251] (-) JobUnselected: {'identifier': 'autoware_auto_planning_msgs'}
+[0.000269] (-) JobUnselected: {'identifier': 'autoware_auto_system_msgs'}
+[0.000287] (-) JobUnselected: {'identifier': 'autoware_auto_vehicle_msgs'}
+[0.000316] (-) JobUnselected: {'identifier': 'infrastructure'}
+[0.000335] (-) JobUnselected: {'identifier': 'map'}
+[0.000351] (-) JobUnselected: {'identifier': 'v2x_msg'}
+[0.000371] (-) JobUnselected: {'identifier': 'vehicle'}
+[0.000391] (-) EventReactorShutdown: {}
