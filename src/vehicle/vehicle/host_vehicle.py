@@ -80,24 +80,83 @@ def _get_struct_fmt(is_bigendian, fields, field_names=None):
     return fmt
 
 
-class DefaultVehicle(Node):
+class HostVehicle(Node):
     def __init__(self):
-        super().__init__('main_vehicle_publisher')
-        # self.get_clock().ros_clock = ROSClock()
-        # print(ROSClock())
-        # Get server IP from parameter, defaulting to 'localhost'
+        super().__init__('host_vehicle')
+
         self.declare_parameter('server_ip', '128.175.213.244')
-        server_ip = self.get_parameter('server_ip').get_parameter_value().string_value
-        self.connectToWorld(server_ip)
+        self.declare_parameter('server_port', 2000)
+        self.declare_parameter('vehicle_blueprint', "vehicle.lincoln.mkz_2017")
+        self.declare_parameter('role_name', "host_vehicle")
+        self.declare_parameter('color', "255,255,255,255")
+        self.declare_parameter('top_lidar.pos.x', -0.9)
+        self.declare_parameter('top_lidar.pos.y', 0.0)
+        self.declare_parameter('top_lidar.pos.z', 1.8)
+        self.declare_parameter('top_lidar.channels', "32")
+        self.declare_parameter('top_lidar.pps', "1000000")
+        self.declare_parameter('top_lidar.rot_freq', "10")
+        self.declare_parameter('top_lidar.range', "100")
+        self.declare_parameter('top_lidar.publish_topic_name', "/sensing/lidar/top/outlier_filtered/pointcloud")
+        self.declare_parameter('gnss.pos.x', -0.9)
+        self.declare_parameter('gnss.pos.y', 0.0)
+        self.declare_parameter('gnss.pos.z', 1.35)
+        self.declare_parameter('imu.pos.x', -0.9)
+        self.declare_parameter('imu.pos.y', 0.0)
+        self.declare_parameter('imu.pos.z', 1.35)
+        self.declare_parameter('camera_front.pos.x', -0.9)
+        self.declare_parameter('camera_front.pos.y', 0.0)
+        self.declare_parameter('camera_front.pos.z', 1.35)
+        self.declare_parameter('camera_front.publish_topic_name', "/sensing/camera/camera0/image_rect_color"  )
+        self.declare_parameter('enable_top_lidar', True)
+        self.declare_parameter('enable_front_camera', True)
+        self.declare_parameter('enable_gnss', True)
+        self.declare_parameter('enable_imu', True)
+        self.declare_parameter('enable_v2x', True)
+
+
+        self.server_ip = self.get_parameter('server_ip').get_parameter_value().string_value
+        self.server_port = self.get_parameter('server_port').get_parameter_value().integer_value
+        self.vehicle_blueprint = self.get_parameter('vehicle_blueprint').get_parameter_value().string_value
+        self.role_name = self.get_parameter('vehicle_blueprint').get_parameter_value().string_value
+        self.color = self.get_parameter('color').get_parameter_value().string_value
+        self.top_lidar = [self.get_parameter('top_lidar.pos.x').get_parameter_value().double_value
+                        , self.get_parameter('top_lidar.pos.y').get_parameter_value().double_value
+                        , self.get_parameter('top_lidar.pos.z').get_parameter_value().double_value
+                        , self.get_parameter('top_lidar.channels').get_parameter_value().string_value
+                        , self.get_parameter('top_lidar.pps').get_parameter_value().string_value
+                        , self.get_parameter('top_lidar.rot_freq').get_parameter_value().string_value
+                        , self.get_parameter('top_lidar.range').get_parameter_value().string_value
+                        , self.get_parameter('top_lidar.publish_topic_name').get_parameter_value().string_value ]
+        self.gnss = [ self.get_parameter('gnss.pos.x').get_parameter_value().double_value
+                    , self.get_parameter('gnss.pos.y').get_parameter_value().double_value
+                    , self.get_parameter('gnss.pos.z').get_parameter_value().double_value]
+        self.imu = [ self.get_parameter('imu.pos.x').get_parameter_value().double_value
+                    , self.get_parameter('imu.pos.y').get_parameter_value().double_value
+                    , self.get_parameter('imu.pos.z').get_parameter_value().double_value]
+        self.camera_front = [ self.get_parameter('camera_front.pos.x').get_parameter_value().double_value
+                            , self.get_parameter('camera_front.pos.y').get_parameter_value().double_value
+                            , self.get_parameter('camera_front.pos.z').get_parameter_value().double_value
+                            , self.get_parameter('camera_front.publish_topic_name').get_parameter_value().string_value]
+        
+        self.enable_top_lidar = self.get_parameter('enable_top_lidar').get_parameter_value().bool_value
+        self.enable_front_camera = self.get_parameter('enable_front_camera').get_parameter_value().bool_value
+        self.enable_gnss = self.get_parameter('enable_gnss').get_parameter_value().bool_value
+        self.enable_imu = self.get_parameter('enable_imu').get_parameter_value().bool_value
+        self.enable_v2x = self.get_parameter('enable_v2x').get_parameter_value().bool_value
+        
+        self.connectToWorld()
+        self.spawnVehicle()
         self.setUpPublishers()
         self.setUpSubscribers()
+
+    def spawnVehicle(self):
         # grabbing all bps
         self.blueprint_library = self.world.get_blueprint_library()
         # finding the desired bp
-        vehicle_bp = self.blueprint_library.find("vehicle.ford.mustang")
+        vehicle_bp = self.blueprint_library.find(self.vehicle_blueprint)
         # setting some attributes
-        vehicle_bp.set_attribute('role_name', 'host_vehicle')
-        vehicle_bp.set_attribute('color', '255,255,255')
+        vehicle_bp.set_attribute('role_name', self.role_name)
+        vehicle_bp.set_attribute('color', self.color)
         # spawning the bp
         self.vehicle = self.world.spawn_actor(vehicle_bp, self.spawn_point)
         self.ego_control = carla.VehicleControl()
@@ -131,12 +190,11 @@ class DefaultVehicle(Node):
         self.bridge = CvBridge()
         self.image_queue = []
         self.init = False
-        # Initialize Keyboard
-        # self.keyboardControl()
 
-    def connectToWorld(self, server_ip):
+
+    def connectToWorld(self):
         # 1. Connect to world
-        client = carla.Client(server_ip, 2000)
+        client = carla.Client(self.server_ip, self.server_port)
         client.set_timeout(10.0) #seconds
         # 2. Get World Information
         self.world = client.get_world()
@@ -151,33 +209,6 @@ class DefaultVehicle(Node):
         self.ego_control.steer = 0.0
         self.ego_control.brake = 1
         self.vehicle.apply_control(self.ego_control)
-
-    # def keyboardControl(self):
-    #     # Start the keyboard listener
-    #     self.listener = keyboard.Listener(on_press=self.on_press, on_release=self.on_release)
-    #     self.listener.start()
-
-    # def on_press(self, key):
-    #     print(key)
-    #     try:
-    #         if key.char == 'w':
-    #             self.ego_control.throttle = min(self.ego_control.throttle + 0.1, 1.0)
-    #             self.ego_control.brake = 0.0
-    #         elif key.char == 's':
-    #             self.ego_control.brake = min(self.brake + 0.1, 1.0)
-    #             self.ego_control.throttle = 0.0
-    #         elif key.char == 'a':
-    #             self.ego_control.steer = max(self.ego_control.steer - 0.1, -1.0)
-    #         elif key.char == 'd':
-    #             self.ego_control.steer = min(self.ego_control.steer + 0.1, 1.0)
-    #         elif key.char == 'r':
-    #             self.ego_control.reverse = not self.reverse  # Toggle reverse
-    #         self.vehicle.apply_control(self.ego_control)
-    #     except AttributeError:
-    #         pass
-    # def on_release(self, key):
-    #     if key == keyboard.Key.esc:
-    #         return False  # Stop listener
 
 # --------------Vehicle ID Generation--------------------------
     def genVehicleID(self):
@@ -383,30 +414,28 @@ class DefaultVehicle(Node):
     
     def lidarSensorCallback(self, data):
         sensing_msg = self.createPCL2msg(data)
-        self.sensing_lidarpublisher_.publish(sensing_msg)
+        # self.sensing_lidarpublisher_.publish(sensing_msg)
         self.ndt_lidarpublisher_.publish(sensing_msg)
         # change msgcnt
         self.msgcntIncrem() 
-    def addLidarSensor(self, x=-0.9,y=0, z=1.8, pitch=0,yaw=0,row=0, channels="32", pps="1000000", rot_freq="100", up_fov="15", low_fov="-15", range="100"):
+    def addLidarSensor(self):
         # creating a publisher
-        self.ndt_lidarpublisher_ = self.create_publisher(PointCloud2, '/sensing/lidar/top/outlier_filtered/pointcloud', 1)
+        self.ndt_lidarpublisher_ = self.create_publisher(PointCloud2, self.top_lidar[7], 1)
         print("Publishing Lidar Sensor Data for NDT")
-        self.sensing_lidarpublisher_ = self.create_publisher(PointCloud2, '/sensing/lidar/concatenated/pointcloud', 1)
-        print("Publishing Lidar Sensor Data for Sensing")
+        # self.sensing_lidarpublisher_ = self.create_publisher(PointCloud2, '/sensing/lidar/concatenated/pointcloud', 1)
+        # print("Publishing Lidar Sensor Data for Sensing")
 
         # finding the lidar bp
         lidar_bp = self.world.get_blueprint_library().find('sensor.lidar.ray_cast')
         # settings the lidar param
-        lidar_bp.set_attribute('channels', channels)
-        lidar_bp.set_attribute('points_per_second', pps)
-        lidar_bp.set_attribute('rotation_frequency', rot_freq)
-        lidar_bp.set_attribute('upper_fov', up_fov)
-        lidar_bp.set_attribute('lower_fov', low_fov)
-        lidar_bp.set_attribute('range', range)
+        lidar_bp.set_attribute('channels', self.top_lidar[3])
+        lidar_bp.set_attribute('points_per_second', self.top_lidar[4])
+        lidar_bp.set_attribute('rotation_frequency', self.top_lidar[5])
+        lidar_bp.set_attribute('range', self.top_lidar[6])
         lidar_bp.set_attribute('role_name', 'center_main_lidar')
         # finding the location
-        lidar_location = carla.Location(x,y,z)
-        lidar_rotation = carla.Rotation(pitch,yaw,row)
+        lidar_location = carla.Location(self.top_lidar[0],self.top_lidar[1],self.top_lidar[2])
+        lidar_rotation = carla.Rotation(0,0,0)
         lidar_transform = carla.Transform(lidar_location,lidar_rotation)
         # spawn onto vehicle
         lidar_sen = self.world.spawn_actor(lidar_bp,lidar_transform,attach_to=self.vehicle)
@@ -435,7 +464,7 @@ class DefaultVehicle(Node):
         self.camera_publisher_.publish(ros_img)
         # change msgcnt
         self.msgcntIncrem()   
-    def addRBGCameraSensor(self, x=0.6,y=0,z=1.4, pitch=0,yaw=0,row=0):
+    def addRBGCameraSensor(self):
         # create camera publisher
         qos = QoSProfile(
             reliability=QoSReliabilityPolicy.BEST_EFFORT,
@@ -443,13 +472,13 @@ class DefaultVehicle(Node):
             history=QoSHistoryPolicy.KEEP_LAST,
             depth=10
         )
-        self.camera_publisher_ = self.create_publisher(Image, '/sensing/camera/camera0/image_rect_color', qos_profile=qos)
+        self.camera_publisher_ = self.create_publisher(Image, self.camera_front[3], qos_profile=qos)
         print("Publishing Camera Data")
         # get camera blueprint
         camera_bp = self.blueprint_library.find('sensor.camera.rgb')
         camera_bp.set_attribute('role_name', 'host_front_camera')
-        camera_location = carla.Location(x,y,z)
-        camera_rotation = carla.Rotation(pitch,yaw,row)
+        camera_location = carla.Location(self.camera_front[0], self.camera_front[1], self.camera_front[2])
+        camera_rotation = carla.Rotation(0,0,0)
         camera_transform = carla.Transform(camera_location,camera_rotation)   
         # spawn onto vehicle
         front_camera = self.world.spawn_actor(camera_bp, camera_transform, attach_to=self.vehicle)
@@ -526,7 +555,7 @@ class DefaultVehicle(Node):
 
     def addGNSSSensor(self):
         gnss_bp = self.blueprint_library.find('sensor.other.gnss')
-        gnss_location = carla.Location(-0.9,0,1.35)
+        gnss_location = carla.Location(self.gnss[0], self.gnss[1], self.gnss[2])
         gnss_rotation = carla.Rotation(0,0,0) #yzx
         gnss_transform = carla.Transform(gnss_location,gnss_rotation)   
         # spawn onto vehicle
@@ -555,7 +584,7 @@ class DefaultVehicle(Node):
 
     def addIMUSensor(self):
         imu_bp = self.blueprint_library.find('sensor.other.imu')
-        imu_location = carla.Location(-0.9,0,1.35)
+        imu_location = carla.Location(self.imu[0], self.imu[1], self.imu[2])
         imu_rotation = carla.Rotation(0,0,0)
         imu_transform = carla.Transform(imu_location,imu_rotation)   
         # spawn onto vehicle
@@ -850,19 +879,23 @@ def main(args=None):
     # initialize ROS2
     rclpy.init(args=args)
     # spawn the vehicle
-    host_veh = DefaultVehicle()
-    # add lidar sensor
-    host_veh.addLidarSensor()
-    # print("Publishing Lidar Sensor Data")
-    # add camera sensor
-    host_veh.addRBGCameraSensor()
-    # print("Publishing Front Camera Data")
-    # add GNSS Sensor
-    host_veh.addGNSSSensor()
-    # print("Publishing GNSS Data")
-    # add IMU Sensor
-    host_veh.addIMUSensor()
-    # print("Publishing IMU Sensor Data")
+    host_veh = HostVehicle()
+    if host_veh.enable_top_lidar:
+        # add lidar sensor
+        host_veh.addLidarSensor()
+        print("Publishing Lidar Sensor Data")
+    if host_veh.enable_front_camera:
+        # add camera sensor
+        host_veh.addRBGCameraSensor()
+        print("Publishing Front Camera Data")
+    if host_veh.enable_gnss:
+        # add GNSS Sensor
+        host_veh.addGNSSSensor()
+        print("Publishing GNSS Data")
+    if host_veh.enable_imu:
+        # add IMU Sensor
+        host_veh.addIMUSensor()
+        print("Publishing IMU Sensor Data")
     
     try:
         rclpy.spin(host_veh)

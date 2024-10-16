@@ -1,0 +1,40 @@
+# server.yaml
+
+host_vehicle:  # This should match the name of your node
+  ros__parameters:
+    server_ip: "128.175.213.244"
+    server_port: 2000
+    vehicle_blueprint: "vehicle.lincoln.mkz_2017"
+    role_name: "host_vehicle"
+    color: "255,255,255"
+    top_lidar:
+      pos:
+        x: -0.5
+        y: 0.0
+        z: 2.0
+      channels: "32"
+      pps: "1000000"
+      rot_freq: "60"
+      range: "100"
+      publish_topic_name: "/sensing/lidar/top/outlier_filtered/pointcloud"
+    gnss:
+      pos:
+        x: -0.9
+        y: 0.0
+        z: 1.0
+    imu:
+      pos:
+        x: -0.9
+        y: 0.0
+        z: 1.0
+    camera_front:
+      pos:
+        x: 0.5
+        y: 0.0
+        z: 1.5
+      publish_topic_name: "/sensing/camera/camera0/image_rect_color"  
+    enable_top_lidar: True
+    enable_front_camera: True
+    enable_gnss: True
+    enable_imu: True
+    enable_v2x: True
