@@ -160,7 +160,7 @@ class ControlObject(object):
 
 
 # Initialize the Carla client and get the world
-client = carla.Client('localhost', 2000)
+client = carla.Client('128.175.213.230', 2000)
 client.set_timeout(10.0)
 world = client.get_world()
 

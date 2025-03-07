@@ -42,6 +42,7 @@ from sensor_msgs.msg import Image
 from sensor_msgs.msg import PointCloud2
 from sensor_msgs.msg import PointField
 from sensor_msgs.msg import Imu
+import sensor_msgs_py.point_cloud2 as pc2
 from geometry_msgs.msg import PoseWithCovarianceStamped
 from geometry_msgs.msg import TwistWithCovariance
 from geometry_msgs.msg import Quaternion
@@ -84,7 +85,7 @@ class HostVehicle(Node):
     def __init__(self):
         super().__init__('host_vehicle')
 
-        self.declare_parameter('server_ip', '128.175.213.244')
+        self.declare_parameter('server_ip', '128.175.213.230')
         self.declare_parameter('server_port', 2000)
         self.declare_parameter('vehicle_blueprint', "vehicle.lincoln.mkz_2017")
         self.declare_parameter('role_name', "host_vehicle")
@@ -156,7 +157,7 @@ class HostVehicle(Node):
         vehicle_bp = self.blueprint_library.find(self.vehicle_blueprint)
         # setting some attributes
         vehicle_bp.set_attribute('role_name', self.role_name)
-        vehicle_bp.set_attribute('color', self.color)
+        # vehicle_bp.set_attribute('color', self.color)
         # spawning the bp
         self.vehicle = self.world.spawn_actor(vehicle_bp, self.spawn_point)
         self.ego_control = carla.VehicleControl()
@@ -203,7 +204,7 @@ class HostVehicle(Node):
         # get a list of spawn points
         self.spawn_points = self.world.get_map().get_spawn_points()
         # spawn_point = spawn_points[random.randint(1, len(spawn_points)-1)]
-        self.spawn_point = self.spawn_points[1]
+        self.spawn_point = self.spawn_points[13]
     def initializeControl(self):
         self.ego_control.throttle = 0.0
         self.ego_control.steer = 0.0
@@ -394,6 +395,7 @@ class HostVehicle(Node):
         time_stamp = Clock().now()
         header.stamp = time_stamp.to_msg()
         header.frame_id = "velodyne_top_base_link"
+
         fields = [
             PointField(name='x', offset=0, datatype=PointField.FLOAT32, count=1),
             PointField(name='y', offset=4, datatype=PointField.FLOAT32, count=1),
@@ -401,28 +403,48 @@ class HostVehicle(Node):
             PointField(name='intensity', offset=12, datatype=PointField.FLOAT32, count=1)
         ]
 
-        lidar_data = np.fromstring(
-            bytes(data.raw_data), dtype=np.float32)
-        lidar_data = np.reshape(
-            lidar_data, (int(lidar_data.shape[0] / 4), 4))
-        # we take the opposite of y axis
-        # (as lidar point are express in left handed coordinate system, and ros need right handed)
-        lidar_data[:, 1] *= -1
-        point_cloud_msg = self.create_cloud(header, fields, lidar_data)
+        # Convert raw data to NumPy array
+        # lidar_data = np.frombuffer(data.raw_data, dtype=np.float32).copy()
+        # lidar_data = np.reshape(lidar_data, (int(lidar_data.shape[0] / 4), 4))
 
-        return point_cloud_msg       
+        # # Flip Y-axis (convert left-handed to right-handed coordinate system)
+        # lidar_data[:, 1] *= -1
+
+        # Filter out points near the LiDAR sensor (e.g., within 0.5m)
+        lidar_exclusion_radius = 5.0  # Adjust as needed
+
+        # Compute Euclidean distance from the sensor origin (assuming LiDAR is at (0,0,0))
+        merged_points = np.vstack(data)
+        distances = np.linalg.norm(merged_points[:, :3], axis=1)
+
+        # Keep only points that are outside the exclusion radius
+        filtered_lidar_data = merged_points[distances > lidar_exclusion_radius]
+
+        # Create PointCloud2 message
+        point_cloud_msg = pc2.create_cloud(header, fields, filtered_lidar_data)
+        self.frame_count = 0
+        self.accumulated_points = []
+        return point_cloud_msg      
     
     def lidarSensorCallback(self, data):
-        sensing_msg = self.createPCL2msg(data)
-        # self.sensing_lidarpublisher_.publish(sensing_msg)
-        self.ndt_lidarpublisher_.publish(sensing_msg)
-        # change msgcnt
-        self.msgcntIncrem() 
+        lidar_data = np.frombuffer(data.raw_data, dtype=np.float32).copy()
+        lidar_data = np.reshape(lidar_data, (int(lidar_data.shape[0] / 4), 4))
+        lidar_data[:, 1] *= -1
+        self.accumulated_points.append(lidar_data)
+        self.frame_count += 1
+        if self.frame_count == 2:
+            sensing_msg = self.createPCL2msg(self.accumulated_points)
+            self.sensing_lidarpublisher_.publish(sensing_msg)
+            self.ndt_lidarpublisher_.publish(sensing_msg)
+            # change msgcnt
+            self.msgcntIncrem() 
     def addLidarSensor(self):
         # creating a publisher
+        self.accumulated_points = []
+        self.frame_count = 0
         self.ndt_lidarpublisher_ = self.create_publisher(PointCloud2, self.top_lidar[7], 1)
         print("Publishing Lidar Sensor Data for NDT")
-        # self.sensing_lidarpublisher_ = self.create_publisher(PointCloud2, '/sensing/lidar/concatenated/pointcloud', 1)
+        self.sensing_lidarpublisher_ = self.create_publisher(PointCloud2, '/sensing/lidar/concatenated/pointcloud', 1)
         # print("Publishing Lidar Sensor Data for Sensing")
 
         # finding the lidar bp
@@ -597,7 +619,7 @@ class HostVehicle(Node):
         # ros2 topic pub /hv_controls std_msgs/String "{data: 'Autoware on'}" --once
         if msg.data == "Autoware on":
             print("Enabling Autoware Control")
-            self.AutowareControl()
+            self.enabled = True
         if msg.data == "Autoware off":
             self.autoware_control = NULL
 
@@ -752,7 +774,8 @@ class HostVehicle(Node):
 # --------------------Autoware Related Topics-----------------------------
     def AutowareControllCallbacks(self, controlmsg):
         # lateral
-
+        if self.enabled == False:
+            return
         desired_steering = controlmsg.lateral.steering_tire_angle 
         desired_steering_rate = controlmsg.lateral.steering_tire_rotation_rate
         
@@ -777,15 +800,15 @@ class HostVehicle(Node):
                 self.get_vehicle_speed()
                 longitudinal_speed = float(self.vel_in_vehicle[0])
                 # print("attemping to speed up.", self.ego_control.throttle)
-                # self.vehicle.apply_control(self.ego_control)
+                self.vehicle.apply_control(self.ego_control)
             self.ego_control.throttle = 0 # once we reach the desired speed, stop pressing on the gas pedal
-            # self.vehicle.apply_control(self.ego_control)
+            self.vehicle.apply_control(self.ego_control)
         elif desired_speed < self.vel_in_vehicle[0]: # need to slow down
             while desired_speed > self.vel_in_vehicle[0]:
                 self.ego_control.brake = min(self.ego_control.brake + increment, 1.0)
-                # self.vehicle.apply_control(self.ego_control)
+                self.vehicle.apply_control(self.ego_control)
             self.ego_control.brake = 0 # once we reach the desired speed, stop pressing on the gas pedal
-            # self.vehicle.apply_control(self.ego_control)
+            self.vehicle.apply_control(self.ego_control)
     
     def ModeTransition(self, msg):
         mode = msg.mode # UNKNOWN = 0 STOP = 1  AUTONOMOUS = 2 LOCAL = 3  REMOTE = 4
@@ -827,7 +850,7 @@ class HostVehicle(Node):
 # -------------------Setting up Subscribers ------------------------
     def setUpSubscribers(self):
         # subscribe to trajectory cmds, this is subjected to change
-        # self.autoware_control_sub = self.create_subscription(AckermannControlCommand, '/control/trajectory_follower/control_cmd', self.AutowareControllCallbacks, 10)
+        self.autoware_control_sub = self.create_subscription(AckermannControlCommand, '/control/trajectory_follower/control_cmd', self.AutowareControllCallbacks, 10)
         # subscribe to controls
         self.enabled = False
         self.subscription_controls = self.create_subscription(String, 'hv_controls', self.vehicleROSControls, 10)
