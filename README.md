@@ -19,7 +19,7 @@ Installing from source is currently unavailable. I have not had the chance to up
 ## Running the Co-Sim
 1. Start Carla simulation
 2. `source install/setup.bash` from both Autoware and this repo
-3. run `ros2 launch autoware_launch Bluebird_Carla.launch.xml map_path:=$HOME/autoware_map/ud-modular-lab vehicle_model:=sample_vehicle sensor_model:=sample_sensor_kit` on the Autoware side
+3. run `ros2 launch autoware_launch autoware.launch.xml vehicle_model:=sample_vehicle sensor_model:=sample_sensor_kit map_path:=/home/carla/autoware_map/{map_name}` on the Autoware side
 4. run `ros2 run vehicle host_vehicle` on this repo's side
 5. You should see a RViz screen with a pointcloud map of the UD Modular Lab, Lanes, and Vehicle pointclouds
 6. Use 2D pose in RViz to supply an initial position
