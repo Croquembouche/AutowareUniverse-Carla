@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/rsa__struct.hpp"
 #include "v2x_msg/msg/detail/rsa__builder.hpp"
 #include "v2x_msg/msg/detail/rsa__traits.hpp"
+#include "v2x_msg/msg/detail/rsa__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__RSA_HPP_

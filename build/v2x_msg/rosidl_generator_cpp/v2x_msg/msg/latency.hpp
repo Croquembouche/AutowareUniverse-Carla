@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/latency__struct.hpp"
 #include "v2x_msg/msg/detail/latency__builder.hpp"
 #include "v2x_msg/msg/detail/latency__traits.hpp"
+#include "v2x_msg/msg/detail/latency__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__LATENCY_HPP_

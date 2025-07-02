@@ -7,5 +7,6 @@
 #include "autoware_auto_vehicle_msgs/msg/detail/horn_report__struct.hpp"
 #include "autoware_auto_vehicle_msgs/msg/detail/horn_report__builder.hpp"
 #include "autoware_auto_vehicle_msgs/msg/detail/horn_report__traits.hpp"
+#include "autoware_auto_vehicle_msgs/msg/detail/horn_report__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_VEHICLE_MSGS__MSG__HORN_REPORT_HPP_

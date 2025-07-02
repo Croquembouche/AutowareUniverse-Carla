@@ -1,7 +1,0 @@
-interrupted
-gmake[2]: *** [CMakeFiles/ament_cmake_python_build_autoware_auto_mapping_msgs_egg.dir/build.make:70: CMakeFiles/ament_cmake_python_build_autoware_auto_mapping_msgs_egg] Interrupt
-gmake[1]: *** [CMakeFiles/Makefile2:447: CMakeFiles/ament_cmake_python_build_autoware_auto_mapping_msgs_egg.dir/all] Interrupt
-gmake[1]: *** wait: No child processes.  Stop.
-gmake[1]: *** Waiting for unfinished jobs....
-gmake[1]: *** wait: No child processes.  Stop.
-gmake: *** [Makefile:146: all] Error 2

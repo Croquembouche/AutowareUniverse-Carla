@@ -7,5 +7,6 @@
 #include "autoware_auto_perception_msgs/msg/detail/traffic_signal_with_judge__struct.hpp"
 #include "autoware_auto_perception_msgs/msg/detail/traffic_signal_with_judge__builder.hpp"
 #include "autoware_auto_perception_msgs/msg/detail/traffic_signal_with_judge__traits.hpp"
+#include "autoware_auto_perception_msgs/msg/detail/traffic_signal_with_judge__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_PERCEPTION_MSGS__MSG__TRAFFIC_SIGNAL_WITH_JUDGE_HPP_

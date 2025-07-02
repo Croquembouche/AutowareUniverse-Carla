@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/intersection_state__struct.hpp"
 #include "v2x_msg/msg/detail/intersection_state__builder.hpp"
 #include "v2x_msg/msg/detail/intersection_state__traits.hpp"
+#include "v2x_msg/msg/detail/intersection_state__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__INTERSECTION_STATE_HPP_

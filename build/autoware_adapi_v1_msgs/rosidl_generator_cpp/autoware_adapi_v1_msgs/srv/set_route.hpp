@@ -7,5 +7,6 @@
 #include "autoware_adapi_v1_msgs/srv/detail/set_route__struct.hpp"
 #include "autoware_adapi_v1_msgs/srv/detail/set_route__builder.hpp"
 #include "autoware_adapi_v1_msgs/srv/detail/set_route__traits.hpp"
+#include "autoware_adapi_v1_msgs/srv/detail/set_route__type_support.hpp"
 
 #endif  // AUTOWARE_ADAPI_V1_MSGS__SRV__SET_ROUTE_HPP_

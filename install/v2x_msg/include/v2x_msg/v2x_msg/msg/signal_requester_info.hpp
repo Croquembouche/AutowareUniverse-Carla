@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/signal_requester_info__struct.hpp"
 #include "v2x_msg/msg/detail/signal_requester_info__builder.hpp"
 #include "v2x_msg/msg/detail/signal_requester_info__traits.hpp"
+#include "v2x_msg/msg/detail/signal_requester_info__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__SIGNAL_REQUESTER_INFO_HPP_

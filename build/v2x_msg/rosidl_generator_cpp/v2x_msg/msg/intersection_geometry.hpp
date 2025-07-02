@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/intersection_geometry__struct.hpp"
 #include "v2x_msg/msg/detail/intersection_geometry__builder.hpp"
 #include "v2x_msg/msg/detail/intersection_geometry__traits.hpp"
+#include "v2x_msg/msg/detail/intersection_geometry__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__INTERSECTION_GEOMETRY_HPP_

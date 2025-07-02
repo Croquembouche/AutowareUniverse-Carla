@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/path_prediction__struct.hpp"
 #include "v2x_msg/msg/detail/path_prediction__builder.hpp"
 #include "v2x_msg/msg/detail/path_prediction__traits.hpp"
+#include "v2x_msg/msg/detail/path_prediction__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__PATH_PREDICTION_HPP_

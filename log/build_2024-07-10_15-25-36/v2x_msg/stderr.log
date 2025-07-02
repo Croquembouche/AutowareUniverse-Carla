@@ -1,4 +1,0 @@
-gmake[1]: *** [CMakeFiles/Makefile2:212: CMakeFiles/v2x_msg__rosidl_generator_c.dir/all] Interrupt
-gmake[1]: *** [CMakeFiles/Makefile2:316: CMakeFiles/v2x_msg__cpp.dir/all] Interrupt
-gmake[1]: *** [CMakeFiles/Makefile2:420: CMakeFiles/ament_cmake_python_copy_v2x_msg.dir/all] Interrupt
-gmake: *** [Makefile:146: all] Interrupt

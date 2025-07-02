@@ -7,5 +7,6 @@
 #include "autoware_auto_planning_msgs/action/detail/record_trajectory__struct.hpp"
 #include "autoware_auto_planning_msgs/action/detail/record_trajectory__builder.hpp"
 #include "autoware_auto_planning_msgs/action/detail/record_trajectory__traits.hpp"
+#include "autoware_auto_planning_msgs/action/detail/record_trajectory__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_PLANNING_MSGS__ACTION__RECORD_TRAJECTORY_HPP_

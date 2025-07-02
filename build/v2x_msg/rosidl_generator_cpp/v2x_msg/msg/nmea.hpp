@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/nmea__struct.hpp"
 #include "v2x_msg/msg/detail/nmea__builder.hpp"
 #include "v2x_msg/msg/detail/nmea__traits.hpp"
+#include "v2x_msg/msg/detail/nmea__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__NMEA_HPP_

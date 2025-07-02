@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/iti_scodesandtext__struct.hpp"
 #include "v2x_msg/msg/detail/iti_scodesandtext__builder.hpp"
 #include "v2x_msg/msg/detail/iti_scodesandtext__traits.hpp"
+#include "v2x_msg/msg/detail/iti_scodesandtext__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__ITI_SCODESANDTEXT_HPP_

@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/bsm_core_data__struct.hpp"
 #include "v2x_msg/msg/detail/bsm_core_data__builder.hpp"
 #include "v2x_msg/msg/detail/bsm_core_data__traits.hpp"
+#include "v2x_msg/msg/detail/bsm_core_data__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__BSM_CORE_DATA_HPP_

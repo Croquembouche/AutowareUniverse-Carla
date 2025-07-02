@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/advisory_speed__struct.hpp"
 #include "v2x_msg/msg/detail/advisory_speed__builder.hpp"
 #include "v2x_msg/msg/detail/advisory_speed__traits.hpp"
+#include "v2x_msg/msg/detail/advisory_speed__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__ADVISORY_SPEED_HPP_

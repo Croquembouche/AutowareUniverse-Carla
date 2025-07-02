@@ -317,3 +317,18 @@ get_service_type_support_handle<autoware_auto_planning_msgs::srv::ModifyTrajecto
 }
 
 }  // namespace rosidl_typesupport_cpp
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+ROSIDL_TYPESUPPORT_CPP_PUBLIC
+const rosidl_service_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_cpp, autoware_auto_planning_msgs, srv, ModifyTrajectory)() {
+  return ::rosidl_typesupport_cpp::get_service_type_support_handle<autoware_auto_planning_msgs::srv::ModifyTrajectory>();
+}
+
+#ifdef __cplusplus
+}
+#endif

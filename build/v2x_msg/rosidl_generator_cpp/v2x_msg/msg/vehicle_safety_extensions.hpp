@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/vehicle_safety_extensions__struct.hpp"
 #include "v2x_msg/msg/detail/vehicle_safety_extensions__builder.hpp"
 #include "v2x_msg/msg/detail/vehicle_safety_extensions__traits.hpp"
+#include "v2x_msg/msg/detail/vehicle_safety_extensions__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__VEHICLE_SAFETY_EXTENSIONS_HPP_

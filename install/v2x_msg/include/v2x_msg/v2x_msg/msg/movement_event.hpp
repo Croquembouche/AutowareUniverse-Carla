@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/movement_event__struct.hpp"
 #include "v2x_msg/msg/detail/movement_event__builder.hpp"
 #include "v2x_msg/msg/detail/movement_event__traits.hpp"
+#include "v2x_msg/msg/detail/movement_event__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__MOVEMENT_EVENT_HPP_

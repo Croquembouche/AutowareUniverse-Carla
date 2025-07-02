@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/tim__struct.hpp"
 #include "v2x_msg/msg/detail/tim__builder.hpp"
 #include "v2x_msg/msg/detail/tim__traits.hpp"
+#include "v2x_msg/msg/detail/tim__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__TIM_HPP_

@@ -7,5 +7,6 @@
 #include "autoware_auto_vehicle_msgs/srv/detail/autonomy_mode_change__struct.hpp"
 #include "autoware_auto_vehicle_msgs/srv/detail/autonomy_mode_change__builder.hpp"
 #include "autoware_auto_vehicle_msgs/srv/detail/autonomy_mode_change__traits.hpp"
+#include "autoware_auto_vehicle_msgs/srv/detail/autonomy_mode_change__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_VEHICLE_MSGS__SRV__AUTONOMY_MODE_CHANGE_HPP_

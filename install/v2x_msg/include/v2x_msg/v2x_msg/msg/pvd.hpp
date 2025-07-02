@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/pvd__struct.hpp"
 #include "v2x_msg/msg/detail/pvd__builder.hpp"
 #include "v2x_msg/msg/detail/pvd__traits.hpp"
+#include "v2x_msg/msg/detail/pvd__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__PVD_HPP_

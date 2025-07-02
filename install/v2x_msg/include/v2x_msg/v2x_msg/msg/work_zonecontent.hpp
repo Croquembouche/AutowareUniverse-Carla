@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/work_zonecontent__struct.hpp"
 #include "v2x_msg/msg/detail/work_zonecontent__builder.hpp"
 #include "v2x_msg/msg/detail/work_zonecontent__traits.hpp"
+#include "v2x_msg/msg/detail/work_zonecontent__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__WORK_ZONECONTENT_HPP_

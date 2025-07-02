@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/weather_report__struct.hpp"
 #include "v2x_msg/msg/detail/weather_report__builder.hpp"
 #include "v2x_msg/msg/detail/weather_report__traits.hpp"
+#include "v2x_msg/msg/detail/weather_report__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__WEATHER_REPORT_HPP_

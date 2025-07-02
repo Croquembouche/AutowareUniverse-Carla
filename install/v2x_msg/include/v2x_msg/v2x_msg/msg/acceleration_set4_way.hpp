@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/acceleration_set4_way__struct.hpp"
 #include "v2x_msg/msg/detail/acceleration_set4_way__builder.hpp"
 #include "v2x_msg/msg/detail/acceleration_set4_way__traits.hpp"
+#include "v2x_msg/msg/detail/acceleration_set4_way__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__ACCELERATION_SET4_WAY_HPP_

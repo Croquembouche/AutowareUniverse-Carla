@@ -7,5 +7,6 @@
 #include "autoware_auto_control_msgs/msg/detail/ackermann_lateral_command__struct.hpp"
 #include "autoware_auto_control_msgs/msg/detail/ackermann_lateral_command__builder.hpp"
 #include "autoware_auto_control_msgs/msg/detail/ackermann_lateral_command__traits.hpp"
+#include "autoware_auto_control_msgs/msg/detail/ackermann_lateral_command__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_CONTROL_MSGS__MSG__ACKERMANN_LATERAL_COMMAND_HPP_

@@ -7,5 +7,6 @@
 #include "autoware_auto_perception_msgs/msg/detail/predicted_path__struct.hpp"
 #include "autoware_auto_perception_msgs/msg/detail/predicted_path__builder.hpp"
 #include "autoware_auto_perception_msgs/msg/detail/predicted_path__traits.hpp"
+#include "autoware_auto_perception_msgs/msg/detail/predicted_path__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_PERCEPTION_MSGS__MSG__PREDICTED_PATH_HPP_

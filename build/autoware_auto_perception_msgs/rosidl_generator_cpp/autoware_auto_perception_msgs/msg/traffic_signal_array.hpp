@@ -7,5 +7,6 @@
 #include "autoware_auto_perception_msgs/msg/detail/traffic_signal_array__struct.hpp"
 #include "autoware_auto_perception_msgs/msg/detail/traffic_signal_array__builder.hpp"
 #include "autoware_auto_perception_msgs/msg/detail/traffic_signal_array__traits.hpp"
+#include "autoware_auto_perception_msgs/msg/detail/traffic_signal_array__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_PERCEPTION_MSGS__MSG__TRAFFIC_SIGNAL_ARRAY_HPP_

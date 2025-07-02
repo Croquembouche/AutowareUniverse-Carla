@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/offset__struct.hpp"
 #include "v2x_msg/msg/detail/offset__builder.hpp"
 #include "v2x_msg/msg/detail/offset__traits.hpp"
+#include "v2x_msg/msg/detail/offset__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__OFFSET_HPP_

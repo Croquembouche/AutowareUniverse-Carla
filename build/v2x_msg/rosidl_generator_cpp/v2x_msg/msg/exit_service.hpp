@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/exit_service__struct.hpp"
 #include "v2x_msg/msg/detail/exit_service__builder.hpp"
 #include "v2x_msg/msg/detail/exit_service__traits.hpp"
+#include "v2x_msg/msg/detail/exit_service__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__EXIT_SERVICE_HPP_

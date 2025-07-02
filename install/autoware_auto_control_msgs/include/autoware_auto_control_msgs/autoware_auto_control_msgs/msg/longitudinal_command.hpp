@@ -7,5 +7,6 @@
 #include "autoware_auto_control_msgs/msg/detail/longitudinal_command__struct.hpp"
 #include "autoware_auto_control_msgs/msg/detail/longitudinal_command__builder.hpp"
 #include "autoware_auto_control_msgs/msg/detail/longitudinal_command__traits.hpp"
+#include "autoware_auto_control_msgs/msg/detail/longitudinal_command__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_CONTROL_MSGS__MSG__LONGITUDINAL_COMMAND_HPP_

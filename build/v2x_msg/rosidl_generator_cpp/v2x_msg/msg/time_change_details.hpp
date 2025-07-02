@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/time_change_details__struct.hpp"
 #include "v2x_msg/msg/detail/time_change_details__builder.hpp"
 #include "v2x_msg/msg/detail/time_change_details__traits.hpp"
+#include "v2x_msg/msg/detail/time_change_details__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__TIME_CHANGE_DETAILS_HPP_

@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/privileged_events__struct.hpp"
 #include "v2x_msg/msg/detail/privileged_events__builder.hpp"
 #include "v2x_msg/msg/detail/privileged_events__traits.hpp"
+#include "v2x_msg/msg/detail/privileged_events__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__PRIVILEGED_EVENTS_HPP_

@@ -7,5 +7,6 @@
 #include "autoware_auto_planning_msgs/msg/detail/path__struct.hpp"
 #include "autoware_auto_planning_msgs/msg/detail/path__builder.hpp"
 #include "autoware_auto_planning_msgs/msg/detail/path__traits.hpp"
+#include "autoware_auto_planning_msgs/msg/detail/path__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_PLANNING_MSGS__MSG__PATH_HPP_

@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/restriction_user_type__struct.hpp"
 #include "v2x_msg/msg/detail/restriction_user_type__builder.hpp"
 #include "v2x_msg/msg/detail/restriction_user_type__traits.hpp"
+#include "v2x_msg/msg/detail/restriction_user_type__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__RESTRICTION_USER_TYPE_HPP_

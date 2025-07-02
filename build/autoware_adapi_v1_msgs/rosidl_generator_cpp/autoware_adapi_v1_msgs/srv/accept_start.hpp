@@ -7,5 +7,6 @@
 #include "autoware_adapi_v1_msgs/srv/detail/accept_start__struct.hpp"
 #include "autoware_adapi_v1_msgs/srv/detail/accept_start__builder.hpp"
 #include "autoware_adapi_v1_msgs/srv/detail/accept_start__traits.hpp"
+#include "autoware_adapi_v1_msgs/srv/detail/accept_start__type_support.hpp"
 
 #endif  // AUTOWARE_ADAPI_V1_MSGS__SRV__ACCEPT_START_HPP_

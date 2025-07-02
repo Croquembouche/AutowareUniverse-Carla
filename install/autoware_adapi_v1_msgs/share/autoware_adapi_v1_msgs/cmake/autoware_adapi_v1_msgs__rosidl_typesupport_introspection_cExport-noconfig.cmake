@@ -12,8 +12,8 @@ set_target_properties(autoware_adapi_v1_msgs::autoware_adapi_v1_msgs__rosidl_typ
   IMPORTED_SONAME_NOCONFIG "libautoware_adapi_v1_msgs__rosidl_typesupport_introspection_c.so"
   )
 
-list(APPEND _IMPORT_CHECK_TARGETS autoware_adapi_v1_msgs::autoware_adapi_v1_msgs__rosidl_typesupport_introspection_c )
-list(APPEND _IMPORT_CHECK_FILES_FOR_autoware_adapi_v1_msgs::autoware_adapi_v1_msgs__rosidl_typesupport_introspection_c "${_IMPORT_PREFIX}/lib/libautoware_adapi_v1_msgs__rosidl_typesupport_introspection_c.so" )
+list(APPEND _cmake_import_check_targets autoware_adapi_v1_msgs::autoware_adapi_v1_msgs__rosidl_typesupport_introspection_c )
+list(APPEND _cmake_import_check_files_for_autoware_adapi_v1_msgs::autoware_adapi_v1_msgs__rosidl_typesupport_introspection_c "${_IMPORT_PREFIX}/lib/libautoware_adapi_v1_msgs__rosidl_typesupport_introspection_c.so" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/axle_weight__struct.hpp"
 #include "v2x_msg/msg/detail/axle_weight__builder.hpp"
 #include "v2x_msg/msg/detail/axle_weight__traits.hpp"
+#include "v2x_msg/msg/detail/axle_weight__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__AXLE_WEIGHT_HPP_

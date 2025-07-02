@@ -7,5 +7,6 @@
 #include "autoware_auto_perception_msgs/msg/detail/predicted_object_kinematics__struct.hpp"
 #include "autoware_auto_perception_msgs/msg/detail/predicted_object_kinematics__builder.hpp"
 #include "autoware_auto_perception_msgs/msg/detail/predicted_object_kinematics__traits.hpp"
+#include "autoware_auto_perception_msgs/msg/detail/predicted_object_kinematics__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_PERCEPTION_MSGS__MSG__PREDICTED_OBJECT_KINEMATICS_HPP_

@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/data_parameters__struct.hpp"
 #include "v2x_msg/msg/detail/data_parameters__builder.hpp"
 #include "v2x_msg/msg/detail/data_parameters__traits.hpp"
+#include "v2x_msg/msg/detail/data_parameters__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__DATA_PARAMETERS_HPP_

@@ -7,5 +7,6 @@
 #include "autoware_auto_planning_msgs/action/detail/planner_costmap__struct.hpp"
 #include "autoware_auto_planning_msgs/action/detail/planner_costmap__builder.hpp"
 #include "autoware_auto_planning_msgs/action/detail/planner_costmap__traits.hpp"
+#include "autoware_auto_planning_msgs/action/detail/planner_costmap__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_PLANNING_MSGS__ACTION__PLANNER_COSTMAP_HPP_

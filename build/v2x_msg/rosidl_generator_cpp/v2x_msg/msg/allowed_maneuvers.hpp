@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/allowed_maneuvers__struct.hpp"
 #include "v2x_msg/msg/detail/allowed_maneuvers__builder.hpp"
 #include "v2x_msg/msg/detail/allowed_maneuvers__traits.hpp"
+#include "v2x_msg/msg/detail/allowed_maneuvers__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__ALLOWED_MANEUVERS_HPP_

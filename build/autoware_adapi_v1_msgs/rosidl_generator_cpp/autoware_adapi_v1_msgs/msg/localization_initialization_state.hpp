@@ -7,5 +7,6 @@
 #include "autoware_adapi_v1_msgs/msg/detail/localization_initialization_state__struct.hpp"
 #include "autoware_adapi_v1_msgs/msg/detail/localization_initialization_state__builder.hpp"
 #include "autoware_adapi_v1_msgs/msg/detail/localization_initialization_state__traits.hpp"
+#include "autoware_adapi_v1_msgs/msg/detail/localization_initialization_state__type_support.hpp"
 
 #endif  // AUTOWARE_ADAPI_V1_MSGS__MSG__LOCALIZATION_INITIALIZATION_STATE_HPP_

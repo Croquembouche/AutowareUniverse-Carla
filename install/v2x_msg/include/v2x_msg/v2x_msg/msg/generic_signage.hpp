@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/generic_signage__struct.hpp"
 #include "v2x_msg/msg/detail/generic_signage__builder.hpp"
 #include "v2x_msg/msg/detail/generic_signage__traits.hpp"
+#include "v2x_msg/msg/detail/generic_signage__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__GENERIC_SIGNAGE_HPP_

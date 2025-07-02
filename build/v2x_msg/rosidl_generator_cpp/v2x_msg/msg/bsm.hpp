@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/bsm__struct.hpp"
 #include "v2x_msg/msg/detail/bsm__builder.hpp"
 #include "v2x_msg/msg/detail/bsm__traits.hpp"
+#include "v2x_msg/msg/detail/bsm__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__BSM_HPP_

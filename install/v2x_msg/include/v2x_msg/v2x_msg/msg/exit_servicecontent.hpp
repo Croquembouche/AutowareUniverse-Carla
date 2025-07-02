@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/exit_servicecontent__struct.hpp"
 #include "v2x_msg/msg/detail/exit_servicecontent__builder.hpp"
 #include "v2x_msg/msg/detail/exit_servicecontent__traits.hpp"
+#include "v2x_msg/msg/detail/exit_servicecontent__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__EXIT_SERVICECONTENT_HPP_

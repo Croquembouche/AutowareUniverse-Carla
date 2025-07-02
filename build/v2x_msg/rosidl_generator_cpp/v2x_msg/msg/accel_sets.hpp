@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/accel_sets__struct.hpp"
 #include "v2x_msg/msg/detail/accel_sets__builder.hpp"
 #include "v2x_msg/msg/detail/accel_sets__traits.hpp"
+#include "v2x_msg/msg/detail/accel_sets__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__ACCEL_SETS_HPP_

@@ -1,3 +1,5 @@
+#! /home/william/miniconda3/bin/python3.10
+
 from lib2to3.pytree import convert
 from zmq import NULL
 import rclpy
@@ -22,6 +24,7 @@ from rclpy.qos import QoSProfile
 from rclpy.qos import QoSReliabilityPolicy, QoSDurabilityPolicy, QoSHistoryPolicy
 from rclpy.clock import ROSClock
 from pynput import keyboard
+import pymap3d as pm
 
 try:
     sys.path.append(glob.glob('/home/william/carla/dist/carla-*%d.%d-%s.egg' % (
@@ -35,7 +38,7 @@ except IndexError:
 import v2x_msg.msg
 from v2x_msg.msg import BSM
 from v2x_msg.msg import SRM
-from v2x_msg.msg import SignalRequestPackage
+# from v2x_msg.msg import SignalRequestPackage
 from std_msgs.msg import String
 from std_msgs.msg import Header
 from sensor_msgs.msg import Image
@@ -113,12 +116,13 @@ class HostVehicle(Node):
         self.declare_parameter('enable_gnss', True)
         self.declare_parameter('enable_imu', True)
         self.declare_parameter('enable_v2x', True)
+        self.declare_parameter('autopilot', False)
 
 
         self.server_ip = self.get_parameter('server_ip').get_parameter_value().string_value
         self.server_port = self.get_parameter('server_port').get_parameter_value().integer_value
         self.vehicle_blueprint = self.get_parameter('vehicle_blueprint').get_parameter_value().string_value
-        self.role_name = self.get_parameter('vehicle_blueprint').get_parameter_value().string_value
+        self.role_name = self.get_parameter('role_name').get_parameter_value().string_value
         self.color = self.get_parameter('color').get_parameter_value().string_value
         self.top_lidar = [self.get_parameter('top_lidar.pos.x').get_parameter_value().double_value
                         , self.get_parameter('top_lidar.pos.y').get_parameter_value().double_value
@@ -144,6 +148,7 @@ class HostVehicle(Node):
         self.enable_gnss = self.get_parameter('enable_gnss').get_parameter_value().bool_value
         self.enable_imu = self.get_parameter('enable_imu').get_parameter_value().bool_value
         self.enable_v2x = self.get_parameter('enable_v2x').get_parameter_value().bool_value
+        self.autopilot = self.get_parameter('autopilot').get_parameter_value().bool_value
         
         self.connectToWorld()
         self.spawnVehicle()
@@ -165,7 +170,7 @@ class HostVehicle(Node):
         # initialize control to all zeros
         self.initializeControl()
         self.control_mode = 0
-        # self.vehicle.set_autopilot(True) # set Aut opilot on start to test lidar
+        self.vehicle.set_autopilot(self.autopilot) # set Aut opilot on start to test lidar
         # storing a list of all sensors
         self.sensors = []
         # BSM Message
@@ -203,8 +208,10 @@ class HostVehicle(Node):
         # world.unload_map_layer(carla.MapLayer.Buildings)
         # get a list of spawn points
         self.spawn_points = self.world.get_map().get_spawn_points()
+        # for i, sp in enumerate(self.spawn_points):
+        #     print(i, sp.location)
         # spawn_point = spawn_points[random.randint(1, len(spawn_points)-1)]
-        self.spawn_point = self.spawn_points[13]
+        self.spawn_point = self.spawn_points[10] #13
     def initializeControl(self):
         self.ego_control.throttle = 0.0
         self.ego_control.steer = 0.0
@@ -314,10 +321,13 @@ class HostVehicle(Node):
         # -------------Vehicle Location-----------------
         vehicle_location = self.vehicle.get_location()
         vehicle_ = self.world.get_map().transform_to_geolocation(vehicle_location)
-        self.lat = vehicle_.latitude
-        self.lon = vehicle_.longitude
-        self.elev = vehicle_.altitude
-        # print("current position:", self.lat, self.lon)
+        map_origin_lat = 39.66432670216749
+        map_originn_long = -75.75730138198136
+        self.lat, self.lon, self.elev = pm.enu2geodetic(-vehicle_location.y, -vehicle_location.x, vehicle_location.z, map_origin_lat, map_originn_long, 30)
+        # self.lat = vehicle_.latitude
+        # self.lon = vehicle_.longitude
+        # self.elev = vehicle_.altitude
+        print("current position:", vehicle_location.x, vehicle_location.y, self.lat, self.lon)
         # --------------- Vehicle State -----------------
         throttle = self.ego_control.throttle
         reverse = self.ego_control.reverse
@@ -432,7 +442,7 @@ class HostVehicle(Node):
         lidar_data[:, 1] *= -1
         self.accumulated_points.append(lidar_data)
         self.frame_count += 1
-        if self.frame_count == 2:
+        if self.frame_count == 4:
             sensing_msg = self.createPCL2msg(self.accumulated_points)
             self.sensing_lidarpublisher_.publish(sensing_msg)
             self.ndt_lidarpublisher_.publish(sensing_msg)
@@ -455,6 +465,7 @@ class HostVehicle(Node):
         lidar_bp.set_attribute('rotation_frequency', self.top_lidar[5])
         lidar_bp.set_attribute('range', self.top_lidar[6])
         lidar_bp.set_attribute('role_name', 'center_main_lidar')
+        lidar_bp.set_attribute('sensor_tick', '0.01')
         # finding the location
         lidar_location = carla.Location(self.top_lidar[0],self.top_lidar[1],self.top_lidar[2])
         lidar_rotation = carla.Rotation(0,0,0)
@@ -464,7 +475,7 @@ class HostVehicle(Node):
         self.sensors.append(lidar_sen)
         # add a callback function to publish data via ros2
         lidar_sen.listen(lambda point_cloud: self.lidarSensorCallback(point_cloud))
-        # lidar_sen.listen(lambda point_cloud: point_cloud.save_to_disk('/home/carla/Github/C-V2X-Autoware-Carla/src/vehicle/lidar_data/%.6d.ply' % point_cloud.frame))
+        # lidar_sen.listen(lambda point_cloud: point_cloud.save_to_disk('/media/william/mist2/william/Github/AutowareUniverse-Carla/DATA/lidar/%.6d.ply' % point_cloud.frame))
 # ----------------------RBG Sensor---------------------------------
     def convertCARLAIMGtoROSIMG(self, original):
         array = np.frombuffer(original.raw_data, dtype=np.dtype("uint8")) 
@@ -499,12 +510,14 @@ class HostVehicle(Node):
         # get camera blueprint
         camera_bp = self.blueprint_library.find('sensor.camera.rgb')
         camera_bp.set_attribute('role_name', 'host_front_camera')
+        camera_bp.set_attribute('sensor_tick', '0.1')
         camera_location = carla.Location(self.camera_front[0], self.camera_front[1], self.camera_front[2])
         camera_rotation = carla.Rotation(0,0,0)
         camera_transform = carla.Transform(camera_location,camera_rotation)   
         # spawn onto vehicle
         front_camera = self.world.spawn_actor(camera_bp, camera_transform, attach_to=self.vehicle)
         self.sensors.append(front_camera)
+        # front_camera.listen(lambda image: image.save_to_disk('/media/william/mist2/william/Github/AutowareUniverse-Carla/DATA/front_camera/%.6d.jpg' % image.frame))
         front_camera.listen(lambda image: self.RGBSensorcallback(image)) 
 # -------------------GNSS Sensor------------------------------------------
     # def pubGNSS(self):

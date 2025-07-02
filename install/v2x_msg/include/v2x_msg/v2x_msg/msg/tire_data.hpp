@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/tire_data__struct.hpp"
 #include "v2x_msg/msg/detail/tire_data__builder.hpp"
 #include "v2x_msg/msg/detail/tire_data__traits.hpp"
+#include "v2x_msg/msg/detail/tire_data__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__TIRE_DATA_HPP_

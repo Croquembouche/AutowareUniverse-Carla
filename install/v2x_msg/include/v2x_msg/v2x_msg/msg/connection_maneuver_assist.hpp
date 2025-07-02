@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/connection_maneuver_assist__struct.hpp"
 #include "v2x_msg/msg/detail/connection_maneuver_assist__builder.hpp"
 #include "v2x_msg/msg/detail/connection_maneuver_assist__traits.hpp"
+#include "v2x_msg/msg/detail/connection_maneuver_assist__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__CONNECTION_MANEUVER_ASSIST_HPP_

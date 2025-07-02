@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/restriction_class_assignment__struct.hpp"
 #include "v2x_msg/msg/detail/restriction_class_assignment__builder.hpp"
 #include "v2x_msg/msg/detail/restriction_class_assignment__traits.hpp"
+#include "v2x_msg/msg/detail/restriction_class_assignment__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__RESTRICTION_CLASS_ASSIGNMENT_HPP_

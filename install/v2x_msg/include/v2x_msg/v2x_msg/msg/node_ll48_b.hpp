@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/node_ll48_b__struct.hpp"
 #include "v2x_msg/msg/detail/node_ll48_b__builder.hpp"
 #include "v2x_msg/msg/detail/node_ll48_b__traits.hpp"
+#include "v2x_msg/msg/detail/node_ll48_b__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__NODE_LL48_B_HPP_

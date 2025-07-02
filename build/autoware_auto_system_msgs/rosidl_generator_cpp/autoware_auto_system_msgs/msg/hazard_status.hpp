@@ -7,5 +7,6 @@
 #include "autoware_auto_system_msgs/msg/detail/hazard_status__struct.hpp"
 #include "autoware_auto_system_msgs/msg/detail/hazard_status__builder.hpp"
 #include "autoware_auto_system_msgs/msg/detail/hazard_status__traits.hpp"
+#include "autoware_auto_system_msgs/msg/detail/hazard_status__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_SYSTEM_MSGS__MSG__HAZARD_STATUS_HPP_

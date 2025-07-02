@@ -1,8 +1,8 @@
-# Install script for directory: /media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_system_msgs/autoware_auto_system_msgs__py
+# Install script for directory: /media/william/mist2/william/Github/AutowareUniverse-Carla/build/autoware_auto_system_msgs/autoware_auto_system_msgs__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/media/william/blueicedrive/Github/AutowareUniverse-Carla/install/autoware_auto_system_msgs")
+  set(CMAKE_INSTALL_PREFIX "/media/william/mist2/william/Github/AutowareUniverse-Carla/install/autoware_auto_system_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

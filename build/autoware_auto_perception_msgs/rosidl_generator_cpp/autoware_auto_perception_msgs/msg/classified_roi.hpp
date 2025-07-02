@@ -7,5 +7,6 @@
 #include "autoware_auto_perception_msgs/msg/detail/classified_roi__struct.hpp"
 #include "autoware_auto_perception_msgs/msg/detail/classified_roi__builder.hpp"
 #include "autoware_auto_perception_msgs/msg/detail/classified_roi__traits.hpp"
+#include "autoware_auto_perception_msgs/msg/detail/classified_roi__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_PERCEPTION_MSGS__MSG__CLASSIFIED_ROI_HPP_

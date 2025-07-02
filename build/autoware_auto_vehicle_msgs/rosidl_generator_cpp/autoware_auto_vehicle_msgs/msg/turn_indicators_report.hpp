@@ -7,5 +7,6 @@
 #include "autoware_auto_vehicle_msgs/msg/detail/turn_indicators_report__struct.hpp"
 #include "autoware_auto_vehicle_msgs/msg/detail/turn_indicators_report__builder.hpp"
 #include "autoware_auto_vehicle_msgs/msg/detail/turn_indicators_report__traits.hpp"
+#include "autoware_auto_vehicle_msgs/msg/detail/turn_indicators_report__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_VEHICLE_MSGS__MSG__TURN_INDICATORS_REPORT_HPP_

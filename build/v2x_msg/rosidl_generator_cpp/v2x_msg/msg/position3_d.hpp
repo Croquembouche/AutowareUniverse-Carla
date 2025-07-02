@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/position3_d__struct.hpp"
 #include "v2x_msg/msg/detail/position3_d__builder.hpp"
 #include "v2x_msg/msg/detail/position3_d__traits.hpp"
+#include "v2x_msg/msg/detail/position3_d__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__POSITION3_D_HPP_

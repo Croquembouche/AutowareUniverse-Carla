@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/object__struct.hpp"
 #include "v2x_msg/msg/detail/object__builder.hpp"
 #include "v2x_msg/msg/detail/object__traits.hpp"
+#include "v2x_msg/msg/detail/object__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__OBJECT_HPP_

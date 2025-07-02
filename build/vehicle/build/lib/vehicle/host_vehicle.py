@@ -1,3 +1,5 @@
+#! /home/william/miniconda3/bin/python3.10
+
 from lib2to3.pytree import convert
 from zmq import NULL
 import rclpy
@@ -22,6 +24,7 @@ from rclpy.qos import QoSProfile
 from rclpy.qos import QoSReliabilityPolicy, QoSDurabilityPolicy, QoSHistoryPolicy
 from rclpy.clock import ROSClock
 from pynput import keyboard
+import pymap3d as pm
 
 try:
     sys.path.append(glob.glob('/home/william/carla/dist/carla-*%d.%d-%s.egg' % (
@@ -35,13 +38,14 @@ except IndexError:
 import v2x_msg.msg
 from v2x_msg.msg import BSM
 from v2x_msg.msg import SRM
-from v2x_msg.msg import SignalRequestPackage
+# from v2x_msg.msg import SignalRequestPackage
 from std_msgs.msg import String
 from std_msgs.msg import Header
 from sensor_msgs.msg import Image
 from sensor_msgs.msg import PointCloud2
 from sensor_msgs.msg import PointField
 from sensor_msgs.msg import Imu
+import sensor_msgs_py.point_cloud2 as pc2
 from geometry_msgs.msg import PoseWithCovarianceStamped
 from geometry_msgs.msg import TwistWithCovariance
 from geometry_msgs.msg import Quaternion
@@ -84,7 +88,7 @@ class HostVehicle(Node):
     def __init__(self):
         super().__init__('host_vehicle')
 
-        self.declare_parameter('server_ip', '128.175.213.244')
+        self.declare_parameter('server_ip', '128.175.213.230')
         self.declare_parameter('server_port', 2000)
         self.declare_parameter('vehicle_blueprint', "vehicle.lincoln.mkz_2017")
         self.declare_parameter('role_name', "host_vehicle")
@@ -112,12 +116,13 @@ class HostVehicle(Node):
         self.declare_parameter('enable_gnss', True)
         self.declare_parameter('enable_imu', True)
         self.declare_parameter('enable_v2x', True)
+        self.declare_parameter('autopilot', False)
 
 
         self.server_ip = self.get_parameter('server_ip').get_parameter_value().string_value
         self.server_port = self.get_parameter('server_port').get_parameter_value().integer_value
         self.vehicle_blueprint = self.get_parameter('vehicle_blueprint').get_parameter_value().string_value
-        self.role_name = self.get_parameter('vehicle_blueprint').get_parameter_value().string_value
+        self.role_name = self.get_parameter('role_name').get_parameter_value().string_value
         self.color = self.get_parameter('color').get_parameter_value().string_value
         self.top_lidar = [self.get_parameter('top_lidar.pos.x').get_parameter_value().double_value
                         , self.get_parameter('top_lidar.pos.y').get_parameter_value().double_value
@@ -143,6 +148,7 @@ class HostVehicle(Node):
         self.enable_gnss = self.get_parameter('enable_gnss').get_parameter_value().bool_value
         self.enable_imu = self.get_parameter('enable_imu').get_parameter_value().bool_value
         self.enable_v2x = self.get_parameter('enable_v2x').get_parameter_value().bool_value
+        self.autopilot = self.get_parameter('autopilot').get_parameter_value().bool_value
         
         self.connectToWorld()
         self.spawnVehicle()
@@ -156,7 +162,7 @@ class HostVehicle(Node):
         vehicle_bp = self.blueprint_library.find(self.vehicle_blueprint)
         # setting some attributes
         vehicle_bp.set_attribute('role_name', self.role_name)
-        vehicle_bp.set_attribute('color', self.color)
+        # vehicle_bp.set_attribute('color', self.color)
         # spawning the bp
         self.vehicle = self.world.spawn_actor(vehicle_bp, self.spawn_point)
         self.ego_control = carla.VehicleControl()
@@ -164,7 +170,7 @@ class HostVehicle(Node):
         # initialize control to all zeros
         self.initializeControl()
         self.control_mode = 0
-        # self.vehicle.set_autopilot(True) # set Aut opilot on start to test lidar
+        self.vehicle.set_autopilot(self.autopilot) # set Aut opilot on start to test lidar
         # storing a list of all sensors
         self.sensors = []
         # BSM Message
@@ -202,8 +208,10 @@ class HostVehicle(Node):
         # world.unload_map_layer(carla.MapLayer.Buildings)
         # get a list of spawn points
         self.spawn_points = self.world.get_map().get_spawn_points()
+        # for i, sp in enumerate(self.spawn_points):
+        #     print(i, sp.location)
         # spawn_point = spawn_points[random.randint(1, len(spawn_points)-1)]
-        self.spawn_point = self.spawn_points[1]
+        self.spawn_point = self.spawn_points[10] #13
     def initializeControl(self):
         self.ego_control.throttle = 0.0
         self.ego_control.steer = 0.0
@@ -313,10 +321,13 @@ class HostVehicle(Node):
         # -------------Vehicle Location-----------------
         vehicle_location = self.vehicle.get_location()
         vehicle_ = self.world.get_map().transform_to_geolocation(vehicle_location)
-        self.lat = vehicle_.latitude
-        self.lon = vehicle_.longitude
-        self.elev = vehicle_.altitude
-        # print("current position:", self.lat, self.lon)
+        map_origin_lat = 39.66432670216749
+        map_originn_long = -75.75730138198136
+        self.lat, self.lon, self.elev = pm.enu2geodetic(-vehicle_location.y, -vehicle_location.x, vehicle_location.z, map_origin_lat, map_originn_long, 30)
+        # self.lat = vehicle_.latitude
+        # self.lon = vehicle_.longitude
+        # self.elev = vehicle_.altitude
+        print("current position:", vehicle_location.x, vehicle_location.y, self.lat, self.lon)
         # --------------- Vehicle State -----------------
         throttle = self.ego_control.throttle
         reverse = self.ego_control.reverse
@@ -394,6 +405,7 @@ class HostVehicle(Node):
         time_stamp = Clock().now()
         header.stamp = time_stamp.to_msg()
         header.frame_id = "velodyne_top_base_link"
+
         fields = [
             PointField(name='x', offset=0, datatype=PointField.FLOAT32, count=1),
             PointField(name='y', offset=4, datatype=PointField.FLOAT32, count=1),
@@ -401,28 +413,48 @@ class HostVehicle(Node):
             PointField(name='intensity', offset=12, datatype=PointField.FLOAT32, count=1)
         ]
 
-        lidar_data = np.fromstring(
-            bytes(data.raw_data), dtype=np.float32)
-        lidar_data = np.reshape(
-            lidar_data, (int(lidar_data.shape[0] / 4), 4))
-        # we take the opposite of y axis
-        # (as lidar point are express in left handed coordinate system, and ros need right handed)
-        lidar_data[:, 1] *= -1
-        point_cloud_msg = self.create_cloud(header, fields, lidar_data)
+        # Convert raw data to NumPy array
+        # lidar_data = np.frombuffer(data.raw_data, dtype=np.float32).copy()
+        # lidar_data = np.reshape(lidar_data, (int(lidar_data.shape[0] / 4), 4))
 
-        return point_cloud_msg       
+        # # Flip Y-axis (convert left-handed to right-handed coordinate system)
+        # lidar_data[:, 1] *= -1
+
+        # Filter out points near the LiDAR sensor (e.g., within 0.5m)
+        lidar_exclusion_radius = 5.0  # Adjust as needed
+
+        # Compute Euclidean distance from the sensor origin (assuming LiDAR is at (0,0,0))
+        merged_points = np.vstack(data)
+        distances = np.linalg.norm(merged_points[:, :3], axis=1)
+
+        # Keep only points that are outside the exclusion radius
+        filtered_lidar_data = merged_points[distances > lidar_exclusion_radius]
+
+        # Create PointCloud2 message
+        point_cloud_msg = pc2.create_cloud(header, fields, filtered_lidar_data)
+        self.frame_count = 0
+        self.accumulated_points = []
+        return point_cloud_msg      
     
     def lidarSensorCallback(self, data):
-        sensing_msg = self.createPCL2msg(data)
-        # self.sensing_lidarpublisher_.publish(sensing_msg)
-        self.ndt_lidarpublisher_.publish(sensing_msg)
-        # change msgcnt
-        self.msgcntIncrem() 
+        lidar_data = np.frombuffer(data.raw_data, dtype=np.float32).copy()
+        lidar_data = np.reshape(lidar_data, (int(lidar_data.shape[0] / 4), 4))
+        lidar_data[:, 1] *= -1
+        self.accumulated_points.append(lidar_data)
+        self.frame_count += 1
+        if self.frame_count == 4:
+            sensing_msg = self.createPCL2msg(self.accumulated_points)
+            self.sensing_lidarpublisher_.publish(sensing_msg)
+            self.ndt_lidarpublisher_.publish(sensing_msg)
+            # change msgcnt
+            self.msgcntIncrem() 
     def addLidarSensor(self):
         # creating a publisher
+        self.accumulated_points = []
+        self.frame_count = 0
         self.ndt_lidarpublisher_ = self.create_publisher(PointCloud2, self.top_lidar[7], 1)
         print("Publishing Lidar Sensor Data for NDT")
-        # self.sensing_lidarpublisher_ = self.create_publisher(PointCloud2, '/sensing/lidar/concatenated/pointcloud', 1)
+        self.sensing_lidarpublisher_ = self.create_publisher(PointCloud2, '/sensing/lidar/concatenated/pointcloud', 1)
         # print("Publishing Lidar Sensor Data for Sensing")
 
         # finding the lidar bp
@@ -433,6 +465,7 @@ class HostVehicle(Node):
         lidar_bp.set_attribute('rotation_frequency', self.top_lidar[5])
         lidar_bp.set_attribute('range', self.top_lidar[6])
         lidar_bp.set_attribute('role_name', 'center_main_lidar')
+        lidar_bp.set_attribute('sensor_tick', '0.01')
         # finding the location
         lidar_location = carla.Location(self.top_lidar[0],self.top_lidar[1],self.top_lidar[2])
         lidar_rotation = carla.Rotation(0,0,0)
@@ -442,7 +475,7 @@ class HostVehicle(Node):
         self.sensors.append(lidar_sen)
         # add a callback function to publish data via ros2
         lidar_sen.listen(lambda point_cloud: self.lidarSensorCallback(point_cloud))
-        # lidar_sen.listen(lambda point_cloud: point_cloud.save_to_disk('/home/carla/Github/C-V2X-Autoware-Carla/src/vehicle/lidar_data/%.6d.ply' % point_cloud.frame))
+        # lidar_sen.listen(lambda point_cloud: point_cloud.save_to_disk('/media/william/mist2/william/Github/AutowareUniverse-Carla/DATA/lidar/%.6d.ply' % point_cloud.frame))
 # ----------------------RBG Sensor---------------------------------
     def convertCARLAIMGtoROSIMG(self, original):
         array = np.frombuffer(original.raw_data, dtype=np.dtype("uint8")) 
@@ -477,12 +510,14 @@ class HostVehicle(Node):
         # get camera blueprint
         camera_bp = self.blueprint_library.find('sensor.camera.rgb')
         camera_bp.set_attribute('role_name', 'host_front_camera')
+        camera_bp.set_attribute('sensor_tick', '0.1')
         camera_location = carla.Location(self.camera_front[0], self.camera_front[1], self.camera_front[2])
         camera_rotation = carla.Rotation(0,0,0)
         camera_transform = carla.Transform(camera_location,camera_rotation)   
         # spawn onto vehicle
         front_camera = self.world.spawn_actor(camera_bp, camera_transform, attach_to=self.vehicle)
         self.sensors.append(front_camera)
+        # front_camera.listen(lambda image: image.save_to_disk('/media/william/mist2/william/Github/AutowareUniverse-Carla/DATA/front_camera/%.6d.jpg' % image.frame))
         front_camera.listen(lambda image: self.RGBSensorcallback(image)) 
 # -------------------GNSS Sensor------------------------------------------
     # def pubGNSS(self):
@@ -597,7 +632,7 @@ class HostVehicle(Node):
         # ros2 topic pub /hv_controls std_msgs/String "{data: 'Autoware on'}" --once
         if msg.data == "Autoware on":
             print("Enabling Autoware Control")
-            self.AutowareControl()
+            self.enabled = True
         if msg.data == "Autoware off":
             self.autoware_control = NULL
 
@@ -752,7 +787,8 @@ class HostVehicle(Node):
 # --------------------Autoware Related Topics-----------------------------
     def AutowareControllCallbacks(self, controlmsg):
         # lateral
-
+        if self.enabled == False:
+            return
         desired_steering = controlmsg.lateral.steering_tire_angle 
         desired_steering_rate = controlmsg.lateral.steering_tire_rotation_rate
         
@@ -777,15 +813,15 @@ class HostVehicle(Node):
                 self.get_vehicle_speed()
                 longitudinal_speed = float(self.vel_in_vehicle[0])
                 # print("attemping to speed up.", self.ego_control.throttle)
-                # self.vehicle.apply_control(self.ego_control)
+                self.vehicle.apply_control(self.ego_control)
             self.ego_control.throttle = 0 # once we reach the desired speed, stop pressing on the gas pedal
-            # self.vehicle.apply_control(self.ego_control)
+            self.vehicle.apply_control(self.ego_control)
         elif desired_speed < self.vel_in_vehicle[0]: # need to slow down
             while desired_speed > self.vel_in_vehicle[0]:
                 self.ego_control.brake = min(self.ego_control.brake + increment, 1.0)
-                # self.vehicle.apply_control(self.ego_control)
+                self.vehicle.apply_control(self.ego_control)
             self.ego_control.brake = 0 # once we reach the desired speed, stop pressing on the gas pedal
-            # self.vehicle.apply_control(self.ego_control)
+            self.vehicle.apply_control(self.ego_control)
     
     def ModeTransition(self, msg):
         mode = msg.mode # UNKNOWN = 0 STOP = 1  AUTONOMOUS = 2 LOCAL = 3  REMOTE = 4
@@ -827,7 +863,7 @@ class HostVehicle(Node):
 # -------------------Setting up Subscribers ------------------------
     def setUpSubscribers(self):
         # subscribe to trajectory cmds, this is subjected to change
-        # self.autoware_control_sub = self.create_subscription(AckermannControlCommand, '/control/trajectory_follower/control_cmd', self.AutowareControllCallbacks, 10)
+        self.autoware_control_sub = self.create_subscription(AckermannControlCommand, '/control/trajectory_follower/control_cmd', self.AutowareControllCallbacks, 10)
         # subscribe to controls
         self.enabled = False
         self.subscription_controls = self.create_subscription(String, 'hv_controls', self.vehicleROSControls, 10)

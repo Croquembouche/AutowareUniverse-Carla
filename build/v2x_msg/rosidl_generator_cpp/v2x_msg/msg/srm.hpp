@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/srm__struct.hpp"
 #include "v2x_msg/msg/detail/srm__builder.hpp"
 #include "v2x_msg/msg/detail/srm__traits.hpp"
+#include "v2x_msg/msg/detail/srm__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__SRM_HPP_

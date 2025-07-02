@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/rtc_mheader__struct.hpp"
 #include "v2x_msg/msg/detail/rtc_mheader__builder.hpp"
 #include "v2x_msg/msg/detail/rtc_mheader__traits.hpp"
+#include "v2x_msg/msg/detail/rtc_mheader__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__RTC_MHEADER_HPP_

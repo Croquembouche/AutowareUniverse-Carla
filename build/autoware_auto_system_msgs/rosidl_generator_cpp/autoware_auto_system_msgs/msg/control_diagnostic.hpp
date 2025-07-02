@@ -7,5 +7,6 @@
 #include "autoware_auto_system_msgs/msg/detail/control_diagnostic__struct.hpp"
 #include "autoware_auto_system_msgs/msg/detail/control_diagnostic__builder.hpp"
 #include "autoware_auto_system_msgs/msg/detail/control_diagnostic__traits.hpp"
+#include "autoware_auto_system_msgs/msg/detail/control_diagnostic__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_SYSTEM_MSGS__MSG__CONTROL_DIAGNOSTIC_HPP_

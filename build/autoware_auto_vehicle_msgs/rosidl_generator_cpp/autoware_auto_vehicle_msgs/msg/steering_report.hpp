@@ -7,5 +7,6 @@
 #include "autoware_auto_vehicle_msgs/msg/detail/steering_report__struct.hpp"
 #include "autoware_auto_vehicle_msgs/msg/detail/steering_report__builder.hpp"
 #include "autoware_auto_vehicle_msgs/msg/detail/steering_report__traits.hpp"
+#include "autoware_auto_vehicle_msgs/msg/detail/steering_report__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_VEHICLE_MSGS__MSG__STEERING_REPORT_HPP_

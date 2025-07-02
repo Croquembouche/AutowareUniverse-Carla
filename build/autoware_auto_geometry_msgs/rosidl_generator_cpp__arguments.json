@@ -1,11 +1,11 @@
 {
   "package_name": "autoware_auto_geometry_msgs",
-  "output_dir": "/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_geometry_msgs/rosidl_generator_cpp/autoware_auto_geometry_msgs",
+  "output_dir": "/media/william/mist2/william/Github/AutowareUniverse-Carla/build/autoware_auto_geometry_msgs/rosidl_generator_cpp/autoware_auto_geometry_msgs",
   "template_dir": "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource",
   "idl_tuples": [
-    "/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_geometry_msgs:msg/Complex32.idl",
-    "/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_geometry_msgs:msg/Quaternion32.idl",
-    "/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_geometry_msgs:msg/RelativePositionWithCovarianceStamped.idl"
+    "/media/william/mist2/william/Github/AutowareUniverse-Carla/autoware_auto_geometry_msgs:msg/Complex32.idl",
+    "/media/william/mist2/william/Github/AutowareUniverse-Carla/autoware_auto_geometry_msgs:msg/Quaternion32.idl",
+    "/media/william/mist2/william/Github/AutowareUniverse-Carla/autoware_auto_geometry_msgs:msg/RelativePositionWithCovarianceStamped.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
@@ -87,9 +87,9 @@
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__builder.hpp.em",
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__struct.hpp.em",
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__traits.hpp.em",
-    "/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_geometry_msgs/msg/Complex32.idl",
-    "/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_geometry_msgs/msg/Quaternion32.idl",
-    "/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_geometry_msgs/msg/RelativePositionWithCovarianceStamped.idl",
+    "/media/william/mist2/william/Github/AutowareUniverse-Carla/autoware_auto_geometry_msgs/msg/Complex32.idl",
+    "/media/william/mist2/william/Github/AutowareUniverse-Carla/autoware_auto_geometry_msgs/msg/Quaternion32.idl",
+    "/media/william/mist2/william/Github/AutowareUniverse-Carla/autoware_auto_geometry_msgs/msg/RelativePositionWithCovarianceStamped.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl",

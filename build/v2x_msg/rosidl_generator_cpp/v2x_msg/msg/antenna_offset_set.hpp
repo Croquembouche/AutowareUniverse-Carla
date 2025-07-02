@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/antenna_offset_set__struct.hpp"
 #include "v2x_msg/msg/detail/antenna_offset_set__builder.hpp"
 #include "v2x_msg/msg/detail/antenna_offset_set__traits.hpp"
+#include "v2x_msg/msg/detail/antenna_offset_set__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__ANTENNA_OFFSET_SET_HPP_

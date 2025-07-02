@@ -168,6 +168,7 @@ world = client.get_world()
 ego_vehicle = None
 actor_list = world.get_actors()
 for actor in actor_list:
+    print(actor.attributes.get('role_name'))
     if actor.attributes.get('role_name') == 'host_vehicle' and actor.type_id.startswith('vehicle'):
         ego_vehicle = actor
         break

@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/signal_status__struct.hpp"
 #include "v2x_msg/msg/detail/signal_status__builder.hpp"
 #include "v2x_msg/msg/detail/signal_status__traits.hpp"
+#include "v2x_msg/msg/detail/signal_status__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__SIGNAL_STATUS_HPP_

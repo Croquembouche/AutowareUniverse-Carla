@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/rtcm__struct.hpp"
 #include "v2x_msg/msg/detail/rtcm__builder.hpp"
 #include "v2x_msg/msg/detail/rtcm__traits.hpp"
+#include "v2x_msg/msg/detail/rtcm__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__RTCM_HPP_

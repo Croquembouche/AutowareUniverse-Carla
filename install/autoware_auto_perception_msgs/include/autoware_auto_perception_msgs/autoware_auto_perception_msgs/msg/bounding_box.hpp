@@ -7,5 +7,6 @@
 #include "autoware_auto_perception_msgs/msg/detail/bounding_box__struct.hpp"
 #include "autoware_auto_perception_msgs/msg/detail/bounding_box__builder.hpp"
 #include "autoware_auto_perception_msgs/msg/detail/bounding_box__traits.hpp"
+#include "autoware_auto_perception_msgs/msg/detail/bounding_box__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_PERCEPTION_MSGS__MSG__BOUNDING_BOX_HPP_

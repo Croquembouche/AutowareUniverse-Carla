@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/j1939data__struct.hpp"
 #include "v2x_msg/msg/detail/j1939data__builder.hpp"
 #include "v2x_msg/msg/detail/j1939data__traits.hpp"
+#include "v2x_msg/msg/detail/j1939data__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__J1939DATA_HPP_

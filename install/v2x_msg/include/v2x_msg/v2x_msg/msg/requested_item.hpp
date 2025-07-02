@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/requested_item__struct.hpp"
 #include "v2x_msg/msg/detail/requested_item__builder.hpp"
 #include "v2x_msg/msg/detail/requested_item__traits.hpp"
+#include "v2x_msg/msg/detail/requested_item__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__REQUESTED_ITEM_HPP_

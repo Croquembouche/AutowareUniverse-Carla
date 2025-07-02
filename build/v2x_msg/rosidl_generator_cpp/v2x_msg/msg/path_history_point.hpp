@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/path_history_point__struct.hpp"
 #include "v2x_msg/msg/detail/path_history_point__builder.hpp"
 #include "v2x_msg/msg/detail/path_history_point__traits.hpp"
+#include "v2x_msg/msg/detail/path_history_point__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__PATH_HISTORY_POINT_HPP_

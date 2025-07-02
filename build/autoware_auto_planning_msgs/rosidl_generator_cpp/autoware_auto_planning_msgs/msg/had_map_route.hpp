@@ -7,5 +7,6 @@
 #include "autoware_auto_planning_msgs/msg/detail/had_map_route__struct.hpp"
 #include "autoware_auto_planning_msgs/msg/detail/had_map_route__builder.hpp"
 #include "autoware_auto_planning_msgs/msg/detail/had_map_route__traits.hpp"
+#include "autoware_auto_planning_msgs/msg/detail/had_map_route__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_PLANNING_MSGS__MSG__HAD_MAP_ROUTE_HPP_

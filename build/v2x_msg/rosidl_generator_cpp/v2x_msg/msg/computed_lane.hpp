@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/computed_lane__struct.hpp"
 #include "v2x_msg/msg/detail/computed_lane__builder.hpp"
 #include "v2x_msg/msg/detail/computed_lane__traits.hpp"
+#include "v2x_msg/msg/detail/computed_lane__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__COMPUTED_LANE_HPP_

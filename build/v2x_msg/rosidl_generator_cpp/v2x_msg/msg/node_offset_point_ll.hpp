@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/node_offset_point_ll__struct.hpp"
 #include "v2x_msg/msg/detail/node_offset_point_ll__builder.hpp"
 #include "v2x_msg/msg/detail/node_offset_point_ll__traits.hpp"
+#include "v2x_msg/msg/detail/node_offset_point_ll__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__NODE_OFFSET_POINT_LL_HPP_

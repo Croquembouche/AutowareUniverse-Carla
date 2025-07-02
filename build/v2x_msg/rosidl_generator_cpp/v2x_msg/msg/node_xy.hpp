@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/node_xy__struct.hpp"
 #include "v2x_msg/msg/detail/node_xy__builder.hpp"
 #include "v2x_msg/msg/detail/node_xy__traits.hpp"
+#include "v2x_msg/msg/detail/node_xy__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__NODE_XY_HPP_

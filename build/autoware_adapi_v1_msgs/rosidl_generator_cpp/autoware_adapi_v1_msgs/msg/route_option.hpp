@@ -7,5 +7,6 @@
 #include "autoware_adapi_v1_msgs/msg/detail/route_option__struct.hpp"
 #include "autoware_adapi_v1_msgs/msg/detail/route_option__builder.hpp"
 #include "autoware_adapi_v1_msgs/msg/detail/route_option__traits.hpp"
+#include "autoware_adapi_v1_msgs/msg/detail/route_option__type_support.hpp"
 
 #endif  // AUTOWARE_ADAPI_V1_MSGS__MSG__ROUTE_OPTION_HPP_

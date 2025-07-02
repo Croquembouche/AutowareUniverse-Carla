@@ -7,5 +7,6 @@
 #include "autoware_auto_geometry_msgs/msg/detail/complex32__struct.hpp"
 #include "autoware_auto_geometry_msgs/msg/detail/complex32__builder.hpp"
 #include "autoware_auto_geometry_msgs/msg/detail/complex32__traits.hpp"
+#include "autoware_auto_geometry_msgs/msg/detail/complex32__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_GEOMETRY_MSGS__MSG__COMPLEX32_HPP_

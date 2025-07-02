@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/traveler_data_frame__struct.hpp"
 #include "v2x_msg/msg/detail/traveler_data_frame__builder.hpp"
 #include "v2x_msg/msg/detail/traveler_data_frame__traits.hpp"
+#include "v2x_msg/msg/detail/traveler_data_frame__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__TRAVELER_DATA_FRAME_HPP_

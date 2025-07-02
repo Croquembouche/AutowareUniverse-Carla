@@ -317,3 +317,18 @@ get_service_type_support_handle<autoware_adapi_v1_msgs::srv::ClearRoute>()
 }
 
 }  // namespace rosidl_typesupport_cpp
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+ROSIDL_TYPESUPPORT_CPP_PUBLIC
+const rosidl_service_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_cpp, autoware_adapi_v1_msgs, srv, ClearRoute)() {
+  return ::rosidl_typesupport_cpp::get_service_type_support_handle<autoware_adapi_v1_msgs::srv::ClearRoute>();
+}
+
+#ifdef __cplusplus
+}
+#endif

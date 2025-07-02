@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/lane_data_attribute__struct.hpp"
 #include "v2x_msg/msg/detail/lane_data_attribute__builder.hpp"
 #include "v2x_msg/msg/detail/lane_data_attribute__traits.hpp"
+#include "v2x_msg/msg/detail/lane_data_attribute__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__LANE_DATA_ATTRIBUTE_HPP_

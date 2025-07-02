@@ -1,12 +1,12 @@
 {
   "package_name": "autoware_auto_mapping_msgs",
-  "output_dir": "/media/william/blueicedrive/Github/AutowareUniverse-Carla/build/autoware_auto_mapping_msgs/rosidl_typesupport_introspection_cpp/autoware_auto_mapping_msgs",
+  "output_dir": "/media/william/mist2/william/Github/AutowareUniverse-Carla/build/autoware_auto_mapping_msgs/rosidl_typesupport_introspection_cpp/autoware_auto_mapping_msgs",
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_introspection_cpp/resource",
   "idl_tuples": [
-    "/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_mapping_msgs:msg/HADMapBin.idl",
-    "/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_mapping_msgs:msg/HADMapSegment.idl",
-    "/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_mapping_msgs:msg/MapPrimitive.idl",
-    "/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_mapping_msgs:srv/HADMapService.idl"
+    "/media/william/mist2/william/Github/AutowareUniverse-Carla/autoware_auto_mapping_msgs:msg/HADMapBin.idl",
+    "/media/william/mist2/william/Github/AutowareUniverse-Carla/autoware_auto_mapping_msgs:msg/HADMapSegment.idl",
+    "/media/william/mist2/william/Github/AutowareUniverse-Carla/autoware_auto_mapping_msgs:msg/MapPrimitive.idl",
+    "/media/william/mist2/william/Github/AutowareUniverse-Carla/autoware_auto_mapping_msgs:srv/HADMapService.idl"
   ],
   "ros_interface_dependencies": [
     "std_msgs:/opt/ros/humble/share/std_msgs/msg/Bool.idl",
@@ -51,10 +51,10 @@
     "/opt/ros/humble/share/rosidl_typesupport_introspection_cpp/resource/msg__type_support.cpp.em",
     "/opt/ros/humble/share/rosidl_typesupport_introspection_cpp/resource/srv__rosidl_typesupport_introspection_cpp.hpp.em",
     "/opt/ros/humble/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em",
-    "/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_mapping_msgs/msg/HADMapBin.idl",
-    "/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_mapping_msgs/msg/HADMapSegment.idl",
-    "/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_mapping_msgs/msg/MapPrimitive.idl",
-    "/media/william/blueicedrive/Github/AutowareUniverse-Carla/src/autoware_auto_mapping_msgs/srv/HADMapService.idl",
+    "/media/william/mist2/william/Github/AutowareUniverse-Carla/autoware_auto_mapping_msgs/msg/HADMapBin.idl",
+    "/media/william/mist2/william/Github/AutowareUniverse-Carla/autoware_auto_mapping_msgs/msg/HADMapSegment.idl",
+    "/media/william/mist2/william/Github/AutowareUniverse-Carla/autoware_auto_mapping_msgs/msg/MapPrimitive.idl",
+    "/media/william/mist2/william/Github/AutowareUniverse-Carla/autoware_auto_mapping_msgs/srv/HADMapService.idl",
     "/opt/ros/humble/share/std_msgs/msg/Bool.idl",
     "/opt/ros/humble/share/std_msgs/msg/Byte.idl",
     "/opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl",

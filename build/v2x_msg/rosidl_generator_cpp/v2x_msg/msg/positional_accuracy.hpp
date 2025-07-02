@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/positional_accuracy__struct.hpp"
 #include "v2x_msg/msg/detail/positional_accuracy__builder.hpp"
 #include "v2x_msg/msg/detail/positional_accuracy__traits.hpp"
+#include "v2x_msg/msg/detail/positional_accuracy__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__POSITIONAL_ACCURACY_HPP_

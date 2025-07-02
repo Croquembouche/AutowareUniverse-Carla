@@ -7,5 +7,6 @@
 #include "autoware_adapi_v1_msgs/msg/detail/velocity_factor__struct.hpp"
 #include "autoware_adapi_v1_msgs/msg/detail/velocity_factor__builder.hpp"
 #include "autoware_adapi_v1_msgs/msg/detail/velocity_factor__traits.hpp"
+#include "autoware_adapi_v1_msgs/msg/detail/velocity_factor__type_support.hpp"
 
 #endif  // AUTOWARE_ADAPI_V1_MSGS__MSG__VELOCITY_FACTOR_HPP_

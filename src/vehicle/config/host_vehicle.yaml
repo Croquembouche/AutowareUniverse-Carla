@@ -12,9 +12,9 @@ host_vehicle:  # This should match the name of your node
         x: -0.5
         y: 0.0
         z: 2.0
-      channels: "32"
+      channels: "128"
       pps: "1000000"
-      rot_freq: "10"
+      rot_freq: 10"
       range: "100"
       publish_topic_name: "/sensing/lidar/top/outlier_filtered/pointcloud"
     gnss:
@@ -35,8 +35,12 @@ host_vehicle:  # This should match the name of your node
       publish_topic_name: "/sensing/camera/camera0/image_rect_color"  
     enable_top_lidar: True
     enable_front_camera: True
-    enable_gnss: True
-    enable_imu: True
-    enable_v2x: True
+    enable_gnss: False
+    enable_imu: False
+    enable_v2x: False
+    autopilot: False
+
+
+
 
 

@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/psm__struct.hpp"
 #include "v2x_msg/msg/detail/psm__builder.hpp"
 #include "v2x_msg/msg/detail/psm__traits.hpp"
+#include "v2x_msg/msg/detail/psm__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__PSM_HPP_

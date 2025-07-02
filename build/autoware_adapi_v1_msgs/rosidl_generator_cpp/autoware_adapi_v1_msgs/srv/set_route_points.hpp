@@ -7,5 +7,6 @@
 #include "autoware_adapi_v1_msgs/srv/detail/set_route_points__struct.hpp"
 #include "autoware_adapi_v1_msgs/srv/detail/set_route_points__builder.hpp"
 #include "autoware_adapi_v1_msgs/srv/detail/set_route_points__traits.hpp"
+#include "autoware_adapi_v1_msgs/srv/detail/set_route_points__type_support.hpp"
 
 #endif  // AUTOWARE_ADAPI_V1_MSGS__SRV__SET_ROUTE_POINTS_HPP_

@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/requestor_position_vector__struct.hpp"
 #include "v2x_msg/msg/detail/requestor_position_vector__builder.hpp"
 #include "v2x_msg/msg/detail/requestor_position_vector__traits.hpp"
+#include "v2x_msg/msg/detail/requestor_position_vector__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__REQUESTOR_POSITION_VECTOR_HPP_

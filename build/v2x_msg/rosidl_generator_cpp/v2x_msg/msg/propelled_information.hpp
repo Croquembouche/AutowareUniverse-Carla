@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/propelled_information__struct.hpp"
 #include "v2x_msg/msg/detail/propelled_information__builder.hpp"
 #include "v2x_msg/msg/detail/propelled_information__traits.hpp"
+#include "v2x_msg/msg/detail/propelled_information__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__PROPELLED_INFORMATION_HPP_

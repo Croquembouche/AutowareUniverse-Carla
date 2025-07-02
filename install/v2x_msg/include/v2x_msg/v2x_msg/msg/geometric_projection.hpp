@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/geometric_projection__struct.hpp"
 #include "v2x_msg/msg/detail/geometric_projection__builder.hpp"
 #include "v2x_msg/msg/detail/geometric_projection__traits.hpp"
+#include "v2x_msg/msg/detail/geometric_projection__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__GEOMETRIC_PROJECTION_HPP_

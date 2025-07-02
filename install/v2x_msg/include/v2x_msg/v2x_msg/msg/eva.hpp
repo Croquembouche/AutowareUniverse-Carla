@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/eva__struct.hpp"
 #include "v2x_msg/msg/detail/eva__builder.hpp"
 #include "v2x_msg/msg/detail/eva__traits.hpp"
+#include "v2x_msg/msg/detail/eva__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__EVA_HPP_

@@ -4,6 +4,3 @@ source;share/vehicle/hook/pythonpath.sh
 source;share/vehicle/hook/ament_prefix_path.ps1
 source;share/vehicle/hook/ament_prefix_path.dsv
 source;share/vehicle/hook/ament_prefix_path.sh
-source;../../build/vehicle/share/vehicle/hook/pythonpath_develop.ps1
-source;../../build/vehicle/share/vehicle/hook/pythonpath_develop.dsv
-source;../../build/vehicle/share/vehicle/hook/pythonpath_develop.sh

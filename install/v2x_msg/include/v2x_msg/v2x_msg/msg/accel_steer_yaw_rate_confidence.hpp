@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/accel_steer_yaw_rate_confidence__struct.hpp"
 #include "v2x_msg/msg/detail/accel_steer_yaw_rate_confidence__builder.hpp"
 #include "v2x_msg/msg/detail/accel_steer_yaw_rate_confidence__traits.hpp"
+#include "v2x_msg/msg/detail/accel_steer_yaw_rate_confidence__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__ACCEL_STEER_YAW_RATE_CONFIDENCE_HPP_

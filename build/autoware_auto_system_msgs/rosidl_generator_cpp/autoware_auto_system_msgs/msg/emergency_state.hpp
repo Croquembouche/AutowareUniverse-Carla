@@ -7,5 +7,6 @@
 #include "autoware_auto_system_msgs/msg/detail/emergency_state__struct.hpp"
 #include "autoware_auto_system_msgs/msg/detail/emergency_state__builder.hpp"
 #include "autoware_auto_system_msgs/msg/detail/emergency_state__traits.hpp"
+#include "autoware_auto_system_msgs/msg/detail/emergency_state__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_SYSTEM_MSGS__MSG__EMERGENCY_STATE_HPP_

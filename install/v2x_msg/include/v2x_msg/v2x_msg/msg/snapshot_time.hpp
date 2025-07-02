@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/snapshot_time__struct.hpp"
 #include "v2x_msg/msg/detail/snapshot_time__builder.hpp"
 #include "v2x_msg/msg/detail/snapshot_time__traits.hpp"
+#include "v2x_msg/msg/detail/snapshot_time__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__SNAPSHOT_TIME_HPP_

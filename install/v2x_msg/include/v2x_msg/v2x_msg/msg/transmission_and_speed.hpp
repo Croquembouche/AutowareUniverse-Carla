@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/transmission_and_speed__struct.hpp"
 #include "v2x_msg/msg/detail/transmission_and_speed__builder.hpp"
 #include "v2x_msg/msg/detail/transmission_and_speed__traits.hpp"
+#include "v2x_msg/msg/detail/transmission_and_speed__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__TRANSMISSION_AND_SPEED_HPP_

@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/node_xy28b__struct.hpp"
 #include "v2x_msg/msg/detail/node_xy28b__builder.hpp"
 #include "v2x_msg/msg/detail/node_xy28b__traits.hpp"
+#include "v2x_msg/msg/detail/node_xy28b__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__NODE_XY28B_HPP_

@@ -7,5 +7,6 @@
 #include "autoware_auto_geometry_msgs/msg/detail/relative_position_with_covariance_stamped__struct.hpp"
 #include "autoware_auto_geometry_msgs/msg/detail/relative_position_with_covariance_stamped__builder.hpp"
 #include "autoware_auto_geometry_msgs/msg/detail/relative_position_with_covariance_stamped__traits.hpp"
+#include "autoware_auto_geometry_msgs/msg/detail/relative_position_with_covariance_stamped__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_GEOMETRY_MSGS__MSG__RELATIVE_POSITION_WITH_COVARIANCE_STAMPED_HPP_

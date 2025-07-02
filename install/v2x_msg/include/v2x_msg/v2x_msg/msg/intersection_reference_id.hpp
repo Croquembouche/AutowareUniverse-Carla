@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/intersection_reference_id__struct.hpp"
 #include "v2x_msg/msg/detail/intersection_reference_id__builder.hpp"
 #include "v2x_msg/msg/detail/intersection_reference_id__traits.hpp"
+#include "v2x_msg/msg/detail/intersection_reference_id__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__INTERSECTION_REFERENCE_ID_HPP_

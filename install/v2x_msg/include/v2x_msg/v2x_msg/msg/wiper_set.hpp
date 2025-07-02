@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/wiper_set__struct.hpp"
 #include "v2x_msg/msg/detail/wiper_set__builder.hpp"
 #include "v2x_msg/msg/detail/wiper_set__traits.hpp"
+#include "v2x_msg/msg/detail/wiper_set__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__WIPER_SET_HPP_

@@ -7,5 +7,6 @@
 #include "autoware_auto_system_msgs/msg/detail/driving_capability__struct.hpp"
 #include "autoware_auto_system_msgs/msg/detail/driving_capability__builder.hpp"
 #include "autoware_auto_system_msgs/msg/detail/driving_capability__traits.hpp"
+#include "autoware_auto_system_msgs/msg/detail/driving_capability__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_SYSTEM_MSGS__MSG__DRIVING_CAPABILITY_HPP_

@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/circle__struct.hpp"
 #include "v2x_msg/msg/detail/circle__builder.hpp"
 #include "v2x_msg/msg/detail/circle__traits.hpp"
+#include "v2x_msg/msg/detail/circle__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__CIRCLE_HPP_

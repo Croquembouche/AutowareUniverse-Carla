@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/connection__struct.hpp"
 #include "v2x_msg/msg/detail/connection__builder.hpp"
 #include "v2x_msg/msg/detail/connection__traits.hpp"
+#include "v2x_msg/msg/detail/connection__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__CONNECTION_HPP_

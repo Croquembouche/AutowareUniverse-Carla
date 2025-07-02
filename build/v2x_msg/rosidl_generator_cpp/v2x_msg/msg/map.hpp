@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/map__struct.hpp"
 #include "v2x_msg/msg/detail/map__builder.hpp"
 #include "v2x_msg/msg/detail/map__traits.hpp"
+#include "v2x_msg/msg/detail/map__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__MAP_HPP_

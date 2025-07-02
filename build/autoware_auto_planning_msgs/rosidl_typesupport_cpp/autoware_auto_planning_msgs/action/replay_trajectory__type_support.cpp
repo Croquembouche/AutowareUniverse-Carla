@@ -660,6 +660,21 @@ get_service_type_support_handle<autoware_auto_planning_msgs::action::ReplayTraje
 
 }  // namespace rosidl_typesupport_cpp
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+ROSIDL_TYPESUPPORT_CPP_PUBLIC
+const rosidl_service_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_cpp, autoware_auto_planning_msgs, action, ReplayTrajectory_SendGoal)() {
+  return ::rosidl_typesupport_cpp::get_service_type_support_handle<autoware_auto_planning_msgs::action::ReplayTrajectory_SendGoal>();
+}
+
+#ifdef __cplusplus
+}
+#endif
+
 // already included above
 // #include "cstddef"
 // already included above
@@ -988,6 +1003,21 @@ get_service_type_support_handle<autoware_auto_planning_msgs::action::ReplayTraje
 
 }  // namespace rosidl_typesupport_cpp
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+ROSIDL_TYPESUPPORT_CPP_PUBLIC
+const rosidl_service_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_cpp, autoware_auto_planning_msgs, action, ReplayTrajectory_GetResult)() {
+  return ::rosidl_typesupport_cpp::get_service_type_support_handle<autoware_auto_planning_msgs::action::ReplayTrajectory_GetResult>();
+}
+
+#ifdef __cplusplus
+}
+#endif
+
 // already included above
 // #include "cstddef"
 // already included above
@@ -1152,3 +1182,18 @@ get_action_type_support_handle<autoware_auto_planning_msgs::action::ReplayTrajec
 }
 
 }  // namespace rosidl_typesupport_cpp
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+ROSIDL_TYPESUPPORT_CPP_PUBLIC
+const rosidl_action_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__ACTION_SYMBOL_NAME(rosidl_typesupport_cpp, autoware_auto_planning_msgs, action, ReplayTrajectory)() {
+  return ::rosidl_typesupport_cpp::get_action_type_support_handle<autoware_auto_planning_msgs::action::ReplayTrajectory>();
+}
+
+#ifdef __cplusplus
+}
+#endif

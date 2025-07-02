@@ -7,5 +7,6 @@
 #include "autoware_auto_mapping_msgs/msg/detail/had_map_bin__struct.hpp"
 #include "autoware_auto_mapping_msgs/msg/detail/had_map_bin__builder.hpp"
 #include "autoware_auto_mapping_msgs/msg/detail/had_map_bin__traits.hpp"
+#include "autoware_auto_mapping_msgs/msg/detail/had_map_bin__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_MAPPING_MSGS__MSG__HAD_MAP_BIN_HPP_

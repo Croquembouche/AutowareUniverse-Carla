@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/node_attribute_set_xy__struct.hpp"
 #include "v2x_msg/msg/detail/node_attribute_set_xy__builder.hpp"
 #include "v2x_msg/msg/detail/node_attribute_set_xy__traits.hpp"
+#include "v2x_msg/msg/detail/node_attribute_set_xy__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__NODE_ATTRIBUTE_SET_XY_HPP_

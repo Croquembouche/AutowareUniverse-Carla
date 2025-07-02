@@ -7,5 +7,6 @@
 #include "autoware_auto_mapping_msgs/srv/detail/had_map_service__struct.hpp"
 #include "autoware_auto_mapping_msgs/srv/detail/had_map_service__builder.hpp"
 #include "autoware_auto_mapping_msgs/srv/detail/had_map_service__traits.hpp"
+#include "autoware_auto_mapping_msgs/srv/detail/had_map_service__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_MAPPING_MSGS__SRV__HAD_MAP_SERVICE_HPP_

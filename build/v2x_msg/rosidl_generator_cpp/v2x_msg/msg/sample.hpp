@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/sample__struct.hpp"
 #include "v2x_msg/msg/detail/sample__builder.hpp"
 #include "v2x_msg/msg/detail/sample__traits.hpp"
+#include "v2x_msg/msg/detail/sample__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__SAMPLE_HPP_

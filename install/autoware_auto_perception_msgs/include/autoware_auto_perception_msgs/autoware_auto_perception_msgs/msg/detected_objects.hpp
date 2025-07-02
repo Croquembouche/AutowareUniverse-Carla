@@ -7,5 +7,6 @@
 #include "autoware_auto_perception_msgs/msg/detail/detected_objects__struct.hpp"
 #include "autoware_auto_perception_msgs/msg/detail/detected_objects__builder.hpp"
 #include "autoware_auto_perception_msgs/msg/detail/detected_objects__traits.hpp"
+#include "autoware_auto_perception_msgs/msg/detail/detected_objects__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_PERCEPTION_MSGS__MSG__DETECTED_OBJECTS_HPP_

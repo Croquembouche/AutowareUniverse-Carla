@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/csr__struct.hpp"
 #include "v2x_msg/msg/detail/csr__builder.hpp"
 #include "v2x_msg/msg/detail/csr__traits.hpp"
+#include "v2x_msg/msg/detail/csr__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__CSR_HPP_

@@ -7,5 +7,6 @@
 #include "autoware_auto_geometry_msgs/msg/detail/quaternion32__struct.hpp"
 #include "autoware_auto_geometry_msgs/msg/detail/quaternion32__builder.hpp"
 #include "autoware_auto_geometry_msgs/msg/detail/quaternion32__traits.hpp"
+#include "autoware_auto_geometry_msgs/msg/detail/quaternion32__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_GEOMETRY_MSGS__MSG__QUATERNION32_HPP_

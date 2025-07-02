@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/steering__struct.hpp"
 #include "v2x_msg/msg/detail/steering__builder.hpp"
 #include "v2x_msg/msg/detail/steering__traits.hpp"
+#include "v2x_msg/msg/detail/steering__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__STEERING_HPP_

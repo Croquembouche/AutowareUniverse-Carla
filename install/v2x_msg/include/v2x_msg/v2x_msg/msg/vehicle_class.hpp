@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/vehicle_class__struct.hpp"
 #include "v2x_msg/msg/detail/vehicle_class__builder.hpp"
 #include "v2x_msg/msg/detail/vehicle_class__traits.hpp"
+#include "v2x_msg/msg/detail/vehicle_class__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__VEHICLE_CLASS_HPP_

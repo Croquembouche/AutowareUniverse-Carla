@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/ica__struct.hpp"
 #include "v2x_msg/msg/detail/ica__builder.hpp"
 #include "v2x_msg/msg/detail/ica__traits.hpp"
+#include "v2x_msg/msg/detail/ica__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__ICA_HPP_

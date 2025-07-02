@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/vehicle_id__struct.hpp"
 #include "v2x_msg/msg/detail/vehicle_id__builder.hpp"
 #include "v2x_msg/msg/detail/vehicle_id__traits.hpp"
+#include "v2x_msg/msg/detail/vehicle_id__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__VEHICLE_ID_HPP_

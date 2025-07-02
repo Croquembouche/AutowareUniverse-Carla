@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/vehicle_size__struct.hpp"
 #include "v2x_msg/msg/detail/vehicle_size__builder.hpp"
 #include "v2x_msg/msg/detail/vehicle_size__traits.hpp"
+#include "v2x_msg/msg/detail/vehicle_size__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__VEHICLE_SIZE_HPP_

@@ -7,5 +7,6 @@
 #include "autoware_auto_perception_msgs/msg/detail/tracked_objects__struct.hpp"
 #include "autoware_auto_perception_msgs/msg/detail/tracked_objects__builder.hpp"
 #include "autoware_auto_perception_msgs/msg/detail/tracked_objects__traits.hpp"
+#include "autoware_auto_perception_msgs/msg/detail/tracked_objects__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_PERCEPTION_MSGS__MSG__TRACKED_OBJECTS_HPP_

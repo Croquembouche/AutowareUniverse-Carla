@@ -7,5 +7,6 @@
 #include "autoware_auto_system_msgs/msg/detail/autoware_state__struct.hpp"
 #include "autoware_auto_system_msgs/msg/detail/autoware_state__builder.hpp"
 #include "autoware_auto_system_msgs/msg/detail/autoware_state__traits.hpp"
+#include "autoware_auto_system_msgs/msg/detail/autoware_state__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_SYSTEM_MSGS__MSG__AUTOWARE_STATE_HPP_

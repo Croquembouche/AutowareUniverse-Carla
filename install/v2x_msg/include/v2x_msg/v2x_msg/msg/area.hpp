@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/area__struct.hpp"
 #include "v2x_msg/msg/detail/area__builder.hpp"
 #include "v2x_msg/msg/detail/area__traits.hpp"
+#include "v2x_msg/msg/detail/area__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__AREA_HPP_

@@ -7,5 +7,6 @@
 #include "autoware_auto_system_msgs/msg/detail/hazard_status_stamped__struct.hpp"
 #include "autoware_auto_system_msgs/msg/detail/hazard_status_stamped__builder.hpp"
 #include "autoware_auto_system_msgs/msg/detail/hazard_status_stamped__traits.hpp"
+#include "autoware_auto_system_msgs/msg/detail/hazard_status_stamped__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_SYSTEM_MSGS__MSG__HAZARD_STATUS_STAMPED_HPP_

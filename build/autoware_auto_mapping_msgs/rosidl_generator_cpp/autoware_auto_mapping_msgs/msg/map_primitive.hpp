@@ -7,5 +7,6 @@
 #include "autoware_auto_mapping_msgs/msg/detail/map_primitive__struct.hpp"
 #include "autoware_auto_mapping_msgs/msg/detail/map_primitive__builder.hpp"
 #include "autoware_auto_mapping_msgs/msg/detail/map_primitive__traits.hpp"
+#include "autoware_auto_mapping_msgs/msg/detail/map_primitive__type_support.hpp"
 
 #endif  // AUTOWARE_AUTO_MAPPING_MSGS__MSG__MAP_PRIMITIVE_HPP_

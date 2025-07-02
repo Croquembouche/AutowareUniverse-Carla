@@ -7,5 +7,6 @@
 #include "v2x_msg/msg/detail/itis_speed_limitcontent__struct.hpp"
 #include "v2x_msg/msg/detail/itis_speed_limitcontent__builder.hpp"
 #include "v2x_msg/msg/detail/itis_speed_limitcontent__traits.hpp"
+#include "v2x_msg/msg/detail/itis_speed_limitcontent__type_support.hpp"
 
 #endif  // V2X_MSG__MSG__ITIS_SPEED_LIMITCONTENT_HPP_
